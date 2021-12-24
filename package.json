@@ -1,0 +1,68 @@
+{
+    "name": "react-photo-album",
+    "version": "0.0.0-semantic-release",
+    "description": "Responsive photo album component for React",
+    "license": "MIT",
+    "author": "Igor Danchenko",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "module": "dist/react-photo-album.esm.js",
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "homepage": "https://github.com/igordanchenko/react-photo-album",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/igordanchenko/react-photo-album.git"
+    },
+    "bugs": {
+        "url": "https://github.com/igordanchenko/react-photo-album/issues"
+    },
+    "scripts": {
+        "build": "dts build --rollupTypes",
+        "lint": "dts lint src test ./*.js .eslintrc.js --fix",
+        "prepare": "husky install",
+        "start": "dts watch --rollupTypes",
+        "test": "dts test"
+    },
+    "peerDependencies": {
+        "react": "^16.8.0 | ^17.0.0"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "dependencies": {
+        "resize-observer-polyfill": "^1.5.1"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
+        "@tsconfig/create-react-app": "^1.0.2",
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/react": "^17.0.37",
+        "@types/react-dom": "^17.0.11",
+        "@types/react-test-renderer": "^17.0.1",
+        "dts-cli": "^1.1.3",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.1.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-test-renderer": "^17.0.2",
+        "tslib": "^2.3.1",
+        "typescript": "^4.5.4"
+    },
+    "keywords": [
+        "react photo album",
+        "react photo gallery",
+        "react image gallery",
+        "photo album",
+        "photo gallery",
+        "image gallery",
+        "photo layout",
+        "image layout",
+        "react-photo-album",
+        "react-photo-gallery",
+        "masonry"
+    ]
+}
