@@ -30,6 +30,7 @@ const PhotoDecorator = <T extends Photo = Photo>(props: PhotoDecoratorProps<T>) 
         display: "block",
         height: "auto",
         width: layoutOptions.layout === Layout.Rows ? cssWidth(layout, layoutOptions) : "100%",
+        aspectRatio: `${photo.width} / ${photo.height}`,
         ...(layoutOptions.padding ? { padding: `${layoutOptions.padding}px` } : null),
         ...((layoutOptions.layout === Layout.Columns || layoutOptions.layout === Layout.Masonry) &&
         layout.photoIndex < layout.photosCount - 1
