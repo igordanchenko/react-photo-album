@@ -1,7 +1,7 @@
 # React Photo Album
 
 Responsive photo album component for React. Inspired
-by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery/), re-engineered from the ground up.
+by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-engineered from the ground up.
 
 ## Overview
 
@@ -10,7 +10,7 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery/), re-
 - **Feature packed**: supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
   and is fully customizable.
 - **Performance**: it was built with performance in mind in order to support large photo albums and silky smooth layout
-  shifts.
+  adjustments.
 
 ## Examples
 
@@ -40,11 +40,13 @@ yarn add react-photo-album
 
 ## Documentation
 
-[https://react-photo-album-docs.vercel.app](https://react-photo-album-docs.vercel.app)
+[https://react-photo-album-docs.vercel.app/documentation](https://react-photo-album-docs.vercel.app/documentation)
 
 ## Minimal Setup Example
 
 ```javascript
+import PhotoAlbum from 'react-photo-album';
+
 const photos = [
     {
         src: 'https://example.com/example/image1.jpg',
@@ -58,7 +60,7 @@ const photos = [
     }
 ];
 
-<PhotoAlbum layout="rows" photos={photos}/>;
+<PhotoAlbum layout='rows' photos={photos} />;
 ```
 
 ## Credits
