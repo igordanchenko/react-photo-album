@@ -13,16 +13,19 @@ import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from 
 const resolveLayoutOptions = <T extends Photo>({
     layout,
     onClick,
+    viewportWidth,
     containerWidth,
     targetRowHeight,
     columns,
     spacing,
     padding,
 }: Omit<PhotoAlbumProps<T>, "photos"> & {
+    viewportWidth?: number;
     containerWidth: number;
 }): RowsLayoutOptions | ColumnsLayoutOptions => ({
     layout,
     onClick,
+    viewportWidth,
     containerWidth,
     columns: resolveResponsiveParameter(columns, containerWidth, [6, 5, 4, 3, 2, 1]),
     spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 16, 12, 8, 4, 2]),
@@ -47,21 +50,25 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         instrumentation,
     } = props;
 
-    const [containerWidth, setContainerWidth] = React.useState(0);
+    const [viewportWidth, setViewportWidth] = React.useState<number>();
+    const [containerWidth, setContainerWidth] = React.useState<number>();
     const containerRef = React.useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
         if (!containerRef.current) return undefined;
 
         const observer = new ResizeObserver((entries) => {
+            setViewportWidth(Math.floor(window.innerWidth));
             setContainerWidth(Math.floor(entries[0].contentRect.width));
         });
         observer.observe(containerRef.current);
+
         return () => observer.disconnect();
     }, []);
 
     const layoutOptions = resolveLayoutOptions({
         containerWidth: containerWidth || defaultContainerWidth,
+        viewportWidth,
         layout,
         onClick,
         spacing,

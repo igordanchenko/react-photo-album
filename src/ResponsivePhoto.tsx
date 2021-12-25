@@ -4,7 +4,7 @@ import { Photo, PhotoProps } from "./types";
 
 const ResponsivePhoto = <T extends Photo = Photo>({
     layout,
-    layoutOptions: { containerWidth },
+    layoutOptions: { containerWidth, viewportWidth },
     photo: { src, width, height, alt, title, images },
     style,
     onClick,
@@ -23,8 +23,7 @@ const ResponsivePhoto = <T extends Photo = Photo>({
             .sort((first, second) => first.width - second.width)
             .map((image) => `${image.src} ${image.width}w`)
             .join(", ");
-        const viewportWidth = (typeof window !== "undefined" ? window.innerWidth : undefined) ?? containerWidth;
-        sizes = `${Math.ceil((layout.width / viewportWidth) * 100)}vw`;
+        sizes = `${Math.ceil((layout.width / (viewportWidth || containerWidth)) * 100)}vw`;
     }
 
     return (

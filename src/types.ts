@@ -98,6 +98,8 @@ export type GenericLayoutOptions = {
     padding: number;
     /** current photo album container width */
     containerWidth: number;
+    /** current viewport width */
+    viewportWidth?: number;
     /** photo click handler */
     onClick?: ClickHandler;
 };
