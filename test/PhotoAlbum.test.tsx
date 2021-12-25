@@ -1,7 +1,7 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 
-import { PhotoAlbum } from "../src";
+import PhotoAlbum from "../src";
 import Layout from "../src/Layout";
 import photos from "./photos";
 
