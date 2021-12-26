@@ -57,10 +57,15 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     useLayoutEffect(() => {
         if (!containerRef.current) return undefined;
 
-        const observer = new ResizeObserver((entries) => {
-            setViewportWidth(Math.floor(window.innerWidth));
-            setContainerWidth(Math.floor(entries[0].contentRect.width));
-        });
+        const updateDimensions = () => {
+            setViewportWidth(window.innerWidth);
+            if (containerRef.current) {
+                setContainerWidth(containerRef.current.clientWidth);
+            }
+        };
+        updateDimensions();
+
+        const observer = new ResizeObserver(() => updateDimensions());
         observer.observe(containerRef.current);
 
         return () => observer.disconnect();
