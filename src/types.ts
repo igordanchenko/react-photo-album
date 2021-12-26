@@ -77,13 +77,13 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     onClick?: ClickHandler;
     /** default container width to be used in SSR render */
     defaultContainerWidth?: number;
-    /** custom photo rendering function  */
+    /** custom photo rendering function */
     renderPhoto?: RenderPhoto<T>;
-    /** custom container rendering function  */
+    /** custom container rendering function */
     renderContainer?: RenderContainer;
-    /** custom row container rendering function  */
+    /** custom row container rendering function */
     renderRowContainer?: RenderRowContainer;
-    /** custom column container rendering function  */
+    /** custom column container rendering function */
     renderColumnContainer?: RenderColumnContainer;
     /** internal instrumentation - use on your own risk */
     instrumentation?: Instrumentation;
