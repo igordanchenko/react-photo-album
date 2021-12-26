@@ -5,11 +5,11 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 ## Overview
 
-- **Built for React**: works with React 17 and 16.8.0+
-- **SSR friendly**: produces server-side rendered markup that looks pixel perfect on the client.
-- **Feature packed**: supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
+- **Built for React:** works with React 17 and 16.8.0+
+- **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration.
+- **Feature packed:** supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
   and is fully customizable.
-- **Performance**: it was built with performance in mind in order to support large photo albums and silky smooth layout
+- **Performance:** it was built with performance in mind in order to support large photo albums and silky smooth layout
   adjustments.
 
 ## Examples
