@@ -12,16 +12,15 @@ const PhotoAlbumContainer = React.forwardRef<HTMLDivElement, ContainerProps>(
                 layout === Layout.Rows
                     ? {
                           display: "flex",
-                          flexFlow: "column nowrap",
+                          flexDirection: "column",
+                          flexWrap: "nowrap",
                           justifyContent: "space-between",
-                          boxSizing: "border-box",
                       }
                     : {
                           display: "flex",
                           flexDirection: "row",
                           flexWrap: "nowrap",
                           justifyContent: "space-between",
-                          boxSizing: "border-box",
                       }
             }
         >

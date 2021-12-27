@@ -39,7 +39,6 @@ const ColumnContainer = (props: PropsWithoutRef<PropsWithChildren<ColumnContaine
                 alignItems: "flex-start",
                 width: cssWidth(props),
                 justifyContent: layout === Layout.Columns ? "space-between" : "flex-start",
-                boxSizing: "border-box",
             }}
         >
             {children}

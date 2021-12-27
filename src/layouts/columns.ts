@@ -71,8 +71,8 @@ const buildColumnsModel = <T extends Photo = Photo>({
             column.map((photo, photoIndex) => ({
                 photo,
                 layout: {
-                    width: columnWidth + 2 * padding,
-                    height: columnWidth / ratio(photo) + 2 * padding,
+                    width: columnWidth,
+                    height: columnWidth / ratio(photo),
                     photoIndex,
                     photosCount: column.length,
                 },
@@ -185,9 +185,7 @@ const computeLayout = <T extends Photo = Photo>(props: ComputeColumnsLayoutProps
 
     if (
         columnsModel.findIndex(
-            (columnModel) =>
-                columnModel.findIndex(({ layout: { width, height } }) => width < 2 * padding || height < 2 * padding) >=
-                0
+            (columnModel) => columnModel.findIndex(({ layout: { width, height } }) => width < 0 || height < 0) >= 0
         ) >= 0
     ) {
         // encountered impossible layout

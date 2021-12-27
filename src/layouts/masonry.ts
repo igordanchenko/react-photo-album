@@ -65,8 +65,8 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
         column.map((photo, photoIndex) => ({
             photo,
             layout: {
-                width: columnWidth + 2 * padding,
-                height: columnWidth / ratio(photo) + 2 * padding,
+                width: columnWidth,
+                height: columnWidth / ratio(photo),
                 photoIndex,
                 photosCount: column.length,
             },

@@ -17,7 +17,6 @@ const RowContainer = ({
             flexWrap: "nowrap",
             alignItems: "flex-start",
             justifyContent: "space-between",
-            boxSizing: "border-box",
             ...(rowIndex < rowsCount - 1 ? { marginBottom: `${spacing}px` } : null),
         }}
     >

@@ -7,12 +7,18 @@ import ResponsivePhoto from "../ResponsivePhoto";
 import { ClickHandler, LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../types";
 
 const cssWidth = (photoLayout: PhotoLayout, layoutOptions: LayoutOptions) => {
+    const { width } = photoLayout;
+    const { spacing, padding, layout, containerWidth } = layoutOptions;
+
+    if (layout !== Layout.Rows) {
+        return `calc(100% - ${2 * padding}px)`;
+    }
+
     const rowSize = photoLayout.photosCount;
-    return `calc((100% - ${layoutOptions.spacing * (rowSize - 1) + 2 * layoutOptions.padding * rowSize}px) / ${round(
-        (layoutOptions.containerWidth - layoutOptions.spacing * (rowSize - 1) - 2 * layoutOptions.padding * rowSize) /
-            (photoLayout.width - 2 * layoutOptions.padding),
+    return `calc((100% - ${spacing * (rowSize - 1) + 2 * padding * rowSize}px) / ${round(
+        (containerWidth - spacing * (rowSize - 1) - 2 * padding * rowSize) / width,
         5
-    )} + ${2 * layoutOptions.padding}px)`;
+    )})`;
 };
 
 type PhotoDecoratorProps<T extends Photo = Photo> = {
@@ -25,17 +31,17 @@ const PhotoDecorator = <T extends Photo = Photo>(props: PhotoDecoratorProps<T>) 
     const { photo, layout, layoutOptions, onClick } = photoProps;
 
     const style = {
-        ...(onClick ? { cursor: "pointer" } : null),
-        boxSizing: "border-box",
         display: "block",
+        boxSizing: "content-box",
+        width: cssWidth(layout, layoutOptions),
         height: "auto",
-        width: layoutOptions.layout === Layout.Rows ? cssWidth(layout, layoutOptions) : "100%",
         aspectRatio: `${photo.width} / ${photo.height}`,
         ...(layoutOptions.padding ? { padding: `${layoutOptions.padding}px` } : null),
         ...((layoutOptions.layout === Layout.Columns || layoutOptions.layout === Layout.Masonry) &&
         layout.photoIndex < layout.photosCount - 1
             ? { marginBottom: `${layoutOptions.spacing}px` }
             : null),
+        ...(onClick ? { cursor: "pointer" } : null),
     } as CSSProperties;
 
     const handleClick = onClick
