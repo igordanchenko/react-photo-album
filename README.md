@@ -5,6 +5,10 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 ## Overview
 
+[![NPM Version](https://badgen.net/npm/v/react-photo-album)](https://www.npmjs.com/package/react-photo-album)
+[![Bundle Size](https://badgen.net/bundlephobia/minzip/react-photo-album)](https://bundlephobia.com/package/react-photo-album)
+[![License MIT](https://badgen.net/npm/license/react-photo-album)](LICENSE)
+
 - **Built for React:** works with React 17 and 16.8.0+
 - **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration.
 - **Feature packed:** supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
