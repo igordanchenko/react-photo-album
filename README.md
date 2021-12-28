@@ -16,15 +16,15 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 ### Rows Layout
 
-<img src="https://react-photo-album-docs.vercel.app/images/layouts/rows.png" alt="Rows layout"/>
+<img src="https://react-photo-album.com/images/layouts/rows.png" alt="Rows layout"/>
 
 ### Columns Layout
 
-<img src="https://react-photo-album-docs.vercel.app/images/layouts/columns.png" alt="Columns layout"/>
+<img src="https://react-photo-album.com/images/layouts/columns.png" alt="Columns layout"/>
 
 ### Masonry Layout
 
-<img src="https://react-photo-album-docs.vercel.app/images/layouts/masonry.png" alt="Masonry layout"/>
+<img src="https://react-photo-album.com/images/layouts/masonry.png" alt="Masonry layout"/>
 
 ## Installation
 
@@ -40,7 +40,7 @@ yarn add react-photo-album
 
 ## Documentation
 
-[https://react-photo-album-docs.vercel.app/documentation](https://react-photo-album-docs.vercel.app/documentation)
+[https://react-photo-album.com/documentation](https://react-photo-album.com/documentation)
 
 ## Minimal Setup Example
 
