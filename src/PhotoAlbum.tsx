@@ -52,24 +52,45 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
 
     const [viewportWidth, setViewportWidth] = React.useState<number>();
     const [containerWidth, setContainerWidth] = React.useState<number>();
-    const containerRef = React.useRef<HTMLDivElement>(null);
+
+    const observerRef = React.useRef<ResizeObserver | null>(null);
+    const containerRef = React.useRef<HTMLDivElement | null>(null);
+
+    const updateDimensions = React.useCallback(() => {
+        if (typeof window !== "undefined") {
+            setViewportWidth(window.innerWidth);
+        }
+        if (containerRef.current) {
+            setContainerWidth(containerRef.current.clientWidth);
+        }
+    }, []);
+
+    const setContainerRef = React.useCallback(
+        (node) => {
+            if (observerRef.current && containerRef.current) {
+                observerRef.current.unobserve(containerRef.current);
+            }
+
+            containerRef.current = node;
+
+            if (node) {
+                if (!observerRef.current) {
+                    observerRef.current = new ResizeObserver(() => updateDimensions());
+                }
+                observerRef.current.observe(node);
+            }
+        },
+        [updateDimensions]
+    );
 
     useLayoutEffect(() => {
-        if (!containerRef.current) return undefined;
-
-        const updateDimensions = () => {
-            setViewportWidth(window.innerWidth);
-            if (containerRef.current) {
-                setContainerWidth(containerRef.current.clientWidth);
-            }
-        };
         updateDimensions();
 
-        const observer = new ResizeObserver(() => updateDimensions());
-        observer.observe(containerRef.current);
-
-        return () => observer.disconnect();
-    }, []);
+        return () => {
+            observerRef.current?.disconnect();
+            observerRef.current = null;
+        };
+    }, [updateDimensions]);
 
     const layoutOptions = resolveLayoutOptions({
         containerWidth: containerWidth || defaultContainerWidth,
@@ -87,7 +108,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     const Container = renderContainer || PhotoAlbumContainer;
 
     return (
-        <Container ref={containerRef} layoutOptions={layoutOptions}>
+        <Container ref={setContainerRef} layoutOptions={layoutOptions}>
             {layout === Layout.Rows ? (
                 <RowsLayout<T>
                     layoutOptions={layoutOptions as RowsLayoutOptions}
