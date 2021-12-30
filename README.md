@@ -20,15 +20,15 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 ### Rows Layout
 
-<img src="https://react-photo-album.com/images/layouts/rows.png" alt="Rows layout"/>
+![Rows layout](https://react-photo-album.com/images/layouts/rows.png)
 
 ### Columns Layout
 
-<img src="https://react-photo-album.com/images/layouts/columns.png" alt="Columns layout"/>
+![Columns layout](https://react-photo-album.com/images/layouts/columns.png)
 
 ### Masonry Layout
 
-<img src="https://react-photo-album.com/images/layouts/masonry.png" alt="Masonry layout"/>
+![Masonry layout](https://react-photo-album.com/images/layouts/masonry.png)
 
 ## Installation
 
@@ -49,22 +49,24 @@ yarn add react-photo-album
 ## Minimal Setup Example
 
 ```javascript
-import PhotoAlbum from 'react-photo-album';
+import PhotoAlbum from "react-photo-album";
 
 const photos = [
     {
-        src: '/images/image1.jpg',
+        src: "/images/image1.jpg",
         width: 800,
-        height: 600
+        height: 600,
     },
     {
-        src: '/images/image2.jpg',
+        src: "/images/image2.jpg",
         width: 1600,
-        height: 900
-    }
+        height: 900,
+    },
 ];
 
-<PhotoAlbum layout='rows' photos={photos} />
+const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos} />;
+
+export default MinimalSetup;
 ```
 
 ## Credits
