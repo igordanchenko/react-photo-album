@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import RowContainer from "./RowContainer";
-import PhotoDecorator from "./PhotoDecorator";
-import computeRowsLayout from "../layouts/rows";
-import { Instrumentation, Photo, RenderPhoto, RenderRowContainer, RowsLayoutOptions } from "../types";
+import PhotoRenderer from "../renderers/PhotoRenderer";
+import computeRowsLayout from "../../layouts/rows";
+import RowContainerRenderer from "../renderers/RowContainerRenderer";
+import { Instrumentation, Photo, RenderPhoto, RenderRowContainer, RowsLayoutOptions } from "../../types";
 
 type RowsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
@@ -15,9 +15,6 @@ type RowsLayoutProps<T extends Photo = Photo> = {
 
 const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>): JSX.Element => {
     const { photos, layoutOptions, renderPhoto, renderRowContainer, instrumentation } = props;
-    const { onClick } = layoutOptions;
-
-    const Container = renderRowContainer || RowContainer;
 
     const rowsLayout = computeRowsLayout({ photos, layoutOptions, instrumentation });
 
@@ -26,25 +23,23 @@ const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>): JSX.Ele
     return (
         <>
             {rowsLayout.map((row, rowIndex) => (
-                <Container
+                <RowContainerRenderer
                     key={`row-${rowIndex}`}
                     layoutOptions={layoutOptions}
                     rowIndex={rowIndex}
                     rowsCount={rowsLayout.length}
+                    renderRowContainer={renderRowContainer}
                 >
                     {row.map(({ photo, layout }) => (
-                        <PhotoDecorator
+                        <PhotoRenderer
                             key={photo.key || photo.src}
-                            photoProps={{
-                                photo,
-                                layout,
-                                onClick,
-                                layoutOptions,
-                            }}
+                            photo={photo}
+                            layout={layout}
+                            layoutOptions={layoutOptions}
                             renderPhoto={renderPhoto}
                         />
                     ))}
-                </Container>
+                </RowContainerRenderer>
             ))}
         </>
     );

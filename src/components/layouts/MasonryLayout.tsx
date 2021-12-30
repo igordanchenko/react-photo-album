@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import PhotoDecorator from "./PhotoDecorator";
-import ColumnContainer from "./ColumnContainer";
-import computeMasonryLayout from "../layouts/masonry";
-import { ColumnsLayoutOptions, Instrumentation, Photo, RenderColumnContainer, RenderPhoto } from "../types";
+import PhotoRenderer from "../renderers/PhotoRenderer";
+import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";
+import computeMasonryLayout from "../../layouts/masonry";
+import { ColumnsLayoutOptions, Instrumentation, Photo, RenderColumnContainer, RenderPhoto } from "../../types";
 
 type MasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
@@ -15,36 +15,31 @@ type MasonryLayoutProps<T extends Photo = Photo> = {
 
 const MasonryLayout = <T extends Photo = Photo>(props: MasonryLayoutProps<T>): JSX.Element => {
     const { photos, layoutOptions, renderPhoto, renderColumnContainer, instrumentation } = props;
-    const { onClick } = layoutOptions;
 
     const masonryLayout = computeMasonryLayout({ photos, layoutOptions, instrumentation });
 
     if (masonryLayout === undefined) return <></>;
 
-    const Container = renderColumnContainer || ColumnContainer;
-
     return (
         <>
             {masonryLayout.map((column, columnIndex) => (
-                <Container
+                <ColumnContainerRenderer
                     key={`masonry-column-${columnIndex}`}
                     layoutOptions={layoutOptions}
                     columnsCount={masonryLayout.length}
                     columnIndex={columnIndex}
+                    renderColumnContainer={renderColumnContainer}
                 >
                     {column.map(({ photo, layout }) => (
-                        <PhotoDecorator
+                        <PhotoRenderer
                             key={photo.key || photo.src}
-                            photoProps={{
-                                photo,
-                                layout,
-                                onClick,
-                                layoutOptions,
-                            }}
+                            photo={photo}
+                            layout={layout}
+                            layoutOptions={layoutOptions}
                             renderPhoto={renderPhoto}
                         />
                     ))}
-                </Container>
+                </ColumnContainerRenderer>
             ))}
         </>
     );

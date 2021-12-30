@@ -1,8 +1,8 @@
 import {
-    CSSProperties,
     ForwardRefExoticComponent,
+    HTMLAttributes,
+    ImgHTMLAttributes,
     MouseEvent,
-    MouseEventHandler,
     PropsWithChildren,
     PropsWithoutRef,
     RefAttributes,
@@ -50,14 +50,12 @@ export type PhotoLayout = {
 export type PhotoProps<T extends Photo = Photo> = {
     /** photo object */
     photo: T;
-    /** photo layout */
+    /** computed photo layout */
     layout: PhotoLayout;
-    /** CSS styles to be applied to photo */
-    style: CSSProperties;
-    /** photo click handler */
-    onClick?: MouseEventHandler;
     /** photo album layout options */
     layoutOptions: LayoutOptions;
+    /** pre-populated 'img' element attributes */
+    imageProps: ImgHTMLAttributes<HTMLImageElement>;
 };
 
 export type PhotoAlbumProps<T extends Photo = Photo> = {
@@ -123,6 +121,8 @@ export type LayoutOptions = ColumnsLayoutOptions | RowsLayoutOptions;
 export type ContainerProps = {
     /** layout options */
     layoutOptions: LayoutOptions;
+    /** pre-populated default container attributes */
+    containerProps: HTMLAttributes<HTMLDivElement>;
 };
 
 export type RenderContainer = ForwardRefExoticComponent<
@@ -136,6 +136,8 @@ export type RowContainerProps = {
     rowIndex: number;
     /** total number of rows */
     rowsCount: number;
+    /** pre-populated default row container attributes */
+    rowContainerProps: HTMLAttributes<HTMLDivElement>;
 };
 
 export type RenderRowContainer = (props: PropsWithChildren<RowContainerProps>) => JSX.Element;
@@ -150,6 +152,8 @@ export type ColumnContainerProps = {
     columnsGaps?: number[];
     /** width adjustment ratio of each column */
     columnsRatios?: number[];
+    /** pre-populated default column container attributes */
+    columnContainerProps: HTMLAttributes<HTMLDivElement>;
 };
 
 export type RenderColumnContainer = (props: PropsWithChildren<ColumnContainerProps>) => JSX.Element;

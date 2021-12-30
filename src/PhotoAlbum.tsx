@@ -2,10 +2,10 @@ import * as React from "react";
 import ResizeObserver from "resize-observer-polyfill";
 
 import Layout from "./Layout";
-import RowsLayout from "./components/RowsLayout";
-import ColumnsLayout from "./components/ColumnsLayout";
-import MasonryLayout from "./components/MasonryLayout";
-import PhotoAlbumContainer from "./components/PhotoAlbumContainer";
+import RowsLayout from "./components/layouts/RowsLayout";
+import ColumnsLayout from "./components/layouts/ColumnsLayout";
+import MasonryLayout from "./components/layouts/MasonryLayout";
+import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import resolveResponsiveParameter from "./utils/responsive";
 import useLayoutEffect from "./utils/layoutEffect";
 import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
@@ -105,10 +105,8 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
 
     const commonLayoutProps = { photos, renderPhoto, instrumentation };
 
-    const Container = renderContainer || PhotoAlbumContainer;
-
     return (
-        <Container ref={setContainerRef} layoutOptions={layoutOptions}>
+        <ContainerRenderer ref={setContainerRef} layoutOptions={layoutOptions} renderContainer={renderContainer}>
             {layout === Layout.Rows ? (
                 <RowsLayout<T>
                     layoutOptions={layoutOptions as RowsLayoutOptions}
@@ -128,7 +126,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
                     {...commonLayoutProps}
                 />
             )}
-        </Container>
+        </ContainerRenderer>
     );
 };
 

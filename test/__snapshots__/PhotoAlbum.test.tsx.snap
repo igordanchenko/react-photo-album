@@ -16,6 +16,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
     className="custom-column-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -30,6 +31,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -44,6 +46,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -58,6 +61,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -75,6 +79,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
     className="custom-column-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -89,6 +94,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -103,6 +109,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -120,6 +127,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
     className="custom-column-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -134,6 +142,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -148,6 +157,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -162,6 +172,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -179,6 +190,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
     className="custom-column-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -193,6 +205,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -207,6 +220,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -221,6 +235,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -235,6 +250,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -249,6 +265,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -283,6 +300,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -296,6 +314,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -309,6 +328,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -322,6 +342,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -349,6 +370,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -362,6 +384,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -375,6 +398,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -388,6 +412,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -415,6 +440,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -428,6 +454,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -441,6 +468,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -468,6 +496,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -495,6 +524,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -508,6 +538,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -521,6 +552,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -547,6 +579,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -560,6 +593,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -592,6 +626,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
     className="custom-row-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -605,6 +640,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -618,6 +654,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -631,6 +668,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -648,6 +686,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
     className="custom-row-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -661,6 +700,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -674,6 +714,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -687,6 +728,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -704,6 +746,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
     className="custom-row-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -717,6 +760,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -730,6 +774,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -747,6 +792,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
     className="custom-row-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -764,6 +810,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
     className="custom-row-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -777,6 +824,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -790,6 +838,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -807,6 +856,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
     className="custom-row-class"
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -820,6 +870,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -904,6 +955,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -931,6 +983,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -958,6 +1011,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -985,6 +1039,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -1012,6 +1067,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -1039,6 +1095,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -1066,6 +1123,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -1093,6 +1151,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -1120,6 +1179,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -1147,6 +1207,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -1174,6 +1235,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -1201,6 +1263,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -1228,6 +1291,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -1255,6 +1319,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -1282,6 +1347,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -1309,6 +1375,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -1336,6 +1403,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -1378,6 +1446,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -1392,6 +1461,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -1406,6 +1476,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -1420,6 +1491,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -1434,6 +1506,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -1448,6 +1521,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -1462,6 +1536,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -1489,6 +1564,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -1503,6 +1579,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -1517,6 +1594,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -1531,6 +1609,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -1545,6 +1624,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -1559,6 +1639,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -1573,6 +1654,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -1587,6 +1669,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -1601,6 +1684,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -1615,6 +1699,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -1657,6 +1742,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -1671,6 +1757,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -1685,6 +1772,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -1699,6 +1787,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -1713,6 +1802,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -1740,6 +1830,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -1754,6 +1845,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -1768,6 +1860,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -1782,6 +1875,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -1796,6 +1890,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -1823,6 +1918,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -1837,6 +1933,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -1851,6 +1948,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -1865,6 +1963,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -1879,6 +1978,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -1893,6 +1993,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -1907,6 +2008,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -1949,6 +2051,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -1963,6 +2066,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -1977,6 +2081,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -1991,6 +2096,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -2018,6 +2124,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -2032,6 +2139,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -2046,6 +2154,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -2073,6 +2182,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -2087,6 +2197,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -2101,6 +2212,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -2115,6 +2227,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -2142,6 +2255,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -2156,6 +2270,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -2170,6 +2285,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -2184,6 +2300,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -2198,6 +2315,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -2212,6 +2330,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -2254,6 +2373,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -2268,6 +2388,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -2282,6 +2403,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -2296,6 +2418,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -2310,6 +2433,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -2337,6 +2461,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -2351,6 +2476,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -2365,6 +2491,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -2379,6 +2506,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -2393,6 +2521,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -2420,6 +2549,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -2434,6 +2564,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -2448,6 +2579,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -2462,6 +2594,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -2476,6 +2609,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -2490,6 +2624,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -2504,6 +2639,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -2546,6 +2682,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -2560,6 +2697,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -2574,6 +2712,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -2601,6 +2740,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -2615,6 +2755,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -2629,6 +2770,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -2656,6 +2798,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -2670,6 +2813,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -2684,6 +2828,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -2711,6 +2856,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -2725,6 +2871,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -2739,6 +2886,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -2753,6 +2901,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -2780,6 +2929,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -2794,6 +2944,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -2808,6 +2959,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -2822,6 +2974,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -2864,6 +3017,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -2878,6 +3032,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -2892,6 +3047,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -2919,6 +3075,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -2933,6 +3090,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -2960,6 +3118,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -2974,6 +3133,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -3001,6 +3161,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -3015,6 +3176,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -3029,6 +3191,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -3056,6 +3219,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -3070,6 +3234,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -3084,6 +3249,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -3098,6 +3264,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -3125,6 +3292,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -3139,6 +3307,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -3153,6 +3322,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -3195,6 +3365,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -3209,6 +3380,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -3236,6 +3408,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -3250,6 +3423,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -3277,6 +3451,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -3291,6 +3466,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -3318,6 +3494,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -3332,6 +3509,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -3359,6 +3537,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -3373,6 +3552,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -3400,6 +3580,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -3414,6 +3595,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -3428,6 +3610,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -3442,6 +3625,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -3469,6 +3653,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -3483,6 +3668,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -3497,6 +3683,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -3539,6 +3726,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -3553,6 +3741,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -3567,6 +3756,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -3581,6 +3771,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -3595,6 +3786,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -3622,6 +3814,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -3636,6 +3829,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -3650,6 +3844,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -3664,6 +3859,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -3678,6 +3874,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -3705,6 +3902,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -3719,6 +3917,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -3733,6 +3932,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -3747,6 +3947,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -3761,6 +3962,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -3775,6 +3977,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -3789,6 +3992,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -3831,6 +4035,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -3845,6 +4050,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -3859,6 +4065,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -3873,6 +4080,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -3900,6 +4108,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -3914,6 +4123,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -3928,6 +4138,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -3955,6 +4166,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -3969,6 +4181,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -3983,6 +4196,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -3997,6 +4211,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -4024,6 +4239,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -4038,6 +4254,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -4052,6 +4269,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -4066,6 +4284,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -4080,6 +4299,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -4094,6 +4314,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -4136,6 +4357,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -4150,6 +4372,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -4164,6 +4387,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -4178,6 +4402,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -4205,6 +4430,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -4219,6 +4445,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -4233,6 +4460,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -4260,6 +4488,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -4274,6 +4503,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -4288,6 +4518,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -4302,6 +4533,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -4329,6 +4561,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -4343,6 +4576,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -4357,6 +4591,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -4371,6 +4606,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -4385,6 +4621,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -4399,6 +4636,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -4441,6 +4679,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -4455,6 +4694,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -4469,6 +4709,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -4483,6 +4724,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -4510,6 +4752,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -4524,6 +4767,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -4538,6 +4782,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -4565,6 +4810,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -4579,6 +4825,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -4593,6 +4840,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -4607,6 +4855,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -4634,6 +4883,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -4648,6 +4898,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -4662,6 +4913,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -4676,6 +4928,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -4690,6 +4943,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -4704,6 +4958,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -4746,6 +5001,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -4773,6 +5029,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -4800,6 +5057,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -4827,6 +5085,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -4854,6 +5113,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -4881,6 +5141,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -4908,6 +5169,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -4935,6 +5197,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -4962,6 +5225,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -4989,6 +5253,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -5016,6 +5281,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -5043,6 +5309,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -5070,6 +5337,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -5097,6 +5365,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -5124,6 +5393,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -5151,6 +5421,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -5178,6 +5449,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -5220,6 +5492,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -5234,6 +5507,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -5248,6 +5522,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -5262,6 +5537,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -5276,6 +5552,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -5290,6 +5567,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -5304,6 +5582,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -5318,6 +5597,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -5332,6 +5612,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -5359,6 +5640,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -5373,6 +5655,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -5387,6 +5670,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -5401,6 +5685,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -5415,6 +5700,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -5429,6 +5715,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -5443,6 +5730,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -5457,6 +5745,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -5499,6 +5788,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -5513,6 +5803,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -5527,6 +5818,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -5541,6 +5833,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -5555,6 +5848,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -5569,6 +5863,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -5596,6 +5891,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -5610,6 +5906,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -5624,6 +5921,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -5638,6 +5936,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -5652,6 +5951,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -5666,6 +5966,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -5693,6 +5994,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -5707,6 +6009,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -5721,6 +6024,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -5735,6 +6039,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -5749,6 +6054,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -5791,6 +6097,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -5805,6 +6112,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -5819,6 +6127,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -5833,6 +6142,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -5860,6 +6170,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -5874,6 +6185,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -5888,6 +6200,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -5902,6 +6215,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -5916,6 +6230,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -5943,6 +6258,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -5957,6 +6273,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -5971,6 +6288,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -5985,6 +6303,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -6012,6 +6331,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -6026,6 +6346,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -6040,6 +6361,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -6054,6 +6376,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -6096,6 +6419,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -6110,6 +6434,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -6124,6 +6449,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -6138,6 +6464,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -6152,6 +6479,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -6166,6 +6494,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -6193,6 +6522,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -6207,6 +6537,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -6221,6 +6552,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -6235,6 +6567,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -6249,6 +6582,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -6263,6 +6597,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -6290,6 +6625,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -6304,6 +6640,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -6318,6 +6655,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -6332,6 +6670,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -6346,6 +6685,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -6388,6 +6728,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -6402,6 +6743,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -6416,6 +6758,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -6430,6 +6773,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -6457,6 +6801,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -6471,6 +6816,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -6485,6 +6831,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -6512,6 +6859,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -6526,6 +6874,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -6540,6 +6889,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -6554,6 +6904,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -6581,6 +6932,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -6595,6 +6947,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -6609,6 +6962,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -6636,6 +6990,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -6650,6 +7005,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -6664,6 +7020,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -6706,6 +7063,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -6720,6 +7078,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -6734,6 +7093,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -6761,6 +7121,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -6775,6 +7136,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -6789,6 +7151,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -6816,6 +7179,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -6830,6 +7194,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -6857,6 +7222,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -6871,6 +7237,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -6885,6 +7252,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -6912,6 +7280,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -6926,6 +7295,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -6940,6 +7310,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -6967,6 +7338,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -6981,6 +7353,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -6995,6 +7368,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -7037,6 +7411,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -7051,6 +7426,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -7065,6 +7441,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -7092,6 +7469,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -7106,6 +7484,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -7133,6 +7512,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -7147,6 +7527,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -7174,6 +7555,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -7188,6 +7570,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -7202,6 +7585,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -7229,6 +7613,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -7243,6 +7628,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -7270,6 +7656,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -7284,6 +7671,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -7298,6 +7686,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -7325,6 +7714,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -7339,6 +7729,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -7381,6 +7772,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -7395,6 +7787,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -7409,6 +7802,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -7423,6 +7817,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -7437,6 +7832,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -7451,6 +7847,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -7478,6 +7875,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -7492,6 +7890,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -7506,6 +7905,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -7520,6 +7920,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -7534,6 +7935,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -7548,6 +7950,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -7575,6 +7978,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -7589,6 +7993,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -7603,6 +8008,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -7617,6 +8023,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -7631,6 +8038,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -7673,6 +8081,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -7687,6 +8096,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -7701,6 +8111,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -7715,6 +8126,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -7742,6 +8154,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -7756,6 +8169,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -7770,6 +8184,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -7784,6 +8199,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -7798,6 +8214,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -7825,6 +8242,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -7839,6 +8257,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -7853,6 +8272,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -7867,6 +8287,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -7894,6 +8315,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -7908,6 +8330,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -7922,6 +8345,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -7936,6 +8360,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -7978,6 +8403,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -7992,6 +8418,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -8006,6 +8433,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -8020,6 +8448,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -8047,6 +8476,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -8061,6 +8491,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -8075,6 +8506,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -8089,6 +8521,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -8103,6 +8536,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -8130,6 +8564,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -8144,6 +8579,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -8158,6 +8594,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -8172,6 +8609,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -8199,6 +8637,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -8213,6 +8652,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -8227,6 +8667,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -8241,6 +8682,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -8283,6 +8725,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -8297,6 +8740,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -8311,6 +8755,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -8325,6 +8770,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -8352,6 +8798,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -8366,6 +8813,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -8380,6 +8828,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -8394,6 +8843,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -8408,6 +8858,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -8435,6 +8886,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -8449,6 +8901,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -8463,6 +8916,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -8477,6 +8931,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -8504,6 +8959,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -8518,6 +8974,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -8532,6 +8989,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -8546,6 +9004,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -8588,6 +9047,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -8601,6 +9061,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -8614,6 +9075,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -8627,6 +9089,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -8640,6 +9103,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -8653,6 +9117,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -8666,6 +9131,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -8679,6 +9145,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -8706,6 +9173,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -8719,6 +9187,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -8732,6 +9201,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -8745,6 +9215,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -8771,6 +9242,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -8784,6 +9256,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -8797,6 +9270,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -8810,6 +9284,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -8823,6 +9298,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -8865,6 +9341,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -8878,6 +9355,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -8891,6 +9369,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -8904,6 +9383,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -8917,6 +9397,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -8930,6 +9411,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -8957,6 +9439,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -8970,6 +9453,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -8983,6 +9467,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -8996,6 +9481,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -9009,6 +9495,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -9036,6 +9523,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -9049,6 +9537,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -9075,6 +9564,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -9088,6 +9578,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -9101,6 +9592,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -9114,6 +9606,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -9156,6 +9649,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -9169,6 +9663,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -9182,6 +9677,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -9195,6 +9691,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -9208,6 +9705,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -9221,6 +9719,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -9234,6 +9733,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -9247,6 +9747,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -9274,6 +9775,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -9287,6 +9789,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -9300,6 +9803,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -9313,6 +9817,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -9339,6 +9844,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -9352,6 +9858,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -9365,6 +9872,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -9378,6 +9886,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -9391,6 +9900,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -9433,6 +9943,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -9446,6 +9957,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -9459,6 +9971,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -9472,6 +9985,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -9485,6 +9999,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -9498,6 +10013,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -9511,6 +10027,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -9524,6 +10041,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -9537,6 +10055,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -9550,6 +10069,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -9563,6 +10083,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -9589,6 +10110,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -9602,6 +10124,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -9615,6 +10138,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -9628,6 +10152,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -9641,6 +10166,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -9654,6 +10180,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -9696,6 +10223,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -9709,6 +10237,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -9722,6 +10251,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -9735,6 +10265,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -9762,6 +10293,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -9775,6 +10307,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -9788,6 +10321,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -9801,6 +10335,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -9828,6 +10363,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -9841,6 +10377,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -9854,6 +10391,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -9881,6 +10419,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -9908,6 +10447,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -9921,6 +10461,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -9934,6 +10475,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -9960,6 +10502,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -9973,6 +10516,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -10015,6 +10559,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -10028,6 +10573,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -10041,6 +10587,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -10054,6 +10601,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -10081,6 +10629,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -10094,6 +10643,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -10107,6 +10657,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -10120,6 +10671,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -10147,6 +10699,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -10160,6 +10713,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -10173,6 +10727,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -10200,6 +10755,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -10227,6 +10783,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -10240,6 +10797,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -10253,6 +10811,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -10279,6 +10838,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -10292,6 +10852,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -10334,6 +10895,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -10347,6 +10909,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -10360,6 +10923,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -10373,6 +10937,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -10386,6 +10951,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -10399,6 +10965,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -10412,6 +10979,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -10425,6 +10993,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -10438,6 +11007,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -10451,6 +11021,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -10464,6 +11035,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -10490,6 +11062,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -10503,6 +11076,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -10516,6 +11090,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -10529,6 +11104,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -10542,6 +11118,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -10555,6 +11132,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -10597,6 +11175,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -10610,6 +11189,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -10637,6 +11217,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -10650,6 +11231,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -10663,6 +11245,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -10690,6 +11273,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -10703,6 +11287,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -10730,6 +11315,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -10743,6 +11329,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -10770,6 +11357,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -10783,6 +11371,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -10810,6 +11399,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -10823,6 +11413,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -10850,6 +11441,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -10863,6 +11455,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -10889,6 +11482,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -10902,6 +11496,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -10944,6 +11539,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -10957,6 +11553,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -10970,6 +11567,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -10983,6 +11581,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -11010,6 +11609,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -11023,6 +11623,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -11036,6 +11637,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -11049,6 +11651,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -11076,6 +11679,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -11089,6 +11693,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -11102,6 +11707,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -11129,6 +11735,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -11156,6 +11763,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -11169,6 +11777,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -11182,6 +11791,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -11208,6 +11818,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -11221,6 +11832,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -11263,6 +11875,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -11276,6 +11889,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -11289,6 +11903,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -11302,6 +11917,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -11329,6 +11945,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -11342,6 +11959,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -11355,6 +11973,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -11368,6 +11987,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -11395,6 +12015,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -11408,6 +12029,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -11421,6 +12043,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -11448,6 +12071,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -11475,6 +12099,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -11488,6 +12113,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -11501,6 +12127,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -11527,6 +12154,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -11540,6 +12168,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -11582,6 +12211,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -11595,6 +12225,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -11608,6 +12239,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -11621,6 +12253,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -11648,6 +12281,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -11661,6 +12295,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -11674,6 +12309,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -11687,6 +12323,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -11714,6 +12351,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -11727,6 +12365,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -11740,6 +12379,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -11767,6 +12407,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -11794,6 +12435,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -11807,6 +12449,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -11820,6 +12463,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -11846,6 +12490,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -11859,6 +12504,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
@@ -11901,6 +12547,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/2ShvY8Lf6l0/800x599"
       style={
@@ -11914,6 +12561,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/Dm-qxdynoEc/800x799"
       style={
@@ -11927,6 +12575,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qDkso9nvCg0/600x799"
       style={
@@ -11940,6 +12589,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/iecJiKe_RNg/600x799"
       style={
@@ -11967,6 +12617,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/epcsn8Ed8kY/600x799"
       style={
@@ -11980,6 +12631,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NQSWvyVRIJk/800x599"
       style={
@@ -11993,6 +12645,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/zh7GEuORbUw/600x799"
       style={
@@ -12006,6 +12659,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/PpOHJezOalU/800x599"
       style={
@@ -12033,6 +12687,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/I1ASdgphUH4/800x599"
       style={
@@ -12046,6 +12701,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/XiDA78wAZVw/600x799"
       style={
@@ -12059,6 +12715,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/x8xJpClTvR0/800x599"
       style={
@@ -12086,6 +12743,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/u9cG4cuJ6bU/4927x1000"
       style={
@@ -12113,6 +12771,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/qGQNmBE7mYw/800x599"
       style={
@@ -12126,6 +12785,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/NuO6iTBkHxE/800x599"
       style={
@@ -12139,6 +12799,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/pF1ug8ysTtY/600x400"
       style={
@@ -12165,6 +12826,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
     }
   >
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/A-fubu9QJxE/800x533"
       style={
@@ -12178,6 +12840,7 @@ exports[`PhotoAlbum uses src when key is not supplied 1`] = `
       }
     />
     <img
+      alt=""
       className="react-photo-album--photo"
       src="https://source.unsplash.com/5P91SF0zNsI/740x494"
       style={
