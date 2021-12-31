@@ -64,7 +64,7 @@ const photos = [
     },
 ];
 
-const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos}/>;
+const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos} />;
 
 export default MinimalSetup;
 ```
@@ -98,14 +98,14 @@ as possible.
 
 ### SSR
 
-React Photo Album extensively uses CSS flexbox and CSS `calc` function to calculate dimensions of images on the client.
-Unlike its predecessor, React Photo Album avoids setting the exact dimensions of images in pixels. Thanks to this
-approach, server-side rendered markup looks pixel-perfect on the client even before hydration (or even when JavaScript
-is completely disabled in the browser). React Photo Album calculates `spacing`, `padding`, `columns`, and other
-responsive parameters on the server-side using `defaultContainerWidth` value, which is set to 800px by default. Keep in
-mind that responsive parameters may contribute to cumulative layout shifts during the initial page load. If CLS becomes
-an issue in your case, you may want to consider using hard-coded values for`columns`, `spacing`, `padding`, etc.,
-instead of the default responsive values.
+React Photo Album extensively uses CSS flexbox and CSS `calc` function to calculate the dimensions of images on the
+client. Unlike its predecessor, React Photo Album avoids setting the exact dimensions of images in pixels. Thanks to
+this approach, server-side rendered markup looks pixel-perfect on the client even before hydration (or even when
+JavaScript is completely disabled in the browser). React Photo Album calculates `spacing`, `padding`, `columns`, and
+other responsive parameters on the server-side using the `defaultContainerWidth` value, which is set to 800px by
+default. Keep in mind that responsive parameters may contribute to cumulative layout shifts during the initial page
+load. If CLS becomes an issue in your case, you may want to consider using hard-coded values for `columns`, `spacing`
+, `padding`, etc., instead of the default responsive values.
 
 ## Credits
 
