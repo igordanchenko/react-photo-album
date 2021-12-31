@@ -64,7 +64,7 @@ const photos = [
     },
 ];
 
-const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos}/>;
+const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos} />;
 
 export default MinimalSetup;
 ```
