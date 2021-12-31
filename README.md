@@ -64,10 +64,48 @@ const photos = [
     },
 ];
 
-const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos} />;
+const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos}/>;
 
 export default MinimalSetup;
 ```
+
+## How It Works
+
+### Rows Layout
+
+Rows layout fills the rectangular container space by arranging photos into rows that are similar in size, with the
+height of each row being as close to `targetRowHeight` as possible. This layout uses an algorithm adapted from the Knuth
+and Plass line breaking algorithm. To calculate the single best layout, it uses Dijkstra's algorithm to find the
+shortest past in a graph where each photo to break on represents a node, and each row represents an edge. The cost of
+each edge is calculated as the squared deviation from the `targetRowHeight`. This algorithm produces rows that are
+similar in height and photos that are not being stretched or shrunken abnormally (as is what happens in a naive
+implementation). It solves the issue of panoramas shrinking rows or having stragglers or stretched images in the last
+row, instead creating a justified grid. The graph is being built as the shortest path is being calculated to improve
+algorithm's performance, so the entire adjacency list is not calculated ahead of time.
+
+### Columns Layout
+
+Columns layout fills the rectangular container space by arranging photos into a predefined number of columns, determined
+by the `columns` parameter. This layout uses an algorithm very similar to the one described above, but instead of
+Dijkstra's algorithm, it uses a dynamic programming algorithm to find the shortest path of length N in a directed
+weighted graph.
+
+### Masonry Layout
+
+Masonry layout arranges photos into columns of equal width by placing each photo into the shortest column. This layout
+does not completely fill the rectangular container space, but the columns end up being as close in height to each other
+as possible.
+
+### SSR
+
+React Photo Album extensively uses CSS flexbox and CSS `calc` function to calculate dimensions of images on the client.
+Unlike its predecessor, React Photo Album avoids setting the exact dimensions of images in pixels. Thanks to this
+approach, server-side rendered markup looks pixel-perfect on the client even before hydration (or even when JavaScript
+is completely disabled in the browser). React Photo Album calculates `spacing`, `padding`, `columns`, and other
+responsive parameters on the server-side using `defaultContainerWidth` value, which is set to 800px by default. Keep in
+mind that responsive parameters may contribute to cumulative layout shifts during the initial page load. If CLS becomes
+an issue in your case, you may want to consider using hard-coded values for`columns`, `spacing`, `padding`, etc.,
+instead of the default responsive values.
 
 ## Credits
 
