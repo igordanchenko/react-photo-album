@@ -64,7 +64,7 @@ const photos = [
     },
 ];
 
-const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos} />;
+const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos}/>;
 
 export default MinimalSetup;
 ```
@@ -74,8 +74,8 @@ export default MinimalSetup;
 ### Rows Layout
 
 Rows layout fills the rectangular container space by arranging photos into rows that are similar in size, with the
-height of each row being as close to `targetRowHeight` as possible. This layout uses an algorithm adapted from the Knuth
-and Plass line breaking algorithm. To calculate the single best layout, it uses Dijkstra's algorithm to find the
+height of each row being as close to the `targetRowHeight` as possible. This layout uses an algorithm adapted from the
+Knuth and Plass line breaking algorithm. To calculate the single best layout, it uses Dijkstra's algorithm to find the
 shortest past in a graph where each photo to break on represents a node, and each row represents an edge. The cost of
 each edge is calculated as the squared deviation from the `targetRowHeight`. This algorithm produces rows that are
 similar in height and photos that are not being stretched or shrunken abnormally (as is what happens in a naive
