@@ -6,7 +6,7 @@ import App from "./App";
 ReactDOM.render(
     <React.StrictMode>
         <header>
-            <h1>React Photo Album | Rows Layout</h1>
+            <h1>React Photo Album | Custom Renderers</h1>
             <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
                 GitHub
             </a>
