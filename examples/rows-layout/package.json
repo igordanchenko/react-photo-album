@@ -1,5 +1,18 @@
 {
-    "name": "react-photo-album-examples-rows-layout",
+    "name": "react-photo-album-rows-layout",
+    "description": "React Photo Album - Rows Layout",
+    "keywords": [
+        "react photo album",
+        "react photo gallery",
+        "react image gallery",
+        "photo album",
+        "photo gallery",
+        "image gallery",
+        "photo layout",
+        "image layout",
+        "react-photo-album",
+        "react-photo-gallery"
+    ],
     "version": "0.1.0",
     "license": "MIT",
     "private": true,
