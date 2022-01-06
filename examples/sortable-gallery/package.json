@@ -20,6 +20,7 @@
     "dependencies": {
         "@dnd-kit/core": "^4.0.3",
         "@dnd-kit/sortable": "^5.1.0",
+        "@dnd-kit/utilities": "^3.0.2",
         "@types/node": "^17.0.8",
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
