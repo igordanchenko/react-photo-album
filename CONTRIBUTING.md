@@ -9,7 +9,7 @@ React Photo Album has adopted the [Contributor Covenant](https://www.contributor
 and we expect project participants to adhere to it. Please read [the full text](/CODE_OF_CONDUCT.md) so that you can
 understand what actions will and will not be tolerated.
 
-## Sending a Pull Requests
+## Sending a Pull Request
 
 1. Fork the repository.
 
