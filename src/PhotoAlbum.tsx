@@ -30,7 +30,7 @@ const resolveLayoutOptions = <T extends Photo>({
     columns: resolveResponsiveParameter(columns, containerWidth, [6, 5, 4, 3, 2, 1]),
     spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 16, 12, 8, 4, 2]),
     padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0, 0]),
-    targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [400, 300, 200, 150, 100, 80]),
+    targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [300, 250, 200, 150, 100, 80]),
 });
 
 const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
