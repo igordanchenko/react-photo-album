@@ -1,109 +1,44 @@
-const photos = [
-    {
-        src: "https://source.unsplash.com/Osq7UAVxIOI/1080x780",
-        width: 1080,
-        height: 780,
-    },
-    {
-        src: "https://source.unsplash.com/Dhmn6ete6g8/1080x1620",
-        width: 1080,
-        height: 1620,
-    },
-    {
-        src: "https://source.unsplash.com/RkBTPqPEGDo/1080x720",
-        width: 1080,
-        height: 720,
-    },
-    {
-        src: "https://source.unsplash.com/Yizrl9N_eDA/1080x721",
-        width: 1080,
-        height: 721,
-    },
-    {
-        src: "https://source.unsplash.com/KG3TyFi0iTU/1080x1620",
-        width: 1080,
-        height: 1620,
-    },
-    {
-        src: "https://source.unsplash.com/Jztmx9yqjBw/1080x607",
-        width: 1080,
-        height: 607,
-    },
-    {
-        src: "https://source.unsplash.com/-heLWtuAN3c/1080x608",
-        width: 1080,
-        height: 608,
-    },
-    {
-        src: "https://source.unsplash.com/xOigCUcFdA8/1080x720",
-        width: 1080,
-        height: 720,
-    },
-    {
-        src: "https://source.unsplash.com/1azAjl8FTnU/1080x1549",
-        width: 1080,
-        height: 1549,
-    },
-    {
-        src: "https://source.unsplash.com/ALrCdq-ui_Q/1080x720",
-        width: 1080,
-        height: 720,
-    },
-    {
-        src: "https://source.unsplash.com/twukN12EN7c/1080x694",
-        width: 1080,
-        height: 694,
-    },
-    {
-        src: "https://source.unsplash.com/9UjEyzA6pP4/1080x1620",
-        width: 1080,
-        height: 1620,
-    },
-    {
-        src: "https://source.unsplash.com/sEXGgun3ZiE/1080x720",
-        width: 1080,
-        height: 720,
-    },
-    {
-        src: "https://source.unsplash.com/S-cdwrx-YuQ/1080x1440",
-        width: 1080,
-        height: 1440,
-    },
-    {
-        src: "https://source.unsplash.com/q-motCAvPBM/1080x1620",
-        width: 1080,
-        height: 1620,
-    },
-    {
-        src: "https://source.unsplash.com/Xn4L310ztMU/1080x810",
-        width: 1080,
-        height: 810,
-    },
-    {
-        src: "https://source.unsplash.com/ls94iFAQerE/1080x1620",
-        width: 1080,
-        height: 1620,
-    },
-    {
-        src: "https://source.unsplash.com/X48pUOPKf7A/1080x160",
-        width: 1080,
-        height: 160,
-    },
-    {
-        src: "https://source.unsplash.com/GbLS6YVXj0U/1080x810",
-        width: 1080,
-        height: 810,
-    },
-    {
-        src: "https://source.unsplash.com/9CRd1J1rEOM/1080x720",
-        width: 1080,
-        height: 720,
-    },
-    {
-        src: "https://source.unsplash.com/xKhtkhc9HbQ/1080x1440",
-        width: 1080,
-        height: 1440,
-    },
+const breakpoints = [828, 640, 384, 256, 128, 96, 64, 48];
+
+const unsplashLink = (id: string, width: number, height: number) =>
+    `https://source.unsplash.com/${id}/${width}x${height}`;
+
+const unsplashPhotos = [
+    { id: "Osq7UAVxIOI", width: 1080, height: 780 },
+    { id: "Dhmn6ete6g8", width: 1080, height: 1620 },
+    { id: "RkBTPqPEGDo", width: 1080, height: 720 },
+    { id: "Yizrl9N_eDA", width: 1080, height: 721 },
+    { id: "KG3TyFi0iTU", width: 1080, height: 1620 },
+    { id: "Jztmx9yqjBw", width: 1080, height: 607 },
+    { id: "-heLWtuAN3c", width: 1080, height: 608 },
+    { id: "xOigCUcFdA8", width: 1080, height: 720 },
+    { id: "1azAjl8FTnU", width: 1080, height: 1549 },
+    { id: "ALrCdq-ui_Q", width: 1080, height: 720 },
+    { id: "twukN12EN7c", width: 1080, height: 694 },
+    { id: "9UjEyzA6pP4", width: 1080, height: 1620 },
+    { id: "sEXGgun3ZiE", width: 1080, height: 720 },
+    { id: "S-cdwrx-YuQ", width: 1080, height: 1440 },
+    { id: "q-motCAvPBM", width: 1080, height: 1620 },
+    { id: "Xn4L310ztMU", width: 1080, height: 810 },
+    { id: "ls94iFAQerE", width: 1080, height: 1620 },
+    { id: "X48pUOPKf7A", width: 1080, height: 160 },
+    { id: "GbLS6YVXj0U", width: 1080, height: 810 },
+    { id: "9CRd1J1rEOM", width: 1080, height: 720 },
+    { id: "xKhtkhc9HbQ", width: 1080, height: 1440 },
 ];
+
+const photos = unsplashPhotos.map((photo) => ({
+    src: unsplashLink(photo.id, photo.width, photo.height),
+    width: photo.width,
+    height: photo.height,
+    images: breakpoints.map((breakpoint) => {
+        const height = Math.round((photo.height / photo.width) * breakpoint);
+        return {
+            src: unsplashLink(photo.id, breakpoint, height),
+            width: breakpoint,
+            height,
+        };
+    }),
+}));
 
 export default photos;
