@@ -176,12 +176,9 @@ describe("PhotoAlbum", () => {
         );
     });
 
-    it("uses src when key is not supplied", () => {
+    it("uses optional key attribute", () => {
         whenAskedToRender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos.map((photo) => ({ src: photo.src, width: photo.width, height: photo.height }))}
-            />
+            <PhotoAlbum layout={"rows"} photos={photos.map((photo, index) => ({ ...photo, key: `${index}` }))} />
         );
     });
 });
