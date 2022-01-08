@@ -1,17 +1,17 @@
 version: 2
 
 updates:
-    -   package-ecosystem: npm
-        directory: /
+    -   package-ecosystem: "npm"
+        directory: "/"
         schedule:
-            interval: daily
-            time: 10:00
-            timezone: America/New_York
+            interval: "daily"
+            time: "10:00"
+            timezone: "America/New_York"
 
-    -   package-ecosystem: npm
-        directory: /examples/columns-layout
+    -   package-ecosystem: "npm"
+        directory: "/examples/columns-layout"
         schedule:
-            interval: weekly
-            day: monday
-            time: 10:00
-            timezone: America/New_York
+            interval: "weekly"
+            day: "monday"
+            time: "10:00"
+            timezone: "America/New_York"
