@@ -29,14 +29,14 @@ type PhotoFrameProps = SortablePhotoProps & {
 };
 
 const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
-    const { photo, layout, imageProps, overlay, active, insertPosition } = props;
+    const { photo, layoutOptions, imageProps, overlay, active, insertPosition } = props;
     const { style, ...restImageProps } = imageProps;
 
     return (
         <div
             ref={ref}
             style={{
-                width: overlay ? layout.width : style?.width,
+                width: overlay ? `calc(100% - ${2 * layoutOptions.padding}px)` : style?.width,
                 padding: style?.padding,
                 marginBottom: style?.marginBottom,
             }}
