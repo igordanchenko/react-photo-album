@@ -17,41 +17,41 @@ updates:
             timezone: "America/New_York"
 
     -   package-ecosystem: "npm"
-            directory: "/examples/rows-layout"
-            schedule:
-                interval: "weekly"
-                day: "monday"
-                time: "10:00"
-                timezone: "America/New_York"
+        directory: "/examples/rows-layout"
+        schedule:
+            interval: "weekly"
+            day: "monday"
+            time: "10:00"
+            timezone: "America/New_York"
 
     -   package-ecosystem: "npm"
-            directory: "/examples/masonry-layout"
-            schedule:
-                interval: "weekly"
-                day: "monday"
-                time: "10:00"
-                timezone: "America/New_York"
+        directory: "/examples/masonry-layout"
+        schedule:
+            interval: "weekly"
+            day: "monday"
+            time: "10:00"
+            timezone: "America/New_York"
 
     -   package-ecosystem: "npm"
-            directory: "/examples/custom-renderers"
-            schedule:
-                interval: "weekly"
-                day: "monday"
-                time: "10:00"
-                timezone: "America/New_York"
+        directory: "/examples/custom-renderers"
+        schedule:
+            interval: "weekly"
+            day: "monday"
+            time: "10:00"
+            timezone: "America/New_York"
 
     -   package-ecosystem: "npm"
-            directory: "/examples/playground"
-            schedule:
-                interval: "weekly"
-                day: "monday"
-                time: "10:00"
-                timezone: "America/New_York"
+        directory: "/examples/playground"
+        schedule:
+            interval: "weekly"
+            day: "monday"
+            time: "10:00"
+            timezone: "America/New_York"
 
     -   package-ecosystem: "npm"
-            directory: "/examples/sortable-gallery"
-            schedule:
-                interval: "weekly"
-                day: "monday"
-                time: "10:00"
-                timezone: "America/New_York"
+        directory: "/examples/sortable-gallery"
+        schedule:
+            interval: "weekly"
+            day: "monday"
+            time: "10:00"
+            timezone: "America/New_York"
