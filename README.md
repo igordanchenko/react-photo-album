@@ -11,8 +11,10 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 - **Built for React:** works with React 17 and 16.8.0+
 - **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration.
+- **Responsive images:** responsive images with automatic resolution switching are supported out of the box.
 - **Feature packed:** supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
-  and is fully customizable.
+  and is fully configurable and customizable.
+- **TypeScript:** type definitions come built-in in the package.
 - **Performance:** it was built with performance in mind in order to support large photo albums and silky smooth layout
   adjustments.
 
@@ -30,6 +32,10 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 ![Masonry layout](https://react-photo-album.com/images/layouts/masonry.jpg)
 
+## Documentation
+
+[https://react-photo-album.com/](https://react-photo-album.com/)
+
 ## Installation
 
 ```shell
@@ -41,10 +47,6 @@ or
 ```shell
 yarn add react-photo-album
 ```
-
-## Documentation
-
-[https://react-photo-album.com/](https://react-photo-album.com/)
 
 ## Minimal Setup Example
 
@@ -95,6 +97,12 @@ weighted graph.
 Masonry layout arranges photos into columns of equal width by placing each photo into the shortest column. This layout
 does not completely fill the rectangular container space, but the columns end up being as close in height to each other
 as possible.
+
+### Responsive Images
+
+React Photo Album automatically generates `sizes` and `srcset` image attributes. In the case of SSR, React Photo Album
+includes `sizes` and `srcset` image attributes in the server-rendered markup, allowing browsers to pick images of the
+most appropriate resolution depending on their viewport size.
 
 ### SSR
 
