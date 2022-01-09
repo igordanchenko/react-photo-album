@@ -1,7 +1,8 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
 
-import PhotoAlbum from "../src";
+import { PhotoAlbum } from "../src";
 import Layout from "../src/Layout";
 import photos from "./photos";
 
@@ -49,6 +50,41 @@ describe("PhotoAlbum", () => {
 
     it("renders masonry layout with many columns without crashing", () => {
         whenAskedToRender(<PhotoAlbum layout={"masonry"} photos={photos} columns={20} />);
+    });
+
+    it("supports padding", () => {
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} padding={10} />);
+    });
+
+    it("renders columns layout correctly when there isn't enough photos", () => {
+        whenAskedToRender(<PhotoAlbum layout={"columns"} photos={photos.slice(0, 3)} columns={5} />);
+    });
+
+    it("supports deterministic tie breaker", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={Array.from({ length: 5 }).map((_, index) => ({ key: `${index}`, ...photos[0] }))}
+                spacing={10}
+                padding={5}
+                targetRowHeight={200}
+                defaultContainerWidth={400}
+            />
+        );
+    });
+
+    it("supports srcset and sizes", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos.map((photo) => ({
+                    ...photo,
+                    images: [
+                        { src: photo.src, width: Math.round(photo.width / 2), height: Math.round(photo.height / 2) },
+                    ],
+                }))}
+            />
+        );
     });
 
     [
@@ -176,9 +212,45 @@ describe("PhotoAlbum", () => {
         );
     });
 
-    it("uses optional key attribute", () => {
+    it("supports responsive parameters", () => {
         whenAskedToRender(
-            <PhotoAlbum layout={"rows"} photos={photos.map((photo, index) => ({ ...photo, key: `${index}` }))} />
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                spacing={() => 10}
+                padding={() => 5}
+                targetRowHeight={() => 100}
+            />
         );
+
+        whenAskedToRender(
+            <PhotoAlbum layout={"columns"} photos={photos} columns={() => 3} spacing={() => 10} padding={() => 5} />
+        );
+    });
+
+    it("supports click handler", () => {
+        const testPhotos = photos.map((photo, index) => ({ alt: `photo-${index}`, ...photo }));
+        const onClick = jest.fn();
+
+        render(<PhotoAlbum layout={"rows"} photos={testPhotos} onClick={onClick} />);
+
+        screen.getByAltText("photo-0").click();
+
+        expect(onClick.mock.calls.length).toBe(1);
+        expect(onClick.mock.calls[0][1]).toBe(testPhotos[0]);
+    });
+
+    it("supports instrumentation", () => {
+        const instrumentation = {
+            onStartLayoutComputation: jest.fn(),
+            onFinishLayoutComputation: jest.fn(),
+        };
+
+        render(<PhotoAlbum layout={"rows"} photos={photos} instrumentation={instrumentation} />);
+        render(<PhotoAlbum layout={"columns"} photos={photos} instrumentation={instrumentation} />);
+        render(<PhotoAlbum layout={"masonry"} photos={photos} instrumentation={instrumentation} />);
+
+        expect(instrumentation.onStartLayoutComputation.mock.calls.length).toBe(6);
+        expect(instrumentation.onFinishLayoutComputation.mock.calls.length).toBe(6);
     });
 });

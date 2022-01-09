@@ -13,9 +13,9 @@ const cssWidth = (props: ColumnContainerRendererProps) => {
     const { layoutOptions, columnIndex, columnsCount, columnsGaps, columnsRatios } = props;
     const { layout, spacing, padding } = layoutOptions;
 
-    if (layout === Layout.Masonry) return `calc((100% - ${spacing * (columnsCount - 1)}px) / ${columnsCount})`;
-
-    if (!columnsGaps || !columnsRatios) return "0";
+    if (layout === Layout.Masonry || !columnsGaps || !columnsRatios) {
+        return `calc((100% - ${spacing * (columnsCount - 1)}px) / ${columnsCount})`;
+    }
 
     const totalRatio = columnsRatios.reduce((acc, ratio) => acc + ratio, 0);
     const totalAdjustedGaps = columnsRatios.reduce(
