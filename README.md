@@ -57,18 +57,16 @@ const photos = [
     {
         src: "/images/image1.jpg",
         width: 800,
-        height: 600,
+        height: 600
     },
     {
         src: "/images/image2.jpg",
         width: 1600,
-        height: 900,
-    },
+        height: 900
+    }
 ];
 
-const MinimalSetup = () => <PhotoAlbum layout="rows" photos={photos} />;
-
-export default MinimalSetup;
+<PhotoAlbum layout="rows" photos={photos} />
 ```
 
 ## How It Works
