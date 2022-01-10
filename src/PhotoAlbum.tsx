@@ -1,5 +1,4 @@
 import * as React from "react";
-import ResizeObserver from "resize-observer-polyfill";
 
 import Layout from "./Layout";
 import RowsLayout from "./components/layouts/RowsLayout";
@@ -47,6 +46,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         renderContainer,
         renderRowContainer,
         renderColumnContainer,
+        resizeObserverProvider,
         instrumentation,
     } = props;
 
@@ -65,32 +65,39 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         }
     }, []);
 
-    const setContainerRef = React.useCallback(
-        (node) => {
-            if (observerRef.current && containerRef.current) {
-                observerRef.current.unobserve(containerRef.current);
-            }
+    const setContainerRef = React.useCallback((node) => {
+        if (observerRef.current && containerRef.current) {
+            observerRef.current.unobserve(containerRef.current);
+        }
 
-            containerRef.current = node;
+        containerRef.current = node;
 
-            if (node) {
-                if (!observerRef.current) {
-                    observerRef.current = new ResizeObserver(() => updateDimensions());
-                }
-                observerRef.current.observe(node);
-            }
-        },
-        [updateDimensions]
-    );
+        if (node && observerRef.current) {
+            observerRef.current.observe(node);
+        }
+    }, []);
 
     useLayoutEffect(() => {
         updateDimensions();
 
+        const observerCallback = () => updateDimensions();
+        if (typeof ResizeObserver !== "undefined") {
+            observerRef.current = new ResizeObserver(observerCallback);
+        } else if (resizeObserverProvider) {
+            observerRef.current = resizeObserverProvider(observerCallback);
+        }
+
+        if (observerRef.current && containerRef.current) {
+            observerRef.current.observe(containerRef.current);
+        }
+
         return () => {
-            observerRef.current?.disconnect();
-            observerRef.current = null;
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+                observerRef.current = null;
+            }
         };
-    }, [updateDimensions]);
+    }, [updateDimensions, resizeObserverProvider]);
 
     const layoutOptions = resolveLayoutOptions({
         containerWidth: containerWidth || defaultContainerWidth,

@@ -113,6 +113,15 @@ default. Keep in mind that responsive parameters may contribute to cumulative la
 load. If CLS becomes an issue in your case, you may want to consider using hard-coded values for `columns`, `spacing`
 , `padding`, etc., instead of the default responsive values.
 
+### ResizeObserver
+
+React Photo Album relies on [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) to respond
+to container size changes (i.e., when the browser window gets resized, device orientation changes or page layout causes
+a shift in container dimensions). React Photo Album no longer bundles ResizeObserver polyfill as part of the library
+since, as of January 2022, over 91% of browsers support it natively. If your use case requires you to support some older
+browsers, you can accomplish this by either installing a global ResizeObserver polyfill or by supplying a ponyfill via
+the `resizeObserverProvider` parameter.
+
 ## Credits
 
 - Thanks to Sandra G (aka [neptunian](https://github.com/neptunian)) for authoring the

@@ -32,9 +32,6 @@
     "engines": {
         "node": ">=12"
     },
-    "dependencies": {
-        "resize-observer-polyfill": "^1.5.1"
-    },
     "devDependencies": {
         "@commitlint/cli": "^16.0.1",
         "@commitlint/config-conventional": "^16.0.0",
