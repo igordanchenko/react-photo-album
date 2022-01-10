@@ -83,6 +83,8 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     renderRowContainer?: RenderRowContainer;
     /** custom column container rendering function */
     renderColumnContainer?: RenderColumnContainer;
+    /** ResizeObserver factory to be used when global ResizeObserver is unavailable */
+    resizeObserverProvider?: ResizeObserverProvider;
     /** internal instrumentation - use on your own risk */
     instrumentation?: Instrumentation;
 };
@@ -157,6 +159,10 @@ export type ColumnContainerProps = {
 };
 
 export type RenderColumnContainer = (props: PropsWithChildren<ColumnContainerProps>) => JSX.Element;
+
+export type ResizeObserverProvider = (
+    callback: (entries: ResizeObserverEntry[], observer: ResizeObserver) => void
+) => ResizeObserver;
 
 /** internal instrumentation for research and performance testing purposes, subject to change without notice */
 export type Instrumentation = {

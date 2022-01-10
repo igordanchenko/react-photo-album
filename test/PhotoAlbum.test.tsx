@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 
 import { PhotoAlbum } from "../src";
 import Layout from "../src/Layout";
@@ -238,6 +238,76 @@ describe("PhotoAlbum", () => {
 
         expect(onClick.mock.calls.length).toBe(1);
         expect(onClick.mock.calls[0][1]).toBe(testPhotos[0]);
+    });
+
+    it("supports global ResizeObserver", () => {
+        const resizeObserverRef = global.ResizeObserver;
+        try {
+            const observeMock = jest.fn();
+            const unobserveMock = jest.fn();
+            const disconnectMock = jest.fn();
+
+            global.ResizeObserver = jest.fn().mockImplementation(() => ({
+                observe: observeMock,
+                unobserve: unobserveMock,
+                disconnect: disconnectMock,
+            }));
+
+            render(<PhotoAlbum layout={"rows"} photos={photos} />).unmount();
+
+            expect(observeMock).toHaveBeenCalledTimes(1);
+            expect(unobserveMock).toHaveBeenCalledTimes(0);
+            expect(disconnectMock).toHaveBeenCalledTimes(1);
+        } finally {
+            global.ResizeObserver = resizeObserverRef;
+        }
+    });
+
+    it("supports custom ResizeObserver and observes container ref changes", () => {
+        const resizeObserverMock = {
+            observe: jest.fn(),
+            unobserve: jest.fn(),
+            disconnect: jest.fn(),
+        };
+
+        const resizeObserverProvider = jest.fn((_) => resizeObserverMock);
+
+        const { rerender, unmount } = render(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                renderContainer={React.forwardRef((props, ref) => (
+                    <div ref={ref} key={1}>
+                        {props.children}
+                    </div>
+                ))}
+                resizeObserverProvider={resizeObserverProvider}
+            />
+        );
+
+        expect(resizeObserverMock.observe.mock.calls.length).toBe(1);
+
+        act(() => {
+            resizeObserverProvider.mock.calls[0][0]();
+        });
+
+        rerender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                renderContainer={React.forwardRef((props, ref) => (
+                    <div ref={ref} key={2}>
+                        {props.children}
+                    </div>
+                ))}
+                resizeObserverProvider={resizeObserverProvider}
+            />
+        );
+
+        unmount();
+
+        expect(resizeObserverMock.observe.mock.calls.length).toBe(2);
+        expect(resizeObserverMock.disconnect.mock.calls.length).toBe(1);
     });
 
     it("supports instrumentation", () => {
