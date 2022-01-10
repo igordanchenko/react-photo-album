@@ -38,6 +38,7 @@
     "devDependencies": {
         "@commitlint/cli": "^16.0.1",
         "@commitlint/config-conventional": "^16.0.0",
+        "@testing-library/react": "^12.1.2",
         "@tsconfig/create-react-app": "^1.0.2",
         "@tsconfig/recommended": "^1.0.1",
         "@types/react": "^17.0.37",
