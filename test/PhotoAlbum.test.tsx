@@ -167,6 +167,7 @@ describe("PhotoAlbum", () => {
             <PhotoAlbum
                 layout={"rows"}
                 photos={photos}
+                // eslint-disable-next-line react/display-name
                 renderContainer={React.forwardRef(({ children }, ref) => (
                     <div ref={ref} className="custom-class">
                         {children}
@@ -270,12 +271,14 @@ describe("PhotoAlbum", () => {
             disconnect: jest.fn(),
         };
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const resizeObserverProvider = jest.fn((_) => resizeObserverMock);
 
         const { rerender, unmount } = render(
             <PhotoAlbum
                 layout={"rows"}
                 photos={photos}
+                // eslint-disable-next-line react/display-name
                 renderContainer={React.forwardRef((props, ref) => (
                     <div ref={ref} key={1}>
                         {props.children}
@@ -295,6 +298,7 @@ describe("PhotoAlbum", () => {
             <PhotoAlbum
                 layout={"rows"}
                 photos={photos}
+                // eslint-disable-next-line react/display-name
                 renderContainer={React.forwardRef((props, ref) => (
                     <div ref={ref} key={2}>
                         {props.children}

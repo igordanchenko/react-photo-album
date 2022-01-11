@@ -5,7 +5,7 @@ import Layout from "../../Layout";
 import round from "../../utils/round";
 import { ColumnContainerProps, RenderColumnContainer } from "../../types";
 
-const DefaultColumnContainer = ({ columnContainerProps, children }: PropsWithChildren<ColumnContainerProps>) => (
+const ColumnContainer = ({ columnContainerProps, children }: PropsWithChildren<ColumnContainerProps>) => (
     <div {...columnContainerProps}>{children}</div>
 );
 
@@ -50,7 +50,7 @@ const ColumnContainerRenderer = (props: ColumnContainerRendererProps) => {
         } as CSSProperties,
     };
 
-    const Component = renderColumnContainer || DefaultColumnContainer;
+    const Component = renderColumnContainer || ColumnContainer;
 
     return (
         <Component layoutOptions={layoutOptions} columnContainerProps={columnContainerProps} {...rest}>

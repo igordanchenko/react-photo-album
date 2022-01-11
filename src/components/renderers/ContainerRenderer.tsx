@@ -4,13 +4,14 @@ import { PropsWithChildren, PropsWithoutRef } from "react";
 import Layout from "../../Layout";
 import { ContainerProps, RenderContainer } from "../../types";
 
-const DefaultContainer = React.forwardRef<HTMLDivElement, PropsWithoutRef<PropsWithChildren<ContainerProps>>>(
+const PhotoAlbumContainer = React.forwardRef<HTMLDivElement, PropsWithoutRef<PropsWithChildren<ContainerProps>>>(
     ({ containerProps, children }, ref) => (
         <div ref={ref} {...containerProps}>
             {children}
         </div>
     )
 );
+PhotoAlbumContainer.displayName = "PhotoAlbumContainer";
 
 type ContainerRendererProps = Omit<ContainerProps, "containerProps"> & { renderContainer?: RenderContainer };
 
@@ -36,7 +37,7 @@ const ContainerRenderer = React.forwardRef<HTMLDivElement, PropsWithoutRef<Props
                       } as React.CSSProperties),
         };
 
-        const Component = renderContainer || DefaultContainer;
+        const Component = renderContainer || PhotoAlbumContainer;
 
         return (
             <Component ref={ref} layoutOptions={layoutOptions} containerProps={containerProps} {...rest}>
@@ -45,5 +46,6 @@ const ContainerRenderer = React.forwardRef<HTMLDivElement, PropsWithoutRef<Props
         );
     }
 );
+ContainerRenderer.displayName = "ContainerRenderer";
 
 export default ContainerRenderer;

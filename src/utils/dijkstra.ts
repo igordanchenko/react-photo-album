@@ -47,7 +47,7 @@ const buildPrecedentsMap = (graph: GraphFunction, startNode: Element, endNode: E
         visited[shortestNodeId] = 1;
 
         // meet the neighbors, looking for shorter paths
-        for (let neighbor in neighboringNodes) {
+        for (const neighbor in neighboringNodes) {
             // weight of path from startNode to this neighbor
             const newTotalWeight = shortestNode.weight + neighboringNodes[neighbor];
 

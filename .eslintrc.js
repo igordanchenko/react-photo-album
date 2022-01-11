@@ -1,12 +1,30 @@
 module.exports = {
+    env: {
+        browser: true,
+        node: true,
+    },
     extends: [
-        "./node_modules/dts-cli/conf/eslint-config-react-app/index.js",
-        "prettier",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
     ],
+    parser: "@typescript-eslint/parser",
+    parserOptions: {
+        sourceType: "module",
+        ecmaVersion: "latest",
+        ecmaFeatures: {
+            jsx: true,
+        },
+    },
     settings: {
         react: {
             version: "detect",
         },
+    },
+    ignorePatterns: ["dist/*", "coverage/*"],
+    rules: {
+        "react/prop-types": "off",
     },
 };

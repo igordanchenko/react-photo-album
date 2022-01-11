@@ -1,5 +1,21 @@
 {
-    // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-    "extends": "@tsconfig/create-react-app/tsconfig.json",
-    "include": ["src"]
+    "exclude": ["dist", "coverage", "examples", "node_modules", "*.d.ts", "**/*.d.ts"],
+    "compilerOptions": {
+        "strict": true,
+        "target": "es2018",
+        "module": "esnext",
+        "jsx": "react",
+        "outDir": "dist",
+        "declarationDir": "dist/types",
+        "declaration": false,
+        "inlineSources": true,
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "importHelpers": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true
+    }
 }

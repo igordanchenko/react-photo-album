@@ -10,7 +10,7 @@ const computeShortestPath = (graph: GraphFunction, pathLength: number, startNode
 
     // sorted set of neighboring nodes that need to be visited
     // i.e. queue[k][X] represents node X with partial path of length k
-    const queue: { [key: number]: { [key: number]: any } } = { 0: { [startNode]: null } };
+    const queue: { [key: number]: { [key: number]: object | null } } = { 0: { [startNode]: null } };
 
     for (let length = 0; length < pathLength; length += 1) {
         Object.keys(queue[length]).forEach((n) => {

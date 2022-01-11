@@ -168,5 +168,6 @@ export type ResizeObserverProvider = (
 export type Instrumentation = {
     fullGraphSearch?: boolean;
     onStartLayoutComputation?: () => void;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onFinishLayoutComputation?: (...params: any) => void;
 };
