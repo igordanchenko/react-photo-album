@@ -1,7 +1,6 @@
-import Layout from "./Layout";
 import PhotoAlbum from "./PhotoAlbum";
 
 export * from "./types";
 
-export { PhotoAlbum, Layout };
+export { PhotoAlbum };
 export default PhotoAlbum;

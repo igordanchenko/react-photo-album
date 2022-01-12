@@ -1,6 +1,4 @@
 import * as React from "react";
-
-import Layout from "../../Layout";
 import round from "../../utils/round";
 import { LayoutOptions, Photo, PhotoLayout, RenderPhoto } from "../../types";
 
@@ -8,7 +6,7 @@ const cssWidth = (photoLayout: PhotoLayout, layoutOptions: LayoutOptions) => {
     const { width } = photoLayout;
     const { spacing, padding, layout, containerWidth } = layoutOptions;
 
-    if (layout !== Layout.Rows) {
+    if (layout !== "rows") {
         return `calc(100% - ${2 * padding}px)`;
     }
 
@@ -72,7 +70,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         height: "auto",
         aspectRatio: `${photo.width} / ${photo.height}`,
         ...(layoutOptions.padding ? { padding: `${layoutOptions.padding}px` } : null),
-        ...((layoutOptions.layout === Layout.Columns || layoutOptions.layout === Layout.Masonry) &&
+        ...((layoutOptions.layout === "columns" || layoutOptions.layout === "masonry") &&
         layout.photoIndex < layout.photosCount - 1
             ? { marginBottom: `${layoutOptions.spacing}px` }
             : null),

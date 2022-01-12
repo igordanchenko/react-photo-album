@@ -1,6 +1,4 @@
 import * as React from "react";
-
-import Layout from "./Layout";
 import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
@@ -114,13 +112,13 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
 
     return (
         <ContainerRenderer ref={setContainerRef} layoutOptions={layoutOptions} renderContainer={renderContainer}>
-            {layout === Layout.Rows ? (
+            {layout === "rows" ? (
                 <RowsLayout<T>
                     layoutOptions={layoutOptions as RowsLayoutOptions}
                     renderRowContainer={renderRowContainer}
                     {...commonLayoutProps}
                 />
-            ) : layout === Layout.Columns ? (
+            ) : layout === "columns" ? (
                 <ColumnsLayout
                     layoutOptions={layoutOptions as ColumnsLayoutOptions}
                     renderColumnContainer={renderColumnContainer}

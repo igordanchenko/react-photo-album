@@ -1,7 +1,5 @@
 import * as React from "react";
 import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
-
-import Layout from "../../Layout";
 import round from "../../utils/round";
 import { ColumnContainerProps, RenderColumnContainer } from "../../types";
 
@@ -13,7 +11,7 @@ const cssWidth = (props: ColumnContainerRendererProps) => {
     const { layoutOptions, columnIndex, columnsCount, columnsGaps, columnsRatios } = props;
     const { layout, spacing, padding } = layoutOptions;
 
-    if (layout === Layout.Masonry || !columnsGaps || !columnsRatios) {
+    if (layout === "masonry" || !columnsGaps || !columnsRatios) {
         return `calc((100% - ${spacing * (columnsCount - 1)}px) / ${columnsCount})`;
     }
 
@@ -46,7 +44,7 @@ const ColumnContainerRenderer = (props: ColumnContainerRendererProps) => {
             flexWrap: "nowrap",
             alignItems: "flex-start",
             width: cssWidth(props),
-            justifyContent: layoutOptions.layout === Layout.Columns ? "space-between" : "flex-start",
+            justifyContent: layoutOptions.layout === "columns" ? "space-between" : "flex-start",
         } as CSSProperties,
     };
 

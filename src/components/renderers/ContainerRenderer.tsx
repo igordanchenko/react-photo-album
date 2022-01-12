@@ -1,7 +1,5 @@
 import * as React from "react";
 import { PropsWithChildren, PropsWithoutRef } from "react";
-
-import Layout from "../../Layout";
 import { ContainerProps, RenderContainer } from "../../types";
 
 const PhotoAlbumContainer = React.forwardRef<HTMLDivElement, PropsWithoutRef<PropsWithChildren<ContainerProps>>>(
@@ -22,7 +20,7 @@ const ContainerRenderer = React.forwardRef<HTMLDivElement, PropsWithoutRef<Props
         const containerProps = {
             className: `react-photo-album react-photo-album--${layout}`,
             style:
-                layout === Layout.Rows
+                layout === "rows"
                     ? ({
                           display: "flex",
                           flexDirection: "column",

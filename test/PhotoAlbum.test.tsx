@@ -2,8 +2,7 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import { act, render, screen } from "@testing-library/react";
 
-import { PhotoAlbum } from "../src";
-import Layout from "../src/Layout";
+import { LayoutType, PhotoAlbum } from "../src";
 import photos from "./photos";
 
 const whenAskedToRender = (Component: JSX.Element) => {
@@ -11,21 +10,21 @@ const whenAskedToRender = (Component: JSX.Element) => {
 };
 
 const withRowsTestCase = (spacing: number, targetRowHeight: number, defaultContainerWidth: number) => ({
-    layout: Layout.Rows,
+    layout: "rows" as LayoutType,
     spacing,
     targetRowHeight,
     defaultContainerWidth,
 });
 
 const withColumnsTestCase = (spacing: number, columns: number, defaultContainerWidth: number) => ({
-    layout: Layout.Columns,
+    layout: "columns" as LayoutType,
     spacing,
     columns,
     defaultContainerWidth,
 });
 
 const withMasonryTestCase = (spacing: number, columns: number, defaultContainerWidth: number) => ({
-    layout: Layout.Masonry,
+    layout: "masonry" as LayoutType,
     spacing,
     columns,
     defaultContainerWidth,
