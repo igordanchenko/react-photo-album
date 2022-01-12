@@ -79,7 +79,7 @@ const Settings = ({ children }: { children: React.ReactNode }) => {
     const [width, setWidth] = React.useState(100);
 
     useLayoutEffect(() => {
-        let viewportSize = window.innerWidth;
+        const viewportSize = window.innerWidth;
         setColumns(viewportSize < 480 ? 2 : viewportSize < 900 ? 3 : 5);
         setSpacing(viewportSize < 480 ? 10 : viewportSize < 900 ? 20 : 30);
         setPadding(viewportSize < 480 ? 10 : viewportSize < 900 ? 20 : 30);
