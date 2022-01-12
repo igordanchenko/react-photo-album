@@ -5,9 +5,9 @@ by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-e
 
 ## Overview
 
-[![NPM Version](https://badgen.net/npm/v/react-photo-album)](https://www.npmjs.com/package/react-photo-album)
-[![Bundle Size](https://badgen.net/bundlephobia/minzip/react-photo-album)](https://bundlephobia.com/package/react-photo-album)
-[![License MIT](https://badgen.net/npm/license/react-photo-album)](LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/react-photo-album?color=blue)](https://www.npmjs.com/package/react-photo-album)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album?color=blue)](https://bundlephobia.com/package/react-photo-album)
+[![License MIT](https://img.shields.io/npm/l/react-photo-album?color=blue)](LICENSE)
 
 - **Built for React:** works with React 17 and 16.8.0+
 - **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration.
