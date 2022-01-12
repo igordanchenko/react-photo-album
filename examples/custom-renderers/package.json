@@ -31,11 +31,6 @@
         "build": "react-scripts build",
         "eject": "react-scripts eject"
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app"
-        ]
-    },
     "browserslist": [
         ">0.2%",
         "not dead",
