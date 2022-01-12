@@ -1,10 +1,12 @@
 import * as React from "react";
+
 import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import resolveResponsiveParameter from "./utils/responsive";
 import useLayoutEffect from "./utils/layoutEffect";
+
 import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
 
 const resolveLayoutOptions = <T extends Photo>({
@@ -24,10 +26,15 @@ const resolveLayoutOptions = <T extends Photo>({
     onClick,
     viewportWidth,
     containerWidth,
-    columns: resolveResponsiveParameter(columns, containerWidth, [6, 5, 4, 3, 2, 1]),
-    spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 16, 12, 8, 4, 2]),
-    padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0, 0]),
-    targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [300, 250, 200, 150, 100, 80]),
+    columns: resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2]),
+    spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),
+    padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0]),
+    targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [
+        (w) => w / 5,
+        (w) => w / 4,
+        (w) => w / 3,
+        (w) => w / 2,
+    ]),
 });
 
 const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {

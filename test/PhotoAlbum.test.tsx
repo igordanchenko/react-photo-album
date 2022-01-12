@@ -59,6 +59,10 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(<PhotoAlbum layout={"columns"} photos={photos.slice(0, 3)} columns={5} />);
     });
 
+    it("renders correctly with invalid defaultContainerWidth", () => {
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} defaultContainerWidth={-1} />);
+    });
+
     it("supports deterministic tie breaker", () => {
         whenAskedToRender(
             <PhotoAlbum

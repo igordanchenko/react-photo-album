@@ -25,7 +25,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -40,7 +40,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -55,7 +55,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -70,7 +70,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -103,7 +103,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -118,7 +118,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -133,7 +133,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -148,7 +148,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -163,7 +163,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -196,7 +196,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -211,7 +211,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -226,7 +226,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -259,7 +259,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -274,7 +274,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -289,7 +289,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -304,7 +304,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -319,7 +319,7 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -355,7 +355,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -369,7 +369,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.56481)",
+          "width": "calc((100% - 30px) / 2.56481)",
         }
       }
     />
@@ -383,7 +383,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.32692)",
+          "width": "calc((100% - 30px) / 5.32692)",
         }
       }
     />
@@ -397,7 +397,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.36752)",
+          "width": "calc((100% - 30px) / 2.36752)",
         }
       }
     />
@@ -411,7 +411,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -425,7 +425,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.63287)",
+          "width": "calc((100% - 30px) / 2.63287)",
         }
       }
     />
@@ -439,7 +439,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.91574)",
+          "width": "calc((100% - 30px) / 5.91574)",
         }
       }
     />
@@ -453,7 +453,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.21658)",
         }
       }
     />
@@ -467,7 +467,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -481,7 +481,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.23696)",
+          "width": "calc((100% - 30px) / 2.23696)",
         }
       }
     />
@@ -495,7 +495,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.64903)",
         }
       }
     />
@@ -509,7 +509,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.69909)",
         }
       }
     />
@@ -523,7 +523,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -537,7 +537,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.48191)",
+          "width": "calc((100% - 30px) / 2.48191)",
         }
       }
     />
@@ -551,7 +551,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.39228)",
+          "width": "calc((100% - 30px) / 2.39228)",
         }
       }
     />
@@ -565,7 +565,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.58429)",
+          "width": "calc((100% - 30px) / 5.58429)",
         }
       }
     />
@@ -579,7 +579,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -593,7 +593,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.27778)",
+          "width": "calc((100% - 60px) / 3.27778)",
         }
       }
     />
@@ -607,7 +607,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 6.55556)",
+          "width": "calc((100% - 60px) / 6.55556)",
         }
       }
     />
@@ -621,7 +621,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -635,7 +635,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.6875)",
+          "width": "calc((100% - 60px) / 3.6875)",
         }
       }
     />
@@ -649,7 +649,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -663,7 +663,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -704,7 +704,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.6875)",
+          "width": "calc((100% - 30px) / 2.6875)",
         }
       }
     />
@@ -718,7 +718,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.38889)",
+          "width": "calc((100% - 30px) / 2.38889)",
         }
       }
     />
@@ -732,7 +732,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 4.77778)",
+          "width": "calc((100% - 30px) / 4.77778)",
         }
       }
     />
@@ -765,7 +765,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.56481)",
+          "width": "calc((100% - 30px) / 2.56481)",
         }
       }
     />
@@ -779,7 +779,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.32692)",
+          "width": "calc((100% - 30px) / 5.32692)",
         }
       }
     />
@@ -793,7 +793,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.36752)",
+          "width": "calc((100% - 30px) / 2.36752)",
         }
       }
     />
@@ -811,7 +811,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.63287)",
+          "width": "calc((100% - 30px) / 2.63287)",
         }
       }
     />
@@ -825,7 +825,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.91574)",
+          "width": "calc((100% - 30px) / 5.91574)",
         }
       }
     />
@@ -839,7 +839,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.21658)",
         }
       }
     />
@@ -857,7 +857,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.23696)",
+          "width": "calc((100% - 30px) / 2.23696)",
         }
       }
     />
@@ -871,7 +871,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.64903)",
         }
       }
     />
@@ -885,7 +885,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.69909)",
         }
       }
     />
@@ -903,7 +903,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.48191)",
+          "width": "calc((100% - 30px) / 2.48191)",
         }
       }
     />
@@ -917,7 +917,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.39228)",
+          "width": "calc((100% - 30px) / 2.39228)",
         }
       }
     />
@@ -931,7 +931,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.58429)",
+          "width": "calc((100% - 30px) / 5.58429)",
         }
       }
     />
@@ -949,7 +949,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.27778)",
+          "width": "calc((100% - 60px) / 3.27778)",
         }
       }
     />
@@ -963,7 +963,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 6.55556)",
+          "width": "calc((100% - 60px) / 6.55556)",
         }
       }
     />
@@ -977,7 +977,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -991,7 +991,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.6875)",
+          "width": "calc((100% - 60px) / 3.6875)",
         }
       }
     />
@@ -1005,7 +1005,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -1041,7 +1041,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.6875)",
+          "width": "calc((100% - 30px) / 2.6875)",
         }
       }
     />
@@ -1055,7 +1055,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.38889)",
+          "width": "calc((100% - 30px) / 2.38889)",
         }
       }
     />
@@ -1069,7 +1069,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 4.77778)",
+          "width": "calc((100% - 30px) / 4.77778)",
         }
       }
     />
@@ -1140,7 +1140,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 24px) * 0.38989 + 0px)",
+        "width": "calc((100% - 30px) * 0.38989 + 0px)",
       }
     }
   >
@@ -1168,7 +1168,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 24px) * 0.18773 + 0px)",
+        "width": "calc((100% - 30px) * 0.18773 + 0px)",
       }
     }
   >
@@ -1196,7 +1196,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 24px) * 0.42238 + 0px)",
+        "width": "calc((100% - 30px) * 0.42238 + 0px)",
       }
     }
   >
@@ -1239,7 +1239,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.05899 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.05899 + 0px)",
       }
     }
   >
@@ -1267,7 +1267,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0284 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0284 + 0px)",
       }
     }
   >
@@ -1295,7 +1295,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.06391 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.06391 + 0px)",
       }
     }
   >
@@ -1323,7 +1323,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.06382 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.06382 + 0px)",
       }
     }
   >
@@ -1351,7 +1351,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0284 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0284 + 0px)",
       }
     }
   >
@@ -1379,7 +1379,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0758 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0758 + 0px)",
       }
     }
   >
@@ -1407,7 +1407,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.07568 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.07568 + 0px)",
       }
     }
   >
@@ -1435,7 +1435,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.06391 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.06391 + 0px)",
       }
     }
   >
@@ -1463,7 +1463,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.02971 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.02971 + 0px)",
       }
     }
   >
@@ -1491,7 +1491,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.06391 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.06391 + 0px)",
       }
     }
   >
@@ -1519,7 +1519,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0663 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0663 + 0px)",
       }
     }
   >
@@ -1547,7 +1547,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0284 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0284 + 0px)",
       }
     }
   >
@@ -1575,7 +1575,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.06391 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.06391 + 0px)",
       }
     }
   >
@@ -1603,7 +1603,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.03195 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.03195 + 0px)",
       }
     }
   >
@@ -1631,7 +1631,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0284 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0284 + 0px)",
       }
     }
   >
@@ -1659,7 +1659,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.05681 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.05681 + 0px)",
       }
     }
   >
@@ -1687,7 +1687,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.0284 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.0284 + 0px)",
       }
     }
   >
@@ -1715,7 +1715,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 496.298px) * 0.04744 + 0px)",
+        "width": "calc((100% - 620.373px) * 0.04744 + 0px)",
       }
     }
   >
@@ -1729,7 +1729,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -1758,7 +1758,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.06391 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.06391 + 0px)",
       }
     }
   >
@@ -1786,7 +1786,7 @@ exports[`PhotoAlbum renders columns layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 214.639px) * 0.03195 + 0px)",
+        "width": "calc((100% - 268.299px) * 0.03195 + 0px)",
       }
     }
   >
@@ -5662,7 +5662,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 33.423px) * 0.2434 + 0px)",
+        "width": "calc((100% - 41.779px) * 0.2434 + 0px)",
       }
     }
   >
@@ -5676,7 +5676,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5691,7 +5691,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5706,7 +5706,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5721,7 +5721,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5750,7 +5750,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 43.173px) * 0.27138 + 0px)",
+        "width": "calc((100% - 53.966px) * 0.27138 + 0px)",
       }
     }
   >
@@ -5764,7 +5764,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5779,7 +5779,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5794,7 +5794,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5809,7 +5809,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5824,7 +5824,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5853,7 +5853,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 23.673px) * 0.24615 + 0px)",
+        "width": "calc((100% - 29.591px) * 0.24615 + 0px)",
       }
     }
   >
@@ -5867,7 +5867,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5882,7 +5882,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5897,7 +5897,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5926,7 +5926,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 43.173px) * 0.23907 + 0px)",
+        "width": "calc((100% - 53.966px) * 0.23907 + 0px)",
       }
     }
   >
@@ -5940,7 +5940,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5955,7 +5955,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5970,7 +5970,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -5985,7 +5985,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -6000,7 +6000,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -6021,6 +6021,20 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
     />
   </div>
 </div>
+`;
+
+exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
+<div
+  className="react-photo-album react-photo-album--rows"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+    }
+  }
+/>
 `;
 
 exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`] = `
@@ -6044,7 +6058,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6072,7 +6086,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6100,7 +6114,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6128,7 +6142,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6156,7 +6170,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6184,7 +6198,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6212,7 +6226,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6240,7 +6254,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6268,7 +6282,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6296,7 +6310,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6324,7 +6338,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6352,7 +6366,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6380,7 +6394,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6408,7 +6422,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6436,7 +6450,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6464,7 +6478,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6492,7 +6506,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6520,7 +6534,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6534,7 +6548,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -6563,7 +6577,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -6591,7 +6605,7 @@ exports[`PhotoAlbum renders masonry layout with many columns without crashing 1`
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 228px) / 20)",
+        "width": "calc((100% - 285px) / 20)",
       }
     }
   >
@@ -10467,7 +10481,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 36px) / 4)",
+        "width": "calc((100% - 45px) / 4)",
       }
     }
   >
@@ -10481,7 +10495,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10496,7 +10510,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10511,7 +10525,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10526,7 +10540,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10555,7 +10569,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 36px) / 4)",
+        "width": "calc((100% - 45px) / 4)",
       }
     }
   >
@@ -10569,7 +10583,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10584,7 +10598,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10599,110 +10613,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
-      style={
-        Object {
-          "aspectRatio": "1080 / 160",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "marginBottom": "12px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
-      style={
-        Object {
-          "aspectRatio": "1080 / 810",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-  </div>
-  <div
-    className="react-photo-album--column"
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "column",
-        "flexWrap": "nowrap",
-        "justifyContent": "flex-start",
-        "width": "calc((100% - 36px) / 4)",
-      }
-    }
-  >
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "marginBottom": "12px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
-      style={
-        Object {
-          "aspectRatio": "1080 / 1620",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "marginBottom": "12px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "marginBottom": "12px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/Xn4L310ztMU/1080x810"
-      style={
-        Object {
-          "aspectRatio": "1080 / 810",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10731,7 +10642,110 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "flex-start",
-        "width": "calc((100% - 36px) / 4)",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Xn4L310ztMU/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
+      style={
+        Object {
+          "aspectRatio": "1080 / 160",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
       }
     }
   >
@@ -10745,7 +10759,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10760,7 +10774,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10775,7 +10789,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10790,7 +10804,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -10805,7 +10819,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "12px",
+          "marginBottom": "15px",
           "width": "calc(100% - 0px)",
         }
       }
@@ -14727,7 +14741,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -14741,7 +14755,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.56481)",
+          "width": "calc((100% - 30px) / 2.56481)",
         }
       }
     />
@@ -14755,7 +14769,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.32692)",
+          "width": "calc((100% - 30px) / 5.32692)",
         }
       }
     />
@@ -14769,7 +14783,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.36752)",
+          "width": "calc((100% - 30px) / 2.36752)",
         }
       }
     />
@@ -14783,7 +14797,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -14797,7 +14811,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.63287)",
+          "width": "calc((100% - 30px) / 2.63287)",
         }
       }
     />
@@ -14811,7 +14825,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.91574)",
+          "width": "calc((100% - 30px) / 5.91574)",
         }
       }
     />
@@ -14825,7 +14839,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.21658)",
         }
       }
     />
@@ -14839,7 +14853,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -14853,7 +14867,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.23696)",
+          "width": "calc((100% - 30px) / 2.23696)",
         }
       }
     />
@@ -14867,7 +14881,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.64903)",
         }
       }
     />
@@ -14881,7 +14895,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.69909)",
         }
       }
     />
@@ -14895,7 +14909,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -14909,7 +14923,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.48191)",
+          "width": "calc((100% - 30px) / 2.48191)",
         }
       }
     />
@@ -14923,7 +14937,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.39228)",
+          "width": "calc((100% - 30px) / 2.39228)",
         }
       }
     />
@@ -14937,7 +14951,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.58429)",
+          "width": "calc((100% - 30px) / 5.58429)",
         }
       }
     />
@@ -14951,7 +14965,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -14965,7 +14979,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.27778)",
+          "width": "calc((100% - 60px) / 3.27778)",
         }
       }
     />
@@ -14979,7 +14993,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 6.55556)",
+          "width": "calc((100% - 60px) / 6.55556)",
         }
       }
     />
@@ -14993,7 +15007,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -15007,7 +15021,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.6875)",
+          "width": "calc((100% - 60px) / 3.6875)",
         }
       }
     />
@@ -15021,7 +15035,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -15035,7 +15049,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15076,7 +15090,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.6875)",
+          "width": "calc((100% - 30px) / 2.6875)",
         }
       }
     />
@@ -15090,7 +15104,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.38889)",
+          "width": "calc((100% - 30px) / 2.38889)",
         }
       }
     />
@@ -15104,7 +15118,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 4.77778)",
+          "width": "calc((100% - 30px) / 4.77778)",
         }
       }
     />
@@ -15264,7 +15278,7 @@ exports[`PhotoAlbum supports padding 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15279,7 +15293,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.56481)",
+          "width": "calc((100% - 90px) / 2.56481)",
         }
       }
     />
@@ -15294,7 +15308,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 5.32692)",
+          "width": "calc((100% - 90px) / 5.32692)",
         }
       }
     />
@@ -15309,7 +15323,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.36752)",
+          "width": "calc((100% - 90px) / 2.36752)",
         }
       }
     />
@@ -15323,7 +15337,7 @@ exports[`PhotoAlbum supports padding 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15338,7 +15352,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.63287)",
+          "width": "calc((100% - 90px) / 2.63287)",
         }
       }
     />
@@ -15353,7 +15367,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 5.91574)",
+          "width": "calc((100% - 90px) / 5.91574)",
         }
       }
     />
@@ -15368,7 +15382,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.21658)",
+          "width": "calc((100% - 90px) / 2.21658)",
         }
       }
     />
@@ -15382,7 +15396,7 @@ exports[`PhotoAlbum supports padding 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15397,7 +15411,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.23696)",
+          "width": "calc((100% - 90px) / 2.23696)",
         }
       }
     />
@@ -15412,7 +15426,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.64903)",
+          "width": "calc((100% - 90px) / 2.64903)",
         }
       }
     />
@@ -15427,7 +15441,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 5.69909)",
+          "width": "calc((100% - 90px) / 5.69909)",
         }
       }
     />
@@ -15441,7 +15455,7 @@ exports[`PhotoAlbum supports padding 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15456,7 +15470,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.48191)",
+          "width": "calc((100% - 90px) / 2.48191)",
         }
       }
     />
@@ -15471,7 +15485,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.39228)",
+          "width": "calc((100% - 90px) / 2.39228)",
         }
       }
     />
@@ -15486,7 +15500,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 5.58429)",
+          "width": "calc((100% - 90px) / 5.58429)",
         }
       }
     />
@@ -15500,7 +15514,7 @@ exports[`PhotoAlbum supports padding 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15515,7 +15529,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 116px) / 2.83333)",
+          "width": "calc((100% - 125px) / 2.83333)",
         }
       }
     />
@@ -15530,7 +15544,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 116px) / 5.66667)",
+          "width": "calc((100% - 125px) / 5.66667)",
         }
       }
     />
@@ -15545,7 +15559,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 116px) / 6.375)",
+          "width": "calc((100% - 125px) / 6.375)",
         }
       }
     />
@@ -15560,7 +15574,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 116px) / 3.1875)",
+          "width": "calc((100% - 125px) / 3.1875)",
         }
       }
     />
@@ -15574,7 +15588,7 @@ exports[`PhotoAlbum supports padding 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -15589,7 +15603,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 52px) / 11.125)",
+          "width": "calc((100% - 55px) / 11.125)",
         }
       }
     />
@@ -15604,7 +15618,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 52px) / 1.09877)",
+          "width": "calc((100% - 55px) / 1.09877)",
         }
       }
     />
@@ -15632,7 +15646,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.6875)",
+          "width": "calc((100% - 90px) / 2.6875)",
         }
       }
     />
@@ -15647,7 +15661,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 2.38889)",
+          "width": "calc((100% - 90px) / 2.38889)",
         }
       }
     />
@@ -15662,7 +15676,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 84px) / 4.77778)",
+          "width": "calc((100% - 90px) / 4.77778)",
         }
       }
     />
@@ -16466,7 +16480,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -16482,7 +16496,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.56481)",
+          "width": "calc((100% - 30px) / 2.56481)",
         }
       }
     />
@@ -16498,14 +16512,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.32692)",
+          "width": "calc((100% - 30px) / 5.32692)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="33vw"
+      sizes="32vw"
       src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
       srcSet="https://source.unsplash.com/RkBTPqPEGDo/1080x720 540w, https://source.unsplash.com/RkBTPqPEGDo/1080x720 1080w"
       style={
@@ -16514,7 +16528,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.36752)",
+          "width": "calc((100% - 30px) / 2.36752)",
         }
       }
     />
@@ -16528,7 +16542,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -16544,7 +16558,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.63287)",
+          "width": "calc((100% - 30px) / 2.63287)",
         }
       }
     />
@@ -16560,14 +16574,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.91574)",
+          "width": "calc((100% - 30px) / 5.91574)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="35vw"
+      sizes="34vw"
       src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
       srcSet="https://source.unsplash.com/Jztmx9yqjBw/1080x607 540w, https://source.unsplash.com/Jztmx9yqjBw/1080x607 1080w"
       style={
@@ -16576,7 +16590,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.21658)",
         }
       }
     />
@@ -16590,7 +16604,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -16606,7 +16620,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.23696)",
+          "width": "calc((100% - 30px) / 2.23696)",
         }
       }
     />
@@ -16622,7 +16636,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.64903)",
         }
       }
     />
@@ -16638,7 +16652,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.69909)",
         }
       }
     />
@@ -16652,7 +16666,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -16668,7 +16682,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.48191)",
+          "width": "calc((100% - 30px) / 2.48191)",
         }
       }
     />
@@ -16684,7 +16698,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.39228)",
+          "width": "calc((100% - 30px) / 2.39228)",
         }
       }
     />
@@ -16700,7 +16714,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 5.58429)",
+          "width": "calc((100% - 30px) / 5.58429)",
         }
       }
     />
@@ -16714,7 +16728,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -16730,7 +16744,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.27778)",
+          "width": "calc((100% - 60px) / 3.27778)",
         }
       }
     />
@@ -16746,7 +16760,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 6.55556)",
+          "width": "calc((100% - 60px) / 6.55556)",
         }
       }
     />
@@ -16762,7 +16776,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -16778,7 +16792,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 3.6875)",
+          "width": "calc((100% - 60px) / 3.6875)",
         }
       }
     />
@@ -16794,7 +16808,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 48px) / 7.375)",
+          "width": "calc((100% - 60px) / 7.375)",
         }
       }
     />
@@ -16808,7 +16822,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         "flexDirection": "row",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "marginBottom": "12px",
+        "marginBottom": "15px",
       }
     }
   >
@@ -16844,7 +16858,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="29vw"
+      sizes="28vw"
       src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
       srcSet="https://source.unsplash.com/GbLS6YVXj0U/1080x810 540w, https://source.unsplash.com/GbLS6YVXj0U/1080x810 1080w"
       style={
@@ -16853,7 +16867,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.6875)",
+          "width": "calc((100% - 30px) / 2.6875)",
         }
       }
     />
@@ -16869,7 +16883,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 2.38889)",
+          "width": "calc((100% - 30px) / 2.38889)",
         }
       }
     />
@@ -16885,7 +16899,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 4.77778)",
+          "width": "calc((100% - 30px) / 4.77778)",
         }
       }
     />
