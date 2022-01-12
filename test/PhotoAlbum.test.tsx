@@ -67,11 +67,11 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(
             <PhotoAlbum
                 layout={"rows"}
-                photos={Array.from({ length: 5 }).map((_, index) => ({ key: `${index}`, ...photos[0] }))}
+                photos={Array.from({ length: 7 }).map((_, index) => ({ key: `${index}`, ...photos[0] }))}
                 spacing={10}
                 padding={5}
-                targetRowHeight={200}
-                defaultContainerWidth={400}
+                targetRowHeight={150}
+                defaultContainerWidth={513}
             />
         );
     });

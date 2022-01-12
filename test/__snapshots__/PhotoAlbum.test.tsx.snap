@@ -369,7 +369,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.56481)",
+          "width": "calc((100% - 45px) / 3.64665)",
         }
       }
     />
@@ -383,7 +383,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.32692)",
+          "width": "calc((100% - 45px) / 7.5738)",
         }
       }
     />
@@ -397,7 +397,21 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.36752)",
+          "width": "calc((100% - 45px) / 3.36613)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        Object {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 3.37081)",
         }
       }
     />
@@ -418,20 +432,6 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
-      style={
-        Object {
-          "aspectRatio": "1080 / 721",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.63287)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
       style={
         Object {
@@ -439,7 +439,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.91574)",
+          "width": "calc((100% - 30px) / 6.33334)",
         }
       }
     />
@@ -453,7 +453,21 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.37305)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        Object {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.37696)",
         }
       }
     />
@@ -474,20 +488,6 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
-      style={
-        Object {
-          "aspectRatio": "1080 / 608",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.23696)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
       style={
         Object {
@@ -495,7 +495,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
@@ -509,7 +509,21 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.30278)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
@@ -527,20 +541,6 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
       }
     }
   >
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.48191)",
-        }
-      }
-    />
     <img
       alt=""
       className="react-photo-album--photo"
@@ -569,6 +569,20 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
         }
       }
     />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.48191)",
+        }
+      }
+    />
   </div>
   <div
     className="react-photo-album--row"
@@ -586,20 +600,6 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 60px) / 3.27778)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
       style={
         Object {
@@ -607,7 +607,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 6.55556)",
+          "width": "calc((100% - 45px) / 4.55556)",
         }
       }
     />
@@ -621,7 +621,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
@@ -635,7 +635,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 3.6875)",
+          "width": "calc((100% - 45px) / 2.5625)",
         }
       }
     />
@@ -649,7 +649,7 @@ exports[`PhotoAlbum allows rendering custom container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
@@ -765,7 +765,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.56481)",
+          "width": "calc((100% - 45px) / 3.64665)",
         }
       }
     />
@@ -779,7 +779,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.32692)",
+          "width": "calc((100% - 45px) / 7.5738)",
         }
       }
     />
@@ -793,14 +793,10 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.36752)",
+          "width": "calc((100% - 45px) / 3.36613)",
         }
       }
     />
-  </div>
-  <div
-    className="custom-row-class"
-  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -811,10 +807,14 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.63287)",
+          "width": "calc((100% - 45px) / 3.37081)",
         }
       }
     />
+  </div>
+  <div
+    className="custom-row-class"
+  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -825,7 +825,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.91574)",
+          "width": "calc((100% - 30px) / 6.33334)",
         }
       }
     />
@@ -839,14 +839,10 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.37305)",
         }
       }
     />
-  </div>
-  <div
-    className="custom-row-class"
-  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -857,10 +853,14 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.23696)",
+          "width": "calc((100% - 30px) / 2.37696)",
         }
       }
     />
+  </div>
+  <div
+    className="custom-row-class"
+  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -871,7 +871,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
@@ -885,14 +885,10 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.30278)",
         }
       }
     />
-  </div>
-  <div
-    className="custom-row-class"
-  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -903,10 +899,14 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.48191)",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
+  </div>
+  <div
+    className="custom-row-class"
+  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -935,10 +935,6 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
         }
       }
     />
-  </div>
-  <div
-    className="custom-row-class"
-  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -949,10 +945,14 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 3.27778)",
+          "width": "calc((100% - 30px) / 2.48191)",
         }
       }
     />
+  </div>
+  <div
+    className="custom-row-class"
+  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -963,7 +963,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 6.55556)",
+          "width": "calc((100% - 45px) / 4.55556)",
         }
       }
     />
@@ -977,7 +977,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
@@ -991,7 +991,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 3.6875)",
+          "width": "calc((100% - 45px) / 2.5625)",
         }
       }
     />
@@ -1005,7 +1005,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
@@ -14755,7 +14755,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.56481)",
+          "width": "calc((100% - 45px) / 3.64665)",
         }
       }
     />
@@ -14769,7 +14769,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.32692)",
+          "width": "calc((100% - 45px) / 7.5738)",
         }
       }
     />
@@ -14783,7 +14783,21 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.36752)",
+          "width": "calc((100% - 45px) / 3.36613)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        Object {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 3.37081)",
         }
       }
     />
@@ -14804,20 +14818,6 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
-      style={
-        Object {
-          "aspectRatio": "1080 / 721",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.63287)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
       style={
         Object {
@@ -14825,7 +14825,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.91574)",
+          "width": "calc((100% - 30px) / 6.33334)",
         }
       }
     />
@@ -14839,7 +14839,21 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.21658)",
+          "width": "calc((100% - 30px) / 2.37305)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        Object {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.37696)",
         }
       }
     />
@@ -14860,20 +14874,6 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
-      style={
-        Object {
-          "aspectRatio": "1080 / 608",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.23696)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
       style={
         Object {
@@ -14881,7 +14881,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.64903)",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
@@ -14895,7 +14895,21 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.69909)",
+          "width": "calc((100% - 30px) / 5.30278)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
@@ -14913,20 +14927,6 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       }
     }
   >
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.48191)",
-        }
-      }
-    />
     <img
       alt=""
       className="react-photo-album--photo"
@@ -14955,6 +14955,20 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
         }
       }
     />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.48191)",
+        }
+      }
+    />
   </div>
   <div
     className="react-photo-album--row"
@@ -14972,20 +14986,6 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 60px) / 3.27778)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
       style={
         Object {
@@ -14993,7 +14993,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 6.55556)",
+          "width": "calc((100% - 45px) / 4.55556)",
         }
       }
     />
@@ -15007,7 +15007,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
@@ -15021,7 +15021,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 3.6875)",
+          "width": "calc((100% - 45px) / 2.5625)",
         }
       }
     />
@@ -15035,7 +15035,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
@@ -15206,7 +15206,7 @@ exports[`PhotoAlbum supports deterministic tie breaker 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 30px) / 2)",
+          "width": "calc((100% - 50px) / 3)",
         }
       }
     />
@@ -15221,7 +15221,22 @@ exports[`PhotoAlbum supports deterministic tie breaker 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 30px) / 2)",
+          "width": "calc((100% - 50px) / 3)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "5px",
+          "width": "calc((100% - 50px) / 3)",
         }
       }
     />
@@ -15249,7 +15264,22 @@ exports[`PhotoAlbum supports deterministic tie breaker 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 10px) / 1)",
+          "width": "calc((100% - 30px) / 2)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "5px",
+          "width": "calc((100% - 30px) / 2)",
         }
       }
     />
@@ -15293,7 +15323,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 2.56481)",
+          "width": "calc((100% - 125px) / 3.64665)",
         }
       }
     />
@@ -15308,7 +15338,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 5.32692)",
+          "width": "calc((100% - 125px) / 7.5738)",
         }
       }
     />
@@ -15323,7 +15353,22 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 2.36752)",
+          "width": "calc((100% - 125px) / 3.36613)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        Object {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "10px",
+          "width": "calc((100% - 125px) / 3.37081)",
         }
       }
     />
@@ -15344,21 +15389,6 @@ exports[`PhotoAlbum supports padding 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
-      style={
-        Object {
-          "aspectRatio": "1080 / 721",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "10px",
-          "width": "calc((100% - 90px) / 2.63287)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
       style={
         Object {
@@ -15367,7 +15397,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 5.91574)",
+          "width": "calc((100% - 90px) / 6.33334)",
         }
       }
     />
@@ -15382,7 +15412,22 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 2.21658)",
+          "width": "calc((100% - 90px) / 2.37305)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        Object {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "10px",
+          "width": "calc((100% - 90px) / 2.37696)",
         }
       }
     />
@@ -15403,21 +15448,6 @@ exports[`PhotoAlbum supports padding 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
-      style={
-        Object {
-          "aspectRatio": "1080 / 608",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "10px",
-          "width": "calc((100% - 90px) / 2.23696)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
       style={
         Object {
@@ -15426,7 +15456,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 2.64903)",
+          "width": "calc((100% - 90px) / 2.46482)",
         }
       }
     />
@@ -15441,7 +15471,22 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 90px) / 5.69909)",
+          "width": "calc((100% - 90px) / 5.30278)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "10px",
+          "width": "calc((100% - 90px) / 2.46482)",
         }
       }
     />
@@ -15459,21 +15504,6 @@ exports[`PhotoAlbum supports padding 1`] = `
       }
     }
   >
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "10px",
-          "width": "calc((100% - 90px) / 2.48191)",
-        }
-      }
-    />
     <img
       alt=""
       className="react-photo-album--photo"
@@ -15504,6 +15534,21 @@ exports[`PhotoAlbum supports padding 1`] = `
         }
       }
     />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "10px",
+          "width": "calc((100% - 90px) / 2.48191)",
+        }
+      }
+    />
   </div>
   <div
     className="react-photo-album--row"
@@ -15521,21 +15566,6 @@ exports[`PhotoAlbum supports padding 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "10px",
-          "width": "calc((100% - 125px) / 2.83333)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
       style={
         Object {
@@ -15544,7 +15574,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 5.66667)",
+          "width": "calc((100% - 125px) / 4.55556)",
         }
       }
     />
@@ -15559,7 +15589,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 6.375)",
+          "width": "calc((100% - 125px) / 5.125)",
         }
       }
     />
@@ -15574,7 +15604,22 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 3.1875)",
+          "width": "calc((100% - 125px) / 2.5625)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "10px",
+          "width": "calc((100% - 125px) / 5.125)",
         }
       }
     />
@@ -15595,21 +15640,6 @@ exports[`PhotoAlbum supports padding 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
-      style={
-        Object {
-          "aspectRatio": "1080 / 1620",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "10px",
-          "width": "calc((100% - 55px) / 11.125)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
       src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
       style={
         Object {
@@ -15618,7 +15648,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 55px) / 1.09877)",
+          "width": "calc((100% - 20px) / 1)",
         }
       }
     />
@@ -15720,7 +15750,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 5.41314)",
+          "width": "calc((100% - 90px) / 4.12813)",
         }
       }
     />
@@ -15735,7 +15765,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 11.24267)",
+          "width": "calc((100% - 90px) / 8.5738)",
         }
       }
     />
@@ -15750,7 +15780,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 4.99674)",
+          "width": "calc((100% - 90px) / 3.81058)",
         }
       }
     />
@@ -15765,7 +15795,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 5.00368)",
+          "width": "calc((100% - 90px) / 3.81587)",
         }
       }
     />
@@ -15780,22 +15810,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 11.24267)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
-      style={
-        Object {
-          "aspectRatio": "1080 / 607",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "5px",
-          "width": "calc((100% - 110px) / 4.21253)",
+          "width": "calc((100% - 90px) / 8.5738)",
         }
       }
     />
@@ -15816,6 +15831,21 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
+      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
+      style={
+        Object {
+          "aspectRatio": "1080 / 607",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "5px",
+          "width": "calc((100% - 90px) / 4.07633)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
       src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
       style={
         Object {
@@ -15824,7 +15854,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 90px) / 3.95748)",
+          "width": "calc((100% - 90px) / 4.08305)",
         }
       }
     />
@@ -15839,7 +15869,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 90px) / 4.68649)",
+          "width": "calc((100% - 90px) / 4.83519)",
         }
       }
     />
@@ -15854,7 +15884,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 90px) / 10.08246)",
+          "width": "calc((100% - 90px) / 10.40237)",
         }
       }
     />
@@ -15869,22 +15899,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 90px) / 4.68649)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      src="https://source.unsplash.com/twukN12EN7c/1080x694"
-      style={
-        Object {
-          "aspectRatio": "1080 / 694",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "padding": "5px",
-          "width": "calc((100% - 90px) / 4.51726)",
+          "width": "calc((100% - 90px) / 4.83519)",
         }
       }
     />
@@ -15905,6 +15920,21 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
+      src="https://source.unsplash.com/twukN12EN7c/1080x694"
+      style={
+        Object {
+          "aspectRatio": "1080 / 694",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "padding": "5px",
+          "width": "calc((100% - 130px) / 4.58781)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
       src="https://source.unsplash.com/9UjEyzA6pP4/1080x1620"
       style={
         Object {
@@ -15913,7 +15943,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 8.375)",
+          "width": "calc((100% - 130px) / 10.70929)",
         }
       }
     />
@@ -15928,7 +15958,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 3.72222)",
+          "width": "calc((100% - 130px) / 4.75969)",
         }
       }
     />
@@ -15943,7 +15973,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 7.44444)",
+          "width": "calc((100% - 130px) / 9.51937)",
         }
       }
     />
@@ -15958,7 +15988,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 8.375)",
+          "width": "calc((100% - 130px) / 10.70929)",
         }
       }
     />
@@ -15973,7 +16003,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 4.1875)",
+          "width": "calc((100% - 130px) / 5.35465)",
         }
       }
     />
@@ -15988,7 +16018,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 110px) / 8.375)",
+          "width": "calc((100% - 130px) / 10.70929)",
         }
       }
     />
@@ -16487,7 +16517,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="30vw"
+      sizes="21vw"
       src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
       srcSet="https://source.unsplash.com/Osq7UAVxIOI/1080x780 540w, https://source.unsplash.com/Osq7UAVxIOI/1080x780 1080w"
       style={
@@ -16496,14 +16526,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.56481)",
+          "width": "calc((100% - 45px) / 3.64665)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="15vw"
+      sizes="10vw"
       src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
       srcSet="https://source.unsplash.com/Dhmn6ete6g8/1080x1620 540w, https://source.unsplash.com/Dhmn6ete6g8/1080x1620 1080w"
       style={
@@ -16512,14 +16542,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.32692)",
+          "width": "calc((100% - 45px) / 7.5738)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="32vw"
+      sizes="22vw"
       src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
       srcSet="https://source.unsplash.com/RkBTPqPEGDo/1080x720 540w, https://source.unsplash.com/RkBTPqPEGDo/1080x720 1080w"
       style={
@@ -16528,28 +16558,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.36752)",
+          "width": "calc((100% - 45px) / 3.36613)",
         }
       }
     />
-  </div>
-  <div
-    className="react-photo-album--row"
-    style={
-      Object {
-        "alignItems": "flex-start",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "nowrap",
-        "justifyContent": "space-between",
-        "marginBottom": "15px",
-      }
-    }
-  >
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="29vw"
+      sizes="22vw"
       src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
       srcSet="https://source.unsplash.com/Yizrl9N_eDA/1080x721 540w, https://source.unsplash.com/Yizrl9N_eDA/1080x721 1080w"
       style={
@@ -16558,39 +16574,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.63287)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      sizes="13vw"
-      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
-      srcSet="https://source.unsplash.com/KG3TyFi0iTU/1080x1620 540w, https://source.unsplash.com/KG3TyFi0iTU/1080x1620 1080w"
-      style={
-        Object {
-          "aspectRatio": "1080 / 1620",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 5.91574)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      sizes="34vw"
-      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
-      srcSet="https://source.unsplash.com/Jztmx9yqjBw/1080x607 540w, https://source.unsplash.com/Jztmx9yqjBw/1080x607 1080w"
-      style={
-        Object {
-          "aspectRatio": "1080 / 607",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.21658)",
+          "width": "calc((100% - 45px) / 3.37081)",
         }
       }
     />
@@ -16611,7 +16595,39 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="34vw"
+      sizes="12vw"
+      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
+      srcSet="https://source.unsplash.com/KG3TyFi0iTU/1080x1620 540w, https://source.unsplash.com/KG3TyFi0iTU/1080x1620 1080w"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 6.33334)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      sizes="32vw"
+      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
+      srcSet="https://source.unsplash.com/Jztmx9yqjBw/1080x607 540w, https://source.unsplash.com/Jztmx9yqjBw/1080x607 1080w"
+      style={
+        Object {
+          "aspectRatio": "1080 / 607",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.37305)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      sizes="32vw"
       src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
       srcSet="https://source.unsplash.com/-heLWtuAN3c/1080x608 540w, https://source.unsplash.com/-heLWtuAN3c/1080x608 1080w"
       style={
@@ -16620,39 +16636,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.23696)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      sizes="29vw"
-      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
-      srcSet="https://source.unsplash.com/xOigCUcFdA8/1080x720 540w, https://source.unsplash.com/xOigCUcFdA8/1080x720 1080w"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 2.64903)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      sizes="14vw"
-      src="https://source.unsplash.com/1azAjl8FTnU/1080x1549"
-      srcSet="https://source.unsplash.com/1azAjl8FTnU/1080x1549 540w, https://source.unsplash.com/1azAjl8FTnU/1080x1549 1080w"
-      style={
-        Object {
-          "aspectRatio": "1080 / 1549",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 30px) / 5.69909)",
+          "width": "calc((100% - 30px) / 2.37696)",
         }
       }
     />
@@ -16674,6 +16658,38 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
       alt=""
       className="react-photo-album--photo"
       sizes="31vw"
+      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
+      srcSet="https://source.unsplash.com/xOigCUcFdA8/1080x720 540w, https://source.unsplash.com/xOigCUcFdA8/1080x720 1080w"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.46482)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      sizes="15vw"
+      src="https://source.unsplash.com/1azAjl8FTnU/1080x1549"
+      srcSet="https://source.unsplash.com/1azAjl8FTnU/1080x1549 540w, https://source.unsplash.com/1azAjl8FTnU/1080x1549 1080w"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1549",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 5.30278)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      sizes="31vw"
       src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
       srcSet="https://source.unsplash.com/ALrCdq-ui_Q/1080x720 540w, https://source.unsplash.com/ALrCdq-ui_Q/1080x720 1080w"
       style={
@@ -16682,10 +16698,24 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.48191)",
+          "width": "calc((100% - 30px) / 2.46482)",
         }
       }
     />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
     <img
       alt=""
       className="react-photo-album--photo"
@@ -16718,6 +16748,22 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
         }
       }
     />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      sizes="31vw"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      srcSet="https://source.unsplash.com/sEXGgun3ZiE/1080x720 540w, https://source.unsplash.com/sEXGgun3ZiE/1080x720 1080w"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.48191)",
+        }
+      }
+    />
   </div>
   <div
     className="react-photo-album--row"
@@ -16735,23 +16781,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="23vw"
-      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
-      srcSet="https://source.unsplash.com/sEXGgun3ZiE/1080x720 540w, https://source.unsplash.com/sEXGgun3ZiE/1080x720 1080w"
-      style={
-        Object {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 60px) / 3.27778)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      sizes="12vw"
+      sizes="17vw"
       src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
       srcSet="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440 540w, https://source.unsplash.com/S-cdwrx-YuQ/1080x1440 1080w"
       style={
@@ -16760,14 +16790,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 6.55556)",
+          "width": "calc((100% - 45px) / 4.55556)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="10vw"
+      sizes="15vw"
       src="https://source.unsplash.com/q-motCAvPBM/1080x1620"
       srcSet="https://source.unsplash.com/q-motCAvPBM/1080x1620 540w, https://source.unsplash.com/q-motCAvPBM/1080x1620 1080w"
       style={
@@ -16776,14 +16806,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="20vw"
+      sizes="29vw"
       src="https://source.unsplash.com/Xn4L310ztMU/1080x810"
       srcSet="https://source.unsplash.com/Xn4L310ztMU/1080x810 540w, https://source.unsplash.com/Xn4L310ztMU/1080x810 1080w"
       style={
@@ -16792,14 +16822,14 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 3.6875)",
+          "width": "calc((100% - 45px) / 2.5625)",
         }
       }
     />
     <img
       alt=""
       className="react-photo-album--photo"
-      sizes="10vw"
+      sizes="15vw"
       src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
       srcSet="https://source.unsplash.com/ls94iFAQerE/1080x1620 540w, https://source.unsplash.com/ls94iFAQerE/1080x1620 1080w"
       style={
@@ -16808,7 +16838,7 @@ exports[`PhotoAlbum supports srcset and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 60px) / 7.375)",
+          "width": "calc((100% - 45px) / 5.125)",
         }
       }
     />

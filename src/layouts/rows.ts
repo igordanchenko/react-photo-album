@@ -41,7 +41,7 @@ const cost = (
 ) => {
     const row = photos.slice(i, j);
     const commonHeight = getCommonHeight(row, width, spacing, padding);
-    return commonHeight > 0 ? (commonHeight - targetRowHeight) ** 2 : undefined;
+    return commonHeight > 0 ? (commonHeight - targetRowHeight) ** 2 * row.length : undefined;
 };
 
 // return function that gets the neighboring nodes of node and returns costs
