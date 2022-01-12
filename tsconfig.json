@@ -1,5 +1,5 @@
 {
-    "exclude": ["dist", "coverage", "examples", "node_modules", "*.d.ts", "**/*.d.ts"],
+    "exclude": ["test", "dist", "coverage", "examples", "node_modules", "*.d.ts", "**/*.d.ts"],
     "compilerOptions": {
         "strict": true,
         "target": "es2018",

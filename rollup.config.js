@@ -45,7 +45,6 @@ export default formats
                 ...(minify
                     ? {
                           tsconfigOverride: {
-                              exclude: ["test"],
                               compilerOptions: {
                                   declaration: true,
                               },
