@@ -26,7 +26,7 @@ export interface Image {
 }
 
 export interface Photo extends Image {
-    /** option photo key */
+    /** optional photo key */
     key?: string;
     /** photo alt text */
     alt?: string;
@@ -152,7 +152,7 @@ export type ColumnContainerProps = {
     columnsCount: number;
     /** sum of spacing and paddings in each column */
     columnsGaps?: number[];
-    /** width adjustment ratio of each column */
+    /** width adjustment ratio for each column */
     columnsRatios?: number[];
     /** pre-populated default column container attributes */
     columnContainerProps: HTMLAttributes<HTMLDivElement>;
