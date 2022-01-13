@@ -63,7 +63,7 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} defaultContainerWidth={-1} />);
     });
 
-    it("supports deterministic tie breaker", () => {
+    it("supports deterministic tiebreaker", () => {
         whenAskedToRender(
             <PhotoAlbum
                 layout={"rows"}

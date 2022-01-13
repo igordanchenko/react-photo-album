@@ -61,7 +61,7 @@ const buildPrecedentsMap = (graph: GraphFunction, startNode: Element, endNode: E
             if (
                 storedShortestPaths[neighbor] === undefined ||
                 (storedShortestPaths[neighbor] > newTotalWeight &&
-                    (storedShortestPaths[neighbor] / newTotalWeight > 1.00001 ||
+                    (storedShortestPaths[neighbor] / newTotalWeight > 1.005 ||
                         precedentsMap[neighbor] < shortestNodeId))
             ) {
                 storedShortestPaths[neighbor] = newTotalWeight;

@@ -15126,7 +15126,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports deterministic tie breaker 1`] = `
+exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
