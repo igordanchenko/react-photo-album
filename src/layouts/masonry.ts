@@ -11,7 +11,9 @@ type MasonryColumnsModel<T extends Photo = Photo> = { photo: T; layout: PhotoLay
 
 const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayoutProps<T>): MasonryColumnsModel<T> => {
     const { photos, layoutOptions, instrumentation } = props;
-    const { columns, spacing, padding, containerWidth } = layoutOptions;
+    const { spacing, padding, containerWidth } = layoutOptions;
+
+    const columns = Math.min(layoutOptions.columns, photos.length);
 
     instrumentation?.onStartLayoutComputation?.();
 
