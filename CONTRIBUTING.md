@@ -46,7 +46,8 @@ git checkout -b feat/my-new-feature
 npm run start
 ```
 
-7. Link your locally built `react-photo-album` version to your local project or one of the bundled examples:
+7. Link-install your locally built `react-photo-album` version to your local project or one of the bundled examples
+   (see the [examples](examples/README.md) for typical pitfalls):
 
 ```shell
 # execute from react-photo-album directory
@@ -68,8 +69,7 @@ npm run test
 # execute from your local project directory
 npm unlink --no-save react-photo-album
 
-# execute from react-photo-album directory
-npm unlink -g
+npm unlink -g react-photo-album
 ```
 
 10. Commit and push to your fork (make sure your commit message conforms to
