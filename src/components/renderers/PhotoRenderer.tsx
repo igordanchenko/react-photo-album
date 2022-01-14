@@ -1,6 +1,6 @@
 import * as React from "react";
 import round from "../../utils/round";
-import { LayoutOptions, Photo, PhotoLayout, RenderPhoto } from "../../types";
+import { LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../../types";
 
 const cssWidth = (photoLayout: PhotoLayout, layoutOptions: LayoutOptions) => {
     const { width } = photoLayout;
@@ -47,9 +47,9 @@ const srcSetAndSizes = <T extends Photo = Photo>({
     return { srcSet, sizes };
 };
 
-const DefaultPhotoRenderer = ({ imageProps }: { imageProps: React.ImgHTMLAttributes<HTMLImageElement> }) => {
-    const { alt, ...rest } = imageProps;
-    return <img alt={alt || ""} {...rest} />;
+const DefaultPhotoRenderer = <T extends Photo = Photo>({ imageProps }: PhotoProps<T>) => {
+    const { src, alt, ...rest } = imageProps;
+    return <img src={src} alt={alt} {...rest} />;
 };
 
 type PhotoRendererProps<T extends Photo = Photo> = {
@@ -87,7 +87,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
 
     const imageProps = {
         src: photo.src,
-        alt: photo.alt,
+        alt: photo.alt ?? "",
         title: photo.title,
         onClick: handleClick,
         style,

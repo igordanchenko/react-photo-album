@@ -55,7 +55,8 @@ export type PhotoProps<T extends Photo = Photo> = {
     /** photo album layout options */
     layoutOptions: LayoutOptions;
     /** pre-populated 'img' element attributes */
-    imageProps: ImgHTMLAttributes<HTMLImageElement>;
+    imageProps: ImgHTMLAttributes<HTMLImageElement> &
+        Required<Pick<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "style">>;
 };
 
 export type PhotoAlbumProps<T extends Photo = Photo> = {
