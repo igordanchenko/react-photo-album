@@ -21,7 +21,7 @@ const formats = [
     { format: "cjs", file: `${dist}/${cjsProduction}`, minify: true },
 ];
 
-const cjsEntry = `"use strict"\n\nmodule.exports = require(process.env.NODE_ENV === "production" ?\n\t"./${cjsProduction}" :\n\t"./${cjsDevelopment}")`;
+const cjsEntry = `'use strict'\n\nif (process.env.NODE_ENV === 'production') {\n\tmodule.exports = require('./${cjsProduction}');\n} else {\n\tmodule.exports = require('./${cjsDevelopment}');\n}\n`;
 
 // noinspection JSCheckFunctionSignatures
 export default formats
