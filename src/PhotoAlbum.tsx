@@ -18,6 +18,7 @@ const resolveLayoutOptions = <T extends Photo>({
     columns,
     spacing,
     padding,
+    sizes,
 }: Omit<PhotoAlbumProps<T>, "photos"> & {
     viewportWidth?: number;
     containerWidth: number;
@@ -35,6 +36,7 @@ const resolveLayoutOptions = <T extends Photo>({
         (w) => w / 3,
         (w) => w / 2,
     ]),
+    sizes,
 });
 
 const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
@@ -44,6 +46,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         columns,
         spacing,
         padding,
+        sizes,
         onClick,
         targetRowHeight,
         defaultContainerWidth = 800,
@@ -113,6 +116,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         padding,
         columns,
         targetRowHeight,
+        sizes,
     });
 
     const commonLayoutProps = { photos, renderPhoto, instrumentation };

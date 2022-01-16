@@ -244,6 +244,26 @@ describe("PhotoAlbum", () => {
         expect(onClick.mock.calls[0][1]).toBe(testPhotos[0]);
     });
 
+    it("supports sizes attribute", () => {
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} sizes={{ size: "100vw" }} />);
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                sizes={{ size: "50vw", sizes: [{ viewport: "(max-width: 600px)", size: "100vw" }] }}
+            />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                sizes={{ size: "calc(50vw - 50px)", sizes: [{ viewport: "(max-width: 600px)", size: "100vw" }] }}
+            />
+        );
+    });
+
     it("supports global ResizeObserver", () => {
         const resizeObserverRef = global.ResizeObserver;
         try {

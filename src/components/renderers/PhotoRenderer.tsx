@@ -1,33 +1,29 @@
 import * as React from "react";
+
 import round from "../../utils/round";
 import { LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../../types";
 
-const cssWidth = (photoLayout: PhotoLayout, layoutOptions: LayoutOptions) => {
-    const { width } = photoLayout;
-    const { spacing, padding, layout, containerWidth } = layoutOptions;
-
-    if (layout !== "rows") {
-        return `calc(100% - ${2 * padding}px)`;
-    }
-
-    const rowSize = photoLayout.photosCount;
-    return `calc((100% - ${spacing * (rowSize - 1) + 2 * padding * rowSize}px) / ${round(
-        (containerWidth - spacing * (rowSize - 1) - 2 * padding * rowSize) / width,
-        5
-    )})`;
+const calcWidth = (
+    base: string,
+    { width, photosCount }: PhotoLayout,
+    { spacing, padding, containerWidth }: LayoutOptions
+) => {
+    const gaps = spacing * (photosCount - 1) + 2 * padding * photosCount;
+    return `calc((${base} - ${gaps}px) / ${round((containerWidth - gaps) / width, 5)})`;
 };
 
-const srcSetAndSizes = <T extends Photo = Photo>({
-    photo,
-    layout,
-    layoutOptions,
-}: {
-    photo: T;
-    layout: PhotoLayout;
-    layoutOptions: LayoutOptions;
-}) => {
-    let srcSet;
-    let sizes;
+const cssWidth = (layout: PhotoLayout, layoutOptions: LayoutOptions) => {
+    if (layoutOptions.layout !== "rows") {
+        return `calc(100% - ${2 * layoutOptions.padding}px)`;
+    }
+    return calcWidth("100%", layout, layoutOptions);
+};
+
+const calculateSizesValue = (size: string, layout: PhotoLayout, layoutOptions: LayoutOptions) =>
+    calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
+
+const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions) => {
+    let srcSet, sizes;
 
     if (photo.images && photo.images.length > 0) {
         srcSet = photo.images
@@ -41,6 +37,14 @@ const srcSetAndSizes = <T extends Photo = Photo>({
             .sort((first, second) => first.width - second.width)
             .map((image) => `${image.src} ${image.width}w`)
             .join(", ");
+    }
+
+    if (!layoutOptions.viewportWidth && layoutOptions.sizes) {
+        sizes = (layoutOptions.sizes.sizes || [])
+            .map(({ viewport, size }) => `${viewport} ${calculateSizesValue(size, layout, layoutOptions)}`)
+            .concat(calculateSizesValue(layoutOptions.sizes.size, layout, layoutOptions))
+            .join(", ");
+    } else {
         sizes = `${Math.ceil((layout.width / (layoutOptions.viewportWidth || layoutOptions.containerWidth)) * 100)}vw`;
     }
 
@@ -48,8 +52,8 @@ const srcSetAndSizes = <T extends Photo = Photo>({
 };
 
 const DefaultPhotoRenderer = <T extends Photo = Photo>({ imageProps }: PhotoProps<T>) => {
-    const { src, alt, ...rest } = imageProps;
-    return <img src={src} alt={alt} {...rest} />;
+    const { src, alt, srcSet, sizes, ...rest } = imageProps;
+    return <img src={src} alt={alt} {...(srcSet ? { srcSet, sizes } : null)} {...rest} />;
 };
 
 type PhotoRendererProps<T extends Photo = Photo> = {
@@ -83,17 +87,14 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
           }
         : undefined;
 
-    const { srcSet, sizes } = srcSetAndSizes({ photo, layout, layoutOptions });
-
     const imageProps = {
         src: photo.src,
         alt: photo.alt ?? "",
         title: photo.title,
         onClick: handleClick,
         style,
-        sizes,
-        srcSet,
         className: "react-photo-album--photo",
+        ...srcSetAndSizes(photo, layout, layoutOptions),
     };
 
     const Component = renderPhoto || DefaultPhotoRenderer;

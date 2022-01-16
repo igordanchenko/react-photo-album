@@ -16,6 +16,18 @@ export type ResponsiveParameterProvider = (containerWidth: number) => number;
 
 export type ResponsiveParameter = number | ResponsiveParameterProvider;
 
+export type ResponsiveSizes = {
+    /** default size e.g. 100vw or calc(100vw - 200px) */
+    size: string;
+    /** array of sizes at various breakpoint */
+    sizes?: {
+        /** viewport size media query e.g. (max-width: 600px)  */
+        viewport: string;
+        /** photo album width at given viewport size e.g. calc(100vw - 50px) */
+        size: string;
+    }[];
+};
+
 export interface Image {
     /** image source */
     src: string;
@@ -72,6 +84,8 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     padding?: ResponsiveParameter;
     /** target row height in 'rows' layout */
     targetRowHeight?: ResponsiveParameter;
+    /** photo album size at various viewport sizes */
+    sizes?: ResponsiveSizes;
     /** photo click handler */
     onClick?: ClickHandler;
     /** default container width to be used in SSR render */
@@ -103,6 +117,8 @@ export type GenericLayoutOptions = {
     viewportWidth?: number;
     /** photo click handler */
     onClick?: ClickHandler;
+    /** photo album size at various viewport sizes */
+    sizes?: ResponsiveSizes;
 };
 
 export type RowsLayoutOptions = GenericLayoutOptions & {
