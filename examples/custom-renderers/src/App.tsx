@@ -46,7 +46,7 @@ const CustomPhoto: RenderPhoto = (props) => {
                 paddingBottom: 0,
             }}
         >
-            <img alt={alt || ""} style={{ ...style, width: "100%", padding: 0 }} {...rest} />
+            <img alt={alt} style={{ ...style, width: "100%", padding: 0 }} {...rest} />
             <div
                 style={{
                     paddingTop: "8px",

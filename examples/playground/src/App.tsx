@@ -17,7 +17,7 @@ const Playground = () => {
                 targetRowHeight={targetRowHeight}
                 renderPhoto={({ imageProps: { alt, style, ...rest } }: PhotoProps) => (
                     <img
-                        alt={alt || ""}
+                        alt={alt}
                         style={{
                             ...style,
                             borderRadius: padding > 2 ? "4px" : 0,

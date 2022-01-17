@@ -48,7 +48,7 @@ const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref
             })}
         >
             <img
-                alt={photo.alt || ""}
+                alt={photo.alt}
                 style={{
                     ...style,
                     width: "100%",
