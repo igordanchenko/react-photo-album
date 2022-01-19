@@ -39,7 +39,7 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
             .join(", ");
     }
 
-    if (!layoutOptions.viewportWidth && layoutOptions.sizes) {
+    if (layoutOptions.sizes) {
         sizes = (layoutOptions.sizes.sizes || [])
             .map(({ viewport, size }) => `${viewport} ${calculateSizesValue(size, layout, layoutOptions)}`)
             .concat(calculateSizesValue(layoutOptions.sizes.size, layout, layoutOptions))
