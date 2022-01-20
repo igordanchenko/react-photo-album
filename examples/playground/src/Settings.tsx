@@ -1,6 +1,14 @@
 import React from "react";
-import { FormControl, FormLabel, Grid, MenuItem, Paper, Slider, TextField } from "@mui/material";
 import { LayoutType, Photo } from "react-photo-album";
+
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
+import Grid from "@mui/material/Grid";
+import MenuItem from "@mui/material/MenuItem";
+import Paper from "@mui/material/Paper";
+import Slider from "@mui/material/Slider";
+import TextField from "@mui/material/TextField";
+
 import useLayoutEffect from "./layoutEffect";
 import photos from "./photos";
 

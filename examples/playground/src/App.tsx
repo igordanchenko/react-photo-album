@@ -1,6 +1,8 @@
 import React from "react";
-import { Box } from "@mui/material";
 import { PhotoAlbum, PhotoProps } from "react-photo-album";
+
+import Box from "@mui/material/Box";
+
 import Settings, { useSettings } from "./Settings";
 
 const Playground = () => {
