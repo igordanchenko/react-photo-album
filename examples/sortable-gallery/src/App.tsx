@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { Photo, PhotoAlbum, PhotoProps } from "react-photo-album";
 import clsx from "clsx";
 import {
@@ -12,6 +12,7 @@ import {
     useSensors,
 } from "@dnd-kit/core";
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable } from "@dnd-kit/sortable";
+
 import photoSet from "./photos";
 import "./App.css";
 
@@ -26,19 +27,20 @@ type PhotoFrameProps = SortablePhotoProps & {
     overlay?: boolean;
     active?: boolean;
     insertPosition?: "before" | "after";
+    sortableProps?: Partial<HTMLAttributes<HTMLDivElement>>;
 };
 
 const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
-    const { photo, layoutOptions, imageProps, overlay, active, insertPosition } = props;
-    const { style, ...restImageProps } = imageProps;
+    const { layoutOptions, imageProps, overlay, active, insertPosition, sortableProps } = props;
+    const { alt, style, ...restImageProps } = imageProps;
 
     return (
         <div
             ref={ref}
             style={{
-                width: overlay ? `calc(100% - ${2 * layoutOptions.padding}px)` : style?.width,
-                padding: style?.padding,
-                marginBottom: style?.marginBottom,
+                width: overlay ? `calc(100% - ${2 * layoutOptions.padding}px)` : style.width,
+                padding: style.padding,
+                marginBottom: style.marginBottom,
             }}
             className={clsx("photo-frame", {
                 overlay: overlay,
@@ -46,9 +48,10 @@ const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref
                 insertBefore: insertPosition === "before",
                 insertAfter: insertPosition === "after",
             })}
+            {...sortableProps}
         >
             <img
-                alt={photo.alt}
+                alt={alt}
                 style={{
                     ...style,
                     width: "100%",
@@ -63,12 +66,14 @@ const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref
 });
 PhotoFrame.displayName = "PhotoFrame";
 
+const MemoizedPhotoFrame = React.memo(PhotoFrame);
+
 const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }) => {
     const { photo, activeIndex } = props;
     const { attributes, listeners, isDragging, index, over, setNodeRef } = useSortable({ id: photo.id });
 
     return (
-        <PhotoFrame
+        <MemoizedPhotoFrame
             ref={setNodeRef}
             active={isDragging}
             insertPosition={
@@ -78,14 +83,12 @@ const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }
                         : "before"
                     : undefined
             }
-            {...{
-                ...props,
-                imageProps: {
-                    ...props.imageProps,
-                    ...attributes,
-                    ...listeners,
-                },
+            aria-label="sortable image"
+            sortableProps={{
+                ...attributes,
+                ...listeners,
             }}
+            {...props}
         />
     );
 };
@@ -139,7 +142,6 @@ const App = () => {
                         renderPhoto={(props) => {
                             // capture rendered photos for future use in DragOverlay
                             renderedPhotos.current[props.photo.id] = props;
-
                             return <SortablePhotoFrame activeIndex={activeIndex} {...props} />;
                         }}
                     />

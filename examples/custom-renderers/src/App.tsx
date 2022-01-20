@@ -1,5 +1,6 @@
 import React from "react";
 import { ContainerProps, PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
+
 import photos from "./photos";
 
 const CustomContainer: RenderContainer = React.forwardRef<HTMLDivElement, ContainerProps>((props, ref) => (
@@ -31,36 +32,32 @@ const CustomRowContainer: RenderRowContainer = (props) => (
     </>
 );
 
-const CustomPhoto: RenderPhoto = (props) => {
-    const { layout, layoutOptions, imageProps } = props;
-    const { alt, style, ...rest } = imageProps;
-    return (
+const CustomPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => (
+    <div
+        style={{
+            border: "2px solid #eee",
+            borderRadius: "4px",
+            boxSizing: "content-box",
+            alignItems: "center",
+            width: style?.width,
+            padding: `${layoutOptions.padding - 2}px`,
+            paddingBottom: 0,
+        }}
+    >
+        <img alt={alt} style={{ ...style, width: "100%", padding: 0 }} {...restImageProps} />
         <div
             style={{
-                border: "2px solid #eee",
-                borderRadius: "4px",
-                boxSizing: "content-box",
-                alignItems: "center",
-                width: style?.width,
-                padding: `${layoutOptions.padding - 2}px`,
-                paddingBottom: 0,
+                paddingTop: "8px",
+                paddingBottom: "8px",
+                overflow: "visible",
+                whiteSpace: "nowrap",
+                textAlign: "center",
             }}
         >
-            <img alt={alt} style={{ ...style, width: "100%", padding: 0 }} {...rest} />
-            <div
-                style={{
-                    paddingTop: "8px",
-                    paddingBottom: "8px",
-                    overflow: "visible",
-                    whiteSpace: "nowrap",
-                    textAlign: "center",
-                }}
-            >
-                {Math.round(layout.width)} x {Math.round(layout.height)}
-            </div>
+            {layoutOptions.viewportWidth ? Math.round(layout.width) + " x " + Math.round(layout.height) : <>&nbsp;</>}
         </div>
-    );
-};
+    </div>
+);
 
 const CustomRenderers = () => (
     <PhotoAlbum
