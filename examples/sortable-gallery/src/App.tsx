@@ -134,7 +134,7 @@ const App = () => {
         >
             <SortableContext items={photos}>
                 <div style={{ margin: 30 }}>
-                    <PhotoAlbum<SortablePhoto>
+                    <PhotoAlbum
                         photos={photos}
                         layout="rows"
                         spacing={30}
