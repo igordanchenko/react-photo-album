@@ -84,9 +84,5 @@
         "react-photo-album",
         "react-photo-gallery",
         "masonry"
-    ],
-    "dependencies": {
-        "-": "^0.0.1",
-        "D": "^1.0.0"
-    }
+    ]
 }
