@@ -29,22 +29,22 @@ export type ResponsiveSizes = {
 };
 
 export interface Image {
-    /** image source */
+    /** Image source. */
     src: string;
-    /** image width */
+    /** Image width in pixels. */
     width: number;
-    /** image height */
+    /** Image height in pixels. */
     height: number;
 }
 
 export interface Photo extends Image {
-    /** optional photo key */
+    /** Optional `key` attribute. */
     key?: string;
-    /** photo alt text */
+    /** Optional image `alt` attribute. */
     alt?: string;
-    /** photo title */
+    /** Optional image `title` attribute. */
     title?: string;
-    /** array of alternative image sizes */
+    /** Optional array of alternative images to be included in the `srcset` attribute. */
     images?: Image[];
 }
 
@@ -72,35 +72,35 @@ export type PhotoProps<T extends Photo = Photo> = {
 };
 
 export type PhotoAlbumProps<T extends Photo = Photo> = {
-    /** photo album photos */
+    /** An array of photos to display in the photo album. */
     photos: Array<T>;
-    /** layout type */
+    /** Photo album layout type. */
     layout: LayoutType;
-    /** number of columns in 'columns' or 'masonry' layout */
+    /** A number of columns in the `columns` or `masonry` layout. */
     columns?: ResponsiveParameter;
-    /** layout spacing */
+    /** Spacing between images. */
     spacing?: ResponsiveParameter;
-    /** layout padding */
+    /** Padding around each image in the photo album. */
     padding?: ResponsiveParameter;
-    /** target row height in 'rows' layout */
+    /** Target row height in the 'rows' layout. */
     targetRowHeight?: ResponsiveParameter;
-    /** photo album size at various viewport sizes */
+    /** Photo album width at various viewport sizes. */
     sizes?: ResponsiveSizes;
-    /** photo click handler */
+    /** Photo click callback function. */
     onClick?: ClickHandler;
-    /** default container width to be used in SSR render */
+    /** Default container width to be used in the server-side render. */
     defaultContainerWidth?: number;
-    /** custom photo rendering function */
+    /** Custom photo rendering function. */
     renderPhoto?: RenderPhoto<T>;
-    /** custom container rendering function */
+    /** Custom container rendering function. */
     renderContainer?: RenderContainer;
-    /** custom row container rendering function */
+    /** Custom row container rendering function. */
     renderRowContainer?: RenderRowContainer;
-    /** custom column container rendering function */
+    /** Custom column container rendering function. */
     renderColumnContainer?: RenderColumnContainer;
-    /** ResizeObserver factory to be used when global ResizeObserver is unavailable */
+    /** ResizeObserver factory to be used when global ResizeObserver is unavailable. */
     resizeObserverProvider?: ResizeObserverProvider;
-    /** internal instrumentation - use on your own risk */
+    /** Internal instrumentation - use on your own risk. */
     instrumentation?: Instrumentation;
 };
 
