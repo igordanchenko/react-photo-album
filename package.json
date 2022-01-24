@@ -10,6 +10,11 @@
     "files": [
         "dist"
     ],
+    "exports": {
+        "require": "./dist/index.js",
+        "import": "./dist/react-photo-album.esm.js",
+        "types": "./dist/index.d.ts"
+    },
     "sideEffects": false,
     "homepage": "https://react-photo-album.com",
     "repository": {
