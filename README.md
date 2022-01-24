@@ -1,7 +1,8 @@
 # React Photo Album
 
-React Photo Album is a responsive photo gallery component for React. Inspired
-by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-engineered from the ground up.
+React Photo Album is a responsive photo gallery component for React. React Photo Album supports rows, columns, and
+masonry layouts. Inspired by [react-photo-gallery](https://github.com/neptunian/react-photo-gallery), re-engineered from
+the ground up.
 
 ## Overview
 
@@ -66,7 +67,7 @@ const photos = [
     }
 ];
 
-<PhotoAlbum layout="rows" photos={photos} />
+<PhotoAlbum layout="rows" photos={photos}/>
 ```
 
 ## How It Works
