@@ -1,0 +1,16 @@
+{
+    "transform": {
+        ".(ts|tsx)$": "ts-jest/dist",
+        ".(js|jsx)$": "babel-jest"
+    },
+    "testEnvironment": "jsdom",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["src/**/*.{ts,tsx,js,jsx}"],
+    "coverageThreshold": {
+        "global": {
+            "lines": 90,
+            "statements": 90
+        }
+    }
+}
