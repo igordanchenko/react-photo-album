@@ -1,6 +1,6 @@
 {
-    "name": "react-photo-album-cdn-unpkg",
-    "description": "React Photo Album - Unpkg Example",
+    "name": "react-photo-album-cdn-skypack",
+    "description": "React Photo Album - Skypack Example",
     "keywords": [
         "react photo album",
         "react photo gallery",
