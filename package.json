@@ -7,12 +7,14 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "module": "dist/react-photo-album.esm.js",
+    "browser": "dist/react-photo-album.umd.production.min.js",
     "files": [
         "dist"
     ],
     "exports": {
-        "require": "./dist/index.js",
+        "browser": "./dist/react-photo-album.umd.production.min.js",
         "import": "./dist/react-photo-album.esm.js",
+        "require": "./dist/index.js",
         "types": "./dist/index.d.ts"
     },
     "sideEffects": false,
