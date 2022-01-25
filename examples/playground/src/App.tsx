@@ -1,4 +1,3 @@
-import React from "react";
 import { PhotoAlbum, PhotoProps } from "react-photo-album";
 
 import Box from "@mui/material/Box";

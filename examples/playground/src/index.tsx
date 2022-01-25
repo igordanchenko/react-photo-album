@@ -1,10 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { StrictMode } from "react";
+import { render } from "react-dom";
+
 import App from "./App";
 import "./index.css";
 
-ReactDOM.render(
-    <React.StrictMode>
+render(
+    <StrictMode>
         <header>
             <h1>React Photo Album | Playground</h1>
             <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
@@ -17,6 +18,6 @@ ReactDOM.render(
         <main>
             <App />
         </main>
-    </React.StrictMode>,
+    </StrictMode>,
     document.getElementById("root")
 );

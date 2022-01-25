@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";

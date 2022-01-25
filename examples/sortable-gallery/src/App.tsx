@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import { forwardRef, HTMLAttributes, memo, useCallback, useRef, useState } from "react";
 import { Photo, PhotoAlbum, PhotoProps } from "react-photo-album";
 import clsx from "clsx";
 import {
@@ -30,7 +30,7 @@ type PhotoFrameProps = SortablePhotoProps & {
     sortableProps?: Partial<HTMLAttributes<HTMLDivElement>>;
 };
 
-const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
+const PhotoFrame = forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
     const { layoutOptions, imageProps, overlay, active, insertPosition, sortableProps } = props;
     const { alt, style, ...restImageProps } = imageProps;
 
@@ -66,7 +66,7 @@ const PhotoFrame = React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref
 });
 PhotoFrame.displayName = "PhotoFrame";
 
-const MemoizedPhotoFrame = React.memo(PhotoFrame);
+const MemoizedPhotoFrame = memo(PhotoFrame);
 
 const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }) => {
     const { photo, activeIndex } = props;
@@ -94,14 +94,14 @@ const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }
 };
 
 const App = () => {
-    const [photos, setPhotos] = React.useState(
+    const [photos, setPhotos] = useState(
         (photoSet as Photo[]).map((photo) => ({
             ...photo,
             id: photo.key || photo.src,
         }))
     );
-    const renderedPhotos = React.useRef<{ [key: string]: SortablePhotoProps }>({});
-    const [activeId, setActiveId] = React.useState(null);
+    const renderedPhotos = useRef<{ [key: string]: SortablePhotoProps }>({});
+    const [activeId, setActiveId] = useState(null);
     const activeIndex = activeId ? photos.findIndex((photo) => photo.id === activeId) : undefined;
 
     const sensors = useSensors(
@@ -110,9 +110,9 @@ const App = () => {
         useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
     );
 
-    const handleDragStart = React.useCallback(({ active }) => setActiveId(active.id), []);
+    const handleDragStart = useCallback(({ active }) => setActiveId(active.id), []);
 
-    const handleDragEnd = React.useCallback((event) => {
+    const handleDragEnd = useCallback((event) => {
         const { active, over } = event;
 
         if (active.id !== over.id) {

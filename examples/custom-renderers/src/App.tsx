@@ -1,9 +1,9 @@
-import React from "react";
+import { forwardRef } from "react";
 import { ContainerProps, PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
 
 import photos from "./photos";
 
-const CustomContainer: RenderContainer = React.forwardRef<HTMLDivElement, ContainerProps>((props, ref) => (
+const CustomContainer: RenderContainer = forwardRef<HTMLDivElement, ContainerProps>((props, ref) => (
     <div
         style={{
             border: "2px solid #eee",
