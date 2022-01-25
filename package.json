@@ -12,7 +12,6 @@
         "dist"
     ],
     "exports": {
-        "browser": "./dist/react-photo-album.umd.production.min.js",
         "import": "./dist/react-photo-album.esm.js",
         "require": "./dist/index.js",
         "types": "./dist/index.d.ts"
