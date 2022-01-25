@@ -25,7 +25,6 @@ const formats = [
         file: `${dist}/${umdProduction}`,
         globals: { react: "React" },
         name: "ReactPhotoAlbum",
-        esModule: false,
         minify: true,
     },
 ];
