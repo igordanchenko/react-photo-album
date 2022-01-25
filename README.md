@@ -74,8 +74,8 @@ const photos = [
 
 ## CDN
 
-To install React Photo Album on a static website via CDN, follow one of
-the [examples](https://react-photo-album.com/examples).
+To install React Photo Album on a static website via CDN, follow one of the
+CDN [examples](https://react-photo-album.com/examples).
 
 - **Unpkg:** [https://unpkg.com/react-photo-album](https://unpkg.com/react-photo-album)
 - **JSDelivr:** [https://www.jsdelivr.com/package/npm/react-photo-album](https://www.jsdelivr.com/package/npm/react-photo-album)
