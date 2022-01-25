@@ -21,17 +21,19 @@ the ground up.
 
 ## Examples
 
-### Rows Layout
+### Rows
 
 ![Rows layout](https://react-photo-album.com/images/layouts/rows.jpg)
 
-### Columns Layout
+### Columns
 
 ![Columns layout](https://react-photo-album.com/images/layouts/columns.jpg)
 
-### Masonry Layout
+### Masonry
 
 ![Masonry layout](https://react-photo-album.com/images/layouts/masonry.jpg)
+
+All examples are available on [CodeSandbox](https://codesandbox.io/examples/package/react-photo-album).
 
 ## Documentation
 
@@ -69,6 +71,15 @@ const photos = [
 
 <PhotoAlbum layout="rows" photos={photos}/>
 ```
+
+## CDN
+
+To install React Photo Album on a static website via CDN, follow one of
+the [examples](https://react-photo-album.com/examples).
+
+- **Unpkg:** [https://unpkg.com/react-photo-album](https://unpkg.com/react-photo-album)
+- **JSDelivr:** [https://www.jsdelivr.com/package/npm/react-photo-album](https://www.jsdelivr.com/package/npm/react-photo-album)
+- **Skypack:** [https://www.skypack.dev/view/react-photo-album](https://www.skypack.dev/view/react-photo-album)
 
 ## How It Works
 
