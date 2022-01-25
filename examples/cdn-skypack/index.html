@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Photo Album | Skypack Example</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="photos.js"></script>
+</head>
+<body>
+<header>
+    <h1>React Photo Album | Skypack Example</h1>
+    <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
+        GitHub
+    </a>
+    <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">
+        Docs
+    </a>
+</header>
+<main id="root"></main>
+<script type="module">
+    import React from "https://cdn.skypack.dev/react";
+    import ReactDOM from "https://cdn.skypack.dev/react-dom";
+    import { PhotoAlbum } from "https://cdn.skypack.dev/react-photo-album";
+
+    ReactDOM.render(
+        React.createElement(PhotoAlbum, { layout: "columns", photos }),
+        document.querySelector("#root")
+    );
+</script>
+</body>
+</html>
