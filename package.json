@@ -4,16 +4,16 @@
     "description": "Responsive photo gallery component for React",
     "license": "MIT",
     "author": "Igor Danchenko",
-    "main": "dist/index.js",
+    "main": "dist/index.cjs.js",
     "types": "dist/index.d.ts",
-    "module": "dist/react-photo-album.esm.js",
-    "browser": "dist/react-photo-album.umd.production.min.js",
+    "module": "dist/index.esm.js",
+    "browser": "dist/index.umd.js",
     "files": [
         "dist"
     ],
     "exports": {
-        "import": "./dist/react-photo-album.esm.js",
-        "require": "./dist/index.js",
+        "import": "./dist/index.esm.js",
+        "require": "./dist/index.cjs.js",
         "types": "./dist/index.d.ts"
     },
     "sideEffects": false,

@@ -1,4 +1,3 @@
-import fs from "fs";
 import peerDeps from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
@@ -8,32 +7,22 @@ import { terser } from "rollup-plugin-terser";
 import dts from "rollup-plugin-dts";
 import pkg from "./package.json";
 
-const input = "src/index.ts";
-const packageName = pkg.name;
-
 const dist = "dist";
-const cjsDevelopment = `${packageName}.cjs.development.js`;
-const cjsProduction = `${packageName}.cjs.production.min.js`;
-const umdProduction = `${packageName}.umd.production.min.js`;
+const input = "src/index.ts";
+
+const esmBundle = "index.esm.js";
+const cjsBundle = "index.cjs.js";
+const umdBundle = "index.umd.js";
 
 const formats = [
-    { format: "esm", file: `${dist}/${packageName}.esm.js` },
-    { format: "cjs", file: `${dist}/${cjsDevelopment}` },
-    { format: "cjs", file: `${dist}/${cjsProduction}`, minify: true },
-    {
-        format: "umd",
-        file: `${dist}/${umdProduction}`,
-        globals: { react: "React" },
-        name: "ReactPhotoAlbum",
-        minify: true,
-    },
+    { format: "esm", file: `${dist}/${esmBundle}` },
+    { format: "cjs", file: `${dist}/${cjsBundle}` },
+    { format: "umd", file: `${dist}/${umdBundle}`, globals: { react: "React" }, name: "ReactPhotoAlbum" },
 ];
-
-const cjsEntry = `'use strict'\n\nif (process.env.NODE_ENV === 'production') {\n\tmodule.exports = require('./${cjsProduction}');\n} else {\n\tmodule.exports = require('./${cjsDevelopment}');\n}\n`;
 
 // noinspection JSCheckFunctionSignatures
 export default formats
-    .map(({ minify, ...output }) => ({
+    .map((output) => ({
         input,
         output: [
             {
@@ -51,12 +40,7 @@ export default formats
                 babelHelpers: "bundled",
                 extensions: [".js", ".jsx", ".ts", ".tsx"],
             }),
-            minify && terser(),
-            minify &&
-                output.format === "cjs" && {
-                    name: "cjs-entry",
-                    buildEnd: () => fs.writeFileSync(pkg.main, cjsEntry),
-                },
+            output.format !== "esm" && terser(),
         ].filter(Boolean),
     }))
     .concat([
