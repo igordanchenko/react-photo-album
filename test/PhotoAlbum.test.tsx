@@ -2,7 +2,7 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import { act, render, screen } from "@testing-library/react";
 
-import { LayoutType, PhotoAlbum } from "../src";
+import { LayoutType, PhotoAlbum, PhotoAlbumProps } from "../src";
 import photos from "./photos";
 
 const whenAskedToRender = (Component: JSX.Element) => {
@@ -214,6 +214,18 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(
             <PhotoAlbum layout={"masonry"} photos={photos} columns={3} padding={100} defaultContainerWidth={50} />
         );
+    });
+
+    it("doesn't crash when invoked without required parameters", () => {
+        whenAskedToRender(React.createElement(PhotoAlbum));
+        whenAskedToRender(React.createElement(PhotoAlbum, { layout: "columns" } as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { photos: [] } as unknown as PhotoAlbumProps));
+    });
+
+    it("doesn't crash when invoked with invalid required parameters", () => {
+        whenAskedToRender(React.createElement(PhotoAlbum, { layout: "unknown" } as unknown as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { photos: 0 } as unknown as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { photos: null } as unknown as PhotoAlbumProps));
     });
 
     it("supports responsive parameters", () => {

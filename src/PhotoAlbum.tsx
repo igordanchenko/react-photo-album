@@ -107,6 +107,8 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         };
     }, [updateDimensions, resizeObserverProvider]);
 
+    if (!layout || !Array.isArray(photos)) return <></>;
+
     const layoutOptions = resolveLayoutOptions({
         containerWidth: containerWidth || defaultContainerWidth,
         viewportWidth,
@@ -124,7 +126,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     return (
         <ContainerRenderer ref={setContainerRef} layoutOptions={layoutOptions} renderContainer={renderContainer}>
             {layout === "rows" ? (
-                <RowsLayout<T>
+                <RowsLayout
                     layoutOptions={layoutOptions as RowsLayoutOptions}
                     renderRowContainer={renderRowContainer}
                     {...commonLayoutProps}

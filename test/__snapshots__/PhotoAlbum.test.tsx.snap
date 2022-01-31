@@ -1119,6 +1119,18 @@ exports[`PhotoAlbum doesn't crash when asked to render impossible rows layout 1`
 />
 `;
 
+exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 1`] = `null`;
+
+exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 2`] = `null`;
+
+exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 3`] = `null`;
+
+exports[`PhotoAlbum doesn't crash when invoked without required parameters 1`] = `null`;
+
+exports[`PhotoAlbum doesn't crash when invoked without required parameters 2`] = `null`;
+
+exports[`PhotoAlbum doesn't crash when invoked without required parameters 3`] = `null`;
+
 exports[`PhotoAlbum renders columns layout correctly when there isn't enough photos 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
