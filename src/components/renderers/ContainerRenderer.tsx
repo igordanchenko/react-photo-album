@@ -2,13 +2,11 @@ import * as React from "react";
 import { PropsWithChildren, PropsWithoutRef } from "react";
 import { ContainerProps, RenderContainer } from "../../types";
 
-const PhotoAlbumContainer = React.forwardRef<HTMLDivElement, PropsWithoutRef<PropsWithChildren<ContainerProps>>>(
-    ({ containerProps, children }, ref) => (
-        <div ref={ref} {...containerProps}>
-            {children}
-        </div>
-    )
-);
+const PhotoAlbumContainer: RenderContainer = React.forwardRef(({ containerProps, children }, ref) => (
+    <div ref={ref} {...containerProps}>
+        {children}
+    </div>
+));
 PhotoAlbumContainer.displayName = "PhotoAlbumContainer";
 
 type ContainerRendererProps = Omit<ContainerProps, "containerProps"> & { renderContainer?: RenderContainer };

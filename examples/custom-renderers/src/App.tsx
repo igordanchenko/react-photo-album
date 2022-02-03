@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
-import { ContainerProps, PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
+import { PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
 
 import photos from "./photos";
 
-const CustomContainer: RenderContainer = forwardRef<HTMLDivElement, ContainerProps>((props, ref) => (
+const CustomContainer: RenderContainer = forwardRef(({ containerProps, children }, ref) => (
     <div
         style={{
             border: "2px solid #eee",
@@ -11,8 +11,8 @@ const CustomContainer: RenderContainer = forwardRef<HTMLDivElement, ContainerPro
             padding: "20px",
         }}
     >
-        <div ref={ref} {...props.containerProps}>
-            {props.children}
+        <div ref={ref} {...containerProps}>
+            {children}
         </div>
     </div>
 ));
