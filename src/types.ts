@@ -167,9 +167,9 @@ export type ColumnContainerProps = {
     columnIndex: number;
     /** total number of columns */
     columnsCount: number;
-    /** sum of spacing and paddings in each column */
+    /** sum of spacings and paddings in each column */
     columnsGaps?: number[];
-    /** width adjustment ratio for each column */
+    /** width adjustment ratios of each column */
     columnsRatios?: number[];
     /** pre-populated default column container attributes */
     columnContainerProps: HTMLAttributes<HTMLDivElement>;
