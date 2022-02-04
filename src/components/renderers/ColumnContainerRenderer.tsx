@@ -3,7 +3,7 @@ import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
 import round from "../../utils/round";
 import { ColumnContainerProps, RenderColumnContainer } from "../../types";
 
-const ColumnContainer = ({ columnContainerProps, children }: PropsWithChildren<ColumnContainerProps>) => (
+const ColumnContainer: RenderColumnContainer = ({ columnContainerProps, children }) => (
     <div {...columnContainerProps}>{children}</div>
 );
 
