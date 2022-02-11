@@ -5,7 +5,7 @@ import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import resolveResponsiveParameter from "./utils/responsive";
-import useLayoutEffect from "./utils/layoutEffect";
+import useLayoutEffect from "./hooks/layoutEffect";
 
 import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
 
