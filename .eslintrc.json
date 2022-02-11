@@ -27,6 +27,15 @@
     },
     "ignorePatterns": ["dist/*", "coverage/*"],
     "rules": {
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "no-console": "warn",
+        "object-shorthand": "warn",
+        "prefer-destructuring": [
+            "error",
+            {
+                "array": true,
+                "object": true
+            }
+        ]
     }
 }

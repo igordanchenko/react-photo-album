@@ -112,7 +112,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
             row.map((photo, index) => ({
                 photo,
                 layout: {
-                    height: height,
+                    height,
                     width: height * ratio(photo),
                     photoIndex: index,
                     photosCount: row.length,
