@@ -361,7 +361,7 @@ describe("PhotoAlbum", () => {
         unmount();
 
         expect(resizeObserverMock.observe.mock.calls.length).toBe(2);
-        expect(resizeObserverMock.disconnect.mock.calls.length).toBe(1);
+        expect(resizeObserverMock.disconnect.mock.calls.length).toBe(2);
     });
 
     it("supports instrumentation", () => {

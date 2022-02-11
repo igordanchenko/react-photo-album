@@ -4,9 +4,9 @@ import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
+import useMounted from "./hooks/mounted";
+import useContainerWidth from "./hooks/containerWidth";
 import resolveResponsiveParameter from "./utils/responsive";
-import useLayoutEffect from "./hooks/layoutEffect";
-
 import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
 
 const resolveLayoutOptions = <T extends Photo>({
@@ -43,88 +43,31 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     const {
         photos,
         layout,
-        columns,
-        spacing,
-        padding,
-        sizes,
-        onClick,
-        targetRowHeight,
-        defaultContainerWidth = 800,
         renderPhoto,
         renderContainer,
         renderRowContainer,
         renderColumnContainer,
+        defaultContainerWidth,
         resizeObserverProvider,
         instrumentation,
     } = props;
 
-    const [viewportWidth, setViewportWidth] = React.useState<number>();
-    const [containerWidth, setContainerWidth] = React.useState<number>();
+    const mounted = useMounted();
+    const { ref, width } = useContainerWidth(resizeObserverProvider);
 
-    const observerRef = React.useRef<ResizeObserver | null>(null);
-    const containerRef = React.useRef<HTMLDivElement | null>(null);
-
-    const updateDimensions = React.useCallback(() => {
-        if (typeof window !== "undefined") {
-            setViewportWidth(window.innerWidth);
-        }
-        if (containerRef.current) {
-            setContainerWidth(containerRef.current.clientWidth);
-        }
-    }, []);
-
-    const setContainerRef = React.useCallback((node) => {
-        if (observerRef.current && containerRef.current) {
-            observerRef.current.unobserve(containerRef.current);
-        }
-
-        containerRef.current = node;
-
-        if (node && observerRef.current) {
-            observerRef.current.observe(node);
-        }
-    }, []);
-
-    useLayoutEffect(() => {
-        updateDimensions();
-
-        const observerCallback = () => updateDimensions();
-        if (typeof ResizeObserver !== "undefined") {
-            observerRef.current = new ResizeObserver(observerCallback);
-        } else if (resizeObserverProvider) {
-            observerRef.current = resizeObserverProvider(observerCallback);
-        }
-
-        if (observerRef.current && containerRef.current) {
-            observerRef.current.observe(containerRef.current);
-        }
-
-        return () => {
-            if (observerRef.current) {
-                observerRef.current.disconnect();
-                observerRef.current = null;
-            }
-        };
-    }, [updateDimensions, resizeObserverProvider]);
-
+    // safeguard against incorrect usage
     if (!layout || !Array.isArray(photos)) return <></>;
 
     const layoutOptions = resolveLayoutOptions({
-        containerWidth: containerWidth || defaultContainerWidth,
-        viewportWidth,
-        layout,
-        onClick,
-        spacing,
-        padding,
-        columns,
-        targetRowHeight,
-        sizes,
+        containerWidth: (mounted && width) || defaultContainerWidth || 800,
+        viewportWidth: (mounted && window.innerWidth) || undefined,
+        ...props,
     });
 
     const commonLayoutProps = { photos, renderPhoto, instrumentation };
 
     return (
-        <ContainerRenderer ref={setContainerRef} layoutOptions={layoutOptions} renderContainer={renderContainer}>
+        <ContainerRenderer ref={ref} layoutOptions={layoutOptions} renderContainer={renderContainer}>
             {layout === "rows" ? (
                 <RowsLayout
                     layoutOptions={layoutOptions as RowsLayoutOptions}
