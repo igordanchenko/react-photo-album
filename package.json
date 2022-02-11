@@ -38,7 +38,7 @@
         "test": "jest"
     },
     "peerDependencies": {
-        "react": "^16.8.0 || ^17"
+        "react": ">=16.8.0"
     },
     "devDependencies": {
         "@babel/core": "^7.17.2",
