@@ -2,20 +2,21 @@
     "name": "react-photo-album",
     "version": "0.0.0-semantic-release",
     "description": "Responsive photo gallery component for React",
-    "license": "MIT",
     "author": "Igor Danchenko",
+    "license": "MIT",
     "types": "dist/index.d.ts",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
-    "unpkg": "dist/index.esm.js",
-    "jsdelivr": "dist/index.esm.js",
+    "browser": "dist/index.esm.js",
     "files": [
         "dist"
     ],
     "exports": {
+        "types": "./dist/index.d.ts",
+        "node": "./dist/index.cjs.js",
+        "browser": "./dist/index.esm.js",
         "import": "./dist/index.esm.js",
-        "require": "./dist/index.cjs.js",
-        "types": "./dist/index.d.ts"
+        "default": "./dist/index.cjs.js"
     },
     "sideEffects": false,
     "homepage": "https://react-photo-album.com",
