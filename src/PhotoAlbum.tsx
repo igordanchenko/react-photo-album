@@ -49,11 +49,12 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         renderColumnContainer,
         defaultContainerWidth,
         resizeObserverProvider,
+        breakpoints,
         instrumentation,
     } = props;
 
     const mounted = useMounted();
-    const { ref, width } = useContainerWidth(resizeObserverProvider);
+    const { ref, width } = useContainerWidth(resizeObserverProvider, breakpoints);
 
     // safeguard against incorrect usage
     if (!layout || !Array.isArray(photos)) return <></>;

@@ -291,6 +291,10 @@ describe("PhotoAlbum", () => {
         );
     });
 
+    it("supports breakpoints attribute", () => {
+        render(<PhotoAlbum layout={"rows"} photos={photos} breakpoints={[300, 600, 1200]} />).unmount();
+    });
+
     it("supports global ResizeObserver", () => {
         const resizeObserverRef = global.ResizeObserver;
         try {

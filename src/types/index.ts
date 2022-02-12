@@ -88,6 +88,8 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     sizes?: ResponsiveSizes;
     /** Photo click callback function. */
     onClick?: ClickHandler;
+    /** Responsive breakpoints */
+    breakpoints?: number[];
     /** Default container width to be used in the server-side render. */
     defaultContainerWidth?: number;
     /** Custom photo rendering function. */
