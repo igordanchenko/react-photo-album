@@ -1,8 +1,6 @@
-import * as React from "react";
-
+import computeMasonryLayout from "../../layouts/masonry";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";
-import computeMasonryLayout from "../../layouts/masonry";
 import { ColumnsLayoutOptions, Instrumentation, Photo, RenderColumnContainer, RenderPhoto } from "../../types";
 
 type MasonryLayoutProps<T extends Photo = Photo> = {

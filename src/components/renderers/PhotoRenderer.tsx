@@ -1,5 +1,4 @@
-import * as React from "react";
-
+import { CSSProperties, MouseEvent } from "react";
 import round from "../../utils/round";
 import { LayoutOptions, Photo, PhotoLayout, RenderPhoto } from "../../types";
 
@@ -79,10 +78,10 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
             ? { marginBottom: `${layoutOptions.spacing}px` }
             : null),
         ...(onClick ? { cursor: "pointer" } : null),
-    } as React.CSSProperties;
+    } as CSSProperties;
 
     const handleClick = onClick
-        ? (event: React.MouseEvent) => {
+        ? (event: MouseEvent) => {
               onClick(event, photo);
           }
         : undefined;

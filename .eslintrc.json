@@ -28,6 +28,7 @@
     "ignorePatterns": ["dist/*", "coverage/*"],
     "rules": {
         "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
         "no-console": "warn",
         "object-shorthand": "warn",
         "prefer-destructuring": [

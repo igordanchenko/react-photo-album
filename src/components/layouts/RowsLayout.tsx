@@ -1,7 +1,5 @@
-import * as React from "react";
-
-import PhotoRenderer from "../renderers/PhotoRenderer";
 import computeRowsLayout from "../../layouts/rows";
+import PhotoRenderer from "../renderers/PhotoRenderer";
 import RowContainerRenderer from "../renderers/RowContainerRenderer";
 import { Instrumentation, Photo, RenderPhoto, RenderRowContainer, RowsLayoutOptions } from "../../types";
 

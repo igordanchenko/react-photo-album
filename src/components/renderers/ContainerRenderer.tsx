@@ -1,8 +1,7 @@
-import * as React from "react";
-import { PropsWithChildren, PropsWithoutRef } from "react";
+import { CSSProperties, forwardRef, PropsWithChildren, PropsWithoutRef } from "react";
 import { ContainerProps, RenderContainer } from "../../types";
 
-const PhotoAlbumContainer: RenderContainer = React.forwardRef(({ containerProps, children }, ref) => (
+const PhotoAlbumContainer: RenderContainer = forwardRef(({ containerProps, children }, ref) => (
     <div ref={ref} {...containerProps}>
         {children}
     </div>
@@ -11,7 +10,7 @@ PhotoAlbumContainer.displayName = "PhotoAlbumContainer";
 
 type ContainerRendererProps = Omit<ContainerProps, "containerProps"> & { renderContainer?: RenderContainer };
 
-const ContainerRenderer = React.forwardRef<HTMLDivElement, PropsWithoutRef<PropsWithChildren<ContainerRendererProps>>>(
+const ContainerRenderer = forwardRef<HTMLDivElement, PropsWithoutRef<PropsWithChildren<ContainerRendererProps>>>(
     ({ layoutOptions, renderContainer, children, ...rest }, ref) => {
         const { layout } = layoutOptions;
 
@@ -24,13 +23,13 @@ const ContainerRenderer = React.forwardRef<HTMLDivElement, PropsWithoutRef<Props
                           flexDirection: "column",
                           flexWrap: "nowrap",
                           justifyContent: "space-between",
-                      } as React.CSSProperties)
+                      } as CSSProperties)
                     : ({
                           display: "flex",
                           flexDirection: "row",
                           flexWrap: "nowrap",
                           justifyContent: "space-between",
-                      } as React.CSSProperties),
+                      } as CSSProperties),
         };
 
         const Component = renderContainer || PhotoAlbumContainer;
