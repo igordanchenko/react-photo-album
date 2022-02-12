@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";

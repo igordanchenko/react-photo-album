@@ -1,4 +1,6 @@
+import * as React from "react";
 import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
+
 import round from "../../utils/round";
 import { ColumnContainerProps, RenderColumnContainer } from "../../types";
 

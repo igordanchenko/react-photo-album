@@ -1,3 +1,4 @@
+import * as React from "react";
 import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
 
 import { RenderRowContainer, RowContainerProps } from "../../types";

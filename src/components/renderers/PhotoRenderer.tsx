@@ -1,4 +1,6 @@
+import * as React from "react";
 import { CSSProperties, MouseEvent } from "react";
+
 import round from "../../utils/round";
 import { LayoutOptions, Photo, PhotoLayout, RenderPhoto } from "../../types";
 

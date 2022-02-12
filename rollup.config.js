@@ -12,6 +12,7 @@ const input = "src/index.ts";
 const formats = [
     { format: "esm", file: "dist/index.esm.js" },
     { format: "cjs", file: "dist/index.cjs.js" },
+    { format: "umd", file: "dist/index.umd.js", globals: { react: "React" }, name: "ReactPhotoAlbum" },
 ];
 
 // noinspection JSCheckFunctionSignatures
@@ -29,7 +30,17 @@ export default formats
             peerDeps(),
             resolve(),
             commonjs(),
-            typescript(),
+            typescript(
+                output.format === "umd"
+                    ? {
+                          tsconfigOverride: {
+                              compilerOptions: {
+                                  jsx: "react",
+                              },
+                          },
+                      }
+                    : {}
+            ),
             babel({
                 babelHelpers: "bundled",
                 extensions: [".js", ".jsx", ".ts", ".tsx"],

@@ -1,4 +1,6 @@
+import * as React from "react";
 import { CSSProperties, forwardRef, PropsWithChildren, PropsWithoutRef } from "react";
+
 import { ContainerProps, RenderContainer } from "../../types";
 
 const PhotoAlbumContainer: RenderContainer = forwardRef(({ containerProps, children }, ref) => (
