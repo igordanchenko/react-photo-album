@@ -7,17 +7,11 @@ import { terser } from "rollup-plugin-terser";
 import dts from "rollup-plugin-dts";
 import pkg from "./package.json";
 
-const dist = "dist";
 const input = "src/index.ts";
 
-const esmBundle = "index.esm.js";
-const cjsBundle = "index.cjs.js";
-const umdBundle = "index.umd.js";
-
 const formats = [
-    { format: "esm", file: `${dist}/${esmBundle}` },
-    { format: "cjs", file: `${dist}/${cjsBundle}` },
-    { format: "umd", file: `${dist}/${umdBundle}`, globals: { react: "React" }, name: "ReactPhotoAlbum" },
+    { format: "esm", file: "dist/index.esm.js" },
+    { format: "cjs", file: "dist/index.cjs.js" },
 ];
 
 // noinspection JSCheckFunctionSignatures
