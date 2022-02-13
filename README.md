@@ -69,7 +69,7 @@ const photos = [
     }
 ];
 
-<PhotoAlbum layout="rows" photos={photos}/>
+<PhotoAlbum layout="rows" photos={photos} />
 ```
 
 ## CDN
