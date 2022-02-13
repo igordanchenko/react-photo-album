@@ -52,21 +52,7 @@ updates:
             timezone: "America/New_York"
 
     -   package-ecosystem: "npm"
-        directory: "/examples/cdn-unpkg"
-        schedule:
-            interval: "monthly"
-            time: "10:00"
-            timezone: "America/New_York"
-
-    -   package-ecosystem: "npm"
-        directory: "/examples/cdn-jsdelivr"
-        schedule:
-            interval: "monthly"
-            time: "10:00"
-            timezone: "America/New_York"
-
-    -   package-ecosystem: "npm"
-        directory: "/examples/cdn-skypack"
+        directory: "/examples/cdn"
         schedule:
             interval: "monthly"
             time: "10:00"
