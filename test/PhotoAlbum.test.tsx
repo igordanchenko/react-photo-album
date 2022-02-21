@@ -56,11 +56,11 @@ describe("PhotoAlbum", () => {
     });
 
     it("supports minimum number of elements in a row ", () => {
-        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} minRowCount={3} />);
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} minPhotoCount={3} />);
     });
 
     it("supports maximum number of elements in a row ", () => {
-        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} maxRowCount={4} />);
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} maxPhotoCount={4} />);
     });
 
     it("renders columns layout correctly when there isn't enough photos", () => {

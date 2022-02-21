@@ -14,8 +14,8 @@ const resolveLayoutOptions = <T extends Photo>({
     onClick,
     viewportWidth,
     containerWidth,
-    minRowCount,
-    maxRowCount,
+    minPhotoCount,
+    maxPhotoCount,
     targetRowHeight,
     columns,
     spacing,
@@ -38,8 +38,8 @@ const resolveLayoutOptions = <T extends Photo>({
         (w) => w / 3,
         (w) => w / 2,
     ]),
-    minRowCount,
-    maxRowCount,
+    minPhotoCount,
+    maxPhotoCount,
     sizes,
 });
 
