@@ -82,6 +82,10 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     spacing?: ResponsiveParameter;
     /** Padding around each image in the photo album. */
     padding?: ResponsiveParameter;
+    /** min photos in a row in 'rows' layout */
+    minRowCount?: number;
+    /** max photos in a row in 'rows' layout */
+    maxRowCount?: number;
     /** Target row height in the 'rows' layout. */
     targetRowHeight?: ResponsiveParameter;
     /** Photo album width at various viewport sizes. */
@@ -128,6 +132,10 @@ export type RowsLayoutOptions = GenericLayoutOptions & {
     layout: Extract<LayoutType, "rows">;
     /** target row height in 'rows' layout */
     targetRowHeight: number;
+    /** min photos in a row in 'rows' layout */
+    minRowCount?: number;
+    /** max photos in a row in 'rows' layout */
+    maxRowCount?: number;
 };
 
 export type ColumnsLayoutOptions = GenericLayoutOptions & {

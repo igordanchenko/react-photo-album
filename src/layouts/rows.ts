@@ -50,12 +50,14 @@ const makeGetNeighbors =
         photos,
         layoutOptions,
         targetRowHeight,
+        minRowCount,
         limitNodeSearch,
         instrumentation,
     }: {
         photos: Array<Photo>;
         layoutOptions: RowsLayoutOptions;
         targetRowHeight: number;
+        minRowCount?: number;
         limitNodeSearch: number;
         instrumentation?: Instrumentation;
     }) =>
@@ -64,7 +66,8 @@ const makeGetNeighbors =
         const results: { [key: string]: number } = {};
         const start = +node;
         results[+start] = 0;
-        for (let i = start + 1; i < photos.length + 1; i += 1) {
+        const startOffset = minRowCount ? minRowCount : 1;
+        for (let i = start + startOffset; i < photos.length + 1; i += 1) {
             if (i - start > limitNodeSearch && !instrumentation?.fullGraphSearch) break;
             const currentCost = cost(photos, start, i, containerWidth, targetRowHeight, spacing, padding);
             if (currentCost === undefined) break;
@@ -84,7 +87,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
     layoutOptions: RowsLayoutOptions;
     instrumentation?: Instrumentation;
 }): RowsLayoutModel<T> => {
-    const { spacing, padding, containerWidth, targetRowHeight } = layoutOptions;
+    const { spacing, padding, containerWidth, targetRowHeight, minRowCount, maxRowCount } = layoutOptions;
 
     instrumentation?.onStartLayoutComputation?.();
 
@@ -94,7 +97,8 @@ const computeRowsLayout = <T extends Photo = Photo>({
         photos,
         layoutOptions,
         targetRowHeight,
-        limitNodeSearch,
+        minRowCount,
+        limitNodeSearch: maxRowCount && maxRowCount < limitNodeSearch ? maxRowCount : limitNodeSearch,
         instrumentation,
     });
 
