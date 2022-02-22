@@ -188,9 +188,9 @@ export type ResizeObserverProvider = (
 ) => ResizeObserver;
 
 export type RowConstraints = {
-    /** minimum number of photos in a row in 'rows' layout */
+    /** minimum number of photos per row in 'rows' layout */
     minPhotos?: number;
-    /** maximum number of photos in a row in 'rows' layout */
+    /** maximum number of photos per row in 'rows' layout */
     maxPhotos?: number;
 };
 
