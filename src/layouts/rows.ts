@@ -1,7 +1,7 @@
 import ratio from "../utils/ratio";
 import round from "../utils/round";
 import { findShortestPath } from "../utils/dijkstra";
-import { Instrumentation, Photo, PhotoLayout, RowsLayoutOptions } from "../types";
+import { Instrumentation, Photo, PhotoLayout, RowConstraints, RowsLayoutOptions } from "../types";
 
 // guesstimate how many neighboring nodes should be searched based on
 // the aspect columnRatio of the container with images and minimal aspect columnRatio of all photos
@@ -50,8 +50,8 @@ const makeGetNeighbors =
         photos,
         layoutOptions,
         targetRowHeight,
-        minPhotoCount,
         limitNodeSearch,
+        rowConstraints,
         instrumentation,
     }: {
         photos: Array<Photo>;
@@ -59,6 +59,7 @@ const makeGetNeighbors =
         targetRowHeight: number;
         minPhotoCount?: number;
         limitNodeSearch: number;
+        rowConstraints?: RowConstraints;
         instrumentation?: Instrumentation;
     }) =>
     (node: string) => {
@@ -66,9 +67,10 @@ const makeGetNeighbors =
         const results: { [key: string]: number } = {};
         const start = +node;
         results[+start] = 0;
-        const startOffset = minPhotoCount ? minPhotoCount : 1;
+        const startOffset = rowConstraints?.minPhotos ?? 1;
+        const endOffset = Math.min(limitNodeSearch, rowConstraints?.maxPhotos ?? Infinity);
         for (let i = start + startOffset; i < photos.length + 1; i += 1) {
-            if (i - start > limitNodeSearch && !instrumentation?.fullGraphSearch) break;
+            if (i - start > endOffset && !instrumentation?.fullGraphSearch) break;
             const currentCost = cost(photos, start, i, containerWidth, targetRowHeight, spacing, padding);
             if (currentCost === undefined) break;
             results[i.toString()] = currentCost;
@@ -87,7 +89,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
     layoutOptions: RowsLayoutOptions;
     instrumentation?: Instrumentation;
 }): RowsLayoutModel<T> => {
-    const { spacing, padding, containerWidth, targetRowHeight, minPhotoCount, maxPhotoCount } = layoutOptions;
+    const { spacing, padding, containerWidth, targetRowHeight, rowConstraints } = layoutOptions;
 
     instrumentation?.onStartLayoutComputation?.();
 
@@ -97,8 +99,8 @@ const computeRowsLayout = <T extends Photo = Photo>({
         photos,
         layoutOptions,
         targetRowHeight,
-        minPhotoCount,
-        limitNodeSearch: maxPhotoCount && maxPhotoCount < limitNodeSearch ? maxPhotoCount : limitNodeSearch,
+        limitNodeSearch,
+        rowConstraints,
         instrumentation,
     });
 

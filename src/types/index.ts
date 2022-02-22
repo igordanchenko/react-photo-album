@@ -82,12 +82,10 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     spacing?: ResponsiveParameter;
     /** Padding around each image in the photo album. */
     padding?: ResponsiveParameter;
-    /** min photos in a row in 'rows' layout */
-    minPhotoCount?: number;
-    /** max photos in a row in 'rows' layout */
-    maxPhotoCount?: number;
     /** Target row height in the 'rows' layout. */
     targetRowHeight?: ResponsiveParameter;
+    /** Additional row constraints */
+    rowConstraints?: RowConstraints;
     /** Photo album width at various viewport sizes. */
     sizes?: ResponsiveSizes;
     /** Photo click callback function. */
@@ -132,10 +130,8 @@ export type RowsLayoutOptions = GenericLayoutOptions & {
     layout: Extract<LayoutType, "rows">;
     /** target row height in 'rows' layout */
     targetRowHeight: number;
-    /** min photos in a row in 'rows' layout */
-    minPhotoCount?: number;
-    /** max photos in a row in 'rows' layout */
-    maxPhotoCount?: number;
+    /** Additional row constraints */
+    rowConstraints?: RowConstraints;
 };
 
 export type ColumnsLayoutOptions = GenericLayoutOptions & {
@@ -190,6 +186,13 @@ export type RenderColumnContainer = (props: PropsWithChildren<ColumnContainerPro
 export type ResizeObserverProvider = (
     callback: (entries: ResizeObserverEntry[], observer: ResizeObserver) => void
 ) => ResizeObserver;
+
+export type RowConstraints = {
+    /** minimum number of photos in a row in 'rows' layout */
+    minPhotos?: number;
+    /** maximum number of photos in a row in 'rows' layout */
+    maxPhotos?: number;
+};
 
 /** internal instrumentation for research and performance testing purposes, subject to change without notice */
 export type Instrumentation = {

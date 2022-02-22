@@ -14,9 +14,8 @@ const resolveLayoutOptions = <T extends Photo>({
     onClick,
     viewportWidth,
     containerWidth,
-    minPhotoCount,
-    maxPhotoCount,
     targetRowHeight,
+    rowConstraints,
     columns,
     spacing,
     padding,
@@ -38,9 +37,8 @@ const resolveLayoutOptions = <T extends Photo>({
         (w) => w / 3,
         (w) => w / 2,
     ]),
-    minPhotoCount,
-    maxPhotoCount,
     sizes,
+    rowConstraints,
 });
 
 const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
