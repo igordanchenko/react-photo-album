@@ -55,6 +55,14 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} padding={10} />);
     });
 
+    it("supports minimum number of elements in a row", () => {
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} rowConstraints={{ minPhotos: 3 }} />);
+    });
+
+    it("supports maximum number of elements in a row", () => {
+        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} rowConstraints={{ maxPhotos: 4 }} />);
+    });
+
     it("renders columns layout correctly when there isn't enough photos", () => {
         whenAskedToRender(<PhotoAlbum layout={"columns"} photos={photos.slice(0, 3)} columns={5} />);
     });
