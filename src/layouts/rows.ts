@@ -57,7 +57,6 @@ const makeGetNeighbors =
         photos: Array<Photo>;
         layoutOptions: RowsLayoutOptions;
         targetRowHeight: number;
-        minPhotoCount?: number;
         limitNodeSearch: number;
         rowConstraints?: RowConstraints;
         instrumentation?: Instrumentation;
