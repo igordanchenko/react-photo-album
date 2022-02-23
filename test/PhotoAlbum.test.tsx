@@ -2,7 +2,7 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import { act, render, screen } from "@testing-library/react";
 
-import { LayoutType, Photo, PhotoAlbum, PhotoAlbumProps, RenderPhoto } from "../src";
+import { LayoutType, Photo, PhotoAlbum, PhotoAlbumProps, RenderContainerProps, RenderPhoto } from "../src";
 import photos from "./photos";
 
 const whenAskedToRender = (Component: JSX.Element) => {
@@ -184,6 +184,18 @@ describe("PhotoAlbum", () => {
                         {children}
                     </div>
                 ))}
+            />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                renderContainer={({ children, containerRef }: RenderContainerProps) => (
+                    <div ref={containerRef} className="custom-class">
+                        {children}
+                    </div>
+                )}
             />
         );
     });

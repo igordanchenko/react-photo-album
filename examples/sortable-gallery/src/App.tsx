@@ -125,6 +125,15 @@ const App = () => {
         }
     }, []);
 
+    const renderPhoto = useCallback(
+        (props) => {
+            // capture rendered photos for future use in DragOverlay
+            renderedPhotos.current[props.photo.id] = props;
+            return <SortablePhotoFrame activeIndex={activeIndex} {...props} />;
+        },
+        [activeIndex]
+    );
+
     return (
         <DndContext
             sensors={sensors}
@@ -134,17 +143,7 @@ const App = () => {
         >
             <SortableContext items={photos}>
                 <div style={{ margin: 30 }}>
-                    <PhotoAlbum
-                        photos={photos}
-                        layout="rows"
-                        spacing={30}
-                        padding={20}
-                        renderPhoto={(props) => {
-                            // capture rendered photos for future use in DragOverlay
-                            renderedPhotos.current[props.photo.id] = props;
-                            return <SortablePhotoFrame activeIndex={activeIndex} {...props} />;
-                        }}
-                    />
+                    <PhotoAlbum photos={photos} layout="rows" spacing={30} padding={20} renderPhoto={renderPhoto} />
                 </div>
             </SortableContext>
             <DragOverlay>{activeId && <PhotoFrame overlay {...renderedPhotos.current[activeId]} />}</DragOverlay>

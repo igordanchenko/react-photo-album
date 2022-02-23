@@ -56,13 +56,13 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     } = props;
 
     const mounted = useMounted();
-    const { ref, width } = useContainerWidth(resizeObserverProvider, breakpoints);
+    const { containerRef, containerWidth } = useContainerWidth(resizeObserverProvider, breakpoints);
 
     // safeguard against incorrect usage
     if (!layout || !Array.isArray(photos)) return <></>;
 
     const layoutOptions = resolveLayoutOptions({
-        containerWidth: (mounted && width) || defaultContainerWidth || 800,
+        containerWidth: (mounted && containerWidth) || defaultContainerWidth || 800,
         viewportWidth: (mounted && window.innerWidth) || undefined,
         ...props,
     });
@@ -70,7 +70,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     const commonLayoutProps = { photos, renderPhoto, instrumentation };
 
     return (
-        <ContainerRenderer ref={ref} layoutOptions={layoutOptions} renderContainer={renderContainer}>
+        <ContainerRenderer containerRef={containerRef} layoutOptions={layoutOptions} renderContainer={renderContainer}>
             {layout === "rows" ? (
                 <RowsLayout
                     layoutOptions={layoutOptions as RowsLayoutOptions}

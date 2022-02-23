@@ -3,7 +3,7 @@ import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
 
 import { RenderRowContainer, RowContainerProps } from "../../types";
 
-const RowContainer: RenderRowContainer = ({ rowContainerProps, children }) => (
+const defaultRenderRowContainer: RenderRowContainer = ({ rowContainerProps, children }) => (
     <div {...rowContainerProps}>{children}</div>
 );
 
@@ -35,19 +35,14 @@ const RowContainerRenderer = ({
         } as CSSProperties,
     };
 
-    const Component = renderRowContainer || RowContainer;
-
-    return (
-        <Component
-            layoutOptions={layoutOptions}
-            rowIndex={rowIndex}
-            rowsCount={rowsCount}
-            rowContainerProps={rowContainerProps}
-            {...rest}
-        >
-            {children}
-        </Component>
-    );
+    return (renderRowContainer ?? defaultRenderRowContainer)({
+        layoutOptions,
+        rowIndex,
+        rowsCount,
+        rowContainerProps,
+        children,
+        ...rest,
+    });
 };
 
 export default RowContainerRenderer;

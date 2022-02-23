@@ -4,8 +4,9 @@ import {
     ImgHTMLAttributes,
     MouseEvent,
     PropsWithChildren,
-    PropsWithoutRef,
+    ReactElement,
     RefAttributes,
+    RefCallback,
 } from "react";
 
 export type LayoutType = "columns" | "rows" | "masonry";
@@ -108,7 +109,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     instrumentation?: Instrumentation;
 };
 
-export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => JSX.Element;
+export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => ReactElement;
 
 export type GenericLayoutOptions = {
     /** layout spacing (gaps between photos) */
@@ -150,9 +151,12 @@ export type ContainerProps = {
     containerProps: HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderContainer = ForwardRefExoticComponent<
-    PropsWithoutRef<PropsWithChildren<ContainerProps>> & RefAttributes<HTMLDivElement>
->;
+export type RenderContainerProps = PropsWithChildren<ContainerProps> & { containerRef?: RefCallback<HTMLDivElement> };
+
+/** ForwardRefExoticComponent (forwardRef) variant is deprecated and will be removed in the next major release */
+export type RenderContainer =
+    | ((props: RenderContainerProps) => ReactElement)
+    | ForwardRefExoticComponent<PropsWithChildren<ContainerProps> & RefAttributes<HTMLDivElement>>;
 
 export type RowContainerProps = {
     /** layout options */
@@ -165,7 +169,7 @@ export type RowContainerProps = {
     rowContainerProps: HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderRowContainer = (props: PropsWithChildren<RowContainerProps>) => JSX.Element;
+export type RenderRowContainer = (props: PropsWithChildren<RowContainerProps>) => ReactElement;
 
 export type ColumnContainerProps = {
     layoutOptions: ColumnsLayoutOptions;
@@ -181,7 +185,7 @@ export type ColumnContainerProps = {
     columnContainerProps: HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderColumnContainer = (props: PropsWithChildren<ColumnContainerProps>) => JSX.Element;
+export type RenderColumnContainer = (props: PropsWithChildren<ColumnContainerProps>) => ReactElement;
 
 export type ResizeObserverProvider = (
     callback: (entries: ResizeObserverEntry[], observer: ResizeObserver) => void

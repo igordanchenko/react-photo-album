@@ -52,7 +52,7 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
     return { srcSet, sizes };
 };
 
-const DefaultPhotoRenderer: RenderPhoto = ({ imageProps }) => {
+const defaultRenderPhoto: RenderPhoto = ({ imageProps }) => {
     const { src, alt, srcSet, sizes, ...rest } = imageProps;
     return <img src={src} alt={alt} {...(srcSet ? { srcSet, sizes } : null)} {...rest} />;
 };
@@ -98,9 +98,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         ...srcSetAndSizes(photo, layout, layoutOptions),
     };
 
-    const Component = renderPhoto || DefaultPhotoRenderer;
-
-    return <Component photo={photo} layoutOptions={layoutOptions} layout={layout} imageProps={imageProps} />;
+    return (renderPhoto ?? defaultRenderPhoto)({ photo, layout, layoutOptions, imageProps });
 };
 
 export default PhotoRenderer;
