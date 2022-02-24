@@ -174,6 +174,7 @@ describe("PhotoAlbum", () => {
     });
 
     it("allows rendering custom container", () => {
+        // deprecated legacy variant, remove in the next major release
         whenAskedToRender(
             <PhotoAlbum
                 layout={"rows"}
@@ -352,12 +353,11 @@ describe("PhotoAlbum", () => {
             <PhotoAlbum
                 layout={"rows"}
                 photos={photos}
-                // eslint-disable-next-line react/display-name
-                renderContainer={React.forwardRef((props, ref) => (
-                    <div ref={ref} key={1}>
-                        {props.children}
+                renderContainer={({ children, containerRef }: RenderContainerProps) => (
+                    <div ref={containerRef} key={1}>
+                        {children}
                     </div>
-                ))}
+                )}
                 resizeObserverProvider={resizeObserverProvider}
             />
         );
@@ -372,12 +372,11 @@ describe("PhotoAlbum", () => {
             <PhotoAlbum
                 layout={"rows"}
                 photos={photos}
-                // eslint-disable-next-line react/display-name
-                renderContainer={React.forwardRef((props, ref) => (
-                    <div ref={ref} key={2}>
-                        {props.children}
+                renderContainer={({ children, containerRef }: RenderContainerProps) => (
+                    <div ref={containerRef} key={2}>
+                        {children}
                     </div>
-                ))}
+                )}
                 resizeObserverProvider={resizeObserverProvider}
             />
         );
