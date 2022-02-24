@@ -1,9 +1,8 @@
-import { forwardRef } from "react";
-import { PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
+import { PhotoAlbum, RenderContainerProps, RenderPhoto, RenderRowContainer } from "react-photo-album";
 
 import photos from "./photos";
 
-const CustomContainer: RenderContainer = forwardRef(({ containerProps, children }, ref) => (
+const renderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
     <div
         style={{
             border: "2px solid #eee",
@@ -11,17 +10,16 @@ const CustomContainer: RenderContainer = forwardRef(({ containerProps, children 
             padding: "20px",
         }}
     >
-        <div ref={ref} {...containerProps}>
+        <div ref={containerRef} {...containerProps}>
             {children}
         </div>
     </div>
-));
-CustomContainer.displayName = "CustomContainer";
+);
 
-const CustomRowContainer: RenderRowContainer = (props) => (
+const renderRowContainer: RenderRowContainer = ({ rowContainerProps, rowIndex, rowsCount, children }) => (
     <>
-        <div {...props.rowContainerProps}>{props.children}</div>
-        {props.rowIndex < props.rowsCount - 1 && (
+        <div {...rowContainerProps}>{children}</div>
+        {rowIndex < rowsCount - 1 && (
             <div
                 style={{
                     borderTop: "2px solid #eee",
@@ -32,7 +30,7 @@ const CustomRowContainer: RenderRowContainer = (props) => (
     </>
 );
 
-const CustomPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => (
+const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => (
     <div
         style={{
             border: "2px solid #eee",
@@ -59,19 +57,17 @@ const CustomPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, st
     </div>
 );
 
-const CustomRenderers = () => (
+const App = () => (
     <PhotoAlbum
         layout="rows"
         photos={photos}
         spacing={20}
         padding={20}
         targetRowHeight={200}
-        renderContainer={CustomContainer}
-        renderRowContainer={CustomRowContainer}
-        renderPhoto={CustomPhoto}
+        renderContainer={renderContainer}
+        renderRowContainer={renderRowContainer}
+        renderPhoto={renderPhoto}
     />
 );
-
-const App = () => <CustomRenderers />;
 
 export default App;
