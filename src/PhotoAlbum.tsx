@@ -4,8 +4,8 @@ import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
-import useMounted from "./hooks/mounted";
-import useContainerWidth from "./hooks/containerWidth";
+import useMounted from "./hooks/useMounted";
+import useContainerWidth from "./hooks/useContainerWidth";
 import resolveResponsiveParameter from "./utils/responsive";
 import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
 

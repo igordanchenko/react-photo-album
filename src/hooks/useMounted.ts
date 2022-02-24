@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useLayoutEffect from "./layoutEffect";
+import useLayoutEffect from "./useLayoutEffect";
 
 const useMounted = () => {
     const [mounted, setMounted] = useState(false);
