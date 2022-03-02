@@ -39,8 +39,3 @@ header a:hover {
 header p {
     flex: 0 0 100%;
 }
-
-main {
-    margin: 8px;
-    padding: 0;
-}

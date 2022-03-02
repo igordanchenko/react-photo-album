@@ -37,6 +37,24 @@ header a:hover {
 }
 
 main {
-    margin: 8px;
+    margin: 5px;
     padding: 0;
+}
+
+@media all and (min-width: 300px) {
+    main {
+        margin: 10px;
+    }
+}
+
+@media all and (min-width: 600px) {
+    main {
+        margin: 15px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    main {
+        margin: 20px;
+    }
 }
