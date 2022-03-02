@@ -7,15 +7,17 @@
     "types": "dist/index.d.ts",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
-    "browser": "dist/index.umd.js",
+    "unpkg": "dist/index.umd.js",
+    "jsdelivr": "dist/index.umd.js",
+    "umd:main": "dist/index.umd.js",
     "files": [
         "dist"
     ],
     "exports": {
         "types": "./dist/index.d.ts",
         "node": "./dist/index.cjs.js",
-        "browser": "./dist/index.umd.js",
         "import": "./dist/index.esm.js",
+        "require": "./dist/index.cjs.js",
         "default": "./dist/index.cjs.js"
     },
     "sideEffects": false,
