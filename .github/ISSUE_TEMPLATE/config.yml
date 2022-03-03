@@ -3,3 +3,6 @@ contact_links:
     -   name: Question
         url: https://github.com/igordanchenko/react-photo-album/discussions/categories/q-a
         about: Please post questions under the Q&A category in Discussions
+    -   name: Suggestion
+        url: https://github.com/igordanchenko/react-photo-album/discussions/categories/ideas
+        about: Please post suggestions or ideas under the Ideas category in Discussions
