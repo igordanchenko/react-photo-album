@@ -6,3 +6,6 @@ contact_links:
     -   name: Suggestion
         url: https://github.com/igordanchenko/react-photo-album/discussions/categories/ideas
         about: Please post suggestions or ideas under the Ideas category in Discussions
+    -   name: General
+        url: https://github.com/igordanchenko/react-photo-album/discussions/categories/general
+        about: Please post general discussions under the General category in Discussions
