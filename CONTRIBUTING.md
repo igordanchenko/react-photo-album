@@ -9,7 +9,13 @@ React Photo Album has adopted the [Contributor Covenant](https://www.contributor
 and we expect project participants to adhere to it. Please read [the full text](/CODE_OF_CONDUCT.md) so that you can
 understand what actions will and will not be tolerated.
 
-## Sending a Pull Request
+## Submit an Issue
+
+Before you commit your time to code a new feature or a bug fix, be sure to open a feature request or a bug report under
+the project [Issues](https://github.com/igordanchenko/react-photo-album/issues) to be sure your PR will be accepted once
+done.
+
+## Send a Pull Request
 
 1. Fork the repository.
 
