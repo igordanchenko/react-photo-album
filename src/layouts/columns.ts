@@ -55,7 +55,7 @@ const buildColumnsModel = <T extends Photo = Photo>({
     const totalRatio = columnsRatios.reduce((acc, ratio) => acc + ratio, 0);
 
     for (let i = 0; i < path.length - 1; i += 1) {
-        const column = photos.slice(path[i], path[i + 1]);
+        const column = photos.map((photo, index) => ({ photo, index })).slice(path[i], path[i + 1]);
 
         const totalAdjustedGaps = columnsRatios.reduce(
             (acc, ratio, index) => acc + (columnsGaps[i] - columnsGaps[index]) * ratio,
@@ -68,11 +68,12 @@ const buildColumnsModel = <T extends Photo = Photo>({
             totalRatio;
 
         columnsModel.push(
-            column.map((photo, photoIndex) => ({
+            column.map(({ photo, index }, photoIndex) => ({
                 photo,
                 layout: {
                     width: columnWidth,
                     height: columnWidth / ratio(photo),
+                    index,
                     photoIndex,
                     photosCount: column.length,
                 },

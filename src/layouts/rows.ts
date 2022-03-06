@@ -111,15 +111,21 @@ const computeRowsLayout = <T extends Photo = Photo>({
     const result = [];
 
     for (let i = 1; i < path.length; i += 1) {
-        const row = photos.slice(+path[i - 1], +path[i]);
-        const height = getCommonHeight(row, containerWidth, spacing, padding);
+        const row = photos.map((photo, index) => ({ photo, index })).slice(+path[i - 1], +path[i]);
+        const height = getCommonHeight(
+            row.map(({ photo }) => photo),
+            containerWidth,
+            spacing,
+            padding
+        );
         result.push(
-            row.map((photo, index) => ({
+            row.map(({ photo, index }, photoIndex) => ({
                 photo,
                 layout: {
                     height,
                     width: height * ratio(photo),
-                    photoIndex: index,
+                    index,
+                    photoIndex,
                     photosCount: row.length,
                 },
             }))

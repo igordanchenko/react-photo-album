@@ -316,6 +316,23 @@ describe("PhotoAlbum", () => {
         render(<PhotoAlbum layout={"rows"} photos={photos} breakpoints={[300, 600, 1200]} />).unmount();
     });
 
+    it("provides layout.index prop", () => {
+        (["rows", "columns", "masonry"] as LayoutType[]).forEach((layout) => {
+            const indexes: string[] = [];
+            whenAskedToRender(
+                <PhotoAlbum
+                    layout={layout}
+                    photos={photos}
+                    renderPhoto={({ imageProps: { src, alt, ...restImageProps }, layout: { index } }) => {
+                        indexes[index] = src;
+                        return <img src={src} alt={alt} data-index={index} {...restImageProps} />;
+                    }}
+                />
+            );
+            expect(indexes).toStrictEqual(photos.map((photo) => photo.src));
+        });
+    });
+
     it("supports global ResizeObserver", () => {
         const resizeObserverRef = global.ResizeObserver;
         try {
