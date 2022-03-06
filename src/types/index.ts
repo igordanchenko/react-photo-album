@@ -97,6 +97,8 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     breakpoints?: number[];
     /** Default container width to be used in the server-side render. */
     defaultContainerWidth?: number;
+    /** Additional HTML attributes to be passed to the rendered elements */
+    componentsProps?: ComponentsProps;
     /** Custom photo rendering function. */
     renderPhoto?: RenderPhoto<T>;
     /** Custom container rendering function. */
@@ -145,6 +147,17 @@ export type ColumnsLayoutOptions = GenericLayoutOptions & {
 };
 
 export type LayoutOptions = ColumnsLayoutOptions | RowsLayoutOptions;
+
+export type ComponentsProps = {
+    /** Additional HTML attributes to be passed to the outer container `div` element */
+    containerProps?: HTMLAttributes<HTMLDivElement>;
+    /** Additional HTML attributes to be passed to the row container `div` element */
+    rowContainerProps?: HTMLAttributes<HTMLDivElement>;
+    /** Additional HTML attributes to be passed to the column container `div` element */
+    columnContainerProps?: HTMLAttributes<HTMLDivElement>;
+    /** Additional HTML attributes to be passed to the photo `img` element */
+    imageProps?: HTMLAttributes<HTMLImageElement>;
+};
 
 export type ContainerProps = {
     /** layout options */

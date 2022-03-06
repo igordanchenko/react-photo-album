@@ -51,6 +51,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         renderColumnContainer,
         defaultContainerWidth,
         resizeObserverProvider,
+        componentsProps,
         breakpoints,
         instrumentation,
     } = props;
@@ -67,10 +68,15 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         ...props,
     });
 
-    const commonLayoutProps = { photos, renderPhoto, instrumentation };
+    const commonLayoutProps = { photos, renderPhoto, componentsProps, instrumentation };
 
     return (
-        <ContainerRenderer containerRef={containerRef} layoutOptions={layoutOptions} renderContainer={renderContainer}>
+        <ContainerRenderer
+            containerRef={containerRef}
+            layoutOptions={layoutOptions}
+            renderContainer={renderContainer}
+            containerProps={componentsProps?.containerProps}
+        >
             {layout === "rows" ? (
                 <RowsLayout
                     layoutOptions={layoutOptions as RowsLayoutOptions}

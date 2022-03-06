@@ -1,8 +1,8 @@
 import * as React from "react";
-import { CSSProperties, MouseEvent } from "react";
+import { CSSProperties, HTMLAttributes, MouseEvent } from "react";
 
 import round from "../../utils/round";
-import { LayoutOptions, Photo, PhotoLayout, RenderPhoto } from "../../types";
+import { LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../../types";
 
 const calcWidth = (
     base: string,
@@ -57,18 +57,15 @@ const defaultRenderPhoto: RenderPhoto = ({ imageProps }) => {
     return <img src={src} alt={alt} {...(srcSet ? { srcSet, sizes } : null)} {...rest} />;
 };
 
-type PhotoRendererProps<T extends Photo = Photo> = {
-    photo: T;
-    layout: PhotoLayout;
-    layoutOptions: LayoutOptions;
-    renderPhoto?: RenderPhoto<T>;
-};
+type PhotoRendererProps<T extends Photo = Photo> = Omit<PhotoProps<T>, "imageProps"> & {
+    imageProps?: HTMLAttributes<HTMLImageElement>;
+} & { renderPhoto?: RenderPhoto<T> };
 
 const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) => {
-    const { photo, layout, layoutOptions, renderPhoto } = props;
+    const { photo, layout, layoutOptions, imageProps: { style, ...restImageProps } = {}, renderPhoto } = props;
     const { onClick } = layoutOptions;
 
-    const style = {
+    const imageStyle = {
         display: "block",
         boxSizing: "content-box",
         width: cssWidth(layout, layoutOptions),
@@ -80,6 +77,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
             ? { marginBottom: `${layoutOptions.spacing}px` }
             : null),
         ...(onClick ? { cursor: "pointer" } : null),
+        ...style,
     } as CSSProperties;
 
     const handleClick = onClick
@@ -93,9 +91,10 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         alt: photo.alt ?? "",
         title: photo.title,
         onClick: handleClick,
-        style,
+        style: imageStyle,
         className: "react-photo-album--photo",
         ...srcSetAndSizes(photo, layout, layoutOptions),
+        ...restImageProps,
     };
 
     return (renderPhoto ?? defaultRenderPhoto)({ photo, layout, layoutOptions, imageProps });

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
+import { CSSProperties, PropsWithChildren } from "react";
 
 import { RenderRowContainer, RowContainerProps } from "../../types";
 
@@ -7,22 +7,22 @@ const defaultRenderRowContainer: RenderRowContainer = ({ rowContainerProps, chil
     <div {...rowContainerProps}>{children}</div>
 );
 
-type RowContainerRendererProps = PropsWithoutRef<
-    PropsWithChildren<
-        Omit<RowContainerProps, "rowContainerProps"> & {
-            renderRowContainer?: RenderRowContainer;
-        }
-    >
->;
+type RowContainerRendererProps = PropsWithChildren<
+    Omit<RowContainerProps, "rowContainerProps"> & Pick<Partial<RowContainerProps>, "rowContainerProps">
+> & {
+    renderRowContainer?: RenderRowContainer;
+};
 
-const RowContainerRenderer = ({
-    layoutOptions,
-    rowIndex,
-    rowsCount,
-    renderRowContainer,
-    children,
-    ...rest
-}: RowContainerRendererProps) => {
+const RowContainerRenderer = (props: RowContainerRendererProps) => {
+    const {
+        layoutOptions,
+        rowIndex,
+        rowsCount,
+        renderRowContainer,
+        rowContainerProps: { style, ...restRowContainerProps } = {},
+        children,
+    } = props;
+
     const rowContainerProps = {
         className: "react-photo-album--row",
         style: {
@@ -32,7 +32,9 @@ const RowContainerRenderer = ({
             alignItems: "flex-start",
             justifyContent: "space-between",
             ...(rowIndex < rowsCount - 1 ? { marginBottom: `${layoutOptions.spacing}px` } : null),
+            ...style,
         } as CSSProperties,
+        ...restRowContainerProps,
     };
 
     return (renderRowContainer ?? defaultRenderRowContainer)({
@@ -41,7 +43,6 @@ const RowContainerRenderer = ({
         rowsCount,
         rowContainerProps,
         children,
-        ...rest,
     });
 };
 

@@ -333,6 +333,44 @@ describe("PhotoAlbum", () => {
         });
     });
 
+    it("supports components props", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                componentsProps={{
+                    containerProps: { style: { margin: "10px" } },
+                    rowContainerProps: { style: { backgroundColor: "green" } },
+                    imageProps: { style: { cursor: "zoom-in" } },
+                }}
+            />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"columns"}
+                photos={photos}
+                componentsProps={{
+                    containerProps: { style: { margin: "15px" } },
+                    columnContainerProps: { style: { backgroundColor: "blue" } },
+                    imageProps: { style: { cursor: "zoom-out" } },
+                }}
+            />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"masonry"}
+                photos={photos}
+                componentsProps={{
+                    containerProps: { style: { margin: "20px" } },
+                    columnContainerProps: { style: { backgroundColor: "red" } },
+                    imageProps: { style: { cursor: "grabbing" } },
+                }}
+            />
+        );
+    });
+
     it("supports global ResizeObserver", () => {
         const resizeObserverRef = global.ResizeObserver;
         try {
