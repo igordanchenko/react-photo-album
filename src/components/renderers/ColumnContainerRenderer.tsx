@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CSSProperties, PropsWithChildren, PropsWithoutRef } from "react";
+import { CSSProperties, PropsWithChildren } from "react";
 
 import round from "../../utils/round";
 import { ColumnContainerProps, RenderColumnContainer } from "../../types";
@@ -28,14 +28,20 @@ const cssWidth = (props: ColumnContainerRendererProps) => {
     )}px) * ${round(columnsRatios[columnIndex] / totalRatio, 5)} + ${2 * padding}px)`;
 };
 
-type ColumnContainerRendererProps = PropsWithoutRef<
-    PropsWithChildren<
-        Omit<ColumnContainerProps, "columnContainerProps"> & { renderColumnContainer?: RenderColumnContainer }
-    >
->;
+type ColumnContainerRendererProps = PropsWithChildren<
+    Omit<ColumnContainerProps, "columnContainerProps"> & Pick<Partial<ColumnContainerProps>, "columnContainerProps">
+> & {
+    renderColumnContainer?: RenderColumnContainer;
+};
 
 const ColumnContainerRenderer = (props: ColumnContainerRendererProps) => {
-    const { layoutOptions, renderColumnContainer, children, ...rest } = props;
+    const {
+        layoutOptions,
+        renderColumnContainer,
+        children,
+        columnContainerProps: { style, ...restColumnContainerProps } = {},
+        ...rest
+    } = props;
 
     const columnContainerProps = {
         className: "react-photo-album--column",
@@ -46,7 +52,9 @@ const ColumnContainerRenderer = (props: ColumnContainerRendererProps) => {
             alignItems: "flex-start",
             width: cssWidth(props),
             justifyContent: layoutOptions.layout === "columns" ? "space-between" : "flex-start",
+            ...style,
         } as CSSProperties,
+        ...restColumnContainerProps,
     };
 
     return (renderColumnContainer ?? defaultRenderColumnContainer)({

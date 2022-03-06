@@ -9,33 +9,29 @@ const defaultRenderContainer = ({ containerProps, children, containerRef }: Rend
     </div>
 );
 
-type ContainerRendererProps = Omit<RenderContainerProps, "containerProps"> & { renderContainer?: RenderContainer };
+type ContainerRendererProps = Omit<RenderContainerProps, "containerProps"> &
+    Pick<Partial<RenderContainerProps>, "containerProps"> & { renderContainer?: RenderContainer };
 
-const ContainerRenderer = ({
-    layoutOptions,
-    renderContainer,
-    children,
-    containerRef,
-    ...rest
-}: ContainerRendererProps) => {
+const ContainerRenderer = (props: ContainerRendererProps) => {
+    const {
+        layoutOptions,
+        renderContainer,
+        children,
+        containerRef,
+        containerProps: { style, ...restContainerProps } = {},
+    } = props;
     const { layout } = layoutOptions;
 
     const containerProps = {
         className: `react-photo-album react-photo-album--${layout}`,
-        style:
-            layout === "rows"
-                ? ({
-                      display: "flex",
-                      flexDirection: "column",
-                      flexWrap: "nowrap",
-                      justifyContent: "space-between",
-                  } as CSSProperties)
-                : ({
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "nowrap",
-                      justifyContent: "space-between",
-                  } as CSSProperties),
+        style: {
+            display: "flex",
+            flexWrap: "nowrap",
+            justifyContent: "space-between",
+            flexDirection: layout === "rows" ? "column" : "row",
+            ...style,
+        } as CSSProperties,
+        ...restContainerProps,
     };
 
     // we are dealing with deprecated exotic component returned by forwardRef
@@ -45,7 +41,7 @@ const ContainerRenderer = ({
         >;
 
         return (
-            <Component ref={containerRef} layoutOptions={layoutOptions} containerProps={containerProps} {...rest}>
+            <Component ref={containerRef} layoutOptions={layoutOptions} containerProps={containerProps}>
                 {children}
             </Component>
         );
@@ -56,7 +52,6 @@ const ContainerRenderer = ({
         containerRef,
         layoutOptions,
         children,
-        ...rest,
     });
 };
 

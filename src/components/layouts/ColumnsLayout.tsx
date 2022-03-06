@@ -3,18 +3,26 @@ import * as React from "react";
 import computeColumnsLayout from "../../layouts/columns";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";
-import { ColumnsLayoutOptions, Instrumentation, Photo, RenderColumnContainer, RenderPhoto } from "../../types";
+import {
+    ColumnsLayoutOptions,
+    ComponentsProps,
+    Instrumentation,
+    Photo,
+    RenderColumnContainer,
+    RenderPhoto,
+} from "../../types";
 
 type ColumnsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions;
     renderPhoto?: RenderPhoto<T>;
     renderColumnContainer?: RenderColumnContainer;
+    componentsProps?: ComponentsProps;
     instrumentation?: Instrumentation;
 };
 
 const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>): JSX.Element => {
-    const { photos, layoutOptions, renderPhoto, renderColumnContainer, instrumentation } = props;
+    const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps, instrumentation } = props;
 
     const columnsLayout = computeColumnsLayout({ photos, layoutOptions, instrumentation });
 
@@ -33,6 +41,7 @@ const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>): J
                     columnsGaps={columnsGaps}
                     columnsRatios={columnsRatios}
                     renderColumnContainer={renderColumnContainer}
+                    columnContainerProps={componentsProps?.columnContainerProps}
                 >
                     {column.map(({ photo, layout }) => (
                         <PhotoRenderer
@@ -41,6 +50,7 @@ const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>): J
                             layout={layout}
                             layoutOptions={layoutOptions}
                             renderPhoto={renderPhoto}
+                            imageProps={componentsProps?.imageProps}
                         />
                     ))}
                 </ColumnContainerRenderer>

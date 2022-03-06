@@ -3,18 +3,26 @@ import * as React from "react";
 import computeRowsLayout from "../../layouts/rows";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import RowContainerRenderer from "../renderers/RowContainerRenderer";
-import { Instrumentation, Photo, RenderPhoto, RenderRowContainer, RowsLayoutOptions } from "../../types";
+import {
+    ComponentsProps,
+    Instrumentation,
+    Photo,
+    RenderPhoto,
+    RenderRowContainer,
+    RowsLayoutOptions,
+} from "../../types";
 
 type RowsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: RowsLayoutOptions;
     renderPhoto?: RenderPhoto<T>;
     renderRowContainer?: RenderRowContainer;
+    componentsProps?: ComponentsProps;
     instrumentation?: Instrumentation;
 };
 
 const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>): JSX.Element => {
-    const { photos, layoutOptions, renderPhoto, renderRowContainer, instrumentation } = props;
+    const { photos, layoutOptions, renderPhoto, renderRowContainer, componentsProps, instrumentation } = props;
 
     const rowsLayout = computeRowsLayout({ photos, layoutOptions, instrumentation });
 
@@ -29,6 +37,7 @@ const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>): JSX.Ele
                     rowIndex={rowIndex}
                     rowsCount={rowsLayout.length}
                     renderRowContainer={renderRowContainer}
+                    rowContainerProps={componentsProps?.rowContainerProps}
                 >
                     {row.map(({ photo, layout }) => (
                         <PhotoRenderer
@@ -37,6 +46,7 @@ const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>): JSX.Ele
                             layout={layout}
                             layoutOptions={layoutOptions}
                             renderPhoto={renderPhoto}
+                            imageProps={componentsProps?.imageProps}
                         />
                     ))}
                 </RowContainerRenderer>

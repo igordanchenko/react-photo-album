@@ -16832,6 +16832,1257 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
 </div>
 `;
 
+exports[`PhotoAlbum supports components props 1`] = `
+<div
+  className="react-photo-album react-photo-album--rows"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+      "margin": "10px",
+    }
+  }
+>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 3.64665)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 7.5738)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 3.36613)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        Object {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 3.37081)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 6.33334)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
+      style={
+        Object {
+          "aspectRatio": "1080 / 607",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.37305)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        Object {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.37696)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.46482)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/1azAjl8FTnU/1080x1549"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1549",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 5.30278)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.46482)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/twukN12EN7c/1080x694"
+      style={
+        Object {
+          "aspectRatio": "1080 / 694",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.39228)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/9UjEyzA6pP4/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 5.58429)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.48191)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1440",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 4.55556)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/q-motCAvPBM/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 5.125)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Xn4L310ztMU/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 2.5625)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 45px) / 5.125)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "marginBottom": "15px",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
+      style={
+        Object {
+          "aspectRatio": "1080 / 160",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 0px) / 1)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--row"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "green",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.6875)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/9CRd1J1rEOM/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 2.38889)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/xKhtkhc9HbQ/1080x1440"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1440",
+          "boxSizing": "content-box",
+          "cursor": "zoom-in",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 4.77778)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`PhotoAlbum supports components props 2`] = `
+<div
+  className="react-photo-album react-photo-album--columns"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+      "margin": "15px",
+    }
+  }
+>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "blue",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 41.779px) * 0.2434 + 0px)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        Object {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "blue",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 53.966px) * 0.27138 + 0px)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
+      style={
+        Object {
+          "aspectRatio": "1080 / 607",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        Object {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/1azAjl8FTnU/1080x1549"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1549",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/twukN12EN7c/1080x694"
+      style={
+        Object {
+          "aspectRatio": "1080 / 694",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "blue",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 29.591px) * 0.24615 + 0px)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/9UjEyzA6pP4/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1440",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/q-motCAvPBM/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "blue",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 53.966px) * 0.23907 + 0px)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Xn4L310ztMU/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
+      style={
+        Object {
+          "aspectRatio": "1080 / 160",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/9CRd1J1rEOM/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/xKhtkhc9HbQ/1080x1440"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1440",
+          "boxSizing": "content-box",
+          "cursor": "zoom-out",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`PhotoAlbum supports components props 3`] = `
+<div
+  className="react-photo-album react-photo-album--masonry"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+      "margin": "20px",
+    }
+  }
+>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "red",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        Object {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/1azAjl8FTnU/1080x1549"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1549",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/q-motCAvPBM/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/xKhtkhc9HbQ/1080x1440"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1440",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "red",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/9UjEyzA6pP4/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "red",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Xn4L310ztMU/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
+      style={
+        Object {
+          "aspectRatio": "1080 / 160",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
+      style={
+        Object {
+          "aspectRatio": "1080 / 810",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "backgroundColor": "red",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        Object {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Jztmx9yqjBw/1080x607"
+      style={
+        Object {
+          "aspectRatio": "1080 / 607",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/twukN12EN7c/1080x694"
+      style={
+        Object {
+          "aspectRatio": "1080 / 694",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1440",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "15px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/9CRd1J1rEOM/1080x720"
+      style={
+        Object {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "cursor": "grabbing",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
 exports[`PhotoAlbum supports custom photo attributes 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
