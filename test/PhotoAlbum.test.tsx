@@ -260,6 +260,12 @@ describe("PhotoAlbum", () => {
 
     it("doesn't crash when invoked with invalid required parameters", () => {
         whenAskedToRender(React.createElement(PhotoAlbum, { layout: "unknown" } as unknown as PhotoAlbumProps));
+        whenAskedToRender(
+            React.createElement(PhotoAlbum, {
+                layout: "unknown",
+                photos: [],
+            } as unknown as PhotoAlbumProps)
+        );
         whenAskedToRender(React.createElement(PhotoAlbum, { photos: 0 } as unknown as PhotoAlbumProps));
         whenAskedToRender(React.createElement(PhotoAlbum, { photos: null } as unknown as PhotoAlbumProps));
     });

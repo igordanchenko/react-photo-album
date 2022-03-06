@@ -60,7 +60,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
     const { containerRef, containerWidth } = useContainerWidth(resizeObserverProvider, breakpoints);
 
     // safeguard against incorrect usage
-    if (!layout || !Array.isArray(photos)) return <></>;
+    if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return <></>;
 
     const layoutOptions = resolveLayoutOptions({
         containerWidth: (mounted && containerWidth) || defaultContainerWidth || 800,

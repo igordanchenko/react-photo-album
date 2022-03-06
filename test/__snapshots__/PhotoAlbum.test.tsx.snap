@@ -1523,6 +1523,8 @@ exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 
 
 exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 3`] = `null`;
 
+exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 4`] = `null`;
+
 exports[`PhotoAlbum doesn't crash when invoked without required parameters 1`] = `null`;
 
 exports[`PhotoAlbum doesn't crash when invoked without required parameters 2`] = `null`;
