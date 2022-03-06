@@ -38,7 +38,7 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
     }
 
     // group photos by column
-    const columnsModel = photos.reduce<T[][]>((acc, photo: T) => {
+    const columnsModel = photos.reduce<{ photo: T; index: number }[][]>((acc, photo: T, index) => {
         // find the shortest column
         const shortestColumn = columnsCurrentTopPositions.reduce(
             (acc, item, i) =>
@@ -57,18 +57,19 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
         if (!acc[shortestColumn]) {
             acc[shortestColumn] = [];
         }
-        acc[shortestColumn].push(photo);
+        acc[shortestColumn].push({ photo, index });
 
         return acc;
     }, []);
 
     // map through each column and photo and add layout properties
     const result = columnsModel.map((column) =>
-        column.map((photo, photoIndex) => ({
+        column.map(({ photo, index }, photoIndex) => ({
             photo,
             layout: {
                 width: columnWidth,
                 height: columnWidth / ratio(photo),
+                index,
                 photoIndex,
                 photosCount: column.length,
             },

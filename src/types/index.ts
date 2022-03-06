@@ -54,6 +54,8 @@ export type PhotoLayout = {
     width: number;
     /** photo height */
     height: number;
+    /** photo index in the original `photos` array */
+    index: number;
     /** photo index in a given row/column */
     photoIndex: number;
     /** number of photos in a given row/column */
