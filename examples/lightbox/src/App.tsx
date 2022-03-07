@@ -14,8 +14,8 @@ const App = () => {
             <PhotoAlbum
                 photos={photos}
                 layout="rows"
-                onClick={(_, photo) => {
-                    setIndex(photos.findIndex((p) => p === photo));
+                onClick={(event, photo, index) => {
+                    setIndex(index);
                     setOpen(true);
                 }}
             />
