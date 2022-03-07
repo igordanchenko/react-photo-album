@@ -7,7 +7,7 @@ import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import useMounted from "./hooks/useMounted";
 import useContainerWidth from "./hooks/useContainerWidth";
 import resolveResponsiveParameter from "./utils/responsive";
-import { ColumnsLayoutOptions, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
+import { ColumnsLayoutOptions, ComponentsPropsParameter, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
 
 const resolveLayoutOptions = <T extends Photo>({
     layout,
@@ -41,6 +41,10 @@ const resolveLayoutOptions = <T extends Photo>({
     rowConstraints,
 });
 
+const resolveComponentsProps = (componentsProps: ComponentsPropsParameter | undefined, containerWidth: number) => {
+    return typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps;
+};
+
 const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
     const {
         photos,
@@ -51,7 +55,6 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         renderColumnContainer,
         defaultContainerWidth,
         resizeObserverProvider,
-        componentsProps,
         breakpoints,
         instrumentation,
     } = props;
@@ -67,6 +70,8 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         viewportWidth: (mounted && window.innerWidth) || undefined,
         ...props,
     });
+
+    const componentsProps = resolveComponentsProps(props.componentsProps, layoutOptions.containerWidth);
 
     const commonLayoutProps = { photos, renderPhoto, componentsProps, instrumentation };
 

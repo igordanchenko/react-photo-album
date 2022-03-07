@@ -375,6 +375,16 @@ describe("PhotoAlbum", () => {
                 }}
             />
         );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"masonry"}
+                photos={photos}
+                componentsProps={(containerWidth) => ({
+                    containerProps: { style: { margin: containerWidth < 400 ? "10px" : "20px" } },
+                })}
+            />
+        );
     });
 
     it("supports global ResizeObserver", () => {
