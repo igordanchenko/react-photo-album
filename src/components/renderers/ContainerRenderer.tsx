@@ -2,6 +2,7 @@ import * as React from "react";
 import { CSSProperties, ForwardRefExoticComponent, PropsWithChildren, RefAttributes } from "react";
 
 import { ContainerProps, RenderContainer, RenderContainerProps } from "../../types";
+import Optional from "../../types/Optional";
 
 const defaultRenderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
     <div ref={containerRef} {...containerProps}>
@@ -9,8 +10,7 @@ const defaultRenderContainer = ({ containerProps, children, containerRef }: Rend
     </div>
 );
 
-type ContainerRendererProps = Omit<RenderContainerProps, "containerProps"> &
-    Pick<Partial<RenderContainerProps>, "containerProps"> & { renderContainer?: RenderContainer };
+type ContainerRendererProps = Optional<RenderContainerProps, "containerProps"> & { renderContainer?: RenderContainer };
 
 const ContainerRenderer = (props: ContainerRendererProps) => {
     const {

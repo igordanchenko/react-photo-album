@@ -2,14 +2,13 @@ import * as React from "react";
 import { CSSProperties, PropsWithChildren } from "react";
 
 import { RenderRowContainer, RowContainerProps } from "../../types";
+import Optional from "../../types/Optional";
 
 const defaultRenderRowContainer: RenderRowContainer = ({ rowContainerProps, children }) => (
     <div {...rowContainerProps}>{children}</div>
 );
 
-type RowContainerRendererProps = PropsWithChildren<
-    Omit<RowContainerProps, "rowContainerProps"> & Pick<Partial<RowContainerProps>, "rowContainerProps">
-> & {
+type RowContainerRendererProps = PropsWithChildren<Optional<RowContainerProps, "rowContainerProps">> & {
     renderRowContainer?: RenderRowContainer;
 };
 

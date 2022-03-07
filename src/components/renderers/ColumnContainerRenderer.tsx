@@ -3,6 +3,7 @@ import { CSSProperties, PropsWithChildren } from "react";
 
 import round from "../../utils/round";
 import { ColumnContainerProps, RenderColumnContainer } from "../../types";
+import Optional from "../../types/Optional";
 
 const defaultRenderColumnContainer: RenderColumnContainer = ({ columnContainerProps, children }) => (
     <div {...columnContainerProps}>{children}</div>
@@ -28,9 +29,7 @@ const cssWidth = (props: ColumnContainerRendererProps) => {
     )}px) * ${round(columnsRatios[columnIndex] / totalRatio, 5)} + ${2 * padding}px)`;
 };
 
-type ColumnContainerRendererProps = PropsWithChildren<
-    Omit<ColumnContainerProps, "columnContainerProps"> & Pick<Partial<ColumnContainerProps>, "columnContainerProps">
-> & {
+type ColumnContainerRendererProps = PropsWithChildren<Optional<ColumnContainerProps, "columnContainerProps">> & {
     renderColumnContainer?: RenderColumnContainer;
 };
 
