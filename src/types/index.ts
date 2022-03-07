@@ -11,7 +11,7 @@ import {
 
 export type LayoutType = "columns" | "rows" | "masonry";
 
-export type ClickHandler = (event: MouseEvent, photo: Photo) => void;
+export type ClickHandler = (event: MouseEvent, photo: Photo, index: number) => void;
 
 export type ResponsiveParameterProvider = (containerWidth: number) => number;
 
