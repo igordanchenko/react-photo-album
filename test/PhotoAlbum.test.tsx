@@ -322,6 +322,68 @@ describe("PhotoAlbum", () => {
         render(<PhotoAlbum layout={"rows"} photos={photos} breakpoints={[300, 600, 1200]} />).unmount();
     });
 
+    it("supports inline breakpoints", () => {
+        const onStartLayoutComputation = jest.fn();
+        const instrumentation = { onStartLayoutComputation };
+
+        const resizeObserverProvider = jest.fn(() => ({
+            observe: jest.fn(),
+            unobserve: jest.fn(),
+            disconnect: jest.fn(),
+        }));
+
+        const { rerender, unmount } = render(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[300, 600, 1200]}
+                resizeObserverProvider={resizeObserverProvider}
+                instrumentation={instrumentation}
+            />
+        );
+
+        rerender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[300, 600, 1200]}
+                resizeObserverProvider={resizeObserverProvider}
+                instrumentation={instrumentation}
+            />
+        );
+
+        expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
+        expect(onStartLayoutComputation).toHaveBeenCalledTimes(3); // 2 + 1 initial render
+
+        rerender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[300, 600]}
+                resizeObserverProvider={resizeObserverProvider}
+                instrumentation={instrumentation}
+            />
+        );
+
+        expect(resizeObserverProvider).toHaveBeenCalledTimes(2);
+        expect(onStartLayoutComputation).toHaveBeenCalledTimes(4);
+
+        rerender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[600, 300]}
+                resizeObserverProvider={resizeObserverProvider}
+                instrumentation={instrumentation}
+            />
+        );
+
+        expect(resizeObserverProvider).toHaveBeenCalledTimes(3);
+        expect(onStartLayoutComputation).toHaveBeenCalledTimes(5);
+
+        unmount();
+    });
+
     it("provides layout.index prop", () => {
         (["rows", "columns", "masonry"] as LayoutType[]).forEach((layout) => {
             const indexes: string[] = [];

@@ -1,8 +1,11 @@
 import { useCallback, useMemo, useRef, useState } from "react";
+
+import useArray from "./useArray";
 import { ResizeObserverProvider } from "../types";
 
 const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, breakpoints?: number[]) => {
     const observerRef = useRef<ResizeObserver>();
+    const breakpointsArray = useArray(breakpoints);
     const [containerWidth, setContainerWidth] = useState<number>();
 
     const containerRef = useCallback(
@@ -15,8 +18,8 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
             const updateWidth = () => {
                 let newWidth = node?.clientWidth;
 
-                if (newWidth !== undefined && breakpoints && breakpoints.length > 0) {
-                    const sortedBreakpoints = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
+                if (newWidth !== undefined && breakpointsArray && breakpointsArray.length > 0) {
+                    const sortedBreakpoints = [...breakpointsArray.filter((x) => x > 0)].sort((a, b) => b - a);
                     sortedBreakpoints.push(Math.floor(sortedBreakpoints[sortedBreakpoints.length - 1] / 2));
                     newWidth = sortedBreakpoints.find(
                         (breakpoint, index) => breakpoint <= newWidth || index === sortedBreakpoints.length - 1
@@ -37,7 +40,7 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
                 observerRef.current?.observe(node);
             }
         },
-        [resizeObserverProvider, breakpoints]
+        [resizeObserverProvider, breakpointsArray]
     );
 
     return useMemo(() => ({ containerRef, containerWidth }), [containerRef, containerWidth]);
