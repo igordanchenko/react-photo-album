@@ -27,53 +27,55 @@ type PhotoFrameProps = SortablePhotoProps & {
     overlay?: boolean;
     active?: boolean;
     insertPosition?: "before" | "after";
-    sortableProps?: Partial<HTMLAttributes<HTMLDivElement>>;
+    attributes?: Partial<HTMLAttributes<HTMLDivElement>>;
+    listeners?: Partial<HTMLAttributes<HTMLDivElement>>;
 };
 
-const PhotoFrame = forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
-    const { layoutOptions, imageProps, overlay, active, insertPosition, sortableProps } = props;
-    const { alt, style, ...restImageProps } = imageProps;
+const PhotoFrame = memo(
+    forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
+        const { layoutOptions, imageProps, overlay, active, insertPosition, attributes, listeners } = props;
+        const { alt, style, ...restImageProps } = imageProps;
 
-    return (
-        <div
-            ref={ref}
-            style={{
-                width: overlay ? `calc(100% - ${2 * layoutOptions.padding}px)` : style.width,
-                padding: style.padding,
-                marginBottom: style.marginBottom,
-            }}
-            className={clsx("photo-frame", {
-                overlay: overlay,
-                active: active,
-                insertBefore: insertPosition === "before",
-                insertAfter: insertPosition === "after",
-            })}
-            {...sortableProps}
-        >
-            <img
-                alt={alt}
+        return (
+            <div
+                ref={ref}
                 style={{
-                    ...style,
-                    width: "100%",
-                    height: "auto",
-                    padding: 0,
-                    marginBottom: 0,
+                    width: overlay ? `calc(100% - ${2 * layoutOptions.padding}px)` : style.width,
+                    padding: style.padding,
+                    marginBottom: style.marginBottom,
                 }}
-                {...restImageProps}
-            />
-        </div>
-    );
-});
+                className={clsx("photo-frame", {
+                    overlay: overlay,
+                    active: active,
+                    insertBefore: insertPosition === "before",
+                    insertAfter: insertPosition === "after",
+                })}
+                {...attributes}
+                {...listeners}
+            >
+                <img
+                    alt={alt}
+                    style={{
+                        ...style,
+                        width: "100%",
+                        height: "auto",
+                        padding: 0,
+                        marginBottom: 0,
+                    }}
+                    {...restImageProps}
+                />
+            </div>
+        );
+    })
+);
 PhotoFrame.displayName = "PhotoFrame";
-
-const MemoizedPhotoFrame = memo(PhotoFrame);
 
 const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }) => {
     const { photo, activeIndex } = props;
     const { attributes, listeners, isDragging, index, over, setNodeRef } = useSortable({ id: photo.id });
 
     return (
-        <MemoizedPhotoFrame
+        <PhotoFrame
             ref={setNodeRef}
             active={isDragging}
             insertPosition={
@@ -84,10 +86,8 @@ const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }
                     : undefined
             }
             aria-label="sortable image"
-            sortableProps={{
-                ...attributes,
-                ...listeners,
-            }}
+            attributes={attributes}
+            listeners={listeners}
             {...props}
         />
     );
