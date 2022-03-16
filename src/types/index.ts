@@ -11,7 +11,7 @@ import {
 
 export type LayoutType = "columns" | "rows" | "masonry";
 
-export type ClickHandler = (event: MouseEvent, photo: Photo, index: number) => void;
+export type ClickHandler<T extends Photo = Photo> = (event: MouseEvent, photo: T, index: number) => void;
 
 export type ResponsiveParameterProvider = (containerWidth: number) => number;
 
@@ -68,7 +68,7 @@ export type PhotoProps<T extends Photo = Photo> = {
     /** computed photo layout */
     layout: PhotoLayout;
     /** photo album layout options */
-    layoutOptions: LayoutOptions;
+    layoutOptions: LayoutOptions<T>;
     /** pre-populated 'img' element attributes */
     imageProps: ImgHTMLAttributes<HTMLImageElement> &
         Required<Pick<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "style">>;
@@ -92,7 +92,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     /** Photo album width at various viewport sizes. */
     sizes?: ResponsiveSizes;
     /** Photo click callback function. */
-    onClick?: ClickHandler;
+    onClick?: ClickHandler<T>;
     /** Responsive breakpoints */
     breakpoints?: number[];
     /** Default container width to be used in the server-side render. */
@@ -102,11 +102,11 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     /** Custom photo rendering function. */
     renderPhoto?: RenderPhoto<T>;
     /** Custom container rendering function. */
-    renderContainer?: RenderContainer;
+    renderContainer?: RenderContainer<T>;
     /** Custom row container rendering function. */
-    renderRowContainer?: RenderRowContainer;
+    renderRowContainer?: RenderRowContainer<T>;
     /** Custom column container rendering function. */
-    renderColumnContainer?: RenderColumnContainer;
+    renderColumnContainer?: RenderColumnContainer<T>;
     /** ResizeObserver factory to be used when global ResizeObserver is unavailable. */
     resizeObserverProvider?: ResizeObserverProvider;
     /** Internal instrumentation - use on your own risk. */
@@ -115,7 +115,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
 
 export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => ReactElement;
 
-export type GenericLayoutOptions = {
+export type GenericLayoutOptions<T extends Photo = Photo> = {
     /** layout spacing (gaps between photos) */
     spacing: number;
     /** padding around each photo */
@@ -125,12 +125,12 @@ export type GenericLayoutOptions = {
     /** current viewport width */
     viewportWidth?: number;
     /** photo click handler */
-    onClick?: ClickHandler;
+    onClick?: ClickHandler<T>;
     /** photo album size at various viewport sizes */
     sizes?: ResponsiveSizes;
 };
 
-export type RowsLayoutOptions = GenericLayoutOptions & {
+export type RowsLayoutOptions<T extends Photo = Photo> = GenericLayoutOptions<T> & {
     /** layout type */
     layout: Extract<LayoutType, "rows">;
     /** target row height in 'rows' layout */
@@ -139,14 +139,14 @@ export type RowsLayoutOptions = GenericLayoutOptions & {
     rowConstraints?: RowConstraints;
 };
 
-export type ColumnsLayoutOptions = GenericLayoutOptions & {
+export type ColumnsLayoutOptions<T extends Photo = Photo> = GenericLayoutOptions<T> & {
     /** layout type */
     layout: Extract<LayoutType, "columns" | "masonry">;
     /** number of columns in 'columns' or 'masonry' layout */
     columns: number;
 };
 
-export type LayoutOptions = ColumnsLayoutOptions | RowsLayoutOptions;
+export type LayoutOptions<T extends Photo = Photo> = ColumnsLayoutOptions<T> | RowsLayoutOptions<T>;
 
 export type ComponentsProps = {
     /** Additional HTML attributes to be passed to the outer container `div` element */
@@ -161,23 +161,25 @@ export type ComponentsProps = {
 
 export type ComponentsPropsParameter = ComponentsProps | ((containerWidth: number) => ComponentsProps);
 
-export type ContainerProps = {
+export type ContainerProps<T extends Photo = Photo> = {
     /** layout options */
-    layoutOptions: LayoutOptions;
+    layoutOptions: LayoutOptions<T>;
     /** pre-populated default container attributes */
     containerProps: HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderContainerProps = PropsWithChildren<ContainerProps> & { containerRef?: RefCallback<HTMLDivElement> };
+export type RenderContainerProps<T extends Photo = Photo> = PropsWithChildren<ContainerProps<T>> & {
+    containerRef?: RefCallback<HTMLDivElement>;
+};
 
 /** ForwardRefExoticComponent (forwardRef) variant is deprecated and will be removed in the next major release */
-export type RenderContainer =
-    | ((props: RenderContainerProps) => ReactElement)
-    | ForwardRefExoticComponent<PropsWithChildren<ContainerProps> & RefAttributes<HTMLDivElement>>;
+export type RenderContainer<T extends Photo = Photo> =
+    | ((props: RenderContainerProps<T>) => ReactElement)
+    | ForwardRefExoticComponent<PropsWithChildren<ContainerProps<T>> & RefAttributes<HTMLDivElement>>;
 
-export type RowContainerProps = {
+export type RowContainerProps<T extends Photo = Photo> = {
     /** layout options */
-    layoutOptions: RowsLayoutOptions;
+    layoutOptions: RowsLayoutOptions<T>;
     /** row number */
     rowIndex: number;
     /** total number of rows */
@@ -186,10 +188,12 @@ export type RowContainerProps = {
     rowContainerProps: HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderRowContainer = (props: PropsWithChildren<RowContainerProps>) => ReactElement;
+export type RenderRowContainer<T extends Photo = Photo> = (
+    props: PropsWithChildren<RowContainerProps<T>>
+) => ReactElement;
 
-export type ColumnContainerProps = {
-    layoutOptions: ColumnsLayoutOptions;
+export type ColumnContainerProps<T extends Photo = Photo> = {
+    layoutOptions: ColumnsLayoutOptions<T>;
     /** column number */
     columnIndex: number;
     /** total number of columns */
@@ -202,7 +206,9 @@ export type ColumnContainerProps = {
     columnContainerProps: HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderColumnContainer = (props: PropsWithChildren<ColumnContainerProps>) => ReactElement;
+export type RenderColumnContainer<T extends Photo = Photo> = (
+    props: PropsWithChildren<ColumnContainerProps<T>>
+) => ReactElement;
 
 export type ResizeObserverProvider = (
     callback: (entries: ResizeObserverEntry[], observer: ResizeObserver) => void

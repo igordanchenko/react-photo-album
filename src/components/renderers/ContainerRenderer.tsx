@@ -1,18 +1,24 @@
 import * as React from "react";
 import { CSSProperties, ForwardRefExoticComponent, PropsWithChildren, RefAttributes } from "react";
 
-import { ContainerProps, RenderContainer, RenderContainerProps } from "../../types";
+import { ContainerProps, Photo, RenderContainer, RenderContainerProps } from "../../types";
 import Optional from "../../types/Optional";
 
-const defaultRenderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
+const defaultRenderContainer = <T extends Photo = Photo>({
+    containerProps,
+    children,
+    containerRef,
+}: RenderContainerProps<T>) => (
     <div ref={containerRef} {...containerProps}>
         {children}
     </div>
 );
 
-type ContainerRendererProps = Optional<RenderContainerProps, "containerProps"> & { renderContainer?: RenderContainer };
+type ContainerRendererProps<T extends Photo = Photo> = Optional<RenderContainerProps<T>, "containerProps"> & {
+    renderContainer?: RenderContainer<T>;
+};
 
-const ContainerRenderer = (props: ContainerRendererProps) => {
+const ContainerRenderer = <T extends Photo = Photo>(props: ContainerRendererProps<T>) => {
     const {
         layoutOptions,
         renderContainer,
@@ -37,7 +43,7 @@ const ContainerRenderer = (props: ContainerRendererProps) => {
     // we are dealing with deprecated exotic component returned by forwardRef
     if (renderContainer && typeof renderContainer === "object") {
         const Component = renderContainer as ForwardRefExoticComponent<
-            PropsWithChildren<ContainerProps> & RefAttributes<HTMLDivElement>
+            PropsWithChildren<ContainerProps<T>> & RefAttributes<HTMLDivElement>
         >;
 
         return (

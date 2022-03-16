@@ -2,7 +2,15 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import { act, render, screen } from "@testing-library/react";
 
-import { LayoutType, Photo, PhotoAlbum, PhotoAlbumProps, RenderContainerProps, RenderPhoto } from "../src";
+import {
+    ClickHandler,
+    LayoutType,
+    Photo,
+    PhotoAlbum,
+    PhotoAlbumProps,
+    RenderContainerProps,
+    RenderPhoto,
+} from "../src";
 import photos from "./photos";
 
 const whenAskedToRender = (Component: JSX.Element) => {
@@ -226,14 +234,37 @@ describe("PhotoAlbum", () => {
             customAttribute?: string | number;
         }
 
-        const RenderCustomPhoto: RenderPhoto<CustomPhoto> = ({
+        const customPhotos: CustomPhoto[] = photos.map((photo, index) => ({ ...photo, customAttribute: index }));
+
+        const renderCustomPhoto: RenderPhoto<CustomPhoto> = ({
             photo,
             imageProps: { src, alt, ...restImageProps },
         }) => <img src={src} alt={alt} data-custom-attribute={photo.customAttribute} {...restImageProps} />;
 
-        const customPhotos: CustomPhoto[] = photos.map((photo, index) => ({ ...photo, customAttribute: index }));
+        const clickHandler: ClickHandler<CustomPhoto> = (event, photo, index) => {
+            // this check doesn't actually get called, but it's here to type check the click handler
+            expect(photo.customAttribute).toBe(index);
+        };
 
-        whenAskedToRender(<PhotoAlbum layout={"rows"} photos={customPhotos} renderPhoto={RenderCustomPhoto} />);
+        whenAskedToRender(
+            <PhotoAlbum layout={"rows"} photos={customPhotos} renderPhoto={renderCustomPhoto} onClick={clickHandler} />
+        );
+    });
+
+    it("supports custom photo attributes with inline render function", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos.map((photo, index) => ({ ...photo, customAttribute: index }))}
+                renderPhoto={({ photo, imageProps: { src, alt, ...restImageProps } }) => (
+                    <img src={src} alt={alt} data-custom-attribute={photo.customAttribute} {...restImageProps} />
+                )}
+                onClick={(event, photo, index) => {
+                    // this check doesn't actually get called, but it's here to type check the click handler
+                    expect(photo.customAttribute).toBe(index);
+                }}
+            />
+        );
     });
 
     it("doesn't crash when asked to render impossible rows layout", () => {

@@ -7,7 +7,14 @@ import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import useMounted from "./hooks/useMounted";
 import useContainerWidth from "./hooks/useContainerWidth";
 import resolveResponsiveParameter from "./utils/responsive";
-import { ColumnsLayoutOptions, ComponentsPropsParameter, Photo, PhotoAlbumProps, RowsLayoutOptions } from "./types";
+import {
+    ColumnsLayoutOptions,
+    ComponentsPropsParameter,
+    LayoutOptions,
+    Photo,
+    PhotoAlbumProps,
+    RowsLayoutOptions,
+} from "./types";
 
 const resolveLayoutOptions = <T extends Photo>({
     layout,
@@ -23,7 +30,7 @@ const resolveLayoutOptions = <T extends Photo>({
 }: Omit<PhotoAlbumProps<T>, "photos"> & {
     viewportWidth?: number;
     containerWidth: number;
-}): RowsLayoutOptions | ColumnsLayoutOptions => ({
+}): LayoutOptions<T> => ({
     layout,
     onClick,
     viewportWidth,

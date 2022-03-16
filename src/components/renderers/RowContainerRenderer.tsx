@@ -1,18 +1,21 @@
 import * as React from "react";
 import { CSSProperties, PropsWithChildren } from "react";
 
-import { RenderRowContainer, RowContainerProps } from "../../types";
+import { Photo, RenderRowContainer, RowContainerProps } from "../../types";
 import Optional from "../../types/Optional";
 
-const defaultRenderRowContainer: RenderRowContainer = ({ rowContainerProps, children }) => (
-    <div {...rowContainerProps}>{children}</div>
-);
+const defaultRenderRowContainer = <T extends Photo = Photo>({
+    rowContainerProps,
+    children,
+}: PropsWithChildren<RowContainerProps<T>>) => <div {...rowContainerProps}>{children}</div>;
 
-type RowContainerRendererProps = PropsWithChildren<Optional<RowContainerProps, "rowContainerProps">> & {
-    renderRowContainer?: RenderRowContainer;
+type RowContainerRendererProps<T extends Photo = Photo> = PropsWithChildren<
+    Optional<RowContainerProps<T>, "rowContainerProps">
+> & {
+    renderRowContainer?: RenderRowContainer<T>;
 };
 
-const RowContainerRenderer = (props: RowContainerRendererProps) => {
+const RowContainerRenderer = <T extends Photo = Photo>(props: RowContainerRendererProps<T>) => {
     const {
         layoutOptions,
         rowIndex,

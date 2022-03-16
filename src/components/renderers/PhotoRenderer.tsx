@@ -4,26 +4,29 @@ import { CSSProperties, HTMLAttributes, MouseEvent } from "react";
 import round from "../../utils/round";
 import { LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../../types";
 
-const calcWidth = (
+const calcWidth = <T extends Photo = Photo>(
     base: string,
     { width, photosCount }: PhotoLayout,
-    { spacing, padding, containerWidth }: LayoutOptions
+    { spacing, padding, containerWidth }: LayoutOptions<T>
 ) => {
     const gaps = spacing * (photosCount - 1) + 2 * padding * photosCount;
     return `calc((${base} - ${gaps}px) / ${round((containerWidth - gaps) / width, 5)})`;
 };
 
-const cssWidth = (layout: PhotoLayout, layoutOptions: LayoutOptions) => {
+const cssWidth = <T extends Photo = Photo>(layout: PhotoLayout, layoutOptions: LayoutOptions<T>) => {
     if (layoutOptions.layout !== "rows") {
         return `calc(100% - ${2 * layoutOptions.padding}px)`;
     }
     return calcWidth("100%", layout, layoutOptions);
 };
 
-const calculateSizesValue = (size: string, layout: PhotoLayout, layoutOptions: LayoutOptions) =>
-    calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
+const calculateSizesValue = <T extends Photo = Photo>(
+    size: string,
+    layout: PhotoLayout,
+    layoutOptions: LayoutOptions<T>
+) => calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
 
-const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions) => {
+const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions<T>) => {
     let srcSet, sizes;
 
     if (photo.images && photo.images.length > 0) {
@@ -52,7 +55,7 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
     return { srcSet, sizes };
 };
 
-const defaultRenderPhoto: RenderPhoto = ({ imageProps }) => {
+const defaultRenderPhoto = <T extends Photo = Photo>({ imageProps }: PhotoProps<T>) => {
     const { src, alt, srcSet, sizes, ...rest } = imageProps;
     return <img src={src} alt={alt} {...(srcSet ? { srcSet, sizes } : null)} {...rest} />;
 };
