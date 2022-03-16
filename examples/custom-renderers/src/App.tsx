@@ -1,8 +1,8 @@
-import { PhotoAlbum, RenderContainerProps, RenderPhoto, RenderRowContainer } from "react-photo-album";
+import { PhotoAlbum, RenderContainer, RenderContainerProps, RenderPhoto, RenderRowContainer } from "react-photo-album";
 
 import photos from "./photos";
 
-const renderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
+const renderContainer: RenderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
     <div
         style={{
             border: "2px solid #eee",
