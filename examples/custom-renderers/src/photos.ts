@@ -1,3 +1,5 @@
+import { Photo } from "react-photo-album";
+
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
 const unsplashLink = (id: string, width: number, height: number) =>
@@ -27,7 +29,7 @@ const unsplashPhotos = [
     { id: "xKhtkhc9HbQ", width: 1080, height: 1440 },
 ];
 
-const photos = unsplashPhotos.map((photo) => ({
+const photos: Photo[] = unsplashPhotos.map((photo) => ({
     src: unsplashLink(photo.id, photo.width, photo.height),
     width: photo.width,
     height: photo.height,
