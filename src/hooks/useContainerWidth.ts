@@ -9,7 +9,7 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
     const [containerWidth, setContainerWidth] = useState<number>();
 
     const containerRef = useCallback(
-        (node) => {
+        (node: HTMLElement | null) => {
             if (observerRef.current) {
                 observerRef.current.disconnect();
                 observerRef.current = undefined;
@@ -21,8 +21,9 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
                 if (newWidth !== undefined && breakpointsArray && breakpointsArray.length > 0) {
                     const sortedBreakpoints = [...breakpointsArray.filter((x) => x > 0)].sort((a, b) => b - a);
                     sortedBreakpoints.push(Math.floor(sortedBreakpoints[sortedBreakpoints.length - 1] / 2));
+                    const threshold = newWidth;
                     newWidth = sortedBreakpoints.find(
-                        (breakpoint, index) => breakpoint <= newWidth || index === sortedBreakpoints.length - 1
+                        (breakpoint, index) => breakpoint <= threshold || index === sortedBreakpoints.length - 1
                     );
                 }
 
