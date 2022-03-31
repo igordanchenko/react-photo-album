@@ -6,8 +6,7 @@ import "react-image-lightbox/style.css";
 import photos from "./photos";
 
 const App = () => {
-    const [open, setOpen] = useState(false);
-    const [index, setIndex] = useState<number>();
+    const [index, setIndex] = useState<number>(-1);
 
     return (
         <>
@@ -16,17 +15,16 @@ const App = () => {
                 layout="rows"
                 onClick={(event, photo, index) => {
                     setIndex(index);
-                    setOpen(true);
                 }}
             />
-            {open && index !== undefined && (
+            {index >= 0 && (
                 <Lightbox
                     enableZoom={false}
                     clickOutsideToClose={false}
                     mainSrc={photos[index].src}
                     nextSrc={photos[(index + 1) % photos.length].src}
                     prevSrc={photos[(index + photos.length - 1) % photos.length].src}
-                    onCloseRequest={() => setOpen(false)}
+                    onCloseRequest={() => setIndex(-1)}
                     onMovePrevRequest={() => setIndex((index + photos.length - 1) % photos.length)}
                     onMoveNextRequest={() => setIndex((index + 1) % photos.length)}
                 />

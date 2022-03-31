@@ -58,3 +58,7 @@ main {
         margin: 20px;
     }
 }
+
+.ril__toolbar {
+    background-color: unset;
+}

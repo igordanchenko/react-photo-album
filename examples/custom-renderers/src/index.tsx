@@ -1,10 +1,13 @@
 import { StrictMode } from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import App from "./App";
 import "./index.css";
 
-render(
+const container = document.getElementById("root");
+if (!container) throw new Error("root container not found");
+
+createRoot(container).render(
     <StrictMode>
         <header>
             <h1>React Photo Album | Custom Renderers</h1>
@@ -18,6 +21,5 @@ render(
         <main>
             <App />
         </main>
-    </StrictMode>,
-    document.getElementById("root")
+    </StrictMode>
 );
