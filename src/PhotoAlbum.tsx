@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 
 import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
@@ -66,7 +66,7 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         instrumentation,
     } = props;
 
-    const [mounted, setMounted] = React.useState(false);
+    const [mounted, setMounted] = useState(false);
     const { containerRef, containerWidth } = useContainerWidth(resizeObserverProvider, breakpoints);
 
     useIsomorphicEffect(() => setMounted(true), []);

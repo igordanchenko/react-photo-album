@@ -72,15 +72,6 @@ const photos = [
 <PhotoAlbum layout="rows" photos={photos} />
 ```
 
-## CDN
-
-To install React Photo Album on a static website via CDN, follow one of the
-CDN [examples](https://react-photo-album.com/examples).
-
-- **Unpkg:** [https://unpkg.com/react-photo-album](https://unpkg.com/react-photo-album)
-- **JSDelivr:** [https://www.jsdelivr.com/package/npm/react-photo-album](https://www.jsdelivr.com/package/npm/react-photo-album)
-- **Skypack:** [https://www.skypack.dev/view/react-photo-album](https://www.skypack.dev/view/react-photo-album)
-
 ## How It Works
 
 ### Rows Layout

@@ -2,18 +2,17 @@
     "include": ["src"],
     "compilerOptions": {
         "strict": true,
-        "target": "es2018",
-        "module": "esnext",
+        "target": "ES2018",
+        "module": "ESNext",
         "jsx": "react-jsx",
         "noEmit": true,
         "declaration": false,
-        "inlineSources": true,
-        "sourceMap": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
         "isolatedModules": true,
         "importHelpers": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "removeComments": true
     }
 }
