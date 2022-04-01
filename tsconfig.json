@@ -1,5 +1,5 @@
 {
-    "exclude": ["test", "dist", "coverage", "examples", "node_modules", "*.d.ts", "**/*.d.ts"],
+    "include": ["src"],
     "compilerOptions": {
         "strict": true,
         "target": "es2018",
@@ -14,7 +14,6 @@
         "isolatedModules": true,
         "importHelpers": true,
         "skipLibCheck": true,
-        "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true
     }
 }
