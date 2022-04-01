@@ -1,4 +1,3 @@
-import * as React from "react";
 import { CSSProperties, ForwardRefExoticComponent, PropsWithChildren, RefAttributes } from "react";
 
 import { ContainerProps, Photo, RenderContainer, RenderContainerProps } from "../../types";

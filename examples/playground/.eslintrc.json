@@ -24,6 +24,7 @@
             "version": "detect"
         }
     },
+    "ignorePatterns": ["build/*"],
     "rules": {
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off"

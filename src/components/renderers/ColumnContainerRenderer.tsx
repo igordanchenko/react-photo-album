@@ -1,4 +1,3 @@
-import * as React from "react";
 import { CSSProperties, PropsWithChildren } from "react";
 
 import round from "../../utils/round";
