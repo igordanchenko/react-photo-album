@@ -4,7 +4,9 @@ import clsx from "clsx";
 import {
     closestCenter,
     DndContext,
+    DragEndEvent,
     DragOverlay,
+    DragStartEvent,
     KeyboardSensor,
     MouseSensor,
     TouchSensor,
@@ -101,7 +103,7 @@ const App = () => {
         }))
     );
     const renderedPhotos = useRef<{ [key: string]: SortablePhotoProps }>({});
-    const [activeId, setActiveId] = useState(null);
+    const [activeId, setActiveId] = useState<string | null>(null);
     const activeIndex = activeId ? photos.findIndex((photo) => photo.id === activeId) : undefined;
 
     const sensors = useSensors(
@@ -110,12 +112,12 @@ const App = () => {
         useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
     );
 
-    const handleDragStart = useCallback(({ active }) => setActiveId(active.id), []);
+    const handleDragStart = useCallback(({ active }: DragStartEvent) => setActiveId(active.id), []);
 
-    const handleDragEnd = useCallback((event) => {
+    const handleDragEnd = useCallback((event: DragEndEvent) => {
         const { active, over } = event;
 
-        if (active.id !== over.id) {
+        if (over && active.id !== over.id) {
             setPhotos((items) => {
                 const oldIndex = items.findIndex((item) => item.id === active.id);
                 const newIndex = items.findIndex((item) => item.id === over.id);
@@ -126,7 +128,7 @@ const App = () => {
     }, []);
 
     const renderPhoto = useCallback(
-        (props) => {
+        (props: SortablePhotoProps) => {
             // capture rendered photos for future use in DragOverlay
             renderedPhotos.current[props.photo.id] = props;
             return <SortablePhotoFrame activeIndex={activeIndex} {...props} />;
