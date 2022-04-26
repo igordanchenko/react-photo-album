@@ -1,11 +1,13 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 
 import useArray from "./useArray";
+import useLatest from "./useLatest";
 import { ResizeObserverProvider } from "../types";
 
 const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, breakpoints?: number[]) => {
     const observerRef = useRef<ResizeObserver>();
     const breakpointsArray = useArray(breakpoints);
+    const resizeObserverProviderLatest = useLatest(resizeObserverProvider);
     const [containerWidth, setContainerWidth] = useState<number>();
 
     const containerRef = useCallback(
@@ -36,12 +38,12 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
                 observerRef.current =
                     typeof ResizeObserver !== "undefined"
                         ? new ResizeObserver(updateWidth)
-                        : resizeObserverProvider?.(updateWidth);
+                        : resizeObserverProviderLatest.current?.(updateWidth);
 
                 observerRef.current?.observe(node);
             }
         },
-        [resizeObserverProvider, breakpointsArray]
+        [breakpointsArray, resizeObserverProviderLatest]
     );
 
     return useMemo(() => ({ containerRef, containerWidth }), [containerRef, containerWidth]);

@@ -386,6 +386,9 @@ describe("PhotoAlbum", () => {
         expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
         expect(onStartLayoutComputation).toHaveBeenCalledTimes(3); // 2 + 1 initial render
 
+        resizeObserverProvider.mockClear();
+        onStartLayoutComputation.mockClear();
+
         rerender(
             <PhotoAlbum
                 layout={"rows"}
@@ -396,8 +399,27 @@ describe("PhotoAlbum", () => {
             />
         );
 
-        expect(resizeObserverProvider).toHaveBeenCalledTimes(2);
-        expect(onStartLayoutComputation).toHaveBeenCalledTimes(4);
+        expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
+        expect(onStartLayoutComputation).toHaveBeenCalledTimes(1);
+
+        resizeObserverProvider.mockClear();
+        onStartLayoutComputation.mockClear();
+
+        rerender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[300, 600]}
+                resizeObserverProvider={resizeObserverProvider}
+                instrumentation={instrumentation}
+            />
+        );
+
+        expect(resizeObserverProvider).toHaveBeenCalledTimes(0);
+        expect(onStartLayoutComputation).toHaveBeenCalledTimes(1);
+
+        resizeObserverProvider.mockClear();
+        onStartLayoutComputation.mockClear();
 
         rerender(
             <PhotoAlbum
@@ -409,8 +431,40 @@ describe("PhotoAlbum", () => {
             />
         );
 
-        expect(resizeObserverProvider).toHaveBeenCalledTimes(3);
-        expect(onStartLayoutComputation).toHaveBeenCalledTimes(5);
+        expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
+        expect(onStartLayoutComputation).toHaveBeenCalledTimes(1);
+
+        unmount();
+    });
+
+    it("supports inline resizeObserverProvider", () => {
+        const resizeObserver = {
+            observe: jest.fn(),
+            unobserve: jest.fn(),
+            disconnect: jest.fn(),
+        };
+
+        const { rerender, unmount } = render(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[300, 600, 1200]}
+                resizeObserverProvider={() => resizeObserver}
+            />
+        );
+
+        rerender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                breakpoints={[300, 600, 1200]}
+                resizeObserverProvider={() => resizeObserver}
+            />
+        );
+
+        expect(resizeObserver.observe).toHaveBeenCalledTimes(1);
+        expect(resizeObserver.unobserve).toHaveBeenCalledTimes(0);
+        expect(resizeObserver.disconnect).toHaveBeenCalledTimes(0);
 
         unmount();
     });

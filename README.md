@@ -10,7 +10,7 @@ the ground up.
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album?color=blue)](https://bundlephobia.com/package/react-photo-album)
 [![License MIT](https://img.shields.io/npm/l/react-photo-album?color=blue)](LICENSE)
 
-- **Built for React:** works with React 18, 17 and 16.14.0+
+- **Built for React:** works with React 18, 17 and 16.14.0
 - **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration.
 - **Responsive images:** responsive images with automatic resolution switching are supported out of the box.
 - **Feature packed:** supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
@@ -115,15 +115,6 @@ other responsive parameters on the server-side using the `defaultContainerWidth`
 default. Keep in mind that responsive parameters may contribute to cumulative layout shifts during the initial page
 load. If CLS becomes an issue in your case, you may want to consider using hard-coded values for `columns`, `spacing`
 , `padding`, etc., instead of the default responsive values.
-
-### ResizeObserver
-
-React Photo Album relies on [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver) to respond
-to container size changes (i.e., when the browser window gets resized, device orientation changes or page layout causes
-a shift in container dimensions). React Photo Album no longer bundles ResizeObserver polyfill as part of the library
-since, as of January 2022, over 91% of browsers support it natively. If your use case requires you to support some older
-browsers, you can accomplish this by either installing a global ResizeObserver polyfill or by supplying a ponyfill via
-the `resizeObserverProvider` parameter.
 
 ## Credits
 
