@@ -5,10 +5,12 @@ import useLatest from "./useLatest";
 import { ResizeObserverProvider } from "../types";
 
 const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, breakpoints?: number[]) => {
+    const [containerWidth, setContainerWidth] = useState<number>();
     const observerRef = useRef<ResizeObserver>();
     const breakpointsArray = useArray(breakpoints);
-    const resizeObserverProviderLatest = useLatest(resizeObserverProvider);
-    const [containerWidth, setContainerWidth] = useState<number>();
+    const resizeObserverProviderRef = useLatest(resizeObserverProvider);
+    const containerWidthRef = useLatest(containerWidth);
+    const scrollbarWidthRef = useRef<number>();
 
     const containerRef = useCallback(
         (node: HTMLElement | null) => {
@@ -29,6 +31,23 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
                     );
                 }
 
+                const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                const previousScrollbarWidth = scrollbarWidthRef.current;
+                scrollbarWidthRef.current = scrollbarWidth;
+
+                /* istanbul ignore next */
+                if (
+                    containerWidthRef.current !== undefined &&
+                    previousScrollbarWidth !== undefined &&
+                    newWidth !== undefined &&
+                    newWidth > containerWidthRef.current &&
+                    newWidth - containerWidthRef.current <= 20 &&
+                    scrollbarWidth < previousScrollbarWidth
+                ) {
+                    // prevent infinite resize loop when scrollbar disappears
+                    return;
+                }
+
                 setContainerWidth(newWidth);
             };
 
@@ -38,12 +57,12 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
                 observerRef.current =
                     typeof ResizeObserver !== "undefined"
                         ? new ResizeObserver(updateWidth)
-                        : resizeObserverProviderLatest.current?.(updateWidth);
+                        : resizeObserverProviderRef.current?.(updateWidth);
 
                 observerRef.current?.observe(node);
             }
         },
-        [breakpointsArray, resizeObserverProviderLatest]
+        [breakpointsArray, resizeObserverProviderRef, containerWidthRef]
     );
 
     return useMemo(() => ({ containerRef, containerWidth }), [containerRef, containerWidth]);
