@@ -17,12 +17,12 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "react-photo-album": "^1.13.0"
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "react-photo-album": "^1.13.1"
     },
     "devDependencies": {
-        "@types/react": "^18.0.7",
+        "@types/react": "^18.0.8",
         "@types/react-dom": "^18.0.0",
         "react-scripts": "^5.0.1",
         "typescript": "^4.6.3"
