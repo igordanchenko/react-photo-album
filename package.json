@@ -44,7 +44,7 @@
         "@testing-library/react": "^13.1.1",
         "@types/jest": "^27.4.1",
         "@types/react": "^18.0.8",
-        "@types/react-dom": "^18.0.0",
+        "@types/react-dom": "^18.0.3",
         "@types/react-test-renderer": "^18.0.0",
         "@typescript-eslint/eslint-plugin": "^5.21.0",
         "@typescript-eslint/parser": "^5.21.0",
@@ -67,7 +67,7 @@
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-typescript2": "^0.31.2",
         "ts-jest": "^27.1.4",
-        "typescript": "^4.6.3"
+        "typescript": "^4.6.4"
     },
     "keywords": [
         "react photo album",

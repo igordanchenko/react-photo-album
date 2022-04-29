@@ -16,10 +16,11 @@ const selectResponsiveValue = (values: ResponsiveParameter[], containerWidth: nu
 const resolveResponsiveParameter = (
     parameter: ResponsiveParameter | undefined,
     containerWidth: number,
-    values: ResponsiveParameter[]
+    values: ResponsiveParameter[],
+    minValue = 0
 ): number => {
     const value = unwrapParameter(parameter, containerWidth);
-    return value === undefined ? selectResponsiveValue(values, containerWidth) : value;
+    return Math.round(Math.max(value === undefined ? selectResponsiveValue(values, containerWidth) : value, minValue));
 };
 
 export default resolveResponsiveParameter;
