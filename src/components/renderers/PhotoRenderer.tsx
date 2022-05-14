@@ -56,7 +56,7 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
 
 const defaultRenderPhoto = <T extends Photo = Photo>({ imageProps }: PhotoProps<T>) => {
     const { src, alt, srcSet, sizes, ...rest } = imageProps;
-    return <img src={src} alt={alt} {...(srcSet ? { srcSet, sizes } : null)} {...rest} />;
+    return <img alt={alt} {...(srcSet ? { srcSet, sizes } : null)} src={src} {...rest} />;
 };
 
 type PhotoRendererProps<T extends Photo = Photo> = Omit<PhotoProps<T>, "imageProps"> & {
