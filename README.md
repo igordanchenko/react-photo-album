@@ -121,3 +121,7 @@ load. If CLS becomes an issue in your case, you may want to consider using hard-
 - Thanks to Sandra G (aka [neptunian](https://github.com/neptunian)) for authoring the
   original [react-photo-gallery](https://github.com/neptunian/react-photo-gallery) library that served as inspiration
   and foundation for [react-photo-album](https://github.com/igordanchenko/react-photo-album).
+
+## License
+
+MIT © [Igor Danchenko](https://github.com/igordanchenko)
