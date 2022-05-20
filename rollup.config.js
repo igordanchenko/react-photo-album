@@ -14,7 +14,7 @@ export default [
             { format: "esm", file: pkg.module },
             { format: "cjs", file: pkg.main, exports: "named" },
         ],
-        plugins: [external(), resolve(), typescript()],
+        plugins: [external(), resolve(), typescript({ tsconfig: "tsconfig.build.json" })],
     },
     {
         input,
