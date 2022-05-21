@@ -18,9 +18,9 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@dnd-kit/core": "^5.0.3",
-        "@dnd-kit/sortable": "^6.0.1",
-        "@dnd-kit/utilities": "^3.1.0",
+        "@dnd-kit/core": "^6.0.1",
+        "@dnd-kit/sortable": "^7.0.0",
+        "@dnd-kit/utilities": "^3.2.0",
         "clsx": "^1.1.1",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",

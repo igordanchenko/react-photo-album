@@ -10,6 +10,7 @@ import {
     KeyboardSensor,
     MouseSensor,
     TouchSensor,
+    UniqueIdentifier,
     useSensor,
     useSensors,
 } from "@dnd-kit/core";
@@ -103,7 +104,7 @@ const App = () => {
         }))
     );
     const renderedPhotos = useRef<{ [key: string]: SortablePhotoProps }>({});
-    const [activeId, setActiveId] = useState<string | null>(null);
+    const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
     const activeIndex = activeId ? photos.findIndex((photo) => photo.id === activeId) : undefined;
 
     const sensors = useSensors(
