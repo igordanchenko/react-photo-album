@@ -13,9 +13,9 @@ export type LayoutType = "columns" | "rows" | "masonry";
 
 export type ClickHandler<T extends Photo = Photo> = (event: MouseEvent, photo: T, index: number) => void;
 
-export type ResponsiveParameterProvider = (containerWidth: number) => number;
+export type ResponsiveParameterProvider<T = number> = (containerWidth: number) => T;
 
-export type ResponsiveParameter = number | ResponsiveParameterProvider;
+export type ResponsiveParameter<T = number> = T | ResponsiveParameterProvider<T>;
 
 export type ResponsiveSizes = {
     /** default size e.g. 100vw or calc(100vw - 200px) */
@@ -88,7 +88,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     /** Target row height in the 'rows' layout. */
     targetRowHeight?: ResponsiveParameter;
     /** Additional row constraints */
-    rowConstraints?: RowConstraints;
+    rowConstraints?: ResponsiveParameter<RowConstraints>;
     /** Photo album width at various viewport sizes. */
     sizes?: ResponsiveSizes;
     /** Photo click callback function. */

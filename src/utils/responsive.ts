@@ -1,26 +1,27 @@
 import { ResponsiveParameter } from "../types";
 
+type AnyFunction = (...args: unknown[]) => unknown;
+
 const breakpoints = Object.freeze([1200, 600, 300, 0]);
 
-const unwrap = (value: ResponsiveParameter, containerWidth: number): number =>
-    typeof value === "function" ? value(containerWidth) : value;
+const unwrap = <T, P = T extends AnyFunction ? ReturnType<T> : T>(value: T, containerWidth: number): P => {
+    return typeof value === "function" ? value(containerWidth) : value;
+};
 
-const unwrapParameter = (value: ResponsiveParameter | undefined, containerWidth: number): number | undefined =>
-    typeof value !== "undefined" ? unwrap(value, containerWidth) : undefined;
+const unwrapParameter = <T>(value: ResponsiveParameter<T> | undefined, containerWidth: number): T | undefined =>
+    value ? unwrap(value, containerWidth) : undefined;
 
-const selectResponsiveValue = (values: ResponsiveParameter[], containerWidth: number): number => {
+const selectResponsiveValue = <T>(values: ResponsiveParameter<T>[], containerWidth: number): T => {
     const index = breakpoints.findIndex((breakpoint) => breakpoint <= containerWidth);
     return unwrap(values[index >= 0 ? index : 0], containerWidth);
 };
 
-const resolveResponsiveParameter = (
-    parameter: ResponsiveParameter | undefined,
+const resolveResponsiveParameter = <T>(
+    parameter: ResponsiveParameter<T> | undefined,
     containerWidth: number,
-    values: ResponsiveParameter[],
-    minValue = 0
-): number => {
-    const value = unwrapParameter(parameter, containerWidth);
-    return Math.round(Math.max(value === undefined ? selectResponsiveValue(values, containerWidth) : value, minValue));
+    values: ResponsiveParameter<T>[]
+): T => {
+    return unwrapParameter(parameter, containerWidth) ?? selectResponsiveValue(values, containerWidth);
 };
 
 export default resolveResponsiveParameter;

@@ -309,6 +309,10 @@ describe("PhotoAlbum", () => {
                 spacing={() => 10}
                 padding={() => 5}
                 targetRowHeight={() => 100}
+                rowConstraints={() => ({
+                    minPhotos: 1,
+                    maxPhotos: 2,
+                })}
             />
         );
 

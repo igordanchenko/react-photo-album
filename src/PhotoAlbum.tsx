@@ -35,7 +35,7 @@ const resolveLayoutOptions = <T extends Photo>({
     onClick,
     viewportWidth,
     containerWidth,
-    columns: resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2], 1),
+    columns: Math.round(Math.max(resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2]), 1)),
     spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),
     padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0]),
     targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [
@@ -45,7 +45,7 @@ const resolveLayoutOptions = <T extends Photo>({
         (w) => w / 2,
     ]),
     sizes,
-    rowConstraints,
+    rowConstraints: resolveResponsiveParameter(rowConstraints, containerWidth, [{}, {}, {}, {}]),
 });
 
 const resolveComponentsProps = (componentsProps: ComponentsPropsParameter | undefined, containerWidth: number) =>
