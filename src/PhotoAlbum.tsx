@@ -6,7 +6,7 @@ import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import useIsomorphicEffect from "./hooks/useIsomorphicEffect";
 import useContainerWidth from "./hooks/useContainerWidth";
-import resolveResponsiveParameter from "./utils/responsive";
+import { resolveResponsiveParameter, unwrapParameter } from "./utils/responsive";
 import {
     ColumnsLayoutOptions,
     ComponentsPropsParameter,
@@ -35,7 +35,7 @@ const resolveLayoutOptions = <T extends Photo>({
     onClick,
     viewportWidth,
     containerWidth,
-    columns: Math.round(Math.max(resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2]), 1)),
+    columns: resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2], 1),
     spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),
     padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0]),
     targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [
@@ -44,8 +44,8 @@ const resolveLayoutOptions = <T extends Photo>({
         (w) => w / 3,
         (w) => w / 2,
     ]),
+    rowConstraints: unwrapParameter(rowConstraints, containerWidth),
     sizes,
-    rowConstraints: resolveResponsiveParameter(rowConstraints, containerWidth, [{}, {}, {}, {}]),
 });
 
 const resolveComponentsProps = (componentsProps: ComponentsPropsParameter | undefined, containerWidth: number) =>
