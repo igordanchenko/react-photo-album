@@ -1,10 +1,10 @@
 {
-    "include": ["src"],
     "compilerOptions": {
         "strict": true,
         "target": "ES2018",
         "module": "ESNext",
         "jsx": "react-jsx",
+        "allowJs": true,
         "noEmit": true,
         "declaration": false,
         "moduleResolution": "node",
