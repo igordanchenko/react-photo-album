@@ -18,7 +18,7 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@dnd-kit/core": "^6.0.1",
+        "@dnd-kit/core": "^6.0.3",
         "@dnd-kit/sortable": "^7.0.0",
         "@dnd-kit/utilities": "^3.2.0",
         "clsx": "^1.1.1",
@@ -27,7 +27,7 @@
         "react-photo-album": "^1.14.0"
     },
     "devDependencies": {
-        "@types/react": "^18.0.9",
+        "@types/react": "^18.0.10",
         "@types/react-dom": "^18.0.5",
         "react-scripts": "^5.0.1",
         "typescript": "^4.7.2"
