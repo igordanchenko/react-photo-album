@@ -124,4 +124,4 @@ load. If CLS becomes an issue in your case, you may want to consider using hard-
 
 ## License
 
-MIT © [Igor Danchenko](https://github.com/igordanchenko)
+MIT © 2021 [Igor Danchenko](https://github.com/igordanchenko)
