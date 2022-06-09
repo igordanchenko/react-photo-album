@@ -1,32 +1,25 @@
 import { createContext, ReactNode, useContext, useMemo, useState } from "react";
 import { LayoutType, Photo } from "react-photo-album";
 
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid";
-import MenuItem from "@mui/material/MenuItem";
 import Paper from "@mui/material/Paper";
 import Slider from "@mui/material/Slider";
+import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
 
 import useLayoutEffect from "./layoutEffect";
 import photos from "./photos";
 
-const Filter = ({ title, children }: { title: string; children: ReactNode }) => (
-    <>
-        <Grid item xs={5} sm={3} md={2} sx={{ textAlign: "right" }}>
-            <FormControl margin="normal">
-                <FormLabel>{title}:</FormLabel>
-            </FormControl>
-        </Grid>
-
-        <Grid item xs={7} sm={5} md={4}>
-            {children}
-        </Grid>
-    </>
+const Filter = ({ children }: { children: ReactNode }) => (
+    <Grid item xs={12} sm={8} lg={6}>
+        {children}
+    </Grid>
 );
 
 const SliderControl = ({
+    name,
     min,
     max,
     step,
@@ -34,6 +27,7 @@ const SliderControl = ({
     onChange,
     disabled,
 }: {
+    name: string;
     min: number;
     max: number;
     step?: number;
@@ -41,7 +35,10 @@ const SliderControl = ({
     onChange: (event: Event, value: number, activeThumb: number) => void;
     disabled?: boolean;
 }) => (
-    <FormControl margin="normal" fullWidth>
+    <FormControl margin="none" fullWidth>
+        <InputLabel shrink variant="standard">
+            {name}
+        </InputLabel>
         <Slider
             min={min}
             max={max}
@@ -55,6 +52,7 @@ const SliderControl = ({
                 { value: max, label: `${max}` },
             ]}
             onChange={(e, value, activeThumb) => onChange(e, typeof value === "number" ? value : value[0], activeThumb)}
+            sx={{ mt: 2 }}
         />
     </FormControl>
 );
@@ -110,12 +108,13 @@ const Settings = ({ children }: { children: ReactNode }) => {
     return (
         <SettingsContext.Provider value={settings}>
             <Paper variant="outlined" sx={{ mb: 4, p: 2, textAlign: "left" }}>
-                <Grid container columns={24} rowSpacing={0} columnSpacing={{ xs: 1, md: 2 }}>
-                    <Filter title="Layout">
+                <Grid container columns={24} rowSpacing={2} columnSpacing={4}>
+                    <Filter>
                         <TextField
                             select
                             fullWidth
-                            variant="outlined"
+                            label="Layout"
+                            variant="standard"
                             margin="none"
                             value={layout}
                             onChange={(event) => setLayout(event.target.value as LayoutType)}
@@ -132,8 +131,9 @@ const Settings = ({ children }: { children: ReactNode }) => {
                         </TextField>
                     </Filter>
 
-                    <Filter title="Photos">
+                    <Filter>
                         <SliderControl
+                            name="Photos"
                             min={1}
                             max={photos.length}
                             value={count}
@@ -141,16 +141,29 @@ const Settings = ({ children }: { children: ReactNode }) => {
                         />
                     </Filter>
 
-                    <Filter title="Spacing">
-                        <SliderControl min={0} max={50} value={spacing} onChange={(_, value) => setSpacing(value)} />
-                    </Filter>
-
-                    <Filter title="Padding">
-                        <SliderControl min={0} max={50} value={padding} onChange={(_, value) => setPadding(value)} />
-                    </Filter>
-
-                    <Filter title="Row height">
+                    <Filter>
                         <SliderControl
+                            name="Spacing"
+                            min={0}
+                            max={50}
+                            value={spacing}
+                            onChange={(_, value) => setSpacing(value)}
+                        />
+                    </Filter>
+
+                    <Filter>
+                        <SliderControl
+                            name="Padding"
+                            min={0}
+                            max={50}
+                            value={padding}
+                            onChange={(_, value) => setPadding(value)}
+                        />
+                    </Filter>
+
+                    <Filter>
+                        <SliderControl
+                            name="Row height"
                             min={50}
                             max={500}
                             step={5}
@@ -160,8 +173,9 @@ const Settings = ({ children }: { children: ReactNode }) => {
                         />
                     </Filter>
 
-                    <Filter title="Columns">
+                    <Filter>
                         <SliderControl
+                            name="Columns"
                             min={1}
                             max={10}
                             value={columns}
@@ -170,8 +184,9 @@ const Settings = ({ children }: { children: ReactNode }) => {
                         />
                     </Filter>
 
-                    <Filter title="Width (%)">
+                    <Filter>
                         <SliderControl
+                            name="Width (%)"
                             min={10}
                             max={100}
                             step={5}
