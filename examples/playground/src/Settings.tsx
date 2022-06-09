@@ -34,28 +34,36 @@ const SliderControl = ({
     value: number;
     onChange: (event: Event, value: number, activeThumb: number) => void;
     disabled?: boolean;
-}) => (
-    <FormControl margin="none" fullWidth>
-        <InputLabel shrink variant="standard">
-            {name}
-        </InputLabel>
-        <Slider
-            min={min}
-            max={max}
-            step={step}
-            value={value}
-            disabled={disabled}
-            size="small"
-            valueLabelDisplay="auto"
-            marks={[
-                { value: min, label: `${min}` },
-                { value: max, label: `${max}` },
-            ]}
-            onChange={(e, value, activeThumb) => onChange(e, typeof value === "number" ? value : value[0], activeThumb)}
-            sx={{ mt: 2 }}
-        />
-    </FormControl>
-);
+}) => {
+    const [focused, setFocused] = useState(false);
+
+    return (
+        <FormControl margin="none" fullWidth>
+            <InputLabel shrink variant="standard" focused={focused}>
+                {name}
+            </InputLabel>
+            <Slider
+                min={min}
+                max={max}
+                step={step}
+                value={value}
+                disabled={disabled}
+                size="small"
+                valueLabelDisplay="auto"
+                marks={[
+                    { value: min, label: `${min}` },
+                    { value: max, label: `${max}` },
+                ]}
+                onChange={(e, value, activeThumb) =>
+                    onChange(e, typeof value === "number" ? value : value[0], activeThumb)
+                }
+                onFocus={() => setFocused(true)}
+                onBlur={() => setFocused(false)}
+                sx={{ mt: 2 }}
+            />
+        </FormControl>
+    );
+};
 
 type SettingsProps = {
     photos: Photo[];
