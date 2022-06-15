@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 import PhotoAlbum from "react-photo-album";
-import { Lightbox } from "yet-another-react-lightbox";
+import Lightbox from "yet-another-react-lightbox";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 
 import "yet-another-react-lightbox/styles.css";
 import photos from "./photos";
@@ -27,7 +29,13 @@ const App = () => {
                 onClick={(event, photo, index) => setIndex(index)}
             />
 
-            <Lightbox slides={slides} open={index >= 0} index={index} close={() => setIndex(-1)} />
+            <Lightbox
+                slides={slides}
+                open={index >= 0}
+                index={index}
+                close={() => setIndex(-1)}
+                plugins={[Fullscreen, Slideshow]}
+            />
         </>
     );
 };
