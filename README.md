@@ -37,7 +37,7 @@ All examples are available on [CodeSandbox](https://codesandbox.io/examples/pack
 
 ## Documentation
 
-[https://react-photo-album.com/](https://react-photo-album.com/)
+[https://react-photo-album.com/documentation](https://react-photo-album.com/documentation)
 
 ## Installation
 
