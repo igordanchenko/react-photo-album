@@ -89,6 +89,8 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     targetRowHeight?: ResponsiveParameter;
     /** Additional row constraints */
     rowConstraints?: ResponsiveParameter<RowConstraints>;
+    /** Additional columnn constraints */
+    columnConstraints?: ResponsiveParameter<ColumnConstraints>;
     /** Photo album width at various viewport sizes. */
     sizes?: ResponsiveSizes;
     /** Photo click callback function. */
@@ -144,6 +146,8 @@ export type ColumnsLayoutOptions<T extends Photo = Photo> = GenericLayoutOptions
     layout: Extract<LayoutType, "columns" | "masonry">;
     /** number of columns in 'columns' or 'masonry' layout */
     columns: number;
+    /** Additional column constraints */
+    columnConstraints?: ColumnConstraints;
 };
 
 export type LayoutOptions<T extends Photo = Photo> = ColumnsLayoutOptions<T> | RowsLayoutOptions<T>;
@@ -219,6 +223,11 @@ export type RowConstraints = {
     minPhotos?: number;
     /** maximum number of photos per row in 'rows' layout */
     maxPhotos?: number;
+};
+
+export type ColumnConstraints = {
+    /** minimum number of columns in 'masonry' or 'columns' layout when there isn't enough photos to fill all the columns */
+    minColumns?: number;
 };
 
 /** internal instrumentation for research and performance testing purposes, subject to change without notice */

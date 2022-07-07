@@ -75,6 +75,34 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(<PhotoAlbum layout={"columns"} photos={photos.slice(0, 3)} columns={5} />);
     });
 
+    it("supports minimum number of columns parameter", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"masonry"}
+                photos={photos.slice(0, 2)}
+                columns={4}
+                columnConstraints={{ minColumns: 4 }}
+            />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"columns"}
+                photos={photos.slice(0, 2)}
+                columns={4}
+                columnConstraints={{ minColumns: 4 }}
+            />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum layout={"masonry"} photos={[]} columns={4} columnConstraints={{ minColumns: 4 }} />
+        );
+
+        whenAskedToRender(
+            <PhotoAlbum layout={"columns"} photos={[]} columns={4} columnConstraints={{ minColumns: 4 }} />
+        );
+    });
+
     it("renders correctly with invalid defaultContainerWidth", () => {
         whenAskedToRender(<PhotoAlbum layout={"rows"} photos={photos} defaultContainerWidth={-1} />);
     });

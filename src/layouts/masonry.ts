@@ -13,7 +13,10 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
     const { photos, layoutOptions, instrumentation } = props;
     const { spacing, padding, containerWidth } = layoutOptions;
 
-    const columns = Math.min(layoutOptions.columns, photos.length);
+    const columns = Math.min(
+        layoutOptions.columns,
+        Math.max(photos.length, layoutOptions.columnConstraints?.minColumns || 0)
+    );
 
     instrumentation?.onStartLayoutComputation?.();
 
@@ -38,29 +41,29 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
     }
 
     // group photos by column
-    const columnsModel = photos.reduce<{ photo: T; index: number }[][]>((acc, photo: T, index) => {
-        // find the shortest column
-        const shortestColumn = columnsCurrentTopPositions.reduce(
-            (acc, item, i) =>
-                // subtracting 1 here to compensate for floating point precision errors
-                // when two columns have identical height their floating point values can be slightly off
-                // in subsequent re-renders, leading to images jumping between columns
-                item < columnsCurrentTopPositions[acc] - 1 ? i : acc,
-            0
-        );
+    const columnsModel = photos.reduce<{ photo: T; index: number }[][]>(
+        (acc, photo: T, index) => {
+            // find the shortest column
+            const shortestColumn = columnsCurrentTopPositions.reduce(
+                (acc, item, i) =>
+                    // subtracting 1 here to compensate for floating point precision errors
+                    // when two columns have identical height their floating point values can be slightly off
+                    // in subsequent re-renders, leading to images jumping between columns
+                    item < columnsCurrentTopPositions[acc] - 1 ? i : acc,
+                0
+            );
 
-        // update top position of the shortest column
-        columnsCurrentTopPositions[shortestColumn] =
-            columnsCurrentTopPositions[shortestColumn] + columnWidth / ratio(photo) + spacing + 2 * padding;
+            // update top position of the shortest column
+            columnsCurrentTopPositions[shortestColumn] =
+                columnsCurrentTopPositions[shortestColumn] + columnWidth / ratio(photo) + spacing + 2 * padding;
 
-        // place a photo into the shortest column
-        if (!acc[shortestColumn]) {
-            acc[shortestColumn] = [];
-        }
-        acc[shortestColumn].push({ photo, index });
+            // place a photo into the shortest column
+            acc[shortestColumn].push({ photo, index });
 
-        return acc;
-    }, []);
+            return acc;
+        },
+        Array.from({ length: columns }).map(() => [])
+    );
 
     // map through each column and photo and add layout properties
     const result = columnsModel.map((column) =>

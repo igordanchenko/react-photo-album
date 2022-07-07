@@ -117,6 +117,13 @@ const computeColumnsModel = <T extends Photo = Photo>({
             padding,
         });
 
+        for (let i = photos.length; i < (layoutOptions.columnConstraints?.minColumns || 0); i += 1) {
+            columnsGaps[i] = 0;
+            columnsRatios[i] =
+                photos.length > 0 ? photos.reduce((acc, photo) => acc + ratio(photo), 0) / photos.length : 1;
+            columnsModel[i] = [];
+        }
+
         return { columnsGaps, columnsRatios, columnsModel };
     }
 
@@ -220,7 +227,10 @@ const computeColumnsLayout = <T extends Photo = Photo>({
         photos,
         layoutOptions: {
             ...layoutOptions,
-            columns: Math.min(layoutOptions.columns, photos.length),
+            columns: Math.min(
+                layoutOptions.columns,
+                Math.max(photos.length, layoutOptions.columnConstraints?.minColumns || 0)
+            ),
         },
         instrumentation,
     });

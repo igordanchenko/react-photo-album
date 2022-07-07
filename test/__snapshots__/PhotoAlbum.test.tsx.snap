@@ -20015,6 +20015,334 @@ exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
 </div>
 `;
 
+exports[`PhotoAlbum supports minimum number of columns parameter 1`] = `
+<div
+  className="react-photo-album react-photo-album--masonry"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`PhotoAlbum supports minimum number of columns parameter 2`] = `
+<div
+  className="react-photo-album react-photo-album--columns"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.3375 + 0px)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      style={
+        Object {
+          "aspectRatio": "1080 / 780",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.1625 + 0px)",
+      }
+    }
+  >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
+      style={
+        Object {
+          "aspectRatio": "1080 / 1620",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+  </div>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.25 + 0px)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.25 + 0px)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`PhotoAlbum supports minimum number of columns parameter 3`] = `
+<div
+  className="react-photo-album react-photo-album--masonry"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "flex-start",
+        "width": "calc((100% - 45px) / 4)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`PhotoAlbum supports minimum number of columns parameter 4`] = `
+<div
+  className="react-photo-album react-photo-album--columns"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "flexWrap": "nowrap",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.25 + 0px)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.25 + 0px)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.25 + 0px)",
+      }
+    }
+  />
+  <div
+    className="react-photo-album--column"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "display": "flex",
+        "flexDirection": "column",
+        "flexWrap": "nowrap",
+        "justifyContent": "space-between",
+        "width": "calc((100% - 45px) * 0.25 + 0px)",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`PhotoAlbum supports minimum number of elements in a row 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
