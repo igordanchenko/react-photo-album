@@ -9,16 +9,19 @@ import "yet-another-react-lightbox/styles.css";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import photos from "./photos";
 
 const slides = photos.map(({ src, width, height, images }) => ({
     src,
-    aspectRatio: width / height,
+    width,
+    height,
     srcSet: images.map((image) => ({
         src: image.src,
         width: image.width,
+        height: image.height,
     })),
 }));
 
@@ -40,7 +43,7 @@ const App = () => {
                 index={index}
                 close={() => setIndex(-1)}
                 // enable optional lightbox plugins
-                plugins={[Fullscreen, Slideshow, Thumbnails]}
+                plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
             />
         </>
     );
