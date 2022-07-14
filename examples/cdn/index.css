@@ -28,33 +28,42 @@ header a {
     font-weight: 500;
     margin: 0;
     padding: 8px;
+
+}
+
+a {
     color: rgb(0, 112, 243);
     text-decoration: none;
 }
 
-header a:hover {
+a:hover {
     text-decoration: underline;
 }
 
-main {
+p {
+    line-height: 2;
+    text-align: center;
+}
+
+main, p {
     margin: 5px;
     padding: 0;
 }
 
 @media all and (min-width: 300px) {
-    main {
+    main, p {
         margin: 10px;
     }
 }
 
 @media all and (min-width: 600px) {
-    main {
+    main, p {
         margin: 15px;
     }
 }
 
 @media all and (min-width: 1200px) {
-    main {
+    main, p {
         margin: 20px;
     }
 }
