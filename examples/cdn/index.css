@@ -40,11 +40,6 @@ a:hover {
     text-decoration: underline;
 }
 
-p {
-    line-height: 2;
-    text-align: center;
-}
-
 main, p {
     margin: 5px;
     padding: 0;
@@ -66,4 +61,9 @@ main, p {
     main, p {
         margin: 20px;
     }
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
 }

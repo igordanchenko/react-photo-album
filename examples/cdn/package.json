@@ -20,6 +20,6 @@
         "start": "serve"
     },
     "devDependencies": {
-        "serve": "^13.0.4"
+        "serve": "^14.0.1"
     }
 }
