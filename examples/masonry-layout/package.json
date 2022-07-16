@@ -19,7 +19,7 @@
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-photo-album": "^1.15.0"
+        "react-photo-album": "^1.16.0"
     },
     "devDependencies": {
         "@types/react": "^18.0.15",
