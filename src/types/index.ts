@@ -1,4 +1,5 @@
 import {
+    CSSProperties,
     ForwardRefExoticComponent,
     HTMLAttributes,
     ImgHTMLAttributes,
@@ -72,6 +73,12 @@ export type PhotoProps<T extends Photo = Photo> = {
     /** pre-populated 'img' element attributes */
     imageProps: ImgHTMLAttributes<HTMLImageElement> &
         Required<Pick<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "style">>;
+    /** A callback to render the default photo implementation. If `wrapped` is `true`, the image will be styled
+     * with `width` and `height` set to 100%. Use this option when you already sized image wrapper with image
+     * dimensions (see `wrapperStyle`) */
+    renderDefaultPhoto: (options?: { wrapped?: boolean }) => ReactElement;
+    /** CSS styles to properly size image wrapper (i.e. <div> wrapper) */
+    wrapperStyle: CSSProperties;
 };
 
 export type PhotoAlbumProps<T extends Photo = Photo> = {

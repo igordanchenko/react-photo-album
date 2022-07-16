@@ -54,12 +54,10 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
     return { srcSet, sizes };
 };
 
-const defaultRenderPhoto = <T extends Photo = Photo>({ imageProps }: PhotoProps<T>) => {
-    const { src, alt, srcSet, sizes, ...rest } = imageProps;
-    return <img alt={alt} {...(srcSet ? { srcSet, sizes } : null)} src={src} {...rest} />;
-};
-
-type PhotoRendererProps<T extends Photo = Photo> = Omit<PhotoProps<T>, "imageProps"> & {
+type PhotoRendererProps<T extends Photo = Photo> = Omit<
+    PhotoProps<T>,
+    "imageProps" | "renderDefaultPhoto" | "wrapperStyle"
+> & {
     imageProps?: HTMLAttributes<HTMLImageElement>;
 } & { renderPhoto?: RenderPhoto<T> };
 
@@ -99,7 +97,39 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         ...restImageProps,
     };
 
-    return (renderPhoto ?? defaultRenderPhoto)({ photo, layout, layoutOptions, imageProps });
+    const renderDefaultPhoto = ({ wrapped }: { wrapped?: boolean } = {}) => {
+        const { src, alt, srcSet, sizes, style, ...rest } = imageProps;
+
+        return (
+            <img
+                alt={alt}
+                {...(srcSet ? { srcSet, sizes } : null)}
+                src={src}
+                style={wrapped ? { display: "block", width: "100%", height: "100%" } : style}
+                {...rest}
+            />
+        );
+    };
+
+    const wrapperStyle = (({ display, boxSizing, width, aspectRatio, padding, marginBottom }) => ({
+        display,
+        boxSizing,
+        width,
+        aspectRatio,
+        padding,
+        marginBottom,
+    }))(imageStyle);
+
+    return (
+        renderPhoto?.({
+            photo,
+            layout,
+            layoutOptions,
+            imageProps,
+            renderDefaultPhoto,
+            wrapperStyle,
+        }) ?? renderDefaultPhoto()
+    );
 };
 
 export default PhotoRenderer;

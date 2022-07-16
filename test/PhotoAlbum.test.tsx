@@ -637,6 +637,18 @@ describe("PhotoAlbum", () => {
         expect(resizeObserverMock.disconnect.mock.calls.length).toBe(2);
     });
 
+    it("supports custom wrapper", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout={"rows"}
+                photos={photos}
+                renderPhoto={({ wrapperStyle, renderDefaultPhoto }) => (
+                    <div style={wrapperStyle}>{renderDefaultPhoto({ wrapped: true })}</div>
+                )}
+            />
+        );
+    });
+
     it("supports instrumentation", () => {
         const instrumentation = {
             onStartLayoutComputation: jest.fn(),
