@@ -418,54 +418,6 @@ describe("PhotoAlbum", () => {
         expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
         expect(onStartLayoutComputation).toHaveBeenCalledTimes(3); // 2 + 1 initial render
 
-        resizeObserverProvider.mockClear();
-        onStartLayoutComputation.mockClear();
-
-        rerender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[300, 600]}
-                resizeObserverProvider={resizeObserverProvider}
-                instrumentation={instrumentation}
-            />
-        );
-
-        expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
-        expect(onStartLayoutComputation).toHaveBeenCalledTimes(1);
-
-        resizeObserverProvider.mockClear();
-        onStartLayoutComputation.mockClear();
-
-        rerender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[300, 600]}
-                resizeObserverProvider={resizeObserverProvider}
-                instrumentation={instrumentation}
-            />
-        );
-
-        expect(resizeObserverProvider).toHaveBeenCalledTimes(0);
-        expect(onStartLayoutComputation).toHaveBeenCalledTimes(1);
-
-        resizeObserverProvider.mockClear();
-        onStartLayoutComputation.mockClear();
-
-        rerender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[600, 300]}
-                resizeObserverProvider={resizeObserverProvider}
-                instrumentation={instrumentation}
-            />
-        );
-
-        expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
-        expect(onStartLayoutComputation).toHaveBeenCalledTimes(1);
-
         unmount();
     });
 

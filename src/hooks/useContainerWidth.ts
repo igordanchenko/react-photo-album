@@ -1,71 +1,70 @@
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
-import useArray from "./useArray";
-import useLatest from "./useLatest";
+import useEventCallback from "./useEventCallback";
 import { ResizeObserverProvider } from "../types";
 
 const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, breakpoints?: number[]) => {
     const [containerWidth, setContainerWidth] = useState<number>();
+    const [scrollbarWidth, setScrollbarWidth] = useState<number>();
+
+    const ref = useRef<HTMLElement | null>(null);
     const observerRef = useRef<ResizeObserver>();
-    const breakpointsArray = useArray(breakpoints);
-    const resizeObserverProviderRef = useLatest(resizeObserverProvider);
-    const containerWidthRef = useLatest(containerWidth);
-    const scrollbarWidthRef = useRef<number>();
 
-    const containerRef = useCallback(
-        (node: HTMLElement | null) => {
-            if (observerRef.current) {
-                observerRef.current.disconnect();
-                observerRef.current = undefined;
-            }
+    const updateWidth = useEventCallback(() => {
+        let newWidth = ref.current?.clientWidth;
 
-            const updateWidth = () => {
-                let newWidth = node?.clientWidth;
+        if (newWidth !== undefined && breakpoints && breakpoints.length > 0) {
+            const sortedBreakpoints = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
+            sortedBreakpoints.push(Math.floor(sortedBreakpoints[sortedBreakpoints.length - 1] / 2));
+            const threshold = newWidth;
+            newWidth = sortedBreakpoints.find(
+                (breakpoint, index) => breakpoint <= threshold || index === sortedBreakpoints.length - 1
+            );
+        }
 
-                if (newWidth !== undefined && breakpointsArray && breakpointsArray.length > 0) {
-                    const sortedBreakpoints = [...breakpointsArray.filter((x) => x > 0)].sort((a, b) => b - a);
-                    sortedBreakpoints.push(Math.floor(sortedBreakpoints[sortedBreakpoints.length - 1] / 2));
-                    const threshold = newWidth;
-                    newWidth = sortedBreakpoints.find(
-                        (breakpoint, index) => breakpoint <= threshold || index === sortedBreakpoints.length - 1
-                    );
-                }
+        const newScrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
-                const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-                const previousScrollbarWidth = scrollbarWidthRef.current;
-                scrollbarWidthRef.current = scrollbarWidth;
+        if (newScrollbarWidth !== scrollbarWidth) {
+            setScrollbarWidth(newScrollbarWidth);
+        }
 
-                /* istanbul ignore next */
-                if (
-                    containerWidthRef.current !== undefined &&
-                    previousScrollbarWidth !== undefined &&
-                    newWidth !== undefined &&
-                    newWidth > containerWidthRef.current &&
-                    newWidth - containerWidthRef.current <= 20 &&
-                    scrollbarWidth < previousScrollbarWidth
-                ) {
-                    // prevent infinite resize loop when scrollbar disappears
-                    return;
-                }
+        /* istanbul ignore next */
+        if (
+            containerWidth !== undefined &&
+            scrollbarWidth !== undefined &&
+            newWidth !== undefined &&
+            newWidth > containerWidth &&
+            newWidth - containerWidth <= 20 &&
+            newScrollbarWidth < scrollbarWidth
+        ) {
+            // prevent infinite resize loop when scrollbar disappears
+            return;
+        }
 
-                setContainerWidth(newWidth);
-            };
+        if (newWidth !== containerWidth) {
+            setContainerWidth(newWidth);
+        }
+    });
 
-            updateWidth();
+    const containerRef = useEventCallback((node: HTMLElement | null) => {
+        observerRef.current?.disconnect();
+        observerRef.current = undefined;
 
-            if (node) {
-                observerRef.current =
-                    typeof ResizeObserver !== "undefined"
-                        ? new ResizeObserver(updateWidth)
-                        : resizeObserverProviderRef.current?.(updateWidth);
+        ref.current = node;
 
-                observerRef.current?.observe(node);
-            }
-        },
-        [breakpointsArray, resizeObserverProviderRef, containerWidthRef]
-    );
+        updateWidth();
 
-    return useMemo(() => ({ containerRef, containerWidth }), [containerRef, containerWidth]);
+        if (node) {
+            observerRef.current =
+                typeof ResizeObserver !== "undefined"
+                    ? new ResizeObserver(updateWidth)
+                    : resizeObserverProvider?.(updateWidth);
+
+            observerRef.current?.observe(node);
+        }
+    });
+
+    return { containerRef, containerWidth };
 };
 
 export default useContainerWidth;
