@@ -21,10 +21,10 @@
         "@emotion/react": "^11.9.3",
         "@emotion/server": "^11.4.0",
         "@emotion/styled": "^11.9.3",
-        "@mui/material": "^5.9.0",
+        "@mui/material": "^5.9.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-photo-album": "^1.16.0"
+        "react-photo-album": "^1.16.1"
     },
     "devDependencies": {
         "@types/react": "^18.0.15",
