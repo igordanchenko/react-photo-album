@@ -58,12 +58,16 @@ const ColumnContainerRenderer = <T extends Photo = Photo>(props: ColumnContainer
         ...restColumnContainerProps,
     };
 
-    return (renderColumnContainer ?? defaultRenderColumnContainer)({
-        layoutOptions,
-        columnContainerProps,
-        children,
-        ...rest,
-    });
+    return (
+        <>
+            {(renderColumnContainer ?? defaultRenderColumnContainer)({
+                layoutOptions,
+                columnContainerProps,
+                children,
+                ...rest,
+            })}
+        </>
+    );
 };
 
 export default ColumnContainerRenderer;

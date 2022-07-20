@@ -52,12 +52,16 @@ const ContainerRenderer = <T extends Photo = Photo>(props: ContainerRendererProp
         );
     }
 
-    return (renderContainer ?? defaultRenderContainer)({
-        containerProps,
-        containerRef,
-        layoutOptions,
-        children,
-    });
+    return (
+        <>
+            {(renderContainer ?? defaultRenderContainer)({
+                containerProps,
+                containerRef,
+                layoutOptions,
+                children,
+            })}
+        </>
+    );
 };
 
 export default ContainerRenderer;

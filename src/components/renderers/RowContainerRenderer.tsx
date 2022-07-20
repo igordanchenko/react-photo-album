@@ -38,13 +38,17 @@ const RowContainerRenderer = <T extends Photo = Photo>(props: RowContainerRender
         ...restRowContainerProps,
     };
 
-    return (renderRowContainer ?? defaultRenderRowContainer)({
-        layoutOptions,
-        rowIndex,
-        rowsCount,
-        rowContainerProps,
-        children,
-    });
+    return (
+        <>
+            {(renderRowContainer ?? defaultRenderRowContainer)({
+                layoutOptions,
+                rowIndex,
+                rowsCount,
+                rowContainerProps,
+                children,
+            })}
+        </>
+    );
 };
 
 export default RowContainerRenderer;

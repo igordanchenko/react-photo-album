@@ -121,14 +121,16 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
     }))(imageStyle);
 
     return (
-        renderPhoto?.({
-            photo,
-            layout,
-            layoutOptions,
-            imageProps,
-            renderDefaultPhoto,
-            wrapperStyle,
-        }) ?? renderDefaultPhoto()
+        <>
+            {renderPhoto?.({
+                photo,
+                layout,
+                layoutOptions,
+                imageProps,
+                renderDefaultPhoto,
+                wrapperStyle,
+            }) ?? renderDefaultPhoto()}
+        </>
     );
 };
 
