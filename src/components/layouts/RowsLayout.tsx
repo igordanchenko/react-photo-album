@@ -14,9 +14,9 @@ import {
 
 type RowsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
-    layoutOptions: RowsLayoutOptions;
+    layoutOptions: RowsLayoutOptions<T>;
     renderPhoto?: RenderPhoto<T>;
-    renderRowContainer?: RenderRowContainer;
+    renderRowContainer?: RenderRowContainer<T>;
     componentsProps?: ComponentsProps;
     instrumentation?: Instrumentation;
 };

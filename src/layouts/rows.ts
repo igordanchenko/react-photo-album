@@ -11,7 +11,7 @@ const findIdealNodeSearch = ({
     targetRowHeight,
     containerWidth,
 }: {
-    photos: Array<Photo>;
+    photos: Photo[];
     targetRowHeight: number;
     containerWidth: number;
 }): number => {
@@ -31,7 +31,7 @@ const getCommonHeight = (row: Array<Photo>, containerWidth: number, spacing: num
 
 // calculate the cost of breaking at this node (edge weight)
 const cost = (
-    photos: Array<Photo>,
+    photos: Photo[],
     i: number,
     j: number,
     width: number,
@@ -46,7 +46,7 @@ const cost = (
 
 // return function that gets the neighboring nodes of node and returns costs
 const makeGetNeighbors =
-    ({
+    <T extends Photo = Photo>({
         photos,
         layoutOptions,
         targetRowHeight,
@@ -54,8 +54,8 @@ const makeGetNeighbors =
         rowConstraints,
         instrumentation,
     }: {
-        photos: Array<Photo>;
-        layoutOptions: RowsLayoutOptions;
+        photos: T[];
+        layoutOptions: RowsLayoutOptions<T>;
         targetRowHeight: number;
         limitNodeSearch: number;
         rowConstraints?: RowConstraints;
@@ -85,7 +85,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
     instrumentation,
 }: {
     photos: T[];
-    layoutOptions: RowsLayoutOptions;
+    layoutOptions: RowsLayoutOptions<T>;
     instrumentation?: Instrumentation;
 }): RowsLayoutModel<T> => {
     const { spacing, padding, containerWidth, targetRowHeight, rowConstraints } = layoutOptions;
