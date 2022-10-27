@@ -374,8 +374,8 @@ describe("PhotoAlbum", () => {
     it("supports inline breakpoints", () => {
         const resizeObserverRef = global.ResizeObserver;
         try {
-            const onStartLayoutComputation = jest.fn();
-            const instrumentation = { onStartLayoutComputation };
+            const onStartLayout = jest.fn();
+            const instrumentation = { onStartLayout };
 
             const resizeObserverProvider = jest.fn(() => ({
                 observe: jest.fn(),
@@ -403,7 +403,7 @@ describe("PhotoAlbum", () => {
             );
 
             expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
-            expect(onStartLayoutComputation).toHaveBeenCalledTimes(3); // 2 + 1 initial render
+            expect(onStartLayout).toHaveBeenCalledTimes(3); // 2 + 1 initial render
 
             unmount();
         } finally {
@@ -513,15 +513,15 @@ describe("PhotoAlbum", () => {
 
     it("supports instrumentation", () => {
         const instrumentation = {
-            onStartLayoutComputation: jest.fn(),
-            onFinishLayoutComputation: jest.fn(),
+            onStartLayout: jest.fn(),
+            onFinishLayout: jest.fn(),
         };
 
         render(<PhotoAlbum layout={"rows"} photos={photos} instrumentation={instrumentation} />);
         render(<PhotoAlbum layout={"columns"} photos={photos} instrumentation={instrumentation} />);
         render(<PhotoAlbum layout={"masonry"} photos={photos} instrumentation={instrumentation} />);
 
-        expect(instrumentation.onStartLayoutComputation.mock.calls.length).toBe(6);
-        expect(instrumentation.onFinishLayoutComputation.mock.calls.length).toBe(6);
+        expect(instrumentation.onStartLayout.mock.calls.length).toBe(6);
+        expect(instrumentation.onFinishLayout.mock.calls.length).toBe(6);
     });
 });

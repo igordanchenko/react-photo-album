@@ -90,7 +90,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
 }): RowsLayoutModel<T> => {
     const { spacing, padding, containerWidth, targetRowHeight, rowConstraints } = layoutOptions;
 
-    instrumentation?.onStartLayoutComputation?.();
+    instrumentation?.onStartLayout?.();
 
     const limitNodeSearch = findIdealNodeSearch({ photos, containerWidth, targetRowHeight });
 
@@ -132,7 +132,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
         );
     }
 
-    instrumentation?.onFinishLayoutComputation?.(result);
+    instrumentation?.onFinishLayout?.(result);
 
     return result;
 };

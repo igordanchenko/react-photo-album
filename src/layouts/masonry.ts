@@ -18,7 +18,7 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
         Math.max(photos.length, layoutOptions.columnConstraints?.minColumns || 0)
     );
 
-    instrumentation?.onStartLayoutComputation?.();
+    instrumentation?.onStartLayout?.();
 
     // calculate column width based on total width and columns count
     const columnWidth = (containerWidth - spacing * (columns - 1) - 2 * padding * columns) / columns;
@@ -79,7 +79,7 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
         }))
     );
 
-    instrumentation?.onFinishLayoutComputation?.(result);
+    instrumentation?.onFinishLayout?.(result);
 
     return result;
 };
