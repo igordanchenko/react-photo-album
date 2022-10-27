@@ -229,9 +229,9 @@ export type ColumnConstraints = {
 /** internal instrumentation for research and performance testing purposes, subject to change without notice */
 export type Instrumentation = {
     fullGraphSearch?: boolean;
-    onStartLayoutComputation?: () => void;
+    onStartLayout?: () => void;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    onFinishLayoutComputation?: (...params: any) => void;
+    onFinishLayout?: (...params: any) => void;
 };
 
 /** @internal */

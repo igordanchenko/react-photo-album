@@ -221,7 +221,7 @@ const computeColumnsLayout = <T extends Photo = Photo>({
     layoutOptions,
     instrumentation,
 }: ComputeColumnsLayoutProps<T>): ColumnsLayoutModel<T> => {
-    instrumentation?.onStartLayoutComputation?.();
+    instrumentation?.onStartLayout?.();
 
     const result = computeLayout({
         photos,
@@ -235,7 +235,7 @@ const computeColumnsLayout = <T extends Photo = Photo>({
         instrumentation,
     });
 
-    instrumentation?.onFinishLayoutComputation?.(result);
+    instrumentation?.onFinishLayout?.(result);
 
     return result;
 };
