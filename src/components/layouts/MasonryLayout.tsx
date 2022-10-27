@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import computeMasonryLayout from "../../layouts/masonry";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";

@@ -1,4 +1,4 @@
-import { createElement, forwardRef } from "react";
+import * as React from "react";
 import renderer from "react-test-renderer";
 import { act, render, screen } from "@testing-library/react";
 
@@ -216,7 +216,7 @@ describe("PhotoAlbum", () => {
                 layout={"rows"}
                 photos={photos}
                 // eslint-disable-next-line react/display-name
-                renderContainer={forwardRef(({ children }, ref) => (
+                renderContainer={React.forwardRef(({ children }, ref) => (
                     <div ref={ref} className="custom-class">
                         {children}
                     </div>
@@ -312,21 +312,21 @@ describe("PhotoAlbum", () => {
     });
 
     it("doesn't crash when invoked without required parameters", () => {
-        whenAskedToRender(createElement(PhotoAlbum));
-        whenAskedToRender(createElement(PhotoAlbum, { layout: "columns" } as PhotoAlbumProps));
-        whenAskedToRender(createElement(PhotoAlbum, { photos: [] } as unknown as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum));
+        whenAskedToRender(React.createElement(PhotoAlbum, { layout: "columns" } as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { photos: [] } as unknown as PhotoAlbumProps));
     });
 
     it("doesn't crash when invoked with invalid required parameters", () => {
-        whenAskedToRender(createElement(PhotoAlbum, { layout: "unknown" } as unknown as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { layout: "unknown" } as unknown as PhotoAlbumProps));
         whenAskedToRender(
-            createElement(PhotoAlbum, {
+            React.createElement(PhotoAlbum, {
                 layout: "unknown",
                 photos: [],
             } as unknown as PhotoAlbumProps)
         );
-        whenAskedToRender(createElement(PhotoAlbum, { photos: 0 } as unknown as PhotoAlbumProps));
-        whenAskedToRender(createElement(PhotoAlbum, { photos: null } as unknown as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { photos: 0 } as unknown as PhotoAlbumProps));
+        whenAskedToRender(React.createElement(PhotoAlbum, { photos: null } as unknown as PhotoAlbumProps));
     });
 
     it("supports responsive parameters", () => {

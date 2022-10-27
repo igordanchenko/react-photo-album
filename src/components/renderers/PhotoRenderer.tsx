@@ -1,4 +1,4 @@
-import { CSSProperties, HTMLAttributes, MouseEvent } from "react";
+import * as React from "react";
 
 import round from "../../utils/round";
 import { LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../../types";
@@ -58,7 +58,7 @@ type PhotoRendererProps<T extends Photo = Photo> = Omit<
     PhotoProps<T>,
     "imageProps" | "renderDefaultPhoto" | "wrapperStyle"
 > & {
-    imageProps?: HTMLAttributes<HTMLImageElement>;
+    imageProps?: React.HTMLAttributes<HTMLImageElement>;
 } & { renderPhoto?: RenderPhoto<T> };
 
 const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) => {
@@ -78,10 +78,10 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
             : null),
         ...(onClick ? { cursor: "pointer" } : null),
         ...style,
-    } as CSSProperties;
+    } as React.CSSProperties;
 
     const handleClick = onClick
-        ? (event: MouseEvent) => {
+        ? (event: React.MouseEvent) => {
               onClick(event, photo, layout.index);
           }
         : undefined;

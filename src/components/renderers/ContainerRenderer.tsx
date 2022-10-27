@@ -1,4 +1,4 @@
-import { CSSProperties, ForwardRefExoticComponent, PropsWithChildren, RefAttributes } from "react";
+import * as React from "react";
 
 import { ContainerProps, Photo, RenderContainer, RenderContainerProps } from "../../types";
 import Optional from "../../types/Optional";
@@ -35,14 +35,14 @@ const ContainerRenderer = <T extends Photo = Photo>(props: ContainerRendererProp
             justifyContent: "space-between",
             flexDirection: layout === "rows" ? "column" : "row",
             ...style,
-        } as CSSProperties,
+        } as React.CSSProperties,
         ...restContainerProps,
     };
 
     // we are dealing with deprecated exotic component returned by forwardRef
     if (renderContainer && typeof renderContainer === "object") {
-        const Component = renderContainer as ForwardRefExoticComponent<
-            PropsWithChildren<ContainerProps<T>> & RefAttributes<HTMLDivElement>
+        const Component = renderContainer as React.ForwardRefExoticComponent<
+            React.PropsWithChildren<ContainerProps<T>> & React.RefAttributes<HTMLDivElement>
         >;
 
         return (
