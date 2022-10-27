@@ -82,7 +82,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
 
     const handleClick = onClick
         ? (event: React.MouseEvent) => {
-              onClick(event, photo, layout.index);
+              onClick({ event, photo, index: layout.index });
           }
         : undefined;
 
