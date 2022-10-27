@@ -7,14 +7,7 @@ import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import useLayoutEffect from "./hooks/useLayoutEffect";
 import useContainerWidth from "./hooks/useContainerWidth";
 import { resolveResponsiveParameter, unwrapParameter } from "./utils/responsive";
-import {
-    ColumnsLayoutOptions,
-    ComponentsPropsParameter,
-    LayoutOptions,
-    Photo,
-    PhotoAlbumProps,
-    RowsLayoutOptions,
-} from "./types";
+import { ComponentsPropsParameter, Photo, PhotoAlbumProps } from "./types";
 
 const resolveLayoutOptions = <T extends Photo>({
     layout,
@@ -31,7 +24,7 @@ const resolveLayoutOptions = <T extends Photo>({
 }: Omit<PhotoAlbumProps<T>, "photos"> & {
     viewportWidth?: number;
     containerWidth: number;
-}): LayoutOptions<T> => ({
+}) => ({
     layout,
     onClick,
     viewportWidth,
@@ -93,19 +86,19 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         >
             {layout === "rows" ? (
                 <RowsLayout
-                    layoutOptions={layoutOptions as RowsLayoutOptions}
+                    layoutOptions={layoutOptions as typeof layoutOptions & { layout: "rows" }}
                     renderRowContainer={renderRowContainer}
                     {...commonLayoutProps}
                 />
             ) : layout === "columns" ? (
                 <ColumnsLayout
-                    layoutOptions={layoutOptions as ColumnsLayoutOptions}
+                    layoutOptions={layoutOptions as typeof layoutOptions & { layout: "columns" }}
                     renderColumnContainer={renderColumnContainer}
                     {...commonLayoutProps}
                 />
             ) : (
                 <MasonryLayout
-                    layoutOptions={layoutOptions as ColumnsLayoutOptions}
+                    layoutOptions={layoutOptions as typeof layoutOptions & { layout: "masonry" }}
                     renderColumnContainer={renderColumnContainer}
                     {...commonLayoutProps}
                 />

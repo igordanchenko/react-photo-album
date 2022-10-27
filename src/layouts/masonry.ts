@@ -3,7 +3,7 @@ import { ColumnsLayoutOptions, Instrumentation, Photo, PhotoLayout } from "../ty
 
 type ComputeMasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
-    layoutOptions: ColumnsLayoutOptions;
+    layoutOptions: ColumnsLayoutOptions<T>;
     instrumentation?: Instrumentation;
 };
 

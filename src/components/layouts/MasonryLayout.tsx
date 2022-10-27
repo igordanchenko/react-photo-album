@@ -14,9 +14,9 @@ import {
 
 type MasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
-    layoutOptions: ColumnsLayoutOptions;
+    layoutOptions: ColumnsLayoutOptions<T>;
     renderPhoto?: RenderPhoto<T>;
-    renderColumnContainer?: RenderColumnContainer;
+    renderColumnContainer?: RenderColumnContainer<T>;
     componentsProps?: ComponentsProps;
     instrumentation?: Instrumentation;
 };

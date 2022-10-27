@@ -12,7 +12,7 @@ const makeGetNeighbors =
         targetColumnHeight,
         instrumentation,
     }: {
-        photos: Array<Photo>;
+        photos: Photo[];
         spacing: number;
         padding: number;
         targetColumnWidth: number;
@@ -91,7 +91,7 @@ const computeColumnsModel = <T extends Photo = Photo>({
     instrumentation,
 }: {
     photos: T[];
-    layoutOptions: ColumnsLayoutOptions;
+    layoutOptions: ColumnsLayoutOptions<T>;
     targetColumnWidth: number;
     instrumentation?: Instrumentation;
 }) => {
@@ -166,7 +166,7 @@ const computeColumnsModel = <T extends Photo = Photo>({
 
 type ComputeColumnsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
-    layoutOptions: ColumnsLayoutOptions;
+    layoutOptions: ColumnsLayoutOptions<T>;
     instrumentation?: Instrumentation;
 };
 
