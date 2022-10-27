@@ -1,6 +1,6 @@
-import { useEffect, useLayoutEffect as useReactLayoutEffect } from "react";
+import * as React from "react";
 
 /* istanbul ignore next */
-const useLayoutEffect = typeof window !== "undefined" ? useReactLayoutEffect : useEffect;
+const useLayoutEffect = typeof window !== "undefined" ? React.useLayoutEffect : React.useEffect;
 
 export default useLayoutEffect;

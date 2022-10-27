@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import computeColumnsLayout from "../../layouts/columns";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";

@@ -1,18 +1,8 @@
-import {
-    CSSProperties,
-    ForwardRefExoticComponent,
-    HTMLAttributes,
-    ImgHTMLAttributes,
-    MouseEvent,
-    PropsWithChildren,
-    ReactNode,
-    RefAttributes,
-    RefCallback,
-} from "react";
+import * as React from "react";
 
 export type LayoutType = "columns" | "rows" | "masonry";
 
-export type ClickHandler<T extends Photo = Photo> = (event: MouseEvent, photo: T, index: number) => void;
+export type ClickHandler<T extends Photo = Photo> = (event: React.MouseEvent, photo: T, index: number) => void;
 
 export type ResponsiveParameterProvider<T = number> = (containerWidth: number) => T;
 
@@ -71,14 +61,14 @@ export type PhotoProps<T extends Photo = Photo> = {
     /** photo album layout options */
     layoutOptions: LayoutOptions<T>;
     /** pre-populated 'img' element attributes */
-    imageProps: ImgHTMLAttributes<HTMLImageElement> &
-        Required<Pick<ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "style">>;
+    imageProps: React.ImgHTMLAttributes<HTMLImageElement> &
+        Required<Pick<React.ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "style">>;
     /** A callback to render the default photo implementation. If `wrapped` is `true`, the image will be styled
      * with `width` and `height` set to 100%. Use this option when you already sized image wrapper with image
      * dimensions (see `wrapperStyle`) */
-    renderDefaultPhoto: (options?: { wrapped?: boolean }) => ReactNode;
+    renderDefaultPhoto: (options?: { wrapped?: boolean }) => React.ReactNode;
     /** CSS styles to properly size image wrapper (i.e. <div> wrapper) */
-    wrapperStyle: CSSProperties;
+    wrapperStyle: React.CSSProperties;
 };
 
 export type PhotoAlbumProps<T extends Photo = Photo> = {
@@ -122,7 +112,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     instrumentation?: Instrumentation;
 };
 
-export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => ReactNode;
+export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => React.ReactNode;
 
 export type GenericLayoutOptions<T extends Photo = Photo> = {
     /** layout spacing (gaps between photos) */
@@ -161,13 +151,13 @@ export type LayoutOptions<T extends Photo = Photo> = ColumnsLayoutOptions<T> | R
 
 export type ComponentsProps = {
     /** Additional HTML attributes to be passed to the outer container `div` element */
-    containerProps?: HTMLAttributes<HTMLDivElement>;
+    containerProps?: React.HTMLAttributes<HTMLDivElement>;
     /** Additional HTML attributes to be passed to the row container `div` element */
-    rowContainerProps?: HTMLAttributes<HTMLDivElement>;
+    rowContainerProps?: React.HTMLAttributes<HTMLDivElement>;
     /** Additional HTML attributes to be passed to the column container `div` element */
-    columnContainerProps?: HTMLAttributes<HTMLDivElement>;
+    columnContainerProps?: React.HTMLAttributes<HTMLDivElement>;
     /** Additional HTML attributes to be passed to the photo `img` element */
-    imageProps?: HTMLAttributes<HTMLImageElement>;
+    imageProps?: React.HTMLAttributes<HTMLImageElement>;
 };
 
 export type ComponentsPropsParameter = ComponentsProps | ((containerWidth: number) => ComponentsProps);
@@ -176,17 +166,17 @@ export type ContainerProps<T extends Photo = Photo> = {
     /** layout options */
     layoutOptions: LayoutOptions<T>;
     /** pre-populated default container attributes */
-    containerProps: HTMLAttributes<HTMLDivElement>;
+    containerProps: React.HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderContainerProps<T extends Photo = Photo> = PropsWithChildren<ContainerProps<T>> & {
-    containerRef?: RefCallback<HTMLDivElement>;
+export type RenderContainerProps<T extends Photo = Photo> = React.PropsWithChildren<ContainerProps<T>> & {
+    containerRef?: React.RefCallback<HTMLDivElement>;
 };
 
 /** ForwardRefExoticComponent (forwardRef) variant is deprecated and will be removed in the next major release */
 export type RenderContainer<T extends Photo = Photo> =
-    | ((props: RenderContainerProps<T>) => ReactNode)
-    | ForwardRefExoticComponent<PropsWithChildren<ContainerProps<T>> & RefAttributes<HTMLDivElement>>;
+    | ((props: RenderContainerProps<T>) => React.ReactNode)
+    | React.ForwardRefExoticComponent<React.PropsWithChildren<ContainerProps<T>> & React.RefAttributes<HTMLDivElement>>;
 
 export type RowContainerProps<T extends Photo = Photo> = {
     /** layout options */
@@ -196,10 +186,12 @@ export type RowContainerProps<T extends Photo = Photo> = {
     /** total number of rows */
     rowsCount: number;
     /** pre-populated default row container attributes */
-    rowContainerProps: HTMLAttributes<HTMLDivElement>;
+    rowContainerProps: React.HTMLAttributes<HTMLDivElement>;
 };
 
-export type RenderRowContainer<T extends Photo = Photo> = (props: PropsWithChildren<RowContainerProps<T>>) => ReactNode;
+export type RenderRowContainer<T extends Photo = Photo> = (
+    props: React.PropsWithChildren<RowContainerProps<T>>
+) => React.ReactNode;
 
 export type ColumnContainerProps<T extends Photo = Photo> = {
     layoutOptions: ColumnsLayoutOptions<T>;
@@ -212,12 +204,12 @@ export type ColumnContainerProps<T extends Photo = Photo> = {
     /** width adjustment ratios of each column */
     columnsRatios?: number[];
     /** pre-populated default column container attributes */
-    columnContainerProps: HTMLAttributes<HTMLDivElement>;
+    columnContainerProps: React.HTMLAttributes<HTMLDivElement>;
 };
 
 export type RenderColumnContainer<T extends Photo = Photo> = (
-    props: PropsWithChildren<ColumnContainerProps<T>>
-) => ReactNode;
+    props: React.PropsWithChildren<ColumnContainerProps<T>>
+) => React.ReactNode;
 
 export type ResizeObserverProvider = (
     callback: (entries: ResizeObserverEntry[], observer: ResizeObserver) => void

@@ -1,14 +1,14 @@
-import { useRef, useState } from "react";
+import * as React from "react";
 
 import useEventCallback from "./useEventCallback";
 import { ResizeObserverProvider } from "../types";
 
 const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, breakpoints?: number[]) => {
-    const [containerWidth, setContainerWidth] = useState<number>();
-    const [scrollbarWidth, setScrollbarWidth] = useState<number>();
+    const [containerWidth, setContainerWidth] = React.useState<number>();
+    const [scrollbarWidth, setScrollbarWidth] = React.useState<number>();
 
-    const ref = useRef<HTMLElement | null>(null);
-    const observerRef = useRef<ResizeObserver>();
+    const ref = React.useRef<HTMLElement | null>(null);
+    const observerRef = React.useRef<ResizeObserver>();
 
     const updateWidth = useEventCallback(() => {
         let newWidth = ref.current?.clientWidth;

@@ -1,4 +1,4 @@
-import { CSSProperties, PropsWithChildren } from "react";
+import * as React from "react";
 
 import { Photo, RenderRowContainer, RowContainerProps } from "../../types";
 import Optional from "../../types/Optional";
@@ -6,9 +6,9 @@ import Optional from "../../types/Optional";
 const defaultRenderRowContainer = <T extends Photo = Photo>({
     rowContainerProps,
     children,
-}: PropsWithChildren<RowContainerProps<T>>) => <div {...rowContainerProps}>{children}</div>;
+}: React.PropsWithChildren<RowContainerProps<T>>) => <div {...rowContainerProps}>{children}</div>;
 
-type RowContainerRendererProps<T extends Photo = Photo> = PropsWithChildren<
+type RowContainerRendererProps<T extends Photo = Photo> = React.PropsWithChildren<
     Optional<RowContainerProps<T>, "rowContainerProps">
 > & {
     renderRowContainer?: RenderRowContainer<T>;
@@ -34,7 +34,7 @@ const RowContainerRenderer = <T extends Photo = Photo>(props: RowContainerRender
             justifyContent: "space-between",
             ...(rowIndex < rowsCount - 1 ? { marginBottom: `${layoutOptions.spacing}px` } : null),
             ...style,
-        } as CSSProperties,
+        } as React.CSSProperties,
         ...restRowContainerProps,
     };
 

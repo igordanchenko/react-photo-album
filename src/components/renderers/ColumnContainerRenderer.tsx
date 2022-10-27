@@ -1,4 +1,4 @@
-import { CSSProperties, PropsWithChildren } from "react";
+import * as React from "react";
 
 import round from "../../utils/round";
 import { ColumnContainerProps, Photo, RenderColumnContainer } from "../../types";
@@ -7,7 +7,7 @@ import Optional from "../../types/Optional";
 const defaultRenderColumnContainer = <T extends Photo = Photo>({
     columnContainerProps,
     children,
-}: PropsWithChildren<ColumnContainerProps<T>>) => <div {...columnContainerProps}>{children}</div>;
+}: React.PropsWithChildren<ColumnContainerProps<T>>) => <div {...columnContainerProps}>{children}</div>;
 
 const cssWidth = <T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) => {
     const { layoutOptions, columnIndex, columnsCount, columnsGaps, columnsRatios } = props;
@@ -29,7 +29,7 @@ const cssWidth = <T extends Photo = Photo>(props: ColumnContainerRendererProps<T
     )}px) * ${round(columnsRatios[columnIndex] / totalRatio, 5)} + ${2 * padding}px)`;
 };
 
-type ColumnContainerRendererProps<T extends Photo = Photo> = PropsWithChildren<
+type ColumnContainerRendererProps<T extends Photo = Photo> = React.PropsWithChildren<
     Optional<ColumnContainerProps<T>, "columnContainerProps">
 > & {
     renderColumnContainer?: RenderColumnContainer<T>;
@@ -54,7 +54,7 @@ const ColumnContainerRenderer = <T extends Photo = Photo>(props: ColumnContainer
             width: cssWidth(props),
             justifyContent: layoutOptions.layout === "columns" ? "space-between" : "flex-start",
             ...style,
-        } as CSSProperties,
+        } as React.CSSProperties,
         ...restColumnContainerProps,
     };
 
