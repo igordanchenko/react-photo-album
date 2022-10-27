@@ -21,12 +21,12 @@ type MasonryLayoutProps<T extends Photo = Photo> = {
     instrumentation?: Instrumentation;
 };
 
-const MasonryLayout = <T extends Photo = Photo>(props: MasonryLayoutProps<T>): JSX.Element => {
+const MasonryLayout = <T extends Photo = Photo>(props: MasonryLayoutProps<T>) => {
     const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps, instrumentation } = props;
 
     const masonryLayout = computeMasonryLayout({ photos, layoutOptions, instrumentation });
 
-    if (masonryLayout === undefined) return <></>;
+    if (!masonryLayout) return null;
 
     return (
         <>

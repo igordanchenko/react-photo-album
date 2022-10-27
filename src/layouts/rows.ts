@@ -45,7 +45,7 @@ const cost = (
 };
 
 // return function that gets the neighboring nodes of node and returns costs
-const makeGetNeighbors =
+const makeGetRowNeighbors =
     <T extends Photo = Photo>({
         photos,
         layoutOptions,
@@ -94,7 +94,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
 
     const limitNodeSearch = findIdealNodeSearch({ photos, containerWidth, targetRowHeight });
 
-    const getNeighbors = makeGetNeighbors({
+    const getNeighbors = makeGetRowNeighbors({
         photos,
         layoutOptions,
         targetRowHeight,

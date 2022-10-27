@@ -12,12 +12,10 @@ const calcWidth = <T extends Photo = Photo>(
     return `calc((${base} - ${gaps}px) / ${round((containerWidth - gaps) / width, 5)})`;
 };
 
-const cssWidth = <T extends Photo = Photo>(layout: PhotoLayout, layoutOptions: LayoutOptions<T>) => {
-    if (layoutOptions.layout !== "rows") {
-        return `calc(100% - ${2 * layoutOptions.padding}px)`;
-    }
-    return calcWidth("100%", layout, layoutOptions);
-};
+const cssPhotoWidth = <T extends Photo = Photo>(layout: PhotoLayout, layoutOptions: LayoutOptions<T>) =>
+    layoutOptions.layout !== "rows"
+        ? `calc(100% - ${2 * layoutOptions.padding}px)`
+        : calcWidth("100%", layout, layoutOptions);
 
 const calculateSizesValue = <T extends Photo = Photo>(
     size: string,
@@ -68,7 +66,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
     const imageStyle = {
         display: "block",
         boxSizing: "content-box",
-        width: cssWidth(layout, layoutOptions),
+        width: cssPhotoWidth(layout, layoutOptions),
         height: "auto",
         aspectRatio: `${photo.width} / ${photo.height}`,
         ...(layoutOptions.padding ? { padding: `${layoutOptions.padding}px` } : null),

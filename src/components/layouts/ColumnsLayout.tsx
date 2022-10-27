@@ -21,12 +21,12 @@ type ColumnsLayoutProps<T extends Photo = Photo> = {
     instrumentation?: Instrumentation;
 };
 
-const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>): JSX.Element => {
+const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>) => {
     const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps, instrumentation } = props;
 
     const columnsLayout = computeColumnsLayout({ photos, layoutOptions, instrumentation });
 
-    if (columnsLayout === undefined) return <></>;
+    if (!columnsLayout) return null;
 
     const { columnsModel, columnsRatios, columnsGaps } = columnsLayout;
 

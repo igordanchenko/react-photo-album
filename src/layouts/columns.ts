@@ -3,7 +3,7 @@ import findShortestPathLengthN from "../utils/shortestPath";
 import { ColumnsLayoutOptions, Instrumentation, Photo, PhotoLayout } from "../types";
 
 // return function that gets the neighboring nodes of node and returns costs
-const makeGetNeighbors =
+const makeGetColumnNeighbors =
     ({
         photos,
         spacing,
@@ -134,7 +134,7 @@ const computeColumnsModel = <T extends Photo = Photo>({
             2 * padding * photos.length) /
         columns;
 
-    const getNeighbors = makeGetNeighbors({
+    const getNeighbors = makeGetColumnNeighbors({
         photos,
         targetColumnWidth,
         targetColumnHeight,
