@@ -1,7 +1,6 @@
 import * as React from "react";
 
-import { Photo, RenderRowContainer, RowContainerProps } from "../../types";
-import Optional from "../../types/Optional";
+import { Optional, Photo, RenderRowContainer, RowContainerProps } from "../../types";
 
 const defaultRenderRowContainer = <T extends Photo = Photo>({
     rowContainerProps,
