@@ -1,8 +1,7 @@
 import * as React from "react";
 
 import round from "../../utils/round";
-import { ColumnContainerProps, Photo, RenderColumnContainer } from "../../types";
-import Optional from "../../types/Optional";
+import { ColumnContainerProps, Optional, Photo, RenderColumnContainer } from "../../types";
 
 const defaultRenderColumnContainer = <T extends Photo = Photo>({
     columnContainerProps,

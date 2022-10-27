@@ -11,6 +11,7 @@
         "isolatedModules": true,
         "importHelpers": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "stripInternal": true
     }
 }

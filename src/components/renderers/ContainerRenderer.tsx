@@ -1,7 +1,6 @@
 import * as React from "react";
 
-import { Photo, RenderContainer, RenderContainerProps } from "../../types";
-import Optional from "../../types/Optional";
+import { Optional, Photo, RenderContainer, RenderContainerProps } from "../../types";
 
 const defaultRenderContainer = <T extends Photo = Photo>({
     containerProps,

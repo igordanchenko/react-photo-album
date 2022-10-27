@@ -41,9 +41,9 @@ export interface Photo extends Image {
 }
 
 export type PhotoLayout = {
-    /** photo width */
+    /** rendered photo width */
     width: number;
-    /** photo height */
+    /** rendered photo height */
     height: number;
     /** photo index in the original `photos` array */
     index: number;
@@ -165,13 +165,12 @@ export type ContainerProps<T extends Photo = Photo> = {
     layoutOptions: LayoutOptions<T>;
     /** pre-populated default container attributes */
     containerProps: React.HTMLAttributes<HTMLDivElement>;
-};
-
-export type RenderContainerProps<T extends Photo = Photo> = React.PropsWithChildren<ContainerProps<T>> & {
+    /** container ref callback */
     containerRef?: React.RefCallback<HTMLDivElement>;
 };
 
-/** ForwardRefExoticComponent (forwardRef) variant is deprecated and will be removed in the next major release */
+export type RenderContainerProps<T extends Photo = Photo> = React.PropsWithChildren<ContainerProps<T>>;
+
 export type RenderContainer<T extends Photo = Photo> = (props: RenderContainerProps<T>) => React.ReactNode;
 
 export type RowContainerProps<T extends Photo = Photo> = {
@@ -226,3 +225,6 @@ export type Instrumentation = {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onFinishLayoutComputation?: (...params: any) => void;
 };
+
+/** @internal */
+export type Optional<T, K extends keyof T> = Partial<Pick<T, K>> & Omit<T, K>;
