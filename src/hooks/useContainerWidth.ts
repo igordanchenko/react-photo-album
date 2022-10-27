@@ -1,9 +1,8 @@
 import * as React from "react";
 
 import useEventCallback from "./useEventCallback";
-import { ResizeObserverProvider } from "../types";
 
-const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, breakpoints?: number[]) => {
+const useContainerWidth = (breakpoints?: number[]) => {
     const [containerWidth, setContainerWidth] = React.useState<number>();
     const [scrollbarWidth, setScrollbarWidth] = React.useState<number>();
 
@@ -55,12 +54,10 @@ const useContainerWidth = (resizeObserverProvider?: ResizeObserverProvider, brea
         updateWidth();
 
         if (node) {
-            observerRef.current =
-                typeof ResizeObserver !== "undefined"
-                    ? new ResizeObserver(updateWidth)
-                    : resizeObserverProvider?.(updateWidth);
-
-            observerRef.current?.observe(node);
+            if (typeof ResizeObserver !== "undefined") {
+                observerRef.current = new ResizeObserver(updateWidth);
+                observerRef.current.observe(node);
+            }
         }
     });
 

@@ -62,13 +62,12 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
         renderRowContainer,
         renderColumnContainer,
         defaultContainerWidth,
-        resizeObserverProvider,
         breakpoints,
         instrumentation,
     } = props;
 
     const [mounted, setMounted] = React.useState(false);
-    const { containerRef, containerWidth } = useContainerWidth(resizeObserverProvider, breakpoints);
+    const { containerRef, containerWidth } = useContainerWidth(breakpoints);
 
     useLayoutEffect(() => setMounted(true), []);
 
