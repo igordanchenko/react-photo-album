@@ -91,6 +91,8 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         onClick: handleClick,
         style: imageStyle,
         className: "react-photo-album--photo",
+        loading: "lazy" as const,
+        decoding: "async" as const,
         ...srcSetAndSizes(photo, layout, layoutOptions),
         ...restImageProps,
     };
