@@ -2,7 +2,15 @@ import * as React from "react";
 
 export type LayoutType = "columns" | "rows" | "masonry";
 
-export type ClickHandler<T extends Photo = Photo> = (event: React.MouseEvent, photo: T, index: number) => void;
+export type ClickHandler<T extends Photo = Photo> = ({
+    event,
+    photo,
+    index,
+}: {
+    event: React.MouseEvent;
+    photo: T;
+    index: number;
+}) => void;
 
 export type ResponsiveParameterProvider<T = number> = (containerWidth: number) => T;
 

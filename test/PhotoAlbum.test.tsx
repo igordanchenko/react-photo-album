@@ -255,7 +255,7 @@ describe("PhotoAlbum", () => {
             imageProps: { src, alt, ...restImageProps },
         }) => <img src={src} alt={alt} data-custom-attribute={photo.customAttribute} {...restImageProps} />;
 
-        const clickHandler: ClickHandler<CustomPhoto> = (event, photo, index) => {
+        const clickHandler: ClickHandler<CustomPhoto> = ({ photo, index }) => {
             // this check doesn't actually get called, but it's here to type check the click handler
             expect(photo.customAttribute).toBe(index);
         };
@@ -273,7 +273,7 @@ describe("PhotoAlbum", () => {
                 renderPhoto={({ photo, imageProps: { src, alt, ...restImageProps } }) => (
                     <img src={src} alt={alt} data-custom-attribute={photo.customAttribute} {...restImageProps} />
                 )}
-                onClick={(event, photo, index) => {
+                onClick={({ photo, index }) => {
                     // this check doesn't actually get called, but it's here to type check the click handler
                     expect(photo.customAttribute).toBe(index);
                 }}
@@ -344,7 +344,7 @@ describe("PhotoAlbum", () => {
         screen.getByAltText("photo-0").click();
 
         expect(onClick.mock.calls.length).toBe(1);
-        expect(onClick.mock.calls[0][1]).toBe(testPhotos[0]);
+        expect(onClick.mock.calls[0][0].photo).toBe(testPhotos[0]);
     });
 
     it("supports sizes attribute", () => {
