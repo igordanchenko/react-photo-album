@@ -8,7 +8,7 @@ const defaultRenderColumnContainer = <T extends Photo = Photo>({
     children,
 }: React.PropsWithChildren<ColumnContainerProps<T>>) => <div {...columnContainerProps}>{children}</div>;
 
-const cssWidth = <T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) => {
+const cssColumnWidth = <T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) => {
     const { layoutOptions, columnIndex, columnsCount, columnsGaps, columnsRatios } = props;
     const { layout, spacing, padding } = layoutOptions;
 
@@ -50,7 +50,7 @@ const ColumnContainerRenderer = <T extends Photo = Photo>(props: ColumnContainer
             flexDirection: "column",
             flexWrap: "nowrap",
             alignItems: "flex-start",
-            width: cssWidth(props),
+            width: cssColumnWidth(props),
             justifyContent: layoutOptions.layout === "columns" ? "space-between" : "flex-start",
             ...style,
         } as React.CSSProperties,

@@ -21,12 +21,12 @@ type RowsLayoutProps<T extends Photo = Photo> = {
     instrumentation?: Instrumentation;
 };
 
-const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>): JSX.Element => {
+const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>) => {
     const { photos, layoutOptions, renderPhoto, renderRowContainer, componentsProps, instrumentation } = props;
 
     const rowsLayout = computeRowsLayout({ photos, layoutOptions, instrumentation });
 
-    if (rowsLayout === undefined) return <></>;
+    if (!rowsLayout) return null;
 
     return (
         <>
