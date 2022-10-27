@@ -74,16 +74,22 @@
         "typescript": "^4.8.4"
     },
     "keywords": [
-        "react photo album",
-        "react photo gallery",
-        "react image gallery",
+        "react",
+        "image",
+        "photo",
+        "album",
+        "gallery",
+        "masonry",
         "photo album",
         "photo gallery",
         "image gallery",
         "photo layout",
         "image layout",
+        "react gallery",
+        "react photo album",
+        "react photo gallery",
+        "react image gallery",
         "react-photo-album",
-        "react-photo-gallery",
-        "masonry"
+        "react-photo-gallery"
     ]
 }
