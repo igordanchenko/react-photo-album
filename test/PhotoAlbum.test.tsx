@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import { act, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import {
     ClickHandler,
@@ -372,71 +372,43 @@ describe("PhotoAlbum", () => {
     });
 
     it("supports inline breakpoints", () => {
-        const onStartLayoutComputation = jest.fn();
-        const instrumentation = { onStartLayoutComputation };
+        const resizeObserverRef = global.ResizeObserver;
+        try {
+            const onStartLayoutComputation = jest.fn();
+            const instrumentation = { onStartLayoutComputation };
 
-        const resizeObserverProvider = jest.fn(() => ({
-            observe: jest.fn(),
-            unobserve: jest.fn(),
-            disconnect: jest.fn(),
-        }));
+            const resizeObserverProvider = jest.fn(() => ({
+                observe: jest.fn(),
+                unobserve: jest.fn(),
+                disconnect: jest.fn(),
+            }));
+            global.ResizeObserver = resizeObserverProvider;
 
-        const { rerender, unmount } = render(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[300, 600, 1200]}
-                resizeObserverProvider={resizeObserverProvider}
-                instrumentation={instrumentation}
-            />
-        );
+            const { rerender, unmount } = render(
+                <PhotoAlbum
+                    layout={"rows"}
+                    photos={photos}
+                    breakpoints={[300, 600, 1200]}
+                    instrumentation={instrumentation}
+                />
+            );
 
-        rerender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[300, 600, 1200]}
-                resizeObserverProvider={resizeObserverProvider}
-                instrumentation={instrumentation}
-            />
-        );
+            rerender(
+                <PhotoAlbum
+                    layout={"rows"}
+                    photos={photos}
+                    breakpoints={[300, 600, 1200]}
+                    instrumentation={instrumentation}
+                />
+            );
 
-        expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
-        expect(onStartLayoutComputation).toHaveBeenCalledTimes(3); // 2 + 1 initial render
+            expect(resizeObserverProvider).toHaveBeenCalledTimes(1);
+            expect(onStartLayoutComputation).toHaveBeenCalledTimes(3); // 2 + 1 initial render
 
-        unmount();
-    });
-
-    it("supports inline resizeObserverProvider", () => {
-        const resizeObserver = {
-            observe: jest.fn(),
-            unobserve: jest.fn(),
-            disconnect: jest.fn(),
-        };
-
-        const { rerender, unmount } = render(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[300, 600, 1200]}
-                resizeObserverProvider={() => resizeObserver}
-            />
-        );
-
-        rerender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                breakpoints={[300, 600, 1200]}
-                resizeObserverProvider={() => resizeObserver}
-            />
-        );
-
-        expect(resizeObserver.observe).toHaveBeenCalledTimes(1);
-        expect(resizeObserver.unobserve).toHaveBeenCalledTimes(0);
-        expect(resizeObserver.disconnect).toHaveBeenCalledTimes(0);
-
-        unmount();
+            unmount();
+        } finally {
+            global.ResizeObserver = resizeObserverRef;
+        }
     });
 
     it("provides layout.index prop", () => {
@@ -525,54 +497,6 @@ describe("PhotoAlbum", () => {
         } finally {
             global.ResizeObserver = resizeObserverRef;
         }
-    });
-
-    it("supports custom ResizeObserver and observes container ref changes", () => {
-        const resizeObserverMock = {
-            observe: jest.fn(),
-            unobserve: jest.fn(),
-            disconnect: jest.fn(),
-        };
-
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const resizeObserverProvider = jest.fn((_) => resizeObserverMock);
-
-        const { rerender, unmount } = render(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                renderContainer={({ children, containerRef }: RenderContainerProps) => (
-                    <div ref={containerRef} key={1}>
-                        {children}
-                    </div>
-                )}
-                resizeObserverProvider={resizeObserverProvider}
-            />
-        );
-
-        expect(resizeObserverMock.observe.mock.calls.length).toBe(1);
-
-        act(() => {
-            resizeObserverProvider.mock.calls[0][0]();
-        });
-
-        rerender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                renderContainer={({ children, containerRef }: RenderContainerProps) => (
-                    <div ref={containerRef} key={2}>
-                        {children}
-                    </div>
-                )}
-                resizeObserverProvider={resizeObserverProvider}
-            />
-        );
-
-        unmount();
-
-        expect(resizeObserverMock.observe.mock.calls.length).toBe(2);
-        expect(resizeObserverMock.disconnect.mock.calls.length).toBe(2);
     });
 
     it("supports custom wrapper", () => {

@@ -106,8 +106,6 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     renderRowContainer?: RenderRowContainer<T>;
     /** Custom column container rendering function. */
     renderColumnContainer?: RenderColumnContainer<T>;
-    /** ResizeObserver factory to be used when global ResizeObserver is unavailable. */
-    resizeObserverProvider?: ResizeObserverProvider;
     /** Internal instrumentation - use on your own risk. */
     instrumentation?: Instrumentation;
 };
@@ -208,10 +206,6 @@ export type ColumnContainerProps<T extends Photo = Photo> = {
 export type RenderColumnContainer<T extends Photo = Photo> = (
     props: React.PropsWithChildren<ColumnContainerProps<T>>
 ) => React.ReactNode;
-
-export type ResizeObserverProvider = (
-    callback: (entries: ResizeObserverEntry[], observer: ResizeObserver) => void
-) => ResizeObserver;
 
 export type RowConstraints = {
     /** minimum number of photos per row in 'rows' layout */
