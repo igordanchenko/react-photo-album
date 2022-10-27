@@ -174,9 +174,7 @@ export type RenderContainerProps<T extends Photo = Photo> = React.PropsWithChild
 };
 
 /** ForwardRefExoticComponent (forwardRef) variant is deprecated and will be removed in the next major release */
-export type RenderContainer<T extends Photo = Photo> =
-    | ((props: RenderContainerProps<T>) => React.ReactNode)
-    | React.ForwardRefExoticComponent<React.PropsWithChildren<ContainerProps<T>> & React.RefAttributes<HTMLDivElement>>;
+export type RenderContainer<T extends Photo = Photo> = (props: RenderContainerProps<T>) => React.ReactNode;
 
 export type RowContainerProps<T extends Photo = Photo> = {
     /** layout options */

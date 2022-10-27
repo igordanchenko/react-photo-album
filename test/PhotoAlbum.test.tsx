@@ -210,20 +210,6 @@ describe("PhotoAlbum", () => {
     });
 
     it("allows rendering custom container", () => {
-        // deprecated legacy variant, remove in the next major release
-        whenAskedToRender(
-            <PhotoAlbum
-                layout={"rows"}
-                photos={photos}
-                // eslint-disable-next-line react/display-name
-                renderContainer={React.forwardRef(({ children }, ref) => (
-                    <div ref={ref} className="custom-class">
-                        {children}
-                    </div>
-                ))}
-            />
-        );
-
         whenAskedToRender(
             <PhotoAlbum
                 layout={"rows"}
