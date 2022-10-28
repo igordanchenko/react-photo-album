@@ -38,15 +38,15 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
             .sort((first, second) => first.width - second.width)
             .map((image) => `${image.src} ${image.width}w`)
             .join(", ");
-    }
 
-    if (layoutOptions.sizes) {
-        sizes = (layoutOptions.sizes.sizes || [])
-            .map(({ viewport, size }) => `${viewport} ${calculateSizesValue(size, layout, layoutOptions)}`)
-            .concat(calculateSizesValue(layoutOptions.sizes.size, layout, layoutOptions))
-            .join(", ");
-    } else {
-        sizes = `${Math.ceil((layout.width / (layoutOptions.viewportWidth || layoutOptions.containerWidth)) * 100)}vw`;
+        if (layoutOptions.sizes) {
+            sizes = (layoutOptions.sizes.sizes || [])
+                .map(({ viewport, size }) => `${viewport} ${calculateSizesValue(size, layout, layoutOptions)}`)
+                .concat(calculateSizesValue(layoutOptions.sizes.size, layout, layoutOptions))
+                .join(", ");
+        } else {
+            sizes = `${Math.ceil((layout.width / layoutOptions.containerWidth) * 100)}vw`;
+        }
     }
 
     return { srcSet, sizes };

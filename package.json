@@ -34,7 +34,9 @@
         "build:js": "rollup -c",
         "start": "npm-run-all clean --parallel \"build:* -- -w\"",
         "lint": "eslint .",
-        "test": "jest"
+        "test": "npm-run-all test:*",
+        "test:unit": "jest",
+        "test:e2e": "playwright test -c playwright-ct.config.ts"
     },
     "peerDependencies": {
         "react": ">=16.8.0"
@@ -42,9 +44,9 @@
     "devDependencies": {
         "@commitlint/cli": "^17.1.2",
         "@commitlint/config-conventional": "^17.1.0",
+        "@playwright/experimental-ct-react": "^1.27.1",
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@rollup/plugin-typescript": "^9.0.2",
-        "@testing-library/react": "^13.4.0",
         "@types/jest": "^29.2.0",
         "@types/react": "^18.0.24",
         "@types/react-dom": "^18.0.8",

@@ -107,7 +107,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     /** Custom photo rendering function. */
     renderPhoto?: RenderPhoto<T>;
     /** Custom container rendering function. */
-    renderContainer?: RenderContainer<T>;
+    renderContainer?: RenderContainer;
     /** Custom row container rendering function. */
     renderRowContainer?: RenderRowContainer<T>;
     /** Custom column container rendering function. */
@@ -125,8 +125,6 @@ export type GenericLayoutOptions<T extends Photo = Photo> = {
     padding: number;
     /** current photo album container width */
     containerWidth: number;
-    /** current viewport width */
-    viewportWidth?: number;
     /** photo click handler */
     onClick?: ClickHandler<T>;
     /** photo album size at various viewport sizes */
@@ -162,20 +160,20 @@ export type ComponentsProps = {
     imageProps?: React.HTMLAttributes<HTMLImageElement>;
 };
 
-export type ComponentsPropsParameter = ComponentsProps | ((containerWidth: number) => ComponentsProps);
+export type ComponentsPropsParameter = ComponentsProps | ((containerWidth?: number) => ComponentsProps);
 
-export type ContainerProps<T extends Photo = Photo> = {
-    /** layout options */
-    layoutOptions: LayoutOptions<T>;
+export type ContainerProps = {
+    /** layout type */
+    layout: LayoutType;
     /** pre-populated default container attributes */
     containerProps: React.HTMLAttributes<HTMLDivElement>;
     /** container ref callback */
     containerRef?: React.RefCallback<HTMLDivElement>;
 };
 
-export type RenderContainerProps<T extends Photo = Photo> = React.PropsWithChildren<ContainerProps<T>>;
+export type RenderContainerProps = React.PropsWithChildren<ContainerProps>;
 
-export type RenderContainer<T extends Photo = Photo> = (props: RenderContainerProps<T>) => React.ReactNode;
+export type RenderContainer = (props: RenderContainerProps) => React.ReactNode;
 
 export type RowContainerProps<T extends Photo = Photo> = {
     /** layout options */
