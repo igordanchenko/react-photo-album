@@ -53,7 +53,7 @@ const ColumnContainerRenderer = <T extends Photo = Photo>(props: ColumnContainer
             width: cssColumnWidth(props),
             justifyContent: layoutOptions.layout === "columns" ? "space-between" : "flex-start",
             ...style,
-        } as React.CSSProperties,
+        } as const,
         ...restColumnContainerProps,
     };
 

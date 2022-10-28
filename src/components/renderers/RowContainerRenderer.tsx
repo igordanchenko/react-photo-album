@@ -33,7 +33,7 @@ const RowContainerRenderer = <T extends Photo = Photo>(props: RowContainerRender
             justifyContent: "space-between",
             ...(rowIndex < rowsCount - 1 ? { marginBottom: `${layoutOptions.spacing}px` } : null),
             ...style,
-        } as React.CSSProperties,
+        } as const,
         ...restRowContainerProps,
     };
 

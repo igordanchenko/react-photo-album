@@ -76,7 +76,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
             : null),
         ...(onClick ? { cursor: "pointer" } : null),
         ...style,
-    } as React.CSSProperties;
+    } as const;
 
     const handleClick = onClick
         ? (event: React.MouseEvent) => {
