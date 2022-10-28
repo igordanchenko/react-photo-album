@@ -16,7 +16,6 @@ const resolveLayoutOptions = <T extends Photo>({
     containerWidth,
     targetRowHeight,
     rowConstraints,
-    columnConstraints,
     columns,
     spacing,
     padding,
@@ -39,7 +38,6 @@ const resolveLayoutOptions = <T extends Photo>({
         (w) => w / 2,
     ]),
     rowConstraints: unwrapParameter(rowConstraints, containerWidth),
-    columnConstraints: unwrapParameter(columnConstraints, containerWidth),
     sizes,
 });
 
