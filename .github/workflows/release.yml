@@ -24,6 +24,9 @@ jobs:
             -   name: Install semantic-release extra plugins
                 run: npm install --save-dev @semantic-release/changelog @semantic-release/github
 
+            -   name: Install Playwright Browsers
+                run: npx playwright install --with-deps
+
             -   name: Test
                 run: npm run test
 

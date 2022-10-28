@@ -23,6 +23,9 @@ jobs:
             -   name: Install dependencies
                 uses: bahmutov/npm-install@v1
 
+            -   name: Install Playwright Browsers
+                run: npx playwright install --with-deps
+
             -   name: Lint
                 run: npm run lint
 
@@ -31,3 +34,9 @@ jobs:
 
             -   name: Build
                 run: npm run build
+
+            -   uses: actions/upload-artifact@v3
+                with:
+                    name: playwright-report
+                    path: playwright-report/
+                    retention-days: 30

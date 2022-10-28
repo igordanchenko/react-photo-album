@@ -2,8 +2,8 @@ import * as React from "react";
 
 import useEventCallback from "./useEventCallback";
 
-const useContainerWidth = (breakpoints?: number[]) => {
-    const [containerWidth, setContainerWidth] = React.useState<number>();
+const useContainerWidth = (breakpoints: number[] | undefined, defaultContainerWidth: number | undefined) => {
+    const [containerWidth, setContainerWidth] = React.useState<number | undefined>(defaultContainerWidth);
     const [scrollbarWidth, setScrollbarWidth] = React.useState<number>();
 
     const ref = React.useRef<HTMLElement | null>(null);
@@ -22,7 +22,6 @@ const useContainerWidth = (breakpoints?: number[]) => {
         }
 
         const newScrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-
         if (newScrollbarWidth !== scrollbarWidth) {
             setScrollbarWidth(newScrollbarWidth);
         }

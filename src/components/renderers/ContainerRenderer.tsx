@@ -1,30 +1,25 @@
 import * as React from "react";
 
-import { Optional, Photo, RenderContainer, RenderContainerProps } from "../../types";
+import { Optional, RenderContainer, RenderContainerProps } from "../../types";
 
-const defaultRenderContainer = <T extends Photo = Photo>({
-    containerProps,
-    children,
-    containerRef,
-}: RenderContainerProps<T>) => (
+const defaultRenderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
     <div ref={containerRef} {...containerProps}>
         {children}
     </div>
 );
 
-type ContainerRendererProps<T extends Photo = Photo> = Optional<RenderContainerProps<T>, "containerProps"> & {
-    renderContainer?: RenderContainer<T>;
+type ContainerRendererProps = Optional<RenderContainerProps, "containerProps"> & {
+    renderContainer?: RenderContainer;
 };
 
-const ContainerRenderer = <T extends Photo = Photo>(props: ContainerRendererProps<T>) => {
+const ContainerRenderer = (props: ContainerRendererProps) => {
     const {
-        layoutOptions,
+        layout,
         renderContainer,
         children,
         containerRef,
         containerProps: { style, ...restContainerProps } = {},
     } = props;
-    const { layout } = layoutOptions;
 
     const containerProps = {
         className: `react-photo-album react-photo-album--${layout}`,
@@ -43,7 +38,7 @@ const ContainerRenderer = <T extends Photo = Photo>(props: ContainerRendererProp
             {(renderContainer ?? defaultRenderContainer)({
                 containerProps,
                 containerRef,
-                layoutOptions,
+                layout,
                 children,
             })}
         </>

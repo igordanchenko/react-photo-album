@@ -1,8 +1,6 @@
 {
-    "transform": {
-        ".(ts|tsx)$": "ts-jest/dist",
-        ".(js|jsx)$": "babel-jest"
-    },
+    "roots": ["test/unit"],
+    "preset": "ts-jest",
     "testEnvironment": "jsdom",
     "collectCoverage": true,
     "coverageDirectory": "coverage",

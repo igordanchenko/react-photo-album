@@ -4,15 +4,13 @@ import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
-import useLayoutEffect from "./hooks/useLayoutEffect";
 import useContainerWidth from "./hooks/useContainerWidth";
 import { resolveResponsiveParameter, unwrapParameter } from "./utils/responsive";
-import { ComponentsPropsParameter, Photo, PhotoAlbumProps } from "./types";
+import { ComponentsProps, ComponentsPropsParameter, Photo, PhotoAlbumProps } from "./types";
 
 const resolveLayoutOptions = <T extends Photo>({
     layout,
     onClick,
-    viewportWidth,
     containerWidth,
     targetRowHeight,
     rowConstraints,
@@ -21,12 +19,10 @@ const resolveLayoutOptions = <T extends Photo>({
     padding,
     sizes,
 }: Omit<PhotoAlbumProps<T>, "photos"> & {
-    viewportWidth?: number;
     containerWidth: number;
 }) => ({
     layout,
     onClick,
-    viewportWidth,
     containerWidth,
     columns: resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2], 1),
     spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),
@@ -41,47 +37,22 @@ const resolveLayoutOptions = <T extends Photo>({
     sizes,
 });
 
-const resolveComponentsProps = (componentsProps: ComponentsPropsParameter | undefined, containerWidth: number) =>
+const resolveComponentsProps = (componentsProps: ComponentsPropsParameter | undefined, containerWidth?: number) =>
     typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps;
 
-const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
-    const {
-        photos,
-        layout,
-        renderPhoto,
-        renderContainer,
-        renderRowContainer,
-        renderColumnContainer,
-        defaultContainerWidth,
-        breakpoints,
-        instrumentation,
-    } = props;
+const renderLayout = <T extends Photo>(
+    props: PhotoAlbumProps<T>,
+    containerWidth: number,
+    componentsProps: ComponentsProps | undefined
+) => {
+    const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer, instrumentation } = props;
 
-    const [mounted, setMounted] = React.useState(false);
-    const { containerRef, containerWidth } = useContainerWidth(breakpoints);
-
-    useLayoutEffect(() => setMounted(true), []);
-
-    // safeguard against incorrect usage
-    if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return <></>;
-
-    const layoutOptions = resolveLayoutOptions({
-        containerWidth: (mounted && containerWidth) || defaultContainerWidth || 800,
-        viewportWidth: (mounted && window.innerWidth) || undefined,
-        ...props,
-    });
-
-    const componentsProps = resolveComponentsProps(props.componentsProps, layoutOptions.containerWidth);
+    const layoutOptions = resolveLayoutOptions({ containerWidth, ...props });
 
     const commonLayoutProps = { photos, renderPhoto, componentsProps, instrumentation };
 
     return (
-        <ContainerRenderer
-            containerRef={containerRef}
-            layoutOptions={layoutOptions}
-            renderContainer={renderContainer}
-            containerProps={componentsProps?.containerProps}
-        >
+        <>
             {layout === "rows" ? (
                 <RowsLayout
                     layoutOptions={layoutOptions as typeof layoutOptions & { layout: "rows" }}
@@ -101,6 +72,28 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => 
                     {...commonLayoutProps}
                 />
             )}
+        </>
+    );
+};
+
+const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
+    const { photos, layout, renderContainer, defaultContainerWidth, breakpoints } = props;
+
+    const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
+
+    // safeguard against incorrect usage
+    if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return <></>;
+
+    const componentsProps = resolveComponentsProps(props.componentsProps, containerWidth);
+
+    return (
+        <ContainerRenderer
+            layout={layout}
+            containerRef={containerRef}
+            renderContainer={renderContainer}
+            containerProps={componentsProps?.containerProps}
+        >
+            {containerWidth ? renderLayout(props, containerWidth, componentsProps) : null}
         </ContainerRenderer>
     );
 };
