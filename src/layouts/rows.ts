@@ -108,7 +108,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
     // impossible layout
     if (path === undefined) return undefined;
 
-    const result = [];
+    const layout = [];
 
     for (let i = 1; i < path.length; i += 1) {
         const row = photos.map((photo, index) => ({ photo, index })).slice(+path[i - 1], +path[i]);
@@ -118,7 +118,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
             spacing,
             padding
         );
-        result.push(
+        layout.push(
             row.map(({ photo, index }, photoIndex) => ({
                 photo,
                 layout: {
@@ -132,9 +132,9 @@ const computeRowsLayout = <T extends Photo = Photo>({
         );
     }
 
-    instrumentation?.onFinishLayout?.(result);
+    instrumentation?.onFinishLayout?.(layout);
 
-    return result;
+    return layout;
 };
 
 export default computeRowsLayout;

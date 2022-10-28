@@ -11,12 +11,7 @@ type MasonryColumnsModel<T extends Photo = Photo> = { photo: T; layout: PhotoLay
 
 const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayoutProps<T>): MasonryColumnsModel<T> => {
     const { photos, layoutOptions, instrumentation } = props;
-    const { spacing, padding, containerWidth } = layoutOptions;
-
-    const columns = Math.min(
-        layoutOptions.columns,
-        Math.max(photos.length, layoutOptions.columnConstraints?.minColumns || 0)
-    );
+    const { columns, spacing, padding, containerWidth } = layoutOptions;
 
     instrumentation?.onStartLayout?.();
 
@@ -66,7 +61,7 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
     );
 
     // map through each column and photo and add layout properties
-    const result = columnsModel.map((column) =>
+    const layout = columnsModel.map((column) =>
         column.map(({ photo, index }, photoIndex) => ({
             photo,
             layout: {
@@ -79,9 +74,9 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
         }))
     );
 
-    instrumentation?.onFinishLayout?.(result);
+    instrumentation?.onFinishLayout?.(layout);
 
-    return result;
+    return layout;
 };
 
 export default computeMasonryLayout;

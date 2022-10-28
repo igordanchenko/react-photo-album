@@ -102,13 +102,16 @@ const computeColumnsModel = <T extends Photo = Photo>({
 
     // fill first available columns if there are not enough photos
     if (photos.length <= columns) {
-        for (let index = 0; index < photos.length; index += 1) {
-            columnsGaps[index] = 2 * padding;
-            columnsRatios[index] = ratio(photos[index]);
+        const averageRatio =
+            photos.length > 0 ? photos.reduce((acc, photo) => acc + ratio(photo), 0) / photos.length : 1;
+
+        for (let i = 0; i < columns; i += 1) {
+            columnsGaps[i] = 2 * padding;
+            columnsRatios[i] = i < photos.length ? ratio(photos[i]) : averageRatio;
         }
 
         const columnsModel = buildColumnsModel({
-            path: Array.from({ length: photos.length + 1 }).map((_, index) => index),
+            path: Array.from({ length: columns + 1 }).map((_, index) => Math.min(index, photos.length)),
             photos,
             columnsRatios,
             columnsGaps,
@@ -116,13 +119,6 @@ const computeColumnsModel = <T extends Photo = Photo>({
             spacing,
             padding,
         });
-
-        for (let i = photos.length; i < (layoutOptions.columnConstraints?.minColumns || 0); i += 1) {
-            columnsGaps[i] = 0;
-            columnsRatios[i] =
-                photos.length > 0 ? photos.reduce((acc, photo) => acc + ratio(photo), 0) / photos.length : 1;
-            columnsModel[i] = [];
-        }
 
         return { columnsGaps, columnsRatios, columnsModel };
     }
@@ -223,21 +219,11 @@ const computeColumnsLayout = <T extends Photo = Photo>({
 }: ComputeColumnsLayoutProps<T>): ColumnsLayoutModel<T> => {
     instrumentation?.onStartLayout?.();
 
-    const result = computeLayout({
-        photos,
-        layoutOptions: {
-            ...layoutOptions,
-            columns: Math.min(
-                layoutOptions.columns,
-                Math.max(photos.length, layoutOptions.columnConstraints?.minColumns || 0)
-            ),
-        },
-        instrumentation,
-    });
+    const layout = computeLayout({ photos, layoutOptions, instrumentation });
 
-    instrumentation?.onFinishLayout?.(result);
+    instrumentation?.onFinishLayout?.(layout);
 
-    return result;
+    return layout;
 };
 
 export default computeColumnsLayout;

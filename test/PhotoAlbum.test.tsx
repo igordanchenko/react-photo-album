@@ -72,35 +72,15 @@ describe("PhotoAlbum", () => {
     });
 
     it("renders columns layout correctly when there isn't enough photos", () => {
-        whenAskedToRender(<PhotoAlbum layout={"columns"} photos={photos.slice(0, 3)} columns={5} />);
+        whenAskedToRender(<PhotoAlbum layout={"columns"} photos={photos.slice(0, 2)} columns={4} />);
+
+        whenAskedToRender(<PhotoAlbum layout={"columns"} photos={[]} columns={4} />);
     });
 
-    it("supports minimum number of columns parameter", () => {
-        whenAskedToRender(
-            <PhotoAlbum
-                layout={"masonry"}
-                photos={photos.slice(0, 2)}
-                columns={4}
-                columnConstraints={{ minColumns: 4 }}
-            />
-        );
+    it("renders masonry layout correctly when there isn't enough photos", () => {
+        whenAskedToRender(<PhotoAlbum layout={"masonry"} photos={photos.slice(0, 2)} columns={4} />);
 
-        whenAskedToRender(
-            <PhotoAlbum
-                layout={"columns"}
-                photos={photos.slice(0, 2)}
-                columns={4}
-                columnConstraints={{ minColumns: 4 }}
-            />
-        );
-
-        whenAskedToRender(
-            <PhotoAlbum layout={"masonry"} photos={[]} columns={4} columnConstraints={{ minColumns: 4 }} />
-        );
-
-        whenAskedToRender(
-            <PhotoAlbum layout={"columns"} photos={[]} columns={4} columnConstraints={{ minColumns: 4 }} />
-        );
+        whenAskedToRender(<PhotoAlbum layout={"masonry"} photos={[]} columns={4} />);
     });
 
     it("renders correctly with invalid defaultContainerWidth", () => {
