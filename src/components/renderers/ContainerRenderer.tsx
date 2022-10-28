@@ -34,7 +34,7 @@ const ContainerRenderer = <T extends Photo = Photo>(props: ContainerRendererProp
             justifyContent: "space-between",
             flexDirection: layout === "rows" ? "column" : "row",
             ...style,
-        } as React.CSSProperties,
+        } as const,
         ...restContainerProps,
     };
 
