@@ -34,8 +34,7 @@
         "build:js": "rollup -c",
         "start": "npm-run-all clean --parallel \"build:* -- -w\"",
         "lint": "eslint .",
-        "test": "npm-run-all test:*",
-        "test:unit": "jest",
+        "test": "jest",
         "test:e2e": "playwright test -c playwright-ct.config.ts"
     },
     "peerDependencies": {
