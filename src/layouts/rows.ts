@@ -1,7 +1,7 @@
 import ratio from "../utils/ratio";
 import round from "../utils/round";
 import { findShortestPath } from "../utils/dijkstra";
-import { Instrumentation, Photo, PhotoLayout, RowConstraints, RowsLayoutOptions } from "../types";
+import { Photo, PhotoLayout, RowConstraints, RowsLayoutOptions } from "../types";
 
 // guesstimate how many neighboring nodes should be searched based on
 // the aspect columnRatio of the container with images and minimal aspect columnRatio of all photos
@@ -52,14 +52,12 @@ const makeGetRowNeighbors =
         targetRowHeight,
         limitNodeSearch,
         rowConstraints,
-        instrumentation,
     }: {
         photos: T[];
         layoutOptions: RowsLayoutOptions<T>;
         targetRowHeight: number;
         limitNodeSearch: number;
         rowConstraints?: RowConstraints;
-        instrumentation?: Instrumentation;
     }) =>
     (node: string) => {
         const { containerWidth, spacing, padding } = layoutOptions;
@@ -69,7 +67,7 @@ const makeGetRowNeighbors =
         const startOffset = rowConstraints?.minPhotos ?? 1;
         const endOffset = Math.min(limitNodeSearch, rowConstraints?.maxPhotos ?? Infinity);
         for (let i = start + startOffset; i < photos.length + 1; i += 1) {
-            if (i - start > endOffset && !instrumentation?.fullGraphSearch) break;
+            if (i - start > endOffset) break;
             const currentCost = cost(photos, start, i, containerWidth, targetRowHeight, spacing, padding);
             if (currentCost === undefined) break;
             results[i.toString()] = currentCost;
@@ -82,15 +80,11 @@ type RowsLayoutModel<T extends Photo = Photo> = { photo: T; layout: PhotoLayout 
 const computeRowsLayout = <T extends Photo = Photo>({
     photos,
     layoutOptions,
-    instrumentation,
 }: {
     photos: T[];
     layoutOptions: RowsLayoutOptions<T>;
-    instrumentation?: Instrumentation;
 }): RowsLayoutModel<T> => {
     const { spacing, padding, containerWidth, targetRowHeight, rowConstraints } = layoutOptions;
-
-    instrumentation?.onStartLayout?.();
 
     const limitNodeSearch = findIdealNodeSearch({ photos, containerWidth, targetRowHeight });
 
@@ -100,7 +94,6 @@ const computeRowsLayout = <T extends Photo = Photo>({
         targetRowHeight,
         limitNodeSearch,
         rowConstraints,
-        instrumentation,
     });
 
     const path = findShortestPath(getNeighbors, "0", `${photos.length}`);
@@ -131,8 +124,6 @@ const computeRowsLayout = <T extends Photo = Photo>({
             }))
         );
     }
-
-    instrumentation?.onFinishLayout?.(layout);
 
     return layout;
 };
