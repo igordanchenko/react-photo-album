@@ -44,21 +44,24 @@ const useContainerWidth = (breakpoints: number[] | undefined, defaultContainerWi
         }
     });
 
-    const containerRef = useEventCallback((node: HTMLElement | null) => {
-        observerRef.current?.disconnect();
-        observerRef.current = undefined;
+    const containerRef = React.useCallback(
+        (node: HTMLElement | null) => {
+            observerRef.current?.disconnect();
+            observerRef.current = undefined;
 
-        ref.current = node;
+            ref.current = node;
 
-        updateWidth();
+            updateWidth();
 
-        if (node) {
-            if (typeof ResizeObserver !== "undefined") {
-                observerRef.current = new ResizeObserver(updateWidth);
-                observerRef.current.observe(node);
+            if (node) {
+                if (typeof ResizeObserver !== "undefined") {
+                    observerRef.current = new ResizeObserver(updateWidth);
+                    observerRef.current.observe(node);
+                }
             }
-        }
-    });
+        },
+        [updateWidth]
+    );
 
     return { containerRef, containerWidth };
 };
