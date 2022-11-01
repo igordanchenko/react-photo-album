@@ -3,14 +3,7 @@ import * as React from "react";
 import computeMasonryLayout from "../../layouts/masonry";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";
-import {
-    ColumnsLayoutOptions,
-    ComponentsProps,
-    Instrumentation,
-    Photo,
-    RenderColumnContainer,
-    RenderPhoto,
-} from "../../types";
+import { ColumnsLayoutOptions, ComponentsProps, Photo, RenderColumnContainer, RenderPhoto } from "../../types";
 
 type MasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
@@ -18,13 +11,12 @@ type MasonryLayoutProps<T extends Photo = Photo> = {
     renderPhoto?: RenderPhoto<T>;
     renderColumnContainer?: RenderColumnContainer<T>;
     componentsProps?: ComponentsProps;
-    instrumentation?: Instrumentation;
 };
 
 const MasonryLayout = <T extends Photo = Photo>(props: MasonryLayoutProps<T>) => {
-    const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps, instrumentation } = props;
+    const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
 
-    const masonryLayout = computeMasonryLayout({ photos, layoutOptions, instrumentation });
+    const masonryLayout = computeMasonryLayout({ photos, layoutOptions });
 
     if (!masonryLayout) return null;
 

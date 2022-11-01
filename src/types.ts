@@ -112,8 +112,6 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     renderRowContainer?: RenderRowContainer<T>;
     /** Custom column container rendering function. */
     renderColumnContainer?: RenderColumnContainer<T>;
-    /** Internal instrumentation - use on your own risk. */
-    instrumentation?: Instrumentation;
 };
 
 export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => React.ReactNode;
@@ -213,14 +211,6 @@ export type RowConstraints = {
     minPhotos?: number;
     /** maximum number of photos per row in 'rows' layout */
     maxPhotos?: number;
-};
-
-/** internal instrumentation for research and performance testing purposes, subject to change without notice */
-export type Instrumentation = {
-    fullGraphSearch?: boolean;
-    onStartLayout?: () => void;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    onFinishLayout?: (...params: any) => void;
 };
 
 /** @internal */

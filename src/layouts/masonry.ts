@@ -1,19 +1,16 @@
 import ratio from "../utils/ratio";
-import { ColumnsLayoutOptions, Instrumentation, Photo, PhotoLayout } from "../types";
+import { ColumnsLayoutOptions, Photo, PhotoLayout } from "../types";
 
 type ComputeMasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
-    instrumentation?: Instrumentation;
 };
 
 type MasonryColumnsModel<T extends Photo = Photo> = { photo: T; layout: PhotoLayout }[][] | undefined;
 
 const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayoutProps<T>): MasonryColumnsModel<T> => {
-    const { photos, layoutOptions, instrumentation } = props;
+    const { photos, layoutOptions } = props;
     const { columns, spacing, padding, containerWidth } = layoutOptions;
-
-    instrumentation?.onStartLayout?.();
 
     // calculate column width based on total width and columns count
     const columnWidth = (containerWidth - spacing * (columns - 1) - 2 * padding * columns) / columns;
@@ -61,7 +58,7 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
     );
 
     // map through each column and photo and add layout properties
-    const layout = columnsModel.map((column) =>
+    return columnsModel.map((column) =>
         column.map(({ photo, index }, photoIndex) => ({
             photo,
             layout: {
@@ -73,10 +70,6 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
             },
         }))
     );
-
-    instrumentation?.onFinishLayout?.(layout);
-
-    return layout;
 };
 
 export default computeMasonryLayout;

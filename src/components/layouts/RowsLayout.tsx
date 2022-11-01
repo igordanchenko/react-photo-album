@@ -3,14 +3,7 @@ import * as React from "react";
 import computeRowsLayout from "../../layouts/rows";
 import PhotoRenderer from "../renderers/PhotoRenderer";
 import RowContainerRenderer from "../renderers/RowContainerRenderer";
-import {
-    ComponentsProps,
-    Instrumentation,
-    Photo,
-    RenderPhoto,
-    RenderRowContainer,
-    RowsLayoutOptions,
-} from "../../types";
+import { ComponentsProps, Photo, RenderPhoto, RenderRowContainer, RowsLayoutOptions } from "../../types";
 
 type RowsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
@@ -18,13 +11,12 @@ type RowsLayoutProps<T extends Photo = Photo> = {
     renderPhoto?: RenderPhoto<T>;
     renderRowContainer?: RenderRowContainer<T>;
     componentsProps?: ComponentsProps;
-    instrumentation?: Instrumentation;
 };
 
 const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>) => {
-    const { photos, layoutOptions, renderPhoto, renderRowContainer, componentsProps, instrumentation } = props;
+    const { photos, layoutOptions, renderPhoto, renderRowContainer, componentsProps } = props;
 
-    const rowsLayout = computeRowsLayout({ photos, layoutOptions, instrumentation });
+    const rowsLayout = computeRowsLayout({ photos, layoutOptions });
 
     if (!rowsLayout) return null;
 

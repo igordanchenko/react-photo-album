@@ -45,11 +45,11 @@ const renderLayout = <T extends Photo>(
     containerWidth: number,
     componentsProps: ComponentsProps | undefined
 ) => {
-    const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer, instrumentation } = props;
+    const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer } = props;
 
     const layoutOptions = resolveLayoutOptions({ containerWidth, ...props });
 
-    const commonLayoutProps = { photos, renderPhoto, componentsProps, instrumentation };
+    const commonLayoutProps = { photos, renderPhoto, componentsProps };
 
     return (
         <>
