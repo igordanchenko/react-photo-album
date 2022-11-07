@@ -33,11 +33,13 @@ the ground up.
 
 ![Masonry layout](https://react-photo-album.com/images/layouts/masonry.jpg)
 
-All examples are available on [CodeSandbox](https://codesandbox.io/examples/package/react-photo-album).
-
 ## Documentation
 
 [https://react-photo-album.com/documentation](https://react-photo-album.com/documentation)
+
+## Examples
+
+[https://react-photo-album.com/examples](https://react-photo-album.com/examples)
 
 ## Installation
 
@@ -53,7 +55,7 @@ yarn add react-photo-album
 
 ## Minimal Setup Example
 
-```javascript
+```js
 import PhotoAlbum from "react-photo-album";
 
 const photos = [
@@ -69,7 +71,7 @@ const photos = [
     }
 ];
 
-<PhotoAlbum layout="rows" photos={photos} />
+<PhotoAlbum layout="rows" photos={photos}/>
 ```
 
 ## How It Works
@@ -111,10 +113,10 @@ React Photo Album extensively uses CSS flexbox and CSS `calc` function to calcul
 client. Unlike its predecessor, React Photo Album avoids setting the exact dimensions of images in pixels. Thanks to
 this approach, server-side rendered markup looks pixel-perfect on the client even before hydration (or even when
 JavaScript is completely disabled in the browser). React Photo Album calculates `spacing`, `padding`, `columns`, and
-other responsive parameters on the server-side using the `defaultContainerWidth` value, which is set to 800px by
-default. Keep in mind that responsive parameters may contribute to cumulative layout shifts during the initial page
-load. If CLS becomes an issue in your case, you may want to consider using hard-coded values for `columns`, `spacing`
-, `padding`, etc., instead of the default responsive values.
+other responsive parameters on the server-side using the `defaultContainerWidth` value. Keep in mind that responsive
+parameters may contribute to cumulative layout shifts during the initial page load. If CLS becomes an issue in your
+case, you may want to consider using hard-coded values for `columns`, `spacing`, `padding`, etc., instead of the default
+responsive values.
 
 ## Credits
 
