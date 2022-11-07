@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import round from "../../utils/round";
-import { LayoutOptions, Photo, PhotoLayout, PhotoProps, RenderPhoto } from "../../types";
+import { LayoutOptions, Photo, PhotoLayout, RenderPhoto, RenderPhotoProps } from "../../types";
 
 const calcWidth = <T extends Photo = Photo>(
     base: string,
@@ -53,7 +53,7 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
 };
 
 type PhotoRendererProps<T extends Photo = Photo> = Omit<
-    PhotoProps<T>,
+    RenderPhotoProps<T>,
     "imageProps" | "renderDefaultPhoto" | "wrapperStyle"
 > & {
     imageProps?: React.HTMLAttributes<HTMLImageElement>;

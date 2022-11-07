@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import { PhotoAlbum as ReactPhotoAlbum, PhotoAlbumProps, PhotoProps } from "../../src";
+import { PhotoAlbum as ReactPhotoAlbum, PhotoAlbumProps, RenderPhotoProps } from "../../src";
 import photos from "./photos";
 
-const renderPhoto = ({ photo, wrapperStyle }: PhotoProps) => (
+const renderPhoto = ({ photo, wrapperStyle }: RenderPhotoProps) => (
     <div
         style={{
             ...wrapperStyle,
