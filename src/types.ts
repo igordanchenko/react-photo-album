@@ -61,7 +61,7 @@ export type PhotoLayout = {
     photosCount: number;
 };
 
-export type PhotoProps<T extends Photo = Photo> = {
+export type RenderPhotoProps<T extends Photo = Photo> = {
     /** photo object */
     photo: T;
     /** computed photo layout */
@@ -114,7 +114,7 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     renderColumnContainer?: RenderColumnContainer<T>;
 };
 
-export type RenderPhoto<T extends Photo = Photo> = (props: PhotoProps<T>) => React.ReactNode;
+export type RenderPhoto<T extends Photo = Photo> = (props: RenderPhotoProps<T>) => React.ReactNode;
 
 export type GenericLayoutOptions<T extends Photo = Photo> = {
     /** layout spacing (gaps between photos) */
@@ -160,16 +160,14 @@ export type ComponentsProps = {
 
 export type ComponentsPropsParameter = ComponentsProps | ((containerWidth?: number) => ComponentsProps);
 
-export type ContainerProps = {
+export type RenderContainerProps = React.PropsWithChildren<{
     /** layout type */
     layout: LayoutType;
     /** pre-populated default container attributes */
     containerProps: React.HTMLAttributes<HTMLDivElement>;
     /** container ref callback */
     containerRef?: React.RefCallback<HTMLDivElement>;
-};
-
-export type RenderContainerProps = React.PropsWithChildren<ContainerProps>;
+}>;
 
 export type RenderContainer = (props: RenderContainerProps) => React.ReactNode;
 
