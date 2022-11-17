@@ -30,12 +30,7 @@ const App = () => {
 
     return (
         <>
-            <PhotoAlbum
-                photos={photos}
-                layout="rows"
-                targetRowHeight={150}
-                onClick={(event, photo, index) => setIndex(index)}
-            />
+            <PhotoAlbum photos={photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
             <Lightbox
                 slides={slides}

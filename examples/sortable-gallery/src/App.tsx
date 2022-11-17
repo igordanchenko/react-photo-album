@@ -1,5 +1,5 @@
 import { forwardRef, HTMLAttributes, memo, useCallback, useRef, useState } from "react";
-import { Photo, PhotoAlbum, PhotoProps } from "react-photo-album";
+import { Photo, PhotoAlbum, RenderPhotoProps } from "react-photo-album";
 import clsx from "clsx";
 import {
     closestCenter,
@@ -24,7 +24,7 @@ interface SortablePhoto extends Photo {
     id: string;
 }
 
-type SortablePhotoProps = PhotoProps<SortablePhoto>;
+type SortablePhotoProps = RenderPhotoProps<SortablePhoto>;
 
 type PhotoFrameProps = SortablePhotoProps & {
     overlay?: boolean;
