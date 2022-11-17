@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { PhotoAlbum, PhotoProps } from "react-photo-album";
+import { PhotoAlbum, RenderPhotoProps } from "react-photo-album";
 
 import Box from "@mui/material/Box";
 
@@ -9,7 +9,7 @@ const Playground = () => {
     const { photos, layout, columns, targetRowHeight, spacing, padding, width } = useSettings();
 
     const renderPhoto = useCallback(
-        ({ imageProps: { alt, style, ...rest } }: PhotoProps) => (
+        ({ imageProps: { alt, style, ...rest } }: RenderPhotoProps) => (
             <img
                 alt={alt}
                 style={{

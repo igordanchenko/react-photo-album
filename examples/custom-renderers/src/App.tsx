@@ -52,7 +52,7 @@ const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, st
                 textAlign: "center",
             }}
         >
-            {layoutOptions.viewportWidth ? Math.round(layout.width) + " x " + Math.round(layout.height) : <>&nbsp;</>}
+            {Math.round(layout.width) + " x " + Math.round(layout.height)}
         </div>
     </div>
 );
