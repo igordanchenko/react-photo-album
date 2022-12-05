@@ -19,7 +19,7 @@ the ground up.
 - **Performance:** it was built with performance in mind in order to support large photo albums and silky smooth layout
   adjustments.
 
-## Examples
+## Layouts
 
 ### Rows
 
