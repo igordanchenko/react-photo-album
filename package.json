@@ -35,7 +35,8 @@
         "start": "npm-run-all clean --parallel \"build:* -- -w\"",
         "lint": "eslint .",
         "test": "jest",
-        "test:e2e": "playwright test -c playwright-ct.config.ts"
+        "test:e2e": "playwright test -c playwright-ct.config.ts",
+        "test:e2e:prepare": "npx playwright install"
     },
     "peerDependencies": {
         "react": ">=16.8.0"
