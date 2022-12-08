@@ -1,4 +1,4 @@
-import MinHeap, { NumericComparator } from "../../../src/utils/heap";
+import MinHeap, { NumericComparator } from "../../src/utils/heap";
 
 describe("Heap", () => {
     it("accepts elements", () => {
