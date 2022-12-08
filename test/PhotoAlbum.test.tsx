@@ -1,7 +1,7 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
 
-import { ClickHandler, Photo, PhotoAlbum, RenderPhoto } from "../../src";
+import { ClickHandler, Photo, PhotoAlbum, RenderPhoto } from "../src";
 import photos from "./photos";
 
 const photosWithSrcSet = photos.map((photo) => ({

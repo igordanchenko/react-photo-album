@@ -1,5 +1,4 @@
 {
-    "roots": ["test/unit"],
     "preset": "ts-jest",
     "testEnvironment": "jsdom",
     "collectCoverage": true,
