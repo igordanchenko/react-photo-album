@@ -155,7 +155,7 @@ export type ComponentsProps = {
     /** Additional HTML attributes to be passed to the column container `div` element */
     columnContainerProps?: React.HTMLAttributes<HTMLDivElement>;
     /** Additional HTML attributes to be passed to the photo `img` element */
-    imageProps?: React.HTMLAttributes<HTMLImageElement>;
+    imageProps?: React.ImgHTMLAttributes<HTMLImageElement>;
 };
 
 export type ComponentsPropsParameter = ComponentsProps | ((containerWidth?: number) => ComponentsProps);
