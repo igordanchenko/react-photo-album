@@ -21,16 +21,16 @@
         "@emotion/react": "^11.10.5",
         "@emotion/server": "^11.10.0",
         "@emotion/styled": "^11.10.5",
-        "@mui/material": "^5.10.14",
+        "@mui/material": "^5.10.17",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-photo-album": "^2.0.0-rc.8"
+        "react-photo-album": "^2.0.0-rc.9"
     },
     "devDependencies": {
-        "@types/react": "^18.0.25",
+        "@types/react": "^18.0.26",
         "@types/react-dom": "^18.0.9",
         "react-scripts": "^5.0.1",
-        "typescript": "^4.9.3"
+        "typescript": "^4.9.4"
     },
     "scripts": {
         "start": "react-scripts start",
