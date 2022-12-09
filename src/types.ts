@@ -2,30 +2,39 @@ import * as React from "react";
 
 export type LayoutType = "columns" | "rows" | "masonry";
 
-export type ClickHandler<T extends Photo = Photo> = ({
-    event,
-    photo,
-    index,
-}: {
-    event: React.MouseEvent;
-    photo: T;
-    index: number;
-}) => void;
-
-export type ResponsiveParameterProvider<T = number> = (containerWidth: number) => T;
-
-export type ResponsiveParameter<T = number> = T | ResponsiveParameterProvider<T>;
-
-export type ResponsiveSizes = {
-    /** default size e.g. 100vw or calc(100vw - 200px) */
-    size: string;
-    /** array of sizes at various breakpoint */
-    sizes?: {
-        /** viewport size media query e.g. (max-width: 600px)  */
-        viewport: string;
-        /** photo album width at given viewport size e.g. calc(100vw - 50px) */
-        size: string;
-    }[];
+export type PhotoAlbumProps<T extends Photo = Photo> = {
+    /** An array of photos to display in the photo album. */
+    photos: Array<T>;
+    /** Photo album layout type. */
+    layout: LayoutType;
+    /** A number of columns in the `columns` or `masonry` layout. */
+    columns?: ResponsiveParameter;
+    /** Spacing between images. */
+    spacing?: ResponsiveParameter;
+    /** Padding around each image in the photo album. */
+    padding?: ResponsiveParameter;
+    /** Target row height in the 'rows' layout. */
+    targetRowHeight?: ResponsiveParameter;
+    /** Additional row constraints in the `rows` layout. */
+    rowConstraints?: ResponsiveParameter<RowConstraints>;
+    /** Photo album container width at various viewport sizes. */
+    sizes?: ResponsiveSizes;
+    /** Photo click callback function. */
+    onClick?: ClickHandler<T>;
+    /** Responsive breakpoints. */
+    breakpoints?: number[];
+    /** Default container width in SSR. */
+    defaultContainerWidth?: number;
+    /** Additional HTML attributes to be passed to the rendered elements. */
+    componentsProps?: ComponentsPropsParameter;
+    /** Custom photo rendering function. */
+    renderPhoto?: RenderPhoto<T>;
+    /** Custom container rendering function. */
+    renderContainer?: RenderContainer;
+    /** Custom row container rendering function. */
+    renderRowContainer?: RenderRowContainer<T>;
+    /** Custom column container rendering function. */
+    renderColumnContainer?: RenderColumnContainer<T>;
 };
 
 export interface Image {
@@ -48,6 +57,48 @@ export interface Photo extends Image {
     images?: Image[];
 }
 
+export type RenderPhotoProps<T extends Photo = Photo> = {
+    /** photo object */
+    photo: T;
+    /** computed photo layout */
+    layout: PhotoLayout;
+    /** photo album layout options */
+    layoutOptions: LayoutOptions<T>;
+    /** pre-populated 'img' element attributes */
+    imageProps: NonOptional<ImgElementAttributes, "src" | "alt" | "style">;
+    /** A callback to render the default photo implementation. If `wrapped` is `true`, the image is styled with `width`
+     * and `height` set to 100%. Use this option when rendering image wrapper styled with wrapperStyle. */
+    renderDefaultPhoto: RenderFunction<{ wrapped?: boolean }>;
+    /** CSS styles to properly size image wrapper (i.e. <div> wrapper) */
+    wrapperStyle: React.CSSProperties;
+};
+
+export type RenderPhoto<T extends Photo = Photo> = RenderFunction<RenderPhotoProps<T>>;
+
+export type ClickHandlerProps<T extends Photo = Photo> = {
+    event: React.MouseEvent;
+    photo: T;
+    index: number;
+};
+
+export type ClickHandler<T extends Photo = Photo> = (props: ClickHandlerProps<T>) => void;
+
+export type ResponsiveParameterProvider<T = number> = (containerWidth: number) => T;
+
+export type ResponsiveParameter<T = number> = T | ResponsiveParameterProvider<T>;
+
+export type ResponsiveSizes = {
+    /** default size e.g. 100vw or calc(100vw - 200px) */
+    size: string;
+    /** array of sizes at various breakpoint */
+    sizes?: {
+        /** viewport size media query e.g. (max-width: 600px)  */
+        viewport: string;
+        /** photo album width at given viewport size e.g. calc(100vw - 50px) */
+        size: string;
+    }[];
+};
+
 export type PhotoLayout = {
     /** rendered photo width */
     width: number;
@@ -60,61 +111,6 @@ export type PhotoLayout = {
     /** number of photos in a given row/column */
     photosCount: number;
 };
-
-export type RenderPhotoProps<T extends Photo = Photo> = {
-    /** photo object */
-    photo: T;
-    /** computed photo layout */
-    layout: PhotoLayout;
-    /** photo album layout options */
-    layoutOptions: LayoutOptions<T>;
-    /** pre-populated 'img' element attributes */
-    imageProps: React.ImgHTMLAttributes<HTMLImageElement> &
-        Required<Pick<React.ImgHTMLAttributes<HTMLImageElement>, "src" | "alt" | "style">>;
-    /** A callback to render the default photo implementation. If `wrapped` is `true`, the image will be styled
-     * with `width` and `height` set to 100%. Use this option when you already sized image wrapper with image
-     * dimensions (see `wrapperStyle`) */
-    renderDefaultPhoto: (options?: { wrapped?: boolean }) => React.ReactNode;
-    /** CSS styles to properly size image wrapper (i.e. <div> wrapper) */
-    wrapperStyle: React.CSSProperties;
-};
-
-export type PhotoAlbumProps<T extends Photo = Photo> = {
-    /** An array of photos to display in the photo album. */
-    photos: Array<T>;
-    /** Photo album layout type. */
-    layout: LayoutType;
-    /** A number of columns in the `columns` or `masonry` layout. */
-    columns?: ResponsiveParameter;
-    /** Spacing between images. */
-    spacing?: ResponsiveParameter;
-    /** Padding around each image in the photo album. */
-    padding?: ResponsiveParameter;
-    /** Target row height in the 'rows' layout. */
-    targetRowHeight?: ResponsiveParameter;
-    /** Additional row constraints */
-    rowConstraints?: ResponsiveParameter<RowConstraints>;
-    /** Photo album width at various viewport sizes. */
-    sizes?: ResponsiveSizes;
-    /** Photo click callback function. */
-    onClick?: ClickHandler<T>;
-    /** Responsive breakpoints */
-    breakpoints?: number[];
-    /** Default container width to be used in the server-side render. */
-    defaultContainerWidth?: number;
-    /** Additional HTML attributes to be passed to the rendered elements */
-    componentsProps?: ComponentsPropsParameter;
-    /** Custom photo rendering function. */
-    renderPhoto?: RenderPhoto<T>;
-    /** Custom container rendering function. */
-    renderContainer?: RenderContainer;
-    /** Custom row container rendering function. */
-    renderRowContainer?: RenderRowContainer<T>;
-    /** Custom column container rendering function. */
-    renderColumnContainer?: RenderColumnContainer<T>;
-};
-
-export type RenderPhoto<T extends Photo = Photo> = (props: RenderPhotoProps<T>) => React.ReactNode;
 
 export type GenericLayoutOptions<T extends Photo = Photo> = {
     /** layout spacing (gaps between photos) */
@@ -147,15 +143,22 @@ export type ColumnsLayoutOptions<T extends Photo = Photo> = GenericLayoutOptions
 
 export type LayoutOptions<T extends Photo = Photo> = ColumnsLayoutOptions<T> | RowsLayoutOptions<T>;
 
+export type RowConstraints = {
+    /** minimum number of photos per row in 'rows' layout */
+    minPhotos?: number;
+    /** maximum number of photos per row in 'rows' layout */
+    maxPhotos?: number;
+};
+
 export type ComponentsProps = {
     /** Additional HTML attributes to be passed to the outer container `div` element */
-    containerProps?: React.HTMLAttributes<HTMLDivElement>;
+    containerProps?: DivElementAttributes;
     /** Additional HTML attributes to be passed to the row container `div` element */
-    rowContainerProps?: React.HTMLAttributes<HTMLDivElement>;
+    rowContainerProps?: DivElementAttributes;
     /** Additional HTML attributes to be passed to the column container `div` element */
-    columnContainerProps?: React.HTMLAttributes<HTMLDivElement>;
+    columnContainerProps?: DivElementAttributes;
     /** Additional HTML attributes to be passed to the photo `img` element */
-    imageProps?: React.ImgHTMLAttributes<HTMLImageElement>;
+    imageProps?: ImgElementAttributes;
 };
 
 export type ComponentsPropsParameter = ComponentsProps | ((containerWidth?: number) => ComponentsProps);
@@ -164,14 +167,14 @@ export type RenderContainerProps = React.PropsWithChildren<{
     /** layout type */
     layout: LayoutType;
     /** pre-populated default container attributes */
-    containerProps: React.HTMLAttributes<HTMLDivElement>;
+    containerProps: DivElementAttributes;
     /** container ref callback */
     containerRef: React.RefCallback<HTMLDivElement>;
 }>;
 
-export type RenderContainer = (props: RenderContainerProps) => React.ReactNode;
+export type RenderContainer = RenderFunction<RenderContainerProps>;
 
-export type RowContainerProps<T extends Photo = Photo> = {
+export type RenderRowContainerProps<T extends Photo = Photo> = React.PropsWithChildren<{
     /** layout options */
     layoutOptions: RowsLayoutOptions<T>;
     /** row number */
@@ -179,14 +182,12 @@ export type RowContainerProps<T extends Photo = Photo> = {
     /** total number of rows */
     rowsCount: number;
     /** pre-populated default row container attributes */
-    rowContainerProps: React.HTMLAttributes<HTMLDivElement>;
-};
+    rowContainerProps: DivElementAttributes;
+}>;
 
-export type RenderRowContainer<T extends Photo = Photo> = (
-    props: React.PropsWithChildren<RowContainerProps<T>>
-) => React.ReactNode;
+export type RenderRowContainer<T extends Photo = Photo> = RenderFunction<RenderRowContainerProps<T>>;
 
-export type ColumnContainerProps<T extends Photo = Photo> = {
+export type RenderColumnContainerProps<T extends Photo = Photo> = React.PropsWithChildren<{
     layoutOptions: ColumnsLayoutOptions<T>;
     /** column number */
     columnIndex: number;
@@ -197,19 +198,17 @@ export type ColumnContainerProps<T extends Photo = Photo> = {
     /** width adjustment ratios of each column */
     columnsRatios?: number[];
     /** pre-populated default column container attributes */
-    columnContainerProps: React.HTMLAttributes<HTMLDivElement>;
-};
+    columnContainerProps: DivElementAttributes;
+}>;
 
-export type RenderColumnContainer<T extends Photo = Photo> = (
-    props: React.PropsWithChildren<ColumnContainerProps<T>>
-) => React.ReactNode;
+export type RenderColumnContainer<T extends Photo = Photo> = RenderFunction<RenderColumnContainerProps<T>>;
 
-export type RowConstraints = {
-    /** minimum number of photos per row in 'rows' layout */
-    minPhotos?: number;
-    /** maximum number of photos per row in 'rows' layout */
-    maxPhotos?: number;
-};
+export type RenderFunction<T> = (props: T) => React.ReactNode;
 
-/** @internal */
+export type DivElementAttributes = JSX.IntrinsicElements["div"];
+
+export type ImgElementAttributes = JSX.IntrinsicElements["img"];
+
 export type Optional<T, K extends keyof T> = Partial<Pick<T, K>> & Omit<T, K>;
+
+export type NonOptional<T, K extends keyof T> = Required<Pick<T, K>> & Omit<T, K>;
