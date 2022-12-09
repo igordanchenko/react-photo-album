@@ -166,7 +166,7 @@ export type RenderContainerProps = React.PropsWithChildren<{
     /** pre-populated default container attributes */
     containerProps: React.HTMLAttributes<HTMLDivElement>;
     /** container ref callback */
-    containerRef?: React.RefCallback<HTMLDivElement>;
+    containerRef: React.RefCallback<HTMLDivElement>;
 }>;
 
 export type RenderContainer = (props: RenderContainerProps) => React.ReactNode;
