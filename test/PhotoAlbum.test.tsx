@@ -19,10 +19,10 @@ const createNodeMock =
         }
     };
 
-const render = (Component: JSX.Element, clientWidth?: number) =>
+const render = (Component: React.ReactElement, clientWidth?: number) =>
     renderer.create(Component, { createNodeMock: createNodeMock(clientWidth) });
 
-const whenAskedToRender = (Component: JSX.Element, clientWidth?: number) => {
+const whenAskedToRender = (Component: React.ReactElement, clientWidth?: number) => {
     const rendered = render(Component, clientWidth);
     expect(rendered.toJSON()).toMatchSnapshot();
     rendered.unmount();

@@ -65,7 +65,7 @@ export type RenderPhotoProps<T extends Photo = Photo> = {
     /** photo album layout options */
     layoutOptions: LayoutOptions<T>;
     /** pre-populated 'img' element attributes */
-    imageProps: NonOptional<ImgElementAttributes, "src" | "alt" | "style">;
+    imageProps: NonOptional<ImageElementAttributes, "src" | "alt" | "style">;
     /** A callback to render the default photo implementation. If `wrapped` is `true`, the image is styled with `width`
      * and `height` set to 100%. Use this option when rendering image wrapper styled with wrapperStyle. */
     renderDefaultPhoto: RenderFunction<{ wrapped?: boolean }>;
@@ -158,7 +158,7 @@ export type ComponentsProps = {
     /** Additional HTML attributes to be passed to the column container `div` element */
     columnContainerProps?: DivElementAttributes;
     /** Additional HTML attributes to be passed to the photo `img` element */
-    imageProps?: ImgElementAttributes;
+    imageProps?: ImageElementAttributes;
 };
 
 export type ComponentsPropsParameter = ComponentsProps | ((containerWidth?: number) => ComponentsProps);
@@ -205,9 +205,9 @@ export type RenderColumnContainer<T extends Photo = Photo> = RenderFunction<Rend
 
 export type RenderFunction<T> = (props: T) => React.ReactNode;
 
-export type DivElementAttributes = JSX.IntrinsicElements["div"];
+export type DivElementAttributes = React.HTMLAttributes<HTMLDivElement>;
 
-export type ImgElementAttributes = JSX.IntrinsicElements["img"];
+export type ImageElementAttributes = React.ImgHTMLAttributes<HTMLImageElement>;
 
 export type Optional<T, K extends keyof T> = Partial<Pick<T, K>> & Omit<T, K>;
 
