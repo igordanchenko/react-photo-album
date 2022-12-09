@@ -76,7 +76,7 @@ const renderLayout = <T extends Photo>(
     );
 };
 
-const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>): JSX.Element => {
+const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>) => {
     const { photos, layout, renderContainer, defaultContainerWidth, breakpoints } = props;
 
     const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
