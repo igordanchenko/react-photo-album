@@ -21,7 +21,7 @@
         "@emotion/react": "^11.10.5",
         "@emotion/server": "^11.10.0",
         "@emotion/styled": "^11.10.5",
-        "@mui/material": "^5.11.3",
+        "@mui/material": "^5.11.4",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-photo-album": "^2.0.0"
