@@ -30,6 +30,9 @@ jobs:
             -   name: Build
                 run: npm run build
 
+            -   name: Cleanup
+                run: npm pkg delete scripts devDependencies
+
             -   name: Release
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
