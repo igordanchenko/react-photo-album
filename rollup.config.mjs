@@ -22,7 +22,7 @@ export default [
             external(),
             resolve(),
             typescript({
-                exclude: ["examples/**/*"],
+                include: ["src/**/*"],
                 compilerOptions: { removeComments: true },
             }),
         ],
