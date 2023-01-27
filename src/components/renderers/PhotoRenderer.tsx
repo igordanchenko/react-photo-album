@@ -24,7 +24,8 @@ const calculateSizesValue = <T extends Photo = Photo>(
 ) => calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
 
 const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions<T>) => {
-    let srcSet, sizes;
+    let srcSet;
+    let sizes;
 
     if (photo.images && photo.images.length > 0) {
         srcSet = photo.images
@@ -98,14 +99,14 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
     };
 
     const renderDefaultPhoto = ({ wrapped }: { wrapped?: boolean } = {}) => {
-        const { src, alt, srcSet, sizes, style, ...rest } = imageProps;
+        const { src, alt, srcSet, sizes, style: unwrappedStyle, ...rest } = imageProps;
 
         return (
             <img
                 alt={alt}
                 {...(srcSet ? { srcSet, sizes } : null)}
                 src={src}
-                style={wrapped ? { display: "block", width: "100%", height: "100%" } : style}
+                style={wrapped ? { display: "block", width: "100%", height: "100%" } : unwrappedStyle}
                 {...rest}
             />
         );

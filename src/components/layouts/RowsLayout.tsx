@@ -24,6 +24,7 @@ const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>) => {
         <>
             {rowsLayout.map((row, rowIndex) => (
                 <RowContainerRenderer
+                    // eslint-disable-next-line react/no-array-index-key
                     key={`row-${rowIndex}`}
                     layoutOptions={layoutOptions}
                     rowIndex={rowIndex}

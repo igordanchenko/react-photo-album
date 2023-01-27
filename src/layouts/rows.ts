@@ -1,6 +1,6 @@
 import ratio from "../utils/ratio";
 import round from "../utils/round";
-import { findShortestPath } from "../utils/dijkstra";
+import findShortestPath from "../utils/dijkstra";
 import { Photo, PhotoLayout, RowConstraints, RowsLayoutOptions } from "../types";
 
 // guesstimate how many neighboring nodes should be searched based on

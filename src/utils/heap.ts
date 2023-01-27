@@ -27,25 +27,27 @@ const MinHeap = <T>(comparator: Comparator<T>) => {
         heap[j] = temp;
     };
 
-    // bubble k-th element up
-    const swim = (k: number) => {
-        let k2 = k >> 1;
+    // bubble i-th element up
+    const swim = (i: number) => {
+        let k = i;
+        let k2 = Math.floor(k / 2);
         while (k > 1 && greater(k2, k)) {
             swap(k2, k);
             k = k2;
-            k2 = k >> 1;
+            k2 = Math.floor(k / 2);
         }
     };
 
-    // bubble k-th element down
-    const sink = (k: number) => {
-        let j = k << 1;
-        while (j <= n) {
-            if (j < n && greater(j, j + 1)) j++;
-            if (!greater(k, j)) break;
-            swap(k, j);
-            k = j;
-            j = k << 1;
+    // bubble i-th element down
+    const sink = (i: number) => {
+        let k = i;
+        let k2 = k * 2;
+        while (k2 <= n) {
+            if (k2 < n && greater(k2, k2 + 1)) k2 += 1;
+            if (!greater(k, k2)) break;
+            swap(k, k2);
+            k = k2;
+            k2 = k * 2;
         }
     };
 

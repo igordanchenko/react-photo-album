@@ -50,13 +50,13 @@ const buildColumnsModel = <T extends Photo = Photo>({
 }) => {
     const columnsModel = [];
 
-    const totalRatio = columnsRatios.reduce((acc, ratio) => acc + ratio, 0);
+    const totalRatio = columnsRatios.reduce((total, columnRatio) => total + columnRatio, 0);
 
     for (let i = 0; i < path.length - 1; i += 1) {
         const column = photos.map((photo, index) => ({ photo, index })).slice(path[i], path[i + 1]);
 
         const totalAdjustedGaps = columnsRatios.reduce(
-            (acc, ratio, index) => acc + (columnsGaps[i] - columnsGaps[index]) * ratio,
+            (total, columnRatio, index) => total + (columnsGaps[i] - columnsGaps[index]) * columnRatio,
             0
         );
 
@@ -189,10 +189,10 @@ const computeLayout = <T extends Photo = Photo>(props: ComputeColumnsLayoutProps
         if (columns > 1) {
             // will try to find a solution recursively with fewer columns
             return computeLayout({ photos, layoutOptions: { ...layoutOptions, columns: columns - 1 } });
-        } else {
-            // bailing out
-            return undefined;
         }
+
+        // bailing out
+        return undefined;
     }
 
     return { columnsModel, columnsGaps, columnsRatios };

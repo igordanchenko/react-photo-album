@@ -3,7 +3,7 @@ import MinHeap, { NumericComparator } from "../../src/utils/heap";
 describe("Heap", () => {
     it("accepts elements", () => {
         const heap = MinHeap<number>(NumericComparator);
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i += 1) {
             heap.push(Math.round(Math.random() * 1_000));
             expect(heap.size()).toBe(i + 1);
         }
@@ -11,7 +11,7 @@ describe("Heap", () => {
 
     it("returns elements in ascending order", () => {
         const heap = MinHeap<number>(NumericComparator);
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i += 1) {
             heap.push(Math.round(Math.random() * 1_000));
         }
         let previous;

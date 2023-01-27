@@ -11,13 +11,12 @@ const photosWithSrcSet = photos.map((photo) => ({
 
 const createNodeMock =
     (clientWidth = 800) =>
-    (element: React.ReactElement) => {
-        if (element.type === "div" && element.props.className.includes("react-photo-album")) {
-            return {
-                clientWidth,
-            };
-        }
-    };
+    (element: React.ReactElement) =>
+        element.type === "div" && element.props.className.includes("react-photo-album")
+            ? {
+                  clientWidth,
+              }
+            : undefined;
 
 const render = (Component: React.ReactElement, clientWidth?: number) =>
     renderer.create(Component, { createNodeMock: createNodeMock(clientWidth) });
@@ -192,7 +191,7 @@ describe("PhotoAlbum", () => {
             <PhotoAlbum
                 layout="rows"
                 photos={photos}
-                renderRowContainer={({ children }) => <div className={"custom-row-class"}>{children}</div>}
+                renderRowContainer={({ children }) => <div className="custom-row-class">{children}</div>}
             />
         );
     });
@@ -202,7 +201,7 @@ describe("PhotoAlbum", () => {
             <PhotoAlbum
                 layout="columns"
                 photos={photos}
-                renderColumnContainer={({ children }) => <div className={"custom-column-class"}>{children}</div>}
+                renderColumnContainer={({ children }) => <div className="custom-column-class">{children}</div>}
             />
         );
     });

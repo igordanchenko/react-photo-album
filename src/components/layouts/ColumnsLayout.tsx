@@ -26,6 +26,7 @@ const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>) =>
         <>
             {columnsModel.map((column, columnIndex) => (
                 <ColumnContainerRenderer
+                    // eslint-disable-next-line react/no-array-index-key
                     key={`column-${columnIndex}`}
                     layoutOptions={layoutOptions}
                     columnIndex={columnIndex}

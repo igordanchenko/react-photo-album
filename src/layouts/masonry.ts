@@ -34,14 +34,14 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
 
     // group photos by column
     const columnsModel = photos.reduce<{ photo: T; index: number }[][]>(
-        (acc, photo: T, index) => {
+        (model, photo, index) => {
             // find the shortest column
             const shortestColumn = columnsCurrentTopPositions.reduce(
-                (acc, item, i) =>
+                (currentShortestColumn, item, i) =>
                     // subtracting 1 here to compensate for floating point precision errors
                     // when two columns have identical height their floating point values can be slightly off
                     // in subsequent re-renders, leading to images jumping between columns
-                    item < columnsCurrentTopPositions[acc] - 1 ? i : acc,
+                    item < columnsCurrentTopPositions[currentShortestColumn] - 1 ? i : currentShortestColumn,
                 0
             );
 
@@ -50,9 +50,9 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
                 columnsCurrentTopPositions[shortestColumn] + columnWidth / ratio(photo) + spacing + 2 * padding;
 
             // place a photo into the shortest column
-            acc[shortestColumn].push({ photo, index });
+            model[shortestColumn].push({ photo, index });
 
-            return acc;
+            return model;
         },
         Array.from({ length: columns }).map(() => [])
     );

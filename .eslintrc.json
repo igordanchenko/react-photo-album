@@ -1,41 +1,16 @@
 {
     "root": true,
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:jsx-a11y/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "sourceType": "module",
-        "ecmaVersion": "latest",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
-    },
-    "ignorePatterns": ["dist/*", "coverage/*"],
+    "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "plugin:prettier/recommended"],
+    "parserOptions": { "project": "tsconfig.json" },
+    "ignorePatterns": ["dist", "coverage"],
     "rules": {
         "react/prop-types": "off",
-        "no-console": "warn",
-        "object-shorthand": "warn",
-        "prefer-destructuring": [
-            "error",
-            {
-                "array": true,
-                "object": true
-            }
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+        "react/function-component-definition": [
+            "warn",
+            { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }
         ]
     }
 }

@@ -51,28 +51,32 @@ const renderLayout = <T extends Photo>(
 
     const commonLayoutProps = { photos, renderPhoto, componentsProps };
 
+    if (layout === "rows") {
+        return (
+            <RowsLayout
+                layoutOptions={layoutOptions as typeof layoutOptions & { layout: "rows" }}
+                renderRowContainer={renderRowContainer}
+                {...commonLayoutProps}
+            />
+        );
+    }
+
+    if (layout === "columns") {
+        return (
+            <ColumnsLayout
+                layoutOptions={layoutOptions as typeof layoutOptions & { layout: "columns" }}
+                renderColumnContainer={renderColumnContainer}
+                {...commonLayoutProps}
+            />
+        );
+    }
+
     return (
-        <>
-            {layout === "rows" ? (
-                <RowsLayout
-                    layoutOptions={layoutOptions as typeof layoutOptions & { layout: "rows" }}
-                    renderRowContainer={renderRowContainer}
-                    {...commonLayoutProps}
-                />
-            ) : layout === "columns" ? (
-                <ColumnsLayout
-                    layoutOptions={layoutOptions as typeof layoutOptions & { layout: "columns" }}
-                    renderColumnContainer={renderColumnContainer}
-                    {...commonLayoutProps}
-                />
-            ) : (
-                <MasonryLayout
-                    layoutOptions={layoutOptions as typeof layoutOptions & { layout: "masonry" }}
-                    renderColumnContainer={renderColumnContainer}
-                    {...commonLayoutProps}
-                />
-            )}
-        </>
+        <MasonryLayout
+            layoutOptions={layoutOptions as typeof layoutOptions & { layout: "masonry" }}
+            renderColumnContainer={renderColumnContainer}
+            {...commonLayoutProps}
+        />
     );
 };
 
@@ -82,8 +86,9 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>) => {
     const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
 
     // safeguard against incorrect usage
-    if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return <></>;
+    if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return null;
 
+    // eslint-disable-next-line react/destructuring-assignment
     const componentsProps = resolveComponentsProps(props.componentsProps, containerWidth);
 
     return (
