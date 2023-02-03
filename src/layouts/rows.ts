@@ -59,18 +59,17 @@ const makeGetRowNeighbors =
         limitNodeSearch: number;
         rowConstraints?: RowConstraints;
     }) =>
-    (node: string) => {
+    (node: number) => {
         const { containerWidth, spacing, padding } = layoutOptions;
-        const results: { [key: string]: number } = {};
-        const start = +node;
-        results[+start] = 0;
+        const results = new Map<number, number>();
+        results.set(node, 0);
         const startOffset = rowConstraints?.minPhotos ?? 1;
         const endOffset = Math.min(limitNodeSearch, rowConstraints?.maxPhotos ?? Infinity);
-        for (let i = start + startOffset; i < photos.length + 1; i += 1) {
-            if (i - start > endOffset) break;
-            const currentCost = cost(photos, start, i, containerWidth, targetRowHeight, spacing, padding);
+        for (let i = node + startOffset; i < photos.length + 1; i += 1) {
+            if (i - node > endOffset) break;
+            const currentCost = cost(photos, node, i, containerWidth, targetRowHeight, spacing, padding);
             if (currentCost === undefined) break;
-            results[i.toString()] = currentCost;
+            results.set(i, currentCost);
         }
         return results;
     };
@@ -96,7 +95,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
         rowConstraints,
     });
 
-    const path = findShortestPath(getNeighbors, "0", `${photos.length}`);
+    const path = findShortestPath(getNeighbors, 0, photos.length);
 
     // impossible layout
     if (path === undefined) return undefined;
@@ -104,7 +103,7 @@ const computeRowsLayout = <T extends Photo = Photo>({
     const layout = [];
 
     for (let i = 1; i < path.length; i += 1) {
-        const row = photos.map((photo, index) => ({ photo, index })).slice(+path[i - 1], +path[i]);
+        const row = photos.map((photo, index) => ({ photo, index })).slice(path[i - 1], path[i]);
         const height = getCommonHeight(
             row.map(({ photo }) => photo),
             containerWidth,

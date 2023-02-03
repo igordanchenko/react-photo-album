@@ -1,64 +1,67 @@
-type GraphFunction = (node: number) => Array<{ neighbor: number; weight: number }>;
+type GraphFunction<T> = (node: T) => { neighbor: T; weight: number }[];
 
-type Comp = number[][][];
+type Matrix<T> = Map<T, { node: T; weight: number }[]>;
 
-const computeShortestPath = (graph: GraphFunction, pathLength: number, startNode: number, endNode: number) => {
-    // computation matrix: node id x path length x [previous node id, path weight]
-    // i.e. element in comp[X][k] represents previous node and path weight of the best path of length k
+const computeShortestPath = <T>(graph: GraphFunction<T>, pathLength: number, startNode: T, endNode: T) => {
+    // computation matrix: node x path length x { node: previous node id, weight: path weight }
+    // i.e. element in matrix.get(X)[k] represents previous node and path weight of the best path of length k
     // from the starting node to node X
-    const comp: Comp = [];
+    const matrix: Matrix<T> = new Map();
 
-    // sorted set of neighboring nodes that need to be visited
-    // i.e. queue[k][X] represents node X with partial path of length k
-    const queue: { [key: number]: { [key: number]: object | null } } = { 0: { [startNode]: null } };
+    // set of neighboring nodes that need to be visited
+    const queue = new Set<T>();
+    queue.add(startNode);
 
     for (let length = 0; length < pathLength; length += 1) {
-        Object.keys(queue[length]).forEach((n) => {
-            const node = +n;
-            const accumulatedWeight = length > 0 && comp[node][length] ? comp[node][length][1] : 0;
+        // make a copy of the current queue
+        const currentQueue = [...queue.keys()];
+
+        // clear the queue for the next iteration
+        queue.clear();
+
+        currentQueue.forEach((node) => {
+            const accumulatedWeight = length > 0 ? matrix.get(node)![length].weight : 0;
 
             graph(node).forEach(({ neighbor, weight }) => {
-                if (!comp[neighbor]) {
-                    comp[neighbor] = [];
+                let paths = matrix.get(neighbor);
+                if (!paths) {
+                    paths = [];
+                    matrix.set(neighbor, paths);
                 }
 
                 // introducing deterministic tiebreaker to guard against edge cases where path weight difference can be
                 // as low as 1e-12, which leads to visual flickering during subsequent re-renders as layout continues to
                 // shift back and forth
-                const newTotalWeight = accumulatedWeight + weight;
+                const newWeight = accumulatedWeight + weight;
+                const nextPath = paths[length + 1];
                 if (
-                    !comp[neighbor][length + 1] ||
-                    (comp[neighbor][length + 1][1] > newTotalWeight &&
-                        (comp[neighbor][length + 1][1] / newTotalWeight > 1.0001 ||
-                            node < comp[neighbor][length + 1][0]))
+                    !nextPath ||
+                    (nextPath.weight > newWeight && (nextPath.weight / newWeight > 1.0001 || node < nextPath.node))
                 ) {
-                    comp[neighbor][length + 1] = [node, newTotalWeight];
+                    paths[length + 1] = { node, weight: newWeight };
                 }
 
                 if (length < pathLength - 1 && neighbor !== endNode) {
-                    if (!queue[length + 1]) {
-                        queue[length + 1] = {};
-                    }
-                    queue[length + 1][neighbor] = null;
+                    queue.add(neighbor);
                 }
             });
         });
     }
-    return comp;
+
+    return matrix;
 };
 
-const reconstructShortestPath = (comp: Comp, pathLength: number, endNode: number) => {
+const reconstructShortestPath = <T>(matrix: Matrix<T>, pathLength: number, endNode: T) => {
     const path = [endNode];
     for (let node = endNode, length = pathLength; length > 0; length -= 1) {
-        const [prevNode] = comp[node][length];
-        node = prevNode;
+        node = matrix.get(node)![length].node;
         path.push(node);
     }
     return path.reverse();
 };
 
 // Find the shortest path of length N in a weighted directed graph using dynamic programming algorithm.
-const findShortestPathLengthN = (graph: GraphFunction, pathLength: number, startNode: number, endNode: number) =>
+const findShortestPathLengthN = <T>(graph: GraphFunction<T>, pathLength: number, startNode: T, endNode: T) =>
     reconstructShortestPath(computeShortestPath(graph, pathLength, startNode, endNode), pathLength, endNode);
 
 export default findShortestPathLengthN;

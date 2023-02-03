@@ -134,7 +134,7 @@ const computeColumnsModel = <T extends Photo = Photo>({
         padding,
     });
 
-    const path = findShortestPathLengthN(getNeighbors, columns, 0, photos.length).map((node) => +node);
+    const path = findShortestPathLengthN(getNeighbors, columns, 0, photos.length);
 
     for (let i = 0; i < path.length - 1; i += 1) {
         const column = photos.slice(path[i], path[i + 1]);
