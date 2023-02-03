@@ -11,13 +11,13 @@ the ground up.
 [![License MIT](https://img.shields.io/npm/l/react-photo-album?color=blue)](LICENSE)
 
 - **Built for React:** works with React 18, 17 and 16.8.0+
-- **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration.
-- **Responsive images:** responsive images with automatic resolution switching are supported out of the box.
+- **SSR friendly:** produces server-side rendered markup that looks pixel perfect on the client even before hydration
+- **Responsive images:** responsive images with automatic resolution switching are supported out of the box
 - **Feature packed:** supports 3 layout options (rows, columns and masonry), responsive images, custom data attributes
-  and is fully configurable and customizable.
-- **TypeScript:** type definitions come built-in in the package.
+  and is fully configurable and customizable
+- **TypeScript:** type definitions come built-in in the package
 - **Performance:** it was built with performance in mind in order to support large photo albums and silky smooth layout
-  adjustments.
+  adjustments
 
 ## Layouts
 
@@ -97,18 +97,44 @@ as possible.
 
 React Photo Album automatically generates `sizes` and `srcset` image attributes. In the case of SSR, React Photo Album
 includes `sizes` and `srcset` image attributes in the server-rendered markup, allowing browsers to pick images of the
-most appropriate resolution depending on their viewport size.
+most appropriate resolution depending on their viewport size. To enable images with automatic resolution switching, 
+simply provide smaller images in the photo `images` attribute.
+
+```js
+import PhotoAlbum from "react-photo-album";
+
+const photos = [
+    {
+        src: "/images/image1_800x600.jpg",
+        width: 800,
+        height: 600,
+        images: [
+            { src: "/images/image1_400x300.jpg", width: 400, height: 300 },
+            { src: "/images/image1_200x150.jpg", width: 200, height: 150 }
+        ]
+    },
+    {
+        src: "/images/image2_1600x900.jpg",
+        width: 1600,
+        height: 900,
+        images: [
+            { src: "/images/image2_800x450.jpg", width: 800, height: 450 },
+            { src: "/images/image2_400x225.jpg", width: 400, height: 225 }
+        ]
+    }
+];
+
+const Gallery = () => <PhotoAlbum layout="rows" photos={photos} />;
+```
 
 ### SSR
 
 React Photo Album extensively uses CSS flexbox and CSS `calc` function to calculate the dimensions of images on the
 client. Unlike its predecessor, React Photo Album avoids setting the exact dimensions of images in pixels. Thanks to
 this approach, server-side rendered markup looks pixel-perfect on the client even before hydration (or even when
-JavaScript is completely disabled in the browser). React Photo Album calculates `spacing`, `padding`, `columns`, and
-other responsive parameters on the server-side using the `defaultContainerWidth` value. Keep in mind that responsive
-parameters may contribute to cumulative layout shifts during the initial page load. If CLS becomes an issue in your
-case, you may want to consider using hard-coded values for `columns`, `spacing`, `padding`, etc., instead of the default
-responsive values.
+JavaScript is completely disabled in the browser). To enable server-side rendering, be sure to specify 
+`defaultContainerWidth` prop. Otherwise, React Photo Album produces empty markup on the server and renders on the client 
+only after hydration.
 
 ## Credits
 
