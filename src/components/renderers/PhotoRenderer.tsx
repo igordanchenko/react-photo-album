@@ -29,13 +29,11 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
 
     if (photo.images && photo.images.length > 0) {
         srcSet = photo.images
-            .concat([
-                {
-                    src: photo.src,
-                    width: photo.width,
-                    height: photo.height,
-                },
-            ])
+            .concat(
+                !photo.images.find(({ width }) => width === photo.width)
+                    ? [{ src: photo.src, width: photo.width, height: photo.height }]
+                    : []
+            )
             .sort((first, second) => first.width - second.width)
             .map((image) => `${image.src} ${image.width}w`)
             .join(", ");

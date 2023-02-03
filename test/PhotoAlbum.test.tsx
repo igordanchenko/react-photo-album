@@ -434,4 +434,18 @@ describe("PhotoAlbum", () => {
             />
         );
     });
+
+    it("de-duplicates srcSet images", () => {
+        whenAskedToRender(
+            <PhotoAlbum
+                layout="rows"
+                photos={photosWithSrcSet.map(({ src, width, height, images }) => ({
+                    src,
+                    width,
+                    height,
+                    images: [{ src, width, height }, ...images],
+                }))}
+            />
+        );
+    });
 });
