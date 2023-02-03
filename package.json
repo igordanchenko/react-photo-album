@@ -69,7 +69,7 @@
         "react-dom": "^18.2.0",
         "react-test-renderer": "^18.2.0",
         "rimraf": "^3.0.2",
-        "rollup": "^3.12.1",
+        "rollup": "^3.13.0",
         "rollup-plugin-dts": "^5.1.1",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "ts-jest": "^29.0.5",

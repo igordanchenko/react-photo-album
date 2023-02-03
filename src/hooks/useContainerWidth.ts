@@ -1,48 +1,56 @@
 import * as React from "react";
 
-import useEventCallback from "./useEventCallback";
+type State = {
+    containerWidth?: number;
+    scrollbarWidth?: number;
+};
 
-const useContainerWidth = (breakpoints: number[] | undefined, defaultContainerWidth: number | undefined) => {
-    const [containerWidth, setContainerWidth] = React.useState<number | undefined>(defaultContainerWidth);
-    const [scrollbarWidth, setScrollbarWidth] = React.useState<number>();
+type Action = {
+    newContainerWidth?: number;
+    newScrollbarWidth?: number;
+};
+
+const containerWidthReducer = (state: State, { newContainerWidth, newScrollbarWidth }: Action) => {
+    const { containerWidth, scrollbarWidth } = state;
+
+    // istanbul ignore next
+    if (
+        containerWidth !== undefined &&
+        scrollbarWidth !== undefined &&
+        newContainerWidth !== undefined &&
+        newScrollbarWidth !== undefined &&
+        newContainerWidth > containerWidth &&
+        newContainerWidth - containerWidth <= 20 &&
+        newScrollbarWidth < scrollbarWidth
+    ) {
+        // prevent infinite resize loop when scrollbar disappears
+        return { containerWidth, scrollbarWidth: newScrollbarWidth };
+    }
+
+    // istanbul ignore next
+    return containerWidth !== newContainerWidth || scrollbarWidth !== newScrollbarWidth
+        ? { containerWidth: newContainerWidth, scrollbarWidth: newScrollbarWidth }
+        : state;
+};
+
+const resolveContainerWidth = (el: HTMLElement | null, breakpoints: readonly number[] | undefined) => {
+    let width = el?.clientWidth;
+    if (width !== undefined && breakpoints && breakpoints.length > 0) {
+        const sorted = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
+        sorted.push(Math.floor(sorted[sorted.length - 1] / 2));
+        const threshold = width;
+        width = sorted.find((breakpoint, index) => breakpoint <= threshold || index === sorted.length - 1);
+    }
+    return width;
+};
+
+const useContainerWidth = (breakpoints: readonly number[] | undefined, defaultContainerWidth: number | undefined) => {
+    const [{ containerWidth }, dispatch] = React.useReducer(containerWidthReducer, {
+        containerWidth: defaultContainerWidth,
+    });
 
     const ref = React.useRef<HTMLElement | null>(null);
     const observerRef = React.useRef<ResizeObserver>();
-
-    const updateWidth = useEventCallback(() => {
-        let newWidth = ref.current?.clientWidth;
-
-        if (newWidth !== undefined && breakpoints && breakpoints.length > 0) {
-            const sortedBreakpoints = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
-            sortedBreakpoints.push(Math.floor(sortedBreakpoints[sortedBreakpoints.length - 1] / 2));
-            const threshold = newWidth;
-            newWidth = sortedBreakpoints.find(
-                (breakpoint, index) => breakpoint <= threshold || index === sortedBreakpoints.length - 1
-            );
-        }
-
-        const newScrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-        if (newScrollbarWidth !== scrollbarWidth) {
-            setScrollbarWidth(newScrollbarWidth);
-        }
-
-        /* istanbul ignore next */
-        if (
-            containerWidth !== undefined &&
-            scrollbarWidth !== undefined &&
-            newWidth !== undefined &&
-            newWidth > containerWidth &&
-            newWidth - containerWidth <= 20 &&
-            newScrollbarWidth < scrollbarWidth
-        ) {
-            // prevent infinite resize loop when scrollbar disappears
-            return;
-        }
-
-        if (newWidth !== containerWidth) {
-            setContainerWidth(newWidth);
-        }
-    });
 
     const containerRef = React.useCallback(
         (node: HTMLElement | null) => {
@@ -51,16 +59,20 @@ const useContainerWidth = (breakpoints: number[] | undefined, defaultContainerWi
 
             ref.current = node;
 
+            const updateWidth = () =>
+                dispatch({
+                    newContainerWidth: resolveContainerWidth(ref.current, breakpoints),
+                    newScrollbarWidth: window.innerWidth - document.documentElement.clientWidth,
+                });
+
             updateWidth();
 
-            if (node) {
-                if (typeof ResizeObserver !== "undefined") {
-                    observerRef.current = new ResizeObserver(updateWidth);
-                    observerRef.current.observe(node);
-                }
+            if (node && typeof ResizeObserver !== "undefined") {
+                observerRef.current = new ResizeObserver(updateWidth);
+                observerRef.current.observe(node);
             }
         },
-        [updateWidth]
+        [breakpoints]
     );
 
     return { containerRef, containerWidth };

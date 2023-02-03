@@ -4,6 +4,7 @@ import RowsLayout from "./components/layouts/RowsLayout";
 import ColumnsLayout from "./components/layouts/ColumnsLayout";
 import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
+import useArray from "./hooks/useArray";
 import useContainerWidth from "./hooks/useContainerWidth";
 import { resolveResponsiveParameter, unwrapParameter } from "./utils/responsive";
 import { ComponentsProps, ComponentsPropsParameter, Photo, PhotoAlbumProps } from "./types";
@@ -83,7 +84,7 @@ const renderLayout = <T extends Photo>(
 const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>) => {
     const { photos, layout, renderContainer, defaultContainerWidth, breakpoints } = props;
 
-    const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
+    const { containerRef, containerWidth } = useContainerWidth(useArray(breakpoints), defaultContainerWidth);
 
     // safeguard against incorrect usage
     if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return null;
