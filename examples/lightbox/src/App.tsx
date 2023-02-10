@@ -14,17 +14,6 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import photos from "./photos";
 
-const slides = photos.map(({ src, width, height, images }) => ({
-    src,
-    width,
-    height,
-    srcSet: images.map((image) => ({
-        src: image.src,
-        width: image.width,
-        height: image.height,
-    })),
-}));
-
 const App = () => {
     const [index, setIndex] = useState(-1);
 
@@ -33,7 +22,7 @@ const App = () => {
             <PhotoAlbum photos={photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
             <Lightbox
-                slides={slides}
+                slides={photos}
                 open={index >= 0}
                 index={index}
                 close={() => setIndex(-1)}
