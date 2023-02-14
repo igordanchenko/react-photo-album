@@ -110,13 +110,14 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         );
     };
 
-    const wrapperStyle = (({ display, boxSizing, width, aspectRatio, padding, marginBottom }) => ({
+    const wrapperStyle = (({ display, boxSizing, width, aspectRatio, padding, marginBottom, cursor }) => ({
         display,
         boxSizing,
         width,
         aspectRatio,
         padding,
         marginBottom,
+        cursor,
     }))(imageStyle);
 
     return (

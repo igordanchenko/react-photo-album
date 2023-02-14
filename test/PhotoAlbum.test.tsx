@@ -433,6 +433,17 @@ describe("PhotoAlbum", () => {
                 )}
             />
         );
+
+        whenAskedToRender(
+            <PhotoAlbum
+                layout="rows"
+                photos={photos}
+                onClick={() => {}}
+                renderPhoto={({ wrapperStyle, renderDefaultPhoto }) => (
+                    <div style={wrapperStyle}>{renderDefaultPhoto({ wrapped: true })}</div>
+                )}
+            />
+        );
     });
 
     it("de-duplicates srcSet images", () => {
