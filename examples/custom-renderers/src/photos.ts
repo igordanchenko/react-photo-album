@@ -22,7 +22,7 @@ const unsplashPhotos = [
     { id: "S-cdwrx-YuQ", width: 1080, height: 1440 },
     { id: "q-motCAvPBM", width: 1080, height: 1620 },
     { id: "Xn4L310ztMU", width: 1080, height: 810 },
-    { id: "ls94iFAQerE", width: 1080, height: 1620 },
+    { id: "iMchCC-3_fE", width: 1080, height: 610 },
     { id: "X48pUOPKf7A", width: 1080, height: 160 },
     { id: "GbLS6YVXj0U", width: 1080, height: 810 },
     { id: "9CRd1J1rEOM", width: 1080, height: 720 },
