@@ -52,15 +52,13 @@ git checkout -b feat/my-new-feature
 npm run start
 ```
 
-7. Link-install your locally built `react-photo-album` version to your local project or one of the bundled examples
-   (see the [examples](examples/README.md) for typical pitfalls):
+7. Link-install your locally built `react-photo-album` version to your local project:
 
 ```shell
-# execute from react-photo-album directory
-npm link
-
-# execute from your local project directory
-npm link react-photo-album
+# specify relative or absolute path to react-photo-album directory 
+RPA_HOME=../react-photo-album
+npm link $RPA_HOME $RPA_HOME/node_modules/react $RPA_HOME/node_modules/react-dom
+rm -rf node_modules/.cache
 ```
 
 8. Make changes, run tests:
@@ -73,9 +71,9 @@ npm run test
 
 ```shell
 # execute from your local project directory
-npm unlink --no-save react-photo-album
-
-npm unlink -g react-photo-album
+npm install
+rm -rf node_modules/.cache
+npm rm -g react-photo-album react react-dom
 ```
 
 10. Commit and push to your fork (make sure your commit message conforms to
