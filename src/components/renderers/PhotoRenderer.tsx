@@ -59,7 +59,8 @@ export type PhotoRendererProps<T extends Photo = Photo> = Omit<
     "imageProps" | "renderDefaultPhoto" | "wrapperStyle"
 > & {
     imageProps?: ImageElementAttributes;
-} & { renderPhoto?: RenderPhoto<T> };
+    renderPhoto?: RenderPhoto<T>;
+};
 
 export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRendererProps<T>) {
     const { photo, layout, layoutOptions, imageProps: { style, ...restImageProps } = {}, renderPhoto } = props;
@@ -99,7 +100,7 @@ export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRende
         ...restImageProps,
     };
 
-    function renderDefaultPhoto({ wrapped }: { wrapped?: boolean } = {}) {
+    const renderDefaultPhoto: RenderPhotoProps<T>["renderDefaultPhoto"] = (options) => {
         const { src, alt, srcSet, sizes, style: unwrappedStyle, ...rest } = imageProps;
 
         return (
@@ -107,11 +108,11 @@ export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRende
                 alt={alt}
                 {...(srcSet ? { srcSet, sizes } : null)}
                 src={src}
-                style={wrapped ? { display: "block", width: "100%", height: "100%" } : unwrappedStyle}
+                style={options?.wrapped ? { display: "block", width: "100%", height: "100%" } : unwrappedStyle}
                 {...rest}
             />
         );
-    }
+    };
 
     const wrapperStyle = (({ display, boxSizing, width, aspectRatio, padding, marginBottom, cursor }) => ({
         display,

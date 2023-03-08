@@ -444,6 +444,10 @@ describe("PhotoAlbum", () => {
                 )}
             />
         );
+
+        whenAskedToRender(
+            <PhotoAlbum layout="rows" photos={photos} renderPhoto={({ renderDefaultPhoto }) => renderDefaultPhoto()} />
+        );
     });
 
     it("de-duplicates srcSet images", () => {

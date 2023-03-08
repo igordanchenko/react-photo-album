@@ -68,7 +68,7 @@ export type RenderPhotoProps<T extends Photo = Photo> = {
     imageProps: NonOptional<ImageElementAttributes, "src" | "alt" | "style">;
     /** A callback to render the default photo implementation. If `wrapped` is `true`, the image is styled with `width`
      * and `height` set to 100%. Use this option when rendering image wrapper styled with wrapperStyle. */
-    renderDefaultPhoto: RenderFunction<{ wrapped?: boolean }>;
+    renderDefaultPhoto: RenderFunction<{ wrapped?: boolean } | void>;
     /** CSS styles to properly size image wrapper (i.e. <div> wrapper) */
     wrapperStyle: React.CSSProperties;
 };
@@ -203,7 +203,7 @@ export type RenderColumnContainerProps<T extends Photo = Photo> = React.PropsWit
 
 export type RenderColumnContainer<T extends Photo = Photo> = RenderFunction<RenderColumnContainerProps<T>>;
 
-export type RenderFunction<T> = (props: T) => React.ReactNode;
+export type RenderFunction<T = void> = (props: T) => React.ReactNode;
 
 export type DivElementAttributes = React.HTMLAttributes<HTMLDivElement>;
 
