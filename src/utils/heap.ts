@@ -1,75 +1,76 @@
-type Comparator<T> = (a: T, b: T) => number;
+export type Comparator<T> = (a: T, b: T) => number;
 
-export const RankingFunctionComparator =
-    <T>(rank: (element: T) => number) =>
-    (a: T, b: T) =>
-        rank(b) - rank(a);
+export function rankingFunctionComparator<T>(rank: (element: T) => number) {
+    return (a: T, b: T) => rank(b) - rank(a);
+}
 
 /**
  * Min heap implementation.
  * Comparator function is expected to return a positive number, zero or a negative number if a > b, a === b or a < b.
  */
-const MinHeap = <T>(comparator: Comparator<T>) => {
+export default class MinHeap<T> {
     // heap-ordered complete binary tree in heap[1..n] with heap[0] unused
-    const heap: T[] = [];
-    const compare = comparator;
-    let n = 0;
+    protected heap: T[] = [];
+
+    protected n = 0;
+
+    constructor(protected comparator: Comparator<T>) {}
 
     // comparator function
-    const greater = (i: number, j: number) => compare(heap[i], heap[j]) < 0;
+    protected greater(i: number, j: number) {
+        return this.comparator(this.heap[i], this.heap[j]) < 0;
+    }
 
     // swap two elements
-    const swap = (i: number, j: number) => {
-        const temp = heap[i];
-        heap[i] = heap[j];
-        heap[j] = temp;
-    };
+    protected swap(i: number, j: number) {
+        const temp = this.heap[i];
+        this.heap[i] = this.heap[j];
+        this.heap[j] = temp;
+    }
 
     // bubble i-th element up
-    const swim = (i: number) => {
+    protected swim(i: number) {
         let k = i;
         let k2 = Math.floor(k / 2);
-        while (k > 1 && greater(k2, k)) {
-            swap(k2, k);
+        while (k > 1 && this.greater(k2, k)) {
+            this.swap(k2, k);
             k = k2;
             k2 = Math.floor(k / 2);
         }
-    };
+    }
 
     // bubble i-th element down
-    const sink = (i: number) => {
+    protected sink(i: number) {
         let k = i;
         let k2 = k * 2;
-        while (k2 <= n) {
-            if (k2 < n && greater(k2, k2 + 1)) k2 += 1;
-            if (!greater(k, k2)) break;
-            swap(k, k2);
+        while (k2 <= this.n) {
+            if (k2 < this.n && this.greater(k2, k2 + 1)) k2 += 1;
+            if (!this.greater(k, k2)) break;
+            this.swap(k, k2);
             k = k2;
             k2 = k * 2;
         }
-    };
+    }
 
-    return {
-        /** add element to the heap */
-        push: (element: T) => {
-            n += 1;
-            heap[n] = element;
-            swim(n);
-        },
+    /** add element to the heap */
+    public push(element: T) {
+        this.n += 1;
+        this.heap[this.n] = element;
+        this.swim(this.n);
+    }
 
-        /** remove the first element from the heap */
-        pop: (): T | undefined => {
-            if (n === 0) return undefined;
-            swap(1, n);
-            n -= 1;
-            const max = heap.pop();
-            sink(1);
-            return max;
-        },
+    /** remove the first element from the heap */
+    public pop() {
+        if (this.n === 0) return undefined;
+        this.swap(1, this.n);
+        this.n -= 1;
+        const max = this.heap.pop();
+        this.sink(1);
+        return max;
+    }
 
-        /** heap size */
-        size: (): number => n,
-    };
-};
-
-export default MinHeap;
+    /** heap size */
+    public size() {
+        return this.n;
+    }
+}

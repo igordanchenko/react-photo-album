@@ -1,10 +1,10 @@
-import MinHeap, { RankingFunctionComparator } from "../../src/utils/heap";
+import MinHeap, { rankingFunctionComparator } from "../../src/utils/heap";
 
-const NumericComparator = RankingFunctionComparator<number>((x: number) => x);
+const NumericComparator = rankingFunctionComparator<number>((x: number) => x);
 
 describe("Heap", () => {
     it("accepts elements", () => {
-        const heap = MinHeap<number>(NumericComparator);
+        const heap = new MinHeap(NumericComparator);
         for (let i = 0; i < 100; i += 1) {
             heap.push(Math.round(Math.random() * 1_000));
             expect(heap.size()).toBe(i + 1);
@@ -12,7 +12,7 @@ describe("Heap", () => {
     });
 
     it("returns elements in ascending order", () => {
-        const heap = MinHeap<number>(NumericComparator);
+        const heap = new MinHeap(NumericComparator);
         for (let i = 0; i < 100; i += 1) {
             heap.push(Math.round(Math.random() * 1_000));
         }
@@ -28,7 +28,6 @@ describe("Heap", () => {
     });
 
     it("doesn't crash when trying to pop non-existent element", () => {
-        const heap = MinHeap<number>(NumericComparator);
-        expect(heap.pop()).toBeUndefined();
+        expect(new MinHeap(NumericComparator).pop()).toBeUndefined();
     });
 });

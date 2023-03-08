@@ -1,4 +1,4 @@
-import MinHeap, { RankingFunctionComparator } from "./heap";
+import MinHeap, { rankingFunctionComparator } from "./heap";
 
 export type GraphFunction<T> = (node: T) => Map<T, number>;
 
@@ -15,13 +15,12 @@ function buildPrecedentsMap<T>(graph: GraphFunction<T>, startNode: T, endNode: T
     storedShortestPaths.set(startNode, 0);
 
     // priority queue of ALL nodes and storedShortestPaths
-    // don't bother to delete them because it's faster to look at visited?
-    const pQueue = MinHeap<{ id: T; weight: number }>(RankingFunctionComparator((el) => el.weight));
-    pQueue.push({ id: startNode, weight: 0 });
+    const queue = new MinHeap<{ id: T; weight: number }>(rankingFunctionComparator((el) => el.weight));
+    queue.push({ id: startNode, weight: 0 });
 
     // pop a node with the shortest total weight from start node
-    while (pQueue.size() > 0) {
-        const { id, weight } = pQueue.pop()!;
+    while (queue.size() > 0) {
+        const { id, weight } = queue.pop()!;
 
         // if already visited, continue
         if (!visited.has(id)) {
@@ -49,7 +48,7 @@ function buildPrecedentsMap<T>(graph: GraphFunction<T>, startNode: T, endNode: T
                         (currentWeight / newWeight > 1.005 || (currentId !== undefined && currentId! < id)))
                 ) {
                     storedShortestPaths.set(neighbor, newWeight);
-                    pQueue.push({ id: neighbor, weight: newWeight });
+                    queue.push({ id: neighbor, weight: newWeight });
                     precedentsMap.set(neighbor, id);
                 }
             });
