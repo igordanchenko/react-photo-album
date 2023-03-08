@@ -63,7 +63,9 @@ const photos = [
     { src: "/images/image2.jpg", width: 1600, height: 900 }
 ];
 
-const Gallery = () => <PhotoAlbum layout="rows" photos={photos} />;
+export default function Gallery() {
+    return <PhotoAlbum layout="rows" photos={photos} />;
+}
 ```
 
 ## How It Works
@@ -124,7 +126,9 @@ const photos = [
     }
 ];
 
-const Gallery = () => <PhotoAlbum layout="rows" photos={photos} />;
+export default function Gallery() {
+    return <PhotoAlbum layout="rows" photos={photos} />;
+}
 ```
 
 ### SSR
