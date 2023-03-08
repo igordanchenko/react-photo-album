@@ -3,27 +3,30 @@ import * as React from "react";
 import round from "../../utils/round";
 import { ImageElementAttributes, LayoutOptions, Photo, PhotoLayout, RenderPhoto, RenderPhotoProps } from "../../types";
 
-const calcWidth = <T extends Photo = Photo>(
+function calcWidth<T extends Photo = Photo>(
     base: string,
     { width, photosCount }: PhotoLayout,
     { spacing, padding, containerWidth }: LayoutOptions<T>
-) => {
+) {
     const gaps = spacing * (photosCount - 1) + 2 * padding * photosCount;
     return `calc((${base} - ${gaps}px) / ${round((containerWidth - gaps) / width, 5)})`;
-};
+}
 
-const cssPhotoWidth = <T extends Photo = Photo>(layout: PhotoLayout, layoutOptions: LayoutOptions<T>) =>
-    layoutOptions.layout !== "rows"
+function cssPhotoWidth<T extends Photo = Photo>(layout: PhotoLayout, layoutOptions: LayoutOptions<T>) {
+    return layoutOptions.layout !== "rows"
         ? `calc(100% - ${2 * layoutOptions.padding}px)`
         : calcWidth("100%", layout, layoutOptions);
+}
 
-const calculateSizesValue = <T extends Photo = Photo>(
+function calculateSizesValue<T extends Photo = Photo>(
     size: string,
     layout: PhotoLayout,
     layoutOptions: LayoutOptions<T>
-) => calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
+) {
+    return calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
+}
 
-const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions<T>) => {
+function srcSetAndSizes<T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions<T>) {
     let srcSet;
     let sizes;
 
@@ -49,16 +52,16 @@ const srcSetAndSizes = <T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
     }
 
     return { srcSet, sizes };
-};
+}
 
-type PhotoRendererProps<T extends Photo = Photo> = Omit<
+export type PhotoRendererProps<T extends Photo = Photo> = Omit<
     RenderPhotoProps<T>,
     "imageProps" | "renderDefaultPhoto" | "wrapperStyle"
 > & {
     imageProps?: ImageElementAttributes;
 } & { renderPhoto?: RenderPhoto<T> };
 
-const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) => {
+export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRendererProps<T>) {
     const { photo, layout, layoutOptions, imageProps: { style, ...restImageProps } = {}, renderPhoto } = props;
     const { onClick } = layoutOptions;
 
@@ -96,7 +99,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
         ...restImageProps,
     };
 
-    const renderDefaultPhoto = ({ wrapped }: { wrapped?: boolean } = {}) => {
+    function renderDefaultPhoto({ wrapped }: { wrapped?: boolean } = {}) {
         const { src, alt, srcSet, sizes, style: unwrappedStyle, ...rest } = imageProps;
 
         return (
@@ -108,7 +111,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
                 {...rest}
             />
         );
-    };
+    }
 
     const wrapperStyle = (({ display, boxSizing, width, aspectRatio, padding, marginBottom, cursor }) => ({
         display,
@@ -121,6 +124,7 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
     }))(imageStyle);
 
     return (
+        // eslint-disable-next-line react/jsx-no-useless-fragment
         <>
             {renderPhoto?.({
                 photo,
@@ -132,6 +136,4 @@ const PhotoRenderer = <T extends Photo = Photo>(props: PhotoRendererProps<T>) =>
             }) ?? renderDefaultPhoto()}
         </>
     );
-};
-
-export default PhotoRenderer;
+}

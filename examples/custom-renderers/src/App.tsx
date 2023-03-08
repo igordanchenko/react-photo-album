@@ -1,8 +1,7 @@
-import { PhotoAlbum, RenderContainer, RenderContainerProps, RenderPhoto, RenderRowContainer } from "react-photo-album";
-
+import { PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
 import photos from "./photos";
 
-const renderContainer: RenderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
+const renderContainer: RenderContainer = ({ containerProps, children, containerRef }) => (
     <div
         style={{
             border: "2px solid #eee",
@@ -57,17 +56,17 @@ const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, st
     </div>
 );
 
-const App = () => (
-    <PhotoAlbum
-        layout="rows"
-        photos={photos}
-        spacing={20}
-        padding={20}
-        targetRowHeight={200}
-        renderContainer={renderContainer}
-        renderRowContainer={renderRowContainer}
-        renderPhoto={renderPhoto}
-    />
-);
-
-export default App;
+export default function App() {
+    return (
+        <PhotoAlbum
+            layout="rows"
+            photos={photos}
+            spacing={20}
+            padding={20}
+            targetRowHeight={200}
+            renderContainer={renderContainer}
+            renderRowContainer={renderRowContainer}
+            renderPhoto={renderPhoto}
+        />
+    );
+}

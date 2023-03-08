@@ -9,7 +9,7 @@ import useContainerWidth from "./hooks/useContainerWidth";
 import { resolveResponsiveParameter, unwrapParameter } from "./utils/responsive";
 import { ComponentsProps, ComponentsPropsParameter, Photo, PhotoAlbumProps } from "./types";
 
-const resolveLayoutOptions = <T extends Photo>({
+function resolveLayoutOptions<T extends Photo>({
     layout,
     onClick,
     containerWidth,
@@ -21,31 +21,34 @@ const resolveLayoutOptions = <T extends Photo>({
     sizes,
 }: Omit<PhotoAlbumProps<T>, "photos"> & {
     containerWidth: number;
-}) => ({
-    layout,
-    onClick,
-    containerWidth,
-    columns: resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2], 1),
-    spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),
-    padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0]),
-    targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [
-        (w) => w / 5,
-        (w) => w / 4,
-        (w) => w / 3,
-        (w) => w / 2,
-    ]),
-    rowConstraints: unwrapParameter(rowConstraints, containerWidth),
-    sizes,
-});
+}) {
+    return {
+        layout,
+        onClick,
+        containerWidth,
+        columns: resolveResponsiveParameter(columns, containerWidth, [5, 4, 3, 2], 1),
+        spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),
+        padding: resolveResponsiveParameter(padding, containerWidth, [0, 0, 0, 0, 0]),
+        targetRowHeight: resolveResponsiveParameter(targetRowHeight, containerWidth, [
+            (w) => w / 5,
+            (w) => w / 4,
+            (w) => w / 3,
+            (w) => w / 2,
+        ]),
+        rowConstraints: unwrapParameter(rowConstraints, containerWidth),
+        sizes,
+    };
+}
 
-const resolveComponentsProps = (componentsProps: ComponentsPropsParameter | undefined, containerWidth?: number) =>
-    typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps;
+function resolveComponentsProps(componentsProps: ComponentsPropsParameter | undefined, containerWidth?: number) {
+    return typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps;
+}
 
-const renderLayout = <T extends Photo>(
+function renderLayout<T extends Photo>(
     props: PhotoAlbumProps<T>,
     containerWidth: number,
     componentsProps: ComponentsProps | undefined
-) => {
+) {
     const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer } = props;
 
     const layoutOptions = resolveLayoutOptions({ containerWidth, ...props });
@@ -79,9 +82,9 @@ const renderLayout = <T extends Photo>(
             {...commonLayoutProps}
         />
     );
-};
+}
 
-const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>) => {
+export default function PhotoAlbum<T extends Photo>(props: PhotoAlbumProps<T>) {
     const { photos, layout, renderContainer, defaultContainerWidth, breakpoints } = props;
 
     const { containerRef, containerWidth } = useContainerWidth(useArray(breakpoints), defaultContainerWidth);
@@ -102,6 +105,4 @@ const PhotoAlbum = <T extends Photo>(props: PhotoAlbumProps<T>) => {
             {containerWidth ? renderLayout(props, containerWidth, componentsProps) : null}
         </ContainerRenderer>
     );
-};
-
-export default PhotoAlbum;
+}

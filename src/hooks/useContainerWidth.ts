@@ -10,7 +10,7 @@ type Action = {
     newScrollbarWidth?: number;
 };
 
-const containerWidthReducer = (state: State, { newContainerWidth, newScrollbarWidth }: Action) => {
+function containerWidthReducer(state: State, { newContainerWidth, newScrollbarWidth }: Action) {
     const { containerWidth, scrollbarWidth } = state;
 
     // istanbul ignore next
@@ -31,9 +31,9 @@ const containerWidthReducer = (state: State, { newContainerWidth, newScrollbarWi
     return containerWidth !== newContainerWidth || scrollbarWidth !== newScrollbarWidth
         ? { containerWidth: newContainerWidth, scrollbarWidth: newScrollbarWidth }
         : state;
-};
+}
 
-const resolveContainerWidth = (el: HTMLElement | null, breakpoints: readonly number[] | undefined) => {
+function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly number[] | undefined) {
     let width = el?.clientWidth;
     if (width !== undefined && breakpoints && breakpoints.length > 0) {
         const sorted = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
@@ -42,9 +42,12 @@ const resolveContainerWidth = (el: HTMLElement | null, breakpoints: readonly num
         width = sorted.find((breakpoint, index) => breakpoint <= threshold || index === sorted.length - 1);
     }
     return width;
-};
+}
 
-const useContainerWidth = (breakpoints: readonly number[] | undefined, defaultContainerWidth: number | undefined) => {
+export default function useContainerWidth(
+    breakpoints: readonly number[] | undefined,
+    defaultContainerWidth: number | undefined
+) {
     const [{ containerWidth }, dispatch] = React.useReducer(containerWidthReducer, {
         containerWidth: defaultContainerWidth,
     });
@@ -76,6 +79,4 @@ const useContainerWidth = (breakpoints: readonly number[] | undefined, defaultCo
     );
 
     return { containerRef, containerWidth };
-};
-
-export default useContainerWidth;
+}

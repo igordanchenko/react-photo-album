@@ -6,7 +6,7 @@ import { Photo, PhotoLayout, RowConstraints, RowsLayoutOptions } from "../types"
 // guesstimate how many neighboring nodes should be searched based on
 // the aspect columnRatio of the container with images and minimal aspect columnRatio of all photos
 // as the maximum amount of photos per row, plus some nodes
-const findIdealNodeSearch = ({
+function findIdealNodeSearch({
     photos,
     targetRowHeight,
     containerWidth,
@@ -14,23 +14,20 @@ const findIdealNodeSearch = ({
     photos: Photo[];
     targetRowHeight: number;
     containerWidth: number;
-}): number => {
+}): number {
     const minRatio = photos.reduce((acc, photo) => Math.min(ratio(photo), acc), Number.MAX_VALUE);
     return round(containerWidth / targetRowHeight / minRatio) + 2;
-};
-
-// compute sizes by creating a graph with rows as edges and photo to break on as nodes
-// to calculate the single best layout using Dijkstra's findShortestPat
+}
 
 // get the height for a set of photos in a potential row
-const getCommonHeight = (row: Array<Photo>, containerWidth: number, spacing: number, padding: number) => {
+function getCommonHeight(row: Array<Photo>, containerWidth: number, spacing: number, padding: number) {
     const rowWidth = containerWidth - (row.length - 1) * spacing - 2 * padding * row.length;
     const totalAspectRatio = row.reduce((acc, photo) => acc + ratio(photo), 0);
     return rowWidth / totalAspectRatio;
-};
+}
 
 // calculate the cost of breaking at this node (edge weight)
-const cost = (
+function cost(
     photos: Photo[],
     i: number,
     j: number,
@@ -38,28 +35,27 @@ const cost = (
     targetRowHeight: number,
     spacing: number,
     padding: number
-) => {
+) {
     const row = photos.slice(i, j);
     const commonHeight = getCommonHeight(row, width, spacing, padding);
     return commonHeight > 0 ? (commonHeight - targetRowHeight) ** 2 * row.length : undefined;
-};
+}
 
 // return function that gets the neighboring nodes of node and returns costs
-const makeGetRowNeighbors =
-    <T extends Photo = Photo>({
-        photos,
-        layoutOptions,
-        targetRowHeight,
-        limitNodeSearch,
-        rowConstraints,
-    }: {
-        photos: T[];
-        layoutOptions: RowsLayoutOptions<T>;
-        targetRowHeight: number;
-        limitNodeSearch: number;
-        rowConstraints?: RowConstraints;
-    }) =>
-    (node: number) => {
+function makeGetRowNeighbors<T extends Photo = Photo>({
+    photos,
+    layoutOptions,
+    targetRowHeight,
+    limitNodeSearch,
+    rowConstraints,
+}: {
+    photos: T[];
+    layoutOptions: RowsLayoutOptions<T>;
+    targetRowHeight: number;
+    limitNodeSearch: number;
+    rowConstraints?: RowConstraints;
+}) {
+    return (node: number) => {
         const { containerWidth, spacing, padding } = layoutOptions;
         const results = new Map<number, number>();
         results.set(node, 0);
@@ -73,16 +69,19 @@ const makeGetRowNeighbors =
         }
         return results;
     };
+}
 
-type RowsLayoutModel<T extends Photo = Photo> = { photo: T; layout: PhotoLayout }[][] | undefined;
+export type RowsLayoutModel<T extends Photo = Photo> = { photo: T; layout: PhotoLayout }[][] | undefined;
 
-const computeRowsLayout = <T extends Photo = Photo>({
+// compute sizes by creating a graph with rows as edges and photo to break on as nodes
+// to calculate the single best layout using Dijkstra's findShortestPath
+export default function computeRowsLayout<T extends Photo = Photo>({
     photos,
     layoutOptions,
 }: {
     photos: T[];
     layoutOptions: RowsLayoutOptions<T>;
-}): RowsLayoutModel<T> => {
+}): RowsLayoutModel<T> {
     const { spacing, padding, containerWidth, targetRowHeight, rowConstraints } = layoutOptions;
 
     const limitNodeSearch = findIdealNodeSearch({ photos, containerWidth, targetRowHeight });
@@ -125,6 +124,4 @@ const computeRowsLayout = <T extends Photo = Photo>({
     }
 
     return layout;
-};
-
-export default computeRowsLayout;
+}

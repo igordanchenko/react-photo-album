@@ -1,8 +1,8 @@
 import MinHeap, { RankingFunctionComparator } from "./heap";
 
-type GraphFunction<T> = (node: T) => Map<T, number>;
+export type GraphFunction<T> = (node: T) => Map<T, number>;
 
-const buildPrecedentsMap = <T>(graph: GraphFunction<T>, startNode: T, endNode: T) => {
+function buildPrecedentsMap<T>(graph: GraphFunction<T>, startNode: T, endNode: T) {
     // store the previous vertex of the shortest path of arrival
     const precedentsMap = new Map<T, T>();
 
@@ -57,21 +57,19 @@ const buildPrecedentsMap = <T>(graph: GraphFunction<T>, startNode: T, endNode: T
     }
 
     return storedShortestPaths.has(endNode) ? precedentsMap : undefined;
-};
+}
 
 // build the route from precedent node vertices
-const getPathFromPrecedentsMap = <T>(precedentsMap: Map<T, T>, endNode: T) => {
+function getPathFromPrecedentsMap<T>(precedentsMap: Map<T, T>, endNode: T) {
     const nodes = [];
     for (let node: T | undefined = endNode; node !== undefined; node = precedentsMap.get(node)) {
         nodes.push(node);
     }
     return nodes.reverse();
-};
+}
 
 // build the precedentsMap and find the shortest path from it
-const findShortestPath = <T>(graph: GraphFunction<T>, startNode: T, endNode: T) => {
+export default function findShortestPath<T>(graph: GraphFunction<T>, startNode: T, endNode: T) {
     const precedentsMap = buildPrecedentsMap(graph, startNode, endNode);
     return precedentsMap ? getPathFromPrecedentsMap(precedentsMap, endNode) : undefined;
-};
-
-export default findShortestPath;
+}

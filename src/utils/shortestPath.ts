@@ -1,8 +1,8 @@
-type GraphFunction<T> = (node: T) => { neighbor: T; weight: number }[];
+export type GraphFunction<T> = (node: T) => { neighbor: T; weight: number }[];
 
 type Matrix<T> = Map<T, { node: T; weight: number }[]>;
 
-const computeShortestPath = <T>(graph: GraphFunction<T>, pathLength: number, startNode: T, endNode: T) => {
+function computeShortestPath<T>(graph: GraphFunction<T>, pathLength: number, startNode: T, endNode: T) {
     // computation matrix: node x path length x { node: previous node id, weight: path weight }
     // i.e. element in matrix.get(X)[k] represents previous node and path weight of the best path of length k
     // from the starting node to node X
@@ -49,19 +49,23 @@ const computeShortestPath = <T>(graph: GraphFunction<T>, pathLength: number, sta
     }
 
     return matrix;
-};
+}
 
-const reconstructShortestPath = <T>(matrix: Matrix<T>, pathLength: number, endNode: T) => {
+function reconstructShortestPath<T>(matrix: Matrix<T>, pathLength: number, endNode: T) {
     const path = [endNode];
     for (let node = endNode, length = pathLength; length > 0; length -= 1) {
         node = matrix.get(node)![length].node;
         path.push(node);
     }
     return path.reverse();
-};
+}
 
 // Find the shortest path of length N in a weighted directed graph using dynamic programming algorithm.
-const findShortestPathLengthN = <T>(graph: GraphFunction<T>, pathLength: number, startNode: T, endNode: T) =>
-    reconstructShortestPath(computeShortestPath(graph, pathLength, startNode, endNode), pathLength, endNode);
-
-export default findShortestPathLengthN;
+export default function findShortestPathLengthN<T>(
+    graph: GraphFunction<T>,
+    pathLength: number,
+    startNode: T,
+    endNode: T
+) {
+    return reconstructShortestPath(computeShortestPath(graph, pathLength, startNode, endNode), pathLength, endNode);
+}

@@ -1,3 +1,3 @@
-const ratio = ({ width, height }: { width: number; height: number }) => width / height;
-
-export default ratio;
+export default function ratio({ width, height }: { width: number; height: number }) {
+    return width / height;
+}

@@ -1,14 +1,16 @@
 import ratio from "../utils/ratio";
 import { ColumnsLayoutOptions, Photo, PhotoLayout } from "../types";
 
-type ComputeMasonryLayoutProps<T extends Photo = Photo> = {
+export type ComputeMasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
 };
 
-type MasonryColumnsModel<T extends Photo = Photo> = { photo: T; layout: PhotoLayout }[][] | undefined;
+export type MasonryColumnsModel<T extends Photo = Photo> = { photo: T; layout: PhotoLayout }[][] | undefined;
 
-const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayoutProps<T>): MasonryColumnsModel<T> => {
+export default function computeMasonryLayout<T extends Photo = Photo>(
+    props: ComputeMasonryLayoutProps<T>
+): MasonryColumnsModel<T> {
     const { photos, layoutOptions } = props;
     const { columns, spacing, padding, containerWidth } = layoutOptions;
 
@@ -70,6 +72,4 @@ const computeMasonryLayout = <T extends Photo = Photo>(props: ComputeMasonryLayo
             },
         }))
     );
-};
-
-export default computeMasonryLayout;
+}

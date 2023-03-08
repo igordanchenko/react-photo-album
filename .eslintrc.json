@@ -6,11 +6,6 @@
     "rules": {
         "react/prop-types": "off",
         "react/require-default-props": "off",
-        "react/jsx-props-no-spreading": "off",
-        "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
-        "react/function-component-definition": [
-            "warn",
-            { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }
-        ]
+        "react/jsx-props-no-spreading": "off"
     }
 }

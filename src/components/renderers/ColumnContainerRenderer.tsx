@@ -3,12 +3,14 @@ import * as React from "react";
 import round from "../../utils/round";
 import { Optional, Photo, RenderColumnContainer, RenderColumnContainerProps } from "../../types";
 
-const defaultRenderColumnContainer = <T extends Photo = Photo>({
+function defaultRenderColumnContainer<T extends Photo = Photo>({
     columnContainerProps,
     children,
-}: RenderColumnContainerProps<T>) => <div {...columnContainerProps}>{children}</div>;
+}: RenderColumnContainerProps<T>) {
+    return <div {...columnContainerProps}>{children}</div>;
+}
 
-const cssColumnWidth = <T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) => {
+function cssColumnWidth<T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) {
     const { layoutOptions, columnIndex, columnsCount, columnsGaps, columnsRatios } = props;
     const { layout, spacing, padding } = layoutOptions;
 
@@ -26,14 +28,14 @@ const cssColumnWidth = <T extends Photo = Photo>(props: ColumnContainerRendererP
         (columnsCount - 1) * spacing + 2 * columnsCount * padding + totalAdjustedGaps,
         3
     )}px) * ${round(columnsRatios[columnIndex] / totalRatio, 5)} + ${2 * padding}px)`;
-};
+}
 
-type ColumnContainerRendererProps<T extends Photo = Photo> = Optional<
+export type ColumnContainerRendererProps<T extends Photo = Photo> = Optional<
     RenderColumnContainerProps<T>,
     "columnContainerProps"
 > & { renderColumnContainer?: RenderColumnContainer<T> };
 
-const ColumnContainerRenderer = <T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) => {
+export default function ColumnContainerRenderer<T extends Photo = Photo>(props: ColumnContainerRendererProps<T>) {
     const {
         layoutOptions,
         renderColumnContainer,
@@ -66,6 +68,4 @@ const ColumnContainerRenderer = <T extends Photo = Photo>(props: ColumnContainer
             })}
         </>
     );
-};
-
-export default ColumnContainerRenderer;
+}

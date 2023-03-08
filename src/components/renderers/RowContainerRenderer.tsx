@@ -2,16 +2,21 @@ import * as React from "react";
 
 import { Optional, Photo, RenderRowContainer, RenderRowContainerProps } from "../../types";
 
-const defaultRenderRowContainer = <T extends Photo = Photo>({
+function defaultRenderRowContainer<T extends Photo = Photo>({
     rowContainerProps,
     children,
-}: RenderRowContainerProps<T>) => <div {...rowContainerProps}>{children}</div>;
+}: RenderRowContainerProps<T>) {
+    return <div {...rowContainerProps}>{children}</div>;
+}
 
-type RowContainerRendererProps<T extends Photo = Photo> = Optional<RenderRowContainerProps<T>, "rowContainerProps"> & {
+export type RowContainerRendererProps<T extends Photo = Photo> = Optional<
+    RenderRowContainerProps<T>,
+    "rowContainerProps"
+> & {
     renderRowContainer?: RenderRowContainer<T>;
 };
 
-const RowContainerRenderer = <T extends Photo = Photo>(props: RowContainerRendererProps<T>) => {
+export default function RowContainerRenderer<T extends Photo = Photo>(props: RowContainerRendererProps<T>) {
     const {
         layoutOptions,
         rowIndex,
@@ -46,6 +51,4 @@ const RowContainerRenderer = <T extends Photo = Photo>(props: RowContainerRender
             })}
         </>
     );
-};
-
-export default RowContainerRenderer;
+}

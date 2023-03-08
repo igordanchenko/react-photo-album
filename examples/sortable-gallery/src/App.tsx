@@ -1,4 +1,4 @@
-import { forwardRef, HTMLAttributes, memo, useCallback, useRef, useState } from "react";
+import * as React from "react";
 import { Photo, PhotoAlbum, RenderPhotoProps } from "react-photo-album";
 import clsx from "clsx";
 import {
@@ -30,12 +30,12 @@ type PhotoFrameProps = SortablePhotoProps & {
     overlay?: boolean;
     active?: boolean;
     insertPosition?: "before" | "after";
-    attributes?: Partial<HTMLAttributes<HTMLDivElement>>;
-    listeners?: Partial<HTMLAttributes<HTMLDivElement>>;
+    attributes?: Partial<React.HTMLAttributes<HTMLDivElement>>;
+    listeners?: Partial<React.HTMLAttributes<HTMLDivElement>>;
 };
 
-const PhotoFrame = memo(
-    forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
+const PhotoFrame = React.memo(
+    React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
         const { layoutOptions, imageProps, overlay, active, insertPosition, attributes, listeners } = props;
         const { alt, style, ...restImageProps } = imageProps;
 
@@ -73,7 +73,7 @@ const PhotoFrame = memo(
 );
 PhotoFrame.displayName = "PhotoFrame";
 
-const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }) => {
+function SortablePhotoFrame(props: SortablePhotoProps & { activeIndex?: number }) {
     const { photo, activeIndex } = props;
     const { attributes, listeners, isDragging, index, over, setNodeRef } = useSortable({ id: photo.id });
 
@@ -94,17 +94,17 @@ const SortablePhotoFrame = (props: SortablePhotoProps & { activeIndex?: number }
             {...props}
         />
     );
-};
+}
 
-const App = () => {
-    const [photos, setPhotos] = useState(
+export default function App() {
+    const [photos, setPhotos] = React.useState(
         (photoSet as Photo[]).map((photo) => ({
             ...photo,
             id: photo.key || photo.src,
         }))
     );
-    const renderedPhotos = useRef<{ [key: string]: SortablePhotoProps }>({});
-    const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
+    const renderedPhotos = React.useRef<{ [key: string]: SortablePhotoProps }>({});
+    const [activeId, setActiveId] = React.useState<UniqueIdentifier | null>(null);
     const activeIndex = activeId ? photos.findIndex((photo) => photo.id === activeId) : undefined;
 
     const sensors = useSensors(
@@ -113,9 +113,9 @@ const App = () => {
         useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
     );
 
-    const handleDragStart = useCallback(({ active }: DragStartEvent) => setActiveId(active.id), []);
+    const handleDragStart = React.useCallback(({ active }: DragStartEvent) => setActiveId(active.id), []);
 
-    const handleDragEnd = useCallback((event: DragEndEvent) => {
+    const handleDragEnd = React.useCallback((event: DragEndEvent) => {
         const { active, over } = event;
 
         if (over && active.id !== over.id) {
@@ -128,7 +128,7 @@ const App = () => {
         }
     }, []);
 
-    const renderPhoto = useCallback(
+    const renderPhoto = React.useCallback(
         (props: SortablePhotoProps) => {
             // capture rendered photos for future use in DragOverlay
             renderedPhotos.current[props.photo.id] = props;
@@ -152,6 +152,4 @@ const App = () => {
             <DragOverlay>{activeId && <PhotoFrame overlay {...renderedPhotos.current[activeId]} />}</DragOverlay>
         </DndContext>
     );
-};
-
-export default App;
+}

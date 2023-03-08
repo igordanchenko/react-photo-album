@@ -1,14 +1,13 @@
-import { useCallback } from "react";
-import { PhotoAlbum, RenderPhotoProps } from "react-photo-album";
-
+import * as React from "react";
 import Box from "@mui/material/Box";
+import { PhotoAlbum, RenderPhotoProps } from "react-photo-album";
 
 import Settings, { useSettings } from "./Settings";
 
-const Playground = () => {
+function Playground() {
     const { photos, layout, columns, targetRowHeight, spacing, padding, width } = useSettings();
 
-    const renderPhoto = useCallback(
+    const renderPhoto = React.useCallback(
         ({ imageProps: { alt, style, ...rest } }: RenderPhotoProps) => (
             <img
                 alt={alt}
@@ -40,12 +39,12 @@ const Playground = () => {
             />
         </Box>
     );
-};
+}
 
-const App = () => (
-    <Settings>
-        <Playground />
-    </Settings>
-);
-
-export default App;
+export default function App() {
+    return (
+        <Settings>
+            <Playground />
+        </Settings>
+    );
+}

@@ -25,7 +25,7 @@ const slides = photos.map(({ src, width, height, images }) => ({
     })),
 }));
 
-const App = () => {
+export default function App() {
     const [index, setIndex] = useState(-1);
 
     return (
@@ -42,6 +42,4 @@ const App = () => {
             />
         </>
     );
-};
-
-export default App;
+}

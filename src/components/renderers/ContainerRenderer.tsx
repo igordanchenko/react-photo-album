@@ -2,17 +2,19 @@ import * as React from "react";
 
 import { Optional, RenderContainer, RenderContainerProps } from "../../types";
 
-const defaultRenderContainer = ({ containerProps, children, containerRef }: RenderContainerProps) => (
-    <div ref={containerRef} {...containerProps}>
-        {children}
-    </div>
-);
+function defaultRenderContainer({ containerProps, children, containerRef }: RenderContainerProps) {
+    return (
+        <div ref={containerRef} {...containerProps}>
+            {children}
+        </div>
+    );
+}
 
-type ContainerRendererProps = Optional<RenderContainerProps, "containerProps"> & {
+export type ContainerRendererProps = Optional<RenderContainerProps, "containerProps"> & {
     renderContainer?: RenderContainer;
 };
 
-const ContainerRenderer = (props: ContainerRendererProps) => {
+export default function ContainerRenderer(props: ContainerRendererProps) {
     const {
         layout,
         renderContainer,
@@ -43,6 +45,4 @@ const ContainerRenderer = (props: ContainerRendererProps) => {
             })}
         </>
     );
-};
-
-export default ContainerRenderer;
+}

@@ -3,21 +3,20 @@ import findShortestPathLengthN from "../utils/shortestPath";
 import { ColumnsLayoutOptions, Photo, PhotoLayout } from "../types";
 
 // return function that gets the neighboring nodes of node and returns costs
-const makeGetColumnNeighbors =
-    ({
-        photos,
-        spacing,
-        padding,
-        targetColumnWidth,
-        targetColumnHeight,
-    }: {
-        photos: Photo[];
-        spacing: number;
-        padding: number;
-        targetColumnWidth: number;
-        targetColumnHeight: number;
-    }) =>
-    (node: number): Array<{ neighbor: number; weight: number }> => {
+function makeGetColumnNeighbors({
+    photos,
+    spacing,
+    padding,
+    targetColumnWidth,
+    targetColumnHeight,
+}: {
+    photos: Photo[];
+    spacing: number;
+    padding: number;
+    targetColumnWidth: number;
+    targetColumnHeight: number;
+}) {
+    return (node: number): Array<{ neighbor: number; weight: number }> => {
         const results = [];
         const cutOffHeight = targetColumnHeight * 1.5;
         let height = targetColumnWidth / ratio(photos[node]) + 2 * padding;
@@ -30,8 +29,9 @@ const makeGetColumnNeighbors =
         }
         return results;
     };
+}
 
-const buildColumnsModel = <T extends Photo = Photo>({
+function buildColumnsModel<T extends Photo = Photo>({
     path,
     photos,
     containerWidth,
@@ -47,7 +47,7 @@ const buildColumnsModel = <T extends Photo = Photo>({
     columnsRatios: number[];
     spacing: number;
     padding: number;
-}) => {
+}) {
     const columnsModel = [];
 
     const totalRatio = columnsRatios.reduce((total, columnRatio) => total + columnRatio, 0);
@@ -80,9 +80,9 @@ const buildColumnsModel = <T extends Photo = Photo>({
     }
 
     return columnsModel;
-};
+}
 
-const computeColumnsModel = <T extends Photo = Photo>({
+function computeColumnsModel<T extends Photo = Photo>({
     photos,
     layoutOptions,
     targetColumnWidth,
@@ -90,7 +90,7 @@ const computeColumnsModel = <T extends Photo = Photo>({
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
     targetColumnWidth: number;
-}) => {
+}) {
     const { columns, spacing, padding, containerWidth } = layoutOptions;
 
     const columnsGaps: number[] = [];
@@ -153,14 +153,14 @@ const computeColumnsModel = <T extends Photo = Photo>({
     });
 
     return { columnsGaps, columnsRatios, columnsModel };
-};
+}
 
-type ComputeColumnsLayoutProps<T extends Photo = Photo> = {
+export type ComputeColumnsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
 };
 
-type ColumnsLayoutModel<T extends Photo = Photo> =
+export type ColumnsLayoutModel<T extends Photo = Photo> =
     | {
           columnsModel: { photo: T; layout: PhotoLayout }[][];
           columnsRatios: number[];
@@ -168,7 +168,7 @@ type ColumnsLayoutModel<T extends Photo = Photo> =
       }
     | undefined;
 
-const computeLayout = <T extends Photo = Photo>(props: ComputeColumnsLayoutProps<T>): ColumnsLayoutModel<T> => {
+function computeLayout<T extends Photo = Photo>(props: ComputeColumnsLayoutProps<T>): ColumnsLayoutModel<T> {
     const { photos, layoutOptions } = props;
     const { columns, spacing, padding, containerWidth } = layoutOptions;
 
@@ -196,15 +196,11 @@ const computeLayout = <T extends Photo = Photo>(props: ComputeColumnsLayoutProps
     }
 
     return { columnsModel, columnsGaps, columnsRatios };
-};
+}
 
-const computeColumnsLayout = <T extends Photo = Photo>({
+export default function computeColumnsLayout<T extends Photo = Photo>({
     photos,
     layoutOptions,
-}: ComputeColumnsLayoutProps<T>): ColumnsLayoutModel<T> =>
-    computeLayout({
-        photos,
-        layoutOptions,
-    });
-
-export default computeColumnsLayout;
+}: ComputeColumnsLayoutProps<T>): ColumnsLayoutModel<T> {
+    return computeLayout({ photos, layoutOptions });
+}

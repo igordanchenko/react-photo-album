@@ -5,8 +5,6 @@ export const RankingFunctionComparator =
     (a: T, b: T) =>
         rank(b) - rank(a);
 
-export const NumericComparator = RankingFunctionComparator<number>((x: number) => x);
-
 /**
  * Min heap implementation.
  * Comparator function is expected to return a positive number, zero or a negative number if a > b, a === b or a < b.

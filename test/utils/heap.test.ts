@@ -1,4 +1,6 @@
-import MinHeap, { NumericComparator } from "../../src/utils/heap";
+import MinHeap, { RankingFunctionComparator } from "../../src/utils/heap";
+
+const NumericComparator = RankingFunctionComparator<number>((x: number) => x);
 
 describe("Heap", () => {
     it("accepts elements", () => {

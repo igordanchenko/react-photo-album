@@ -5,7 +5,7 @@ import PhotoRenderer from "../renderers/PhotoRenderer";
 import RowContainerRenderer from "../renderers/RowContainerRenderer";
 import { ComponentsProps, Photo, RenderPhoto, RenderRowContainer, RowsLayoutOptions } from "../../types";
 
-type RowsLayoutProps<T extends Photo = Photo> = {
+export type RowsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: RowsLayoutOptions<T>;
     renderPhoto?: RenderPhoto<T>;
@@ -13,7 +13,7 @@ type RowsLayoutProps<T extends Photo = Photo> = {
     componentsProps?: ComponentsProps;
 };
 
-const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>) => {
+export default function RowsLayout<T extends Photo = Photo>(props: RowsLayoutProps<T>) {
     const { photos, layoutOptions, renderPhoto, renderRowContainer, componentsProps } = props;
 
     const rowsLayout = computeRowsLayout({ photos, layoutOptions });
@@ -46,6 +46,4 @@ const RowsLayout = <T extends Photo = Photo>(props: RowsLayoutProps<T>) => {
             ))}
         </>
     );
-};
-
-export default RowsLayout;
+}

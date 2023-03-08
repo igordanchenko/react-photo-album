@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useMemo, useState } from "react";
+import * as React from "react";
 import { LayoutType, Photo } from "react-photo-album";
 
 import Grid from "@mui/material/Grid";
@@ -9,16 +9,19 @@ import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 
-import useLayoutEffect from "./layoutEffect";
 import photos from "./photos";
 
-const Filter = ({ children }: { children: ReactNode }) => (
-    <Grid item xs={12} sm={8} lg={6}>
-        {children}
-    </Grid>
-);
+const useLayoutEffect = typeof document !== "undefined" ? React.useLayoutEffect : React.useEffect;
 
-const SliderControl = ({
+function Filter({ children }: React.PropsWithChildren) {
+    return (
+        <Grid item xs={12} sm={8} lg={6}>
+            {children}
+        </Grid>
+    );
+}
+
+function SliderControl({
     name,
     min,
     max,
@@ -34,8 +37,8 @@ const SliderControl = ({
     value: number;
     onChange: (event: Event, value: number, activeThumb: number) => void;
     disabled?: boolean;
-}) => {
-    const [focused, setFocused] = useState(false);
+}) {
+    const [focused, setFocused] = React.useState(false);
 
     return (
         <FormControl margin="none" fullWidth>
@@ -63,9 +66,9 @@ const SliderControl = ({
             />
         </FormControl>
     );
-};
+}
 
-type SettingsProps = {
+export type SettingsProps = {
     photos: Photo[];
     layout: LayoutType;
     targetRowHeight: number;
@@ -75,22 +78,22 @@ type SettingsProps = {
     width: number;
 };
 
-const SettingsContext = createContext<SettingsProps | null>(null);
+const SettingsContext = React.createContext<SettingsProps | null>(null);
 
-const useSettings = () => {
-    const context = useContext(SettingsContext);
+export function useSettings() {
+    const context = React.useContext(SettingsContext);
     if (!context) throw new Error("useSettings must be used within a SettingsContext");
     return context;
-};
+}
 
-const Settings = ({ children }: { children: ReactNode }) => {
-    const [layout, setLayout] = useState<LayoutType>("rows");
-    const [count, setCount] = useState(photos.length);
-    const [targetRowHeight, setTargetRowHeight] = useState(300);
-    const [columns, setColumns] = useState(5);
-    const [spacing, setSpacing] = useState(30);
-    const [padding, setPadding] = useState(10);
-    const [width, setWidth] = useState(100);
+export default function Settings({ children }: { children: React.ReactNode }) {
+    const [layout, setLayout] = React.useState<LayoutType>("rows");
+    const [count, setCount] = React.useState(photos.length);
+    const [targetRowHeight, setTargetRowHeight] = React.useState(300);
+    const [columns, setColumns] = React.useState(5);
+    const [spacing, setSpacing] = React.useState(30);
+    const [padding, setPadding] = React.useState(10);
+    const [width, setWidth] = React.useState(100);
 
     useLayoutEffect(() => {
         const viewportSize = window.innerWidth;
@@ -100,7 +103,7 @@ const Settings = ({ children }: { children: ReactNode }) => {
         setTargetRowHeight(viewportSize < 480 ? 100 : viewportSize < 900 ? 150 : 200);
     }, []);
 
-    const settings = useMemo(
+    const settings = React.useMemo(
         () => ({
             photos: photos.slice(0, count),
             layout,
@@ -208,8 +211,4 @@ const Settings = ({ children }: { children: ReactNode }) => {
             {children}
         </SettingsContext.Provider>
     );
-};
-
-export { useSettings };
-
-export default Settings;
+}

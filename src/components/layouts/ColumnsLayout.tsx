@@ -5,7 +5,7 @@ import PhotoRenderer from "../renderers/PhotoRenderer";
 import ColumnContainerRenderer from "../renderers/ColumnContainerRenderer";
 import { ColumnsLayoutOptions, ComponentsProps, Photo, RenderColumnContainer, RenderPhoto } from "../../types";
 
-type ColumnsLayoutProps<T extends Photo = Photo> = {
+export type ColumnsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
     renderPhoto?: RenderPhoto<T>;
@@ -13,7 +13,7 @@ type ColumnsLayoutProps<T extends Photo = Photo> = {
     componentsProps?: ComponentsProps;
 };
 
-const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>) => {
+export default function ColumnsLayout<T extends Photo = Photo>(props: ColumnsLayoutProps<T>) {
     const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
 
     const columnsLayout = computeColumnsLayout({ photos, layoutOptions });
@@ -50,6 +50,4 @@ const ColumnsLayout = <T extends Photo = Photo>(props: ColumnsLayoutProps<T>) =>
             ))}
         </>
     );
-};
-
-export default ColumnsLayout;
+}
