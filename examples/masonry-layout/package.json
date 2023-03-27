@@ -22,7 +22,7 @@
         "react-photo-album": "^2.0.3"
     },
     "devDependencies": {
-        "@types/react": "^18.0.28",
+        "@types/react": "^18.0.29",
         "@types/react-dom": "^18.0.11",
         "react-scripts": "^5.0.1",
         "typescript": "^4.9.5"
