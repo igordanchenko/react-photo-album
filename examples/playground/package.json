@@ -17,17 +17,17 @@
     "license": "MIT",
     "private": true,
     "dependencies": {
-        "@emotion/cache": "^11.10.5",
+        "@emotion/cache": "^11.10.7",
         "@emotion/react": "^11.10.6",
         "@emotion/server": "^11.10.0",
         "@emotion/styled": "^11.10.6",
-        "@mui/material": "^5.11.14",
+        "@mui/material": "^5.12.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-photo-album": "^2.0.3"
+        "react-photo-album": "^2.0.4"
     },
     "devDependencies": {
-        "@types/react": "^18.0.29",
+        "@types/react": "^18.0.34",
         "@types/react-dom": "^18.0.11",
         "react-scripts": "^5.0.1",
         "typescript": "^4.9.5"
