@@ -9,6 +9,11 @@ jobs:
         name: Release
         runs-on: ubuntu-latest
 
+        permissions:
+            issues: write
+            contents: write
+            id-token: write
+
         steps:
             -   name: Checkout
                 uses: actions/checkout@v3

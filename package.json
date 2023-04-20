@@ -27,6 +27,10 @@
     "engines": {
         "node": ">=12"
     },
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
     "scripts": {
         "prepare": "husky install",
         "clean": "rimraf dist",
