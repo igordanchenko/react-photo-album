@@ -20,11 +20,11 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-photo-album": "^2.0.4",
-        "yet-another-react-lightbox": "^3.4.0"
+        "yet-another-react-lightbox": "^3.5.2"
     },
     "devDependencies": {
-        "@types/react": "^18.0.34",
-        "@types/react-dom": "^18.0.11",
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
         "react-scripts": "^5.0.1",
         "typescript": "^4.9.5"
     },
