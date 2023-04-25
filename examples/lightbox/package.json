@@ -1,7 +1,7 @@
 {
     "name": "react-photo-album-lightbox",
-    "version": "0.1.0",
     "description": "React Photo Album - Lightbox",
+    "version": "0.1.0",
     "author": "Igor Danchenko",
     "license": "MIT",
     "private": true,

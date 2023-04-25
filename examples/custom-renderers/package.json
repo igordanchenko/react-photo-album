@@ -1,6 +1,28 @@
 {
     "name": "react-photo-album-custom-renderers",
     "description": "React Photo Album - Custom Renderers",
+    "version": "0.1.0",
+    "author": "Igor Danchenko",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-photo-album": "^2.0.4"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.0",
+        "@types/react-dom": "^18.2.0",
+        "@vitejs/plugin-react": "^4.0.0",
+        "typescript": "^5.0.4",
+        "vite": "^4.3.2"
+    },
     "keywords": [
         "react photo album",
         "react photo gallery",
@@ -12,44 +34,5 @@
         "image layout",
         "react-photo-album",
         "react-photo-gallery"
-    ],
-    "version": "0.1.0",
-    "license": "MIT",
-    "private": true,
-    "dependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-photo-album": "^2.0.4"
-    },
-    "devDependencies": {
-        "@types/react": "^18.2.0",
-        "@types/react-dom": "^18.2.0",
-        "react-scripts": "^5.0.1",
-        "typescript": "^4.9.5"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app"
-        ],
-        "ignorePatterns": [
-            "build"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+    ]
 }
