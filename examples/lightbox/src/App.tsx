@@ -14,16 +14,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 
 import photos from "./photos";
 
-const slides = photos.map(({ src, width, height, images }) => ({
-    src,
-    width,
-    height,
-    srcSet: images.map((image) => ({
-        src: image.src,
-        width: image.width,
-        height: image.height,
-    })),
-}));
+const slides = photos.map(({ src, width, height, images }) => ({ src, width, height, srcSet: images }));
 
 export default function App() {
     const [index, setIndex] = useState(-1);
