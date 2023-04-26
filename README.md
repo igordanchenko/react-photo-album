@@ -100,7 +100,7 @@ as possible.
 React Photo Album automatically generates `sizes` and `srcset` image attributes. In the case of SSR, React Photo Album
 includes `sizes` and `srcset` image attributes in the server-rendered markup, allowing browsers to pick images of the
 most appropriate resolution depending on their viewport size. To enable images with automatic resolution switching, 
-simply provide smaller images in the photo `images` attribute.
+simply provide smaller images in the photo `srcSet` attribute.
 
 ```js
 import PhotoAlbum from "react-photo-album";
@@ -110,7 +110,7 @@ const photos = [
         src: "/images/image1_800x600.jpg",
         width: 800,
         height: 600,
-        images: [
+        srcSet: [
             { src: "/images/image1_400x300.jpg", width: 400, height: 300 },
             { src: "/images/image1_200x150.jpg", width: 200, height: 150 }
         ]
@@ -119,7 +119,7 @@ const photos = [
         src: "/images/image2_1600x900.jpg",
         width: 1600,
         height: 900,
-        images: [
+        srcSet: [
             { src: "/images/image2_800x450.jpg", width: 800, height: 450 },
             { src: "/images/image2_400x225.jpg", width: 400, height: 225 }
         ]
