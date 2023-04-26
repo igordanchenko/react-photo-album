@@ -20,10 +20,10 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -410,14 +410,14 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -433,7 +433,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -449,7 +449,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -465,7 +465,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -800,15 +800,15 @@ exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
       decoding="async"
       loading="lazy"
       sizes="26vw"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
-      srcSet="https://source.unsplash.com/Osq7UAVxIOI/1080x780 540w, https://source.unsplash.com/Osq7UAVxIOI/1080x780 1080w"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
+      srcSet="https://source.unsplash.com/8gVv6nxq6gY/1080x780 540w, https://source.unsplash.com/8gVv6nxq6gY/1080x780 1080w"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -826,7 +826,7 @@ exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -844,7 +844,7 @@ exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -853,7 +853,7 @@ exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="28vw"
+      sizes="29vw"
       src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
       srcSet="https://source.unsplash.com/Yizrl9N_eDA/1080x721 540w, https://source.unsplash.com/Yizrl9N_eDA/1080x721 1080w"
       style={
@@ -862,7 +862,7 @@ exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -1346,14 +1346,14 @@ exports[`PhotoAlbum provides layout.index prop 1`] = `
       data-index={0}
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -1370,7 +1370,7 @@ exports[`PhotoAlbum provides layout.index prop 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -1387,7 +1387,7 @@ exports[`PhotoAlbum provides layout.index prop 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -1404,7 +1404,7 @@ exports[`PhotoAlbum provides layout.index prop 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -1805,7 +1805,7 @@ exports[`PhotoAlbum provides layout.index prop 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 41.779px) * 0.2434 + 0px)",
+        "width": "calc((100% - 41.779px) * 0.24273 + 0px)",
       }
     }
   >
@@ -1815,10 +1815,10 @@ exports[`PhotoAlbum provides layout.index prop 2`] = `
       data-index={0}
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -1908,7 +1908,7 @@ exports[`PhotoAlbum provides layout.index prop 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 53.966px) * 0.27138 + 0px)",
+        "width": "calc((100% - 53.956px) * 0.27162 + 0px)",
       }
     }
   >
@@ -2029,7 +2029,7 @@ exports[`PhotoAlbum provides layout.index prop 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 29.591px) * 0.24615 + 0px)",
+        "width": "calc((100% - 29.602px) * 0.24637 + 0px)",
       }
     }
   >
@@ -2114,7 +2114,7 @@ exports[`PhotoAlbum provides layout.index prop 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 53.966px) * 0.23907 + 0px)",
+        "width": "calc((100% - 53.956px) * 0.23928 + 0px)",
       }
     }
   >
@@ -2260,10 +2260,10 @@ exports[`PhotoAlbum provides layout.index prop 3`] = `
       data-index={0}
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -2695,7 +2695,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 45px) * 0.3375 + 0px)",
+        "width": "calc((100% - 45px) * 0.33471 + 0px)",
       }
     }
   >
@@ -2704,10 +2704,10 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -2725,7 +2725,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 45px) * 0.1625 + 0px)",
+        "width": "calc((100% - 45px) * 0.16529 + 0px)",
       }
     }
   >
@@ -2863,7 +2863,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 2.197px) * 0.5141 + 0px)",
+        "width": "calc((100% - 2.197px) * 0.51361 + 0px)",
       }
     }
   >
@@ -2872,10 +2872,10 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -3063,7 +3063,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 1.791px) * 0.4859 + 0px)",
+        "width": "calc((100% - 1.792px) * 0.48639 + 0px)",
       }
     }
   >
@@ -3261,7 +3261,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 12.354px) * 0.3198 + 0px)",
+        "width": "calc((100% - 12.354px) * 0.31922 + 0px)",
       }
     }
   >
@@ -3270,10 +3270,10 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -3410,7 +3410,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 7.788px) * 0.35077 + 0px)",
+        "width": "calc((100% - 7.792px) * 0.35108 + 0px)",
       }
     }
   >
@@ -3525,7 +3525,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 10.071px) * 0.32942 + 0px)",
+        "width": "calc((100% - 10.073px) * 0.32971 + 0px)",
       }
     }
   >
@@ -3672,7 +3672,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 13.926px) * 0.2434 + 0px)",
+        "width": "calc((100% - 13.926px) * 0.24273 + 0px)",
       }
     }
   >
@@ -3681,10 +3681,10 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -3770,7 +3770,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 17.989px) * 0.27138 + 0px)",
+        "width": "calc((100% - 17.985px) * 0.27162 + 0px)",
       }
     }
   >
@@ -3885,7 +3885,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 9.864px) * 0.24615 + 0px)",
+        "width": "calc((100% - 9.867px) * 0.24637 + 0px)",
       }
     }
   >
@@ -3966,7 +3966,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 17.989px) * 0.23907 + 0px)",
+        "width": "calc((100% - 17.985px) * 0.23928 + 0px)",
       }
     }
   >
@@ -4096,7 +4096,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 24.708px) * 0.3198 + 0px)",
+        "width": "calc((100% - 20px) * 0.35338 + 0px)",
       }
     }
   >
@@ -4105,10 +4105,10 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -4214,23 +4214,6 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "marginBottom": "10px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      decoding="async"
-      loading="lazy"
-      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
-      style={
-        {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
           "width": "calc(100% - 0px)",
         }
       }
@@ -4245,10 +4228,27 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 15.575px) * 0.35077 + 0px)",
+        "width": "calc((100% - 20px) * 0.31706 + 0px)",
       }
     }
   >
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      decoding="async"
+      loading="lazy"
+      src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
+      style={
+        {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "10px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
     <img
       alt=""
       className="react-photo-album--photo"
@@ -4360,7 +4360,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 20.141px) * 0.32942 + 0px)",
+        "width": "calc((100% - 20px) * 0.32956 + 0px)",
       }
     }
   >
@@ -4507,7 +4507,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 37.726px) * 0.21911 + 0px)",
+        "width": "calc((100% - 37.726px) * 0.21822 + 0px)",
       }
     }
   >
@@ -4516,10 +4516,10 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -4588,7 +4588,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 37.726px) * 0.23673 + 0px)",
+        "width": "calc((100% - 37.726px) * 0.237 + 0px)",
       }
     }
   >
@@ -4669,7 +4669,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 37.726px) * 0.18363 + 0px)",
+        "width": "calc((100% - 37.726px) * 0.18384 + 0px)",
       }
     }
   >
@@ -4750,7 +4750,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 37.726px) * 0.18335 + 0px)",
+        "width": "calc((100% - 37.726px) * 0.18356 + 0px)",
       }
     }
   >
@@ -4831,7 +4831,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 50.559px) * 0.17718 + 0px)",
+        "width": "calc((100% - 50.545px) * 0.17738 + 0px)",
       }
     }
   >
@@ -4944,7 +4944,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 40.58px) * 0.18807 + 0px)",
+        "width": "calc((100% - 40.58px) * 0.1871 + 0px)",
       }
     }
   >
@@ -4953,10 +4953,10 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -5008,7 +5008,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 58.985px) * 0.16501 + 0px)",
+        "width": "calc((100% - 58.963px) * 0.16521 + 0px)",
       }
     }
   >
@@ -5089,7 +5089,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 58.985px) * 0.15932 + 0px)",
+        "width": "calc((100% - 58.963px) * 0.15951 + 0px)",
       }
     }
   >
@@ -5170,7 +5170,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 40.58px) * 0.15523 + 0px)",
+        "width": "calc((100% - 40.58px) * 0.15542 + 0px)",
       }
     }
   >
@@ -5234,7 +5234,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 40.58px) * 0.14489 + 0px)",
+        "width": "calc((100% - 40.58px) * 0.14506 + 0px)",
       }
     }
   >
@@ -5298,7 +5298,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 58.985px) * 0.18747 + 0px)",
+        "width": "calc((100% - 58.963px) * 0.1877 + 0px)",
       }
     }
   >
@@ -5394,7 +5394,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 60.492px) * 0.13842 + 0px)",
+        "width": "calc((100% - 60.492px) * 0.13766 + 0px)",
       }
     }
   >
@@ -5403,10 +5403,10 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -5458,7 +5458,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 85.5px) * 0.12145 + 0px)",
+        "width": "calc((100% - 85.477px) * 0.12156 + 0px)",
       }
     }
   >
@@ -5539,7 +5539,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 60.492px) * 0.14449 + 0px)",
+        "width": "calc((100% - 60.492px) * 0.14462 + 0px)",
       }
     }
   >
@@ -5603,7 +5603,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 60.492px) * 0.14235 + 0px)",
+        "width": "calc((100% - 60.492px) * 0.14247 + 0px)",
       }
     }
   >
@@ -5667,7 +5667,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 35.485px) * 0.14114 + 0px)",
+        "width": "calc((100% - 35.507px) * 0.14126 + 0px)",
       }
     }
   >
@@ -5714,7 +5714,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 60.492px) * 0.16675 + 0px)",
+        "width": "calc((100% - 60.492px) * 0.16689 + 0px)",
       }
     }
   >
@@ -5778,7 +5778,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 60.492px) * 0.14541 + 0px)",
+        "width": "calc((100% - 60.492px) * 0.14554 + 0px)",
       }
     }
   >
@@ -5857,7 +5857,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 40px) * 0.35406 + 0px)",
+        "width": "calc((100% - 40px) * 0.35338 + 0px)",
       }
     }
   >
@@ -5866,10 +5866,10 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -5989,7 +5989,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 40px) * 0.31673 + 0px)",
+        "width": "calc((100% - 40px) * 0.31706 + 0px)",
       }
     }
   >
@@ -6121,7 +6121,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 40px) * 0.32921 + 0px)",
+        "width": "calc((100% - 40px) * 0.32956 + 0px)",
       }
     }
   >
@@ -6268,7 +6268,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 55.705px) * 0.2434 + 0px)",
+        "width": "calc((100% - 55.705px) * 0.24273 + 0px)",
       }
     }
   >
@@ -6277,10 +6277,10 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -6366,7 +6366,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 71.955px) * 0.27138 + 0px)",
+        "width": "calc((100% - 71.941px) * 0.27162 + 0px)",
       }
     }
   >
@@ -6481,7 +6481,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 39.455px) * 0.24615 + 0px)",
+        "width": "calc((100% - 39.469px) * 0.24637 + 0px)",
       }
     }
   >
@@ -6562,7 +6562,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 71.955px) * 0.23907 + 0px)",
+        "width": "calc((100% - 71.941px) * 0.23928 + 0px)",
       }
     }
   >
@@ -6692,7 +6692,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 55.705px) * 0.2434 + 0px)",
+        "width": "calc((100% - 55.705px) * 0.24273 + 0px)",
       }
     }
   >
@@ -6701,10 +6701,10 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -6790,7 +6790,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 71.955px) * 0.27138 + 0px)",
+        "width": "calc((100% - 71.941px) * 0.27162 + 0px)",
       }
     }
   >
@@ -6905,7 +6905,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 39.455px) * 0.24615 + 0px)",
+        "width": "calc((100% - 39.469px) * 0.24637 + 0px)",
       }
     }
   >
@@ -6986,7 +6986,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 71.955px) * 0.23907 + 0px)",
+        "width": "calc((100% - 71.941px) * 0.23928 + 0px)",
       }
     }
   >
@@ -7116,7 +7116,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 41.779px) * 0.2434 + 0px)",
+        "width": "calc((100% - 41.779px) * 0.24273 + 0px)",
       }
     }
   >
@@ -7125,10 +7125,10 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -7214,7 +7214,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 53.966px) * 0.27138 + 0px)",
+        "width": "calc((100% - 53.956px) * 0.27162 + 0px)",
       }
     }
   >
@@ -7329,7 +7329,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 29.591px) * 0.24615 + 0px)",
+        "width": "calc((100% - 29.602px) * 0.24637 + 0px)",
       }
     }
   >
@@ -7410,7 +7410,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 53.966px) * 0.23907 + 0px)",
+        "width": "calc((100% - 53.956px) * 0.23928 + 0px)",
       }
     }
   >
@@ -7549,14 +7549,14 @@ exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -7572,7 +7572,7 @@ exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -7588,7 +7588,7 @@ exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -7604,7 +7604,7 @@ exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -7997,10 +7997,10 @@ exports[`PhotoAlbum renders masonry layout correctly when there isn't enough pho
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -8165,10 +8165,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -8563,10 +8563,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -8974,10 +8974,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -9398,10 +9398,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -9809,10 +9809,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -10246,10 +10246,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -10297,10 +10297,27 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
+      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
       style={
         {
-          "aspectRatio": "1080 / 1620",
+          "aspectRatio": "1080 / 160",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "marginBottom": "10px",
+          "width": "calc(100% - 0px)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      decoding="async"
+      loading="lazy"
+      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
+      style={
+        {
+          "aspectRatio": "1080 / 810",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -10489,27 +10506,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/X48pUOPKf7A/1080x160"
+      src="https://source.unsplash.com/ls94iFAQerE/1080x1620"
       style={
         {
-          "aspectRatio": "1080 / 160",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "marginBottom": "10px",
-          "width": "calc(100% - 0px)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      decoding="async"
-      loading="lazy"
-      src="https://source.unsplash.com/GbLS6YVXj0U/1080x810"
-      style={
-        {
-          "aspectRatio": "1080 / 810",
+          "aspectRatio": "1080 / 1620",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -10696,10 +10696,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -11159,10 +11159,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -11570,10 +11570,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -11994,10 +11994,10 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -12418,10 +12418,10 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -12842,14 +12842,14 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 12px) / 4.12813)",
+          "width": "calc((100% - 12px) / 4.20834)",
         }
       }
     />
@@ -12865,7 +12865,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 12px) / 8.5738)",
+          "width": "calc((100% - 12px) / 8.52188)",
         }
       }
     />
@@ -12881,7 +12881,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 12px) / 3.81058)",
+          "width": "calc((100% - 12px) / 3.7875)",
         }
       }
     />
@@ -12897,7 +12897,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 12px) / 3.81587)",
+          "width": "calc((100% - 12px) / 3.79276)",
         }
       }
     />
@@ -12913,7 +12913,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 12px) / 8.5738)",
+          "width": "calc((100% - 12px) / 8.52188)",
         }
       }
     />
@@ -13248,14 +13248,14 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 16px) / 4.12813)",
+          "width": "calc((100% - 16px) / 4.20834)",
         }
       }
     />
@@ -13271,7 +13271,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 16px) / 8.5738)",
+          "width": "calc((100% - 16px) / 8.52188)",
         }
       }
     />
@@ -13287,7 +13287,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 16px) / 3.81058)",
+          "width": "calc((100% - 16px) / 3.7875)",
         }
       }
     />
@@ -13303,7 +13303,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 16px) / 3.81587)",
+          "width": "calc((100% - 16px) / 3.79276)",
         }
       }
     />
@@ -13319,7 +13319,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 16px) / 8.5738)",
+          "width": "calc((100% - 16px) / 8.52188)",
         }
       }
     />
@@ -13654,14 +13654,14 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 4.12813)",
+          "width": "calc((100% - 24px) / 4.20834)",
         }
       }
     />
@@ -13677,7 +13677,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 8.5738)",
+          "width": "calc((100% - 24px) / 8.52188)",
         }
       }
     />
@@ -13693,7 +13693,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 3.81058)",
+          "width": "calc((100% - 24px) / 3.7875)",
         }
       }
     />
@@ -13709,7 +13709,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 3.81587)",
+          "width": "calc((100% - 24px) / 3.79276)",
         }
       }
     />
@@ -13725,7 +13725,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 24px) / 8.5738)",
+          "width": "calc((100% - 24px) / 8.52188)",
         }
       }
     />
@@ -14060,14 +14060,14 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 10.97165)",
+          "width": "calc((100% - 110px) / 11.22733)",
         }
       }
     />
@@ -14083,7 +14083,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 22.78727)",
+          "width": "calc((100% - 110px) / 22.73535)",
         }
       }
     />
@@ -14099,7 +14099,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 10.12768)",
+          "width": "calc((100% - 110px) / 10.1046)",
         }
       }
     />
@@ -14115,7 +14115,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 10.14174)",
+          "width": "calc((100% - 110px) / 10.11863)",
         }
       }
     />
@@ -14131,7 +14131,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 22.78727)",
+          "width": "calc((100% - 110px) / 22.73535)",
         }
       }
     />
@@ -14147,7 +14147,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 8.53819)",
+          "width": "calc((100% - 110px) / 8.51874)",
         }
       }
     />
@@ -14163,7 +14163,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 8.55226)",
+          "width": "calc((100% - 110px) / 8.53277)",
         }
       }
     />
@@ -14179,7 +14179,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 10.12768)",
+          "width": "calc((100% - 110px) / 10.1046)",
         }
       }
     />
@@ -14195,7 +14195,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 21.78857)",
+          "width": "calc((100% - 110px) / 21.73892)",
         }
       }
     />
@@ -14211,7 +14211,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 10.12768)",
+          "width": "calc((100% - 110px) / 10.1046)",
         }
       }
     />
@@ -14227,7 +14227,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 9.76195)",
+          "width": "calc((100% - 110px) / 9.73971)",
         }
       }
     />
@@ -14243,7 +14243,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 110px) / 22.78727)",
+          "width": "calc((100% - 110px) / 22.73535)",
         }
       }
     />
@@ -14438,14 +14438,14 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 2.56481)",
+          "width": "calc((100% - 30px) / 3.71451)",
         }
       }
     />
@@ -14461,7 +14461,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 5.32692)",
+          "width": "calc((100% - 30px) / 7.52188)",
         }
       }
     />
@@ -14477,7 +14477,23 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 2.36752)",
+          "width": "calc((100% - 30px) / 3.34306)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      decoding="async"
+      loading="lazy"
+      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
+      style={
+        {
+          "aspectRatio": "1080 / 721",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 30px) / 3.3477)",
         }
       }
     />
@@ -14500,22 +14516,6 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
-      style={
-        {
-          "aspectRatio": "1080 / 721",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 20px) / 2.63287)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      decoding="async"
-      loading="lazy"
       src="https://source.unsplash.com/KG3TyFi0iTU/1080x1620"
       style={
         {
@@ -14523,7 +14523,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 5.91574)",
+          "width": "calc((100% - 20px) / 6.33334)",
         }
       }
     />
@@ -14539,7 +14539,23 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 2.21658)",
+          "width": "calc((100% - 20px) / 2.37305)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      decoding="async"
+      loading="lazy"
+      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
+      style={
+        {
+          "aspectRatio": "1080 / 608",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 20px) / 2.37696)",
         }
       }
     />
@@ -14562,22 +14578,6 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/-heLWtuAN3c/1080x608"
-      style={
-        {
-          "aspectRatio": "1080 / 608",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 20px) / 2.23696)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      decoding="async"
-      loading="lazy"
       src="https://source.unsplash.com/xOigCUcFdA8/1080x720"
       style={
         {
@@ -14585,7 +14585,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 2.64903)",
+          "width": "calc((100% - 20px) / 2.46482)",
         }
       }
     />
@@ -14601,7 +14601,23 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 5.69909)",
+          "width": "calc((100% - 20px) / 5.30278)",
+        }
+      }
+    />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      decoding="async"
+      loading="lazy"
+      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
+      style={
+        {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 20px) / 2.46482)",
         }
       }
     />
@@ -14619,22 +14635,6 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       }
     }
   >
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      decoding="async"
-      loading="lazy"
-      src="https://source.unsplash.com/ALrCdq-ui_Q/1080x720"
-      style={
-        {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 20px) / 2.48191)",
-        }
-      }
-    />
     <img
       alt=""
       className="react-photo-album--photo"
@@ -14667,6 +14667,22 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
         }
       }
     />
+    <img
+      alt=""
+      className="react-photo-album--photo"
+      decoding="async"
+      loading="lazy"
+      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
+      style={
+        {
+          "aspectRatio": "1080 / 720",
+          "boxSizing": "content-box",
+          "display": "block",
+          "height": "auto",
+          "width": "calc((100% - 20px) / 2.48191)",
+        }
+      }
+    />
   </div>
   <div
     className="react-photo-album--row"
@@ -14686,22 +14702,6 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/sEXGgun3ZiE/1080x720"
-      style={
-        {
-          "aspectRatio": "1080 / 720",
-          "boxSizing": "content-box",
-          "display": "block",
-          "height": "auto",
-          "width": "calc((100% - 40px) / 3.27778)",
-        }
-      }
-    />
-    <img
-      alt=""
-      className="react-photo-album--photo"
-      decoding="async"
-      loading="lazy"
       src="https://source.unsplash.com/S-cdwrx-YuQ/1080x1440"
       style={
         {
@@ -14709,7 +14709,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 6.55556)",
+          "width": "calc((100% - 30px) / 4.55556)",
         }
       }
     />
@@ -14725,7 +14725,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 7.375)",
+          "width": "calc((100% - 30px) / 5.125)",
         }
       }
     />
@@ -14741,7 +14741,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 3.6875)",
+          "width": "calc((100% - 30px) / 2.5625)",
         }
       }
     />
@@ -14757,7 +14757,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 7.375)",
+          "width": "calc((100% - 30px) / 5.125)",
         }
       }
     />
@@ -14886,14 +14886,14 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 2.56481)",
+          "width": "calc((100% - 20px) / 2.60494)",
         }
       }
     />
@@ -14909,7 +14909,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 5.32692)",
+          "width": "calc((100% - 20px) / 5.275)",
         }
       }
     />
@@ -14925,7 +14925,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 2.36752)",
+          "width": "calc((100% - 20px) / 2.34444)",
         }
       }
     />
@@ -15334,14 +15334,14 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 7.77936)",
+          "width": "calc((100% - 70px) / 7.95319)",
         }
       }
     />
@@ -15357,7 +15357,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 16.15714)",
+          "width": "calc((100% - 70px) / 16.10522)",
         }
       }
     />
@@ -15373,7 +15373,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 7.18095)",
+          "width": "calc((100% - 70px) / 7.15787)",
         }
       }
     />
@@ -15389,7 +15389,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 7.19092)",
+          "width": "calc((100% - 70px) / 7.16782)",
         }
       }
     />
@@ -15405,7 +15405,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 16.15714)",
+          "width": "calc((100% - 70px) / 16.10522)",
         }
       }
     />
@@ -15421,7 +15421,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 6.05394)",
+          "width": "calc((100% - 70px) / 6.03449)",
         }
       }
     />
@@ -15437,7 +15437,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 6.06391)",
+          "width": "calc((100% - 70px) / 6.04443)",
         }
       }
     />
@@ -15453,7 +15453,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 70px) / 7.18095)",
+          "width": "calc((100% - 70px) / 7.15787)",
         }
       }
     />
@@ -15726,14 +15726,14 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 1.48148)",
+          "width": "calc((100% - 20px) / 1.49383)",
         }
       }
     />
@@ -15749,7 +15749,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 20px) / 3.07692)",
+          "width": "calc((100% - 20px) / 3.025)",
         }
       }
     />
@@ -16216,14 +16216,14 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 2.56481)",
+          "width": "calc((100% - 40px) / 2.60494)",
         }
       }
     />
@@ -16239,7 +16239,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 5.32692)",
+          "width": "calc((100% - 40px) / 5.275)",
         }
       }
     />
@@ -16255,7 +16255,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 2.36752)",
+          "width": "calc((100% - 40px) / 2.34444)",
         }
       }
     />
@@ -16678,14 +16678,14 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 2.56481)",
+          "width": "calc((100% - 40px) / 2.60494)",
         }
       }
     />
@@ -16701,7 +16701,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 5.32692)",
+          "width": "calc((100% - 40px) / 5.275)",
         }
       }
     />
@@ -16717,7 +16717,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 40px) / 2.36752)",
+          "width": "calc((100% - 40px) / 2.34444)",
         }
       }
     />
@@ -17140,14 +17140,14 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -17163,7 +17163,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -17179,7 +17179,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -17195,7 +17195,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -17588,14 +17588,14 @@ exports[`PhotoAlbum supports breakpoints 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -17611,7 +17611,7 @@ exports[`PhotoAlbum supports breakpoints 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -17627,7 +17627,7 @@ exports[`PhotoAlbum supports breakpoints 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -17643,7 +17643,7 @@ exports[`PhotoAlbum supports breakpoints 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -18038,15 +18038,15 @@ exports[`PhotoAlbum supports components props 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": "zoom-in",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -18063,7 +18063,7 @@ exports[`PhotoAlbum supports components props 1`] = `
           "cursor": "zoom-in",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -18080,7 +18080,7 @@ exports[`PhotoAlbum supports components props 1`] = `
           "cursor": "zoom-in",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -18097,7 +18097,7 @@ exports[`PhotoAlbum supports components props 1`] = `
           "cursor": "zoom-in",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -18506,7 +18506,7 @@ exports[`PhotoAlbum supports components props 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 41.779px) * 0.2434 + 0px)",
+        "width": "calc((100% - 41.779px) * 0.24273 + 0px)",
       }
     }
   >
@@ -18515,10 +18515,10 @@ exports[`PhotoAlbum supports components props 2`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": "zoom-out",
           "display": "block",
@@ -18610,7 +18610,7 @@ exports[`PhotoAlbum supports components props 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 53.966px) * 0.27138 + 0px)",
+        "width": "calc((100% - 53.956px) * 0.27162 + 0px)",
       }
     }
   >
@@ -18732,7 +18732,7 @@ exports[`PhotoAlbum supports components props 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 29.591px) * 0.24615 + 0px)",
+        "width": "calc((100% - 29.602px) * 0.24637 + 0px)",
       }
     }
   >
@@ -18818,7 +18818,7 @@ exports[`PhotoAlbum supports components props 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 53.966px) * 0.23907 + 0px)",
+        "width": "calc((100% - 53.956px) * 0.23928 + 0px)",
       }
     }
   >
@@ -18965,10 +18965,10 @@ exports[`PhotoAlbum supports components props 3`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": "grabbing",
           "display": "block",
@@ -19414,10 +19414,10 @@ exports[`PhotoAlbum supports components props 4`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -19840,15 +19840,15 @@ exports[`PhotoAlbum supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -19867,7 +19867,7 @@ exports[`PhotoAlbum supports custom photo attributes 1`] = `
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -19886,7 +19886,7 @@ exports[`PhotoAlbum supports custom photo attributes 1`] = `
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -19905,7 +19905,7 @@ exports[`PhotoAlbum supports custom photo attributes 1`] = `
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -20351,15 +20351,15 @@ exports[`PhotoAlbum supports custom photo attributes with inline render function
       decoding="async"
       loading="lazy"
       onClick={[Function]}
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -20378,7 +20378,7 @@ exports[`PhotoAlbum supports custom photo attributes with inline render function
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -20397,7 +20397,7 @@ exports[`PhotoAlbum supports custom photo attributes with inline render function
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -20416,7 +20416,7 @@ exports[`PhotoAlbum supports custom photo attributes with inline render function
           "cursor": "pointer",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -20858,13 +20858,13 @@ exports[`PhotoAlbum supports custom wrapper 1`] = `
     <div
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": undefined,
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     >
@@ -20873,7 +20873,7 @@ exports[`PhotoAlbum supports custom wrapper 1`] = `
         className="react-photo-album--photo"
         decoding="async"
         loading="lazy"
-        src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+        src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
         style={
           {
             "display": "block",
@@ -20892,7 +20892,7 @@ exports[`PhotoAlbum supports custom wrapper 1`] = `
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     >
@@ -20920,7 +20920,7 @@ exports[`PhotoAlbum supports custom wrapper 1`] = `
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     >
@@ -20948,7 +20948,7 @@ exports[`PhotoAlbum supports custom wrapper 1`] = `
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     >
@@ -21558,13 +21558,13 @@ exports[`PhotoAlbum supports custom wrapper 2`] = `
     <div
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "cursor": "pointer",
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     >
@@ -21574,7 +21574,7 @@ exports[`PhotoAlbum supports custom wrapper 2`] = `
         decoding="async"
         loading="lazy"
         onClick={[Function]}
-        src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+        src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
         style={
           {
             "display": "block",
@@ -21593,7 +21593,7 @@ exports[`PhotoAlbum supports custom wrapper 2`] = `
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     >
@@ -21622,7 +21622,7 @@ exports[`PhotoAlbum supports custom wrapper 2`] = `
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     >
@@ -21651,7 +21651,7 @@ exports[`PhotoAlbum supports custom wrapper 2`] = `
           "display": "block",
           "marginBottom": undefined,
           "padding": undefined,
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     >
@@ -22281,14 +22281,14 @@ exports[`PhotoAlbum supports custom wrapper 3`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -22304,7 +22304,7 @@ exports[`PhotoAlbum supports custom wrapper 3`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -22320,7 +22320,7 @@ exports[`PhotoAlbum supports custom wrapper 3`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -22336,7 +22336,7 @@ exports[`PhotoAlbum supports custom wrapper 3`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -22729,10 +22729,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22746,10 +22746,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22763,10 +22763,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22780,10 +22780,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22810,10 +22810,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22827,10 +22827,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22844,10 +22844,10 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -22890,14 +22890,14 @@ exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -22913,7 +22913,7 @@ exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -22929,7 +22929,7 @@ exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -22945,7 +22945,7 @@ exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -23338,14 +23338,14 @@ exports[`PhotoAlbum supports minimum number of elements in a row 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.56481)",
+          "width": "calc((100% - 30px) / 2.60494)",
         }
       }
     />
@@ -23361,7 +23361,7 @@ exports[`PhotoAlbum supports minimum number of elements in a row 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 5.32692)",
+          "width": "calc((100% - 30px) / 5.275)",
         }
       }
     />
@@ -23377,7 +23377,7 @@ exports[`PhotoAlbum supports minimum number of elements in a row 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 30px) / 2.36752)",
+          "width": "calc((100% - 30px) / 2.34444)",
         }
       }
     />
@@ -23786,15 +23786,15 @@ exports[`PhotoAlbum supports padding 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 3.64665)",
+          "width": "calc((100% - 125px) / 3.71451)",
         }
       }
     />
@@ -23811,7 +23811,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 7.5738)",
+          "width": "calc((100% - 125px) / 7.52188)",
         }
       }
     />
@@ -23828,7 +23828,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 3.36613)",
+          "width": "calc((100% - 125px) / 3.34306)",
         }
       }
     />
@@ -23845,7 +23845,7 @@ exports[`PhotoAlbum supports padding 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "10px",
-          "width": "calc((100% - 125px) / 3.37081)",
+          "width": "calc((100% - 125px) / 3.3477)",
         }
       }
     />
@@ -24250,18 +24250,18 @@ exports[`PhotoAlbum supports photo alt attribute 1`] = `
     }
   >
     <img
-      alt="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      alt="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 15px) / 1.48148)",
+          "width": "calc((100% - 15px) / 1.49383)",
         }
       }
     />
@@ -24277,7 +24277,7 @@ exports[`PhotoAlbum supports photo alt attribute 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 15px) / 3.07692)",
+          "width": "calc((100% - 15px) / 3.025)",
         }
       }
     />
@@ -24315,15 +24315,15 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 30px) / 1.48148)",
+          "width": "calc((100% - 30px) / 1.49383)",
         }
       }
     />
@@ -24340,7 +24340,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
           "display": "block",
           "height": "auto",
           "padding": "5px",
-          "width": "calc((100% - 30px) / 3.07692)",
+          "width": "calc((100% - 30px) / 3.025)",
         }
       }
     />
@@ -24831,7 +24831,7 @@ exports[`PhotoAlbum supports responsive parameters 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 50px) * 0.35406 + 10px)",
+        "width": "calc((100% - 50px) * 0.35338 + 10px)",
       }
     }
   >
@@ -24840,10 +24840,10 @@ exports[`PhotoAlbum supports responsive parameters 2`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
@@ -24970,7 +24970,7 @@ exports[`PhotoAlbum supports responsive parameters 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 50px) * 0.31673 + 10px)",
+        "width": "calc((100% - 50px) * 0.31706 + 10px)",
       }
     }
   >
@@ -25109,7 +25109,7 @@ exports[`PhotoAlbum supports responsive parameters 2`] = `
         "flexDirection": "column",
         "flexWrap": "nowrap",
         "justifyContent": "space-between",
-        "width": "calc((100% - 50px) * 0.32921 + 10px)",
+        "width": "calc((100% - 50px) * 0.32956 + 10px)",
       }
     }
   >
@@ -25272,16 +25272,16 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="calc((100vw - 45px) / 3.64665)"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
-      srcSet="https://source.unsplash.com/Osq7UAVxIOI/1080x780 540w, https://source.unsplash.com/Osq7UAVxIOI/1080x780 1080w"
+      sizes="calc((100vw - 45px) / 3.71451)"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
+      srcSet="https://source.unsplash.com/8gVv6nxq6gY/1080x780 540w, https://source.unsplash.com/8gVv6nxq6gY/1080x780 1080w"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -25290,7 +25290,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="calc((100vw - 45px) / 7.5738)"
+      sizes="calc((100vw - 45px) / 7.52188)"
       src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
       srcSet="https://source.unsplash.com/Dhmn6ete6g8/1080x1620 540w, https://source.unsplash.com/Dhmn6ete6g8/1080x1620 1080w"
       style={
@@ -25299,7 +25299,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -25308,7 +25308,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="calc((100vw - 45px) / 3.36613)"
+      sizes="calc((100vw - 45px) / 3.34306)"
       src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
       srcSet="https://source.unsplash.com/RkBTPqPEGDo/1080x720 540w, https://source.unsplash.com/RkBTPqPEGDo/1080x720 1080w"
       style={
@@ -25317,7 +25317,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -25326,7 +25326,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="calc((100vw - 45px) / 3.37081)"
+      sizes="calc((100vw - 45px) / 3.3477)"
       src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
       srcSet="https://source.unsplash.com/Yizrl9N_eDA/1080x721 540w, https://source.unsplash.com/Yizrl9N_eDA/1080x721 1080w"
       style={
@@ -25335,7 +25335,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -25762,16 +25762,16 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 3.64665), calc((50vw - 45px) / 3.64665)"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
-      srcSet="https://source.unsplash.com/Osq7UAVxIOI/1080x780 540w, https://source.unsplash.com/Osq7UAVxIOI/1080x780 1080w"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 3.71451), calc((50vw - 45px) / 3.71451)"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
+      srcSet="https://source.unsplash.com/8gVv6nxq6gY/1080x780 540w, https://source.unsplash.com/8gVv6nxq6gY/1080x780 1080w"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -25780,7 +25780,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 7.5738), calc((50vw - 45px) / 7.5738)"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 7.52188), calc((50vw - 45px) / 7.52188)"
       src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
       srcSet="https://source.unsplash.com/Dhmn6ete6g8/1080x1620 540w, https://source.unsplash.com/Dhmn6ete6g8/1080x1620 1080w"
       style={
@@ -25789,7 +25789,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -25798,7 +25798,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 3.36613), calc((50vw - 45px) / 3.36613)"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 3.34306), calc((50vw - 45px) / 3.34306)"
       src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
       srcSet="https://source.unsplash.com/RkBTPqPEGDo/1080x720 540w, https://source.unsplash.com/RkBTPqPEGDo/1080x720 1080w"
       style={
@@ -25807,7 +25807,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -25816,7 +25816,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 3.37081), calc((50vw - 45px) / 3.37081)"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 3.3477), calc((50vw - 45px) / 3.3477)"
       src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
       srcSet="https://source.unsplash.com/Yizrl9N_eDA/1080x721 540w, https://source.unsplash.com/Yizrl9N_eDA/1080x721 1080w"
       style={
@@ -25825,7 +25825,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -26252,16 +26252,16 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 3.64665), calc((50vw - 50px - 45px) / 3.64665)"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
-      srcSet="https://source.unsplash.com/Osq7UAVxIOI/1080x780 540w, https://source.unsplash.com/Osq7UAVxIOI/1080x780 1080w"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 3.71451), calc((50vw - 50px - 45px) / 3.71451)"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
+      srcSet="https://source.unsplash.com/8gVv6nxq6gY/1080x780 540w, https://source.unsplash.com/8gVv6nxq6gY/1080x780 1080w"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -26270,7 +26270,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 7.5738), calc((50vw - 50px - 45px) / 7.5738)"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 7.52188), calc((50vw - 50px - 45px) / 7.52188)"
       src="https://source.unsplash.com/Dhmn6ete6g8/1080x1620"
       srcSet="https://source.unsplash.com/Dhmn6ete6g8/1080x1620 540w, https://source.unsplash.com/Dhmn6ete6g8/1080x1620 1080w"
       style={
@@ -26279,7 +26279,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -26288,7 +26288,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 3.36613), calc((50vw - 50px - 45px) / 3.36613)"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 3.34306), calc((50vw - 50px - 45px) / 3.34306)"
       src="https://source.unsplash.com/RkBTPqPEGDo/1080x720"
       srcSet="https://source.unsplash.com/RkBTPqPEGDo/1080x720 540w, https://source.unsplash.com/RkBTPqPEGDo/1080x720 1080w"
       style={
@@ -26297,7 +26297,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -26306,7 +26306,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="(max-width: 600px) calc((100vw - 45px) / 3.37081), calc((50vw - 50px - 45px) / 3.37081)"
+      sizes="(max-width: 600px) calc((100vw - 45px) / 3.3477), calc((50vw - 50px - 45px) / 3.3477)"
       src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
       srcSet="https://source.unsplash.com/Yizrl9N_eDA/1080x721 540w, https://source.unsplash.com/Yizrl9N_eDA/1080x721 1080w"
       style={
@@ -26315,7 +26315,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />
@@ -26743,15 +26743,15 @@ exports[`PhotoAlbum supports srcSet and sizes 1`] = `
       decoding="async"
       loading="lazy"
       sizes="26vw"
-      src="https://source.unsplash.com/Osq7UAVxIOI/1080x780"
-      srcSet="https://source.unsplash.com/Osq7UAVxIOI/1080x780 540w, https://source.unsplash.com/Osq7UAVxIOI/1080x780 1080w"
+      src="https://source.unsplash.com/8gVv6nxq6gY/1080x780"
+      srcSet="https://source.unsplash.com/8gVv6nxq6gY/1080x780 540w, https://source.unsplash.com/8gVv6nxq6gY/1080x780 1080w"
       style={
         {
-          "aspectRatio": "1080 / 780",
+          "aspectRatio": "1080 / 800",
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.64665)",
+          "width": "calc((100% - 45px) / 3.71451)",
         }
       }
     />
@@ -26769,7 +26769,7 @@ exports[`PhotoAlbum supports srcSet and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 7.5738)",
+          "width": "calc((100% - 45px) / 7.52188)",
         }
       }
     />
@@ -26787,7 +26787,7 @@ exports[`PhotoAlbum supports srcSet and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.36613)",
+          "width": "calc((100% - 45px) / 3.34306)",
         }
       }
     />
@@ -26796,7 +26796,7 @@ exports[`PhotoAlbum supports srcSet and sizes 1`] = `
       className="react-photo-album--photo"
       decoding="async"
       loading="lazy"
-      sizes="28vw"
+      sizes="29vw"
       src="https://source.unsplash.com/Yizrl9N_eDA/1080x721"
       srcSet="https://source.unsplash.com/Yizrl9N_eDA/1080x721 540w, https://source.unsplash.com/Yizrl9N_eDA/1080x721 1080w"
       style={
@@ -26805,7 +26805,7 @@ exports[`PhotoAlbum supports srcSet and sizes 1`] = `
           "boxSizing": "content-box",
           "display": "block",
           "height": "auto",
-          "width": "calc((100% - 45px) / 3.37081)",
+          "width": "calc((100% - 45px) / 3.3477)",
         }
       }
     />

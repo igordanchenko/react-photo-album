@@ -1,8 +1,8 @@
 const photos = [
     {
-        src: "https://source.unsplash.com/Osq7UAVxIOI/1080x780",
+        src: "https://source.unsplash.com/8gVv6nxq6gY/1080x780",
         width: 1080,
-        height: 780,
+        height: 800,
     },
     {
         src: "https://source.unsplash.com/Dhmn6ete6g8/1080x1620",

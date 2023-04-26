@@ -40,30 +40,31 @@ a:hover {
     text-decoration: underline;
 }
 
-main, p {
-    margin: 5px;
-    padding: 0;
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main {
+    padding: 5px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 @media all and (min-width: 300px) {
-    main, p {
-        margin: 10px;
+    main {
+        padding: 10px;
     }
 }
 
 @media all and (min-width: 600px) {
-    main, p {
-        margin: 15px;
+    main {
+        padding: 15px;
     }
 }
 
 @media all and (min-width: 1200px) {
-    main, p {
-        margin: 20px;
+    main {
+        padding: 20px;
     }
-}
-
-p {
-    text-align: center;
-    margin-bottom: 30px;
 }

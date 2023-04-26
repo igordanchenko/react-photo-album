@@ -36,6 +36,26 @@ header a:hover {
     text-decoration: underline;
 }
 
-header p {
-    flex: 0 0 100%;
+main {
+    padding: 5px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media all and (min-width: 300px) {
+    main {
+        padding: 10px;
+    }
+}
+
+@media all and (min-width: 600px) {
+    main {
+        padding: 15px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    main {
+        padding: 20px;
+    }
 }
