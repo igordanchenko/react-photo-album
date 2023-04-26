@@ -6,7 +6,7 @@ import photos from "./photos";
 
 const photosWithSrcSet = photos.map((photo) => ({
     ...photo,
-    images: [{ src: photo.src, width: Math.round(photo.width / 2), height: Math.round(photo.height / 2) }],
+    srcSet: [{ src: photo.src, width: Math.round(photo.width / 2), height: Math.round(photo.height / 2) }],
 }));
 
 const createNodeMock =
@@ -454,11 +454,11 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(
             <PhotoAlbum
                 layout="rows"
-                photos={photosWithSrcSet.map(({ src, width, height, images }) => ({
+                photos={photosWithSrcSet.map(({ src, width, height, srcSet }) => ({
                     src,
                     width,
                     height,
-                    images: [{ src, width, height }, ...images],
+                    srcSet: [{ src, width, height }, ...srcSet],
                 }))}
             />
         );

@@ -30,10 +30,11 @@ function srcSetAndSizes<T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
     let srcSet;
     let sizes;
 
-    if (photo.images && photo.images.length > 0) {
-        srcSet = photo.images
+    const images = photo.srcSet || photo.images;
+    if (images && images.length > 0) {
+        srcSet = images
             .concat(
-                !photo.images.find(({ width }) => width === photo.width)
+                !images.find(({ width }) => width === photo.width)
                     ? [{ src: photo.src, width: photo.width, height: photo.height }]
                     : []
             )

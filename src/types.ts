@@ -53,8 +53,11 @@ export interface Photo extends Image {
     alt?: string;
     /** Optional image `title` attribute. */
     title?: string;
-    /** Optional array of alternative images to be included in the `srcset` attribute. */
+    // TODO v3: remove
+    /** @deprecated - use `srcSet` instead */
     images?: Image[];
+    /** Optional array of alternative images to be included in the `srcset` attribute. */
+    srcSet?: Image[];
 }
 
 export type RenderPhotoProps<T extends Photo = Photo> = {
