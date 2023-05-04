@@ -301,7 +301,7 @@ describe("PhotoAlbum", () => {
     });
 
     it("supports click handler", () => {
-        const onClick = jest.fn();
+        const onClick = vi.fn();
 
         const rendered = render(<PhotoAlbum layout="rows" photos={photos} onClick={onClick} />);
 
@@ -403,11 +403,11 @@ describe("PhotoAlbum", () => {
     it("supports ResizeObserver", () => {
         const resizeObserverRef = global.ResizeObserver;
         try {
-            const observeMock = jest.fn();
-            const unobserveMock = jest.fn();
-            const disconnectMock = jest.fn();
+            const observeMock = vi.fn();
+            const unobserveMock = vi.fn();
+            const disconnectMock = vi.fn();
 
-            global.ResizeObserver = jest.fn().mockImplementation(() => ({
+            global.ResizeObserver = vi.fn().mockImplementation(() => ({
                 observe: observeMock,
                 unobserve: unobserveMock,
                 disconnect: disconnectMock,

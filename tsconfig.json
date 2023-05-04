@@ -1,4 +1,5 @@
 {
+    "exclude": ["examples"],
     "compilerOptions": {
         "strict": true,
         "target": "ES2018",
@@ -12,6 +13,7 @@
         "importHelpers": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "stripInternal": true
+        "stripInternal": true,
+        "types": ["vitest/globals"]
     }
 }

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`PhotoAlbum allows rendering custom column container 1`] = `
+exports[`PhotoAlbum > allows rendering custom column container 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -384,13 +384,13 @@ exports[`PhotoAlbum allows rendering custom column container 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum allows rendering custom container 1`] = `
+exports[`PhotoAlbum > allows rendering custom container 1`] = `
 <div
   className="custom-class"
 />
 `;
 
-exports[`PhotoAlbum allows rendering custom row container 1`] = `
+exports[`PhotoAlbum > allows rendering custom row container 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -769,7 +769,7 @@ exports[`PhotoAlbum allows rendering custom row container 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
+exports[`PhotoAlbum > de-duplicates srcSet images 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -1259,7 +1259,7 @@ exports[`PhotoAlbum de-duplicates srcSet images 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum doesn't crash when asked to render impossible columns layout 1`] = `
+exports[`PhotoAlbum > doesn't crash when asked to render impossible columns layout 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -1273,7 +1273,7 @@ exports[`PhotoAlbum doesn't crash when asked to render impossible columns layout
 />
 `;
 
-exports[`PhotoAlbum doesn't crash when asked to render impossible masonry layout 1`] = `
+exports[`PhotoAlbum > doesn't crash when asked to render impossible masonry layout 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -1287,7 +1287,7 @@ exports[`PhotoAlbum doesn't crash when asked to render impossible masonry layout
 />
 `;
 
-exports[`PhotoAlbum doesn't crash when asked to render impossible rows layout 1`] = `
+exports[`PhotoAlbum > doesn't crash when asked to render impossible rows layout 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -1301,21 +1301,21 @@ exports[`PhotoAlbum doesn't crash when asked to render impossible rows layout 1`
 />
 `;
 
-exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 1`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked with invalid required parameters 1`] = `null`;
 
-exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 2`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked with invalid required parameters 2`] = `null`;
 
-exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 3`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked with invalid required parameters 3`] = `null`;
 
-exports[`PhotoAlbum doesn't crash when invoked with invalid required parameters 4`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked with invalid required parameters 4`] = `null`;
 
-exports[`PhotoAlbum doesn't crash when invoked without required parameters 1`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked without required parameters 1`] = `null`;
 
-exports[`PhotoAlbum doesn't crash when invoked without required parameters 2`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked without required parameters 2`] = `null`;
 
-exports[`PhotoAlbum doesn't crash when invoked without required parameters 3`] = `null`;
+exports[`PhotoAlbum > doesn't crash when invoked without required parameters 3`] = `null`;
 
-exports[`PhotoAlbum provides layout.index prop 1`] = `
+exports[`PhotoAlbum > provides layout.index prop 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -1784,7 +1784,7 @@ exports[`PhotoAlbum provides layout.index prop 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum provides layout.index prop 2`] = `
+exports[`PhotoAlbum > provides layout.index prop 2`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -2229,7 +2229,7 @@ exports[`PhotoAlbum provides layout.index prop 2`] = `
 </div>
 `;
 
-exports[`PhotoAlbum provides layout.index prop 3`] = `
+exports[`PhotoAlbum > provides layout.index prop 3`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -2674,7 +2674,7 @@ exports[`PhotoAlbum provides layout.index prop 3`] = `
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout correctly when there isn't enough photos 1`] = `
+exports[`PhotoAlbum > renders columns layout correctly when there isn't enough photos 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -2775,7 +2775,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout correctly when there isn't enough photos 2`] = `
+exports[`PhotoAlbum > renders columns layout correctly when there isn't enough photos 2`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -2842,7 +2842,7 @@ exports[`PhotoAlbum renders columns layout correctly when there isn't enough pho
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultContainerWidth=290 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=2 columns=2 defaultContainerWidth=290 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -3240,7 +3240,7 @@ exports[`PhotoAlbum renders columns layout with spacing=2 columns=2 defaultConta
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultContainerWidth=380 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=5 columns=3 defaultContainerWidth=380 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -3651,7 +3651,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=3 defaultConta
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultContainerWidth=600 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=5 columns=4 defaultContainerWidth=600 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -4075,7 +4075,7 @@ exports[`PhotoAlbum renders columns layout with spacing=5 columns=4 defaultConta
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultContainerWidth=600 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=10 columns=3 defaultContainerWidth=600 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -4486,7 +4486,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=3 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultContainerWidth=800 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=10 columns=5 defaultContainerWidth=800 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -4923,7 +4923,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=5 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultContainerWidth=1500 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=10 columns=6 defaultContainerWidth=1500 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -5373,7 +5373,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=6 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultContainerWidth=2000 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=10 columns=7 defaultContainerWidth=2000 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -5836,7 +5836,7 @@ exports[`PhotoAlbum renders columns layout with spacing=10 columns=7 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultContainerWidth=800 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=20 columns=3 defaultContainerWidth=800 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -6247,7 +6247,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=3 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultContainerWidth=1500 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=20 columns=4 defaultContainerWidth=1500 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -6671,7 +6671,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultContainerWidth=2000 as expected 1`] = `
+exports[`PhotoAlbum > renders columns layout with spacing=20 columns=4 defaultContainerWidth=2000 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -7095,7 +7095,7 @@ exports[`PhotoAlbum renders columns layout with spacing=20 columns=4 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders columns layout without crashing 1`] = `
+exports[`PhotoAlbum > renders columns layout without crashing 1`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -7519,7 +7519,7 @@ exports[`PhotoAlbum renders columns layout without crashing 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
+exports[`PhotoAlbum > renders correctly with invalid defaultContainerWidth 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -7967,7 +7967,7 @@ exports[`PhotoAlbum renders correctly with invalid defaultContainerWidth 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout correctly when there isn't enough photos 1`] = `
+exports[`PhotoAlbum > renders masonry layout correctly when there isn't enough photos 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -8068,7 +8068,7 @@ exports[`PhotoAlbum renders masonry layout correctly when there isn't enough pho
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout correctly when there isn't enough photos 2`] = `
+exports[`PhotoAlbum > renders masonry layout correctly when there isn't enough photos 2`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -8135,7 +8135,7 @@ exports[`PhotoAlbum renders masonry layout correctly when there isn't enough pho
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultContainerWidth=290 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=2 columns=2 defaultContainerWidth=290 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -8533,7 +8533,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=2 columns=2 defaultConta
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultContainerWidth=380 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=5 columns=3 defaultContainerWidth=380 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -8944,7 +8944,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=3 defaultConta
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultContainerWidth=600 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=5 columns=4 defaultContainerWidth=600 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -9368,7 +9368,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=5 columns=4 defaultConta
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultContainerWidth=600 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=10 columns=3 defaultContainerWidth=600 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -9779,7 +9779,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=3 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultContainerWidth=800 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=10 columns=5 defaultContainerWidth=800 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -10216,7 +10216,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=5 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultContainerWidth=1500 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=10 columns=6 defaultContainerWidth=1500 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -10666,7 +10666,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=6 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultContainerWidth=2000 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=10 columns=7 defaultContainerWidth=2000 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -11129,7 +11129,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=10 columns=7 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultContainerWidth=800 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=20 columns=3 defaultContainerWidth=800 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -11540,7 +11540,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=3 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultContainerWidth=1500 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=20 columns=4 defaultContainerWidth=1500 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -11964,7 +11964,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultContainerWidth=2000 as expected 1`] = `
+exports[`PhotoAlbum > renders masonry layout with spacing=20 columns=4 defaultContainerWidth=2000 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -12388,7 +12388,7 @@ exports[`PhotoAlbum renders masonry layout with spacing=20 columns=4 defaultCont
 </div>
 `;
 
-exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
+exports[`PhotoAlbum > renders masonry layout without crashing 1`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -12812,7 +12812,7 @@ exports[`PhotoAlbum renders masonry layout without crashing 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaultContainerWidth=290 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=3 targetRowHeight=40 defaultContainerWidth=290 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -13218,7 +13218,7 @@ exports[`PhotoAlbum renders rows layout with spacing=3 targetRowHeight=40 defaul
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaultContainerWidth=380 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=4 targetRowHeight=60 defaultContainerWidth=380 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -13624,7 +13624,7 @@ exports[`PhotoAlbum renders rows layout with spacing=4 targetRowHeight=60 defaul
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaultContainerWidth=600 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=6 targetRowHeight=85 defaultContainerWidth=600 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -14030,7 +14030,7 @@ exports[`PhotoAlbum renders rows layout with spacing=6 targetRowHeight=85 defaul
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defaultContainerWidth=1500 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=10 targetRowHeight=100 defaultContainerWidth=1500 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -14408,7 +14408,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=100 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defaultContainerWidth=600 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=10 targetRowHeight=150 defaultContainerWidth=600 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -14856,7 +14856,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=150 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defaultContainerWidth=800 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=10 targetRowHeight=200 defaultContainerWidth=800 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -15304,7 +15304,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defaultContainerWidth=2000 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=10 targetRowHeight=200 defaultContainerWidth=2000 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -15696,7 +15696,7 @@ exports[`PhotoAlbum renders rows layout with spacing=10 targetRowHeight=200 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defaultContainerWidth=800 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=20 targetRowHeight=300 defaultContainerWidth=800 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -16186,7 +16186,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=300 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defaultContainerWidth=1500 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=20 targetRowHeight=500 defaultContainerWidth=1500 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -16648,7 +16648,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=500 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defaultContainerWidth=2000 as expected 1`] = `
+exports[`PhotoAlbum > renders rows layout with spacing=20 targetRowHeight=600 defaultContainerWidth=2000 as expected 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -17110,7 +17110,7 @@ exports[`PhotoAlbum renders rows layout with spacing=20 targetRowHeight=600 defa
 </div>
 `;
 
-exports[`PhotoAlbum renders rows layout without crashing 1`] = `
+exports[`PhotoAlbum > renders rows layout without crashing 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -17558,7 +17558,7 @@ exports[`PhotoAlbum renders rows layout without crashing 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports breakpoints 1`] = `
+exports[`PhotoAlbum > supports breakpoints 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -18006,7 +18006,7 @@ exports[`PhotoAlbum supports breakpoints 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports components props 1`] = `
+exports[`PhotoAlbum > supports components props 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -18483,7 +18483,7 @@ exports[`PhotoAlbum supports components props 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports components props 2`] = `
+exports[`PhotoAlbum > supports components props 2`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -18933,7 +18933,7 @@ exports[`PhotoAlbum supports components props 2`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports components props 3`] = `
+exports[`PhotoAlbum > supports components props 3`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -19383,7 +19383,7 @@ exports[`PhotoAlbum supports components props 3`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports components props 4`] = `
+exports[`PhotoAlbum > supports components props 4`] = `
 <div
   className="react-photo-album react-photo-album--masonry"
   style={
@@ -19808,7 +19808,7 @@ exports[`PhotoAlbum supports components props 4`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports custom photo attributes 1`] = `
+exports[`PhotoAlbum > supports custom photo attributes 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -20319,7 +20319,7 @@ exports[`PhotoAlbum supports custom photo attributes 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports custom photo attributes with inline render function 1`] = `
+exports[`PhotoAlbum > supports custom photo attributes with inline render function 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -20830,7 +20830,7 @@ exports[`PhotoAlbum supports custom photo attributes with inline render function
 </div>
 `;
 
-exports[`PhotoAlbum supports custom wrapper 1`] = `
+exports[`PhotoAlbum > supports custom wrapper 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -21530,7 +21530,7 @@ exports[`PhotoAlbum supports custom wrapper 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports custom wrapper 2`] = `
+exports[`PhotoAlbum > supports custom wrapper 2`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -22251,7 +22251,7 @@ exports[`PhotoAlbum supports custom wrapper 2`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports custom wrapper 3`] = `
+exports[`PhotoAlbum > supports custom wrapper 3`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -22699,7 +22699,7 @@ exports[`PhotoAlbum supports custom wrapper 3`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
+exports[`PhotoAlbum > supports deterministic tiebreaker 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -22860,7 +22860,7 @@ exports[`PhotoAlbum supports deterministic tiebreaker 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
+exports[`PhotoAlbum > supports maximum number of elements in a row 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -23308,7 +23308,7 @@ exports[`PhotoAlbum supports maximum number of elements in a row 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports minimum number of elements in a row 1`] = `
+exports[`PhotoAlbum > supports minimum number of elements in a row 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -23756,7 +23756,7 @@ exports[`PhotoAlbum supports minimum number of elements in a row 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports padding 1`] = `
+exports[`PhotoAlbum > supports padding 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -24225,7 +24225,7 @@ exports[`PhotoAlbum supports padding 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports photo alt attribute 1`] = `
+exports[`PhotoAlbum > supports photo alt attribute 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -24285,7 +24285,7 @@ exports[`PhotoAlbum supports photo alt attribute 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports responsive parameters 1`] = `
+exports[`PhotoAlbum > supports responsive parameters 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -24810,7 +24810,7 @@ exports[`PhotoAlbum supports responsive parameters 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports responsive parameters 2`] = `
+exports[`PhotoAlbum > supports responsive parameters 2`] = `
 <div
   className="react-photo-album react-photo-album--columns"
   style={
@@ -25242,7 +25242,7 @@ exports[`PhotoAlbum supports responsive parameters 2`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports sizes attribute 1`] = `
+exports[`PhotoAlbum > supports sizes attribute 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -25732,7 +25732,7 @@ exports[`PhotoAlbum supports sizes attribute 1`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports sizes attribute 2`] = `
+exports[`PhotoAlbum > supports sizes attribute 2`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -26222,7 +26222,7 @@ exports[`PhotoAlbum supports sizes attribute 2`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports sizes attribute 3`] = `
+exports[`PhotoAlbum > supports sizes attribute 3`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={
@@ -26712,7 +26712,7 @@ exports[`PhotoAlbum supports sizes attribute 3`] = `
 </div>
 `;
 
-exports[`PhotoAlbum supports srcSet and sizes 1`] = `
+exports[`PhotoAlbum > supports srcSet and sizes 1`] = `
 <div
   className="react-photo-album react-photo-album--rows"
   style={

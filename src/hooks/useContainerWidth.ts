@@ -13,7 +13,7 @@ type Action = {
 function containerWidthReducer(state: State, { newContainerWidth, newScrollbarWidth }: Action) {
     const { containerWidth, scrollbarWidth } = state;
 
-    // istanbul ignore next
+    /* c8 ignore start */
     if (
         containerWidth !== undefined &&
         scrollbarWidth !== undefined &&
@@ -27,10 +27,10 @@ function containerWidthReducer(state: State, { newContainerWidth, newScrollbarWi
         return { containerWidth, scrollbarWidth: newScrollbarWidth };
     }
 
-    // istanbul ignore next
     return containerWidth !== newContainerWidth || scrollbarWidth !== newScrollbarWidth
         ? { containerWidth: newContainerWidth, scrollbarWidth: newScrollbarWidth }
         : state;
+    /* c8 ignore stop */
 }
 
 function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly number[] | undefined) {
