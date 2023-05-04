@@ -8,7 +8,7 @@ import cleanup from "rollup-plugin-cleanup";
 export default defineConfig({
     test: {
         globals: true,
-        environment: "happy-dom",
+        environment: "jsdom",
     },
     build: {
         minify: false,
