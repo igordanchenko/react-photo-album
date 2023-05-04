@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}

@@ -11,9 +11,9 @@ understand what actions will and will not be tolerated.
 
 ## Submitting an Issue
 
-Before you commit your time to code a new feature or a bug fix, be sure to open a feature request or a bug report under
-the project [Issues](https://github.com/igordanchenko/react-photo-album/issues) to be sure your PR will be accepted once
-done.
+Before committing your time to coding a new feature or fixing a bug, make sure to open a feature request or a bug report
+in the project's [Issues](https://github.com/igordanchenko/react-photo-album/issues) section to ensure that
+your pull request will be accepted once it is done.
 
 ## Sending a Pull Request
 
@@ -46,13 +46,39 @@ npm install
 git checkout -b feat/my-new-feature
 ```
 
-6. Start auto-build script:
+6. Start the dev server:
+
+```shell
+npm run dev
+```
+
+7. Make changes, run tests:
+
+```shell
+npm run test
+```
+
+8. Commit and push to your fork (make sure your commit message conforms to
+    the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)):
+
+```shell
+git commit -m "feat: awesome new feature"
+git push -u origin HEAD
+```
+
+9. Go to [the repository](https://github.com/igordanchenko/react-photo-album) and create a Pull Request.
+
+## Testing Changes in a Local Project
+
+As an alternative to running the local dev server, you can link-install the library into your local project.
+
+1. Start the build script:
 
 ```shell
 npm run start
 ```
 
-7. Link-install your locally built `react-photo-album` version to your local project:
+2. Link-install your locally built `react-photo-album` into your local project:
 
 ```shell
 # specify relative or absolute path to react-photo-album directory 
@@ -61,13 +87,13 @@ npm link $RPA_HOME $RPA_HOME/node_modules/react $RPA_HOME/node_modules/react-dom
 rm -rf node_modules/.cache
 ```
 
-8. Make changes, run tests:
+3. Make changes, run tests:
 
 ```shell
 npm run test
 ```
 
-9. Cleanup global link:
+4. Cleanup global link:
 
 ```shell
 # execute from your local project directory
@@ -75,16 +101,6 @@ npm install
 rm -rf node_modules/.cache
 npm rm -g react-photo-album react react-dom
 ```
-
-10. Commit and push to your fork (make sure your commit message conforms to
-    the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)):
-
-```shell
-git commit -m "feat: awesome new feature"
-git push -u origin HEAD
-```
-
-11. Go to [the repository](https://github.com/igordanchenko/react-photo-album) and create a Pull Request.
 
 ## License
 

@@ -40,7 +40,8 @@
         "build:dts": "rollup -c",
         "start": "npm-run-all clean --parallel \"build:* -- -w\"",
         "lint": "eslint .",
-        "test": "vitest run --coverage"
+        "test": "vitest run --coverage",
+        "dev": "vite --config dev/vite.config.ts"
     },
     "peerDependencies": {
         "react": ">=16.8.0"
