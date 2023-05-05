@@ -20,7 +20,10 @@ export default defineConfig({
         },
         rollupOptions: {
             external: "react",
-            output: { exports: "named" },
+            output: {
+                exports: "named",
+                banner: '"use client";',
+            },
             plugins: [cleanup({ extensions: ["ts", "tsx"] })],
         },
     },
