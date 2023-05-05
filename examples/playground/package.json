@@ -12,21 +12,21 @@
         "preview": "vite preview"
     },
     "dependencies": {
-        "@emotion/cache": "^11.10.7",
-        "@emotion/react": "^11.10.6",
+        "@emotion/cache": "^11.10.8",
+        "@emotion/react": "^11.10.8",
         "@emotion/server": "^11.10.0",
-        "@emotion/styled": "^11.10.6",
-        "@mui/material": "^5.12.2",
+        "@emotion/styled": "^11.10.8",
+        "@mui/material": "^5.12.3",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-photo-album": "^2.1.0"
+        "react-photo-album": "^2.2.0"
     },
     "devDependencies": {
-        "@types/react": "^18.2.0",
-        "@types/react-dom": "^18.2.1",
+        "@types/react": "^18.2.5",
+        "@types/react-dom": "^18.2.4",
         "@vitejs/plugin-react": "^4.0.0",
         "typescript": "^5.0.4",
-        "vite": "^4.3.3"
+        "vite": "^4.3.5"
     },
     "keywords": [
         "react photo album",
