@@ -1,9 +1,11 @@
 import dts from "rollup-plugin-dts";
 
-export default [
-    {
+function createConfig(format) {
+    return {
         input: "src/index.ts",
-        output: { file: "dist/index.d.ts" },
+        output: { format, file: `dist/index.d.${format === "es" ? "mts" : "ts"}` },
         plugins: [dts()],
-    },
-];
+    };
+}
+
+export default [createConfig("es"), createConfig("cjs")];
