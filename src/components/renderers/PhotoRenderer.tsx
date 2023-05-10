@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import clsx from "../../utils/clsx";
 import round from "../../utils/round";
 import { ImageElementAttributes, LayoutOptions, Photo, PhotoLayout, RenderPhoto, RenderPhotoProps } from "../../types";
 
@@ -65,7 +66,13 @@ export type PhotoRendererProps<T extends Photo = Photo> = Omit<
 };
 
 export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRendererProps<T>) {
-    const { photo, layout, layoutOptions, imageProps: { style, ...restImageProps } = {}, renderPhoto } = props;
+    const {
+        photo,
+        layout,
+        layoutOptions,
+        imageProps: { style, className, ...restImageProps } = {},
+        renderPhoto,
+    } = props;
     const { onClick } = layoutOptions;
 
     const imageStyle = {
@@ -95,7 +102,7 @@ export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRende
         title: photo.title,
         onClick: handleClick,
         style: imageStyle,
-        className: "react-photo-album--photo",
+        className: clsx("react-photo-album--photo", className),
         loading: "lazy" as const,
         decoding: "async" as const,
         ...srcSetAndSizes(photo, layout, layoutOptions),

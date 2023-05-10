@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import clsx from "../../utils/clsx";
 import { Optional, Photo, RenderRowContainer, RenderRowContainerProps } from "../../types";
 
 function defaultRenderRowContainer<T extends Photo = Photo>({
@@ -22,12 +23,12 @@ export default function RowContainerRenderer<T extends Photo = Photo>(props: Row
         rowIndex,
         rowsCount,
         renderRowContainer,
-        rowContainerProps: { style, ...restRowContainerProps } = {},
+        rowContainerProps: { style, className, ...restRowContainerProps } = {},
         children,
     } = props;
 
     const rowContainerProps = {
-        className: "react-photo-album--row",
+        className: clsx("react-photo-album--row", className),
         style: {
             display: "flex",
             flexDirection: "row",

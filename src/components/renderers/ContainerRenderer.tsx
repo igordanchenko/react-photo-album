@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import clsx from "../../utils/clsx";
 import { Optional, RenderContainer, RenderContainerProps } from "../../types";
 
 function defaultRenderContainer({ containerProps, children, containerRef }: RenderContainerProps) {
@@ -20,11 +21,11 @@ export default function ContainerRenderer(props: ContainerRendererProps) {
         renderContainer,
         children,
         containerRef,
-        containerProps: { style, ...restContainerProps } = {},
+        containerProps: { style, className, ...restContainerProps } = {},
     } = props;
 
     const containerProps = {
-        className: `react-photo-album react-photo-album--${layout}`,
+        className: clsx("react-photo-album", `react-photo-album--${layout}`, className),
         style: {
             display: "flex",
             flexWrap: "nowrap",

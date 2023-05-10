@@ -1,5 +1,6 @@
 import * as React from "react";
 
+import clsx from "../../utils/clsx";
 import round from "../../utils/round";
 import { Optional, Photo, RenderColumnContainer, RenderColumnContainerProps } from "../../types";
 
@@ -40,12 +41,12 @@ export default function ColumnContainerRenderer<T extends Photo = Photo>(props: 
         layoutOptions,
         renderColumnContainer,
         children,
-        columnContainerProps: { style, ...restColumnContainerProps } = {},
+        columnContainerProps: { style, className, ...restColumnContainerProps } = {},
         ...rest
     } = props;
 
     const columnContainerProps = {
-        className: "react-photo-album--column",
+        className: clsx("react-photo-album--column", className),
         style: {
             display: "flex",
             flexDirection: "column",
