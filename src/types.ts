@@ -27,6 +27,8 @@ export type PhotoAlbumProps<T extends Photo = Photo> = {
     defaultContainerWidth?: number;
     /** Additional HTML attributes to be passed to the rendered elements. */
     componentsProps?: ComponentsPropsParameter;
+    /** Photos css filter. */
+    filter?: string;
     /** Custom photo rendering function. */
     renderPhoto?: RenderPhoto<T>;
     /** Custom container rendering function. */
@@ -67,6 +69,8 @@ export type RenderPhotoProps<T extends Photo = Photo> = {
     layout: PhotoLayout;
     /** photo album layout options */
     layoutOptions: LayoutOptions<T>;
+    /** photo css filter options. */
+    filterOptions?: string;
     /** pre-populated 'img' element attributes */
     imageProps: NonOptional<ImageElementAttributes, "src" | "alt" | "style">;
     /** A callback to render the default photo implementation. If `wrapped` is `true`, the image is styled with `width`

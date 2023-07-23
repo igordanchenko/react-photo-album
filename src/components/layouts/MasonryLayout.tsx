@@ -8,13 +8,14 @@ import { ColumnsLayoutOptions, ComponentsProps, Photo, RenderColumnContainer, Re
 export type MasonryLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
+    filterOptions?: string;
     renderPhoto?: RenderPhoto<T>;
     renderColumnContainer?: RenderColumnContainer<T>;
     componentsProps?: ComponentsProps;
 };
 
 export default function MasonryLayout<T extends Photo = Photo>(props: MasonryLayoutProps<T>) {
-    const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
+    const { photos, layoutOptions, filterOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
 
     const masonryLayout = computeMasonryLayout({ photos, layoutOptions });
 
@@ -38,6 +39,7 @@ export default function MasonryLayout<T extends Photo = Photo>(props: MasonryLay
                             photo={photo}
                             layout={layout}
                             layoutOptions={layoutOptions}
+                            filterOptions={filterOptions}
                             renderPhoto={renderPhoto}
                             imageProps={componentsProps?.imageProps}
                         />

@@ -49,11 +49,11 @@ function renderLayout<T extends Photo>(
     containerWidth: number,
     componentsProps: ComponentsProps | undefined
 ) {
-    const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer } = props;
+    const { photos, layout, filter: filterOptions, renderPhoto, renderRowContainer, renderColumnContainer } = props;
 
     const layoutOptions = resolveLayoutOptions({ containerWidth, ...props });
 
-    const commonLayoutProps = { photos, renderPhoto, componentsProps };
+    const commonLayoutProps = { photos, filterOptions, renderPhoto, componentsProps };
 
     if (layout === "rows") {
         return (

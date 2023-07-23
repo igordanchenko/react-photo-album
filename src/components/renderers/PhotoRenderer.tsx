@@ -70,6 +70,7 @@ export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRende
         photo,
         layout,
         layoutOptions,
+        filterOptions,
         imageProps: { style, className, ...restImageProps } = {},
         renderPhoto,
     } = props;
@@ -80,6 +81,7 @@ export default function PhotoRenderer<T extends Photo = Photo>(props: PhotoRende
         boxSizing: "content-box",
         width: cssPhotoWidth(layout, layoutOptions),
         height: "auto",
+        filter: filterOptions,
         aspectRatio: `${photo.width} / ${photo.height}`,
         ...(layoutOptions.padding ? { padding: `${layoutOptions.padding}px` } : null),
         ...((layoutOptions.layout === "columns" || layoutOptions.layout === "masonry") &&

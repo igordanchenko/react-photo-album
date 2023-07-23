@@ -8,13 +8,14 @@ import { ColumnsLayoutOptions, ComponentsProps, Photo, RenderColumnContainer, Re
 export type ColumnsLayoutProps<T extends Photo = Photo> = {
     photos: T[];
     layoutOptions: ColumnsLayoutOptions<T>;
+    filterOptions?: string;
     renderPhoto?: RenderPhoto<T>;
     renderColumnContainer?: RenderColumnContainer<T>;
     componentsProps?: ComponentsProps;
 };
 
 export default function ColumnsLayout<T extends Photo = Photo>(props: ColumnsLayoutProps<T>) {
-    const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
+    const { photos, layoutOptions, filterOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
 
     const columnsLayout = computeColumnsLayout({ photos, layoutOptions });
 
@@ -42,6 +43,7 @@ export default function ColumnsLayout<T extends Photo = Photo>(props: ColumnsLay
                             photo={photo}
                             layout={layout}
                             layoutOptions={layoutOptions}
+                            filterOptions={filterOptions}
                             renderPhoto={renderPhoto}
                             imageProps={componentsProps?.imageProps}
                         />
