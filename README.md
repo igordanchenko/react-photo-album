@@ -55,7 +55,7 @@ yarn add react-photo-album
 
 ## Minimal Setup Example
 
-```js
+```tsx
 import PhotoAlbum from "react-photo-album";
 
 const photos = [
@@ -102,7 +102,7 @@ includes `sizes` and `srcset` image attributes in the server-rendered markup, al
 most appropriate resolution depending on their viewport size. To enable images with automatic resolution switching, 
 simply provide smaller images in the photo `srcSet` attribute.
 
-```js
+```tsx
 import PhotoAlbum from "react-photo-album";
 
 const photos = [
@@ -142,9 +142,9 @@ only after hydration.
 
 ## Credits
 
-- Thanks to Sandra G (aka [neptunian](https://github.com/neptunian)) for authoring the
-  original [react-photo-gallery](https://github.com/neptunian/react-photo-gallery) library that served as inspiration
-  and foundation for [react-photo-album](https://github.com/igordanchenko/react-photo-album).
+Thanks to Sandra G (aka [neptunian](https://github.com/neptunian)) for authoring the
+original [react-photo-gallery](https://github.com/neptunian/react-photo-gallery) library that served as inspiration
+and foundation for [react-photo-album](https://github.com/igordanchenko/react-photo-album).
 
 ## License
 
