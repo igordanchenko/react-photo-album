@@ -283,8 +283,8 @@ or as a function of container width
 
 ## ComponentsPropsParameter
 
-You can pass additional HTML attributes to the rendered elements via the `componentsProps` parameter.
-`componentsProps` prop can be defined either as an object or as a function of an optional container width.
+You can pass additional HTML attributes to the rendered elements via the `componentsProps` parameter. `componentsProps`
+prop can be defined either as an object or as a function of an optional container width.
 
 <table class="docs">
     <tbody>
@@ -328,8 +328,8 @@ You can pass additional HTML attributes to the rendered elements via the `compon
 
 ## LayoutOptions
 
-`LayoutOptions` object represents photo album configuration and can be used in custom render functions to access
-photo album parameters.
+`LayoutOptions` object represents photo album configuration and can be used in custom render functions to access photo
+album parameters.
 
 <table class="docs">
     <tbody>
@@ -618,4 +618,4 @@ left-hand side navigation menu at various breakpoints:
 
 Are you looking for documentation for one of the previous versions?
 
-- [react-photo-album v1.x](https://v1.react-photo-album.com/documentation)
+-   [react-photo-album v1.x](https://v1.react-photo-album.com/documentation)

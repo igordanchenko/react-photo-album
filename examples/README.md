@@ -20,7 +20,7 @@ The run script starts a demo on port 5173 or the next available port if 5173 is 
     npm install
     npm run start
     ```
-    
+
 2. Link-install the library into one of the examples:
 
     ```shell

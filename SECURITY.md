@@ -10,4 +10,3 @@ If you believe you discovered an issue that may have security implications, plea
 the project [Issues](https://github.com/igordanchenko/react-photo-album/issues). If you believe the nature of your
 findings is sensitive, please e-mail us at contact@react-photo-album.com instead. You can expect a response from us
 within 1-7 days.
-

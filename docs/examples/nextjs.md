@@ -25,8 +25,8 @@ export default function NextJsImage({
 }
 ```
 
-To have the library produce an accurate `sizes` attribute for each image, you must provide the `sizes` prop
-describing your photo album's width at various viewport conditions.
+To have the library produce an accurate `sizes` attribute for each image, you must provide the `sizes` prop describing
+your photo album's width at various viewport conditions.
 
 Examples:
 

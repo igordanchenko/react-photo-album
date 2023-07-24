@@ -12,8 +12,8 @@ understand what actions will and will not be tolerated.
 ## Submitting an Issue
 
 Before committing your time to coding a new feature or fixing a bug, make sure to open a feature request or a bug report
-in the project's [Issues](https://github.com/igordanchenko/react-photo-album/issues) section to ensure that
-your pull request will be accepted once it is done.
+in the project's [Issues](https://github.com/igordanchenko/react-photo-album/issues) section to ensure that your pull
+request will be accepted once it is done.
 
 ## Sending a Pull Request
 
@@ -59,7 +59,7 @@ npm run test
 ```
 
 8. Commit and push to your fork (make sure your commit message conforms to
-    the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)):
+   the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)):
 
 ```shell
 git commit -m "feat: awesome new feature"
@@ -81,7 +81,7 @@ npm run start
 2. Link-install your locally built `react-photo-album` into your local project:
 
 ```shell
-# specify relative or absolute path to react-photo-album directory 
+# specify relative or absolute path to react-photo-album directory
 RPA_HOME=../react-photo-album
 npm link $RPA_HOME $RPA_HOME/node_modules/react $RPA_HOME/node_modules/react-dom
 rm -rf node_modules/.cache
