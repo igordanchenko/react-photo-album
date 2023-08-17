@@ -466,7 +466,8 @@ album parameters.
 
 ## RenderContainer
 
-`PhotoAlbum` container can be customized via the `renderContainer` render function.
+`PhotoAlbum` container can be customized via the `renderContainer` render function. Please note that you must pass
+the `containerRef` ref to your container element (see [example](/examples/renderers#CustomContainer)).
 
 ### RenderContainer Props
 

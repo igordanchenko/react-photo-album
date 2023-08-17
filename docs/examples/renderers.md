@@ -4,54 +4,65 @@ Photo album photos and container elements can be customized via custom render fu
 
 ## Custom Photo
 
-```tsx
-const renderPhoto: RenderPhoto = (props) => {
-    // ...
-};
+You can use the following render function as a starting point:
 
+```tsx
 <PhotoAlbum
-    renderPhoto={renderPhoto}
+    renderPhoto={({ imageProps: { src, alt, style, ...restImageProps } }) => (
+        <img src={src} alt={alt} style={style} {...restImageProps} />
+    )}
     // ...
-/>;
+/>
+```
+
+You can use `wrapperStyle` and `renderDefaultPhoto` helpers to wrap images with `<div>`, `<span>` or `<a>` tags:
+
+```tsx
+<PhotoAlbum
+    renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
+        <a href={photo.href} style={wrapperStyle}>
+            {renderDefaultPhoto({ wrapped: true })}
+        </a>
+    )}
+    // ...
+/>
 ```
 
 ## Custom Container
 
-```tsx
-const renderContainer: RenderContainer = (props: RenderContainerProps) => {
-    // ...
-};
+You can use the following render function as a starting point:
 
+```tsx
 <PhotoAlbum
-    renderContainer={renderContainer}
+    renderContainer={({ containerRef, containerProps, children }) => (
+        <div ref={containerRef} {...containerProps}>
+            {children}
+        </div>
+    )}
     // ...
-/>;
+/>
 ```
 
 ## Custom Row Container
 
-```tsx
-const renderRowContainer: RenderRowContainer = (props) => {
-    // ...
-};
+You can use the following render function as a starting point:
 
+```tsx
 <PhotoAlbum
-    renderRowContainer={renderRowContainer}
+    renderRowContainer={({ rowContainerProps, children }) => <div {...rowContainerProps}>{children}</div>}
     // ...
-/>;
+/>
 ```
 
 ## Custom Column Container
 
-```tsx
-const renderColumnContainer: RenderColumnContainer = (props) => {
-    // ...
-};
+You can use the following render function as a starting point:
 
+```tsx
 <PhotoAlbum
-    renderColumnContainer={renderColumnContainer}
+    renderColumnContainer={({ columnContainerProps, children }) => <div {...columnContainerProps}>{children}</div>}
     // ...
-/>;
+/>
 ```
 
 ## Live Demo
