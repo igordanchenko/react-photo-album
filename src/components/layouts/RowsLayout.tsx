@@ -10,11 +10,17 @@ export type RowsLayoutProps<T extends Photo = Photo> = {
     layoutOptions: RowsLayoutOptions<T>;
     renderPhoto?: RenderPhoto<T>;
     renderRowContainer?: RenderRowContainer<T>;
-    componentsProps?: ComponentsProps;
+    componentsProps: ComponentsProps;
 };
 
 export default function RowsLayout<T extends Photo = Photo>(props: RowsLayoutProps<T>) {
-    const { photos, layoutOptions, renderPhoto, renderRowContainer, componentsProps } = props;
+    const {
+        photos,
+        layoutOptions,
+        renderPhoto,
+        renderRowContainer,
+        componentsProps: { imageProps, rowContainerProps },
+    } = props;
 
     const rowsLayout = computeRowsLayout({ photos, layoutOptions });
 
@@ -30,7 +36,7 @@ export default function RowsLayout<T extends Photo = Photo>(props: RowsLayoutPro
                     rowIndex={rowIndex}
                     rowsCount={rowsLayout.length}
                     renderRowContainer={renderRowContainer}
-                    rowContainerProps={componentsProps?.rowContainerProps}
+                    rowContainerProps={rowContainerProps}
                 >
                     {row.map(({ photo, layout }) => (
                         <PhotoRenderer
@@ -39,7 +45,7 @@ export default function RowsLayout<T extends Photo = Photo>(props: RowsLayoutPro
                             layout={layout}
                             layoutOptions={layoutOptions}
                             renderPhoto={renderPhoto}
-                            imageProps={componentsProps?.imageProps}
+                            imageProps={imageProps}
                         />
                     ))}
                 </RowContainerRenderer>

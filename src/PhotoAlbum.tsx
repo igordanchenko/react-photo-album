@@ -40,14 +40,14 @@ function resolveLayoutOptions<T extends Photo>({
     };
 }
 
-function resolveComponentsProps(componentsProps: ComponentsPropsParameter | undefined, containerWidth?: number) {
-    return typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps;
+function resolveComponentsProps(componentsProps?: ComponentsPropsParameter, containerWidth?: number) {
+    return typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps || {};
 }
 
 function renderLayout<T extends Photo>(
     props: PhotoAlbumProps<T>,
     containerWidth: number,
-    componentsProps: ComponentsProps | undefined
+    componentsProps: ComponentsProps
 ) {
     const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer } = props;
 
@@ -100,9 +100,9 @@ export default function PhotoAlbum<T extends Photo>(props: PhotoAlbumProps<T>) {
             layout={layout}
             containerRef={containerRef}
             renderContainer={renderContainer}
-            containerProps={componentsProps?.containerProps}
+            containerProps={componentsProps.containerProps}
         >
-            {containerWidth ? renderLayout(props, containerWidth, componentsProps) : null}
+            {containerWidth && renderLayout(props, containerWidth, componentsProps)}
         </ContainerRenderer>
     );
 }

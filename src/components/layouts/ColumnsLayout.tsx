@@ -10,11 +10,17 @@ export type ColumnsLayoutProps<T extends Photo = Photo> = {
     layoutOptions: ColumnsLayoutOptions<T>;
     renderPhoto?: RenderPhoto<T>;
     renderColumnContainer?: RenderColumnContainer<T>;
-    componentsProps?: ComponentsProps;
+    componentsProps: ComponentsProps;
 };
 
 export default function ColumnsLayout<T extends Photo = Photo>(props: ColumnsLayoutProps<T>) {
-    const { photos, layoutOptions, renderPhoto, renderColumnContainer, componentsProps } = props;
+    const {
+        photos,
+        layoutOptions,
+        renderPhoto,
+        renderColumnContainer,
+        componentsProps: { imageProps, columnContainerProps },
+    } = props;
 
     const columnsLayout = computeColumnsLayout({ photos, layoutOptions });
 
@@ -34,7 +40,7 @@ export default function ColumnsLayout<T extends Photo = Photo>(props: ColumnsLay
                     columnsGaps={columnsGaps}
                     columnsRatios={columnsRatios}
                     renderColumnContainer={renderColumnContainer}
-                    columnContainerProps={componentsProps?.columnContainerProps}
+                    columnContainerProps={columnContainerProps}
                 >
                     {column.map(({ photo, layout }) => (
                         <PhotoRenderer
@@ -43,7 +49,7 @@ export default function ColumnsLayout<T extends Photo = Photo>(props: ColumnsLay
                             layout={layout}
                             layoutOptions={layoutOptions}
                             renderPhoto={renderPhoto}
-                            imageProps={componentsProps?.imageProps}
+                            imageProps={imageProps}
                         />
                     ))}
                 </ColumnContainerRenderer>
