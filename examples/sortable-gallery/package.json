@@ -15,17 +15,17 @@
         "@dnd-kit/core": "^6.0.8",
         "@dnd-kit/sortable": "^7.0.2",
         "@dnd-kit/utilities": "^3.2.1",
-        "clsx": "^1.2.1",
+        "clsx": "^2.0.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-photo-album": "^2.2.2"
+        "react-photo-album": "^2.3.0"
     },
     "devDependencies": {
-        "@types/react": "^18.2.14",
-        "@types/react-dom": "^18.2.6",
-        "@vitejs/plugin-react": "^4.0.3",
+        "@types/react": "^18.2.20",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react": "^4.0.4",
         "typescript": "^5.1.6",
-        "vite": "^4.4.3"
+        "vite": "^4.4.9"
     },
     "keywords": [
         "react photo album",
