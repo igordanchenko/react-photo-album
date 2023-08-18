@@ -84,6 +84,7 @@ Parameters marked with an asterisk (<span class="required" />) are required.
             <ul>
                 <li>`minPhotos` - minimum number of photos per row</li>
                 <li>`maxPhotos` - maximum number of photos per row</li>
+                <li>`singleRowMaxHeight` - maximum row height when there is not enough photos to fill more than one row</li>
             </ul>
         </td>
     </tr>

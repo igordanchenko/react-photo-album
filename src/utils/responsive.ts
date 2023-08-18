@@ -2,10 +2,10 @@ import { ResponsiveParameter } from "../types";
 
 const breakpoints = Object.freeze([1200, 600, 300, 0]);
 
-type AnyFunction = (...args: unknown[]) => unknown;
+type AnyFunction = (args: any) => unknown;
 
-function unwrap<T, P = T extends AnyFunction ? ReturnType<T> : T>(value: T, containerWidth: number): P {
-    return typeof value === "function" ? value(containerWidth) : value;
+export function unwrap<V, A, R = V extends AnyFunction ? ReturnType<V> : V>(value: V, arg: A): R {
+    return typeof value === "function" ? value(arg) : value;
 }
 
 export function unwrapParameter<T>(value: ResponsiveParameter<T> | undefined, containerWidth: number): T | undefined {

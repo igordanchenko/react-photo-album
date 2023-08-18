@@ -151,6 +151,8 @@ export type RowConstraints = {
     minPhotos?: number;
     /** maximum number of photos per row in 'rows' layout */
     maxPhotos?: number;
+    /** maximum row height when there is not enough photos to fill more than one row */
+    singleRowMaxHeight?: number;
 };
 
 export type ComponentsProps = {

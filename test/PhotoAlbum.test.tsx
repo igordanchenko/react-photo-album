@@ -73,6 +73,10 @@ describe("PhotoAlbum", () => {
         whenAskedToRender(<PhotoAlbum layout="rows" photos={photos} rowConstraints={{ maxPhotos: 4 }} />);
     });
 
+    it("supports single row maximum height parameter", () => {
+        whenAskedToRender(<PhotoAlbum layout="rows" photos={photos} rowConstraints={{ singleRowMaxHeight: 300 }} />);
+    });
+
     it("renders columns layout correctly when there isn't enough photos", () => {
         whenAskedToRender(<PhotoAlbum layout="columns" photos={photos.slice(0, 2)} columns={4} />);
 
@@ -288,10 +292,7 @@ describe("PhotoAlbum", () => {
                 spacing={() => 10}
                 padding={() => 5}
                 targetRowHeight={() => 100}
-                rowConstraints={() => ({
-                    minPhotos: 1,
-                    maxPhotos: 2,
-                })}
+                rowConstraints={() => ({ minPhotos: 1, maxPhotos: 2 })}
             />
         );
 

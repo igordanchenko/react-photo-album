@@ -6,8 +6,8 @@ import MasonryLayout from "./components/layouts/MasonryLayout";
 import ContainerRenderer from "./components/renderers/ContainerRenderer";
 import useArray from "./hooks/useArray";
 import useContainerWidth from "./hooks/useContainerWidth";
-import { resolveResponsiveParameter, unwrapParameter } from "./utils/responsive";
-import { ComponentsProps, ComponentsPropsParameter, Photo, PhotoAlbumProps } from "./types";
+import { resolveResponsiveParameter, unwrap, unwrapParameter } from "./utils/responsive";
+import { ComponentsProps, Photo, PhotoAlbumProps } from "./types";
 
 function resolveLayoutOptions<T extends Photo>({
     layout,
@@ -40,18 +40,45 @@ function resolveLayoutOptions<T extends Photo>({
     };
 }
 
-function resolveComponentsProps(componentsProps?: ComponentsPropsParameter, containerWidth?: number) {
-    return typeof componentsProps === "function" ? componentsProps(containerWidth) : componentsProps || {};
+function resolveComponentsProps<T extends Photo>(
+    props: PhotoAlbumProps<T>,
+    containerWidth?: number,
+    layoutOptions?: ReturnType<typeof resolveLayoutOptions<T>>
+) {
+    const { photos, componentsProps: componentsPropsProp } = props;
+
+    const componentsProps = unwrap(componentsPropsProp, containerWidth) || {};
+
+    if (layoutOptions) {
+        const { layout, spacing, padding, rowConstraints } = layoutOptions;
+
+        if (layout === "rows") {
+            const { singleRowMaxHeight } = rowConstraints || {};
+            if (singleRowMaxHeight) {
+                const maxWidth = Math.floor(
+                    photos.reduce(
+                        (acc, { width, height }) => acc + (width / height) * singleRowMaxHeight - 2 * padding,
+                        padding * photos.length * 2 + spacing * (photos.length - 1)
+                    )
+                );
+
+                if (maxWidth > 0) {
+                    componentsProps.containerProps = componentsProps.containerProps || {};
+                    componentsProps.containerProps.style = { maxWidth, ...componentsProps.containerProps.style };
+                }
+            }
+        }
+    }
+
+    return componentsProps;
 }
 
 function renderLayout<T extends Photo>(
     props: PhotoAlbumProps<T>,
-    containerWidth: number,
-    componentsProps: ComponentsProps
+    componentsProps: ComponentsProps,
+    layoutOptions: ReturnType<typeof resolveLayoutOptions<T>>
 ) {
     const { photos, layout, renderPhoto, renderRowContainer, renderColumnContainer } = props;
-
-    const layoutOptions = resolveLayoutOptions({ containerWidth, ...props });
 
     const commonLayoutProps = { photos, renderPhoto, componentsProps };
 
@@ -92,8 +119,9 @@ export default function PhotoAlbum<T extends Photo>(props: PhotoAlbumProps<T>) {
     // safeguard against incorrect usage
     if (!layout || !["rows", "columns", "masonry"].includes(layout) || !Array.isArray(photos)) return null;
 
-    // eslint-disable-next-line react/destructuring-assignment
-    const componentsProps = resolveComponentsProps(props.componentsProps, containerWidth);
+    const layoutOptions = containerWidth ? resolveLayoutOptions({ containerWidth, ...props }) : undefined;
+
+    const componentsProps = resolveComponentsProps(props, containerWidth, layoutOptions);
 
     return (
         <ContainerRenderer
@@ -102,7 +130,7 @@ export default function PhotoAlbum<T extends Photo>(props: PhotoAlbumProps<T>) {
             renderContainer={renderContainer}
             containerProps={componentsProps.containerProps}
         >
-            {containerWidth && renderLayout(props, containerWidth, componentsProps)}
+            {layoutOptions && renderLayout(props, componentsProps, layoutOptions)}
         </ContainerRenderer>
     );
 }
