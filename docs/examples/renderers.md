@@ -1,6 +1,7 @@
 # Custom Renderers
 
-Photo album photos and container elements can be customized via custom render functions.
+Photo album photos and container elements can be customized via custom render
+functions.
 
 ## Custom Photo
 
@@ -8,23 +9,24 @@ You can use the following render function as a starting point:
 
 ```tsx
 <PhotoAlbum
-    renderPhoto={({ imageProps: { src, alt, style, ...restImageProps } }) => (
-        <img src={src} alt={alt} style={style} {...restImageProps} />
-    )}
-    // ...
+  renderPhoto={({ imageProps: { src, alt, style, ...restImageProps } }) => (
+    <img src={src} alt={alt} style={style} {...restImageProps} />
+  )}
+  // ...
 />
 ```
 
-You can use `wrapperStyle` and `renderDefaultPhoto` helpers to wrap images with `<div>`, `<span>` or `<a>` tags:
+You can use `wrapperStyle` and `renderDefaultPhoto` helpers to wrap images with
+`<div>`, `<span>` or `<a>` tags:
 
 ```tsx
 <PhotoAlbum
-    renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
-        <a href={photo.href} style={wrapperStyle}>
-            {renderDefaultPhoto({ wrapped: true })}
-        </a>
-    )}
-    // ...
+  renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
+    <a href={photo.href} style={wrapperStyle}>
+      {renderDefaultPhoto({ wrapped: true })}
+    </a>
+  )}
+  // ...
 />
 ```
 
@@ -34,12 +36,12 @@ You can use the following render function as a starting point:
 
 ```tsx
 <PhotoAlbum
-    renderContainer={({ containerRef, containerProps, children }) => (
-        <div ref={containerRef} {...containerProps}>
-            {children}
-        </div>
-    )}
-    // ...
+  renderContainer={({ containerRef, containerProps, children }) => (
+    <div ref={containerRef} {...containerProps}>
+      {children}
+    </div>
+  )}
+  // ...
 />
 ```
 
@@ -49,8 +51,10 @@ You can use the following render function as a starting point:
 
 ```tsx
 <PhotoAlbum
-    renderRowContainer={({ rowContainerProps, children }) => <div {...rowContainerProps}>{children}</div>}
-    // ...
+  renderRowContainer={({ rowContainerProps, children }) => (
+    <div {...rowContainerProps}>{children}</div>
+  )}
+  // ...
 />
 ```
 
@@ -60,8 +64,10 @@ You can use the following render function as a starting point:
 
 ```tsx
 <PhotoAlbum
-    renderColumnContainer={({ columnContainerProps, children }) => <div {...columnContainerProps}>{children}</div>}
-    // ...
+  renderColumnContainer={({ columnContainerProps, children }) => (
+    <div {...columnContainerProps}>{children}</div>
+  )}
+  // ...
 />
 ```
 

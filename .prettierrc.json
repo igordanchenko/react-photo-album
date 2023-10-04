@@ -1,5 +1,15 @@
 {
     "tabWidth": 4,
     "printWidth": 120,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "overrides": [
+        {
+            "files": "*.md",
+            "options": {
+                "tabWidth": 2,
+                "printWidth": 80,
+                "proseWrap": "always"
+            }
+        }
+    ]
 }

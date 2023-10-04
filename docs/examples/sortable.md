@@ -1,7 +1,7 @@
 # Sortable Gallery
 
-Here is an example of a sortable gallery built with [@dnd-kit](https://dndkit.com/). You can re-arrange photos via
-drag-and-drop.
+Here is an example of a sortable gallery built with
+[@dnd-kit](https://dndkit.com/). You can re-arrange photos via drag-and-drop.
 
 ## Live Demo
 
