@@ -366,10 +366,7 @@ object or as a function of an optional container width.
       <td>
         <p>Additional HTML attributes to be passed to the photo `img` element.</p>
         <p>
-          Default:
-          <span class="font-mono">
-            &#123; loading: "lazy", decoding: "async"&#125;
-          </span>
+          Default: <span class="font-mono">&#123; loading: "lazy", decoding: "async"&#125;</span>
         </p>
       </td>
     </tr>
