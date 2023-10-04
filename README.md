@@ -47,12 +47,6 @@ the ground up.
 npm install react-photo-album
 ```
 
-or
-
-```shell
-yarn add react-photo-album
-```
-
 ## Minimal Setup Example
 
 ```tsx
