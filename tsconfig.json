@@ -1,19 +1,19 @@
 {
-    "exclude": ["examples"],
-    "compilerOptions": {
-        "strict": true,
-        "target": "ES2018",
-        "module": "ESNext",
-        "jsx": "react",
-        "noEmit": true,
-        "declaration": false,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "isolatedModules": true,
-        "importHelpers": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "stripInternal": true,
-        "types": ["vitest/globals"]
-    }
+  "exclude": ["examples"],
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2018",
+    "module": "ESNext",
+    "jsx": "react",
+    "noEmit": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "stripInternal": true,
+    "types": ["vitest/globals"]
+  }
 }

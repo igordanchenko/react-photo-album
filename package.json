@@ -1,109 +1,109 @@
 {
-    "name": "react-photo-album",
-    "version": "0.0.0-semantic-release",
-    "description": "Responsive photo gallery component for React",
-    "author": "Igor Danchenko",
-    "license": "MIT",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "exports": {
-        "import": {
-            "types": "./dist/index.d.mts",
-            "default": "./dist/index.mjs"
-        },
-        "require": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        }
+  "name": "react-photo-album",
+  "version": "0.0.0-semantic-release",
+  "description": "Responsive photo gallery component for React",
+  "author": "Igor Danchenko",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
     },
-    "files": [
-        "dist"
-    ],
-    "sideEffects": false,
-    "homepage": "https://react-photo-album.com",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/igordanchenko/react-photo-album.git"
-    },
-    "bugs": {
-        "url": "https://github.com/igordanchenko/react-photo-album/issues"
-    },
-    "engines": {
-        "node": ">=12"
-    },
-    "publishConfig": {
-        "access": "public",
-        "provenance": true
-    },
-    "scripts": {
-        "prepare": "husky install",
-        "clean": "rimraf dist",
-        "build": "npm-run-all clean build:*",
-        "build:tsc": "tsc",
-        "build:js": "vite build",
-        "build:dts": "rollup -c",
-        "start": "npm-run-all clean --parallel \"build:* -- -w\"",
-        "lint": "eslint .",
-        "test": "vitest run --coverage",
-        "dev": "vite --config dev/vite.config.ts"
-    },
-    "peerDependencies": {
-        "react": ">=16.8.0"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^17.8.0",
-        "@commitlint/config-conventional": "^17.8.0",
-        "@types/react": "^18.2.28",
-        "@types/react-dom": "^18.2.13",
-        "@types/react-test-renderer": "^18.0.3",
-        "@typescript-eslint/eslint-plugin": "^6.7.5",
-        "@typescript-eslint/parser": "^6.7.5",
-        "@vitejs/plugin-react": "^4.1.0",
-        "@vitest/coverage-v8": "^0.34.6",
-        "@vitest/ui": "^0.34.6",
-        "eslint": "^8.51.0",
-        "eslint-config-airbnb": "^19.0.4",
-        "eslint-config-airbnb-typescript": "^17.1.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-import": "^2.28.1",
-        "eslint-plugin-jsx-a11y": "^6.7.1",
-        "eslint-plugin-prettier": "^5.0.1",
-        "eslint-plugin-react": "^7.33.2",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "husky": "^8.0.3",
-        "jsdom": "^22.1.0",
-        "lint-staged": "^15.0.1",
-        "npm-run-all": "^4.1.5",
-        "prettier": "^3.0.3",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-test-renderer": "^18.2.0",
-        "rimraf": "^5.0.5",
-        "rollup": "^3.29.4",
-        "rollup-plugin-cleanup": "^3.2.1",
-        "rollup-plugin-dts": "^5.3.1",
-        "typescript": "^5.2.2",
-        "vite": "^4.4.11",
-        "vitest": "^0.34.6"
-    },
-    "keywords": [
-        "react",
-        "image",
-        "photo",
-        "album",
-        "gallery",
-        "masonry",
-        "photo album",
-        "photo gallery",
-        "image gallery",
-        "photo layout",
-        "image layout",
-        "react gallery",
-        "react photo album",
-        "react photo gallery",
-        "react image gallery",
-        "react-photo-album",
-        "react-photo-gallery"
-    ]
+    "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "homepage": "https://react-photo-album.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igordanchenko/react-photo-album.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igordanchenko/react-photo-album/issues"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "clean": "rimraf dist",
+    "build": "npm-run-all clean build:*",
+    "build:tsc": "tsc",
+    "build:js": "vite build",
+    "build:dts": "rollup -c",
+    "start": "npm-run-all clean --parallel \"build:* -- -w\"",
+    "lint": "eslint .",
+    "test": "vitest run --coverage",
+    "dev": "vite --config dev/vite.config.ts"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
+    "@types/react-test-renderer": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "@vitejs/plugin-react": "^4.1.0",
+    "@vitest/coverage-v8": "^0.34.6",
+    "@vitest/ui": "^0.34.6",
+    "eslint": "^8.51.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
+    "lint-staged": "^15.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.29.4",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-dts": "^5.3.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11",
+    "vitest": "^0.34.6"
+  },
+  "keywords": [
+    "react",
+    "image",
+    "photo",
+    "album",
+    "gallery",
+    "masonry",
+    "photo album",
+    "photo gallery",
+    "image gallery",
+    "photo layout",
+    "image layout",
+    "react gallery",
+    "react photo album",
+    "react photo gallery",
+    "react image gallery",
+    "react-photo-album",
+    "react-photo-gallery"
+  ]
 }

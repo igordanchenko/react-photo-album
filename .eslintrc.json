@@ -1,11 +1,11 @@
 {
-    "root": true,
-    "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "plugin:prettier/recommended"],
-    "parserOptions": { "project": "tsconfig.json" },
-    "ignorePatterns": ["dist", "coverage", "examples"],
-    "rules": {
-        "react/prop-types": "off",
-        "react/require-default-props": "off",
-        "react/jsx-props-no-spreading": "off"
-    }
+  "root": true,
+  "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "plugin:prettier/recommended"],
+  "parserOptions": { "project": "tsconfig.json" },
+  "ignorePatterns": ["dist", "coverage", "examples"],
+  "rules": {
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off"
+  }
 }

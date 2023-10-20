@@ -15,20 +15,20 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import photos from "./photos";
 
 export default function App() {
-    const [index, setIndex] = useState(-1);
+  const [index, setIndex] = useState(-1);
 
-    return (
-        <>
-            <PhotoAlbum photos={photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
+  return (
+    <>
+      <PhotoAlbum photos={photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
 
-            <Lightbox
-                slides={photos}
-                open={index >= 0}
-                index={index}
-                close={() => setIndex(-1)}
-                // enable optional lightbox plugins
-                plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
-            />
-        </>
-    );
+      <Lightbox
+        slides={photos}
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+        // enable optional lightbox plugins
+        plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+      />
+    </>
+  );
 }

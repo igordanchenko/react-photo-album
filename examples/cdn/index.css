@@ -1,70 +1,68 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 header {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: baseline;
-    justify-content: center;
-    margin: 16px 8px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+  margin: 16px 8px;
 }
 
 header h1 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 0;
-    padding: 8px;
-    text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 8px;
+  text-align: center;
 }
 
 header a {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 0;
-    padding: 8px;
-
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 8px;
 }
 
 a {
-    color: rgb(0, 112, 243);
-    text-decoration: none;
+  color: rgb(0, 112, 243);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 p {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 main {
-    padding: 5px;
-    margin: 0 auto;
-    max-width: 1200px;
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 @media all and (min-width: 300px) {
-    main {
-        padding: 10px;
-    }
+  main {
+    padding: 10px;
+  }
 }
 
 @media all and (min-width: 600px) {
-    main {
-        padding: 15px;
-    }
+  main {
+    padding: 15px;
+  }
 }
 
 @media all and (min-width: 1200px) {
-    main {
-        padding: 20px;
-    }
+  main {
+    padding: 20px;
+  }
 }

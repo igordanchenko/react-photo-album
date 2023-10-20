@@ -1,43 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>React Photo Album | ESM.sh Example</title>
     <link rel="stylesheet" href="index.css" />
     <script src="photos.js"></script>
-</head>
-<body>
-<header>
-    <h1>React Photo Album | ESM.sh Example</h1>
-    <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
+  </head>
+  <body>
+    <header>
+      <h1>React Photo Album | ESM.sh Example</h1>
+      <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
         GitHub
-    </a>
-    <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">
-        Docs
-    </a>
-</header>
-<header>
-    <a href="jsdelivr.html">JSDelivr</a>
-    <a href="esm.html">ESM.sh</a>
-    <a href="unpkg.html">Unpkg</a>
-    <a href="skypack.html">Skypack</a>
-</header>
+      </a>
+      <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener"> Docs </a>
+    </header>
+    <header>
+      <a href="jsdelivr.html">JSDelivr</a>
+      <a href="esm.html">ESM.sh</a>
+      <a href="unpkg.html">Unpkg</a>
+      <a href="skypack.html">Skypack</a>
+    </header>
 
-<p>
-    ESM.sh example uses the latest
-    <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">react-photo-album</a>
-    ESM bundle and React 18.
-</p>
+    <p>
+      ESM.sh example uses the latest
+      <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">react-photo-album</a>
+      ESM bundle and React 18.
+    </p>
 
-<main id="root"></main>
-<script type="module">
-    import React from "https://esm.sh/react@18";
-    import { createRoot } from "https://esm.sh/react-dom@18/client";
-    import { PhotoAlbum } from "https://esm.sh/react-photo-album@2";
+    <main id="root"></main>
+    <script type="module">
+      import React from "https://esm.sh/react@18";
+      import { createRoot } from "https://esm.sh/react-dom@18/client";
+      import { PhotoAlbum } from "https://esm.sh/react-photo-album@2";
 
-    createRoot(document.querySelector("#root"))
-        .render(React.createElement(PhotoAlbum, { layout: "columns", photos }));
-</script>
-</body>
+      createRoot(document.querySelector("#root")).render(
+        React.createElement(PhotoAlbum, { layout: "columns", photos }),
+      );
+    </script>
+  </body>
 </html>

@@ -1,45 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>React Photo Album | Skypack Example</title>
     <link rel="stylesheet" href="index.css" />
     <script src="photos.js"></script>
-</head>
-<body>
-<header>
-    <h1>React Photo Album | Skypack Example</h1>
-    <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
+  </head>
+  <body>
+    <header>
+      <h1>React Photo Album | Skypack Example</h1>
+      <a href="https://github.com/igordanchenko/react-photo-album" target="_blank" rel="noreferrer noopener">
         GitHub
-    </a>
-    <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">
-        Docs
-    </a>
-</header>
-<header>
-    <a href="jsdelivr.html">JSDelivr</a>
-    <a href="esm.html">ESM.sh</a>
-    <a href="unpkg.html">Unpkg</a>
-    <a href="skypack.html">Skypack</a>
-</header>
+      </a>
+      <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener"> Docs </a>
+    </header>
+    <header>
+      <a href="jsdelivr.html">JSDelivr</a>
+      <a href="esm.html">ESM.sh</a>
+      <a href="unpkg.html">Unpkg</a>
+      <a href="skypack.html">Skypack</a>
+    </header>
 
-<p>
-    Skypack example uses
-    <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">react-photo-album</a> v1.8.0
-    UMD bundle and React 17.
-</p>
+    <p>
+      Skypack example uses
+      <a href="https://react-photo-album.com/" target="_blank" rel="noreferrer noopener">react-photo-album</a> v1.8.0
+      UMD bundle and React 17.
+    </p>
 
-<main id="root"></main>
-<script type="module">
-    import React from "https://cdn.skypack.dev/react?min";
-    import ReactDOM from "https://cdn.skypack.dev/react-dom?min";
-    import PhotoAlbum from "https://cdn.skypack.dev/react-photo-album@1.8.0?min";
+    <main id="root"></main>
+    <script type="module">
+      import React from "https://cdn.skypack.dev/react?min";
+      import ReactDOM from "https://cdn.skypack.dev/react-dom?min";
+      import PhotoAlbum from "https://cdn.skypack.dev/react-photo-album@1.8.0?min";
 
-    ReactDOM.render(
-        React.createElement(PhotoAlbum, { layout: "columns", photos }),
-        document.querySelector("#root")
-    );
-</script>
-</body>
+      ReactDOM.render(React.createElement(PhotoAlbum, { layout: "columns", photos }), document.querySelector("#root"));
+    </script>
+  </body>
 </html>

@@ -1,60 +1,68 @@
 .photo-frame {
-    display: block;
-    box-sizing: content-box;
-    position: relative;
-    background: #ffffff;
-    cursor: grab;
-    border-radius: 4px;
-    box-shadow: rgb(0 0 0 / 20%) 0 3px 3px -2px, rgb(0 0 0 / 14%) 0 3px 4px 0, rgb(0 0 0 / 12%) 0 1px 8px 0;
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: block;
+  box-sizing: content-box;
+  position: relative;
+  background: #ffffff;
+  cursor: grab;
+  border-radius: 4px;
+  box-shadow:
+    rgb(0 0 0 / 20%) 0 3px 3px -2px,
+    rgb(0 0 0 / 14%) 0 3px 4px 0,
+    rgb(0 0 0 / 12%) 0 1px 8px 0;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-.photo-frame, .photo-frame img {
-    outline: none;
-    touch-action: none;
-    user-select: none;
-    -webkit-touch-callout: none;
+.photo-frame,
+.photo-frame img {
+  outline: none;
+  touch-action: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .photo-frame.overlay {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
-.photo-frame.active, .photo-frame.active img {
-    opacity: 0.3;
+.photo-frame.active,
+.photo-frame.active img {
+  opacity: 0.3;
 }
 
-.photo-frame.insertBefore:before, .photo-frame.insertAfter:after {
-    content: "";
-    position: absolute;
-    background-color: #2196f3;
-    border-radius: 4px
+.photo-frame.insertBefore:before,
+.photo-frame.insertAfter:after {
+  content: "";
+  position: absolute;
+  background-color: #2196f3;
+  border-radius: 4px;
 }
 
-.react-photo-album--row .photo-frame.insertBefore:before, .react-photo-album--row .photo-frame.insertAfter:after {
-    top: 0;
-    bottom: 0;
-    width: 4px;
+.react-photo-album--row .photo-frame.insertBefore:before,
+.react-photo-album--row .photo-frame.insertAfter:after {
+  top: 0;
+  bottom: 0;
+  width: 4px;
 }
 
 .react-photo-album--row .photo-frame.insertBefore:before {
-    left: -17px;
+  left: -17px;
 }
 
 .react-photo-album--row .photo-frame.insertAfter:after {
-    right: -17px
+  right: -17px;
 }
 
-.react-photo-album--column .photo-frame.insertBefore:before, .react-photo-album--column .photo-frame.insertAfter:after {
-    left: 0;
-    right: 0;
-    height: 4px;
+.react-photo-album--column .photo-frame.insertBefore:before,
+.react-photo-album--column .photo-frame.insertAfter:after {
+  left: 0;
+  right: 0;
+  height: 4px;
 }
 
 .react-photo-album--column .photo-frame.insertBefore:before {
-    top: -17px;
+  top: -17px;
 }
 
 .react-photo-album--column .photo-frame.insertAfter:after {
-    bottom: -17px;
+  bottom: -17px;
 }
