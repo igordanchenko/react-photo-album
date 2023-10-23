@@ -19,9 +19,8 @@ import { arrayMove, SortableContext, sortableKeyboardCoordinates, useSortable } 
 import photoSet from "./photos";
 import "./App.css";
 
-// @dnd-kit requires string 'id' on sortable elements
 interface SortablePhoto extends Photo {
-  id: string;
+  id: UniqueIdentifier;
 }
 
 type SortablePhotoProps = RenderPhotoProps<SortablePhoto>;
@@ -35,7 +34,7 @@ type PhotoFrameProps = SortablePhotoProps & {
 };
 
 const PhotoFrame = React.memo(
-  React.forwardRef<HTMLDivElement, PhotoFrameProps>((props, ref) => {
+  React.forwardRef<HTMLDivElement, PhotoFrameProps>(function PhotoFrame(props, ref) {
     const { layoutOptions, imageProps, overlay, active, insertPosition, attributes, listeners } = props;
     const { alt, style, ...restImageProps } = imageProps;
 
@@ -71,7 +70,6 @@ const PhotoFrame = React.memo(
     );
   }),
 );
-PhotoFrame.displayName = "PhotoFrame";
 
 function SortablePhotoFrame(props: SortablePhotoProps & { activeIndex?: number }) {
   const { photo, activeIndex } = props;
@@ -104,7 +102,7 @@ export default function App() {
     })),
   );
   const renderedPhotos = React.useRef<{ [key: string]: SortablePhotoProps }>({});
-  const [activeId, setActiveId] = React.useState<UniqueIdentifier | null>(null);
+  const [activeId, setActiveId] = React.useState<UniqueIdentifier>();
   const activeIndex = activeId ? photos.findIndex((photo) => photo.id === activeId) : undefined;
 
   const sensors = useSensors(
@@ -126,16 +124,15 @@ export default function App() {
         return arrayMove(items, oldIndex, newIndex);
       });
     }
+
+    setActiveId(undefined);
   }, []);
 
-  const renderPhoto = React.useCallback(
-    (props: SortablePhotoProps) => {
-      // capture rendered photos for future use in DragOverlay
-      renderedPhotos.current[props.photo.id] = props;
-      return <SortablePhotoFrame activeIndex={activeIndex} {...props} />;
-    },
-    [activeIndex],
-  );
+  const renderPhoto = (props: SortablePhotoProps) => {
+    // capture rendered photos for future use in DragOverlay
+    renderedPhotos.current[props.photo.id] = props;
+    return <SortablePhotoFrame activeIndex={activeIndex} {...props} />;
+  };
 
   return (
     <DndContext
