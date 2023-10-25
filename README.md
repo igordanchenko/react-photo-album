@@ -7,9 +7,9 @@ re-engineered from the ground up.
 
 ## Overview
 
-[![NPM Version](https://img.shields.io/npm/v/react-photo-album?color=blue)](https://www.npmjs.com/package/react-photo-album)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album?color=blue)](https://bundlephobia.com/package/react-photo-album)
-[![License MIT](https://img.shields.io/npm/l/react-photo-album?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/react-photo-album.svg?color=blue)](https://www.npmjs.com/package/react-photo-album)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album.svg?color=blue)](https://bundlephobia.com/package/react-photo-album)
+[![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
 - **Built for React:** works with React 18, 17 and 16.8.0+
 - **SSR friendly:** produces server-side rendered markup that looks pixel
