@@ -9,6 +9,9 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
+    coverage: {
+      include: ["src"],
+    },
   },
   build: {
     minify: false,

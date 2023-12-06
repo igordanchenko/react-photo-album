@@ -16,17 +16,17 @@
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.13",
+    "@mui/material": "^5.14.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-photo-album": "^2.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.13",
-    "@vitejs/plugin-react": "^4.1.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.11"
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.5"
   },
   "keywords": [
     "react photo album",
