@@ -15,14 +15,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-photo-album": "^2.3.0",
-    "yet-another-react-lightbox": "^3.15.6"
+    "yet-another-react-lightbox": "^3.16.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.11"
+    "vite": "^5.0.12"
   },
   "keywords": [
     "react photo album",
