@@ -24,7 +24,7 @@ function calculateSizesValue<T extends Photo = Photo>(
   layout: PhotoLayout,
   layoutOptions: LayoutOptions<T>,
 ) {
-  return calcWidth(size.match(/calc\((.*)\)/)?.[1] ?? size, layout, layoutOptions);
+  return calcWidth(size.match(/^\s*calc\((.*)\)\s*$/)?.[1] ?? size, layout, layoutOptions);
 }
 
 function srcSetAndSizes<T extends Photo = Photo>(photo: T, layout: PhotoLayout, layoutOptions: LayoutOptions<T>) {
