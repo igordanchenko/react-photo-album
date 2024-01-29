@@ -45,6 +45,10 @@ re-engineered from the ground up.
 
 [https://react-photo-album.com/examples](https://react-photo-album.com/examples)
 
+## Changelog
+
+[https://github.com/igordanchenko/react-photo-album/releases](https://github.com/igordanchenko/react-photo-album/releases)
+
 ## Installation
 
 ```shell
