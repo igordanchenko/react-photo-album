@@ -7,9 +7,9 @@ Here is an example of a sortable gallery built with
 
 <SortableGallery />
 
-## CodeSandbox
+## Sandbox
 
-<CodeSandboxLink suffix="sortable-gallery" file="src/App.tsx" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/sortable-gallery" file="src/App.tsx" title="react-photo-album-sortable-gallery" />
 
 ## Source Code
 

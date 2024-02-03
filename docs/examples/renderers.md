@@ -75,9 +75,9 @@ You can use the following render function as a starting point:
 
 <CustomRenderers />
 
-## CodeSandbox
+## Sandbox
 
-<CodeSandboxLink suffix="custom-renderers" file="src/App.tsx" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/custom-renderers" file="src/App.tsx" title="react-photo-album-custom-renderers" />
 
 ## Source Code
 

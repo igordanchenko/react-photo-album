@@ -6,9 +6,9 @@ Here is an interactive playground to test various parameters in real-time.
 
 <Playground />
 
-## CodeSandbox
+## Sandbox
 
-<CodeSandboxLink suffix="playground" file="src/App.tsx" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/playground" file="src/App.tsx" title="react-photo-album-playground" />
 
 ## Source Code
 

@@ -8,9 +8,9 @@ to open it in a lightbox. This example is built with
 
 <LightboxExample />
 
-## CodeSandbox
+## Sandbox
 
-<CodeSandboxLink suffix="lightbox" file="src/App.tsx" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/lightbox" file="src/App.tsx" title="react-photo-album-lightbox" />
 
 ## Source Code
 

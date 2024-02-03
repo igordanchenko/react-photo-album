@@ -58,9 +58,9 @@ export default function Gallery() {
 
 <NextJsExample />
 
-## CodeSandbox
+## Sandbox
 
-<CodeSandboxLink suffix="nextjs" file="components/PhotoGallery.tsx" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/nextjs" file="components/PhotoGallery.tsx" title="react-photo-album-nextjs" />
 
 ## Source Code
 
