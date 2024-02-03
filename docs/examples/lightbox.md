@@ -10,7 +10,7 @@ to open it in a lightbox. This example is built with
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/lightbox" file="src/App.tsx" title="react-photo-album-lightbox" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/lightbox" file="src/App.tsx" title="react-photo-album-lightbox" description="react-photo-album with lightbox" />
 
 ## Source Code
 

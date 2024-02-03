@@ -17,7 +17,7 @@ import photos from "./photos";
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/rows-layout" file="src/App.tsx" title="react-photo-album-rows-layout" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/rows-layout" file="src/App.tsx" title="react-photo-album-rows-layout" description="react-photo-album rows layout" />
 
 ## Source Code
 

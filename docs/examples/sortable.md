@@ -9,7 +9,7 @@ Here is an example of a sortable gallery built with
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/sortable-gallery" file="src/App.tsx" title="react-photo-album-sortable-gallery" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/sortable-gallery" file="src/App.tsx" title="react-photo-album-sortable-gallery" description="react-photo-album sortable gallery" />
 
 ## Source Code
 

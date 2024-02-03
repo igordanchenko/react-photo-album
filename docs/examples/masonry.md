@@ -17,7 +17,7 @@ import photos from "./photos";
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/masonry-layout" file="src/App.tsx" title="react-photo-album-masonry-layout" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/masonry-layout" file="src/App.tsx" title="react-photo-album-masonry-layout" description="react-photo-album masonry layout" />
 
 ## Source Code
 
