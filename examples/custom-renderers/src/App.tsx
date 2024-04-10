@@ -33,9 +33,11 @@ const renderRowContainer: RenderRowContainer = ({ rowContainerProps, rowIndex, r
 const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => {
   // The html element the intersection observer is looking for:
   const intersectionBox = useRef<HTMLDivElement>(null);
+  // Indicates that the intersection box is inside the view and the content should be displayed:
   const [isIntersected, setIsIntersected] = useState(false);
 
   useEffect(() => {
+    // Define the intersection obeserver:
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsIntersected(entry.isIntersecting);
@@ -43,8 +45,12 @@ const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, st
       // When should the intersector trigger?:
       { rootMargin: "50px" },
     );
+    // Enabling lazy loading by start the observing:
     intersectionBox.current && observer.observe(intersectionBox.current);
-    return () => observer.disconnect();
+    return () => {
+      // Cleanup this component form observing:
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -62,12 +68,12 @@ const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, st
       <div
         ref={intersectionBox}
         style={{
-          backgroundColor: "#CCC",
+          backgroundColor: "#EEE",
           width: layout.width,
           height: layout.height,
-          display: "flex", // Enables Flexbox
-          justifyContent: "center", // Centers content horizontally
-          alignItems: "center", // Centers content vertically
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         {isIntersected ? (
