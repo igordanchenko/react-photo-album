@@ -1,5 +1,6 @@
 import { PhotoAlbum, RenderContainer, RenderPhoto, RenderRowContainer } from "react-photo-album";
 import photos from "./photos";
+import { useEffect, useRef, useState } from "react";
 
 const renderContainer: RenderContainer = ({ containerProps, children, containerRef }) => (
   <div
@@ -29,32 +30,66 @@ const renderRowContainer: RenderRowContainer = ({ rowContainerProps, rowIndex, r
   </>
 );
 
-const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => (
-  <div
-    style={{
-      border: "2px solid #eee",
-      borderRadius: "4px",
-      boxSizing: "content-box",
-      alignItems: "center",
-      width: style?.width,
-      padding: `${layoutOptions.padding - 2}px`,
-      paddingBottom: 0,
-    }}
-  >
-    <img alt={alt} style={{ ...style, width: "100%", padding: 0 }} {...restImageProps} />
+const renderPhoto: RenderPhoto = ({ layout, layoutOptions, imageProps: { alt, style, ...restImageProps } }) => {
+  // The html element the intersection observer is looking for:
+  const intersectionBox = useRef<HTMLDivElement>(null);
+  const [isIntersected, setIsIntersected] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsIntersected(entry.isIntersecting);
+      },
+      // When should the intersector trigger?:
+      { rootMargin: "50px" },
+    );
+    intersectionBox.current && observer.observe(intersectionBox.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
     <div
       style={{
-        paddingTop: "8px",
-        paddingBottom: "8px",
-        overflow: "visible",
-        whiteSpace: "nowrap",
-        textAlign: "center",
+        border: "2px solid #eee",
+        borderRadius: "4px",
+        boxSizing: "content-box",
+        alignItems: "center",
+        width: style?.width,
+        padding: `${layoutOptions.padding - 2}px`,
+        paddingBottom: 0,
       }}
     >
-      {Math.round(layout.width) + " x " + Math.round(layout.height)}
+      <div
+        ref={intersectionBox}
+        style={{
+          backgroundColor: "#CCC",
+          width: layout.width,
+          height: layout.height,
+          display: "flex", // Enables Flexbox
+          justifyContent: "center", // Centers content horizontally
+          alignItems: "center", // Centers content vertically
+        }}
+      >
+        {isIntersected ? (
+          <img alt={alt} style={{ ...style, width: "100%", padding: 0 }} {...restImageProps} />
+        ) : (
+          "LOADING"
+        )}
+      </div>
+      <div
+        style={{
+          paddingTop: "8px",
+          paddingBottom: "8px",
+          overflow: "visible",
+          whiteSpace: "nowrap",
+          textAlign: "center",
+        }}
+      >
+        {Math.round(layout.width) + " x " + Math.round(layout.height)}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default function App() {
   return (
