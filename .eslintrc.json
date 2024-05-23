@@ -6,6 +6,7 @@
   "rules": {
     "react/prop-types": "off",
     "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "no-restricted-exports": ["error", { "restrictedNamedExports": ["then"] }]
   }
 }
