@@ -1,9 +1,10 @@
 import PhotoAlbum from "./PhotoAlbum";
-import computeRowsLayout from "./layouts/rows";
-import computeColumnsLayout from "./layouts/columns";
-import computeMasonryLayout from "./layouts/masonry";
 
 export * from "./types";
 
-export { PhotoAlbum, computeRowsLayout, computeColumnsLayout, computeMasonryLayout};
+export { PhotoAlbum };
 export default PhotoAlbum;
+
+export { default as unstable_computeRowsLayout } from "./layouts/rows";
+export { default as unstable_computeColumnsLayout } from "./layouts/columns";
+export { default as unstable_computeMasonryLayout } from "./layouts/masonry";
