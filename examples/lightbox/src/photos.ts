@@ -1,49 +1,45 @@
-const breakpoints = [3840, 2400, 1080, 640, 384, 256, 128, 96, 64, 48];
+import type { Photo } from "react-photo-album";
 
-const unsplashLink = (id: string, width: number, height: number) =>
-  `https://source.unsplash.com/${id}/${width}x${height}`;
+const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
-const unsplashPhotos = [
-  { id: "8gVv6nxq6gY", width: 1080, height: 800 },
-  { id: "Dhmn6ete6g8", width: 1080, height: 1620 },
-  { id: "RkBTPqPEGDo", width: 1080, height: 720 },
-  { id: "Yizrl9N_eDA", width: 1080, height: 721 },
-  { id: "KG3TyFi0iTU", width: 1080, height: 1620 },
-  { id: "Jztmx9yqjBw", width: 1080, height: 607 },
-  { id: "-heLWtuAN3c", width: 1080, height: 608 },
-  { id: "xOigCUcFdA8", width: 1080, height: 720 },
-  { id: "1azAjl8FTnU", width: 1080, height: 1549 },
-  { id: "ALrCdq-ui_Q", width: 1080, height: 720 },
-  { id: "twukN12EN7c", width: 1080, height: 694 },
-  { id: "9UjEyzA6pP4", width: 1080, height: 1620 },
-  { id: "sEXGgun3ZiE", width: 1080, height: 720 },
-  { id: "S-cdwrx-YuQ", width: 1080, height: 1440 },
-  { id: "q-motCAvPBM", width: 1080, height: 1620 },
-  { id: "Xn4L310ztMU", width: 1080, height: 810 },
-  { id: "iMchCC-3_fE", width: 1080, height: 610 },
-  { id: "X48pUOPKf7A", width: 1080, height: 160 },
-  { id: "GbLS6YVXj0U", width: 1080, height: 810 },
-  { id: "9CRd1J1rEOM", width: 1080, height: 720 },
-  { id: "xKhtkhc9HbQ", width: 1080, height: 1440 },
-];
+function assetLink(asset: string, width: number) {
+  return `https://assets.react-photo-album.com/_next/image?url=${encodeURIComponent(`/_next/static/media/${asset}`)}&w=${width}&q=75`;
+}
 
-const photos = unsplashPhotos.map((photo) => {
-  const width = breakpoints[0];
-  const height = (photo.height / photo.width) * width;
-
-  return {
-    src: unsplashLink(photo.id, width, height),
-    width,
-    height,
-    srcSet: breakpoints.map((breakpoint) => {
-      const height = Math.round((photo.height / photo.width) * breakpoint);
-      return {
-        src: unsplashLink(photo.id, breakpoint, height),
-        width: breakpoint,
-        height,
-      };
-    }),
-  };
-});
+const photos = [
+  { asset: "image01.018d1d35.jpg", width: 1080, height: 780 },
+  { asset: "image02.cf33eff7.jpg", width: 1080, height: 1620 },
+  { asset: "image03.cdc32b45.jpg", width: 1080, height: 720 },
+  { asset: "image04.9a1f6335.jpg", width: 1080, height: 720 },
+  { asset: "image05.d7ef12b4.jpg", width: 1080, height: 1620 },
+  { asset: "image06.4ab952e3.jpg", width: 1080, height: 607 },
+  { asset: "image07.ac608196.jpg", width: 1080, height: 608 },
+  { asset: "image08.95e095b5.jpg", width: 1080, height: 720 },
+  { asset: "image09.fa6c4764.jpg", width: 1080, height: 1549 },
+  { asset: "image10.411ea655.jpg", width: 1080, height: 720 },
+  { asset: "image11.f3ea483a.jpg", width: 1080, height: 694 },
+  { asset: "image12.5a9347ea.jpg", width: 1080, height: 1620 },
+  { asset: "image13.ce46dd98.jpg", width: 1080, height: 720 },
+  { asset: "image14.68b2812c.jpg", width: 1080, height: 1440 },
+  { asset: "image15.4461facf.jpg", width: 1080, height: 1620 },
+  { asset: "image16.5ad17d8b.jpg", width: 1080, height: 810 },
+  { asset: "image17.a242e897.jpg", width: 1080, height: 595 },
+  { asset: "image18.0479bde8.jpg", width: 1080, height: 160 },
+  { asset: "image19.ab7b61f4.jpg", width: 1080, height: 810 },
+  { asset: "image20.f62571df.jpg", width: 1080, height: 720 },
+  { asset: "image21.14c9bee0.jpg", width: 1080, height: 1440 },
+].map(
+  ({ asset, width, height }) =>
+    ({
+      src: assetLink(asset, width),
+      width,
+      height,
+      srcSet: breakpoints.map((imageWidth) => ({
+        src: assetLink(asset, imageWidth),
+        width: imageWidth,
+        height: Math.round((height / width) * imageWidth),
+      })),
+    }) as Photo,
+);
 
 export default photos;
