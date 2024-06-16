@@ -34,10 +34,10 @@ const photos = [
       src: assetLink(asset, width),
       width,
       height,
-      srcSet: breakpoints.map((imageWidth) => ({
-        src: assetLink(asset, imageWidth),
-        width: imageWidth,
-        height: Math.round((height / width) * imageWidth),
+      srcSet: breakpoints.map((breakpoint) => ({
+        src: assetLink(asset, breakpoint),
+        width: breakpoint,
+        height: Math.round((height / width) * breakpoint),
       })),
     }) as Photo,
 );
