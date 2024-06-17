@@ -1346,6 +1346,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={0}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image01.jpg"
       style={
         {
@@ -1363,6 +1364,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={1}
       decoding="async"
       loading="lazy"
+      sizes="13vw"
       src="image02.jpg"
       style={
         {
@@ -1380,6 +1382,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={2}
       decoding="async"
       loading="lazy"
+      sizes="29vw"
       src="image03.jpg"
       style={
         {
@@ -1397,6 +1400,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={3}
       decoding="async"
       loading="lazy"
+      sizes="29vw"
       src="image04.jpg"
       style={
         {
@@ -1428,6 +1432,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={4}
       decoding="async"
       loading="lazy"
+      sizes="16vw"
       src="image05.jpg"
       style={
         {
@@ -1445,6 +1450,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={5}
       decoding="async"
       loading="lazy"
+      sizes="41vw"
       src="image06.jpg"
       style={
         {
@@ -1462,6 +1468,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={6}
       decoding="async"
       loading="lazy"
+      sizes="41vw"
       src="image07.jpg"
       style={
         {
@@ -1493,6 +1500,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={7}
       decoding="async"
       loading="lazy"
+      sizes="40vw"
       src="image08.jpg"
       style={
         {
@@ -1510,6 +1518,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={8}
       decoding="async"
       loading="lazy"
+      sizes="19vw"
       src="image09.jpg"
       style={
         {
@@ -1527,6 +1536,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={9}
       decoding="async"
       loading="lazy"
+      sizes="40vw"
       src="image10.jpg"
       style={
         {
@@ -1558,6 +1568,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={10}
       decoding="async"
       loading="lazy"
+      sizes="41vw"
       src="image11.jpg"
       style={
         {
@@ -1575,6 +1586,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={11}
       decoding="async"
       loading="lazy"
+      sizes="18vw"
       src="image12.jpg"
       style={
         {
@@ -1592,6 +1604,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={12}
       decoding="async"
       loading="lazy"
+      sizes="39vw"
       src="image13.jpg"
       style={
         {
@@ -1623,6 +1636,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={13}
       decoding="async"
       loading="lazy"
+      sizes="21vw"
       src="image14.jpg"
       style={
         {
@@ -1640,6 +1654,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={14}
       decoding="async"
       loading="lazy"
+      sizes="19vw"
       src="image15.jpg"
       style={
         {
@@ -1657,6 +1672,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={15}
       decoding="async"
       loading="lazy"
+      sizes="37vw"
       src="image16.jpg"
       style={
         {
@@ -1674,6 +1690,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={16}
       decoding="async"
       loading="lazy"
+      sizes="19vw"
       src="image17.jpg"
       style={
         {
@@ -1705,6 +1722,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={17}
       decoding="async"
       loading="lazy"
+      sizes="100vw"
       src="image18.jpg"
       style={
         {
@@ -1735,6 +1753,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={18}
       decoding="async"
       loading="lazy"
+      sizes="36vw"
       src="image19.jpg"
       style={
         {
@@ -1752,6 +1771,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={19}
       decoding="async"
       loading="lazy"
+      sizes="41vw"
       src="image20.jpg"
       style={
         {
@@ -1769,6 +1789,7 @@ exports[`PhotoAlbum > provides layout.index prop 1`] = `
       data-index={20}
       decoding="async"
       loading="lazy"
+      sizes="21vw"
       src="image21.jpg"
       style={
         {
@@ -1815,6 +1836,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={0}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image01.jpg"
       style={
         {
@@ -1833,6 +1855,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={1}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image02.jpg"
       style={
         {
@@ -1851,6 +1874,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={2}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image03.jpg"
       style={
         {
@@ -1869,6 +1893,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={3}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image04.jpg"
       style={
         {
@@ -1887,6 +1912,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={4}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image05.jpg"
       style={
         {
@@ -1918,6 +1944,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={5}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image06.jpg"
       style={
         {
@@ -1936,6 +1963,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={6}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image07.jpg"
       style={
         {
@@ -1954,6 +1982,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={7}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image08.jpg"
       style={
         {
@@ -1972,6 +2001,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={8}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image09.jpg"
       style={
         {
@@ -1990,6 +2020,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={9}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image10.jpg"
       style={
         {
@@ -2008,6 +2039,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={10}
       decoding="async"
       loading="lazy"
+      sizes="26vw"
       src="image11.jpg"
       style={
         {
@@ -2039,6 +2071,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={11}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image12.jpg"
       style={
         {
@@ -2057,6 +2090,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={12}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image13.jpg"
       style={
         {
@@ -2075,6 +2109,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={13}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image14.jpg"
       style={
         {
@@ -2093,6 +2128,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={14}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image15.jpg"
       style={
         {
@@ -2124,6 +2160,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={15}
       decoding="async"
       loading="lazy"
+      sizes="23vw"
       src="image16.jpg"
       style={
         {
@@ -2142,6 +2179,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={16}
       decoding="async"
       loading="lazy"
+      sizes="23vw"
       src="image17.jpg"
       style={
         {
@@ -2160,6 +2198,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={17}
       decoding="async"
       loading="lazy"
+      sizes="23vw"
       src="image18.jpg"
       style={
         {
@@ -2178,6 +2217,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={18}
       decoding="async"
       loading="lazy"
+      sizes="23vw"
       src="image19.jpg"
       style={
         {
@@ -2196,6 +2236,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={19}
       decoding="async"
       loading="lazy"
+      sizes="23vw"
       src="image20.jpg"
       style={
         {
@@ -2214,6 +2255,7 @@ exports[`PhotoAlbum > provides layout.index prop 2`] = `
       data-index={20}
       decoding="async"
       loading="lazy"
+      sizes="23vw"
       src="image21.jpg"
       style={
         {
@@ -2260,6 +2302,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={0}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image01.jpg"
       style={
         {
@@ -2278,6 +2321,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={6}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image07.jpg"
       style={
         {
@@ -2296,6 +2340,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={8}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image09.jpg"
       style={
         {
@@ -2314,6 +2359,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={14}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image15.jpg"
       style={
         {
@@ -2332,6 +2378,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={20}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image21.jpg"
       style={
         {
@@ -2363,6 +2410,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={1}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image02.jpg"
       style={
         {
@@ -2381,6 +2429,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={9}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image10.jpg"
       style={
         {
@@ -2399,6 +2448,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={11}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image12.jpg"
       style={
         {
@@ -2417,6 +2467,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={16}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image17.jpg"
       style={
         {
@@ -2448,6 +2499,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={2}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image03.jpg"
       style={
         {
@@ -2466,6 +2518,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={4}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image05.jpg"
       style={
         {
@@ -2484,6 +2537,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={12}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image13.jpg"
       style={
         {
@@ -2502,6 +2556,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={15}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image16.jpg"
       style={
         {
@@ -2520,6 +2575,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={17}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image18.jpg"
       style={
         {
@@ -2538,6 +2594,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={18}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image19.jpg"
       style={
         {
@@ -2569,6 +2626,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={3}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image04.jpg"
       style={
         {
@@ -2587,6 +2645,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={5}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image06.jpg"
       style={
         {
@@ -2605,6 +2664,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={7}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image08.jpg"
       style={
         {
@@ -2623,6 +2683,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={10}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image11.jpg"
       style={
         {
@@ -2641,6 +2702,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={13}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image14.jpg"
       style={
         {
@@ -2659,6 +2721,7 @@ exports[`PhotoAlbum > provides layout.index prop 3`] = `
       data-index={19}
       decoding="async"
       loading="lazy"
+      sizes="24vw"
       src="image20.jpg"
       style={
         {
@@ -19840,6 +19903,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="26vw"
       src="image01.jpg"
       style={
         {
@@ -19859,6 +19923,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="13vw"
       src="image02.jpg"
       style={
         {
@@ -19878,6 +19943,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="29vw"
       src="image03.jpg"
       style={
         {
@@ -19897,6 +19963,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="29vw"
       src="image04.jpg"
       style={
         {
@@ -19930,6 +19997,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="16vw"
       src="image05.jpg"
       style={
         {
@@ -19949,6 +20017,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image06.jpg"
       style={
         {
@@ -19968,6 +20037,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image07.jpg"
       style={
         {
@@ -20001,6 +20071,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="40vw"
       src="image08.jpg"
       style={
         {
@@ -20020,6 +20091,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="19vw"
       src="image09.jpg"
       style={
         {
@@ -20039,6 +20111,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="40vw"
       src="image10.jpg"
       style={
         {
@@ -20072,6 +20145,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image11.jpg"
       style={
         {
@@ -20091,6 +20165,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="18vw"
       src="image12.jpg"
       style={
         {
@@ -20110,6 +20185,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="39vw"
       src="image13.jpg"
       style={
         {
@@ -20143,6 +20219,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="21vw"
       src="image14.jpg"
       style={
         {
@@ -20162,6 +20239,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="19vw"
       src="image15.jpg"
       style={
         {
@@ -20181,6 +20259,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="37vw"
       src="image16.jpg"
       style={
         {
@@ -20200,6 +20279,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="19vw"
       src="image17.jpg"
       style={
         {
@@ -20233,6 +20313,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="100vw"
       src="image18.jpg"
       style={
         {
@@ -20265,6 +20346,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="36vw"
       src="image19.jpg"
       style={
         {
@@ -20284,6 +20366,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image20.jpg"
       style={
         {
@@ -20303,6 +20386,7 @@ exports[`PhotoAlbum > supports custom photo attributes 1`] = `
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="21vw"
       src="image21.jpg"
       style={
         {
@@ -20351,6 +20435,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="26vw"
       src="image01.jpg"
       style={
         {
@@ -20370,6 +20455,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="13vw"
       src="image02.jpg"
       style={
         {
@@ -20389,6 +20475,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="29vw"
       src="image03.jpg"
       style={
         {
@@ -20408,6 +20495,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="29vw"
       src="image04.jpg"
       style={
         {
@@ -20441,6 +20529,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="16vw"
       src="image05.jpg"
       style={
         {
@@ -20460,6 +20549,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image06.jpg"
       style={
         {
@@ -20479,6 +20569,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image07.jpg"
       style={
         {
@@ -20512,6 +20603,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="40vw"
       src="image08.jpg"
       style={
         {
@@ -20531,6 +20623,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="19vw"
       src="image09.jpg"
       style={
         {
@@ -20550,6 +20643,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="40vw"
       src="image10.jpg"
       style={
         {
@@ -20583,6 +20677,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image11.jpg"
       style={
         {
@@ -20602,6 +20697,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="18vw"
       src="image12.jpg"
       style={
         {
@@ -20621,6 +20717,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="39vw"
       src="image13.jpg"
       style={
         {
@@ -20654,6 +20751,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="21vw"
       src="image14.jpg"
       style={
         {
@@ -20673,6 +20771,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="19vw"
       src="image15.jpg"
       style={
         {
@@ -20692,6 +20791,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="37vw"
       src="image16.jpg"
       style={
         {
@@ -20711,6 +20811,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="19vw"
       src="image17.jpg"
       style={
         {
@@ -20744,6 +20845,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="100vw"
       src="image18.jpg"
       style={
         {
@@ -20776,6 +20878,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="36vw"
       src="image19.jpg"
       style={
         {
@@ -20795,6 +20898,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="41vw"
       src="image20.jpg"
       style={
         {
@@ -20814,6 +20918,7 @@ exports[`PhotoAlbum > supports custom photo attributes with inline render functi
       decoding="async"
       loading="lazy"
       onClick={[Function]}
+      sizes="21vw"
       src="image21.jpg"
       style={
         {

@@ -44,13 +44,13 @@ function srcSetAndSizes<T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
       .join(", ");
   }
 
-  // always produce image `sizes` attribute when PhotoAlbum `sizes` is present (use case: NextJS image)
-  if (layoutOptions.sizes) {
+  // always produce image `sizes` attribute (use case: NextJS image)
+  if (layoutOptions.sizes?.size) {
     sizes = (layoutOptions.sizes.sizes || [])
       .map(({ viewport, size }) => `${viewport} ${calculateSizesValue(size, layout, layoutOptions)}`)
       .concat(calculateSizesValue(layoutOptions.sizes.size, layout, layoutOptions))
       .join(", ");
-  } else if (srcSet) {
+  } else {
     sizes = `${Math.ceil((layout.width / layoutOptions.containerWidth) * 100)}vw`;
   }
 
