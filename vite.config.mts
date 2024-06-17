@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     minify: false,
-    target: "es2018",
+    target: "es2020",
     lib: {
       entry: "src/index.ts",
       formats: ["cjs", "es"],

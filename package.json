@@ -30,7 +30,7 @@
     "url": "https://github.com/igordanchenko/react-photo-album/issues"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   },
   "publishConfig": {
     "access": "public",

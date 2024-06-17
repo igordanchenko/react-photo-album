@@ -2,18 +2,18 @@
   "exclude": ["examples"],
   "compilerOptions": {
     "strict": true,
-    "target": "ES2018",
-    "module": "ESNext",
     "jsx": "react",
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["DOM", "ES2020"],
     "noEmit": true,
     "declaration": false,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "importHelpers": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
     "stripInternal": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "types": ["vitest/globals"]
   }
 }
