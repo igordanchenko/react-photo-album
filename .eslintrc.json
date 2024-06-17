@@ -5,6 +5,7 @@
   "ignorePatterns": ["dist", "coverage", "examples"],
   "rules": {
     "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
     "no-restricted-exports": ["error", { "restrictedNamedExports": ["then"] }]

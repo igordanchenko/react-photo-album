@@ -1,4 +1,5 @@
-import * as React from "react";
+import type React from "react";
+import { createElement } from "react";
 import renderer from "react-test-renderer";
 
 import { ClickHandler, Photo, PhotoAlbum, RenderPhoto } from "../src";
@@ -260,27 +261,27 @@ describe("PhotoAlbum", () => {
   });
 
   it("doesn't crash when invoked without required parameters", () => {
-    whenAskedToRender(React.createElement(PhotoAlbum));
+    whenAskedToRender(createElement(PhotoAlbum));
     // @ts-expect-error expected TS error
-    whenAskedToRender(React.createElement(PhotoAlbum, { layout: "columns" }));
+    whenAskedToRender(createElement(PhotoAlbum, { layout: "columns" }));
     // @ts-expect-error expected TS error
-    whenAskedToRender(React.createElement(PhotoAlbum, { photos: [] }));
+    whenAskedToRender(createElement(PhotoAlbum, { photos: [] }));
   });
 
   it("doesn't crash when invoked with invalid required parameters", () => {
     // @ts-expect-error expected TS error
-    whenAskedToRender(React.createElement(PhotoAlbum, { layout: "unknown" }));
+    whenAskedToRender(createElement(PhotoAlbum, { layout: "unknown" }));
     whenAskedToRender(
-      React.createElement(PhotoAlbum, {
+      createElement(PhotoAlbum, {
         // @ts-expect-error expected TS error
         layout: "unknown",
         photos: [],
       }),
     );
     // @ts-expect-error expected TS error
-    whenAskedToRender(React.createElement(PhotoAlbum, { photos: 0 }));
+    whenAskedToRender(createElement(PhotoAlbum, { photos: 0 }));
     // @ts-expect-error expected TS error
-    whenAskedToRender(React.createElement(PhotoAlbum, { photos: null }));
+    whenAskedToRender(createElement(PhotoAlbum, { photos: null }));
   });
 
   it("supports responsive parameters", () => {

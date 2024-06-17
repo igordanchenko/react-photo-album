@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import clsx from "../../utils/clsx";
 import round from "../../utils/round";
 import { Optional, Photo, RenderColumnContainer, RenderColumnContainerProps } from "../../types";
