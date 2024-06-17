@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useCallback, useReducer, useRef } from "react";
 
 type State = {
   containerWidth?: number;
@@ -48,14 +48,14 @@ export default function useContainerWidth(
   breakpoints: readonly number[] | undefined,
   defaultContainerWidth: number | undefined,
 ) {
-  const [{ containerWidth }, dispatch] = React.useReducer(containerWidthReducer, {
+  const [{ containerWidth }, dispatch] = useReducer(containerWidthReducer, {
     containerWidth: defaultContainerWidth,
   });
 
-  const ref = React.useRef<HTMLElement | null>(null);
-  const observerRef = React.useRef<ResizeObserver>();
+  const ref = useRef<HTMLElement | null>(null);
+  const observerRef = useRef<ResizeObserver>();
 
-  const containerRef = React.useCallback(
+  const containerRef = useCallback(
     (node: HTMLElement | null) => {
       observerRef.current?.disconnect();
       observerRef.current = undefined;

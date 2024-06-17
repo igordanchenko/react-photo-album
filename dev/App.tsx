@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { PhotoAlbum } from "../src";
 import photos from "./photos";
 

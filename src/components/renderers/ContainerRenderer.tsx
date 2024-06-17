@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import clsx from "../../utils/clsx";
 import { Optional, RenderContainer, RenderContainerProps } from "../../types";
 

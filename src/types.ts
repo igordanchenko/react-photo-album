@@ -1,4 +1,4 @@
-import * as React from "react";
+import type React from "react";
 
 export type LayoutType = "columns" | "rows" | "masonry";
 
