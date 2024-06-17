@@ -43,7 +43,13 @@
     "dev": "vite --config dev/vite.config.ts"
   },
   "peerDependencies": {
+    "@types/react": ">=18",
     "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
