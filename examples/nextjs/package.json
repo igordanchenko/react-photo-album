@@ -12,15 +12,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^14.1.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-photo-album": "^2.3.1"
+    "next": "^14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-photo-album": "^2.4.1"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
-    "typescript": "^5.4.3"
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
   }
 }
