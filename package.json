@@ -49,7 +49,7 @@
     "dev": "vite --config dev/vite.config.mts"
   },
   "peerDependencies": {
-    "react": ">=16.8.0"
+    "react": ">=18"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
