@@ -4,12 +4,11 @@ import clsx from "../../utils/clsx";
 import round from "../../utils/round";
 import { ImageElementAttributes, LayoutOptions, Photo, PhotoLayout, RenderPhoto, RenderPhotoProps } from "../../types";
 
-function calcWidth<T extends Photo = Photo>(
-  base: string,
-  { width, photosCount }: PhotoLayout,
-  { spacing, padding, containerWidth }: LayoutOptions<T>,
-) {
-  const gaps = spacing * (photosCount - 1) + 2 * padding * photosCount;
+function calcWidth<T extends Photo = Photo>(base: string, photoLayout: PhotoLayout, layoutOptions: LayoutOptions<T>) {
+  const { width, photosCount } = photoLayout;
+  const { layout, spacing, padding, containerWidth } = layoutOptions;
+  const count = layout === "rows" ? photosCount : layoutOptions.columns;
+  const gaps = spacing * (count - 1) + 2 * padding * count;
   return `calc((${base} - ${gaps}px) / ${round((containerWidth - gaps) / width, 5)})`;
 }
 
@@ -46,11 +45,13 @@ function srcSetAndSizes<T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
 
   // always produce image `sizes` attribute (use case: NextJS image)
   if (layoutOptions.sizes?.size) {
+    // produce more accurate estimate when `sizes` attribute is present
     sizes = (layoutOptions.sizes.sizes || [])
       .map(({ viewport, size }) => `${viewport} ${calculateSizesValue(size, layout, layoutOptions)}`)
       .concat(calculateSizesValue(layoutOptions.sizes.size, layout, layoutOptions))
       .join(", ");
   } else {
+    // produce rough approximation by default
     sizes = `${Math.ceil((layout.width / layoutOptions.containerWidth) * 100)}vw`;
   }
 

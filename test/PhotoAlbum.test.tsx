@@ -463,4 +463,30 @@ describe("PhotoAlbum", () => {
       />,
     );
   });
+
+  it("produces sizes attribute", () => {
+    whenAskedToRender(
+      <PhotoAlbum
+        layout="rows"
+        photos={photosWithSrcSet}
+        sizes={{ size: "1200px", sizes: [{ viewport: "(max-width: 1200px)", size: "100vw" }] }}
+      />,
+    );
+
+    whenAskedToRender(
+      <PhotoAlbum
+        layout="columns"
+        photos={photosWithSrcSet}
+        sizes={{ size: "1200px", sizes: [{ viewport: "(max-width: 1200px)", size: "100vw" }] }}
+      />,
+    );
+
+    whenAskedToRender(
+      <PhotoAlbum
+        layout="masonry"
+        photos={photosWithSrcSet}
+        sizes={{ size: "1200px", sizes: [{ viewport: "(max-width: 1200px)", size: "100vw" }] }}
+      />,
+    );
+  });
 });
