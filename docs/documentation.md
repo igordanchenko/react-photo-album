@@ -230,17 +230,6 @@ Parameters marked with an asterisk (<span class="required" />) are required.
         <p>All images in a given `Photo` object must be of the same aspect ratio.</p>
       </td>
     </tr>
-    <tr>
-      <td>images</td>
-      <td>
-        &#123;<br />
-        &nbsp;&nbsp;src:&nbsp;string;<br />
-        &nbsp;&nbsp;width:&nbsp;number;<br />
-        &nbsp;&nbsp;height:&nbsp;number;<br />
-        &#125;[]
-      </td>
-      <td>Deprecated. Use `srcSet` instead.</td>
-    </tr>
   </tbody>
 </table>
 
@@ -669,8 +658,8 @@ render function.
 By default, `PhotoAlbum` re-calculates its layout every time its container width
 changes. For example, the layout may get re-calculated dozens of times during a
 simple browser window resize. If this behavior is undesired, you can avoid it by
-providing responsive `breakpoints` (e.g., <span class="font-mono">[300, 600,
-1200]</span>). When the breakpoints parameter is defined, `PhotoAlbum`
+providing responsive `breakpoints` (e.g., <span class="font-mono">[300,
+600, 1200]</span>). When the breakpoints parameter is defined, `PhotoAlbum`
 calculates the layout only once per breakpoint interval using the interval's
 lower boundary as the container width, and the layout is scaled automatically
 via CSS. On the interval between 0 and the lowest breakpoint, `PhotoAlbum` uses

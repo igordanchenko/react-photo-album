@@ -53,9 +53,6 @@ export interface Photo extends Image {
   alt?: string;
   /** Optional image `title` attribute. */
   title?: string;
-  // TODO v3: remove
-  /** @deprecated - use `srcSet` instead */
-  images?: Image[];
   /** Optional array of alternative images to be included in the `srcset` attribute. */
   srcSet?: Image[];
 }

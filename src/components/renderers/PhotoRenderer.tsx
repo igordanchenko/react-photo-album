@@ -30,7 +30,7 @@ function srcSetAndSizes<T extends Photo = Photo>(photo: T, layout: PhotoLayout, 
   let srcSet;
   let sizes;
 
-  const images = photo.srcSet || photo.images;
+  const images = photo.srcSet;
   if (images && images.length > 0) {
     srcSet = images
       .concat(
