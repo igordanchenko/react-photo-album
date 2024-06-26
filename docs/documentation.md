@@ -86,16 +86,6 @@ The following props are applicable to all three layouts.
       <td>Photo click callback. See [Click Handler](#ClickHandler) for details.</td>
     </tr>
     <tr>
-      <td>defaultContainerWidth</td>
-      <td>number</td>
-      <td>
-        The default container width in server-side rendering (SSR). This prop is 
-        required to enable server-side rendering. If absent, 
-        [React Photo Album](/) produces an empty markup on the server and 
-        renders on the client only after hydration. 
-      </td>
-    </tr>
-    <tr>
       <td>sizes</td>
       <td>object</td>
       <td>
@@ -125,6 +115,22 @@ The following props are applicable to all three layouts.
       <td>object | function</td>
       <td>
         Custom render functions. See [Render Functions](#RenderFunctions) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>defaultContainerWidth</td>
+      <td>number</td>
+      <td>
+        The default container width in server-side rendering (SSR).
+        See [Default Container Width](#Server-SideRendering(SSR)_DefaultContainerWidth) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>skeleton</td>
+      <td>ReactNode</td>
+      <td>
+        Fallback skeleton in SSR. 
+        See [Skeleton](#Server-SideRendering(SSR)_Skeleton) for details.
       </td>
     </tr>
   </tbody>
@@ -676,6 +682,37 @@ the content container padding and the left-hand side navigation menu:
       { viewport: "(max-width: 1279px)", size: "calc(100vw - 288px)" },
     ],
   }}
+/>
+```
+
+## Server-Side Rendering (SSR)
+
+By default, [React Photo Album](/) produces an empty markup on the server, but
+several alternative solutions are available.
+
+### Default Container Width
+
+To render photo album markup on the server, you can specify the
+`defaultContainerWidth` value. It is a perfect SSR solution if your photo album
+has a constant width in all viewports (e.g., an image picker in a fixed-size
+sidebar). However, if the client-side photo album width doesn't match the
+`defaultContainerWidth`, you are almost guaranteed to see a layout shift.
+
+```tsx
+<RowsPhotoAlbum photos={photos} defaultContainerWidth={800} />
+```
+
+### Skeleton
+
+Alternatively, you can provide a fallback skeleton in the `skeleton` prop that
+will be rendered in SSR and swapped with the actual photo album markup after
+hydration. This approach allows you to reserve a blank space for the photo album
+markup and avoid a flash of below-the-fold content during hydration.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  skeleton={<div style={{ width: "100%", minHeight: 800 }} />}
 />
 ```
 

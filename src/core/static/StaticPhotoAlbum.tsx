@@ -6,7 +6,10 @@ import PhotoComponent from "./PhotoComponent";
 import { srcSetAndSizes, unwrap } from "../utils";
 import { CommonPhotoAlbumProps, ComponentsProps, LayoutModel, Photo, Render } from "../../types";
 
-type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<CommonPhotoAlbumProps<TPhoto>, "sizes" | "onClick"> & {
+type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<
+  CommonPhotoAlbumProps<TPhoto>,
+  "sizes" | "onClick" | "skeleton"
+> & {
   layout?: string;
   model?: LayoutModel<TPhoto>;
   render?: Render<TPhoto>;
@@ -18,6 +21,7 @@ export default forwardRef(function StaticPhotoAlbum<TPhoto extends Photo>(
     layout,
     sizes,
     model,
+    skeleton,
     onClick: onClickCallback,
     render: { container, track, photo: renderPhoto, ...restRender } = {},
     componentsProps: {
@@ -100,6 +104,8 @@ export default forwardRef(function StaticPhotoAlbum<TPhoto extends Photo>(
             </Component>
           );
         })}
+
+      {containerWidth === undefined && skeleton}
     </Component>
   );
 }) as <TPhoto extends Photo>(

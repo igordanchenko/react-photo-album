@@ -22,6 +22,7 @@ export default function ColumnsPhotoAlbum<TPhoto extends Photo>({
   sizes,
   breakpoints,
   defaultContainerWidth,
+  skeleton,
   ...restProps
 }: ColumnsPhotoAlbumProps<TPhoto>) {
   const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
@@ -37,6 +38,10 @@ export default function ColumnsPhotoAlbum<TPhoto extends Photo>({
   );
 
   return (
-    <StaticPhotoAlbum layout="columns" ref={containerRef} {...{ model, componentsProps, render, onClick, sizes }} />
+    <StaticPhotoAlbum
+      layout="columns"
+      ref={containerRef}
+      {...{ model, componentsProps, render, onClick, sizes, skeleton }}
+    />
   );
 }

@@ -22,6 +22,7 @@ export default function MasonryPhotoAlbum<TPhoto extends Photo>({
   sizes,
   breakpoints,
   defaultContainerWidth,
+  skeleton,
   ...restProps
 }: MasonryPhotoAlbumProps<TPhoto>) {
   const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
@@ -37,6 +38,10 @@ export default function MasonryPhotoAlbum<TPhoto extends Photo>({
   );
 
   return (
-    <StaticPhotoAlbum layout="masonry" ref={containerRef} {...{ model, componentsProps, render, onClick, sizes }} />
+    <StaticPhotoAlbum
+      layout="masonry"
+      ref={containerRef}
+      {...{ model, componentsProps, render, onClick, sizes, skeleton }}
+    />
   );
 }

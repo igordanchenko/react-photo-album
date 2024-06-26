@@ -46,6 +46,8 @@ export interface CommonPhotoAlbumProps<TPhoto extends Photo = Photo> {
   render?: ResponsiveParameter<Render<TPhoto>>;
   /** Additional HTML attributes to be passed to the rendered elements. */
   componentsProps?: ComponentsProps<TPhoto> | ((containerWidth?: number) => ComponentsProps<TPhoto>);
+  /** Fallback skeleton in SSR. */
+  skeleton?: React.ReactNode;
 }
 
 /** Rows photo album props */
