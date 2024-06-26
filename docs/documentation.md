@@ -3,15 +3,50 @@
 [React Photo Album](/) allows you to build a responsive React photo gallery in
 minutes. To get started, follow the [Installation](/#Installation) and
 [Minimal Setup Example](/#MinimalSetupExample) guides, or feel free to explore
-the collection of [examples](/examples) with live demos. The below documentation
-covers React Photo Album API.
-
-[React Photo Album](/) provides all components and types as named exports.
-`PhotoAlbum` is exported as both default and named export.
+the collection of [examples](/examples) with live demos.
 
 Parameters marked with an asterisk (<span class="required" />) are required.
 
-## PhotoAlbum
+## Prerequisites
+
+[React Photo Album](/) provides four separate photo album components, depending
+on the layout you intend to use. Each component comes with its own CSS
+stylesheet.
+
+### Rows Layout
+
+```tsx
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
+```
+
+### Columns Layout
+
+```tsx
+import { ColumnsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/columns.css";
+```
+
+### Masonry Layout
+
+```tsx
+import { MasonryPhotoAlbum } from "react-photo-album";
+import "react-photo-album/masonry.css";
+```
+
+### 3-in-1
+
+If you use more than one layout in our app, you may opt for the aggregate
+component, which bundles all three layouts.
+
+```tsx
+import PhotoAlbum from "react-photo-album";
+import "react-photo-album/styles.css";
+```
+
+## Common Props
+
+The following props are applicable to all three layouts.
 
 <table class="docs">
   <tbody>
@@ -24,35 +59,10 @@ Parameters marked with an asterisk (<span class="required" />) are required.
       </td>
     </tr>
     <tr>
-      <td><span class="required">layout</span></td>
-      <td>'columns' | 'rows' | 'masonry'</td>
-      <td>Photo album layout type.</td>
-    </tr>
-    <tr>
-      <td>columns</td>
-      <td>ResponsiveParameter</td>
-      <td>
-        <p>
-          A number of columns in the columns or masonry layout.
-          See [ResponsiveParameter](#ResponsiveParameter) for details.
-        </p>
-        <p>Default responsive value:</p>
-        <ul>
-          <li>5, when container width >= 1200</li>
-          <li>4, when container width >= 600 and &lt; 1200</li>
-          <li>3, when container width >= 300 and &lt; 600</li>
-          <li>2, when container width &lt; 300</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
       <td>spacing</td>
-      <td>ResponsiveParameter</td>
+      <td>number | function</td>
       <td>
-        <p>
-          Spacing between images (similar to CSS grid gap).
-          See [ResponsiveParameter](#ResponsiveParameter) for details.
-        </p>
+        <p>Spacing between images (similar to CSS grid gap).</p>
         <p>Default responsive value:</p>
         <ul>
           <li>20, when container width >= 1200</li>
@@ -64,23 +74,71 @@ Parameters marked with an asterisk (<span class="required" />) are required.
     </tr>
     <tr>
       <td>padding</td>
-      <td>ResponsiveParameter</td>
+      <td>number | function</td>
       <td>
-        <p>
-          Padding around each image in the photo album.
-          See [ResponsiveParameter](#ResponsiveParameter) for details.
-        </p>
+        <p>Padding around each image.</p>
         <p>Default value: <span class="font-mono">0</span></p>
       </td>
     </tr>
     <tr>
-      <td>targetRowHeight</td>
-      <td>ResponsiveParameter</td>
+      <td>onClick</td>
+      <td>function</td>
+      <td>Photo click callback. See [Click Handler](#ClickHandler) for details.</td>
+    </tr>
+    <tr>
+      <td>defaultContainerWidth</td>
+      <td>number</td>
+      <td>
+        The default container width in server-side rendering (SSR). This prop is 
+        required to enable server-side rendering. If absent, 
+        [React Photo Album](/) produces an empty markup on the server and 
+        renders on the client only after hydration. 
+      </td>
+    </tr>
+    <tr>
+      <td>sizes</td>
+      <td>object</td>
       <td>
         <p>
-          Target row height in the rows layout.
-          See [ResponsiveParameter](#ResponsiveParameter) for details.
+          Photo album container width in various viewports. See [Sizes](#Sizes) 
+          for details.
         </p>
+      </td>
+    </tr>
+    <tr>
+      <td>breakpoints</td>
+      <td>number[]</td>
+      <td>
+        Photo album layout breakpoints. See [Breakpoints](#Breakpoints) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>componentsProps</td>
+      <td>object | function</td>
+      <td>
+        Additional HTML attributes to be passed to the rendered elements.
+        See [Components Props](#ComponentsProps) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>render</td>
+      <td>object | function</td>
+      <td>
+        Custom render functions. See [Render Functions](#RenderFunctions) for details.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+## RowsPhotoAlbum Props
+
+<table class="docs">
+  <tbody>
+    <tr>
+      <td>targetRowHeight</td>
+      <td>number | function</td>
+      <td>
+        <p>Target row height.</p>
         <p>Default responsive value:</p>
         <ul>
           <li>(container width) / 5, when container width >= 1200</li>
@@ -92,9 +150,9 @@ Parameters marked with an asterisk (<span class="required" />) are required.
     </tr>
     <tr>
       <td>rowConstraints</td>
-      <td>ResponsiveParameter&#8203;&lt;RowConstraints&gt;</td>
+      <td>object | function</td>
       <td>
-        <p>Additional row constraints in the `rows` layout.</p>
+        <p>Additional row constraints.</p>
         <ul>
           <li>`minPhotos` - minimum number of photos per row</li>
           <li>`maxPhotos` - maximum number of photos per row</li>
@@ -105,90 +163,82 @@ Parameters marked with an asterisk (<span class="required" />) are required.
         </ul>
       </td>
     </tr>
+  </tbody>
+</table>
+
+Usage example:
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  targetRowHeight={150}
+  rowConstraints={{ singleRowMaxHeight: 250 }}
+/>
+```
+
+## ColumnsPhotoAlbum Props
+
+<table class="docs">
+  <tbody>
     <tr>
-      <td>sizes</td>
-      <td>ResponsiveSizes</td>
+      <td>columns</td>
+      <td>number | function</td>
       <td>
-        <p>
-          Photo album container width at various viewport sizes. 
-          See [ResponsiveSizes](#ResponsiveSizes) for details.
-        </p>
-        <p>Default value: <span class="font-mono">100vw</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td>onClick</td>
-      <td>ClickHandler</td>
-      <td>
-          Photo click callback function.
-          See [ClickHandler](#ClickHandler) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>breakpoints</td>
-      <td>number[]</td>
-      <td>
-        Responsive breakpoints. 
-        See [ResponsiveBreakpoints](#ResponsiveBreakpoints) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>defaultContainerWidth</td>
-      <td>number</td>
-      <td>Default container width in SSR.</td>
-    </tr>
-    <tr>
-      <td>componentsProps</td>
-      <td>ComponentsPropsParameter</td>
-      <td>
-        Additional HTML attributes to be passed to the rendered elements.
-        See [ComponentsPropsParameter](#ComponentsPropsParameter) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>renderPhoto</td>
-      <td>RenderPhoto</td>
-      <td>
-        Custom photo rendering function.
-        See [RenderPhoto](#RenderPhoto) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>renderContainer</td>
-      <td>RenderContainer</td>
-      <td>
-        Custom container rendering function. 
-        See [RenderContainer](#RenderContainer) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>renderRowContainer</td>
-      <td>RenderRowContainer</td>
-      <td>
-        Custom row container rendering function. 
-        See [RenderRowContainer](#RenderRowContainer) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>renderColumnContainer</td>
-      <td>RenderColumnContainer</td>
-      <td>
-        Custom column container rendering function. 
-        See [RenderColumnContainer](#RenderColumnContainer) for details.
+        <p>Number of columns.</p>
+        <p>Default responsive value:</p>
+        <ul>
+          <li>5, when container width >= 1200</li>
+          <li>4, when container width >= 600 and &lt; 1200</li>
+          <li>3, when container width >= 300 and &lt; 600</li>
+          <li>2, when container width &lt; 300</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-## Photo
+Usage example:
+
+```tsx
+<ColumnsPhotoAlbum photos={photos} columns={4} />
+```
+
+## MasonryPhotoAlbum Props
+
+`MasonryPhotoAlbum` accepts `columns` prop identical to the one supported by the
+[ColumnsPhotoAlbum](#ColumnsPhotoAlbumProps).
+
+Usage example:
+
+```tsx
+<MasonryPhotoAlbum photos={photos} columns={4} />
+```
+
+## PhotoAlbum Props
+
+The aggregate `PhotoAlbum` component supports all relevant props that correspond
+to the selected layout.
 
 <table class="docs">
   <tbody>
     <tr>
-      <td>key</td>
-      <td>string</td>
-      <td>Optional `key` attribute.</td>
+      <td><span class="required">layout</span></td>
+      <td>"columns" | "rows" | "masonry"</td>
+      <td>Photo album layout type.</td>
     </tr>
+  </tbody>
+</table>
+
+Usage example:
+
+```tsx
+<PhotoAlbum layout="rows" photos={photos} targetRowHeight={150} />
+```
+
+## Photo
+
+<table class="docs">
+  <tbody>
     <tr>
       <td><span class="required">src</span></td>
       <td>string</td>
@@ -205,14 +255,29 @@ Parameters marked with an asterisk (<span class="required" />) are required.
       <td>Image height in pixels.</td>
     </tr>
     <tr>
+      <td>key</td>
+      <td>string</td>
+      <td>React `key` attribute.</td>
+    </tr>
+    <tr>
       <td>alt</td>
       <td>string</td>
-      <td>Optional image `alt` attribute.</td>
+      <td>Image `alt` attribute.</td>
     </tr>
     <tr>
       <td>title</td>
       <td>string</td>
-      <td>Optional image `title` attribute.</td>
+      <td>Image `title` attribute.</td>
+    </tr>
+    <tr>
+      <td>href</td>
+      <td>string</td>
+      <td>Image link URL.</td>
+    </tr>
+    <tr>
+      <td>label</td>
+      <td>string</td>
+      <td>ARIA label for the link and button elements.</td>
     </tr>
     <tr>
       <td>srcSet</td>
@@ -233,64 +298,15 @@ Parameters marked with an asterisk (<span class="required" />) are required.
   </tbody>
 </table>
 
-You can pass additional photo attributes and access them inside the
-`renderPhoto` function.
+You can also provide custom photo attributes and access them in the render
+functions.
+
+## Click Handler
+
+You can add interactive behavior by providing the `onClick` callback.
 
 ```tsx
-<PhotoAlbum
-  layout="rows"
-  photos={[
-    {
-      src: "/images/image1.jpg",
-      width: 800,
-      height: 600,
-      href: "https://react-photo-album.com/",
-    },
-  ]}
-  renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
-    <a
-      href={photo.href}
-      style={wrapperStyle}
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      {renderDefaultPhoto({ wrapped: true })}
-    </a>
-  )}
-/>
-```
-
-## ClickHandler
-
-`PhotoAlbum` accepts a click callback function via the `onClick` parameter.
-
-### ClickHandler Props
-
-<table class="docs">
-  <tbody>
-    <tr>
-      <td>index</td>
-      <td>number</td>
-      <td>Photo index.</td>
-    </tr>
-    <tr>
-      <td>photo</td>
-      <td>Photo</td>
-      <td>Original photo object.</td>
-    </tr>
-    <tr>
-      <td>event</td>
-      <td>React.MouseEvent</td>
-      <td>Corresponding mouse event.</td>
-    </tr>
-  </tbody>
-</table>
-
-### ClickHandler Usage Example
-
-```tsx
-<PhotoAlbum
-  layout="rows"
+<RowsPhotoAlbum
   photos={photos}
   onClick={({ index }) => {
     openLightbox(index);
@@ -298,20 +314,43 @@ You can pass additional photo attributes and access them inside the
 />
 ```
 
-## ResponsiveParameter
+The callback function accepts a single parameter with the following props:
 
-`PhotoAlbum` accepts various props via `ResponsiveParameter` type.
+<table class="docs">
+  <tbody>
+    <tr>
+      <td>index</td>
+      <td>number</td>
+      <td>Photo index in the original `photos` array.</td>
+    </tr>
+    <tr>
+      <td>photo</td>
+      <td>Photo</td>
+      <td>Photo object.</td>
+    </tr>
+    <tr>
+      <td>event</td>
+      <td>MouseEvent</td>
+      <td>Corresponding mouse event.</td>
+    </tr>
+  </tbody>
+</table>
 
-Responsive parameters can be provided either as a hard-coded `number`
+## Responsive Props
+
+[React Photo Album](/) accepts various props as responsive parameters.
+
+Responsive props can be provided either as a hard-coded value:
 
 ```tsx
-<PhotoAlbum columns={3} />
+<ColumnsPhotoAlbum photos={photos} columns={3} />
 ```
 
-or as a function of container width
+or as a function of container width:
 
 ```tsx
-<PhotoAlbum
+<ColumnsPhotoAlbum
+  photos={photos}
   columns={(containerWidth) => {
     if (containerWidth < 400) return 2;
     if (containerWidth < 800) return 3;
@@ -320,40 +359,43 @@ or as a function of container width
 />
 ```
 
-## ComponentsPropsParameter
+## Components Props
 
-You can pass additional HTML attributes to the rendered elements via the
-`componentsProps` parameter. `componentsProps` prop can be defined either as an
-object or as a function of an optional container width.
+You can pass additional HTML attributes to the rendered elements through the
+`componentsProps` parameter.
 
 <table class="docs">
   <tbody>
     <tr>
-      <td>containerProps</td>
-      <td>HTMLAttributes&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>
-        Additional HTML attributes to be passed to the outer container `div` element.
-      </td>
+      <td>container</td>
+      <td>ComponentProps&lt;"div"&gt;</td>
+      <td>Additional HTML attributes for the outer `div` container.</td>
     </tr>
     <tr>
-      <td>rowContainerProps</td>
-      <td>HTMLAttributes&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>
-        Additional HTML attributes to be passed to the row container `div` element.
-      </td>
+      <td>track</td>
+      <td>ComponentProps&lt;"div"&gt;</td>
+      <td>Additional HTML attributes for the row / column `div` containers.</td>
     </tr>
     <tr>
-      <td>columnContainerProps</td>
-      <td>HTMLAttributes&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>
-        Additional HTML attributes to be passed to the column container `div` element.
-      </td>
+      <td>wrapper</td>
+      <td>ComponentProps&lt;"div"&gt;</td>
+      <td>Additional HTML attributes for the image `div` wrapper.</td>
     </tr>
     <tr>
-      <td>imageProps</td>
-      <td>ImgHTMLAttributes&#8203;&lt;HTMLImageElement&gt;</td>
+      <td>link</td>
+      <td>ComponentProps&lt;"a"&gt;</td>
+      <td>Additional HTML attributes for the photo `a` link.</td>
+    </tr>
+    <tr>
+      <td>button</td>
+      <td>ComponentProps&lt;"button"&gt;</td>
+      <td>Additional HTML attributes for the photo `button` element.</td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td>ComponentProps&lt;"img"&gt;</td>
       <td>
-        <p>Additional HTML attributes to be passed to the photo `img` element.</p>
+        <p>Additional HTML attributes for the photo `img` element.</p>
         <p>
           Default: <span class="font-mono">&#123; loading: "lazy", decoding: "async"&#125;</span>
         </p>
@@ -362,335 +404,271 @@ object or as a function of an optional container width.
   </tbody>
 </table>
 
-### ComponentsProps Usage Example
+Usage example:
 
 ```tsx
-<PhotoAlbum
-  layout="rows"
+<RowsPhotoAlbum
   photos={photos}
   componentsProps={(containerWidth) => ({
-    imageProps: { loading: (containerWidth || 0) > 600 ? "eager" : "lazy" },
+    image: { loading: (containerWidth || 0) > 600 ? "eager" : "lazy" },
   })}
 />
 ```
 
-## LayoutOptions
+## Render Functions
 
-`LayoutOptions` object represents photo album configuration and can be used in
-custom render functions to access photo album parameters.
+[React Photo Album](/) allows you to customize all rendered elements by
+supplying your own custom render functions. Each render function provides the
+default element's props as a first parameter. These typically include `style`
+and `className` attributes the default implementation requires.
 
 <table class="docs">
   <tbody>
     <tr>
-      <td>layout</td>
-      <td>'columns' | 'rows' | 'masonry'</td>
-      <td>Photo album layout type.</td>
-    </tr>
-    <tr>
-      <td>spacing</td>
-      <td>number</td>
-      <td>Layout spacing (gaps between photos).</td>
-    </tr>
-    <tr>
-      <td>padding</td>
-      <td>number</td>
-      <td>Padding around each photo.</td>
-    </tr>
-    <tr>
-      <td>containerWidth</td>
-      <td>number</td>
+      <td>container</td>
+      <td>(props) =&gt; ReactNode</td>
       <td>
-        Current photo album container width. Defaults to `defaultContainerWidth`
-        when rendered server-side.
+        Render custom container. 
+        See [Container](#RenderFunctions_Container) for details.
       </td>
     </tr>
     <tr>
-      <td>onClick</td>
-      <td>ClickHandler | undefined</td>
-      <td>Photo click handler. See [ClickHandler](#ClickHandler) for details.</td>
-    </tr>
-    <tr>
-      <td>sizes</td>
-      <td>ResponsiveSizes | undefined</td>
+      <td>track</td>
+      <td>(props) =&gt; ReactNode</td>
       <td>
-        `PhotoAlbum` size at various viewport sizes.
-        See [ResponsiveSizes](#ResponsiveSizes) for details.
+        Render custom row / column container.
+        See [Track](#RenderFunctions_Track) for details.
       </td>
     </tr>
     <tr>
-      <td>columns</td>
-      <td>number | undefined</td>
-      <td>Number of columns in `columns` or `masonry` layout.</td>
-    </tr>
-    <tr>
-      <td>targetRowHeight</td>
-      <td>number | undefined</td>
-      <td>Target row height in `rows` layout.</td>
-    </tr>
-    <tr>
-      <td>rowConstraints</td>
-      <td>RowConstraints | undefined</td>
+      <td>wrapper</td>
+      <td>(props, context) =&gt; ReactNode</td>
       <td>
-        Additional row constraints. 
-        See [RowConstraints](#RowConstraints) for details.
+        Render custom image wrapper.
+        See [Wrapper](#RenderFunctions_Wrapper) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>link</td>
+      <td>(props, context) =&gt; ReactNode</td>
+      <td>
+        Render custom link element.
+        See [Link](#RenderFunctions_Link) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>button</td>
+      <td>(props, context) =&gt; ReactNode</td>
+      <td>
+        Render custom button element.
+        See [Button](#RenderFunctions_Button) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td>(props, context) =&gt; ReactNode</td>
+      <td>
+        Render custom image element.
+        See [Image](#RenderFunctions_Image) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>extras</td>
+      <td>(props, context) =&gt; ReactNode</td>
+      <td>
+        Render custom markup immediately after each image.
+        See [Extras](#RenderFunctions_Extras) for details.
+      </td>
+    </tr>
+    <tr>
+      <td>photo</td>
+      <td>(props, context) =&gt; ReactNode</td>
+      <td>
+        Render custom photo.
+        See [Photo](#RenderFunctions_Photo) for details.
       </td>
     </tr>
   </tbody>
 </table>
 
-## RenderPhoto
-
-`PhotoAlbum` photos can be customized via the `renderPhoto` render function.
-
-### RenderPhoto Props
+When applicable, the second parameter represents the photo rendering context.
 
 <table class="docs">
   <tbody>
     <tr>
       <td>photo</td>
       <td>Photo</td>
-      <td>Photo object. See [Photo](#Photo) for details.</td>
+      <td>Photo object.</td>
     </tr>
     <tr>
-      <td>layout</td>
-      <td>PhotoLayout</td>
-      <td>
-        <p>
-          Computed photo layout. Please note that `width` and `height` are expressed 
-          in `content-box` notation.
-        </p>
-        <ul>
-          <li>`width` - photo width</li>
-          <li>`height` - photo height</li>
-          <li>`index` - photo index in the original `photos` array</li>
-          <li>`photoIndex` - photo index in a given row or column</li>
-          <li>`photosCount` - total number of photos in a given row or column</li>
-        </ul>
-      </td>
+      <td>index</td>
+      <td>number</td>
+      <td>Photo index in the original `photos` array.</td>
+    </tr><tr>
+      <td>width</td>
+      <td>number</td>
+      <td>Rendered photo width in pixels.</td>
     </tr>
     <tr>
-      <td>layoutOptions</td>
-      <td>LayoutOptions</td>
-      <td>
-        `PhotoAlbum` layout properties.
-        See [LayoutOptions](#LayoutOptions) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>imageProps</td>
-      <td>ImgHTMLAttributes&#8203;&lt;HTMLImageElement&gt;</td>
-      <td>
-        Pre-populated `img` element attributes (`display`, `box-sizing`, `width`,
-        `height`, `aspect-ratio`, `padding`, `margin-bottom` and `cursor`).
-      </td>
-    </tr>
-    <tr>
-      <td>renderDefaultPhoto</td>
-      <td>(options?: &#123; wrapped?: boolean &#125;) =&gt; ReactNode</td>
-      <td>
-        A callback to render the default photo implementation. If `wrapped` is `true`,
-        the image is styled with `width` and `height` set to 100%. Use this option
-        when rendering image wrapper styled with `wrapperStyle`.
-      </td>
-    </tr>
-    <tr>
-      <td>wrapperStyle</td>
-      <td>CSSProperties</td>
-      <td>
-        CSS styles to properly size image wrapper (i.e. `<div/>` or `<a/>` wrapper)
-      </td>
+      <td>height</td>
+      <td>number</td>
+      <td>Rendered photo height in pixels.</td>
     </tr>
   </tbody>
 </table>
 
-### RenderPhoto Usage Example
+### Container
+
+You can customize the photo album `div` container through the `render.container`
+prop. Your implementation must forward `ref` attribute to the underlying
+container element.
 
 ```tsx
-<PhotoAlbum
-  layout="rows"
+<RowsPhotoAlbum
   photos={photos}
-  renderPhoto={({ photo, wrapperStyle, renderDefaultPhoto }) => (
-    <div style={{ position: "relative", ...wrapperStyle }}>
-      {renderDefaultPhoto({ wrapped: true })}
-      {photo.title && (
-        <div
-          style={{
-            position: "absolute",
-            overflow: "hidden",
-            backgroundColor: "rgba(255 255 255 / .6)",
-            inset: "auto 0 0 0",
-            padding: 8,
-          }}
-        >
-          {photo.title}
-        </div>
-      )}
-    </div>
-  )}
+  render={{
+    container: ({ ref, ...rest }) => <div ref={ref} {...rest} />,
+  }}
 />
 ```
 
-## RenderContainer
+### Track
 
-`PhotoAlbum` container can be customized via the `renderContainer` render
-function. Please note that you must pass the `containerRef` ref to your
-container element (see [example](/examples/renderers#CustomContainer)).
-
-### RenderContainer Props
-
-<table class="docs">
-  <tbody>
-    <tr>
-      <td>layout</td>
-      <td>'columns' | 'rows' | 'masonry'</td>
-      <td>Photo album layout type.</td>
-    </tr>
-    <tr>
-      <td>containerProps</td>
-      <td>HTMLAttributes&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>
-        Pre-populated default container attributes (`display`, `flex-wrap`, 
-        `flex-direction` and `justify-content`).
-      </td>
-    </tr>
-    <tr>
-      <td>containerRef</td>
-      <td>RefCallback&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>Custom `<div/>` container ref callback.</td>
-    </tr>
-  </tbody>
-</table>
-
-## RenderRowContainer
-
-`PhotoAlbum` row containers can be customized via the `renderRowContainer`
-render function.
-
-### RenderRowContainer Props
-
-<table class="docs">
-  <tbody>
-    <tr>
-      <td>layoutOptions</td>
-      <td>RowsLayoutOptions</td>
-      <td>
-        `PhotoAlbum` layout properties.
-        See [LayoutOptions](#LayoutOptions) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>rowIndex</td>
-      <td>number</td>
-      <td>Row number.</td>
-    </tr>
-    <tr>
-      <td>rowsCount</td>
-      <td>number</td>
-      <td>Total number of rows.</td>
-    </tr>
-    <tr>
-      <td>rowContainerProps</td>
-      <td>HTMLAttributes&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>
-        Pre-populated default row container attributes (`display`, `flex-wrap`, 
-        `flex-direction`, `justify-content`, `align-items` and `margin-bottom`).
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## RenderColumnContainer
-
-`PhotoAlbum` column containers can be customized via the `renderColumnContainer`
-render function.
-
-### RenderColumnContainer Props
-
-<table class="docs">
-  <tbody>
-    <tr>
-      <td>layoutOptions</td>
-      <td>ColumnsLayoutOptions</td>
-      <td>
-        `PhotoAlbum` layout properties.
-        See [LayoutOptions](#LayoutOptions) for details.
-      </td>
-    </tr>
-    <tr>
-      <td>columnIndex</td>
-      <td>number</td>
-      <td>Column index.</td>
-    </tr>
-    <tr>
-      <td>columnsCount</td>
-      <td>number</td>
-      <td>Total number of columns.</td>
-    </tr>
-    <tr>
-      <td>columnsGaps</td>
-      <td>number[] | undefined</td>
-      <td>
-        Sum of spacings and paddings in each column. `columnsGaps` property 
-        is not provided in the masonry layout.
-      </td>
-    </tr>
-    <tr>
-      <td>columnsRatios</td>
-      <td>number[] | undefined</td>
-      <td>
-        Width adjustment ratios of each column. `columnsRatios` property is 
-        not provided in the masonry layout.
-      </td>
-    </tr>
-    <tr>
-      <td>columnContainerProps</td>
-      <td>HTMLAttributes&#8203;&lt;HTMLDivElement&gt;</td>
-      <td>
-        Pre-populated default column container attributes (`display`, `flex-wrap`,
-        `flex-direction`, `justify-content`, `align-items` and `width`).
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-## ResponsiveBreakpoints
-
-By default, `PhotoAlbum` re-calculates its layout every time its container width
-changes. For example, the layout may get re-calculated dozens of times during a
-simple browser window resize. If this behavior is undesired, you can avoid it by
-providing responsive `breakpoints` (e.g., <span class="font-mono">[300,
-600, 1200]</span>). When the breakpoints parameter is defined, `PhotoAlbum`
-calculates the layout only once per breakpoint interval using the interval's
-lower boundary as the container width, and the layout is scaled automatically
-via CSS. On the interval between 0 and the lowest breakpoint, `PhotoAlbum` uses
-1/2 of the lowest breakpoint as the container width. Please also note that it
-makes sense to use the breakpoints parameter only in conjunction with CSS-based
-photo props (`imageProps.style.width` and `imageProps.style.width`) rather than
-the exact photo dimensions expressed in pixels (`layout.width` and
-`layout.height`).
+You can customize the row / column `div` containers through the `render.track`
+prop. This is not common.
 
 ```tsx
-<PhotoAlbum
-  breakpoints={[300, 600, 1200]}
-  // ...
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    track: (props) => <div {...props} />,
+  }}
 />
 ```
 
-## ResponsiveSizes
+### Wrapper
 
-`ResponsiveSizes` attribute is only applicable when you use the `srcset` feature
-and provide resolution-switching image files in the photo `srcSet` attribute. By
-default, PhotoAlbum assumes <span class="font-mono">100vw</span> as its
-on-screen horizontal dimension. To improve `sizes` attribute accuracy on
-individual images, you can describe the photo album dimensions under various
-media conditions via the `sizes` attribute.
+You can customize the image wrapper through the `render.wrapper` prop. This
+wrapper is rendered only when photos are not clickable (there is no `href` photo
+prop and no `onClick` callback). This is not common.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    wrapper: (props) => <div {...props} />,
+  }}
+/>
+```
+
+### Link
+
+Link element is rendered when a photo has an `href` attribute. You can provide
+your own link implementation through the `render.link` prop.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    link: (props) => <a {...props} />,
+  }}
+/>
+```
+
+### Button
+
+Button element is rendered when the photo album has an `onClick` callback. You
+can provide your own button implementation through the `render.button` prop.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    button: (props) => <button {...props} />,
+  }}
+/>
+```
+
+### Image
+
+You can provide your own image implementation through the `render.image` prop.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    image: (props) => <img {...props} />,
+  }}
+/>
+```
+
+### Extras
+
+You can render custom elements alongside each photo. This can be useful for
+rendering interactive icons with `position: absolute`.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    extras: (_, { photo, index }) => (
+      <FavoriteIcon photo={photo} index={index} />
+    ),
+  }}
+/>
+```
+
+### Photo
+
+This is the render function that completely overrides the default `wrapper`,
+`link`, `button`, `image` and `extras` render functions. The only prop provided
+in the first argument, is the `onClick` callback.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  render={{
+    photo: ({ onClick }, { photo, width, height }) => (
+      <CustomPhoto
+        photo={photo}
+        width={width}
+        height={height}
+        onClick={onClick}
+      />
+    ),
+  }}
+/>
+```
+
+## Breakpoints
+
+By default, [React Photo Album](/) re-calculates its layout every time its
+container width changes. For example, the layout may be re-calculated dozens of
+times during a browser window resize. If this behavior is undesired, you can
+avoid it by providing the `breakpoints` prop (e.g.,
+<span class="font-mono">[300, 600, 1200]</span>). When the `breakpoints`
+parameter is defined, [React Photo Album](/) calculates the layout only once per
+the breakpoint interval.
+
+```tsx
+<RowsPhotoAlbum photos={photos} breakpoints={[300, 600, 1200]} />
+```
+
+## Sizes
+
+Photo album components automatically generate `sizes` and `srcset` image
+attributes when photo objects contain `srcSet` array. By default,
+[React Photo Album](/) assumes that the photo album utilizes approximately
+<span class="font-mono">100vw</span> of the page width. If that's not the case,
+you can improve the performance of your responsive images by describing your
+photo album size in different viewports.
 
 For example, this website uses the following `sizes` attribute to account for
-content container padding and the left-hand side navigation menu at various
-breakpoints:
+the content container padding and the left-hand side navigation menu:
 
 ```tsx
-<PhotoAlbum
+<RowsPhotoAlbum
+  photos={photos}
   sizes={{
     size: "992px",
     sizes: [
@@ -698,7 +676,6 @@ breakpoints:
       { viewport: "(max-width: 1279px)", size: "calc(100vw - 288px)" },
     ],
   }}
-  // ...
 />
 ```
 
@@ -706,4 +683,5 @@ breakpoints:
 
 Are you looking for documentation for one of the previous versions?
 
-- [react-photo-album v1.x](https://v1.react-photo-album.com/documentation)
+- [react-photo-album v2](https://v2.react-photo-album.com/documentation)
+- [react-photo-album v1](https://v1.react-photo-album.com/documentation)

@@ -1,0 +1,41 @@
+{
+  "name": "react-photo-album-customization",
+  "description": "React Photo Album - Customization",
+  "version": "0.1.0",
+  "author": "Igor Danchenko",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-photo-album": "../..",
+    "yet-another-react-lightbox": "^3.20.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.1"
+  },
+  "keywords": [
+    "react photo album",
+    "react photo gallery",
+    "react image gallery",
+    "photo album",
+    "photo gallery",
+    "image gallery",
+    "photo layout",
+    "image layout",
+    "react-photo-album",
+    "react-photo-gallery"
+  ]
+}

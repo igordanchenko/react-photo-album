@@ -11,7 +11,7 @@ re-engineered from the ground up.
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album.svg?color=blue)](https://bundlephobia.com/package/react-photo-album)
 [![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
-- **Built for React:** works with React 18, 17 and 16.8.0+
+- **Built for React:** works with React 18+
 - **SSR friendly:** produces server-side rendered markup that looks pixel
   perfect on the client even before hydration
 - **Responsive images:** responsive images with automatic resolution switching
@@ -21,7 +21,7 @@ re-engineered from the ground up.
   customizable
 - **TypeScript:** type definitions come built-in in the package
 - **Performance:** it was built with performance in mind in order to support
-  large photo albums and silky smooth layout adjustments
+  large photo albums
 
 ## Layouts
 
@@ -55,18 +55,25 @@ re-engineered from the ground up.
 npm install react-photo-album
 ```
 
+## Requirements
+
+- React 18+
+- Node 18+
+- modern ESM-compatible bundler
+
 ## Minimal Setup Example
 
 ```tsx
-import PhotoAlbum from "react-photo-album";
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
 
 const photos = [
-  { src: "/images/image1.jpg", width: 800, height: 600 },
-  { src: "/images/image2.jpg", width: 1600, height: 900 },
+  { src: "/image1.jpg", width: 800, height: 600 },
+  { src: "/image2.jpg", width: 1600, height: 900 },
 ];
 
 export default function Gallery() {
-  return <PhotoAlbum layout="rows" photos={photos} />;
+  return <RowsPhotoAlbum photos={photos} />;
 }
 ```
 
@@ -74,83 +81,97 @@ export default function Gallery() {
 
 ### Rows Layout
 
-Rows layout fills the rectangular container space by arranging photos into rows
-that are similar in size, with the height of each row being as close to the
+Rows layout fills the container space by arranging photos into rows that are
+similar in height, with the height of each row being as close to the
 `targetRowHeight` as possible. This layout uses an algorithm adapted from the
-Knuth and Plass line breaking algorithm. To calculate the single best layout, it
-uses Dijkstra's algorithm to find the shortest past in a graph where each photo
+Knuth and Plass line-breaking algorithm. To calculate the optimal layout, it
+uses Dijkstra's algorithm to find the shortest path in a graph where each photo
 to break on represents a node, and each row represents an edge. The cost of each
-edge is calculated as the squared deviation from the `targetRowHeight`. This
-algorithm produces rows that are similar in height and photos that are not being
-stretched or shrunken abnormally (as is what happens in a naive implementation).
-It solves the issue of panoramas shrinking rows or having stragglers or
-stretched images in the last row, instead creating a justified grid. The graph
-is being built as the shortest path is being calculated to improve algorithm's
-performance, so the entire adjacency list is not calculated ahead of time.
+edge is calculated as a squared deviation from the `targetRowHeight`. This
+algorithm produces rows that are similar in height and photos that are not
+stretched or abnormally shrunk (as what happens in a naive implementation). It
+solves the issue of panoramas shrinking rows or having stragglers or stretched
+images in the last row.
 
 ### Columns Layout
 
-Columns layout fills the rectangular container space by arranging photos into a
-predefined number of columns, determined by the `columns` parameter. This layout
-uses an algorithm very similar to the one described above, but instead of
-Dijkstra's algorithm, it uses a dynamic programming algorithm to find the
-shortest path of length N in a directed weighted graph.
+Columns layout fills the container space by arranging photos into a predefined
+number of columns, determined by the `columns` parameter. This layout uses an
+algorithm very similar to the one described above, with the only difference
+being that instead of Dijkstra's algorithm, it uses a dynamic programming
+algorithm to find the shortest path of length N in a directed weighted graph.
 
 ### Masonry Layout
 
 Masonry layout arranges photos into columns of equal width by placing each photo
-into the shortest column. This layout does not completely fill the rectangular
-container space, but the columns end up being as close in height to each other
+into the shortest column. This layout does not fill the container space flush to
+its bottom edge, but the columns end up being as close in height to each other
 as possible.
 
 ### Responsive Images
 
-React Photo Album automatically generates `sizes` and `srcset` image attributes.
-In the case of SSR, React Photo Album includes `sizes` and `srcset` image
-attributes in the server-rendered markup, allowing browsers to pick images of
-the most appropriate resolution depending on their viewport size. To enable
-images with automatic resolution switching, simply provide smaller images in the
-photo `srcSet` attribute.
+React Photo Album can automatically produce `sizes` and `srcset` image
+attributes. In the case of SSR, React Photo Album includes `sizes` and `srcset`
+image attributes in the server-rendered markup, allowing browsers to pick images
+of the most appropriate resolution depending on the end-user viewport size. To
+utilize images with automatic resolution switching, provide images of different
+resolutions in the photo `srcSet` attribute. To further improve app
+responsiveness and bandwidth utilization, you can specify the `sizes` prop that
+describes the width of the photo album in various viewports.
 
 ```tsx
-import PhotoAlbum from "react-photo-album";
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
 
 const photos = [
   {
-    src: "/images/image1_800x600.jpg",
+    src: "/image1_800x600.jpg",
     width: 800,
     height: 600,
     srcSet: [
-      { src: "/images/image1_400x300.jpg", width: 400, height: 300 },
-      { src: "/images/image1_200x150.jpg", width: 200, height: 150 },
+      { src: "/image1_400x300.jpg", width: 400, height: 300 },
+      { src: "/image1_200x150.jpg", width: 200, height: 150 },
     ],
   },
   {
-    src: "/images/image2_1600x900.jpg",
+    src: "/image2_1600x900.jpg",
     width: 1600,
     height: 900,
     srcSet: [
-      { src: "/images/image2_800x450.jpg", width: 800, height: 450 },
-      { src: "/images/image2_400x225.jpg", width: 400, height: 225 },
+      { src: "/image2_800x450.jpg", width: 800, height: 450 },
+      { src: "/image2_400x225.jpg", width: 400, height: 225 },
     ],
   },
 ];
 
 export default function Gallery() {
-  return <PhotoAlbum layout="rows" photos={photos} />;
+  return (
+    <RowsPhotoAlbum
+      photos={photos}
+      sizes={{
+        size: "1168px",
+        sizes: [
+          {
+            viewport: "(max-width: 1200px)",
+            size: "calc(100vw - 32px)",
+          },
+        ],
+      }}
+    />
+  );
 }
 ```
 
 ### SSR
 
-React Photo Album extensively uses CSS flexbox and CSS `calc` function to
-calculate the dimensions of images on the client. Unlike its predecessor, React
-Photo Album avoids setting the exact dimensions of images in pixels. Thanks to
-this approach, server-side rendered markup looks pixel-perfect on the client
-even before hydration (or even when JavaScript is completely disabled in the
-browser). To enable server-side rendering, be sure to specify
-`defaultContainerWidth` prop. Otherwise, React Photo Album produces empty markup
-on the server and renders on the client only after hydration.
+React Photo Album extensively uses CSS flexbox and CSS `calc` functions to
+calculate images' dimensions on the client. Thanks to this approach, server-side
+rendered markup looks pixel-perfect on the client even before hydration. To
+enable server-side rendering, specify the `defaultContainerWidth` prop.
+Otherwise, React Photo Album produces an empty markup on the server and renders
+on the client only after hydration. Please note that unless your photo album is
+of constant width that always matches the `defaultContainerWidth` value, you
+will most likely see a layout shift immediately after hydration.
 
 ## Credits
 

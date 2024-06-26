@@ -8,13 +8,33 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    "types": "./dist/index.d.ts",
-    "default": "./dist/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./styles.css": {
+      "types": "./dist/styles/styles.css.d.ts",
+      "default": "./dist/styles/styles.css"
+    },
+    "./rows.css": {
+      "types": "./dist/styles/rows.css.d.ts",
+      "default": "./dist/styles/rows.css"
+    },
+    "./columns.css": {
+      "types": "./dist/styles/columns.css.d.ts",
+      "default": "./dist/styles/columns.css"
+    },
+    "./masonry.css": {
+      "types": "./dist/styles/masonry.css.d.ts",
+      "default": "./dist/styles/masonry.css"
+    }
   },
   "files": [
     "dist"
   ],
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "homepage": "https://react-photo-album.com",
   "repository": {
     "type": "git",
@@ -33,10 +53,13 @@
   "scripts": {
     "prepare": "husky",
     "clean": "rimraf dist",
-    "build": "npm-run-all clean build:*",
+    "build": "npm-run-all clean build:tsc build:js build:dts build:scss build:css build:fixup",
     "build:tsc": "tsc",
     "build:js": "vite build",
     "build:dts": "rollup -c",
+    "build:scss": "sass src/styles --no-source-map",
+    "build:css": "postcss src/styles/*.css --base src -d dist -u autoprefixer cssnano --no-map",
+    "build:fixup": "node fixup-dist.js",
     "start": "npm-run-all clean --parallel \"build:* -- -w\"",
     "lint": "eslint .",
     "test": "vitest run --coverage",
@@ -54,36 +77,44 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-test-renderer": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "@typescript-eslint/parser": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/coverage-v8": "^1.6.0",
     "@vitest/ui": "^1.2.2",
+    "autoprefixer": "^10.4.19",
+    "chokidar": "^3.6.0",
+    "cssnano": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "glob": "^10.4.2",
     "husky": "^9.0.11",
     "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0",
     "prettier": "^3.3.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-test-renderer": "^18.3.1",
     "rimraf": "^5.0.7",
     "rollup": "^4.18.0",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-dts": "^6.1.1",
-    "typescript": "^5.4.5",
+    "sass": "^1.77.6",
+    "typescript": "^5.5.2",
     "vite": "^5.3.1",
     "vitest": "^1.2.2"
   },

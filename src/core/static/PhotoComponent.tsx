@@ -1,0 +1,47 @@
+import type React from "react";
+
+import Component from "./Component";
+import { round } from "../utils";
+import { ComponentsProps, Photo, Render, RenderPhotoContext, RenderPhotoProps } from "../../types";
+
+type Unwrap<T> = T extends (args: any) => unknown ? never : T;
+
+type Unwrapped<T> = {
+  [P in keyof T]: Unwrap<T[P]>;
+};
+
+type PhotoComponentProps<TPhoto extends Photo> = RenderPhotoProps &
+  RenderPhotoContext<TPhoto> & {
+    render?: Pick<Render<TPhoto>, "wrapper" | "link" | "button" | "image" | "extras">;
+    componentsProps?: Unwrapped<Pick<ComponentsProps<TPhoto>, "wrapper" | "link" | "button" | "image">>;
+  };
+
+export default function PhotoComponent<TPhoto extends Photo>({
+  photo,
+  index,
+  width,
+  height,
+  onClick,
+  render: { wrapper, link, button, image, extras } = {},
+  componentsProps: { link: linkProps, button: buttonProps, wrapper: wrapperProps, image: imageProps } = {},
+}: PhotoComponentProps<TPhoto>) {
+  const { src, alt, title, href } = photo;
+
+  const context = { photo, index, width: round(width, 3), height: round(height, 3) };
+
+  let props: Omit<React.ComponentPropsWithoutRef<typeof Component>, "variables">;
+  if (href) {
+    props = { ...linkProps, as: "a", render: link, classes: ["photo", "link"], href, onClick };
+  } else if (onClick) {
+    props = { ...buttonProps, as: "button", type: "button", render: button, classes: ["photo", "button"], onClick };
+  } else {
+    props = { ...wrapperProps, render: wrapper, classes: "photo" };
+  }
+
+  return (
+    <Component variables={{ photoWidth: context.width, photoHeight: context.height }} {...{ context, ...props }}>
+      <Component as="img" classes="image" render={image} {...{ src, alt, title, context, ...imageProps }} />
+      {extras?.({}, context)}
+    </Component>
+  );
+}
