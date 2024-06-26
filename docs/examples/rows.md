@@ -1,14 +1,16 @@
 # Rows Layout
 
-Introductory example using rows layout.
+Here is a basic example using rows layout.
 
 ```tsx
-import PhotoAlbum from "react-photo-album";
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
+
 import photos from "./photos";
-```
 
-```tsx
-<PhotoAlbum layout="rows" photos={photos} />
+export default function App() {
+  return <RowsPhotoAlbum photos={photos} />;
+}
 ```
 
 ## Live Demo
@@ -17,8 +19,8 @@ import photos from "./photos";
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/rows-layout" file="src/App.tsx" title="react-photo-album-rows-layout" description="react-photo-album rows layout" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/next/examples/rows" file="src/App.tsx" title="react-photo-album-rows" description="react-photo-album rows layout" />
 
 ## Source Code
 
-<GitHubLink suffix="rows-layout" />
+<GitHubLink suffix="rows" />

@@ -19,7 +19,7 @@
     "@mui/material": "^5.15.20",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-photo-album": "^2.4.1"
+    "react-photo-album": "../.."
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

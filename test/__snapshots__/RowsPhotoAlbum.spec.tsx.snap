@@ -1,0 +1,1537 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RowsPhotoAlbum > renders without crashing 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 15; --react-photo-album--padding: 0; --react-photo-album--container-width: 1024;"
+  />
+</DocumentFragment>
+`;
+
+exports[`RowsPhotoAlbum > renders without crashing 2`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 15; --react-photo-album--padding: 0; --react-photo-album--container-width: 1024;"
+  >
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 381.583; --react-photo-album--photo-height: 282.654;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="38vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 188.436; --react-photo-album--photo-height: 282.654;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="19vw"
+          src="image02.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 423.981; --react-photo-album--photo-height: 282.654;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="42vw"
+          src="image03.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 377.535; --react-photo-album--photo-height: 252.039;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image04.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 168.026; --react-photo-album--photo-height: 252.039;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="17vw"
+          src="image05.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 448.439; --react-photo-album--photo-height: 252.039;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="44vw"
+          src="image06.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 444.354; --react-photo-album--photo-height: 250.155;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="44vw"
+          src="image07.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 375.232; --react-photo-album--photo-height: 250.155;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image08.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 174.414; --react-photo-album--photo-height: 250.155;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="18vw"
+          src="image09.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 400.498; --react-photo-album--photo-height: 266.999;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="40vw"
+          src="image10.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 415.503; --react-photo-album--photo-height: 266.999;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image11.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 177.999; --react-photo-album--photo-height: 266.999;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="18vw"
+          src="image12.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 5;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 294.102; --react-photo-album--photo-height: 196.068;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image13.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 147.051; --react-photo-album--photo-height: 196.068;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="15vw"
+          src="image14.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image15.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 261.424; --react-photo-album--photo-height: 196.068;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="26vw"
+          src="image16.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image17.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 1024; --react-photo-album--photo-height: 151.704;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image18.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 369.86; --react-photo-album--photo-height: 277.395;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image19.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 416.093; --react-photo-album--photo-height: 277.395;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image20.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 208.047; --react-photo-album--photo-height: 277.395;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="21vw"
+          src="image21.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 20; --react-photo-album--padding: 0; --react-photo-album--container-width: 1400;"
+  >
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 4;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 360.748; --react-photo-album--photo-height: 267.22;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="26vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 178.147; --react-photo-album--photo-height: 267.22;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image02.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 400.831; --react-photo-album--photo-height: 267.22;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image03.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 400.275; --react-photo-album--photo-height: 267.22;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image04.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 4;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 156.116; --react-photo-album--photo-height: 234.175;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="12vw"
+          src="image05.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 416.653; --react-photo-album--photo-height: 234.175;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="30vw"
+          src="image06.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 415.968; --react-photo-album--photo-height: 234.175;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="30vw"
+          src="image07.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 351.262; --react-photo-album--photo-height: 234.175;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="26vw"
+          src="image08.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 4;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 211.371; --react-photo-album--photo-height: 303.161;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="16vw"
+          src="image09.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 454.742; --react-photo-album--photo-height: 303.161;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="33vw"
+          src="image10.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 471.779; --react-photo-album--photo-height: 303.161;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="34vw"
+          src="image11.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 202.108; --react-photo-album--photo-height: 303.161;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="15vw"
+          src="image12.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 5;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 402.712; --react-photo-album--photo-height: 268.475;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image13.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 201.356; --react-photo-album--photo-height: 268.475;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="15vw"
+          src="image14.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 178.983; --react-photo-album--photo-height: 268.475;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image15.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 357.966; --react-photo-album--photo-height: 268.475;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="26vw"
+          src="image16.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 178.983; --react-photo-album--photo-height: 268.475;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image17.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 1400; --react-photo-album--photo-height: 207.407;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image18.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 506.047; --react-photo-album--photo-height: 379.535;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image19.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 569.302; --react-photo-album--photo-height: 379.535;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image20.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 284.651; --react-photo-album--photo-height: 379.535;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="21vw"
+          src="image21.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 15; --react-photo-album--padding: 0; --react-photo-album--container-width: 800;"
+  >
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 4;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 203.257; --react-photo-album--photo-height: 150.561;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="26vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 100.374; --react-photo-album--photo-height: 150.561;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image02.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 225.841; --react-photo-album--photo-height: 150.561;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image03.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 225.528; --react-photo-album--photo-height: 150.561;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image04.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 121.579; --react-photo-album--photo-height: 182.368;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="16vw"
+          src="image05.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 324.477; --react-photo-album--photo-height: 182.368;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image06.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 323.944; --react-photo-album--photo-height: 182.368;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image07.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="40vw"
+          src="image08.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 145.207; --react-photo-album--photo-height: 208.264;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="19vw"
+          src="image09.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="40vw"
+          src="image10.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 321.868; --react-photo-album--photo-height: 206.83;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image11.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 137.887; --react-photo-album--photo-height: 206.83;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="18vw"
+          src="image12.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 310.245; --react-photo-album--photo-height: 206.83;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="39vw"
+          src="image13.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 4;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 165.732; --react-photo-album--photo-height: 220.976;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="21vw"
+          src="image14.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="19vw"
+          src="image15.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 294.634; --react-photo-album--photo-height: 220.976;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image16.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="19vw"
+          src="image17.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 800; --react-photo-album--photo-height: 118.519;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image18.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 286.512; --react-photo-album--photo-height: 214.884;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="36vw"
+          src="image19.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 322.326; --react-photo-album--photo-height: 214.884;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image20.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 161.163; --react-photo-album--photo-height: 214.884;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="21vw"
+          src="image21.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 10; --react-photo-album--padding: 0; --react-photo-album--container-width: 500;"
+  >
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 184.265; --react-photo-album--photo-height: 136.493;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 90.995; --react-photo-album--photo-height: 136.493;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="19vw"
+          src="image02.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 204.739; --react-photo-album--photo-height: 136.493;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image03.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 182.311; --react-photo-album--photo-height: 121.709;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="37vw"
+          src="image04.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 81.139; --react-photo-album--photo-height: 121.709;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="17vw"
+          src="image05.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 216.55; --react-photo-album--photo-height: 121.709;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="44vw"
+          src="image06.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 265.663; --react-photo-album--photo-height: 149.558;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="54vw"
+          src="image07.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 224.337; --react-photo-album--photo-height: 149.558;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="45vw"
+          src="image08.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 89.163; --react-photo-album--photo-height: 127.883;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="18vw"
+          src="image09.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 191.825; --react-photo-album--photo-height: 127.883;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="39vw"
+          src="image10.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 199.012; --react-photo-album--photo-height: 127.883;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="40vw"
+          src="image11.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 109.714; --react-photo-album--photo-height: 164.571;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="22vw"
+          src="image12.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 246.857; --react-photo-album--photo-height: 164.571;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="50vw"
+          src="image13.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 123.429; --react-photo-album--photo-height: 164.571;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="25vw"
+          src="image14.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 120; --react-photo-album--photo-height: 180;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="24vw"
+          src="image15.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 240; --react-photo-album--photo-height: 180;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="48vw"
+          src="image16.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 120; --react-photo-album--photo-height: 180;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="24vw"
+          src="image17.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 500; --react-photo-album--photo-height: 74.074;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image18.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 178.605; --react-photo-album--photo-height: 133.953;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="36vw"
+          src="image19.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200.93; --react-photo-album--photo-height: 133.953;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image20.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 100.465; --react-photo-album--photo-height: 133.953;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="21vw"
+          src="image21.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 5; --react-photo-album--padding: 0; --react-photo-album--container-width: 200;"
+  >
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 130.537; --react-photo-album--photo-height: 96.694;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="66vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 64.463; --react-photo-album--photo-height: 96.694;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="33vw"
+          src="image02.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 133.333;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image03.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 134.942; --react-photo-album--photo-height: 90.087;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="68vw"
+          src="image04.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 60.058; --react-photo-album--photo-height: 90.087;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="31vw"
+          src="image05.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 112.407;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image06.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 112.593;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image07.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 133.123; --react-photo-album--photo-height: 88.748;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="67vw"
+          src="image08.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 61.877; --react-photo-album--photo-height: 88.748;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="31vw"
+          src="image09.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 133.333;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image10.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 136.517; --react-photo-album--photo-height: 87.725;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="69vw"
+          src="image11.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 58.483; --react-photo-album--photo-height: 87.725;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="30vw"
+          src="image12.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 130; --react-photo-album--photo-height: 86.667;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="65vw"
+          src="image13.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 65; --react-photo-album--photo-height: 86.667;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="33vw"
+          src="image14.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 47.5; --react-photo-album--photo-height: 71.25;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="24vw"
+          src="image15.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 95; --react-photo-album--photo-height: 71.25;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="48vw"
+          src="image16.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 47.5; --react-photo-album--photo-height: 71.25;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="24vw"
+          src="image17.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 29.63;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image18.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 150;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="100vw"
+          src="image19.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 130; --react-photo-album--photo-height: 86.667;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="65vw"
+          src="image20.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 65; --react-photo-album--photo-height: 86.667;"
+      >
+        <img
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="33vw"
+          src="image21.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
