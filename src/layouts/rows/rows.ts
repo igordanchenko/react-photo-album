@@ -5,8 +5,10 @@ import { LayoutModel, Photo } from "../../types";
 // guesstimate how many neighboring nodes should be searched based on
 // the aspect columnRatio of the container with images and minimal aspect columnRatio of all photos
 // as the maximum amount of photos per row, plus some nodes
-function findIdealNodeSearch(photos: Photo[], containerWidth: number, targetRowHeight: number) {
-  return round(containerWidth / targetRowHeight / Math.min(...photos.map((photo) => ratio(photo)))) + 2;
+function findIdealNodeSearch(photos: Photo[], containerWidth: number, targetRowHeight: number, minPhotos?: number) {
+  return (
+    round(containerWidth / targetRowHeight / Math.min(...photos.map((photo) => ratio(photo)))) + (minPhotos || 0) + 2
+  );
 }
 
 // get the height for a set of photos in a potential row
@@ -69,7 +71,7 @@ export default function computeRowsLayout<TPhoto extends Photo>(
   minPhotos?: number,
   maxPhotos?: number,
 ): LayoutModel<TPhoto> | undefined {
-  const limitNodeSearch = findIdealNodeSearch(photos, containerWidth, targetRowHeight);
+  const limitNodeSearch = findIdealNodeSearch(photos, containerWidth, targetRowHeight, minPhotos);
 
   const getNeighbors = makeGetRowNeighbors(
     photos,
