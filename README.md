@@ -171,7 +171,9 @@ enable server-side rendering, specify the `defaultContainerWidth` prop.
 Otherwise, React Photo Album produces an empty markup on the server and renders
 on the client only after hydration. Please note that unless your photo album is
 of constant width that always matches the `defaultContainerWidth` value, you
-will most likely see a layout shift immediately after hydration.
+will most likely see a layout shift immediately after hydration. Alternatively,
+you can provide a fallback skeleton in the `skeleton` prop that will be rendered
+in SSR and swapped with the actual photo album markup after hydration.
 
 ## Credits
 

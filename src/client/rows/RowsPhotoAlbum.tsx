@@ -35,6 +35,7 @@ export default function RowsPhotoAlbum<TPhoto extends Photo>({
   sizes,
   breakpoints,
   defaultContainerWidth,
+  skeleton,
   ...rest
 }: RowsPhotoAlbumProps<TPhoto>) {
   const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
@@ -64,5 +65,11 @@ export default function RowsPhotoAlbum<TPhoto extends Photo>({
     }
   }
 
-  return <StaticPhotoAlbum layout="rows" ref={containerRef} {...{ model, componentsProps, render, onClick, sizes }} />;
+  return (
+    <StaticPhotoAlbum
+      layout="rows"
+      ref={containerRef}
+      {...{ model, componentsProps, render, onClick, sizes, skeleton }}
+    />
+  );
 }
