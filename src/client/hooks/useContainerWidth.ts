@@ -38,10 +38,7 @@ function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly num
   return width;
 }
 
-export default function useContainerWidth(
-  breakpointsArray: number[] | undefined,
-  defaultContainerWidth: number | undefined,
-) {
+export default function useContainerWidth(breakpointsArray: number[] | undefined, defaultContainerWidth?: number) {
   const [[containerWidth], dispatch] = useReducer(containerWidthReducer, [defaultContainerWidth]);
   const breakpoints = useArray(breakpointsArray);
   const observerRef = useRef<ResizeObserver>();

@@ -30,6 +30,7 @@ export default defineConfig({
         "client/columns": "src/client/columns/index.ts",
         "client/masonry": "src/client/masonry/index.ts",
         "client/aggregate": "src/client/aggregate/index.ts",
+        "client/ssr": "src/client/ssr/index.ts",
       },
       formats: ["es"],
     },

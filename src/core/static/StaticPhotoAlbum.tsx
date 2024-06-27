@@ -6,7 +6,7 @@ import PhotoComponent from "./PhotoComponent";
 import { srcSetAndSizes, unwrap } from "../utils";
 import { CommonPhotoAlbumProps, ComponentsProps, LayoutModel, Photo, Render } from "../../types";
 
-type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<
+export type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<
   CommonPhotoAlbumProps<TPhoto>,
   "sizes" | "onClick" | "skeleton"
 > & {
