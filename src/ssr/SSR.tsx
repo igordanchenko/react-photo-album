@@ -1,9 +1,9 @@
 import type React from "react";
 import { cloneElement, isValidElement, useId, useState } from "react";
 
-import { useContainerWidth } from "../hooks";
-import { cssClass } from "../../core/utils";
-import { CommonPhotoAlbumProps } from "../../types";
+import { useContainerWidth } from "../client/hooks";
+import { cssClass } from "../core/utils";
+import { CommonPhotoAlbumProps } from "../types";
 
 export type SSRProps = {
   /** Photo album layout breakpoints. */
@@ -12,6 +12,7 @@ export type SSRProps = {
   children: React.ReactElement<Pick<CommonPhotoAlbumProps, "breakpoints" | "defaultContainerWidth">>;
 };
 
+/** Experimental SSR component. */
 export default function SSR({ breakpoints, children }: SSRProps) {
   const uid = `ssr-${useId().replace(/:/g, "")}`;
   const { containerRef, containerWidth } = useContainerWidth(breakpoints);
