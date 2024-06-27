@@ -6,10 +6,6 @@ export { default as ColumnsPhotoAlbum } from "./client/columns";
 export { default as MasonryPhotoAlbum } from "./client/masonry";
 
 // experimental exports (no semver coverage)
-
-export { default as UnstableSSR } from "./client/ssr";
-export type { SSRProps as UnstableSSRProps } from "./client/ssr";
-
 export { default as UnstableStaticPhotoAlbum } from "./core/static";
 export type { StaticPhotoAlbumProps as UnstableStaticPhotoAlbumProps } from "./core/static";
 

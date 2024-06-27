@@ -757,7 +757,8 @@ markup and the hydration of multiple photo album instances on the client (which
 may be a reasonable compromise if zero CLS is a must-have requirement).
 
 ```tsx
-import { RowsPhotoAlbum, UnstableSSR as SSR } from "react-photo-album";
+import { RowsPhotoAlbum } from "react-photo-album";
+import { UnstableSSR as SSR } from "react-photo-album/ssr";
 import "react-photo-album/rows.css";
 
 import photos from "./photos";
