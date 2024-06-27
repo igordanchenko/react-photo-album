@@ -173,7 +173,10 @@ on the client only after hydration. Please note that unless your photo album is
 of constant width that always matches the `defaultContainerWidth` value, you
 will most likely see a layout shift immediately after hydration. Alternatively,
 you can provide a fallback skeleton in the `skeleton` prop that will be rendered
-in SSR and swapped with the actual photo album markup after hydration.
+in SSR and swapped with the actual photo album markup after hydration. Please
+also refer to the
+[Server-Side Rendering](<https://react-photo-album.com/documentation#Server-SideRendering(SSR)>)
+documentation for a comprehensive list of available solutions.
 
 ## Credits
 

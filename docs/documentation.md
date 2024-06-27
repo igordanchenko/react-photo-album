@@ -687,8 +687,14 @@ the content container padding and the left-hand side navigation menu:
 
 ## Server-Side Rendering (SSR)
 
-By default, [React Photo Album](/) produces an empty markup on the server, but
-several alternative solutions are available.
+By default, [React Photo Album](/) produces an empty markup in SSR because the
+actual container width is usually unknown during server-side rendering. This
+default behavior causes content layout shift after hydration. As a workaround,
+you can specify the `defaultContainerWidth` prop to enable photo album markup
+rendering in SSR. However, that will likely result in the photo album layout
+shift once the photo album re-calculates its layout on the client. With this
+being said, there isn't a perfect solution for SSR, but there are several
+options to choose from, depending on your use case.
 
 ### Default Container Width
 
@@ -696,7 +702,8 @@ To render photo album markup on the server, you can specify the
 `defaultContainerWidth` value. It is a perfect SSR solution if your photo album
 has a constant width in all viewports (e.g., an image picker in a fixed-size
 sidebar). However, if the client-side photo album width doesn't match the
-`defaultContainerWidth`, you are almost guaranteed to see a layout shift.
+`defaultContainerWidth`, you are almost guaranteed to see a layout shift after
+hydration.
 
 ```tsx
 <RowsPhotoAlbum photos={photos} defaultContainerWidth={800} />
@@ -706,8 +713,11 @@ sidebar). However, if the client-side photo album width doesn't match the
 
 Alternatively, you can provide a fallback skeleton in the `skeleton` prop that
 will be rendered in SSR and swapped with the actual photo album markup after
-hydration. This approach allows you to reserve a blank space for the photo album
-markup and avoid a flash of below-the-fold content during hydration.
+hydration. This approach allows you to reserve a blank space on the page for the
+photo album markup and avoid a flash of the below-the-fold content during
+hydration. The downside of this approach is that images don't start downloading
+until after hydration unless you manually add prefetch links to the document
+`<head>`.
 
 ```tsx
 <RowsPhotoAlbum
@@ -715,6 +725,54 @@ markup and avoid a flash of below-the-fold content during hydration.
   skeleton={<div style={{ width: "100%", minHeight: 800 }} />}
 />
 ```
+
+### Visibility Hidden
+
+Another option is to render the photo album on the server with
+`visibility: hidden`. This way, you can avoid a flash of the below-the-fold
+content and allow the browser to start downloading images before hydration.
+
+```tsx
+<RowsPhotoAlbum
+  photos={photos}
+  defaultContainerWidth={800}
+  componentsProps={(containerWidth) =>
+    containerWidth === undefined
+      ? {
+          container: { style: { visibility: "hidden" } },
+        }
+      : {}
+  }
+/>
+```
+
+### Multiple Layouts
+
+The ultimate zero-CLS solution requires pre-rendering multiple layouts on the
+server and displaying the correct one on the client using CSS `@container`
+queries. [React Photo Album](/) provides an experimental `SSR` component
+implementing this approach (the component is currently exported as
+`UnstableSSR`). The downside of this approach is the overhead in SSR-generated
+markup and the hydration of multiple photo album instances on the client (which
+may be a reasonable compromise if zero CLS is a must-have requirement).
+
+```tsx
+import { RowsPhotoAlbum, UnstableSSR as SSR } from "react-photo-album";
+import "react-photo-album/rows.css";
+
+import photos from "./photos";
+
+export default function Gallery() {
+  return (
+    <SSR breakpoints={[300, 600, 900, 1200]}>
+      <RowsPhotoAlbum photos={photos} />
+    </SSR>
+  );
+}
+```
+
+Please share your feedback if you have successfully used this component in your
+project or encountered any issues.
 
 ## Previous Versions
 
