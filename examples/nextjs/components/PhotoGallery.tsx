@@ -1,3 +1,8 @@
+/*
+ * If this example does not work correctly in a sandbox,
+ * you can download and run it locally
+ */
+
 "use client";
 
 import Image from "next/image";
