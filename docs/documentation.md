@@ -754,7 +754,8 @@ queries. [React Photo Album](/) provides an experimental `SSR` component
 implementing this approach (the component is currently exported as
 `UnstableSSR`). The downside of this approach is the overhead in SSR-generated
 markup and the hydration of multiple photo album instances on the client (which
-may be a reasonable compromise if zero CLS is a must-have requirement).
+may be a reasonable compromise if zero CLS is a must-have requirement). You can
+find a live demo in the [Zero CLS SSR](/examples/zero-cls-ssr) example.
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
