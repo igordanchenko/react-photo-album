@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/vitest";
 
-import { act, cleanup, fireEvent } from "./test-utils";
+import { act, cleanup, fireEvent, mockObserver } from "./test-utils";
 
 afterEach(() => {
   cleanup();
@@ -37,13 +37,6 @@ window.resizeTo = (width: number, height: number) => {
   });
 };
 
-global.ResizeObserver = vi.fn().mockImplementation((observer) => {
-  window.addEventListener("resize", observer);
-  return {
-    observe: () => {},
-    unobserve: () => {},
-    disconnect: () => {
-      window.removeEventListener("resize", observer);
-    },
-  };
-});
+global.ResizeObserver = mockObserver("resize");
+
+global.IntersectionObserver = mockObserver("intersect", () => [{ isIntersecting: true }]);

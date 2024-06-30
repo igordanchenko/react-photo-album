@@ -14,6 +14,7 @@ export default {
     "client/columns": "src/client/columns/index.ts",
     "client/masonry": "src/client/masonry/index.ts",
     "client/aggregate": "src/client/aggregate/index.ts",
+    "scroll/index": "src/scroll/index.ts",
     "ssr/index": "src/ssr/index.ts",
   },
   output: { dir: "dist" },

@@ -16,6 +16,10 @@
       "types": "./dist/ssr/index.d.ts",
       "default": "./dist/ssr/index.js"
     },
+    "./scroll": {
+      "types": "./dist/scroll/index.d.ts",
+      "default": "./dist/scroll/index.js"
+    },
     "./rows.css": {
       "types": "./dist/styles/rows.css.d.ts",
       "default": "./dist/styles/rows.css"
@@ -40,6 +44,9 @@
       ],
       "ssr": [
         "dist/ssr/index.d.ts"
+      ],
+      "scroll": [
+        "dist/scroll/index.d.ts"
       ],
       "rows.css": [
         "dist/styles/rows.css.d.ts"
