@@ -1,5 +1,9 @@
 import type React from "react";
-import { render, RenderOptions } from "@testing-library/react";
+import { act, render, RenderOptions } from "@testing-library/react";
+
+function getPhotos(container: HTMLElement) {
+  return container.querySelectorAll(".react-photo-album--photo") as NodeListOf<HTMLElement>;
+}
 
 function getTracks(container: HTMLElement) {
   return container.querySelectorAll(".react-photo-album--track") as NodeListOf<HTMLElement>;
@@ -21,6 +25,7 @@ function customRender(ui: React.ReactElement, options?: RenderOptions) {
 
   return {
     container,
+    getPhotos: () => getPhotos(container),
     getTracks: () => getTracks(container),
     getContainer: () => getContainer(container),
     getContainerWidth: () => getContainerWidth(container),
@@ -28,9 +33,22 @@ function customRender(ui: React.ReactElement, options?: RenderOptions) {
   };
 }
 
-function renderAndMatchSnapshot(ui: React.ReactElement, options?: RenderOptions) {
+export function renderAndMatchSnapshot(ui: React.ReactElement, options?: RenderOptions) {
   expect(customRender(ui, options).asFragment()).toMatchSnapshot();
 }
 
+export function mockObserver(event: string, entries?: () => any) {
+  return vi.fn().mockImplementation((observer) => {
+    const listener = () => {
+      act(() => {
+        observer(entries?.());
+      });
+    };
+    const observe = () => window.addEventListener(event, listener);
+    const unobserve = () => window.removeEventListener(event, listener);
+    return { observe, unobserve, disconnect: unobserve };
+  });
+}
+
 export * from "@testing-library/react";
-export { customRender as render, renderAndMatchSnapshot };
+export { customRender as render };
