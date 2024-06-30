@@ -108,7 +108,7 @@ export default function InfiniteScroll({
         observer.current = new IntersectionObserver(
           (entries) => {
             if (entries.some((entry) => entry.isIntersecting)) {
-              requestIdleCallback(handleFetch);
+              handleFetch();
             }
           },
           { rootMargin },
