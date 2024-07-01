@@ -1,5 +1,8 @@
 import type React from "react";
 
+/** Layout type */
+export type LayoutType = "rows" | "columns" | "masonry";
+
 /** Photo object */
 export interface Photo extends Image {
   /** React `key` attribute. */

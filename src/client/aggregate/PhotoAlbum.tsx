@@ -1,12 +1,12 @@
 import RowsPhotoAlbum from "../rows";
 import ColumnsPhotoAlbum from "../columns";
 import MasonryPhotoAlbum from "../masonry";
-import { ColumnsPhotoAlbumProps, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "../../types";
+import { ColumnsPhotoAlbumProps, LayoutType, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "../../types";
 
 type PhotoAlbumProps<TPhoto extends Photo> =
-  | ({ layout: "rows" } & RowsPhotoAlbumProps<TPhoto>)
-  | ({ layout: "columns" } & ColumnsPhotoAlbumProps<TPhoto>)
-  | ({ layout: "masonry" } & MasonryPhotoAlbumProps<TPhoto>);
+  | ({ layout: Extract<LayoutType, "rows"> } & RowsPhotoAlbumProps<TPhoto>)
+  | ({ layout: Extract<LayoutType, "columns"> } & ColumnsPhotoAlbumProps<TPhoto>)
+  | ({ layout: Extract<LayoutType, "masonry"> } & MasonryPhotoAlbumProps<TPhoto>);
 
 export default function PhotoAlbum<TPhoto extends Photo>({ layout, ...rest }: PhotoAlbumProps<TPhoto>) {
   if (layout === "rows") return <RowsPhotoAlbum {...rest} />;
