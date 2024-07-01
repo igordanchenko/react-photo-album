@@ -757,6 +757,7 @@ import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scro
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
 import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+import "react-photo-album/rows.css";
 
 // ...
 
@@ -778,6 +779,7 @@ export default function Gallery() {
 ```tsx
 import { MasonryPhotoAlbum } from "react-photo-album";
 import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+import "react-photo-album/masonry.css";
 
 // ...
 
