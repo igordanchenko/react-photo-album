@@ -1,10 +1,11 @@
 import type React from "react";
-import { cloneElement, isValidElement, useId, useState } from "react";
+import { cloneElement, isValidElement, useState } from "react";
 
 import { useContainerWidth } from "../client/hooks";
-import { cssClass } from "../core/utils";
 import { CommonPhotoAlbumProps } from "../types";
+import { StyledBreakpoints, useBreakpoints } from "./breakpoints/index";
 
+/** SSR component props. */
 export type SSRProps = {
   /** Photo album layout breakpoints. */
   breakpoints: number[];
@@ -13,8 +14,8 @@ export type SSRProps = {
 };
 
 /** Experimental SSR component. */
-export default function SSR({ breakpoints, children }: SSRProps) {
-  const uid = `ssr-${useId().replace(/:/g, "")}`;
+export default function SSR({ breakpoints: breakpointsProp, children }: SSRProps) {
+  const { breakpoints, containerClass, breakpointClass } = useBreakpoints("ssr", breakpointsProp);
   const { containerRef, containerWidth } = useContainerWidth(breakpoints);
   const [hydratedBreakpoint, setHydratedBreakpoint] = useState<number>();
 
@@ -24,29 +25,18 @@ export default function SSR({ breakpoints, children }: SSRProps) {
     setHydratedBreakpoint(containerWidth);
   }
 
-  const containerClass = cssClass(uid);
-  const breakpointClass = (breakpoint: number) => cssClass(`${uid}-${breakpoint}`);
-
-  const allBreakpoints = [Math.min(...breakpoints) / 2, ...breakpoints];
-  allBreakpoints.sort((a, b) => a - b);
-
   return (
     <>
       {hydratedBreakpoint === undefined && (
-        <style>
-          {[
-            `.${containerClass}{container-type:inline-size}`,
-            `${allBreakpoints.map((breakpoint) => `.${breakpointClass(breakpoint)}`).join()}{display:none}`,
-            ...allBreakpoints.map(
-              (breakpoint, index, array) =>
-                `@container(min-width:${index > 0 ? breakpoint : 0}px)${index < array.length - 1 ? ` and (max-width:${array[index + 1] - 1}px)` : ""}{.${breakpointClass(breakpoint)}{display:block}}`,
-            ),
-          ].join("\n")}
-        </style>
+        <StyledBreakpoints
+          breakpoints={breakpoints}
+          containerClass={containerClass}
+          breakpointClass={breakpointClass}
+        />
       )}
 
       <div ref={containerRef} className={containerClass}>
-        {allBreakpoints.map(
+        {breakpoints.map(
           (breakpoint) =>
             (hydratedBreakpoint === undefined || hydratedBreakpoint === breakpoint) && (
               <div key={breakpoint} className={breakpointClass(breakpoint)}>
