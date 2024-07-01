@@ -1,0 +1,14 @@
+.settings {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-block-end: 16px;
+}
+
+main > p, .loading, .finished, .error {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}

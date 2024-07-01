@@ -685,6 +685,119 @@ the content container padding and the left-hand side navigation menu:
 />
 ```
 
+## Infinite Scroll
+
+You can use the experimental `InfiniteScroll` component to implement an infinite
+scroll feature in your app. The component is currently exported as
+`UnstableInfiniteScroll`. Please share your feedback if you have successfully
+used this component in your project or encountered any issues.
+
+```tsx
+import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+```
+
+<table class="docs">
+  <tbody>
+    <tr>
+      <td><span class="required">children</span></td>
+      <td>ReactElement</td>
+      <td>Photo album component. Must be the only child.</td>
+    </tr>
+    <tr>
+      <td><span class="required">fetch</span></td>
+      <td>(index: number) =&gt; Promise&lt;Photo[] | null&gt;</td>
+      <td>Photo fetcher. Resolve promise with `null` to indicate end of stream.</td>
+    </tr>
+    <tr>
+      <td>photos</td>
+      <td>Photo[]</td>
+      <td>Initial photos (optional).</td>
+    </tr>
+    <tr>
+      <td>retries</td>
+      <td>number</td>
+      <td>
+        <p>Retry attempts.</p>
+        <p>Default value: <span class="font-mono">0</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>singleton</td>
+      <td>boolean</td>
+      <td>Use a single photo album component (masonry layout).</td>
+    </tr>
+    <tr>
+      <td>rootMargin</td>
+      <td>string</td>
+      <td>
+        <p>IntersectionObserver root margin setting.</p>
+        <p>Default value: <span class="font-mono">800px</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>error</td>
+      <td>ReactNode</td>
+      <td>Markup to display when an error occurred.</td>
+    </tr>
+    <tr>
+      <td>loading</td>
+      <td>ReactNode</td>
+      <td>Markup to display while fetching additional photos.</td>
+    </tr>
+    <tr>
+      <td>finished</td>
+      <td>ReactNode</td>
+      <td>Markup to display when no more photos are available.</td>
+    </tr>
+  </tbody>
+</table>
+
+### Rows Layout With Infinite Scroll
+
+```tsx
+import { RowsPhotoAlbum } from "react-photo-album";
+import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+
+// ...
+
+export default function Gallery() {
+  return (
+    <InfiniteScroll photos={initialPhotos} fetch={fetchPhotos}>
+      <RowsPhotoAlbum
+        photos={[]}
+        spacing={20}
+        componentsProps={{ container: { style: { marginBottom: 20 } } }}
+      />
+    </InfiniteScroll>
+  );
+}
+```
+
+### Masonry Layout With Infinite Scroll
+
+```tsx
+import { MasonryPhotoAlbum } from "react-photo-album";
+import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+
+// ...
+
+export default function Gallery() {
+  return (
+    <InfiniteScroll singleton photos={initialPhotos} fetch={fetchPhotos}>
+      <MasonryPhotoAlbum
+        photos={[]}
+        spacing={20}
+        componentsProps={{ container: { style: { marginBottom: 20 } } }}
+      />
+    </InfiniteScroll>
+  );
+}
+```
+
+### Columns Layout With Infinite Scroll
+
+Columns layout is not a good fit for the infinite scroll feature.
+
 ## Server-Side Rendering (SSR)
 
 By default, [React Photo Album](/) produces an empty markup in SSR because the

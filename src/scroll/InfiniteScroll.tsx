@@ -13,23 +13,23 @@ enum Status {
 
 /** InfiniteScroll component props. */
 export type InfiniteScrollProps = {
-  /** Photo fetcher. Return `null` to indicate end of stream. */
+  /** Photo fetcher. Resolve promise with `null` to indicate end of stream. */
   fetch: (index: number) => Promise<Photo[] | null>;
-  /** Initial photos. */
+  /** Initial photos (optional). */
   photos?: Photo[];
   /** Retry attempts. */
   retries?: number;
-  /** Use a single photo album component (masonry layout) */
+  /** Use a single photo album component (masonry layout). */
   singleton?: boolean;
   /** IntersectionObserver root margin setting. */
   rootMargin?: string;
   /** Markup to display when an error occurred. */
   error?: React.ReactNode;
-  /** Markup to display while fetching more photos. */
+  /** Markup to display while fetching additional photos. */
   loading?: React.ReactNode;
   /** Markup to display when no more photos are available. */
   finished?: React.ReactNode;
-  /** Photo album component */
+  /** Photo album component. Must be the only child. */
   children: React.ReactElement<Pick<CommonPhotoAlbumProps, "photos">>;
 };
 
