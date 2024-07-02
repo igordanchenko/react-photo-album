@@ -1,10 +1,9 @@
 import type React from "react";
 import { useState } from "react";
+import { LayoutType } from "react-photo-album";
 
 import { ColumnsExample, MasonryExample, RowsExample } from "./components";
 import "./App.css";
-
-type LayoutType = "rows" | "columns" | "masonry";
 
 export default function App() {
   const [layout, setLayout] = useState<LayoutType>("rows");
