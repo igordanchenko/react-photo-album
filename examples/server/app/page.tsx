@@ -8,7 +8,7 @@ export default function Home() {
     <ServerPhotoAlbum
       layout="rows"
       photos={photos}
-      targetRowHeight={150}
+      targetRowHeight={200}
       breakpoints={[300, 600, 900]}
       sizes={{
         size: "1168px",

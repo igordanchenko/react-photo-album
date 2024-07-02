@@ -912,14 +912,118 @@ export default function Gallery() {
       <td>classNames</td>
       <td>
         &#123;<br/>
-        &nbsp;&nbsp;container?: string;
-        &nbsp;&nbsp;breakpoints?: &#123; [key: number]: string &#125;;
+        &nbsp;&nbsp;container?: string;<br/>
+        &nbsp;&nbsp;breakpoints?: &#123;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;[key: number]: string;<br/> 
+        &nbsp;&nbsp;&#125;<br/>
         &#125;
       </td>
       <td>Custom class names for the container and the breakpoint intervals.</td>
     </tr>
   </tbody>
 </table>
+
+Please share your feedback if you have successfully used this component in your
+project or encountered any issues.
+
+## Server Component
+
+[React Photo Album](/) provides an experimental server component for rendering
+static photo albums on the server with zero client-side JS bundle (the component
+produces pure HTML markup with no client components). The component is currently
+exported as `UnstableServerPhotoAlbum`. You can find a live demo in the
+[Server Component](/examples/server) example.
+
+```tsx
+import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "react-photo-album/server";
+```
+
+<table class="docs">
+  <tbody>
+    <tr>
+      <td><span class="required">layout</span></td>
+      <td>"rows" | "columns" | "masonry"</td>
+      <td>Layout type.</td>
+    </tr>
+    <tr>
+      <td><span class="required">breakpoints</span></td>
+      <td>number[]</td>
+      <td>Photo album layout breakpoints.</td>
+    </tr>
+    <tr>
+      <td>unstyled</td>
+      <td>boolean</td>
+      <td>If `true`, do not include the inline stylesheet.</td>
+    </tr>
+    <tr>
+      <td>classNames</td>
+      <td>
+        &#123;<br/>
+        &nbsp;&nbsp;container?: string;<br/>
+        &nbsp;&nbsp;breakpoints?: &#123;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;[key: number]: string;<br/> 
+        &nbsp;&nbsp;&#125;<br/>
+        &#125;
+      </td>
+      <td>Custom class names for the container and the breakpoint intervals.</td>
+    </tr>
+  </tbody>
+</table>
+
+In addition to the props listed above, `ServerPhotoAlbum` supports all relevant
+props corresponding to the selected layout type except the
+`defaultContainerWidth`, `onClick` and `skeleton`.
+
+### Server Component With Default Styling
+
+```tsx
+import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "react-photo-album/server";
+import "react-photo-album/rows.css";
+
+// ...
+
+export default function Gallery() {
+  return (
+    <ServerPhotoAlbum
+      layout="rows"
+      photos={photos}
+      breakpoints={[300, 600, 900]}
+    />
+  );
+}
+```
+
+### Server Component With Tailwind CSS Styling
+
+Here is an example of custom styling using
+[@tailwindcss/container-queries](https://github.com/tailwindlabs/tailwindcss-container-queries).
+
+```tsx
+import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "react-photo-album/server";
+import "react-photo-album/rows.css";
+
+// ...
+
+export default function Gallery() {
+  return (
+    <ServerPhotoAlbum
+      unstyled
+      layout="rows"
+      photos={photos}
+      breakpoints={[300, 600, 900]}
+      classNames={{
+        container: "@container",
+        breakpoints: {
+          150: "block @[300px]:hidden",
+          300: "hidden @[300px]:block @[600px]:hidden",
+          600: "hidden @[600px]:block @[900px]:hidden",
+          900: "hidden @[900px]:block",
+        },
+      }}
+    />
+  );
+}
+```
 
 Please share your feedback if you have successfully used this component in your
 project or encountered any issues.

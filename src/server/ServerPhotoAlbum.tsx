@@ -33,13 +33,13 @@ type MasonryServerPhotoAlbumProps<TPhoto extends Photo> = NonOptional<
 
 /** ServerPhotoAlbum component props. */
 export type ServerPhotoAlbumProps<TPhoto extends Photo> = {
-  /** if `true`, do not include the inline stylesheet */
+  /** If `true`, do not include the inline stylesheet. */
   unstyled?: boolean;
-  /** custom class names for the container and the breakpoint intervals */
+  /** Custom class names for the container and the breakpoint intervals. */
   classNames?: {
-    /** custom container class name */
+    /** Custom container class name. */
     container?: string;
-    /** custom class names for the breakpoint intervals */
+    /** Custom class names for the breakpoint intervals. */
     breakpoints?: { [key: number]: string };
   };
 } & (
