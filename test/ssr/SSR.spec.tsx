@@ -1,7 +1,7 @@
-import { RowsPhotoAlbum } from "../src";
-import { UnstableSSR as SSR } from "../src/ssr";
-import { render } from "./test-utils";
-import photos from "./photos";
+import { RowsPhotoAlbum } from "../../src";
+import { UnstableSSR as SSR } from "../../src/ssr";
+import { render } from "../test-utils";
+import photos from "../photos";
 
 describe("SSR", () => {
   const breakpoints = [300, 600, 900];

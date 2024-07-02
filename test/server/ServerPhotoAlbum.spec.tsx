@@ -1,7 +1,7 @@
-import { LayoutType } from "../src";
-import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "../src/server";
-import { render } from "./test-utils";
-import photos from "./photos";
+import { LayoutType } from "../../src";
+import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "../../src/server";
+import { render } from "../test-utils";
+import photos from "../photos";
 
 describe("ServerPhotoAlbum", () => {
   const breakpoints = [300, 600, 900];
@@ -40,7 +40,7 @@ describe("ServerPhotoAlbum", () => {
   });
 
   it("doesn't crash with invalid props", () => {
-    const { getTracks, getContainer, rerender } = render(
+    const { getTracks, getPhotoAlbum, rerender } = render(
       <ServerPhotoAlbum
         // @ts-expect-error
         layout="unknown"
@@ -58,7 +58,7 @@ describe("ServerPhotoAlbum", () => {
         breakpoints={breakpoints}
       />,
     );
-    expect(getContainer()).toBe(null);
+    expect(getPhotoAlbum()).toBe(null);
 
     rerender(
       <ServerPhotoAlbum
@@ -68,6 +68,6 @@ describe("ServerPhotoAlbum", () => {
         breakpoints={breakpoints}
       />,
     );
-    expect(getContainer()).toBe(null);
+    expect(getPhotoAlbum()).toBe(null);
   });
 });

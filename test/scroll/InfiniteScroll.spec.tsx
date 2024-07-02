@@ -1,7 +1,7 @@
-import { RowsPhotoAlbum } from "../src";
-import { UnstableInfiniteScroll as InfiniteScroll } from "../src/scroll";
-import { act, fireEvent, render } from "./test-utils";
-import photos from "./photos";
+import { RowsPhotoAlbum } from "../../src";
+import { UnstableInfiniteScroll as InfiniteScroll } from "../../src/scroll";
+import { act, fireEvent, render } from "../test-utils";
+import photos from "../photos";
 
 async function triggerIntersection() {
   await act(() => fireEvent(window, new Event("intersect")));

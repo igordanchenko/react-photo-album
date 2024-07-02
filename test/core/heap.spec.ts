@@ -1,4 +1,4 @@
-import MinHeap, { rankingFunctionComparator } from "../src/layouts/rows/heap";
+import MinHeap, { rankingFunctionComparator } from "../../src/layouts/rows/heap";
 
 const NumericComparator = rankingFunctionComparator<number>((x) => x);
 
