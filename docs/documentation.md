@@ -888,6 +888,39 @@ export default function Gallery() {
 }
 ```
 
+<table class="docs">
+  <tbody>
+    <tr>
+      <td><span class="required">breakpoints</span></td>
+      <td>number[]</td>
+      <td>Photo album layout breakpoints.</td>
+    </tr>
+    <tr>
+      <td><span class="required">children</span></td>
+      <td>ReactElement</td>
+      <td>Photo album instance, which must be the only child.</td>
+    </tr>
+    <tr>
+      <td>unstyled</td>
+      <td>boolean</td>
+      <td>
+        If `true`, do not include the inline stylesheet. Use this option if you
+        are using custom styling solution (e.g., Tailwind CSS) 
+      </td>
+    </tr>
+    <tr>
+      <td>classNames</td>
+      <td>
+        &#123;<br/>
+        &nbsp;&nbsp;container?: string;
+        &nbsp;&nbsp;breakpoints?: &#123; [key: number]: string &#125;;
+        &#125;
+      </td>
+      <td>Custom class names for the container and the breakpoint intervals.</td>
+    </tr>
+  </tbody>
+</table>
+
 Please share your feedback if you have successfully used this component in your
 project or encountered any issues.
 
