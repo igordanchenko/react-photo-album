@@ -1,6 +1,6 @@
-import PhotoAlbum from "../src";
-import { render, renderAndMatchSnapshot } from "./test-utils";
-import photos from "./photos";
+import PhotoAlbum from "../../src";
+import { render, renderAndMatchSnapshot } from "../test-utils";
+import photos from "../photos";
 
 describe("PhotoAlbum", () => {
   it("supports rows layout", () => {

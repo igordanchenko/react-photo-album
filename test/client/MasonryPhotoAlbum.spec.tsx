@@ -1,6 +1,6 @@
-import { ColumnsPhotoAlbum, MasonryPhotoAlbum } from "../src";
-import { render, renderAndMatchSnapshot } from "./test-utils";
-import photos from "./photos";
+import { ColumnsPhotoAlbum, MasonryPhotoAlbum } from "../../src";
+import { render, renderAndMatchSnapshot } from "../test-utils";
+import photos from "../photos";
 
 describe("MasonryPhotoAlbum", () => {
   it("renders without crashing", () => {

@@ -1,6 +1,6 @@
-import { RowsPhotoAlbum } from "../src";
-import { render, renderAndMatchSnapshot } from "./test-utils";
-import photos from "./photos";
+import { RowsPhotoAlbum } from "../../src";
+import { render, renderAndMatchSnapshot } from "../test-utils";
+import photos from "../photos";
 
 describe("RowsPhotoAlbum", () => {
   it("renders without crashing", () => {
@@ -23,7 +23,7 @@ describe("RowsPhotoAlbum", () => {
   });
 
   it("supports rowConstraints", () => {
-    const { rerender, getTracks, getContainer } = render(
+    const { rerender, getTracks, getPhotoAlbum } = render(
       <RowsPhotoAlbum photos={photos} rowConstraints={{ minPhotos: 6 }} />,
     );
     expect(getTracks().length).toBeLessThanOrEqual(4);
@@ -32,7 +32,7 @@ describe("RowsPhotoAlbum", () => {
     expect(getTracks().length).toBeGreaterThanOrEqual(11);
 
     rerender(<RowsPhotoAlbum photos={photos.slice(0, 1)} rowConstraints={{ singleRowMaxHeight: 100 }} />);
-    expect(getContainer()?.style.getPropertyValue("max-width")).toBeTruthy();
+    expect(getPhotoAlbum()?.style.getPropertyValue("max-width")).toBeTruthy();
   });
 
   it("handles impossible layout", () => {

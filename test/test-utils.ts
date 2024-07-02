@@ -9,7 +9,7 @@ function getTracks(container: HTMLElement) {
   return container.querySelectorAll(".react-photo-album--track") as NodeListOf<HTMLElement>;
 }
 
-function getContainer(container: HTMLElement) {
+function getPhotoAlbum(container: HTMLElement) {
   return container.querySelector(".react-photo-album") as HTMLElement | undefined;
 }
 
@@ -27,7 +27,7 @@ function customRender(ui: React.ReactElement, options?: RenderOptions) {
     container,
     getPhotos: () => getPhotos(container),
     getTracks: () => getTracks(container),
-    getContainer: () => getContainer(container),
+    getPhotoAlbum: () => getPhotoAlbum(container),
     getContainerWidth: () => getContainerWidth(container),
     ...rest,
   };
@@ -37,7 +37,7 @@ export function renderAndMatchSnapshot(ui: React.ReactElement, options?: RenderO
   expect(customRender(ui, options).asFragment()).toMatchSnapshot();
 }
 
-export function mockObserver(event: string, entries?: () => any) {
+export function mockObserver(event: string, entries?: () => unknown) {
   return vi.fn().mockImplementation((observer) => {
     const listener = () => {
       act(() => {
