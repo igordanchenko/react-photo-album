@@ -149,4 +149,17 @@ describe("PhotoAlbum", () => {
     window.resizeTo(1024, 768);
     expect(getContainerWidth()).toBe(1024);
   });
+
+  it("forwards ref", () => {
+    const ref = { current: null };
+    const refSetter = vi.spyOn(ref, "current", "set");
+    render(<PhotoAlbum ref={ref} layout="rows" photos={photos} />);
+    expect(refSetter).toHaveBeenCalled();
+  });
+
+  it("forwards callback ref", () => {
+    const callbackRef = vi.fn();
+    render(<PhotoAlbum ref={callbackRef} layout="rows" photos={photos} />);
+    expect(callbackRef).toHaveBeenCalled();
+  });
 });

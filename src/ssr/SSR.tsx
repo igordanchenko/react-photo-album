@@ -1,5 +1,5 @@
 import type React from "react";
-import { cloneElement, isValidElement, useState } from "react";
+import { cloneElement, forwardRef, isValidElement, useState } from "react";
 
 import { clsx } from "../core/utils";
 import { useContainerWidth } from "../client/hooks";
@@ -24,9 +24,12 @@ export type SSRProps = {
 };
 
 /** Experimental SSR component. */
-export default function SSR({ breakpoints: breakpointsProp, unstyled, classNames, children }: SSRProps) {
+function SSR(
+  { breakpoints: breakpointsProp, unstyled, classNames, children }: SSRProps,
+  ref: React.ForwardedRef<HTMLElement>,
+) {
   const { breakpoints, containerClass, breakpointClass } = useBreakpoints("ssr", breakpointsProp);
-  const { containerRef, containerWidth } = useContainerWidth(breakpoints);
+  const { containerRef, containerWidth } = useContainerWidth(ref, breakpoints);
   const [hydratedBreakpoint, setHydratedBreakpoint] = useState<number>();
 
   if (!Array.isArray(breakpoints) || breakpoints.length === 0 || !isValidElement(children)) return null;
@@ -61,3 +64,5 @@ export default function SSR({ breakpoints: breakpointsProp, unstyled, classNames
     </>
   );
 }
+
+export default forwardRef<HTMLElement, SSRProps>(SSR);

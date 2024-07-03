@@ -1,8 +1,18 @@
 import type React from "react";
+import { forwardRef } from "react";
 
 import Component from "./Component";
 import { round } from "../utils";
-import { ComponentsProps, Photo, Render, RenderPhotoContext, RenderPhotoProps } from "../../types";
+import {
+  ComponentsProps,
+  ElementRef,
+  ForwardedRef,
+  JSXElement,
+  Photo,
+  Render,
+  RenderPhotoContext,
+  RenderPhotoProps,
+} from "../../types";
 
 type Unwrap<T> = T extends (args: any) => unknown ? never : T;
 
@@ -16,15 +26,18 @@ type PhotoComponentProps<TPhoto extends Photo> = RenderPhotoProps &
     componentsProps?: Unwrapped<Pick<ComponentsProps<TPhoto>, "wrapper" | "link" | "button" | "image">>;
   };
 
-export default function PhotoComponent<TPhoto extends Photo>({
-  photo,
-  index,
-  width,
-  height,
-  onClick,
-  render: { wrapper, link, button, image, extras } = {},
-  componentsProps: { link: linkProps, button: buttonProps, wrapper: wrapperProps, image: imageProps } = {},
-}: PhotoComponentProps<TPhoto>) {
+function PhotoComponent<TPhoto extends Photo>(
+  {
+    photo,
+    index,
+    width,
+    height,
+    onClick,
+    render: { wrapper, link, button, image, extras } = {},
+    componentsProps: { link: linkProps, button: buttonProps, wrapper: wrapperProps, image: imageProps } = {},
+  }: PhotoComponentProps<TPhoto>,
+  ref: ForwardedRef,
+) {
   const { src, alt, title, href } = photo;
 
   const context = { photo, index, width: round(width, 3), height: round(height, 3) };
@@ -39,9 +52,17 @@ export default function PhotoComponent<TPhoto extends Photo>({
   }
 
   return (
-    <Component variables={{ photoWidth: context.width, photoHeight: context.height }} {...{ context, ...props }}>
+    <Component
+      ref={ref}
+      variables={{ photoWidth: context.width, photoHeight: context.height }}
+      {...{ context, ...props }}
+    >
       <Component as="img" classes="image" render={image} {...{ src, alt, title, context, ...imageProps }} />
       {extras?.({}, context)}
     </Component>
   );
 }
+
+export default forwardRef(PhotoComponent) as <TPhoto extends Photo>(
+  props: PhotoComponentProps<TPhoto> & ElementRef,
+) => JSXElement;

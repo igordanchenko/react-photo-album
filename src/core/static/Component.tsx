@@ -4,30 +4,30 @@ import { forwardRef } from "react";
 import { clsx, cssClass, cssVar, round } from "../utils";
 import { LayoutVariables, RenderFunction } from "../../types";
 
-type BaseProps<Component extends React.ElementType> = Pick<
-  React.ComponentProps<Component>,
+type BaseProps<TComponent extends React.ElementType> = Pick<
+  React.ComponentProps<TComponent>,
   "children" | "style" | "className"
 >;
 
 type PolymorphicRef<Component extends React.ElementType> = React.ComponentPropsWithRef<Component>["ref"];
 
 type ElementProps<
-  Component extends React.ElementType,
-  Context extends {} | void,
-  RenderProps extends BaseProps<Component>,
-> = Partial<RenderProps> &
-  Omit<React.ComponentProps<Component>, keyof RenderProps> & {
-    as?: Component;
-    render?: RenderFunction<RenderProps, Context>;
-    context?: Context;
+  TComponent extends React.ElementType,
+  TContext extends {} | void,
+  TRenderProps extends BaseProps<TComponent>,
+> = Partial<TRenderProps> &
+  Omit<React.ComponentProps<TComponent>, keyof TRenderProps> & {
+    as?: TComponent;
+    render?: RenderFunction<TRenderProps, TContext>;
+    context?: TContext;
     classes?: string | (string | undefined)[];
     variables?: LayoutVariables;
   };
 
-export default forwardRef(function Component<
-  Component extends React.ElementType,
-  Context extends {} | void,
-  RenderProps extends BaseProps<Component>,
+function Component<
+  TComponent extends React.ElementType,
+  TContext extends {} | void,
+  TRenderProps extends BaseProps<TComponent>,
 >(
   {
     as,
@@ -39,8 +39,8 @@ export default forwardRef(function Component<
     className: classNameProp,
     children,
     ...rest
-  }: ElementProps<Component, Context, RenderProps>,
-  ref: PolymorphicRef<Component>,
+  }: ElementProps<TComponent, TContext, TRenderProps>,
+  ref: PolymorphicRef<TComponent>,
 ) {
   const className = clsx(
     ...(Array.isArray(classes) ? classes : [classes]).filter((el) => typeof el === "string").map(cssClass),
@@ -60,12 +60,18 @@ export default forwardRef(function Component<
   const props = { style, className, children, ...rest };
 
   if (render) {
-    const rendered = render({ ref, ...props } as unknown as RenderProps, context as Context);
+    const rendered = render({ ref, ...props } as unknown as TRenderProps, context as TContext);
     if (rendered) return rendered;
   }
 
   const Element = as || "div";
   return <Element ref={ref} {...props} />;
-}) as <Component extends React.ElementType, Context extends {} | void, RenderProps extends BaseProps<Component>>(
-  props: ElementProps<Component, Context, RenderProps> & { ref?: PolymorphicRef<Component> },
+}
+
+export default forwardRef(Component) as <
+  TComponent extends React.ElementType,
+  TContext extends {} | void,
+  TRenderProps extends BaseProps<TComponent>,
+>(
+  props: ElementProps<TComponent, TContext, TRenderProps> & { ref?: PolymorphicRef<TComponent> },
 ) => React.ReactNode;

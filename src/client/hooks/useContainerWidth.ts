@@ -1,6 +1,7 @@
 import { useCallback, useReducer, useRef } from "react";
 
 import useArray from "./useArray";
+import { ForwardedRef } from "../../types";
 
 type State = [containerWidth?: number, scrollbarWidth?: number];
 
@@ -32,13 +33,16 @@ function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly num
   if (width !== undefined && breakpoints && breakpoints.length > 0) {
     const sorted = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
     sorted.push(Math.floor(sorted[sorted.length - 1] / 2));
-    const threshold = width;
-    width = sorted.find((breakpoint, index) => breakpoint <= threshold || index === sorted.length - 1);
+    width = sorted.find((breakpoint, index) => breakpoint <= width! || index === sorted.length - 1);
   }
   return width;
 }
 
-export default function useContainerWidth(breakpointsArray: number[] | undefined, defaultContainerWidth?: number) {
+export default function useContainerWidth(
+  ref: ForwardedRef,
+  breakpointsArray: number[] | undefined,
+  defaultContainerWidth?: number,
+) {
   const [[containerWidth], dispatch] = useReducer(containerWidthReducer, [defaultContainerWidth]);
   const breakpoints = useArray(breakpointsArray);
   const observerRef = useRef<ResizeObserver>();
@@ -57,8 +61,15 @@ export default function useContainerWidth(breakpointsArray: number[] | undefined
         observerRef.current = new ResizeObserver(updateWidth);
         observerRef.current.observe(node);
       }
+
+      if (typeof ref === "function") {
+        ref(node);
+      } else if (ref) {
+        // eslint-disable-next-line no-param-reassign
+        ref.current = node;
+      }
     },
-    [breakpoints],
+    [ref, breakpoints],
   );
 
   return { containerRef, containerWidth };

@@ -233,3 +233,11 @@ export type RenderFunction<Props extends {} | void = void, Context extends {} | 
 export type NonOptional<Props, Keys extends keyof Props> = Required<Pick<Props, Keys>> & Omit<Props, Keys>;
 
 export type ContextAware<Props, Context> = Props | ((context: Context) => Props | undefined);
+
+export type JSXElement = React.JSX.Element;
+
+export type ForwardedRef<T extends HTMLElement = HTMLElement> = React.ForwardedRef<T>;
+
+export type ElementRef<T extends HTMLElement = HTMLElement> = {
+  ref?: React.Ref<T>;
+};
