@@ -6,8 +6,8 @@ export { default as ColumnsPhotoAlbum } from "./client/columns";
 export { default as MasonryPhotoAlbum } from "./client/masonry";
 
 // experimental exports (no semver coverage)
-export { default as UnstableStaticPhotoAlbum } from "./core/static";
-export type { StaticPhotoAlbumProps as UnstableStaticPhotoAlbumProps } from "./core/static";
+export { default as UnstableStaticPhotoAlbum } from "./static";
+export type { StaticPhotoAlbumProps as UnstableStaticPhotoAlbumProps } from "./static";
 
 export { default as unstable_computeRowsLayout } from "./layouts/rows";
 export { default as unstable_computeColumnsLayout } from "./layouts/columns";

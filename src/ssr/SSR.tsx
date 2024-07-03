@@ -1,7 +1,7 @@
 import type React from "react";
 import { cloneElement, forwardRef, isValidElement, useState } from "react";
 
-import { clsx } from "../core/utils";
+import { clsx } from "../utils";
 import { useContainerWidth } from "../client/hooks";
 import { StyledBreakpoints, useBreakpoints } from "./breakpoints";
 import { CommonPhotoAlbumProps } from "../types";

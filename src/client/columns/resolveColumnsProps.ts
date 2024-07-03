@@ -1,4 +1,4 @@
-import { resolveCommonProps, resolveResponsiveParameter } from "../../core/utils";
+import { resolveCommonProps, resolveResponsiveParameter } from "../../utils";
 import { ColumnsPhotoAlbumProps, Photo } from "../../types";
 
 export default function resolveColumnsProps<TPhoto extends Photo>(

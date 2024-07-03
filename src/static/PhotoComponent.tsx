@@ -12,7 +12,7 @@ import {
   Render,
   RenderPhotoContext,
   RenderPhotoProps,
-} from "../../types";
+} from "../types";
 
 type Unwrap<T> = T extends (args: any) => unknown ? never : T;
 

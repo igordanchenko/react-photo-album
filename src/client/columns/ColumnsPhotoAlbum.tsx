@@ -1,7 +1,7 @@
 import { forwardRef, useMemo } from "react";
 
 import { useContainerWidth } from "../hooks";
-import StaticPhotoAlbum from "../../core/static";
+import StaticPhotoAlbum from "../../static";
 import resolveColumnsProps from "./resolveColumnsProps";
 import computeColumnsLayout from "../../layouts/columns";
 import { ColumnsPhotoAlbumProps, ElementRef, ForwardedRef, JSXElement, Photo } from "../../types";
