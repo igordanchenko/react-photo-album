@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import Component from "./Component";
 import PhotoComponent from "./PhotoComponent";
 import { srcSetAndSizes, unwrap } from "../utils";
-import { CommonPhotoAlbumProps, ComponentsProps, LayoutModel, Photo, Render } from "../../types";
+import { CommonPhotoAlbumProps, ComponentsProps, ElementRef, LayoutModel, Photo, Render } from "../../types";
 
 export type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<
   CommonPhotoAlbumProps<TPhoto>,
@@ -16,7 +16,7 @@ export type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<
   componentsProps?: ComponentsProps<TPhoto>;
 };
 
-export default forwardRef(function StaticPhotoAlbum<TPhoto extends Photo>(
+function StaticPhotoAlbum<TPhoto extends Photo>(
   {
     layout,
     sizes,
@@ -33,7 +33,7 @@ export default forwardRef(function StaticPhotoAlbum<TPhoto extends Photo>(
       image: imageProps,
     } = {},
   }: StaticPhotoAlbumProps<TPhoto>,
-  ref: React.ForwardedRef<HTMLDivElement>,
+  ref: React.ForwardedRef<HTMLElement>,
 ) {
   const { spacing, padding, containerWidth, tracks, variables, horizontal } = model || {};
 
@@ -108,6 +108,8 @@ export default forwardRef(function StaticPhotoAlbum<TPhoto extends Photo>(
       {containerWidth === undefined && skeleton}
     </Component>
   );
-}) as <TPhoto extends Photo>(
-  props: StaticPhotoAlbumProps<TPhoto> & { ref?: React.ForwardedRef<HTMLDivElement> },
+}
+
+export default forwardRef(StaticPhotoAlbum) as <TPhoto extends Photo>(
+  props: StaticPhotoAlbumProps<TPhoto> & ElementRef,
 ) => React.ReactNode;

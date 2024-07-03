@@ -1,18 +1,16 @@
-import { useMemo } from "react";
+import { forwardRef, useMemo } from "react";
 
 import { useContainerWidth } from "../hooks";
 import StaticPhotoAlbum from "../../core/static";
 import resolveMasonryProps from "./resolveMasonryProps";
 import computeMasonryLayout from "../../layouts/masonry";
-import { MasonryPhotoAlbumProps, Photo } from "../../types";
+import { ElementRef, ForwardedRef, JSXElement, MasonryPhotoAlbumProps, Photo } from "../../types";
 
-export default function MasonryPhotoAlbum<TPhoto extends Photo>({
-  photos,
-  breakpoints,
-  defaultContainerWidth,
-  ...rest
-}: MasonryPhotoAlbumProps<TPhoto>) {
-  const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
+function MasonryPhotoAlbum<TPhoto extends Photo>(
+  { photos, breakpoints, defaultContainerWidth, ...rest }: MasonryPhotoAlbumProps<TPhoto>,
+  ref: ForwardedRef,
+) {
+  const { containerRef, containerWidth } = useContainerWidth(ref, breakpoints, defaultContainerWidth);
 
   const { spacing, padding, columns, ...restProps } = resolveMasonryProps(containerWidth, { photos, ...rest });
 
@@ -26,3 +24,7 @@ export default function MasonryPhotoAlbum<TPhoto extends Photo>({
 
   return <StaticPhotoAlbum layout="masonry" ref={containerRef} model={model} {...restProps} />;
 }
+
+export default forwardRef(MasonryPhotoAlbum) as <TPhoto extends Photo>(
+  props: MasonryPhotoAlbumProps<TPhoto> & ElementRef,
+) => JSXElement;

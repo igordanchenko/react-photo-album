@@ -1,18 +1,16 @@
-import { useMemo } from "react";
+import { forwardRef, useMemo } from "react";
 
 import { useContainerWidth } from "../hooks";
 import StaticPhotoAlbum from "../../core/static";
 import resolveRowsProps from "./resolveRowsProps";
 import computeRowsLayout from "../../layouts/rows";
-import { Photo, RowsPhotoAlbumProps } from "../../types";
+import { ElementRef, ForwardedRef, JSXElement, Photo, RowsPhotoAlbumProps } from "../../types";
 
-export default function RowsPhotoAlbum<TPhoto extends Photo>({
-  photos,
-  breakpoints,
-  defaultContainerWidth,
-  ...rest
-}: RowsPhotoAlbumProps<TPhoto>) {
-  const { containerRef, containerWidth } = useContainerWidth(breakpoints, defaultContainerWidth);
+function RowsPhotoAlbum<TPhoto extends Photo>(
+  { photos, breakpoints, defaultContainerWidth, ...rest }: RowsPhotoAlbumProps<TPhoto>,
+  ref: ForwardedRef,
+) {
+  const { containerRef, containerWidth } = useContainerWidth(ref, breakpoints, defaultContainerWidth);
 
   const { spacing, padding, targetRowHeight, minPhotos, maxPhotos, ...restProps } = resolveRowsProps(containerWidth, {
     photos,
@@ -29,3 +27,7 @@ export default function RowsPhotoAlbum<TPhoto extends Photo>({
 
   return <StaticPhotoAlbum layout="rows" ref={containerRef} model={model} {...restProps} />;
 }
+
+export default forwardRef(RowsPhotoAlbum) as <TPhoto extends Photo>(
+  props: RowsPhotoAlbumProps<TPhoto> & ElementRef,
+) => JSXElement;
