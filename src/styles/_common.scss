@@ -1,7 +1,7 @@
 .react-photo-album {
   display: flex;
 
-  & * {
+  &, & * {
     box-sizing: border-box;
   }
 
