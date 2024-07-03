@@ -1,4 +1,4 @@
-import { RowsPhotoAlbum } from "../../src";
+import { MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
 import { UnstableInfiniteScroll as InfiniteScroll } from "../../src/scroll";
 import { act, fireEvent, render } from "../test-utils";
 import photos from "../photos";
@@ -15,7 +15,7 @@ describe("InfiniteScroll", () => {
   it("supports initial photos", () => {
     const { getPhotos } = render(
       <InfiniteScroll singleton fetch={fetcher} photos={photos}>
-        <RowsPhotoAlbum photos={[]} />
+        <MasonryPhotoAlbum photos={[]} />
       </InfiniteScroll>,
     );
     expect(getPhotos().length).toBe(photos.length);
@@ -64,5 +64,20 @@ describe("InfiniteScroll", () => {
     expect(queryByText("Error")).toBeTruthy();
 
     vi.useRealTimers();
+  });
+
+  it("unloads offscreen photos", async () => {
+    const { getPhotos } = render(
+      <InfiniteScroll singleton fetch={fetcher} photos={photos}>
+        <RowsPhotoAlbum photos={[]} />
+      </InfiniteScroll>,
+    );
+
+    await triggerIntersection();
+    expect(getPhotos().length).toBe(photos.length);
+
+    window.isIntersecting = false;
+    await triggerIntersection();
+    expect(getPhotos().length).toBe(0);
   });
 });

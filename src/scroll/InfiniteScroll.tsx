@@ -1,8 +1,10 @@
 import type React from "react";
-import { cloneElement, useCallback, useRef, useState } from "react";
+import { Children, cloneElement, isValidElement, useCallback, useRef, useState } from "react";
 
 import useEventCallback from "./useEventCallback";
-import { CommonPhotoAlbumProps, Photo } from "../types";
+import { CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
+import Offscreen from "./Offscreen";
+import useIntersectionObserver from "./useIntersectionObserver";
 
 enum Status {
   IDLE,
@@ -21,16 +23,18 @@ export type InfiniteScrollProps = {
   retries?: number;
   /** Use a single photo album component (masonry layout). */
   singleton?: boolean;
-  /** IntersectionObserver root margin setting. */
-  rootMargin?: string;
   /** Markup to display when an error occurred. */
   error?: React.ReactNode;
   /** Markup to display while fetching additional photos. */
   loading?: React.ReactNode;
   /** Markup to display when no more photos are available. */
   finished?: React.ReactNode;
+  /** Fetcher `IntersectionObserver` root margin setting. Default: `800px` */
+  fetchRootMargin?: string;
+  /** Offscreen `IntersectionObserver` root margin setting. Default: `2000px` */
+  offscreenRootMargin?: string;
   /** Photo album component. Must be the only child. */
-  children: React.ReactElement<Pick<CommonPhotoAlbumProps, "photos">>;
+  children: React.ReactElement<Pick<CommonPhotoAlbumProps, "photos" | "render">>;
 };
 
 /** InfiniteScroll component. */
@@ -39,17 +43,19 @@ export default function InfiniteScroll({
   fetch,
   retries = 0,
   singleton,
-  rootMargin = "800px",
   error,
   loading,
   finished,
   children,
+  fetchRootMargin = "800px",
+  offscreenRootMargin = "2000px",
 }: InfiniteScrollProps) {
   const [status, setStatus] = useState<Status>(Status.IDLE);
   const [photos, setPhotos] = useState<Photo[][]>(() => (initialPhotos ? [initialPhotos] : []));
 
+  const { observe, unobserve } = useIntersectionObserver(fetchRootMargin);
+
   const fetching = useRef(false);
-  const observer = useRef<IntersectionObserver>();
 
   const fetchWithRetry = useEventCallback((index: number) => {
     let attempt = 1;
@@ -101,35 +107,55 @@ export default function InfiniteScroll({
 
   const sentinelRef = useCallback(
     (node: HTMLDivElement | null) => {
-      observer.current?.disconnect();
-      observer.current = undefined;
+      unobserve();
 
-      if (node && typeof IntersectionObserver !== "undefined") {
-        observer.current = new IntersectionObserver(
-          (entries) => {
-            if (entries.some((entry) => entry.isIntersecting)) {
-              handleFetch();
-            }
-          },
-          { rootMargin },
-        );
-        observer.current.observe(node);
+      if (node) {
+        observe(node, ({ isIntersecting }) => {
+          if (isIntersecting) {
+            handleFetch();
+          }
+        });
       }
     },
-    [rootMargin, handleFetch],
+    [observe, unobserve, handleFetch],
   );
 
   return (
     <>
       {singleton
-        ? cloneElement(children, { photos: photos.flatMap((batch) => batch) })
-        : photos.map((batch, index) =>
-            cloneElement(children, {
+        ? cloneElement(children, {
+            photos: photos.flatMap((batch) => batch),
+            render: {
+              ...children.props.render,
+              // eslint-disable-next-line react/no-unstable-nested-components
+              track: ({ children: trackChildren, ...rest }: RenderTrackProps) => (
+                <div {...rest}>
+                  {Children.map(
+                    trackChildren,
+                    (child, index) =>
+                      isValidElement(child) && (
+                        <Offscreen
+                          // eslint-disable-next-line react/no-array-index-key
+                          key={index}
+                          rootMargin={offscreenRootMargin}
+                        >
+                          {child}
+                        </Offscreen>
+                      ),
+                  )}
+                </div>
+              ),
+            },
+          })
+        : photos.map((batch, index) => (
+            <Offscreen
               // eslint-disable-next-line react/no-array-index-key
-              key: index,
-              photos: batch,
-            }),
-          )}
+              key={index}
+              rootMargin={offscreenRootMargin}
+            >
+              {cloneElement(children, { photos: batch })}
+            </Offscreen>
+          ))}
 
       {status === Status.ERROR && error}
       {status === Status.LOADING && loading}

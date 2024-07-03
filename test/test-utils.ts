@@ -37,16 +37,29 @@ export function renderAndMatchSnapshot(ui: React.ReactElement, options?: RenderO
   expect(customRender(ui, options).asFragment()).toMatchSnapshot();
 }
 
-export function mockObserver(event: string, entries?: () => unknown) {
-  return vi.fn().mockImplementation((observer) => {
+export function mockObserver<MockEntry extends {}>(event: string, mockEntry?: () => MockEntry) {
+  return vi.fn().mockImplementation((callback) => {
+    const targets: Element[] = [];
+
     const listener = () => {
       act(() => {
-        observer(entries?.());
+        callback(targets.map((target) => ({ target, ...mockEntry?.() })));
       });
     };
-    const observe = () => window.addEventListener(event, listener);
-    const unobserve = () => window.removeEventListener(event, listener);
-    return { observe, unobserve, disconnect: unobserve };
+
+    window.addEventListener(event, listener);
+
+    return {
+      observe: (target: Element) => {
+        targets.push(target);
+      },
+      unobserve: (target: Element) => {
+        targets.splice(targets.indexOf(target), 1);
+      },
+      disconnect: () => {
+        window.removeEventListener(event, listener);
+      },
+    };
   });
 }
 
