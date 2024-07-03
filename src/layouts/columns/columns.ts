@@ -1,5 +1,5 @@
 import findShortestPathLengthN from "./shortestPath";
-import { ratio } from "../../core/utils";
+import { ratio } from "../../utils";
 import { LayoutModel, Photo } from "../../types";
 
 // return function that gets the neighboring nodes of node and returns costs

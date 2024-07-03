@@ -1,4 +1,4 @@
-import { CommonPhotoAlbumProps, Photo, ResponsiveParameter } from "../../types";
+import { CommonPhotoAlbumProps, Photo, ResponsiveParameter } from "../types";
 
 const breakpoints = Object.freeze([1200, 600, 300, 0]);
 

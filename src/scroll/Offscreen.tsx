@@ -1,5 +1,6 @@
 import type React from "react";
 import { cloneElement, useCallback, useState } from "react";
+
 import useIntersectionObserver from "./useIntersectionObserver";
 
 type Placeholder = {

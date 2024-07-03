@@ -1,5 +1,6 @@
 import { useId } from "react";
-import { cssClass } from "../../core/utils/index";
+
+import { cssClass } from "../../utils";
 
 function convertBreakpoints(breakpoints: number[]) {
   if (!breakpoints || breakpoints.length === 0) return [];

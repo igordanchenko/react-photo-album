@@ -4,8 +4,8 @@ export default {
   input: {
     types: "src/types.ts",
     index: "src/index.ts",
-    "core/utils": "src/core/utils/index.ts",
-    "core/static": "src/core/static/index.ts",
+    "utils/index": "src/utils/index.ts",
+    "static/index": "src/static/index.ts",
     "layouts/rows": "src/layouts/rows/index.ts",
     "layouts/columns": "src/layouts/columns/index.ts",
     "layouts/masonry": "src/layouts/masonry/index.ts",

@@ -1,5 +1,5 @@
 import round from "./round";
-import { Photo, ResponsiveSizes } from "../../types";
+import { Photo, ResponsiveSizes } from "../types";
 
 export default function srcSetAndSizes(
   photo: Photo,

@@ -1,5 +1,5 @@
 import findShortestPath from "./dijkstra";
-import { ratio, round } from "../../core/utils";
+import { ratio, round } from "../../utils";
 import { LayoutModel, Photo } from "../../types";
 
 // guesstimate how many neighboring nodes should be searched based on

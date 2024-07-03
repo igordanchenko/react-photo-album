@@ -1,5 +1,5 @@
-import { clsx } from "../core/utils";
-import StaticPhotoAlbum from "../core/static";
+import { clsx } from "../utils";
+import StaticPhotoAlbum from "../static";
 import computeRowsLayout from "../layouts/rows";
 import computeColumnsLayout from "../layouts/columns";
 import computeMasonryLayout from "../layouts/masonry";

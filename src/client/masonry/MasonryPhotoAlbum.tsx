@@ -1,7 +1,7 @@
 import { forwardRef, useMemo } from "react";
 
 import { useContainerWidth } from "../hooks";
-import StaticPhotoAlbum from "../../core/static";
+import StaticPhotoAlbum from "../../static";
 import resolveMasonryProps from "./resolveMasonryProps";
 import computeMasonryLayout from "../../layouts/masonry";
 import { ElementRef, ForwardedRef, JSXElement, MasonryPhotoAlbumProps, Photo } from "../../types";
