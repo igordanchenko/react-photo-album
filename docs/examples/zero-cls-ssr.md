@@ -1,7 +1,7 @@
 # Zero CLS SSR
 
 This example demonstrates the use of the experimental
-[SSR component](</documentation#Server-SideRendering(SSR)_MultipleLayouts>) that
+[SSR component](</documentation#Server-SideRendering(SSR)_SSRComponent>) that
 helps to achieve zero CLS in SSR.
 
 ## Live Demo
