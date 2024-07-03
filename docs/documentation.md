@@ -869,7 +869,7 @@ content and allow the browser to start downloading images before hydration.
 />
 ```
 
-### Multiple Layouts
+### SSR Component
 
 The ultimate zero-CLS solution requires pre-rendering multiple layouts on the
 server and displaying the correct one on the client using CSS `@container`
