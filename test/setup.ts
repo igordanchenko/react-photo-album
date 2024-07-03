@@ -2,15 +2,21 @@ import "@testing-library/jest-dom/vitest";
 
 import { act, cleanup, fireEvent, mockObserver } from "./test-utils";
 
-afterEach(() => {
-  cleanup();
-});
-
 declare global {
   interface Window {
     scrollbarWidth?: number;
+    isIntersecting?: boolean;
   }
 }
+
+beforeEach(() => {
+  window.scrollbarWidth = 0;
+  window.isIntersecting = true;
+});
+
+afterEach(() => {
+  cleanup();
+});
 
 Object.defineProperties(window.HTMLElement.prototype, {
   clientWidth: {
@@ -39,4 +45,4 @@ window.resizeTo = (width: number, height: number) => {
 
 global.ResizeObserver = mockObserver("resize");
 
-global.IntersectionObserver = mockObserver("intersect", () => [{ isIntersecting: true }]);
+global.IntersectionObserver = mockObserver("intersect", () => ({ isIntersecting: window.isIntersecting }));

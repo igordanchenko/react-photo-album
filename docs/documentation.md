@@ -727,11 +727,19 @@ import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scro
       <td>Use a single photo album component (masonry layout).</td>
     </tr>
     <tr>
-      <td>rootMargin</td>
+      <td>fetchRootMargin</td>
       <td>string</td>
       <td>
-        <p>IntersectionObserver root margin setting.</p>
+        <p>Fetcher `IntersectionObserver` root margin setting.</p>
         <p>Default value: <span class="font-mono">800px</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>offscreenRootMargin</td>
+      <td>string</td>
+      <td>
+        <p>Offscreen `IntersectionObserver` root margin setting.</p>
+        <p>Default value: <span class="font-mono">2000px</span></p>
       </td>
     </tr>
     <tr>
