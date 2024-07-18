@@ -102,7 +102,7 @@
     "build:fixup": "node fixup-dist.js",
     "start": "npm-run-all clean --parallel \"build:* -- -w\"",
     "lint": "eslint .",
-    "test": "vitest run --coverage",
+    "test": "vitest run",
     "dev": "vite --config dev/vite.config.ts"
   },
   "peerDependencies": {
