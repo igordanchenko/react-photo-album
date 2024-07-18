@@ -7,11 +7,20 @@ import cleanup from "rollup-plugin-cleanup";
 
 export default defineConfig({
   test: {
-    globals: true,
     dir: "test",
+    globals: true,
     environment: "jsdom",
-    coverage: { include: ["src"] },
-    setupFiles: "./test/setup.ts",
+    setupFiles: "./test/vitest.setup.ts",
+    coverage: {
+      all: true,
+      enabled: true,
+      include: ["src"],
+      thresholds: { 100: true },
+      reporter: [
+        ["text", { skipEmpty: true }],
+        ["html", { skipEmpty: true }],
+      ],
+    },
   },
   build: {
     minify: false,
