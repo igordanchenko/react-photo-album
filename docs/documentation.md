@@ -685,6 +685,29 @@ the content container padding and the left-hand side navigation menu:
 />
 ```
 
+## Styling Focus Indicators
+
+[React Photo Album](/) does not provide an opinionated styling for keyboard
+focus indicators, so buttons and links are styled with browser-default focus
+indicator styles. You can implement your own styles to match your website
+design. Here is an example you can use as a starting point.
+
+```css
+.react-photo-album--link:focus-visible,
+.react-photo-album--button:focus-visible {
+  outline: 9px double white;
+  box-shadow: 0 0 0 6px black;
+}
+
+@supports not selector(:focus-visible) {
+  .react-photo-album--link:focus,
+  .react-photo-album--button:focus {
+    outline: 9px double white;
+    box-shadow: 0 0 0 6px black;
+  }
+}
+```
+
 ## Infinite Scroll
 
 You can use the experimental `InfiniteScroll` component to implement an infinite
