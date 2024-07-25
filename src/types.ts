@@ -44,7 +44,7 @@ export interface CommonPhotoAlbumProps<TPhoto extends Photo = Photo> {
   /** Default container width in SSR. */
   defaultContainerWidth?: number;
   /** Photo click callback. */
-  onClick?: (props: ClickHandlerProps<TPhoto>) => void;
+  onClick?: ClickHandler<TPhoto>;
   /** Custom render functions. */
   render?: ResponsiveParameter<Render<TPhoto>>;
   /** Additional HTML attributes to be passed to the rendered elements. */
@@ -129,41 +129,54 @@ export type LayoutVariables = { [key: string]: string | number | undefined };
 /** Responsive parameter */
 export type ResponsiveParameter<Value = number> = Value | ((containerWidth: number) => Value);
 
-/** Custom render functions */
-export type Render<TPhoto extends Photo = Photo> = {
-  /** Custom container render function. */
-  container?: RenderFunction<RenderContainerProps>;
-  /** Custom track render function. */
-  track?: RenderFunction<RenderTrackProps>;
-  /** Custom wrapper render function. */
-  wrapper?: RenderFunction<RenderWrapperProps, RenderWrapperContext<TPhoto>>;
-  /** Custom link render function. */
-  link?: RenderFunction<RenderLinkProps, RenderLinkContext<TPhoto>>;
-  /** Custom button render function. */
-  button?: RenderFunction<RenderButtonProps, RenderButtonContext<TPhoto>>;
-  /** Custom image render function. */
-  image?: RenderFunction<RenderImageProps, RenderImageContext<TPhoto>>;
-  /** Custom photo render function. */
-  photo?: RenderFunction<RenderPhotoProps, RenderPhotoContext<TPhoto>>;
-  /** Custom extra markup render function. */
-  extras?: RenderFunction<{}, RenderPhotoContext<TPhoto>>;
-};
-
 /** Components props */
 export type ComponentsProps<TPhoto extends Photo = Photo> = {
   /** Additional HTML attributes for the outer `<div>` container. */
-  container?: React.ComponentPropsWithoutRef<"div">;
+  container?: ContainerComponentProps;
   /** Additional HTML attributes for the row / column `<div>` container. */
-  track?: React.ComponentPropsWithoutRef<"div">;
+  track?: TrackComponentProps;
   /** Additional HTML attributes for the image `<div>` wrapper. */
-  wrapper?: ContextAware<React.ComponentPropsWithoutRef<"div">, RenderWrapperContext<TPhoto>>;
+  wrapper?: WrapperComponentProps<TPhoto>;
   /** Additional HTML attributes for the photo `<a>` link. */
-  link?: ContextAware<React.ComponentPropsWithoutRef<"a">, RenderLinkContext<TPhoto>>;
+  link?: LinkComponentProps<TPhoto>;
   /** Additional HTML attributes for the photo `<button>` element. */
-  button?: ContextAware<React.ComponentPropsWithoutRef<"button">, RenderButtonContext<TPhoto>>;
+  button?: ButtonComponentProps<TPhoto>;
   /** Additional HTML attributes for the photo `<img>` element. */
-  image?: ContextAware<React.ComponentPropsWithoutRef<"img">, RenderImageContext<TPhoto>>;
+  image?: ImageComponentProps<TPhoto>;
 };
+
+/** Container component props */
+export type ContainerComponentProps = React.ComponentPropsWithoutRef<"div">;
+
+/** Track component props */
+export type TrackComponentProps = React.ComponentPropsWithoutRef<"div">;
+
+/** Wrapper component props */
+export type WrapperComponentProps<TPhoto extends Photo = Photo> = ContextAware<
+  React.ComponentPropsWithoutRef<"div">,
+  RenderWrapperContext<TPhoto>
+>;
+
+/** Link component props */
+export type LinkComponentProps<TPhoto extends Photo = Photo> = ContextAware<
+  React.ComponentPropsWithoutRef<"a">,
+  RenderLinkContext<TPhoto>
+>;
+
+/** Button component props */
+export type ButtonComponentProps<TPhoto extends Photo = Photo> = ContextAware<
+  React.ComponentPropsWithoutRef<"button">,
+  RenderButtonContext<TPhoto>
+>;
+
+/** Image component props */
+export type ImageComponentProps<TPhoto extends Photo = Photo> = ContextAware<
+  React.ComponentPropsWithoutRef<"img">,
+  RenderImageContext<TPhoto>
+>;
+
+/** Click handler */
+export type ClickHandler<TPhoto extends Photo = Photo> = (props: ClickHandlerProps<TPhoto>) => void;
 
 /** Click callback props */
 export type ClickHandlerProps<TPhoto extends Photo = Photo> = {
@@ -175,25 +188,79 @@ export type ClickHandlerProps<TPhoto extends Photo = Photo> = {
   index: number;
 };
 
+/** Custom render functions */
+export type Render<TPhoto extends Photo = Photo> = {
+  /** Custom container render function. */
+  container?: RenderContainer;
+  /** Custom track render function. */
+  track?: RenderTrack;
+  /** Custom wrapper render function. */
+  wrapper?: RenderWrapper<TPhoto>;
+  /** Custom link render function. */
+  link?: RenderLink<TPhoto>;
+  /** Custom button render function. */
+  button?: RenderButton<TPhoto>;
+  /** Custom image render function. */
+  image?: RenderImage<TPhoto>;
+  /** Custom photo render function. */
+  photo?: RenderPhoto<TPhoto>;
+  /** Custom extra markup render function. */
+  extras?: RenderExtras<TPhoto>;
+};
+
+/** Render container */
+export type RenderContainer = RenderFunction<RenderContainerProps>;
+
+/** Render container props */
 export type RenderContainerProps = React.ComponentPropsWithRef<"div">;
 
+/** Render track */
+export type RenderTrack = RenderFunction<RenderTrackProps>;
+
+/** Render track props */
 export type RenderTrackProps = React.ComponentPropsWithoutRef<"div">;
 
+/** Render wrapper */
+export type RenderWrapper<TPhoto extends Photo = Photo> = RenderFunction<
+  RenderWrapperProps,
+  RenderWrapperContext<TPhoto>
+>;
+
+/** Render wrapper props */
 export type RenderWrapperProps = React.ComponentPropsWithoutRef<"div">;
 
+/** Render wrapper context */
 export type RenderWrapperContext<TPhoto extends Photo = Photo> = RenderPhotoContext<TPhoto>;
 
+/** Render link */
+export type RenderLink<TPhoto extends Photo = Photo> = RenderFunction<RenderLinkProps, RenderLinkContext<TPhoto>>;
+
+/** Render link props */
 export type RenderLinkProps = NonOptional<React.ComponentPropsWithoutRef<"a">, "href">;
 
+/** Render link context */
 export type RenderLinkContext<TPhoto extends Photo = Photo> = RenderPhotoContext<TPhoto>;
 
+/** Render button */
+export type RenderButton<TPhoto extends Photo = Photo> = RenderFunction<RenderButtonProps, RenderButtonContext<TPhoto>>;
+
+/** Render button props */
 export type RenderButtonProps = React.ComponentPropsWithoutRef<"button">;
 
+/** Render button context */
 export type RenderButtonContext<TPhoto extends Photo = Photo> = RenderPhotoContext<TPhoto>;
 
+/** Render image */
+export type RenderImage<TPhoto extends Photo = Photo> = RenderFunction<RenderImageProps, RenderImageContext<TPhoto>>;
+
+/** Render image props */
 export type RenderImageProps = NonOptional<React.ComponentPropsWithoutRef<"img">, "src">;
 
+/** Render image context */
 export type RenderImageContext<TPhoto extends Photo = Photo> = RenderPhotoContext<TPhoto>;
+
+/** Render photo */
+export type RenderPhoto<TPhoto extends Photo = Photo> = RenderFunction<RenderPhotoProps, RenderPhotoContext<TPhoto>>;
 
 /** Render photo props */
 export type RenderPhotoProps = {
@@ -212,6 +279,9 @@ export type RenderPhotoContext<TPhoto extends Photo = Photo> = {
   /** Rendered photo height in pixels. */
   height: number;
 };
+
+/** Render extras */
+export type RenderExtras<TPhoto extends Photo = Photo> = RenderFunction<{}, RenderPhotoContext<TPhoto>>;
 
 /** Render function */
 export type RenderFunction<Props extends {} | void = void, Context extends {} | void = void> = [Context] extends [void]
