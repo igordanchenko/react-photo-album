@@ -10,7 +10,7 @@ helps to achieve zero CLS in SSR.
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/next/examples/zero-cls-ssr" file="components/PhotoGallery.tsx" title="react-photo-album-zero-cls-ssr" description="react-photo-album zero cls ssr" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/zero-cls-ssr" file="components/PhotoGallery.tsx" title="react-photo-album-zero-cls-ssr" description="react-photo-album zero cls ssr" />
 
 ## Source Code
 

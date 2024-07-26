@@ -9,7 +9,7 @@ This example demonstrates the use of the experimental
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/next/examples/server" file="app/page.tsx" title="react-photo-album-server-component" description="react-photo-album server component" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/server" file="app/page.tsx" title="react-photo-album-server-component" description="react-photo-album server component" />
 
 ## Source Code
 

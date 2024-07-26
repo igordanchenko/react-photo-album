@@ -19,7 +19,7 @@ export default function App() {
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/next/examples/masonry" file="src/App.tsx" title="react-photo-album-masonry" description="react-photo-album masonry layout" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/masonry" file="src/App.tsx" title="react-photo-album-masonry" description="react-photo-album masonry layout" />
 
 ## Source Code
 

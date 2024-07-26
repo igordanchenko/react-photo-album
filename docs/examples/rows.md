@@ -19,7 +19,7 @@ export default function App() {
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/next/examples/rows" file="src/App.tsx" title="react-photo-album-rows" description="react-photo-album rows layout" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/rows" file="src/App.tsx" title="react-photo-album-rows" description="react-photo-album rows layout" />
 
 ## Source Code
 
