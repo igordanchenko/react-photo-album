@@ -19,7 +19,7 @@ export default function App() {
 
 ## Sandbox
 
-<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/next/examples/columns" file="src/App.tsx" title="react-photo-album-columns" description="react-photo-album columns layout" />
+<StackBlitzLink href="github/igordanchenko/react-photo-album/tree/main/examples/columns" file="src/App.tsx" title="react-photo-album-columns" description="react-photo-album columns layout" />
 
 ## Source Code
 
