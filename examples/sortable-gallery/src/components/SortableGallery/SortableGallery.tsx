@@ -91,13 +91,11 @@ export default function SortableGallery<TPhoto extends Photo, TGalleryType exten
     index: number,
     photo: TPhoto,
     props: ComponentProps<any>,
-  ) => {
-    return (
-      <Sortable key={index} id={(photo as SortablePhoto<TPhoto>).id}>
-        <Component {...props} />
-      </Sortable>
-    );
-  };
+  ) => (
+    <Sortable key={index} id={(photo as SortablePhoto<TPhoto>).id}>
+      <Component {...props} />
+    </Sortable>
+  );
 
   return (
     <DndContext
