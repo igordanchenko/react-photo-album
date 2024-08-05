@@ -724,17 +724,28 @@ import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scro
     <tr>
       <td><span class="required">children</span></td>
       <td>ReactElement</td>
-      <td>Photo album component. Must be the only child.</td>
+      <td>The photo album component, which must be the only child.</td>
     </tr>
     <tr>
       <td><span class="required">fetch</span></td>
       <td>(index: number) =&gt; Promise&lt;Photo[] | null&gt;</td>
-      <td>Photo fetcher. Resolve promise with `null` to indicate end of stream.</td>
+      <td>
+        Photo fetcher. Resolve the promise with `null` to indicate the end of 
+        the stream.
+      </td>
     </tr>
     <tr>
       <td>photos</td>
       <td>Photo[]</td>
       <td>Initial photos (optional).</td>
+    </tr>
+    <tr>
+      <td>onClick</td>
+      <td>(&#123; photos, photo, index, event &#125;) => void</td>
+      <td>
+        Photo click callback. The `photos` parameter represents a flat array of 
+        all fetched photos.
+      </td>
     </tr>
     <tr>
       <td>retries</td>

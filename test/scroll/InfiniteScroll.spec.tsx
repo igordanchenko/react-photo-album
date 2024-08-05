@@ -80,4 +80,20 @@ describe("InfiniteScroll", () => {
     await triggerIntersection();
     expect(getPhotos().length).toBe(0);
   });
+
+  it("supports the onClick callback", async () => {
+    const onClick = vi.fn();
+
+    const { getAllByRole } = render(
+      <InfiniteScroll singleton fetch={fetcher} photos={photos} onClick={onClick}>
+        <RowsPhotoAlbum photos={[]} />
+      </InfiniteScroll>,
+    );
+
+    act(() => {
+      getAllByRole("button")[0].click();
+    });
+
+    expect(onClick).toHaveBeenCalled();
+  });
 });

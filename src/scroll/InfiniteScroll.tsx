@@ -4,7 +4,7 @@ import { Children, cloneElement, isValidElement, useCallback, useRef, useState }
 import Offscreen from "./Offscreen";
 import useEventCallback from "./useEventCallback";
 import useIntersectionObserver from "./useIntersectionObserver";
-import { CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
+import { ClickHandlerProps, CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
 
 enum Status {
   IDLE,
@@ -14,11 +14,13 @@ enum Status {
 }
 
 /** InfiniteScroll component props. */
-export type InfiniteScrollProps = {
+export type InfiniteScrollProps<TPhoto extends Photo = Photo> = {
   /** Photo fetcher. Resolve promise with `null` to indicate end of stream. */
-  fetch: (index: number) => Promise<Photo[] | null>;
+  fetch: (index: number) => Promise<TPhoto[] | null>;
   /** Initial photos (optional). */
-  photos?: Photo[];
+  photos?: TPhoto[];
+  /** Click handler */
+  onClick?: ({ photos, photo, index, event }: ClickHandlerProps<TPhoto> & { photos: TPhoto[] }) => void;
   /** Retry attempts. */
   retries?: number;
   /** Use a single photo album component (masonry layout). */
@@ -34,12 +36,13 @@ export type InfiniteScrollProps = {
   /** Offscreen `IntersectionObserver` root margin setting. Default: `2000px` */
   offscreenRootMargin?: string;
   /** Photo album component. Must be the only child. */
-  children: React.ReactElement<Pick<CommonPhotoAlbumProps, "photos" | "render">>;
+  children: React.ReactElement<Pick<CommonPhotoAlbumProps<TPhoto>, "photos" | "render" | "onClick">>;
 };
 
 /** InfiniteScroll component. */
-export default function InfiniteScroll({
+export default function InfiniteScroll<TPhoto extends Photo>({
   photos: initialPhotos,
+  onClick,
   fetch,
   retries = 0,
   singleton,
@@ -49,9 +52,9 @@ export default function InfiniteScroll({
   children,
   fetchRootMargin = "800px",
   offscreenRootMargin = "2000px",
-}: InfiniteScrollProps) {
+}: InfiniteScrollProps<TPhoto>) {
   const [status, setStatus] = useState<Status>(Status.IDLE);
-  const [photos, setPhotos] = useState<Photo[][]>(() => (initialPhotos ? [initialPhotos] : []));
+  const [photos, setPhotos] = useState<TPhoto[][]>(() => (initialPhotos ? [initialPhotos] : []));
 
   const { observe, unobserve } = useIntersectionObserver(fetchRootMargin);
 
@@ -120,11 +123,20 @@ export default function InfiniteScroll({
     [observe, unobserve, handleFetch],
   );
 
+  const photosArray = photos.flatMap((batch) => batch);
+
+  const handleClick = onClick
+    ? ({ photo, event }: ClickHandlerProps<TPhoto>) => {
+        onClick({ photos: photosArray, index: photosArray.findIndex((item) => item === photo), photo, event });
+      }
+    : undefined;
+
   return (
     <>
       {singleton
         ? cloneElement(children, {
-            photos: photos.flatMap((batch) => batch),
+            photos: photosArray,
+            onClick: handleClick,
             render: {
               ...children.props.render,
               // eslint-disable-next-line react/no-unstable-nested-components
@@ -153,7 +165,10 @@ export default function InfiniteScroll({
               key={index}
               rootMargin={offscreenRootMargin}
             >
-              {cloneElement(children, { photos: batch })}
+              {cloneElement(children, {
+                photos: batch,
+                onClick: handleClick,
+              })}
             </Offscreen>
           ))}
 
