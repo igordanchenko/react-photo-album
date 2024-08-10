@@ -103,7 +103,11 @@
     "start": "npm-run-all clean --parallel \"build:* -- -w\"",
     "lint": "eslint .",
     "test": "vitest run",
-    "dev": "vite --config dev/vite.config.ts"
+    "test:ui": "vitest --ui",
+    "dev": "vite --config dev/vite.config.ts",
+    "dev:build": "vite build --config dev/vite.config.ts",
+    "dev:preview": "vite preview --config dev/vite.config.ts",
+    "ci": "npm-run-all build test lint"
   },
   "peerDependencies": {
     "@types/react": ">=18",
