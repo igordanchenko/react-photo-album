@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
+    if: github.repository == 'igordanchenko/react-photo-album'
+
     permissions:
       contents: write
       id-token: write
