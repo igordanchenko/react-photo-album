@@ -1,3 +1,5 @@
+import { describe, expect, it } from "vitest";
+
 import { RowsPhotoAlbum } from "../../src";
 import { UnstableSSR as SSR } from "../../src/ssr";
 import { render } from "../test-utils";

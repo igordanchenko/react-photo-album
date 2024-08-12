@@ -1,3 +1,5 @@
+import { describe, expect, it, vi } from "vitest";
+
 import PhotoAlbum from "../../src";
 import { render, renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";

@@ -13,7 +13,6 @@
     "stripInternal": true,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["vitest/globals"]
+    "forceConsistentCasingInFileNames": true
   }
 }

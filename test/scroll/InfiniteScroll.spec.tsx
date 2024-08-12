@@ -1,10 +1,12 @@
+import { describe, expect, it, vi } from "vitest";
+
 import { MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
 import { UnstableInfiniteScroll as InfiniteScroll } from "../../src/scroll";
 import { act, fireEvent, render } from "../test-utils";
 import photos from "../photos";
 
 async function triggerIntersection() {
-  await act(() => fireEvent(window, new Event("intersect")));
+  await act(async () => fireEvent(window, new Event("intersect")));
 }
 
 function fetcher(index: number) {
@@ -22,12 +24,10 @@ describe("InfiniteScroll", () => {
   });
 
   it("loads photos asynchronously", async () => {
-    const { getPhotos, queryByText } = await act(async () =>
-      render(
-        <InfiniteScroll fetch={fetcher} finished="Done">
-          <RowsPhotoAlbum photos={[]} />
-        </InfiniteScroll>,
-      ),
+    const { getPhotos, queryByText } = render(
+      <InfiniteScroll fetch={fetcher} finished="Done">
+        <RowsPhotoAlbum photos={[]} />
+      </InfiniteScroll>,
     );
     expect(getPhotos().length).toBe(0);
 
@@ -43,8 +43,8 @@ describe("InfiniteScroll", () => {
   it("handles fetch errors", async () => {
     vi.useFakeTimers();
 
-    const { queryByText } = await act(async () =>
-      render(
+    try {
+      const { queryByText } = render(
         <InfiniteScroll
           fetch={() => {
             throw new Error();
@@ -54,16 +54,16 @@ describe("InfiniteScroll", () => {
         >
           <RowsPhotoAlbum photos={[]} />
         </InfiniteScroll>,
-      ),
-    );
+      );
 
-    await triggerIntersection();
-    await triggerIntersection();
-    await triggerIntersection();
-    await act(vi.runAllTimers);
-    expect(queryByText("Error")).toBeTruthy();
-
-    vi.useRealTimers();
+      await triggerIntersection();
+      await triggerIntersection();
+      await triggerIntersection();
+      await act(async () => vi.runAllTimers());
+      expect(queryByText("Error")).toBeTruthy();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 
   it("unloads offscreen photos", async () => {

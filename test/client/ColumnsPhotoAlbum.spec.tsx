@@ -1,3 +1,5 @@
+import { describe, expect, it } from "vitest";
+
 import { ColumnsPhotoAlbum } from "../../src";
 import { render, renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";

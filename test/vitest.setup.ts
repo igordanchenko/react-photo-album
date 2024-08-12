@@ -1,6 +1,7 @@
 import "@testing-library/jest-dom/vitest";
+import { afterEach, beforeEach, vi } from "vitest";
 
-import { act, cleanup, fireEvent, mockObserver } from "./test-utils";
+import { act, cleanup, fireEvent } from "./test-utils";
 
 declare global {
   interface Window {
@@ -42,6 +43,32 @@ window.resizeTo = (width: number, height: number) => {
     fireEvent(window, new Event("resize"));
   });
 };
+
+function mockObserver<MockEntry extends {}>(event: string, mockEntry?: () => MockEntry) {
+  return vi.fn().mockImplementation((callback) => {
+    const targets: Element[] = [];
+
+    const listener = () => {
+      act(() => {
+        callback(targets.map((target) => ({ target, ...mockEntry?.() })));
+      });
+    };
+
+    window.addEventListener(event, listener);
+
+    return {
+      observe: (target: Element) => {
+        targets.push(target);
+      },
+      unobserve: (target: Element) => {
+        targets.splice(targets.indexOf(target), 1);
+      },
+      disconnect: () => {
+        window.removeEventListener(event, listener);
+      },
+    };
+  });
+}
 
 global.ResizeObserver = mockObserver("resize");
 

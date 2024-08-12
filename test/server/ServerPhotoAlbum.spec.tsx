@@ -1,3 +1,5 @@
+import { describe, expect, it } from "vitest";
+
 import { LayoutType } from "../../src";
 import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "../../src/server";
 import { render } from "../test-utils";

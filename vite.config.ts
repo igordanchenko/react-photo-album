@@ -8,7 +8,6 @@ import cleanup from "rollup-plugin-cleanup";
 export default defineConfig({
   test: {
     dir: "test",
-    globals: true,
     environment: "jsdom",
     setupFiles: "./test/vitest.setup.ts",
     coverage: {

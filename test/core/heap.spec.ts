@@ -1,3 +1,5 @@
+import { describe, expect, it } from "vitest";
+
 import MinHeap, { rankingFunctionComparator } from "../../src/layouts/rows/heap";
 
 const NumericComparator = rankingFunctionComparator<number>((x) => x);

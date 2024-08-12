@@ -1,5 +1,8 @@
 import type React from "react";
-import { act, render, RenderOptions } from "@testing-library/react";
+import { expect } from "vitest";
+import { render as originalRender, RenderOptions } from "@testing-library/react";
+
+export * from "@testing-library/react";
 
 function getPhotos(container: HTMLElement) {
   return container.querySelectorAll(".react-photo-album--photo") as NodeListOf<HTMLElement>;
@@ -20,8 +23,8 @@ function getContainerWidth(container: HTMLElement) {
   return cw ? Number.parseInt(cw, 10) : undefined;
 }
 
-function customRender(ui: React.ReactElement, options?: RenderOptions) {
-  const { container, ...rest } = render(ui, options);
+export function render(ui: React.ReactElement, options?: RenderOptions) {
+  const { container, ...rest } = originalRender(ui, options);
 
   return {
     container,
@@ -34,34 +37,5 @@ function customRender(ui: React.ReactElement, options?: RenderOptions) {
 }
 
 export function renderAndMatchSnapshot(ui: React.ReactElement, options?: RenderOptions) {
-  expect(customRender(ui, options).asFragment()).toMatchSnapshot();
+  expect(render(ui, options).asFragment()).toMatchSnapshot();
 }
-
-export function mockObserver<MockEntry extends {}>(event: string, mockEntry?: () => MockEntry) {
-  return vi.fn().mockImplementation((callback) => {
-    const targets: Element[] = [];
-
-    const listener = () => {
-      act(() => {
-        callback(targets.map((target) => ({ target, ...mockEntry?.() })));
-      });
-    };
-
-    window.addEventListener(event, listener);
-
-    return {
-      observe: (target: Element) => {
-        targets.push(target);
-      },
-      unobserve: (target: Element) => {
-        targets.splice(targets.indexOf(target), 1);
-      },
-      disconnect: () => {
-        window.removeEventListener(event, listener);
-      },
-    };
-  });
-}
-
-export * from "@testing-library/react";
-export { customRender as render };
