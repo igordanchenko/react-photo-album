@@ -38,7 +38,7 @@ function PhotoComponent<TPhoto extends Photo>(
   }: PhotoComponentProps<TPhoto>,
   ref: ForwardedRef,
 ) {
-  const { src, alt, title, href } = photo;
+  const { href } = photo;
 
   const context = { photo, index, width: round(width, 3), height: round(height, 3) };
 
@@ -57,7 +57,7 @@ function PhotoComponent<TPhoto extends Photo>(
       variables={{ photoWidth: context.width, photoHeight: context.height }}
       {...{ context, ...props }}
     >
-      <Component as="img" classes="image" render={image} {...{ src, alt, title, context, ...imageProps }} />
+      <Component as="img" classes="image" render={image} context={context} {...imageProps} />
       {extras?.({}, context)}
     </Component>
   );

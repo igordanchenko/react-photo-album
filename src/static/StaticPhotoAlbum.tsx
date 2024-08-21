@@ -65,6 +65,7 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
             >
               {photos.map((context) => {
                 const { photo, index, width } = context;
+                const { key, src, alt, title, label } = photo;
 
                 const onClick = onClickCallback
                   ? (event: React.MouseEvent) => {
@@ -78,18 +79,22 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
                 }
 
                 const ariaLabel = <T extends {}>(props: T) => {
-                  return photo.label ? { "aria-label": photo.label, ...props } : props;
+                  return label ? { "aria-label": label, ...props } : props;
                 };
 
                 return (
                   <PhotoComponent
-                    key={photo.key ?? photo.src}
+                    key={key ?? src}
                     onClick={onClick}
                     render={restRender}
                     componentsProps={{
                       image: {
+                        // loading="lazy" must precede src and srcSet
                         loading: "lazy" as const,
                         decoding: "async" as const,
+                        src,
+                        alt,
+                        title,
                         ...srcSetAndSizes(photo, sizes, width, containerWidth, photosCount, spacing, padding),
                         ...unwrap(imageProps, context),
                       },
