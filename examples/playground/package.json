@@ -13,20 +13,20 @@
   },
   "dependencies": {
     "@emotion/cache": "^11.13.1",
-    "@emotion/react": "^11.13.0",
+    "@emotion/react": "^11.13.3",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-photo-album": "^3.0.1"
+    "react-photo-album": "^3.0.2"
   },
   "devDependencies": {
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.7",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.0"
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6"
   },
   "keywords": [
     "react photo album",
