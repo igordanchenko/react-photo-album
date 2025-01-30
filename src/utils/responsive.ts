@@ -2,6 +2,7 @@ import { CommonPhotoAlbumProps, Photo, ResponsiveParameter } from "../types";
 
 const breakpoints = Object.freeze([1200, 600, 300, 0]);
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function unwrap<Value, Arg, Return = Value extends (args: any) => unknown ? ReturnType<Value> : Value>(
   value: Value,
   arg: Arg,

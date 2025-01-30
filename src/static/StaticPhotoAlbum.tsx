@@ -57,7 +57,6 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
           return (
             <Component
               {...trackProps}
-              // eslint-disable-next-line react/no-array-index-key
               key={trackIndex}
               render={track}
               classes="track"
@@ -78,7 +77,7 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
                   if (rendered) return rendered;
                 }
 
-                const ariaLabel = <T extends {}>(props: T) => {
+                const ariaLabel = <T extends object>(props: T) => {
                   return label ? { "aria-label": label, ...props } : props;
                 };
 

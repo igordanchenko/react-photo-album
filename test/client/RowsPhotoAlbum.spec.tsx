@@ -58,7 +58,6 @@ describe("RowsPhotoAlbum", () => {
   it("supports minPhotos constraint", () => {
     const { getTracks, rerender } = render(<RowsPhotoAlbum photos={photos} />);
 
-    // eslint-disable-next-line no-restricted-syntax
     for (const minPhotos of [5, 7, 10]) {
       rerender(<RowsPhotoAlbum photos={photos} rowConstraints={{ minPhotos }} />);
       expect(getTracks().length).toBeGreaterThan(0);

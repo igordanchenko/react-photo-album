@@ -44,7 +44,7 @@ describe("ServerPhotoAlbum", () => {
   it("doesn't crash with invalid props", () => {
     const { getTracks, getPhotoAlbum, rerender } = render(
       <ServerPhotoAlbum
-        // @ts-expect-error
+        // @ts-expect-error - expected error
         layout="unknown"
         photos={photos}
         breakpoints={breakpoints}
@@ -55,7 +55,7 @@ describe("ServerPhotoAlbum", () => {
     rerender(
       <ServerPhotoAlbum
         layout="rows"
-        // @ts-expect-error
+        // @ts-expect-error - expected error
         photos={undefined}
         breakpoints={breakpoints}
       />,
@@ -65,7 +65,7 @@ describe("ServerPhotoAlbum", () => {
     rerender(
       <ServerPhotoAlbum
         layout="rows"
-        // @ts-expect-error
+        // @ts-expect-error - expected error
         photos={undefined}
         breakpoints={breakpoints}
       />,

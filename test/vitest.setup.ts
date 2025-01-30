@@ -44,7 +44,7 @@ window.resizeTo = (width: number, height: number) => {
   });
 };
 
-function mockObserver<MockEntry extends {}>(event: string, mockEntry?: () => MockEntry) {
+function mockObserver<MockEntry extends object>(event: string, mockEntry?: () => MockEntry) {
   return vi.fn().mockImplementation((callback) => {
     const targets: Element[] = [];
 

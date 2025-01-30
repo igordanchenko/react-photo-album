@@ -20,7 +20,7 @@ describe("PhotoAlbum", () => {
   it("doesn't crash with unknown layout", () => {
     renderAndMatchSnapshot(
       <PhotoAlbum
-        // @ts-expect-error
+        // @ts-expect-error - expected error
         layout="unknown"
         photos={photos}
       />,

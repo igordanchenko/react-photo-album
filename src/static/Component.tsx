@@ -13,7 +13,7 @@ type PolymorphicRef<Component extends React.ElementType> = React.ComponentPropsW
 
 type ElementProps<
   TComponent extends React.ElementType,
-  TContext extends {} | void,
+  TContext extends object | void,
   TRenderProps extends BaseProps<TComponent>,
 > = Partial<TRenderProps> &
   Omit<React.ComponentProps<TComponent>, keyof TRenderProps> & {
@@ -26,7 +26,7 @@ type ElementProps<
 
 function Component<
   TComponent extends React.ElementType,
-  TContext extends {} | void,
+  TContext extends object | void,
   TRenderProps extends BaseProps<TComponent>,
 >(
   {
@@ -70,7 +70,7 @@ function Component<
 
 export default forwardRef(Component) as <
   TComponent extends React.ElementType,
-  TContext extends {} | void,
+  TContext extends object | void,
   TRenderProps extends BaseProps<TComponent>,
 >(
   props: ElementProps<TComponent, TContext, TRenderProps> & { ref?: PolymorphicRef<TComponent> },

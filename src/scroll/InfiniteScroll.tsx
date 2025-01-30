@@ -139,18 +139,13 @@ export default function InfiniteScroll<TPhoto extends Photo>({
             onClick: handleClick,
             render: {
               ...children.props.render,
-              // eslint-disable-next-line react/no-unstable-nested-components
               track: ({ children: trackChildren, ...rest }: RenderTrackProps) => (
                 <div {...rest}>
                   {Children.map(
                     trackChildren,
                     (child, index) =>
                       isValidElement(child) && (
-                        <Offscreen
-                          // eslint-disable-next-line react/no-array-index-key
-                          key={index}
-                          rootMargin={offscreenRootMargin}
-                        >
+                        <Offscreen key={index} rootMargin={offscreenRootMargin}>
                           {child}
                         </Offscreen>
                       ),
@@ -160,11 +155,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
             },
           })
         : photos.map((batch, index) => (
-            <Offscreen
-              // eslint-disable-next-line react/no-array-index-key
-              key={index}
-              rootMargin={offscreenRootMargin}
-            >
+            <Offscreen key={index} rootMargin={offscreenRootMargin}>
               {cloneElement(children, {
                 photos: batch,
                 onClick: handleClick,

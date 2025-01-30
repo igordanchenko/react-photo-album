@@ -68,6 +68,7 @@ export interface ColumnsPhotoAlbumProps<TPhoto extends Photo = Photo> extends Co
 }
 
 /** Masonry photo album props */
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface MasonryPhotoAlbumProps<TPhoto extends Photo = Photo> extends ColumnsPhotoAlbumProps<TPhoto> {}
 
 /** Photo album sizes settings */
@@ -281,10 +282,12 @@ export type RenderPhotoContext<TPhoto extends Photo = Photo> = {
 };
 
 /** Render extras */
-export type RenderExtras<TPhoto extends Photo = Photo> = RenderFunction<{}, RenderPhotoContext<TPhoto>>;
+export type RenderExtras<TPhoto extends Photo = Photo> = RenderFunction<object, RenderPhotoContext<TPhoto>>;
 
 /** Render function */
-export type RenderFunction<Props extends {} | void = void, Context extends {} | void = void> = [Context] extends [void]
+export type RenderFunction<Props extends object | void = void, Context extends object | void = void> = [
+  Context,
+] extends [void]
   ? [Props] extends [void]
     ? () => React.ReactNode
     : (

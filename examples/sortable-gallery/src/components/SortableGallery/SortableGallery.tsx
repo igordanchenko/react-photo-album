@@ -90,6 +90,7 @@ export default function SortableGallery<TPhoto extends Photo, TGalleryType exten
     Component: T,
     index: number,
     photo: TPhoto,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props: ComponentProps<any>,
   ) => (
     <Sortable key={index} id={(photo as SortablePhoto<TPhoto>).id}>

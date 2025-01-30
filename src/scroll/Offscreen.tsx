@@ -11,6 +11,7 @@ type Placeholder = {
 
 type OffscreenProps = {
   rootMargin: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: React.ReactElement<any>;
 };
 

@@ -14,6 +14,7 @@ import {
   RenderPhotoProps,
 } from "../types";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Unwrap<T> = T extends (args: any) => unknown ? never : T;
 
 type Unwrapped<T> = {

@@ -13,7 +13,6 @@ export default function Sortable({ id, children }: SortableProps) {
     ref: setNodeRef,
     "data-active": isDragging,
     "data-position":
-      // eslint-disable-next-line no-nested-ternary
       activeIndex >= 0 && over?.id === id && !isDragging ? (index > activeIndex ? "after" : "before") : undefined,
     ...attributes,
     ...listeners,

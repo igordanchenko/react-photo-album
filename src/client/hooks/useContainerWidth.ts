@@ -65,7 +65,6 @@ export default function useContainerWidth(
       if (typeof ref === "function") {
         ref(node);
       } else if (ref) {
-        // eslint-disable-next-line no-param-reassign
         ref.current = node;
       }
     },
