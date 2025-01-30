@@ -125,7 +125,7 @@ export type LayoutModel<TPhoto extends Photo = Photo> = {
 };
 
 /** Layout variables */
-export type LayoutVariables = { [key: string]: string | number | undefined };
+export type LayoutVariables = Record<string, string | number | undefined>;
 
 /** Responsive parameter */
 export type ResponsiveParameter<Value = number> = Value | ((containerWidth: number) => Value);

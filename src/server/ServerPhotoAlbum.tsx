@@ -40,7 +40,7 @@ export type ServerPhotoAlbumProps<TPhoto extends Photo> = {
     /** Custom container class name. */
     container?: string;
     /** Custom class names for the breakpoint intervals. */
-    breakpoints?: { [key: number]: string };
+    breakpoints?: Record<number, string>;
   };
 } & (
   | ({ layout: Extract<LayoutType, "rows"> } & RowsServerPhotoAlbumProps<TPhoto>)
