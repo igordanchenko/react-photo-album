@@ -16,28 +16,16 @@
     "@emotion/react": "^11.14.0",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^5.16.12",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@mui/material": "^6.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-photo-album": "^3.0.2"
   },
   "devDependencies": {
-    "@types/react": "^18.3.17",
-    "@types/react-dom": "^18.3.5",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "^5.7.2",
-    "vite": "^5.4.11"
-  },
-  "keywords": [
-    "react photo album",
-    "react photo gallery",
-    "react image gallery",
-    "photo album",
-    "photo gallery",
-    "image gallery",
-    "photo layout",
-    "image layout",
-    "react-photo-album",
-    "react-photo-gallery"
-  ]
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
 }
