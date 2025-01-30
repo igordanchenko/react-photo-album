@@ -45,7 +45,7 @@ export default function useContainerWidth(
 ) {
   const [[containerWidth], dispatch] = useReducer(containerWidthReducer, [defaultContainerWidth]);
   const breakpoints = useArray(breakpointsArray);
-  const observerRef = useRef<ResizeObserver>();
+  const observerRef = useRef<ResizeObserver>(undefined);
 
   const containerRef = useCallback(
     (node: HTMLElement | null) => {

@@ -11,7 +11,7 @@ type Placeholder = {
 
 type OffscreenProps = {
   rootMargin: string;
-  children: React.ReactElement;
+  children: React.ReactElement<any>;
 };
 
 export default function Offscreen({ rootMargin, children }: OffscreenProps) {
