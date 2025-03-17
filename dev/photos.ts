@@ -1,4 +1,4 @@
-import type { Photo } from "react-photo-album";
+import type { Photo } from "../src";
 
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
