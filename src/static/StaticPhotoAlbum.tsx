@@ -77,7 +77,7 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
                   if (rendered) return rendered;
                 }
 
-                const ariaLabel = <T extends object>(props: T) => {
+                const ariaLabel = <T extends object | undefined>(props: T) => {
                   return label ? { "aria-label": label, ...props } : props;
                 };
 

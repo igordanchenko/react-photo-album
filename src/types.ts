@@ -46,9 +46,9 @@ export interface CommonPhotoAlbumProps<TPhoto extends Photo = Photo> {
   /** Photo click callback. */
   onClick?: ClickHandler<TPhoto>;
   /** Custom render functions. */
-  render?: ResponsiveParameter<Render<TPhoto>>;
+  render?: ResponsiveParameter<Render<TPhoto>, number | undefined>;
   /** Additional HTML attributes to be passed to the rendered elements. */
-  componentsProps?: ComponentsProps<TPhoto> | ((containerWidth?: number) => ComponentsProps<TPhoto>);
+  componentsProps?: ResponsiveParameter<ComponentsProps<TPhoto>, number | undefined>;
   /** Fallback skeleton in SSR. */
   skeleton?: React.ReactNode;
 }
@@ -128,7 +128,9 @@ export type LayoutModel<TPhoto extends Photo = Photo> = {
 export type LayoutVariables = Record<string, string | number | undefined>;
 
 /** Responsive parameter */
-export type ResponsiveParameter<Value = number> = Value | ((containerWidth: number) => Value);
+export type ResponsiveParameter<Value = number, ContainerWidth = number> =
+  | ((containerWidth: ContainerWidth) => Value)
+  | Value;
 
 /** Components props */
 export type ComponentsProps<TPhoto extends Photo = Photo> = {
