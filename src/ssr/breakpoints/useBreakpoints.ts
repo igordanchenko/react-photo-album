@@ -10,7 +10,7 @@ function convertBreakpoints(breakpoints: number[]) {
 }
 
 export default function useBreakpoints(prefix: string, breakpoints: number[]) {
-  const uid = `${prefix}-${useId().replace(/:/g, "")}`;
+  const uid = `${prefix}-${useId().replace(/[«:»]/g, "")}`;
 
   return {
     containerClass: cssClass(uid),
