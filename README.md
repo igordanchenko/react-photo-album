@@ -27,15 +27,15 @@ re-engineered from the ground up.
 
 ### Rows
 
-![Rows layout](https://react-photo-album.com/images/layouts/rows.jpg)
+![Rows layout](https://images.react-photo-album.com/layouts/rows.jpg)
 
 ### Columns
 
-![Columns layout](https://react-photo-album.com/images/layouts/columns.jpg)
+![Columns layout](https://images.react-photo-album.com/layouts/columns.jpg)
 
 ### Masonry
 
-![Masonry layout](https://react-photo-album.com/images/layouts/masonry.jpg)
+![Masonry layout](https://images.react-photo-album.com/layouts/masonry.jpg)
 
 ## Documentation
 
