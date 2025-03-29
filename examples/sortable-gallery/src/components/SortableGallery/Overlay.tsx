@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { Photo } from "react-photo-album";
+import type { Photo } from "react-photo-album";
 
 type OverlayProps = ComponentProps<"div"> & {
   photo: Photo;

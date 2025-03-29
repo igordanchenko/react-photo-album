@@ -1,4 +1,4 @@
-import { Photo } from "react-photo-album";
+import type { Photo } from "react-photo-album";
 
 import photos from "./photos.ts";
 

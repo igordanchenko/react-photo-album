@@ -1,5 +1,5 @@
 import { RowsPhotoAlbum } from "react-photo-album";
-import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+import InfiniteScroll from "react-photo-album/scroll";
 
 import photoFetcher from "./photoFetcher";
 

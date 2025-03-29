@@ -6,7 +6,7 @@
 "use client";
 
 import { RowsPhotoAlbum } from "react-photo-album";
-import { UnstableSSR as SSR } from "react-photo-album/ssr";
+import SSR from "react-photo-album/ssr";
 import "react-photo-album/rows.css";
 
 import photos from "@/components/photos";
