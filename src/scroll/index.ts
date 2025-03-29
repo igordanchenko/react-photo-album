@@ -1,2 +1,2 @@
-export type { InfiniteScrollProps as UnstableInfiniteScrollProps } from "./InfiniteScroll";
-export { default as UnstableInfiniteScroll } from "./InfiniteScroll";
+export * from "./InfiniteScroll";
+export { default } from "./InfiniteScroll";

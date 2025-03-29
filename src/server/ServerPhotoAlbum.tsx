@@ -48,7 +48,7 @@ export type ServerPhotoAlbumProps<TPhoto extends Photo> = {
   | ({ layout: Extract<LayoutType, "masonry"> } & MasonryServerPhotoAlbumProps<TPhoto>)
 );
 
-/** Experimental ServerPhotoAlbum component. */
+/** ServerPhotoAlbum component. */
 export default function ServerPhotoAlbum<TPhoto extends Photo>({
   layout,
   unstyled,

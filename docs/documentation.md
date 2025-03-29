@@ -710,13 +710,11 @@ design. Here is an example you can use as a starting point.
 
 ## Infinite Scroll
 
-You can use the experimental `InfiniteScroll` component to implement an infinite
-scroll feature in your app. The component is currently exported as
-`UnstableInfiniteScroll`. Please share your feedback if you have successfully
-used this component in your project or encountered any issues.
+The library provides `InfiniteScroll` component that you can use to implement an
+infinite scroll feature in your app.
 
 ```tsx
-import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+import InfiniteScroll from "react-photo-album/scroll";
 ```
 
 <table class="docs">
@@ -798,7 +796,7 @@ import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scro
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
-import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+import InfiniteScroll from "react-photo-album/scroll";
 import "react-photo-album/rows.css";
 
 // ...
@@ -820,7 +818,7 @@ export default function Gallery() {
 
 ```tsx
 import { MasonryPhotoAlbum } from "react-photo-album";
-import { UnstableInfiniteScroll as InfiniteScroll } from "react-photo-album/scroll";
+import InfiniteScroll from "react-photo-album/scroll";
 import "react-photo-album/masonry.css";
 
 // ...
@@ -907,16 +905,15 @@ content and allow the browser to start downloading images before hydration.
 
 The ultimate zero-CLS solution requires pre-rendering multiple layouts on the
 server and displaying the correct one on the client using CSS `@container`
-queries. [React Photo Album](/) provides an experimental `SSR` component
-implementing this approach (the component is currently exported as
-`UnstableSSR`). The downside of this approach is the overhead in SSR-generated
-markup and the hydration of multiple photo album instances on the client (which
-may be a reasonable compromise if zero CLS is a must-have requirement). You can
-find a live demo in the [Zero CLS SSR](/examples/zero-cls-ssr) example.
+queries. [React Photo Album](/) provides `SSR` component implementing this
+approach. The downside of this approach is the overhead in SSR-generated markup
+and the hydration of multiple photo album instances on the client (which may be
+a reasonable compromise if zero CLS is a must-have requirement). You can find a
+live demo in the [Zero CLS SSR](/examples/zero-cls-ssr) example.
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
-import { UnstableSSR as SSR } from "react-photo-album/ssr";
+import SSR from "react-photo-album/ssr";
 import "react-photo-album/rows.css";
 
 import photos from "./photos";
@@ -970,14 +967,13 @@ project or encountered any issues.
 
 ## Server Component
 
-[React Photo Album](/) provides an experimental server component for rendering
-static photo albums on the server with zero client-side JS bundle (the component
-produces pure HTML markup with no client components). The component is currently
-exported as `UnstableServerPhotoAlbum`. You can find a live demo in the
+[React Photo Album](/) provides a server component for rendering static photo
+albums server-side with zero client-side JS bundle (the component produces pure
+HTML markup with no client components). You can find a live demo in the
 [Server Component](/examples/server) example.
 
 ```tsx
-import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "react-photo-album/server";
+import ServerPhotoAlbum from "react-photo-album/server";
 ```
 
 <table class="docs">
@@ -1019,7 +1015,7 @@ props corresponding to the selected layout type except the
 ### Server Component With Default Styling
 
 ```tsx
-import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "react-photo-album/server";
+import ServerPhotoAlbum from "react-photo-album/server";
 import "react-photo-album/rows.css";
 
 // ...
@@ -1041,7 +1037,7 @@ Here is an example of custom styling using
 [@tailwindcss/container-queries](https://github.com/tailwindlabs/tailwindcss-container-queries).
 
 ```tsx
-import { UnstableServerPhotoAlbum as ServerPhotoAlbum } from "react-photo-album/server";
+import ServerPhotoAlbum from "react-photo-album/server";
 import "react-photo-album/rows.css";
 
 // ...

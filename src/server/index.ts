@@ -1,2 +1,2 @@
-export type { ServerPhotoAlbumProps as UnstableServerPhotoAlbumProps } from "./ServerPhotoAlbum";
-export { default as UnstableServerPhotoAlbum } from "./ServerPhotoAlbum";
+export * from "./ServerPhotoAlbum";
+export { default } from "./ServerPhotoAlbum";

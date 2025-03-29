@@ -1,7 +1,7 @@
 # Zero CLS SSR
 
-This example demonstrates the use of the experimental
-[SSR component](</documentation#Server-SideRendering(SSR)_SSRComponent>) that
+This example demonstrates the use of the
+[SSR](</documentation#Server-SideRendering(SSR)_SSRComponent>) component that
 helps to achieve zero CLS in SSR.
 
 ## Live Demo

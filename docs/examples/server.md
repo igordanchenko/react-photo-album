@@ -1,6 +1,6 @@
 # Server Component
 
-This example demonstrates the use of the experimental
+This example demonstrates the use of the
 [ServerPhotoAlbum](/documentation#ServerComponent) component.
 
 ## Live Demo

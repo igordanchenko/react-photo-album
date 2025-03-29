@@ -23,7 +23,7 @@ export type SSRProps = {
   };
 };
 
-/** Experimental SSR component. */
+/** SSR component. */
 function SSR(
   { breakpoints: breakpointsProp, unstyled, classNames, children }: SSRProps,
   ref: React.ForwardedRef<HTMLElement>,

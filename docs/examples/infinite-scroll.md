@@ -1,6 +1,6 @@
 # Infinite Scroll
 
-This example demonstrates the use of the experimental
+This example demonstrates the use of the
 [InfiniteScroll](/documentation#InfiniteScroll) component. This demo reuses the
 same set of photos due to bandwidth limitations and finishes after 200 photos.
 

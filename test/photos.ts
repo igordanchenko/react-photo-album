@@ -1,4 +1,6 @@
-const photos = [
+import type { Photo } from "../src";
+
+const photos: Photo[] = [
   { src: "image01.jpg", width: 1080, height: 800 },
   { src: "image02.jpg", width: 1080, height: 1620 },
   { src: "image03.jpg", width: 1080, height: 720 },

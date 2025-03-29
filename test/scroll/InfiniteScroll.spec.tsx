@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 
 import { MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
-import { UnstableInfiniteScroll as InfiniteScroll } from "../../src/scroll";
+import InfiniteScroll from "../../src/scroll";
 import { act, fireEvent, render } from "../test-utils";
 import photos from "../photos";
 
