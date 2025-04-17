@@ -1,9 +1,9 @@
-import { cloneElement, ReactElement } from "react";
+import { cloneElement, ReactElement, RefAttributes } from "react";
 import { useSortable } from "@dnd-kit/sortable";
 
 type SortableProps = {
   id: string;
-  children: ReactElement;
+  children: ReactElement<RefAttributes<HTMLElement> & Record<`data-${string}`, unknown>>;
 };
 
 export default function Sortable({ id, children }: SortableProps) {
