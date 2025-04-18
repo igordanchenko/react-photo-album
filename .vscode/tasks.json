@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Outdated dependencies",
+      "type": "shell",
+      "command": "npm outdated; for i in $(ls -d examples/*/); do (echo \"Outdated ${i}\"; cd ${i}; npm outdated); done",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Update dependencies",
+      "type": "shell",
+      "command": "npm update --save; for i in $(ls -d examples/*/); do (echo \"Updating ${i}\"; cd ${i}; npm update --save); done",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Install dependencies",
+      "type": "shell",
+      "command": "npm ci; for i in $(ls -d examples/*/); do (echo \"Installing ${i}\"; cd ${i}; npm ci); done",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
