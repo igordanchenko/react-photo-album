@@ -1065,10 +1065,3 @@ export default function Gallery() {
 
 Please share your feedback if you have successfully used this component in your
 project or encountered any issues.
-
-## Previous Versions
-
-Are you looking for documentation for one of the previous versions?
-
-- [react-photo-album v2](https://v2.react-photo-album.com/documentation)
-- [react-photo-album v1](https://v1.react-photo-album.com/documentation)
