@@ -96,4 +96,16 @@ describe("InfiniteScroll", () => {
 
     expect(onClick).toHaveBeenCalled();
   });
+
+  it("supports scroll container", async () => {
+    const scrollContainer = vi.fn();
+
+    render(
+      <InfiniteScroll singleton fetch={fetcher} photos={photos} scrollContainer={scrollContainer}>
+        <RowsPhotoAlbum photos={[]} />
+      </InfiniteScroll>,
+    );
+
+    expect(scrollContainer).toHaveBeenCalled();
+  });
 });

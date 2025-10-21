@@ -31,6 +31,8 @@ export type InfiniteScrollProps<TPhoto extends Photo = Photo> = {
   loading?: React.ReactNode;
   /** Markup to display when no more photos are available. */
   finished?: React.ReactNode;
+  /** The nearest scrollable ancestor other than the viewport.  */
+  scrollContainer?: () => HTMLElement | null;
   /** Fetcher `IntersectionObserver` root margin setting. Default: `800px` */
   fetchRootMargin?: string;
   /** Offscreen `IntersectionObserver` root margin setting. Default: `2000px` */
@@ -50,13 +52,14 @@ export default function InfiniteScroll<TPhoto extends Photo>({
   loading,
   finished,
   children,
+  scrollContainer,
   fetchRootMargin = "800px",
   offscreenRootMargin = "2000px",
 }: InfiniteScrollProps<TPhoto>) {
   const [status, setStatus] = useState<Status>(Status.IDLE);
   const [photos, setPhotos] = useState<TPhoto[][]>(() => (initialPhotos ? [initialPhotos] : []));
 
-  const { observe, unobserve } = useIntersectionObserver(fetchRootMargin);
+  const { observe, unobserve } = useIntersectionObserver(fetchRootMargin, scrollContainer);
 
   const fetching = useRef(false);
 
@@ -145,7 +148,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
                     trackChildren,
                     (child, index) =>
                       isValidElement(child) && (
-                        <Offscreen key={index} rootMargin={offscreenRootMargin}>
+                        <Offscreen key={index} rootMargin={offscreenRootMargin} scrollContainer={scrollContainer}>
                           {child}
                         </Offscreen>
                       ),
@@ -155,7 +158,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
             },
           })
         : photos.map((batch, index) => (
-            <Offscreen key={index} rootMargin={offscreenRootMargin}>
+            <Offscreen key={index} rootMargin={offscreenRootMargin} scrollContainer={scrollContainer}>
               {cloneElement(children, {
                 photos: batch,
                 onClick: handleClick,

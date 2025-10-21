@@ -759,6 +759,13 @@ import InfiniteScroll from "react-photo-album/scroll";
       <td>Use a single photo album component (masonry layout).</td>
     </tr>
     <tr>
+      <td>scrollContainer</td>
+      <td>() => HTMLElement | null</td>
+      <td>
+        <p>The nearest scrollable ancestor other than the viewport.</p>
+      </td>
+    </tr>
+    <tr>
       <td>fetchRootMargin</td>
       <td>string</td>
       <td>

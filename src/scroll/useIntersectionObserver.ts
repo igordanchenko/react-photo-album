@@ -10,7 +10,7 @@ const observers = new Map<
   }
 >();
 
-function createObserver(rootMargin: string) {
+function createObserver(root: HTMLElement | null, rootMargin: string) {
   let instance = observers.get(rootMargin);
 
   if (!instance) {
@@ -24,7 +24,7 @@ function createObserver(rootMargin: string) {
           });
         });
       },
-      { rootMargin },
+      { root, rootMargin },
     );
 
     instance = { observer, listeners };
@@ -34,12 +34,14 @@ function createObserver(rootMargin: string) {
   return instance;
 }
 
-export default function useIntersectionObserver(rootMargin: string) {
+export default function useIntersectionObserver(rootMargin: string, scrollContainer?: () => HTMLElement | null) {
+  const root = scrollContainer?.() ?? null;
+
   return useMemo(() => {
     const cleanup: (() => void)[] = [];
 
     const observe = (target: Element, callback: Callback) => {
-      const { observer, listeners } = createObserver(rootMargin);
+      const { observer, listeners } = createObserver(root, rootMargin);
 
       const callbacks = listeners.get(target) || [];
       callbacks.push(callback);
@@ -68,5 +70,5 @@ export default function useIntersectionObserver(rootMargin: string) {
     };
 
     return { observe, unobserve };
-  }, [rootMargin]);
+  }, [root, rootMargin]);
 }
