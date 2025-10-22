@@ -1,9 +1,15 @@
-import { useRef } from "react";
+import { useState } from "react";
 
 export default function useArray<T>(array: T[] | undefined) {
-  const ref = useRef(array);
-  if (!array || !ref.current || array.length !== ref.current.length || ref.current.some((el, i) => el !== array[i])) {
-    ref.current = array;
+  const [state, setState] = useState(array);
+
+  if (
+    array !== state &&
+    (!array || !state || array.length !== state.length || array.some((el, i) => el !== state[i]))
+  ) {
+    setState(array);
+    return array;
   }
-  return ref.current;
+
+  return state;
 }
