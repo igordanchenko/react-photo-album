@@ -12,12 +12,12 @@ export default tseslint.config(
   tseslint.configs.recommended,
   eslintPluginReact.configs.flat.recommended,
   eslintPluginReact.configs.flat["jsx-runtime"],
+  eslintPluginReactHooks.configs.flat.recommended,
   eslintPluginJsxA11y.flatConfigs.recommended,
   eslintConfigPrettier,
   {
     settings: { react: { version: "detect" } },
     languageOptions: { globals: globals.browser },
-    plugins: { "react-hooks": eslintPluginReactHooks },
     rules: {
       "no-console": "error",
       "@typescript-eslint/no-unused-vars": [
@@ -32,7 +32,6 @@ export default tseslint.config(
           ignoreRestSiblings: true,
         },
       ],
-      ...eslintPluginReactHooks.configs.recommended.rules,
     },
   },
   {

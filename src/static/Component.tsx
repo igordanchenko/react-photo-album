@@ -60,6 +60,8 @@ function Component<
   const props = { style, className, children, ...rest };
 
   if (render) {
+    // TODO: false positive lint?
+    // eslint-disable-next-line react-hooks/refs
     const rendered = render({ ref, ...props } as unknown as TRenderProps, context as TContext);
     if (rendered) return rendered;
   }
