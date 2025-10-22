@@ -15,7 +15,13 @@ const useLayoutEffect = typeof document !== "undefined" ? React.useLayoutEffect 
 
 function Filter({ children }: React.PropsWithChildren) {
   return (
-    <Grid item xs={12} sm={8} lg={6}>
+    <Grid
+      size={{
+        xs: 12,
+        sm: 8,
+        lg: 6,
+      }}
+    >
       {children}
     </Grid>
   );

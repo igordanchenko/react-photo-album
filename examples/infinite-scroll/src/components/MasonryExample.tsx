@@ -3,7 +3,7 @@ import InfiniteScroll from "react-photo-album/scroll";
 
 import photoFetcher from "./photoFetcher";
 
-export default function RowsExample(props: NonNullable<Parameters<typeof photoFetcher>>[0]) {
+export default function MasonryExample(props: NonNullable<Parameters<typeof photoFetcher>>[0]) {
   return (
     <InfiniteScroll
       singleton
