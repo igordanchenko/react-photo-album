@@ -2,12 +2,8 @@ import { describe, expect, it, vi } from "vitest";
 
 import { MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
 import InfiniteScroll from "../../src/scroll";
-import { act, fireEvent, render } from "../test-utils";
+import { act, render, triggerIntersection } from "../test-utils";
 import photos from "../photos";
-
-async function triggerIntersection() {
-  await act(async () => fireEvent(window, new Event("intersect")));
-}
 
 function fetcher(index: number) {
   return Promise.resolve(index === 0 ? photos : null);

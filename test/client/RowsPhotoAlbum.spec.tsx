@@ -33,6 +33,9 @@ describe("RowsPhotoAlbum", () => {
     rerender(<RowsPhotoAlbum photos={photos} rowConstraints={{ maxPhotos: 2 }} />);
     expect(getTracks().length).toBeGreaterThanOrEqual(11);
 
+    rerender(<RowsPhotoAlbum photos={photos.slice(0, 0)} rowConstraints={{ singleRowMaxHeight: 100 }} />);
+    expect(getPhotoAlbum()?.style.getPropertyValue("max-width")).toBeFalsy();
+
     rerender(<RowsPhotoAlbum photos={photos.slice(0, 1)} rowConstraints={{ singleRowMaxHeight: 100 }} />);
     expect(getPhotoAlbum()?.style.getPropertyValue("max-width")).toBeTruthy();
   });

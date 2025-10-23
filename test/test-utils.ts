@@ -1,6 +1,6 @@
 import type React from "react";
 import { expect } from "vitest";
-import { render as originalRender, RenderOptions } from "@testing-library/react";
+import { render as originalRender, act, fireEvent, RenderOptions } from "@testing-library/react";
 
 export * from "@testing-library/react";
 
@@ -38,4 +38,8 @@ export function render(ui: React.ReactElement, options?: RenderOptions) {
 
 export function renderAndMatchSnapshot(ui: React.ReactElement, options?: RenderOptions) {
   expect(render(ui, options).asFragment()).toMatchSnapshot();
+}
+
+export async function triggerIntersection() {
+  await act(async () => fireEvent(window, new Event("intersect")));
 }

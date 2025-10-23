@@ -92,7 +92,7 @@ describe("PhotoAlbum", () => {
   });
 
   it("supports render functions", () => {
-    const { getAllByTestId, rerender } = render(
+    const { getAllByTestId, getPhotos, rerender } = render(
       <PhotoAlbum
         layout="rows"
         photos={photos}
@@ -120,6 +120,9 @@ describe("PhotoAlbum", () => {
       />,
     );
     expect(getAllByTestId("photo").length).toBe(photos.length);
+
+    rerender(<PhotoAlbum layout="rows" photos={photos} render={{ photo: () => null, image: () => null }} />);
+    expect(getPhotos().length).toBe(photos.length);
   });
 
   it("supports ARIA labels", () => {

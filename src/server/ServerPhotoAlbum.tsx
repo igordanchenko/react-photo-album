@@ -66,6 +66,7 @@ export default function ServerPhotoAlbum<TPhoto extends Photo>({
     if (layout === "rows") {
       const { spacing, padding, targetRowHeight, minPhotos, maxPhotos, ...rest } = resolveRowsProps(breakpoint, props);
 
+      /* v8 ignore else - @preserve */
       if (spacing !== undefined && padding !== undefined && targetRowHeight !== undefined) {
         return {
           ...rest,
@@ -77,6 +78,7 @@ export default function ServerPhotoAlbum<TPhoto extends Photo>({
     if (layout === "columns") {
       const { spacing, padding, columns, ...rest } = resolveColumnsProps(breakpoint, props);
 
+      /* v8 ignore else - @preserve */
       if (spacing !== undefined && padding !== undefined && columns !== undefined) {
         return {
           ...rest,
@@ -88,6 +90,7 @@ export default function ServerPhotoAlbum<TPhoto extends Photo>({
     if (layout === "masonry") {
       const { spacing, padding, columns, ...rest } = resolveMasonryProps(breakpoint, props);
 
+      /* v8 ignore else - @preserve */
       if (spacing !== undefined && padding !== undefined && columns !== undefined) {
         return {
           ...rest,

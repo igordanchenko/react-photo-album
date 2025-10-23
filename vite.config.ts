@@ -1,5 +1,5 @@
-/// <reference types="vitest" />
 /// <reference types="vite/client" />
+/// <reference types="vitest/config" />
 
 import { defineConfig } from "vite";
 import cleanup from "rollup-plugin-cleanup";
@@ -10,14 +10,10 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./test/vitest.setup.ts",
     coverage: {
-      all: true,
       enabled: true,
-      include: ["src"],
       thresholds: { 100: true },
-      reporter: [
-        ["text", { skipEmpty: true }],
-        ["html", { skipEmpty: true }],
-      ],
+      include: ["src/**/**.{ts,tsx}"],
+      exclude: ["src/**/index.ts", "src/types.ts"],
     },
   },
   build: {
@@ -50,7 +46,12 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react/jsx-runtime"],
       output: { minifyInternalExports: false },
-      plugins: [cleanup({ extensions: ["ts", "tsx"] })],
+      plugins: [
+        cleanup({
+          extensions: ["ts", "tsx"],
+          comments: "license", // https://github.com/vitest-dev/vitest/issues/8365
+        }),
+      ],
       preserveEntrySignatures: "allow-extension",
       treeshake: false,
     },

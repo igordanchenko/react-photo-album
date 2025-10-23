@@ -35,41 +35,48 @@ Object.defineProperties(window.HTMLElement.prototype, {
 
 window.resizeTo = (width: number, height: number) => {
   act(() => {
-    // noinspection JSConstantReassignment
     window.innerWidth = width;
-    // noinspection JSConstantReassignment
     window.innerHeight = height;
 
     fireEvent(window, new Event("resize"));
   });
 };
 
-function mockObserver<MockEntry extends object>(event: string, mockEntry?: () => MockEntry) {
-  return vi.fn().mockImplementation((callback) => {
-    const targets: Element[] = [];
+function mockObserver(event: string, mockEntry?: () => object) {
+  return class {
+    readonly callback: (entry: object) => void;
+    readonly targets: Element[];
+    readonly listener: () => void;
 
-    const listener = () => {
-      act(() => {
-        callback(targets.map((target) => ({ target, ...mockEntry?.() })));
-      });
-    };
+    constructor(callback: (entry: object) => void) {
+      this.callback = callback;
+      this.targets = [];
+      this.listener = () => {
+        act(() => {
+          this.callback(this.targets.map((target) => ({ target, ...mockEntry?.() })));
+        });
+      };
 
-    window.addEventListener(event, listener);
+      window.addEventListener(event, this.listener);
+    }
 
-    return {
-      observe: (target: Element) => {
-        targets.push(target);
-      },
-      unobserve: (target: Element) => {
-        targets.splice(targets.indexOf(target), 1);
-      },
-      disconnect: () => {
-        window.removeEventListener(event, listener);
-      },
-    };
-  });
+    observe(target: Element) {
+      this.targets.push(target);
+    }
+
+    unobserve(target: Element) {
+      this.targets.splice(this.targets.indexOf(target), 1);
+    }
+
+    disconnect() {
+      window.removeEventListener(event, this.listener);
+    }
+  };
 }
 
-global.ResizeObserver = mockObserver("resize");
+vi.stubGlobal("ResizeObserver", mockObserver("resize"));
 
-global.IntersectionObserver = mockObserver("intersect", () => ({ isIntersecting: window.isIntersecting }));
+vi.stubGlobal(
+  "IntersectionObserver",
+  mockObserver("intersect", () => ({ isIntersecting: window.isIntersecting })),
+);
