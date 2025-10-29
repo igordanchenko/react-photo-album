@@ -4,8 +4,7 @@ import { cloneElement, useCallback, useState } from "react";
 import useIntersectionObserver from "./useIntersectionObserver";
 
 type Placeholder = {
-  width: number;
-  height: number;
+  aspectRatio: string;
   margin: string;
 };
 
@@ -30,7 +29,7 @@ export default function Offscreen({ rootMargin, scrollContainer, children }: Off
           if (!isIntersecting) {
             const { width, height } = node.getBoundingClientRect();
             const { margin } = getComputedStyle(node);
-            setPlaceholder({ width, height, margin });
+            setPlaceholder({ aspectRatio: `${width} / ${height}`, margin });
           } else {
             setPlaceholder(undefined);
           }
