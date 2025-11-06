@@ -72,9 +72,10 @@ describe("InfiniteScroll", () => {
     await triggerIntersection();
     expect(getPhotos().length).toBe(photos.length);
 
-    window.isIntersecting = false;
+    window.__TEST__.isIntersecting = false;
     await triggerIntersection();
     expect(getPhotos().length).toBe(0);
+    window.__TEST__.isIntersecting = true;
   });
 
   it("supports the onClick callback", async () => {

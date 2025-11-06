@@ -134,7 +134,7 @@ describe("PhotoAlbum", () => {
   });
 
   it("prevents infinite resize loop", () => {
-    window.scrollbarWidth = 15;
+    window.__TEST__.scrollbarWidth = 15;
     window.resizeTo(1024, 768);
 
     const { getContainerWidth } = render(<PhotoAlbum layout="rows" photos={photos} />);
@@ -142,7 +142,7 @@ describe("PhotoAlbum", () => {
     expect(getContainerWidth()).toBe(1009);
 
     // prevents resize on first re-render
-    window.scrollbarWidth = 0;
+    window.__TEST__.scrollbarWidth = 0;
     window.resizeTo(1024, 768);
     expect(getContainerWidth()).toBe(1009);
 
