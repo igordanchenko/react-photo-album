@@ -78,7 +78,7 @@
   "homepage": "https://react-photo-album.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/igordanchenko/react-photo-album.git"
+    "url": "git+https://github.com/igordanchenko/react-photo-album.git"
   },
   "bugs": {
     "url": "https://github.com/igordanchenko/react-photo-album/issues"
