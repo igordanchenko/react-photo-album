@@ -86,10 +86,6 @@
   "engines": {
     "node": ">=18"
   },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
-  },
   "scripts": {
     "prepare": "husky",
     "clean": "rimraf dist",
