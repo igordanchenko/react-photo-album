@@ -12,20 +12,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/cache": "^11.14.0",
-    "@emotion/react": "^11.14.0",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.3.6",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
-    "react-photo-album": "^3.2.1"
+    "@emotion/cache": "^11",
+    "@emotion/react": "^11",
+    "@emotion/server": "^11",
+    "@emotion/styled": "^11",
+    "@mui/material": "^7",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-photo-album": "^3"
   },
   "devDependencies": {
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "typescript": "^5.9.3",
-    "vite": "^7.2.6"
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5",
+    "typescript": "^5",
+    "vite": "^7"
   }
 }
