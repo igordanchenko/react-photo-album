@@ -56,8 +56,9 @@ function fixupCssDefinitions(file) {
  */
 function fixupClientBoundary(file) {
   editFile(file, (data) => {
-    return /import.*(?:useMemo|useState|useRef|useCallback|useReducer).*from\s*['"]react['"]/.test(data) ||
-      /import.*from.*\.\/(?:rows|columns|masonry)\.js/.test(data)
+    return (/import.*(?:useMemo|useState|useRef|useCallback|useReducer).*from\s*['"]react['"]/.test(data) ||
+      /import.*from.*\.\/(?:rows|columns|masonry)\.js/.test(data)) &&
+      !/"use client";/.test(data)
       ? ['"use client";', data].join(os.EOL)
       : data;
   });
