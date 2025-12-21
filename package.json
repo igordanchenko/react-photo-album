@@ -76,12 +76,11 @@
     "*.css"
   ],
   "homepage": "https://react-photo-album.com",
+  "funding": "https://github.com/sponsors/igordanchenko",
+  "bugs": "https://github.com/igordanchenko/react-photo-album/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igordanchenko/react-photo-album.git"
-  },
-  "bugs": {
-    "url": "https://github.com/igordanchenko/react-photo-album/issues"
   },
   "engines": {
     "node": ">=18"
