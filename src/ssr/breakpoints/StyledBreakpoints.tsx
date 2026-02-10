@@ -1,5 +1,5 @@
 type StyledBreakpointsProps = {
-  breakpoints: number[];
+  breakpoints: readonly number[];
   containerClass: string;
   breakpointClass: (breakpoint: number) => string;
 };

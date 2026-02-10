@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useArray<T>(array: T[] | undefined) {
+export default function useArray<T>(array: readonly T[] | undefined) {
   const [state, setState] = useState(array);
 
   if (

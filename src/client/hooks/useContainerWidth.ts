@@ -40,7 +40,7 @@ function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly num
 
 export default function useContainerWidth(
   ref: ForwardedRef,
-  breakpointsArray: number[] | undefined,
+  breakpointsArray: readonly number[] | undefined,
   defaultContainerWidth?: number,
 ) {
   const [[containerWidth], dispatch] = useReducer(containerWidthReducer, [defaultContainerWidth]);

@@ -4,7 +4,7 @@ import { LayoutModel, Photo } from "../../types";
 
 // return function that gets the neighboring nodes of node and returns costs
 function makeGetColumnNeighbors(
-  photos: Photo[],
+  photos: readonly Photo[],
   spacing: number,
   padding: number,
   targetColumnWidth: number,
@@ -26,13 +26,13 @@ function makeGetColumnNeighbors(
 }
 
 function buildColumnsModel<TPhoto extends Photo>(
-  path: number[],
-  photos: TPhoto[],
+  path: readonly number[],
+  photos: readonly TPhoto[],
   spacing: number,
   padding: number,
   containerWidth: number,
-  columnsGaps: number[],
-  columnsRatios: number[],
+  columnsGaps: readonly number[],
+  columnsRatios: readonly number[],
 ) {
   const tracks = [];
 
@@ -66,7 +66,7 @@ function buildColumnsModel<TPhoto extends Photo>(
 }
 
 function computeColumnsModel<TPhoto extends Photo>(
-  photos: TPhoto[],
+  photos: readonly TPhoto[],
   spacing: number,
   padding: number,
   containerWidth: number,
@@ -117,7 +117,7 @@ function computeColumnsModel<TPhoto extends Photo>(
 }
 
 export default function computeColumnsLayout<TPhoto extends Photo>(
-  photos: TPhoto[],
+  photos: readonly TPhoto[],
   spacing: number,
   padding: number,
   containerWidth: number,

@@ -9,7 +9,7 @@ import { CommonPhotoAlbumProps } from "../types";
 /** SSR component props. */
 export type SSRProps = {
   /** Photo album layout breakpoints. */
-  breakpoints: number[];
+  breakpoints: readonly number[];
   /** Photo album instance, which must be the only child. */
   children: React.ReactElement<Pick<CommonPhotoAlbumProps, "breakpoints" | "defaultContainerWidth">>;
   /** If `true`, do not include the inline stylesheet. */

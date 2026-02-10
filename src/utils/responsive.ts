@@ -13,7 +13,7 @@ export function unwrapParameter<Value>(
   return containerWidth !== undefined ? unwrap(value, containerWidth) : undefined;
 }
 
-function selectResponsiveValue(values: ResponsiveParameter[], containerWidth: number) {
+function selectResponsiveValue(values: readonly ResponsiveParameter[], containerWidth: number) {
   const index = breakpoints.findIndex((breakpoint) => breakpoint <= containerWidth);
   return unwrap(values[Math.max(index, 0)], containerWidth);
 }
@@ -21,7 +21,7 @@ function selectResponsiveValue(values: ResponsiveParameter[], containerWidth: nu
 export function resolveResponsiveParameter(
   parameter: ResponsiveParameter | undefined,
   containerWidth: number | undefined,
-  values: ResponsiveParameter[],
+  values: readonly ResponsiveParameter[],
   minValue = 0,
 ) {
   if (containerWidth === undefined) return undefined;

@@ -5,14 +5,19 @@ import { LayoutModel, Photo } from "../../types";
 // guesstimate how many neighboring nodes should be searched based on
 // the aspect columnRatio of the container with images and minimal aspect columnRatio of all photos
 // as the maximum amount of photos per row, plus some nodes
-function findIdealNodeSearch(photos: Photo[], containerWidth: number, targetRowHeight: number, minPhotos?: number) {
+function findIdealNodeSearch(
+  photos: readonly Photo[],
+  containerWidth: number,
+  targetRowHeight: number,
+  minPhotos?: number,
+) {
   return (
     round(containerWidth / targetRowHeight / Math.min(...photos.map((photo) => ratio(photo)))) + (minPhotos || 0) + 2
   );
 }
 
 // get the height for a set of photos in a potential row
-function getCommonHeight(photos: Photo[], containerWidth: number, spacing: number, padding: number) {
+function getCommonHeight(photos: readonly Photo[], containerWidth: number, spacing: number, padding: number) {
   return (
     (containerWidth - (photos.length - 1) * spacing - 2 * padding * photos.length) /
     photos.reduce((acc, photo) => acc + ratio(photo), 0)
@@ -21,7 +26,7 @@ function getCommonHeight(photos: Photo[], containerWidth: number, spacing: numbe
 
 // calculate the cost of breaking at this node (edge weight)
 function cost(
-  photos: Photo[],
+  photos: readonly Photo[],
   i: number,
   j: number,
   width: number,
@@ -36,7 +41,7 @@ function cost(
 
 // return function that gets the neighboring nodes of node and returns costs
 function makeGetRowNeighbors(
-  photos: Photo[],
+  photos: readonly Photo[],
   spacing: number,
   padding: number,
   containerWidth: number,
@@ -63,7 +68,7 @@ function makeGetRowNeighbors(
 // compute sizes by creating a graph with rows as edges and photo to break on as nodes
 // to calculate the single best layout using Dijkstra's findShortestPath
 export default function computeRowsLayout<TPhoto extends Photo>(
-  photos: TPhoto[],
+  photos: readonly TPhoto[],
   spacing: number,
   padding: number,
   containerWidth: number,

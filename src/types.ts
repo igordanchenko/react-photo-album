@@ -16,7 +16,7 @@ export interface Photo extends Image {
   /** ARIA label for the link and button elements */
   label?: string;
   /** Optional array of alternative images to be included in the `srcset` attribute. */
-  srcSet?: Image[];
+  srcSet?: readonly Image[];
 }
 
 /** Image object */
@@ -32,7 +32,7 @@ export interface Image {
 /** Common photo album props */
 export interface CommonPhotoAlbumProps<TPhoto extends Photo = Photo> {
   /** An array of photos to display in the photo album. */
-  photos: TPhoto[];
+  photos: readonly TPhoto[];
   /** Spacing between images. */
   spacing?: ResponsiveParameter;
   /** Padding around each image. */
@@ -40,7 +40,7 @@ export interface CommonPhotoAlbumProps<TPhoto extends Photo = Photo> {
   /** Photo album container width in various viewports. */
   sizes?: ResponsiveSizes;
   /** Photo album layout breakpoints. */
-  breakpoints?: number[];
+  breakpoints?: readonly number[];
   /** Default container width in SSR. */
   defaultContainerWidth?: number;
   /** Photo click callback. */
@@ -76,7 +76,7 @@ export type ResponsiveSizes = {
   /** Default size, e.g. `100vw` or `calc(100vw - 200px)`. */
   size: string;
   /** Array of sizes at various breakpoints. */
-  sizes?: {
+  sizes?: readonly {
     /** Viewport size media query, e.g. `(max-width: 600px)`.  */
     viewport: string;
     /** Photo album width at a given viewport size, e.g. `calc(100vw - 50px)`. */
@@ -107,11 +107,11 @@ export type LayoutModel<TPhoto extends Photo = Photo> = {
   /** Layout orientation. */
   horizontal?: boolean;
   /** Layout tracks. */
-  tracks: {
+  tracks: readonly {
     /** Track variables. */
     variables?: LayoutVariables;
     /** Photos array. */
-    photos: {
+    photos: readonly {
       /** Photo object. */
       photo: TPhoto;
       /** Photo index in the original `photos` array. */

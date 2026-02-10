@@ -16,11 +16,11 @@ enum Status {
 /** InfiniteScroll component props. */
 export type InfiniteScrollProps<TPhoto extends Photo = Photo> = {
   /** Photo fetcher. Resolve promise with `null` to indicate end of stream. */
-  fetch: (index: number) => Promise<TPhoto[] | null>;
+  fetch: (index: number) => Promise<readonly TPhoto[] | null>;
   /** Initial photos (optional). */
-  photos?: TPhoto[];
+  photos?: readonly TPhoto[];
   /** Click handler */
-  onClick?: ({ photos, photo, index, event }: ClickHandlerProps<TPhoto> & { photos: TPhoto[] }) => void;
+  onClick?: ({ photos, photo, index, event }: ClickHandlerProps<TPhoto> & { photos: readonly TPhoto[] }) => void;
   /** Retry attempts. */
   retries?: number;
   /** Use a single photo album component (masonry layout). */
@@ -57,7 +57,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
   offscreenRootMargin = "2000px",
 }: InfiniteScrollProps<TPhoto>) {
   const [status, setStatus] = useState<Status>(Status.IDLE);
-  const [photos, setPhotos] = useState<TPhoto[][]>(() => (initialPhotos ? [initialPhotos] : []));
+  const [photos, setPhotos] = useState<(readonly TPhoto[])[]>(() => (initialPhotos ? [initialPhotos] : []));
 
   const { observe, unobserve } = useIntersectionObserver(fetchRootMargin, scrollContainer);
 
