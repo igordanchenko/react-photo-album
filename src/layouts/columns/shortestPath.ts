@@ -2,6 +2,9 @@ export type GraphFunction<T> = (node: T) => [neighbor: T, weight: number][];
 
 type Matrix<T> = Map<T, [node: T, weight: number][]>;
 
+// empirically determined threshold for deterministic tiebreaking
+const TIEBREAKER_EPSILON = 1.0001;
+
 function computeShortestPath<T>(graph: GraphFunction<T>, pathLength: number, startNode: T, endNode: T) {
   // computation matrix: node x path length x { node: previous node id, weight: path weight }
   // i.e. element in matrix.get(X)[k] represents previous node and path weight of the best path of length k
@@ -34,7 +37,10 @@ function computeShortestPath<T>(graph: GraphFunction<T>, pathLength: number, sta
         // shift back and forth
         const newWeight = accumulatedWeight + weight;
         const nextPath = paths[length + 1];
-        if (!nextPath || (nextPath[1] > newWeight && (nextPath[1] / newWeight > 1.0001 || node < nextPath[0]))) {
+        if (
+          !nextPath ||
+          (nextPath[1] > newWeight && (nextPath[1] / newWeight > TIEBREAKER_EPSILON || node < nextPath[0]))
+        ) {
           paths[length + 1] = [node, newWeight];
         }
 

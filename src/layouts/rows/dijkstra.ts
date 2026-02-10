@@ -2,6 +2,9 @@ import MinHeap, { rankingFunctionComparator } from "./heap";
 
 export type GraphFunction<T> = (node: T) => Map<T, number>;
 
+// empirically determined threshold for deterministic tiebreaking
+const TIEBREAKER_EPSILON = 1.005;
+
 function buildPrecedentsMap<T>(graph: GraphFunction<T>, startNode: T, endNode: T) {
   // store the previous vertex of the shortest path of arrival
   const precedentsMap = new Map<T, T>();
@@ -45,7 +48,7 @@ function buildPrecedentsMap<T>(graph: GraphFunction<T>, startNode: T, endNode: T
         if (
           currentWeight === undefined ||
           (currentWeight > newWeight &&
-            (currentWeight / newWeight > 1.005 || (currentId !== undefined && currentId! < id)))
+            (currentWeight / newWeight > TIEBREAKER_EPSILON || (currentId !== undefined && currentId! < id)))
         ) {
           storedShortestPaths.set(neighbor, newWeight);
           queue.push([neighbor, newWeight]);
