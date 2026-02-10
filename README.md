@@ -12,16 +12,15 @@ re-engineered from the ground up.
 [![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
 - **Built for React:** works with React 18+
-- **SSR friendly:** produces server-side rendered markup that looks pixel
-  perfect on the client even before hydration
+- **SSR friendly:** produces server-side rendered markup that looks
+  pixel-perfect on the client even before hydration
 - **Responsive images:** responsive images with automatic resolution switching
   are supported out of the box
-- **Feature packed:** supports 3 layout options (rows, columns, and masonry),
-  responsive images, custom data attributes and is fully configurable and
+- **Feature-packed:** supports 3 layout options (rows, columns, and masonry),
+  responsive images, custom data attributes, and is fully configurable and
   customizable
-- **TypeScript:** type definitions come built-in in the package
-- **Performance:** it was built with performance in mind in order to support
-  large photo albums
+- **TypeScript:** type definitions come built-in with the package
+- **Performance:** built with performance in mind to support large photo albums
 
 ## Layouts
 
@@ -89,9 +88,9 @@ uses Dijkstra's algorithm to find the shortest path in a graph where each photo
 to break on represents a node, and each row represents an edge. The cost of each
 edge is calculated as a squared deviation from the `targetRowHeight`. This
 algorithm produces rows that are similar in height and photos that are not
-stretched or abnormally shrunk (as what happens in a naive implementation). It
-solves the issue of panoramas shrinking rows or having stragglers or stretched
-images in the last row.
+stretched or abnormally shrunk (as happens in a naive implementation). It solves
+the issue of panoramas shrinking rows, stragglers, or stretched images in the
+last row.
 
 ### Columns Layout
 
@@ -168,13 +167,13 @@ React Photo Album extensively uses CSS flexbox and CSS `calc` functions to
 calculate images' dimensions on the client. Thanks to this approach, server-side
 rendered markup looks pixel-perfect on the client even before hydration. To
 enable server-side rendering, specify the `defaultContainerWidth` prop.
-Otherwise, React Photo Album produces an empty markup on the server and renders
-on the client only after hydration. Please note that unless your photo album is
-of constant width that always matches the `defaultContainerWidth` value, you
-will most likely see a layout shift immediately after hydration. Alternatively,
-you can provide a fallback skeleton in the `skeleton` prop that will be rendered
-in SSR and swapped with the actual photo album markup after hydration. Please
-also refer to the
+Otherwise, React Photo Album produces empty markup on the server and renders on
+the client only after hydration. Please note that unless your photo album is of
+constant width that always matches the `defaultContainerWidth` value, you will
+most likely see a layout shift immediately after hydration. Alternatively, you
+can provide a fallback skeleton in the `skeleton` prop that will be rendered in
+SSR and swapped with the actual photo album markup after hydration. Please also
+refer to the
 [Server-Side Rendering](<https://react-photo-album.com/documentation#Server-SideRendering(SSR)>)
 documentation for a comprehensive list of available solutions.
 

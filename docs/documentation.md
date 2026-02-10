@@ -36,7 +36,7 @@ import "react-photo-album/masonry.css";
 
 ### 3-in-1
 
-If you use more than one layout in our app, you may opt for the aggregate
+If you use more than one layout in your app, you may opt for the aggregate
 component, which bundles all three layouts.
 
 ```tsx
@@ -163,7 +163,7 @@ The following props are applicable to all three layouts.
           <li>`minPhotos` - minimum number of photos per row</li>
           <li>`maxPhotos` - maximum number of photos per row</li>
           <li>
-            `singleRowMaxHeight` - maximum row height when there is not enough 
+            `singleRowMaxHeight` - maximum row height when there are not enough
             photos to fill more than one row
           </li>
         </ul>
@@ -526,7 +526,7 @@ When applicable, the second parameter represents the photo rendering context.
 ### Container
 
 You can customize the photo album `div` container through the `render.container`
-prop. Your implementation must forward `ref` attribute to the underlying
+prop. Your implementation must forward the `ref` attribute to the underlying
 container element.
 
 ```tsx
@@ -569,7 +569,7 @@ prop and no `onClick` callback). This is not common.
 
 ### Link
 
-Link element is rendered when a photo has an `href` attribute. You can provide
+A link element is rendered when a photo has an `href` attribute. You can provide
 your own link implementation through the `render.link` prop.
 
 ```tsx
@@ -583,7 +583,7 @@ your own link implementation through the `render.link` prop.
 
 ### Button
 
-Button element is rendered when the photo album has an `onClick` callback. You
+A button element is rendered when the photo album has an `onClick` callback. You
 can provide your own button implementation through the `render.button` prop.
 
 ```tsx
@@ -627,8 +627,8 @@ rendering interactive icons with `position: absolute`.
 ### Photo
 
 This is the render function that completely overrides the default `wrapper`,
-`link`, `button`, `image` and `extras` render functions. The only prop provided
-in the first argument, is the `onClick` callback.
+`link`, `button`, `image`, and `extras` render functions. The only prop provided
+in the first argument is the `onClick` callback.
 
 ```tsx
 <RowsPhotoAlbum
@@ -663,7 +663,7 @@ the breakpoint interval.
 ## Sizes
 
 Photo album components automatically generate `sizes` and `srcset` image
-attributes when photo objects contain `srcSet` array. By default,
+attributes when photo objects contain a `srcSet` array. By default,
 [React Photo Album](/) assumes that the photo album utilizes approximately
 <span class="font-mono">100vw</span> of the page width. If that's not the case,
 you can improve the performance of your responsive images by describing your
@@ -784,7 +784,7 @@ import InfiniteScroll from "react-photo-album/scroll";
     <tr>
       <td>error</td>
       <td>ReactNode</td>
-      <td>Markup to display when an error occurred.</td>
+      <td>Markup to display when an error occurs.</td>
     </tr>
     <tr>
       <td>loading</td>
@@ -951,7 +951,7 @@ export default function Gallery() {
       <td>boolean</td>
       <td>
         If `true`, do not include the inline stylesheet. Use this option if you
-        are using custom styling solution (e.g., Tailwind CSS) 
+        are using a custom styling solution (e.g., Tailwind CSS).
       </td>
     </tr>
     <tr>
@@ -1017,7 +1017,7 @@ import ServerPhotoAlbum from "react-photo-album/server";
 
 In addition to the props listed above, `ServerPhotoAlbum` supports all relevant
 props corresponding to the selected layout type except the
-`defaultContainerWidth`, `onClick` and `skeleton`.
+`defaultContainerWidth`, `onClick`, and `skeleton`.
 
 ### Server Component With Default Styling
 
