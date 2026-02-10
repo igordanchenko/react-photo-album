@@ -28,8 +28,12 @@ export default function Offscreen({ rootMargin, scrollContainer, children }: Off
         observe(node, ({ isIntersecting }) => {
           if (!isIntersecting) {
             const { width, height } = node.getBoundingClientRect();
-            const { margin } = getComputedStyle(node);
-            setPlaceholder({ aspectRatio: `${width} / ${height}`, margin });
+            const { marginTop, marginRight, marginBottom, marginLeft } = getComputedStyle(node);
+
+            setPlaceholder({
+              aspectRatio: `${width} / ${height}`,
+              margin: `${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`,
+            });
           } else {
             setPlaceholder(undefined);
           }
