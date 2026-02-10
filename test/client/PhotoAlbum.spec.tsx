@@ -141,18 +141,24 @@ describe("PhotoAlbum", () => {
 
     expect(getContainerWidth()).toBe(1009);
 
-    // prevents resize on first re-render
+    // scrollbar disappears — width grows (first bounce goes through)
+    window.__TEST__.scrollbarWidth = 0;
+    window.resizeTo(1024, 768);
+    expect(getContainerWidth()).toBe(1024);
+
+    // scrollbar reappears — oscillation detected, settles on smaller width
+    window.__TEST__.scrollbarWidth = 15;
+    window.resizeTo(1024, 768);
+    expect(getContainerWidth()).toBe(1009);
+
+    // scrollbar disappears again — suppressed
     window.__TEST__.scrollbarWidth = 0;
     window.resizeTo(1024, 768);
     expect(getContainerWidth()).toBe(1009);
 
-    // adjusts on second re-render
+    // subsequent re-renders are stable
     window.resizeTo(1024, 768);
-    expect(getContainerWidth()).toBe(1024);
-
-    // no change in subsequent re-renders
-    window.resizeTo(1024, 768);
-    expect(getContainerWidth()).toBe(1024);
+    expect(getContainerWidth()).toBe(1009);
   });
 
   it("forwards ref", () => {

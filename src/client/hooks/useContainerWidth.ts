@@ -3,29 +3,39 @@ import { useCallback, useReducer, useRef } from "react";
 import useArray from "./useArray";
 import type { ForwardedRef } from "../../types";
 
-type State = [containerWidth?: number, scrollbarWidth?: number];
+// Maximum expected scrollbar width in pixels, used to distinguish
+// scrollbar-induced resize oscillation from legitimate container resizes.
+const MAX_SCROLLBAR_WIDTH = 20;
 
-type Action = [newContainerWidth?: number, newScrollbarWidth?: number];
+type State = [containerWidth?: number, prevContainerWidth?: number];
 
-function containerWidthReducer(state: State, [newContainerWidth, newScrollbarWidth]: Action): State {
-  const [containerWidth, scrollbarWidth] = state;
+function containerWidthReducer(state: State, newContainerWidth: number | undefined): State {
+  const [containerWidth, prevContainerWidth] = state;
 
-  if (
-    containerWidth !== undefined &&
-    scrollbarWidth !== undefined &&
-    newContainerWidth !== undefined &&
-    newScrollbarWidth !== undefined &&
-    newContainerWidth > containerWidth &&
-    newContainerWidth - containerWidth <= 20 &&
-    newScrollbarWidth < scrollbarWidth
-  ) {
-    // prevent infinite resize loop when scrollbar disappears
-    return [containerWidth, newScrollbarWidth];
+  if (containerWidth === newContainerWidth) {
+    return state;
   }
 
-  return containerWidth !== newContainerWidth || scrollbarWidth !== newScrollbarWidth
-    ? [newContainerWidth, newScrollbarWidth]
-    : state;
+  // Detect resize loop caused by scrollbar appearance/disappearance: when rendering
+  // at width A causes content overflow (scrollbar appears, shrinking width to B), and
+  // rendering at width B removes the overflow (scrollbar disappears, restoring width A),
+  // the container width oscillates between A and B indefinitely. Settle on the smaller
+  // width to break the cycle — the layout fits within the scrollbar-reduced width,
+  // preventing further oscillation.
+  if (
+    prevContainerWidth !== undefined &&
+    newContainerWidth !== undefined &&
+    containerWidth !== undefined &&
+    newContainerWidth === prevContainerWidth &&
+    Math.abs(newContainerWidth - containerWidth) <= MAX_SCROLLBAR_WIDTH
+  ) {
+    const min = Math.min(containerWidth, newContainerWidth);
+    const max = Math.max(containerWidth, newContainerWidth);
+    // preserve state reference to avoid unnecessary re-renders
+    return min === containerWidth && max === prevContainerWidth ? state : [min, max];
+  }
+
+  return [newContainerWidth, containerWidth];
 }
 
 function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly number[] | undefined) {
@@ -52,8 +62,7 @@ export default function useContainerWidth(
       observerRef.current?.disconnect();
       observerRef.current = undefined;
 
-      const updateWidth = () =>
-        dispatch([resolveContainerWidth(node, breakpoints), window.innerWidth - document.documentElement.clientWidth]);
+      const updateWidth = () => dispatch(resolveContainerWidth(node, breakpoints));
 
       updateWidth();
 
