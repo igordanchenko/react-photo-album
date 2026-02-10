@@ -1,7 +1,7 @@
 import { useCallback, useReducer, useRef } from "react";
 
 import useArray from "./useArray";
-import { ForwardedRef } from "../../types";
+import type { ForwardedRef } from "../../types";
 
 type State = [containerWidth?: number, scrollbarWidth?: number];
 

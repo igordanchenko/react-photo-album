@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import RowsPhotoAlbum from "../rows";
 import ColumnsPhotoAlbum from "../columns";
 import MasonryPhotoAlbum from "../masonry";
-import {
+import type {
   ColumnsPhotoAlbumProps,
   ElementRef,
   ForwardedRef,

@@ -1,6 +1,6 @@
 import findShortestPath from "./dijkstra";
 import { ratio, round } from "../../utils";
-import { LayoutModel, Photo } from "../../types";
+import type { LayoutModel, Photo } from "../../types";
 
 // guesstimate how many neighboring nodes should be searched based on
 // the aspect columnRatio of the container with images and minimal aspect columnRatio of all photos

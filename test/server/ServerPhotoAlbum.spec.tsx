@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { LayoutType } from "../../src";
+import type { LayoutType } from "../../src";
 import ServerPhotoAlbum from "../../src/server";
 import { render } from "../test-utils";
 import photos from "../photos";

@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 
 import Component from "./Component";
 import { round } from "../utils";
-import {
+import type {
   ComponentsProps,
   ElementRef,
   ForwardedRef,

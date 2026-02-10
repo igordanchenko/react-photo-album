@@ -4,7 +4,7 @@ import { Children, cloneElement, isValidElement, useCallback, useRef, useState }
 import Offscreen from "./Offscreen";
 import useEventCallback from "./useEventCallback";
 import useIntersectionObserver from "./useIntersectionObserver";
-import { ClickHandlerProps, CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
+import type { ClickHandlerProps, CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
 
 enum Status {
   IDLE,

@@ -1,5 +1,5 @@
 import { resolveCommonProps, resolveResponsiveParameter } from "../../utils";
-import { MasonryPhotoAlbumProps, Photo } from "../../types";
+import type { MasonryPhotoAlbumProps, Photo } from "../../types";
 
 export default function resolveMasonryProps<TPhoto extends Photo>(
   containerWidth: number | undefined,

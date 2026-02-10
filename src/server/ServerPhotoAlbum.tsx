@@ -7,7 +7,7 @@ import resolveRowsProps from "../client/rows/resolveRowsProps";
 import resolveColumnsProps from "../client/columns/resolveColumnsProps";
 import resolveMasonryProps from "../client/masonry/resolveMasonryProps";
 import { StyledBreakpoints, useBreakpoints } from "../ssr/breakpoints";
-import {
+import type {
   ColumnsPhotoAlbumProps,
   LayoutType,
   MasonryPhotoAlbumProps,

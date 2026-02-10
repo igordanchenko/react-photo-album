@@ -1,5 +1,5 @@
 import { ratio } from "../../utils";
-import { LayoutModel, Photo } from "../../types";
+import type { LayoutModel, Photo } from "../../types";
 
 export default function computeMasonryLayout<TPhoto extends Photo>(
   photos: readonly TPhoto[],

@@ -4,7 +4,7 @@ import { forwardRef } from "react";
 import Component from "./Component";
 import PhotoComponent from "./PhotoComponent";
 import { srcSetAndSizes, unwrap } from "../utils";
-import { CommonPhotoAlbumProps, ComponentsProps, ElementRef, LayoutModel, Photo, Render } from "../types";
+import type { CommonPhotoAlbumProps, ComponentsProps, ElementRef, LayoutModel, Photo, Render } from "../types";
 
 export type StaticPhotoAlbumProps<TPhoto extends Photo> = Pick<
   CommonPhotoAlbumProps<TPhoto>,

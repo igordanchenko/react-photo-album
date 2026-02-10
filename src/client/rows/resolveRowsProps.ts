@@ -1,5 +1,5 @@
 import { resolveCommonProps, resolveResponsiveParameter, unwrapParameter } from "../../utils";
-import { Photo, RowsPhotoAlbumProps } from "../../types";
+import type { Photo, RowsPhotoAlbumProps } from "../../types";
 
 export default function resolveRowsProps<TPhoto extends Photo>(
   containerWidth: number | undefined,

@@ -4,7 +4,7 @@ import { useContainerWidth } from "../hooks";
 import StaticPhotoAlbum from "../../static";
 import resolveRowsProps from "./resolveRowsProps";
 import computeRowsLayout from "../../layouts/rows";
-import { ElementRef, ForwardedRef, JSXElement, Photo, RowsPhotoAlbumProps } from "../../types";
+import type { ElementRef, ForwardedRef, JSXElement, Photo, RowsPhotoAlbumProps } from "../../types";
 
 function RowsPhotoAlbum<TPhoto extends Photo>(
   { photos, breakpoints, defaultContainerWidth, ...rest }: RowsPhotoAlbumProps<TPhoto>,

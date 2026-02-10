@@ -4,7 +4,7 @@ import { cloneElement, forwardRef, isValidElement, useState } from "react";
 import { clsx } from "../utils";
 import { useContainerWidth } from "../client/hooks";
 import { StyledBreakpoints, useBreakpoints } from "./breakpoints";
-import { CommonPhotoAlbumProps } from "../types";
+import type { CommonPhotoAlbumProps } from "../types";
 
 /** SSR component props. */
 export type SSRProps = {

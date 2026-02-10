@@ -1,18 +1,17 @@
 {
-  "exclude": ["examples"],
   "compilerOptions": {
     "strict": true,
-    "jsx": "react-jsx",
+    "noEmit": true,
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "lib": ["DOM", "ES2020"],
-    "noEmit": true,
-    "declaration": false,
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": [],
     "skipLibCheck": true,
-    "stripInternal": true,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "exclude": ["dev", "dist", "examples"]
 }
