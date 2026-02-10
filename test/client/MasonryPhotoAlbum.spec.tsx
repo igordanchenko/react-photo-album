@@ -39,4 +39,14 @@ describe("MasonryPhotoAlbum", () => {
     window.resizeTo(80, 600);
     expect(getTracks().length).toBe(0);
   });
+
+  it("handles zero-dimension photos", () => {
+    const photosArray = [
+      { src: "zero-height.jpg", width: 100, height: 0 },
+      { src: "zero-both.jpg", width: 0, height: 0 },
+      ...photos.slice(0, 3),
+    ];
+    const { getPhotos } = render(<MasonryPhotoAlbum photos={photosArray} columns={3} />);
+    expect(getPhotos().length).toBe(photosArray.length);
+  });
 });
