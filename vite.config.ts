@@ -3,6 +3,22 @@
 
 import { defineConfig } from "vite";
 import cleanup from "rollup-plugin-cleanup";
+import type { Plugin } from "rollup";
+
+function addClientDirective(): Plugin {
+  return {
+    name: "add-client-directive",
+    renderChunk(code) {
+      if (
+        (/import\s.*(?:useMemo|useState|useRef|useCallback|useReducer).*from\s*['"]react['"]/.test(code) ||
+          /import\s.*from\s*['"]\.\/(?:rows|columns|masonry)\.js['"]/.test(code)) &&
+        !/['"]use client['"]/.test(code)
+      ) {
+        return { code: `"use client";\n${code}`, map: null };
+      }
+    },
+  };
+}
 
 export default defineConfig({
   test: {
@@ -47,6 +63,7 @@ export default defineConfig({
       external: ["react", "react/jsx-runtime"],
       output: { minifyInternalExports: false },
       plugins: [
+        addClientDirective(),
         cleanup({
           extensions: ["ts", "tsx"],
           comments: "license", // https://github.com/vitest-dev/vitest/issues/8365
