@@ -41,15 +41,6 @@ function editFile(file, callback) {
 }
 
 /**
- * Add type definitions for CSS files.
- *
- * @param {string} file - file name
- */
-function fixupCssDefinitions(file) {
-  writeFile(`${file}.d.ts`, ["declare const styles: unknown;", "export default styles;"].join(os.EOL));
-}
-
-/**
  * Add client boundary.
  *
  * @param {string} file - file name
@@ -73,10 +64,6 @@ function fixup(watchMode) {
   try {
     globSync(`${ROOT}/**/*.js`).forEach((file) => {
       fixupClientBoundary(file);
-    });
-
-    globSync(`${ROOT}/**/*.css`).forEach((file) => {
-      fixupCssDefinitions(file);
     });
 
     globSync(`${ROOT}/**/*-*.{js,d\\.ts}`).forEach((file) => {

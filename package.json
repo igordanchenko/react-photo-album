@@ -24,22 +24,10 @@
       "types": "./dist/server/index.d.ts",
       "default": "./dist/server/index.js"
     },
-    "./rows.css": {
-      "types": "./dist/styles/rows.css.d.ts",
-      "default": "./dist/styles/rows.css"
-    },
-    "./columns.css": {
-      "types": "./dist/styles/columns.css.d.ts",
-      "default": "./dist/styles/columns.css"
-    },
-    "./masonry.css": {
-      "types": "./dist/styles/masonry.css.d.ts",
-      "default": "./dist/styles/masonry.css"
-    },
-    "./styles.css": {
-      "types": "./dist/styles/styles.css.d.ts",
-      "default": "./dist/styles/styles.css"
-    }
+    "./rows.css": "./dist/styles/rows.css",
+    "./columns.css": "./dist/styles/columns.css",
+    "./masonry.css": "./dist/styles/masonry.css",
+    "./styles.css": "./dist/styles/styles.css"
   },
   "typesVersions": {
     "*": {
@@ -54,18 +42,6 @@
       ],
       "server": [
         "dist/server/index.d.ts"
-      ],
-      "rows.css": [
-        "dist/styles/rows.css.d.ts"
-      ],
-      "columns.css": [
-        "dist/styles/columns.css.d.ts"
-      ],
-      "masonry.css": [
-        "dist/styles/masonry.css.d.ts"
-      ],
-      "styles.css": [
-        "dist/styles/styles.css.d.ts"
       ]
     }
   },
