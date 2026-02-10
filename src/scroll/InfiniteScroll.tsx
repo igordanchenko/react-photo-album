@@ -129,17 +129,20 @@ export default function InfiniteScroll<TPhoto extends Photo>({
   const photosArray = photos.flatMap((batch) => batch);
 
   const handleClick = onClick
-    ? ({ photo, event }: ClickHandlerProps<TPhoto>) => {
-        onClick({ photos: photosArray, index: photosArray.findIndex((item) => item === photo), photo, event });
-      }
+    ? (offset: number) =>
+        ({ photo, index, event }: ClickHandlerProps<TPhoto>) => {
+          onClick({ photos: photosArray, index: offset + index, photo, event });
+        }
     : undefined;
+
+  let batchOffset = 0;
 
   return (
     <>
       {singleton
         ? cloneElement(children, {
             photos: photosArray,
-            onClick: handleClick,
+            onClick: handleClick?.(0),
             render: {
               ...children.props.render,
               track: ({ children: trackChildren, ...rest }: RenderTrackProps) => (
@@ -157,14 +160,19 @@ export default function InfiniteScroll<TPhoto extends Photo>({
               ),
             },
           })
-        : photos.map((batch, index) => (
-            <Offscreen key={index} rootMargin={offscreenRootMargin} scrollContainer={scrollContainer}>
-              {cloneElement(children, {
-                photos: batch,
-                onClick: handleClick,
-              })}
-            </Offscreen>
-          ))}
+        : photos.map((batch, index) => {
+            const offset = batchOffset;
+            batchOffset += batch.length;
+
+            return (
+              <Offscreen key={index} rootMargin={offscreenRootMargin} scrollContainer={scrollContainer}>
+                {cloneElement(children, {
+                  photos: batch,
+                  onClick: handleClick?.(offset),
+                })}
+              </Offscreen>
+            );
+          })}
 
       {status === Status.ERROR && error}
       {status === Status.LOADING && loading}
