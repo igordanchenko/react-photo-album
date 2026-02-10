@@ -1,5 +1,26 @@
 import { resolveCommonProps, resolveResponsiveParameter } from "../../utils";
-import type { MasonryPhotoAlbumProps, Photo } from "../../types";
+import type { ComponentsProps, MasonryPhotoAlbumProps, Photo, Render, ResolvedNumber } from "../../types";
+
+type ResolvedMasonryProps<TPhoto extends Photo, TWidth extends number | undefined = number | undefined> = Omit<
+  MasonryPhotoAlbumProps<TPhoto>,
+  "columns" | "spacing" | "padding" | "componentsProps" | "render"
+> & {
+  spacing: ResolvedNumber<TWidth>;
+  padding: ResolvedNumber<TWidth>;
+  columns: ResolvedNumber<TWidth>;
+  componentsProps: ComponentsProps<TPhoto>;
+  render: Render<TPhoto> | undefined;
+};
+
+export default function resolveMasonryProps<TPhoto extends Photo>(
+  containerWidth: number,
+  props: MasonryPhotoAlbumProps<TPhoto>,
+): ResolvedMasonryProps<TPhoto, number>;
+
+export default function resolveMasonryProps<TPhoto extends Photo>(
+  containerWidth: number | undefined,
+  props: MasonryPhotoAlbumProps<TPhoto>,
+): ResolvedMasonryProps<TPhoto>;
 
 export default function resolveMasonryProps<TPhoto extends Photo>(
   containerWidth: number | undefined,

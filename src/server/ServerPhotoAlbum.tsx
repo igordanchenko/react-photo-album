@@ -66,37 +66,28 @@ export default function ServerPhotoAlbum<TPhoto extends Photo>({
     if (layout === "rows") {
       const { spacing, padding, targetRowHeight, minPhotos, maxPhotos, ...rest } = resolveRowsProps(breakpoint, props);
 
-      /* v8 ignore else - @preserve */
-      if (spacing !== undefined && padding !== undefined && targetRowHeight !== undefined) {
-        return {
-          ...rest,
-          model: computeRowsLayout(photos, spacing, padding, breakpoint, targetRowHeight, minPhotos, maxPhotos),
-        };
-      }
+      return {
+        ...rest,
+        model: computeRowsLayout(photos, spacing, padding, breakpoint, targetRowHeight, minPhotos, maxPhotos),
+      };
     }
 
     if (layout === "columns") {
       const { spacing, padding, columns, ...rest } = resolveColumnsProps(breakpoint, props);
 
-      /* v8 ignore else - @preserve */
-      if (spacing !== undefined && padding !== undefined && columns !== undefined) {
-        return {
-          ...rest,
-          model: computeColumnsLayout(photos, spacing, padding, breakpoint, columns),
-        };
-      }
+      return {
+        ...rest,
+        model: computeColumnsLayout(photos, spacing, padding, breakpoint, columns),
+      };
     }
 
     if (layout === "masonry") {
       const { spacing, padding, columns, ...rest } = resolveMasonryProps(breakpoint, props);
 
-      /* v8 ignore else - @preserve */
-      if (spacing !== undefined && padding !== undefined && columns !== undefined) {
-        return {
-          ...rest,
-          model: computeMasonryLayout(photos, spacing, padding, breakpoint, columns),
-        };
-      }
+      return {
+        ...rest,
+        model: computeMasonryLayout(photos, spacing, padding, breakpoint, columns),
+      };
     }
 
     return null;

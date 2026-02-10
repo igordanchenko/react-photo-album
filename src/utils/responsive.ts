@@ -1,4 +1,23 @@
-import type { CommonPhotoAlbumProps, Photo, ResponsiveParameter } from "../types";
+import type {
+  CommonPhotoAlbumProps,
+  ComponentsProps,
+  Photo,
+  Render,
+  ResolvedNumber,
+  ResponsiveParameter,
+} from "../types";
+
+type CommonProps<TPhoto extends Photo> = Pick<
+  CommonPhotoAlbumProps<TPhoto>,
+  "spacing" | "padding" | "componentsProps" | "render"
+>;
+
+type ResolvedCommonProps<TPhoto extends Photo, TWidth extends number | undefined = number | undefined> = {
+  spacing: ResolvedNumber<TWidth>;
+  padding: ResolvedNumber<TWidth>;
+  componentsProps: ComponentsProps<TPhoto>;
+  render: Render<TPhoto> | undefined;
+};
 
 const breakpoints = Object.freeze([1200, 600, 300, 0]);
 
@@ -20,6 +39,20 @@ function selectResponsiveValue(values: readonly ResponsiveParameter[], container
 
 export function resolveResponsiveParameter(
   parameter: ResponsiveParameter | undefined,
+  containerWidth: number,
+  values: readonly ResponsiveParameter[],
+  minValue?: number,
+): number;
+
+export function resolveResponsiveParameter(
+  parameter: ResponsiveParameter | undefined,
+  containerWidth: number | undefined,
+  values: readonly ResponsiveParameter[],
+  minValue?: number,
+): number | undefined;
+
+export function resolveResponsiveParameter(
+  parameter: ResponsiveParameter | undefined,
   containerWidth: number | undefined,
   values: readonly ResponsiveParameter[],
   minValue = 0,
@@ -30,13 +63,18 @@ export function resolveResponsiveParameter(
 }
 
 export function resolveCommonProps<TPhoto extends Photo>(
+  containerWidth: number,
+  props: CommonProps<TPhoto>,
+): ResolvedCommonProps<TPhoto, number>;
+
+export function resolveCommonProps<TPhoto extends Photo>(
   containerWidth: number | undefined,
-  {
-    spacing,
-    padding,
-    componentsProps,
-    render,
-  }: Pick<CommonPhotoAlbumProps<TPhoto>, "spacing" | "padding" | "componentsProps" | "render">,
+  props: CommonProps<TPhoto>,
+): ResolvedCommonProps<TPhoto>;
+
+export function resolveCommonProps<TPhoto extends Photo>(
+  containerWidth: number | undefined,
+  { spacing, padding, componentsProps, render }: CommonProps<TPhoto>,
 ) {
   return {
     spacing: resolveResponsiveParameter(spacing, containerWidth, [20, 15, 10, 5]),

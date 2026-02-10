@@ -305,6 +305,10 @@ export type RenderFunction<Props extends object | void = void, Context extends o
         context: Context,
       ) => React.ReactNode;
 
+export type ResolvedNumber<TWidth extends number | undefined = number | undefined> = TWidth extends number
+  ? number
+  : number | undefined;
+
 export type NonOptional<Props, Keys extends keyof Props> = Required<Pick<Props, Keys>> & Omit<Props, Keys>;
 
 export type ContextAware<Props, Context> = Props | ((context: Context) => Props | undefined);

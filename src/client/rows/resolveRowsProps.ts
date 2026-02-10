@@ -1,5 +1,28 @@
 import { resolveCommonProps, resolveResponsiveParameter, unwrapParameter } from "../../utils";
-import type { Photo, RowsPhotoAlbumProps } from "../../types";
+import type { ComponentsProps, Photo, Render, ResolvedNumber, RowsPhotoAlbumProps } from "../../types";
+
+type ResolvedRowsProps<TPhoto extends Photo, TWidth extends number | undefined = number | undefined> = Omit<
+  RowsPhotoAlbumProps<TPhoto>,
+  "targetRowHeight" | "rowConstraints" | "spacing" | "padding" | "componentsProps" | "render"
+> & {
+  spacing: ResolvedNumber<TWidth>;
+  padding: ResolvedNumber<TWidth>;
+  targetRowHeight: ResolvedNumber<TWidth>;
+  componentsProps: ComponentsProps<TPhoto>;
+  render: Render<TPhoto> | undefined;
+  minPhotos: number | undefined;
+  maxPhotos: number | undefined;
+};
+
+export default function resolveRowsProps<TPhoto extends Photo>(
+  containerWidth: number,
+  props: RowsPhotoAlbumProps<TPhoto>,
+): ResolvedRowsProps<TPhoto, number>;
+
+export default function resolveRowsProps<TPhoto extends Photo>(
+  containerWidth: number | undefined,
+  props: RowsPhotoAlbumProps<TPhoto>,
+): ResolvedRowsProps<TPhoto>;
 
 export default function resolveRowsProps<TPhoto extends Photo>(
   containerWidth: number | undefined,
