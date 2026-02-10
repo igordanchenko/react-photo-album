@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { ColumnsPhotoAlbum, MasonryPhotoAlbum } from "../../src";
+import { MasonryPhotoAlbum } from "../../src";
 import { render, renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";
 
@@ -27,7 +27,7 @@ describe("MasonryPhotoAlbum", () => {
   });
 
   it("fills first N available columns", () => {
-    const { getTracks } = render(<ColumnsPhotoAlbum photos={photos.slice(0, 2)} columns={5} />);
+    const { getTracks } = render(<MasonryPhotoAlbum photos={photos.slice(0, 2)} columns={5} />);
     expect(getTracks().length).toBe(5);
   });
 
