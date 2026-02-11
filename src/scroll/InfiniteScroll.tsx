@@ -109,6 +109,9 @@ export default function InfiniteScroll<TPhoto extends Photo>({
     } catch (_) {
       updateStatus(Status.ERROR);
     }
+    // `photos.length` dependency is essential: it changes `handleFetch` identity after each
+    // successful fetch, which causes `sentinelRef` to re-register the IntersectionObserver.
+    // Without this, the observer won't re-fire if the sentinel remains in the viewport.
   }, [photos.length, fetchWithRetry]);
 
   const sentinelRef = useCallback(
