@@ -1,7 +1,7 @@
 import PhotoAlbum from "../src";
 import photos from "./photos";
 
-import "../src/styles/styles.scss";
+import "../src/styles/styles.css";
 
 export default function App() {
   return (
