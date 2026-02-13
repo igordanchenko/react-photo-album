@@ -35,8 +35,4 @@ export default defineConfig(
       ],
     },
   },
-  {
-    files: ["fixup-dist.js"],
-    languageOptions: { globals: globals.node },
-  },
 );
