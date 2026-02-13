@@ -68,7 +68,7 @@
     "build:tsc": "tsc",
     "build:js": "vite build",
     "build:dts": "rollup -c",
-    "build:css": "lightningcss --bundle --minify --targets \">= 0.25%\" src/styles/*.css -d dist/styles",
+    "build:css": "lightningcss --bundle --minify --targets \">= 0.25%\" src/styles/rows.css src/styles/columns.css src/styles/masonry.css src/styles/styles.css -d dist/styles",
     "start": "npm-run-all clean build:css --parallel \"build:(tsc|js|dts) -- -w\"",
     "lint": "eslint",
     "test": "vitest run",
