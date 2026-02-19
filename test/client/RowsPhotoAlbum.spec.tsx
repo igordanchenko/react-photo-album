@@ -36,8 +36,17 @@ describe("RowsPhotoAlbum", () => {
     rerender(<RowsPhotoAlbum photos={photos.slice(0, 0)} rowConstraints={{ singleRowMaxHeight: 100 }} />);
     expect(getPhotoAlbum()?.style.getPropertyValue("max-width")).toBeFalsy();
 
-    rerender(<RowsPhotoAlbum photos={photos.slice(0, 1)} rowConstraints={{ singleRowMaxHeight: 100 }} />);
-    expect(getPhotoAlbum()?.style.getPropertyValue("max-width")).toBeTruthy();
+    // maxWidth must include padding: containerWidth = ratio * maxHeight + (n-1) * spacing + 2 * n * padding
+    // with 1 landscape photo (400×200, ratio=2), padding=10, singleRowMaxHeight=100, n=1:
+    //   expected = 2 * 100 + 0 + 2 * 10 = 220
+    rerender(
+      <RowsPhotoAlbum
+        photos={[{ src: "a.jpg", width: 400, height: 200 }]}
+        padding={10}
+        rowConstraints={{ singleRowMaxHeight: 100 }}
+      />,
+    );
+    expect(getPhotoAlbum()?.style.getPropertyValue("max-width")).toBe("220px");
   });
 
   it("handles impossible layout", () => {

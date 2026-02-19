@@ -34,8 +34,8 @@ export default function resolveRowsProps<TPhoto extends Photo>(
   if (singleRowMaxHeight !== undefined && spacing !== undefined && padding !== undefined) {
     const maxWidth = Math.floor(
       photos.reduce(
-        (acc, { width, height }) => acc + (width / height) * singleRowMaxHeight - 2 * padding,
-        padding * photos.length * 2 + spacing * (photos.length - 1),
+        (acc, { width, height }) => acc + (width / height) * singleRowMaxHeight + 2 * padding,
+        spacing * (photos.length - 1),
       ),
     );
 
