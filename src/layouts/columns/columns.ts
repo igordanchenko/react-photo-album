@@ -134,7 +134,7 @@ export default function computeColumnsLayout<TPhoto extends Photo>(
     columns,
   );
 
-  if (tracks.some((track) => track.photos.some(({ width, height }) => width < 0 || height < 0))) {
+  if (tracks.some((track) => track.photos.some(({ width, height }) => width <= 0 || height <= 0))) {
     // encountered impossible layout - try to find a solution recursively with fewer columns or bail out
     return columns > 1 ? computeColumnsLayout(photos, spacing, padding, containerWidth, columns - 1) : undefined;
   }
