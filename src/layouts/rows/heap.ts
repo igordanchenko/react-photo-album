@@ -1,6 +1,6 @@
 export type Comparator<T> = (a: T, b: T) => number;
 
-export function rankingFunctionComparator<T>(rank: (element: T) => number) {
+export function rankingFunctionComparator<T>(rank: (element: T) => number): Comparator<T> {
   return (a: T, b: T) => rank(b) - rank(a);
 }
 
