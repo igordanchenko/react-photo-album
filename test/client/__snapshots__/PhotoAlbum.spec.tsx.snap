@@ -19,6 +19,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 238.414; --react-photo-album--photo-height: 176.603;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -31,6 +32,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 238.414; --react-photo-album--photo-height: 357.62;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -43,6 +45,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 238.414; --react-photo-album--photo-height: 158.942;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -55,6 +58,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 238.414; --react-photo-album--photo-height: 159.163;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -67,6 +71,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 238.414; --react-photo-album--photo-height: 357.62;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -84,6 +89,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 263.484; --react-photo-album--photo-height: 148.088;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -96,6 +102,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 263.484; --react-photo-album--photo-height: 148.332;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -108,6 +115,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 263.484; --react-photo-album--photo-height: 175.656;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -120,6 +128,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 263.484; --react-photo-album--photo-height: 377.905;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -132,6 +141,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 263.484; --react-photo-album--photo-height: 175.656;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -144,6 +154,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 263.484; --react-photo-album--photo-height: 169.313;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -161,6 +172,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 244.99; --react-photo-album--photo-height: 367.485;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -173,6 +185,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 244.99; --react-photo-album--photo-height: 163.327;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -185,6 +198,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 244.99; --react-photo-album--photo-height: 326.653;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -197,6 +211,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 244.99; --react-photo-album--photo-height: 367.485;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -214,6 +229,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 232.112; --react-photo-album--photo-height: 174.084;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -226,6 +242,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 232.112; --react-photo-album--photo-height: 348.169;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -238,6 +255,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 232.112; --react-photo-album--photo-height: 34.387;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -250,6 +268,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 232.112; --react-photo-album--photo-height: 174.084;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -262,6 +281,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 232.112; --react-photo-album--photo-height: 154.742;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -274,6 +294,7 @@ exports[`PhotoAlbum > supports columns layout 1`] = `
         style="--react-photo-album--photo-width: 232.112; --react-photo-album--photo-height: 309.483;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -303,6 +324,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 181.296;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -315,6 +337,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 137.785;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -327,6 +350,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 351.035;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -339,6 +363,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 367.125;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -351,6 +376,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 326.333;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -368,6 +394,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 367.125;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -380,6 +407,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 163.167;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -392,6 +420,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 367.125;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -404,6 +433,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 36.259;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -416,6 +446,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 183.563;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -433,6 +464,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 163.167;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -445,6 +477,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 367.125;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -457,6 +490,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 163.167;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -469,6 +503,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 183.563;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -481,6 +516,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 367.125;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -498,6 +534,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 163.393;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -510,6 +547,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 137.559;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -522,6 +560,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 163.167;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -534,6 +573,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 157.275;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -546,6 +586,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 326.333;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -558,6 +599,7 @@ exports[`PhotoAlbum > supports masonry layout 1`] = `
         style="--react-photo-album--photo-width: 244.75; --react-photo-album--photo-height: 163.167;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -587,6 +629,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 203.257; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -599,6 +642,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 100.374; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -611,6 +655,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 225.841; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -623,6 +668,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 225.528; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -640,6 +686,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 121.579; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -652,6 +699,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 324.477; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -664,6 +712,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 323.944; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -681,6 +730,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -693,6 +743,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 145.207; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -705,6 +756,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -722,6 +774,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 321.868; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -734,6 +787,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 137.887; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -746,6 +800,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 310.245; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -763,6 +818,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 165.732; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -775,6 +831,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -787,6 +844,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 294.634; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -799,6 +857,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -816,6 +875,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 800; --react-photo-album--photo-height: 118.519;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -833,6 +893,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 286.512; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -845,6 +906,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 322.326; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -857,6 +919,7 @@ exports[`PhotoAlbum > supports responsive sizes 1`] = `
         style="--react-photo-album--photo-width: 161.163; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -886,6 +949,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 203.257; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -899,6 +963,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 100.374; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -912,6 +977,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 225.841; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -925,6 +991,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 225.528; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -943,6 +1010,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 121.579; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -956,6 +1024,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 324.477; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -969,6 +1038,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 323.944; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -987,6 +1057,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1000,6 +1071,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 145.207; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1013,6 +1085,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1031,6 +1104,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 321.868; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1044,6 +1118,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 137.887; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1057,6 +1132,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 310.245; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1075,6 +1151,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 165.732; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1088,6 +1165,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1101,6 +1179,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 294.634; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1114,6 +1193,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1132,6 +1212,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 800; --react-photo-album--photo-height: 118.519;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1150,6 +1231,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 286.512; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1163,6 +1245,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 322.326; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1176,6 +1259,7 @@ exports[`PhotoAlbum > supports responsive sizes 2`] = `
         style="--react-photo-album--photo-width: 161.163; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1206,6 +1290,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 203.257; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1219,6 +1304,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 100.374; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1232,6 +1318,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 225.841; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1245,6 +1332,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 225.528; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1263,6 +1351,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 121.579; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1276,6 +1365,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 324.477; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1289,6 +1379,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 323.944; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1307,6 +1398,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1320,6 +1412,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 145.207; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1333,6 +1426,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1351,6 +1445,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 321.868; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1364,6 +1459,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 137.887; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1377,6 +1473,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 310.245; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1395,6 +1492,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 165.732; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1408,6 +1506,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1421,6 +1520,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 294.634; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1434,6 +1534,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1452,6 +1553,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 800; --react-photo-album--photo-height: 118.519;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1470,6 +1572,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 286.512; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1483,6 +1586,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 322.326; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1496,6 +1600,7 @@ exports[`PhotoAlbum > supports responsive sizes 3`] = `
         style="--react-photo-album--photo-width: 161.163; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1526,6 +1631,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 381.583; --react-photo-album--photo-height: 282.654;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1538,6 +1644,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 188.436; --react-photo-album--photo-height: 282.654;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1550,6 +1657,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 423.981; --react-photo-album--photo-height: 282.654;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1567,6 +1675,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 377.535; --react-photo-album--photo-height: 252.039;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1579,6 +1688,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 168.026; --react-photo-album--photo-height: 252.039;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1591,6 +1701,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 448.439; --react-photo-album--photo-height: 252.039;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1608,6 +1719,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 444.354; --react-photo-album--photo-height: 250.155;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1620,6 +1732,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 375.232; --react-photo-album--photo-height: 250.155;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1632,6 +1745,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 174.414; --react-photo-album--photo-height: 250.155;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1649,6 +1763,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 400.498; --react-photo-album--photo-height: 266.999;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1661,6 +1776,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 415.503; --react-photo-album--photo-height: 266.999;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1673,6 +1789,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 177.999; --react-photo-album--photo-height: 266.999;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1690,6 +1807,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 294.102; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1702,6 +1820,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 147.051; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1714,6 +1833,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1726,6 +1846,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 261.424; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1738,6 +1859,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1755,6 +1877,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 1024; --react-photo-album--photo-height: 151.704;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1772,6 +1895,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 369.86; --react-photo-album--photo-height: 277.395;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1784,6 +1908,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 416.093; --react-photo-album--photo-height: 277.395;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1796,6 +1921,7 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
         style="--react-photo-album--photo-width: 208.047; --react-photo-album--photo-height: 277.395;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"

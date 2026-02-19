@@ -64,7 +64,7 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
             >
               {photos.map((context) => {
                 const { photo, index, width } = context;
-                const { key, src, alt, title, label } = photo;
+                const { key, src, alt = "", title, label } = photo;
 
                 const onClick = onClickCallback
                   ? (event: React.MouseEvent) => {

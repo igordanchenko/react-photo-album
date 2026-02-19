@@ -28,6 +28,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 381.583; --react-photo-album--photo-height: 282.654;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -40,6 +41,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 188.436; --react-photo-album--photo-height: 282.654;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -52,6 +54,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 423.981; --react-photo-album--photo-height: 282.654;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -69,6 +72,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 377.535; --react-photo-album--photo-height: 252.039;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -81,6 +85,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 168.026; --react-photo-album--photo-height: 252.039;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -93,6 +98,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 448.439; --react-photo-album--photo-height: 252.039;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -110,6 +116,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 444.354; --react-photo-album--photo-height: 250.155;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -122,6 +129,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 375.232; --react-photo-album--photo-height: 250.155;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -134,6 +142,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 174.414; --react-photo-album--photo-height: 250.155;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -151,6 +160,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 400.498; --react-photo-album--photo-height: 266.999;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -163,6 +173,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 415.503; --react-photo-album--photo-height: 266.999;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -175,6 +186,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 177.999; --react-photo-album--photo-height: 266.999;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -192,6 +204,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 294.102; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -204,6 +217,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 147.051; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -216,6 +230,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -228,6 +243,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 261.424; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -240,6 +256,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -257,6 +274,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 1024; --react-photo-album--photo-height: 151.704;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -274,6 +292,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 369.86; --react-photo-album--photo-height: 277.395;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -286,6 +305,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 416.093; --react-photo-album--photo-height: 277.395;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -298,6 +318,7 @@ exports[`RowsPhotoAlbum > renders without crashing 2`] = `
         style="--react-photo-album--photo-width: 208.047; --react-photo-album--photo-height: 277.395;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -327,6 +348,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 360.748; --react-photo-album--photo-height: 267.22;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -339,6 +361,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 178.147; --react-photo-album--photo-height: 267.22;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -351,6 +374,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 400.831; --react-photo-album--photo-height: 267.22;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -363,6 +387,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 400.275; --react-photo-album--photo-height: 267.22;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -380,6 +405,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 156.116; --react-photo-album--photo-height: 234.175;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -392,6 +418,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 416.653; --react-photo-album--photo-height: 234.175;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -404,6 +431,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 415.968; --react-photo-album--photo-height: 234.175;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -416,6 +444,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 351.262; --react-photo-album--photo-height: 234.175;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -433,6 +462,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 211.371; --react-photo-album--photo-height: 303.161;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -445,6 +475,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 454.742; --react-photo-album--photo-height: 303.161;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -457,6 +488,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 471.779; --react-photo-album--photo-height: 303.161;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -469,6 +501,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 202.108; --react-photo-album--photo-height: 303.161;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -486,6 +519,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 402.712; --react-photo-album--photo-height: 268.475;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -498,6 +532,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 201.356; --react-photo-album--photo-height: 268.475;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -510,6 +545,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 178.983; --react-photo-album--photo-height: 268.475;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -522,6 +558,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 357.966; --react-photo-album--photo-height: 268.475;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -534,6 +571,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 178.983; --react-photo-album--photo-height: 268.475;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -551,6 +589,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 1400; --react-photo-album--photo-height: 207.407;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -568,6 +607,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 506.047; --react-photo-album--photo-height: 379.535;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -580,6 +620,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 569.302; --react-photo-album--photo-height: 379.535;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -592,6 +633,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 1`] =
         style="--react-photo-album--photo-width: 284.651; --react-photo-album--photo-height: 379.535;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -621,6 +663,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 203.257; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -633,6 +676,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 100.374; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -645,6 +689,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 225.841; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -657,6 +702,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 225.528; --react-photo-album--photo-height: 150.561;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -674,6 +720,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 121.579; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -686,6 +733,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 324.477; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -698,6 +746,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 323.944; --react-photo-album--photo-height: 182.368;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -715,6 +764,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -727,6 +777,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 145.207; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -739,6 +790,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 312.397; --react-photo-album--photo-height: 208.264;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -756,6 +808,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 321.868; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -768,6 +821,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 137.887; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -780,6 +834,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 310.245; --react-photo-album--photo-height: 206.83;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -797,6 +852,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 165.732; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -809,6 +865,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -821,6 +878,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 294.634; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -833,6 +891,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 147.317; --react-photo-album--photo-height: 220.976;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -850,6 +909,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 800; --react-photo-album--photo-height: 118.519;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -867,6 +927,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 286.512; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -879,6 +940,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 322.326; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -891,6 +953,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 2`] =
         style="--react-photo-album--photo-width: 161.163; --react-photo-album--photo-height: 214.884;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -920,6 +983,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 184.265; --react-photo-album--photo-height: 136.493;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -932,6 +996,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 90.995; --react-photo-album--photo-height: 136.493;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -944,6 +1009,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 204.739; --react-photo-album--photo-height: 136.493;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -961,6 +1027,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 182.311; --react-photo-album--photo-height: 121.709;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -973,6 +1040,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 81.139; --react-photo-album--photo-height: 121.709;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -985,6 +1053,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 216.55; --react-photo-album--photo-height: 121.709;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1002,6 +1071,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 265.663; --react-photo-album--photo-height: 149.558;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1014,6 +1084,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 224.337; --react-photo-album--photo-height: 149.558;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1031,6 +1102,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 89.163; --react-photo-album--photo-height: 127.883;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1043,6 +1115,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 191.825; --react-photo-album--photo-height: 127.883;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1055,6 +1128,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 199.012; --react-photo-album--photo-height: 127.883;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1072,6 +1146,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 109.714; --react-photo-album--photo-height: 164.571;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1084,6 +1159,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 246.857; --react-photo-album--photo-height: 164.571;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1096,6 +1172,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 123.429; --react-photo-album--photo-height: 164.571;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1113,6 +1190,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 120; --react-photo-album--photo-height: 180;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1125,6 +1203,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 240; --react-photo-album--photo-height: 180;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1137,6 +1216,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 120; --react-photo-album--photo-height: 180;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1154,6 +1234,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 500; --react-photo-album--photo-height: 74.074;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1171,6 +1252,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 178.605; --react-photo-album--photo-height: 133.953;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1183,6 +1265,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 200.93; --react-photo-album--photo-height: 133.953;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1195,6 +1278,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 3`] =
         style="--react-photo-album--photo-width: 100.465; --react-photo-album--photo-height: 133.953;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1224,6 +1308,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 130.537; --react-photo-album--photo-height: 96.694;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1236,6 +1321,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 64.463; --react-photo-album--photo-height: 96.694;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1253,6 +1339,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 133.333;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1270,6 +1357,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 134.942; --react-photo-album--photo-height: 90.087;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1282,6 +1370,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 60.058; --react-photo-album--photo-height: 90.087;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1299,6 +1388,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 112.407;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1316,6 +1406,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 112.593;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1333,6 +1424,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 133.123; --react-photo-album--photo-height: 88.748;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1345,6 +1437,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 61.877; --react-photo-album--photo-height: 88.748;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1362,6 +1455,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 133.333;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1379,6 +1473,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 136.517; --react-photo-album--photo-height: 87.725;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1391,6 +1486,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 58.483; --react-photo-album--photo-height: 87.725;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1408,6 +1504,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 130; --react-photo-album--photo-height: 86.667;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1420,6 +1517,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 65; --react-photo-album--photo-height: 86.667;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1437,6 +1535,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 47.5; --react-photo-album--photo-height: 71.25;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1449,6 +1548,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 95; --react-photo-album--photo-height: 71.25;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1461,6 +1561,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 47.5; --react-photo-album--photo-height: 71.25;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1478,6 +1579,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 29.63;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1495,6 +1597,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 200; --react-photo-album--photo-height: 150;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1512,6 +1615,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 130; --react-photo-album--photo-height: 86.667;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
@@ -1524,6 +1628,7 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
         style="--react-photo-album--photo-width: 65; --react-photo-album--photo-height: 86.667;"
       >
         <img
+          alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"

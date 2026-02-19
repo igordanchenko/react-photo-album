@@ -173,4 +173,10 @@ describe("PhotoAlbum", () => {
     render(<PhotoAlbum ref={callbackRef} layout="rows" photos={photos} />);
     expect(callbackRef).toHaveBeenCalled();
   });
+
+  it("falls back to alt='' when photo.alt is undefined", () => {
+    const { container } = render(<PhotoAlbum layout="rows" photos={photos} />);
+    const images = container.querySelectorAll("img");
+    images.forEach((img) => expect(img).toHaveAttribute("alt", ""));
+  });
 });
