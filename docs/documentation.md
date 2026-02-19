@@ -799,6 +799,10 @@ import InfiniteScroll from "react-photo-album/scroll";
   </tbody>
 </table>
 
+In singleton mode (masonry layout), custom `render.photo` functions must forward
+`ref` to the underlying DOM node. Without `ref` forwarding, the offscreen
+optimization is silently disabled and photos always render at full fidelity.
+
 ### Rows Layout With Infinite Scroll
 
 ```tsx
