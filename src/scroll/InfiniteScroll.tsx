@@ -15,7 +15,8 @@ enum Status {
 
 /** InfiniteScroll component props. */
 export type InfiniteScrollProps<TPhoto extends Photo = Photo> = {
-  /** Photo fetcher. Resolve promise with `null` to indicate end of stream. */
+  /** Photo fetcher. Resolve promise with `null` to indicate end of stream. The promise must always settle;
+   * implement timeouts and cancellation inside the callback as needed. */
   fetch: (index: number) => Promise<readonly TPhoto[] | null>;
   /** Initial photos (optional). */
   photos?: readonly TPhoto[];

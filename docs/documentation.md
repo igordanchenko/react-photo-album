@@ -728,8 +728,9 @@ import InfiniteScroll from "react-photo-album/scroll";
       <td><span class="required">fetch</span></td>
       <td>(index: number) =&gt; Promise&lt;Photo[] | null&gt;</td>
       <td>
-        Photo fetcher. Resolve the promise with `null` to indicate the end of 
-        the stream.
+        Photo fetcher. Resolve the promise with `null` to indicate the end of
+        the stream. The promise must always settle; implement timeouts and
+        cancellation inside the callback as needed.
       </td>
     </tr>
     <tr>
