@@ -39,7 +39,7 @@ function buildColumnsModel<TPhoto extends Photo>(
   const totalRatio = columnsRatios.reduce((total, columnRatio) => total + columnRatio, 0);
 
   for (let i = 0; i < path.length - 1; i += 1) {
-    const column = photos.map((photo, index) => ({ photo, index })).slice(path[i], path[i + 1]);
+    const column = photos.slice(path[i], path[i + 1]).map((photo, j) => ({ photo, index: path[i] + j }));
 
     const adjustedGaps = columnsRatios.reduce(
       (total, columnRatio, index) => total + (columnsGaps[i] - columnsGaps[index]) * columnRatio,

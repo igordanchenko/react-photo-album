@@ -97,7 +97,7 @@ export default function computeRowsLayout<TPhoto extends Photo>(
   const tracks = [];
 
   for (let i = 1; i < path.length; i += 1) {
-    const row = photos.map((photo, index) => ({ photo, index })).slice(path[i - 1], path[i]);
+    const row = photos.slice(path[i - 1], path[i]).map((photo, j) => ({ photo, index: path[i - 1] + j }));
     const height = getCommonHeight(
       row.map(({ photo }) => photo),
       containerWidth,
