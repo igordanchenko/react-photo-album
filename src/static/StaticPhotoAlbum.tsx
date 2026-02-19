@@ -83,7 +83,8 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
 
                 return (
                   <PhotoComponent
-                    key={key ?? src}
+                    // index is always unique; src can collide when the same photo appears multiple times
+                    key={key ?? index}
                     onClick={onClick}
                     render={restRender}
                     componentsProps={{
