@@ -1,20 +1,20 @@
-import findShortestPathLengthN from "./shortestPath";
+import findOptimalPartition from "./partition";
 import { ratio } from "../../utils";
 import type { LayoutModel, Photo } from "../../types";
 
-// return function that gets the neighboring nodes of node and returns costs
-function makeGetColumnNeighbors(
+// return cost function that computes possible split points and their costs for a given partition start
+function makePartitionCostFn(
   photos: readonly Photo[],
   spacing: number,
   padding: number,
   targetColumnWidth: number,
   targetColumnHeight: number,
 ) {
-  return (node: number): [neighbor: number, weight: number][] => {
-    const results: [neighbor: number, weight: number][] = [];
+  return (splitPoint: number): [next: number, cost: number][] => {
+    const results: [next: number, cost: number][] = [];
     const cutOffHeight = targetColumnHeight * 1.5;
-    let height = targetColumnWidth / ratio(photos[node]) + 2 * padding;
-    for (let i = node + 1; i < photos.length + 1; i += 1) {
+    let height = targetColumnWidth / ratio(photos[splitPoint]) + 2 * padding;
+    for (let i = splitPoint + 1; i < photos.length + 1; i += 1) {
       results.push([i, (targetColumnHeight - height) ** 2]);
       if (height > cutOffHeight || i === photos.length) {
         break;
@@ -103,9 +103,9 @@ function computeColumnsModel<TPhoto extends Photo>(
       2 * padding * photos.length) /
     columns;
 
-  const getNeighbors = makeGetColumnNeighbors(photos, spacing, padding, targetColumnWidth, targetColumnHeight);
+  const costFn = makePartitionCostFn(photos, spacing, padding, targetColumnWidth, targetColumnHeight);
 
-  const path = findShortestPathLengthN(getNeighbors, columns, 0, photos.length);
+  const path = findOptimalPartition(costFn, columns, 0, photos.length);
 
   for (let i = 0; i < path.length - 1; i += 1) {
     const column = photos.slice(path[i], path[i + 1]);

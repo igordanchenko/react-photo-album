@@ -25,10 +25,10 @@ infinite scroll, and ships with full TypeScript types.
 
 Pure functions that compute photo positions without React dependencies:
 
-- **Rows** (`rows/`): Dijkstra's shortest path algorithm to find optimal row
-  breaks minimizing squared deviation from target row height
-- **Columns** (`columns/`): Dynamic programming for fixed-column layout
-  optimization
+- **Rows** (`rows/`): Dynamic programming on a DAG to find optimal row breaks
+  minimizing squared deviation from target row height
+- **Columns** (`columns/`): Dynamic programming to find the optimal partition of
+  photos into a fixed number of columns
 - **Masonry** (`masonry/`): Greedy algorithm placing each photo in the shortest
   column
 

@@ -82,23 +82,23 @@ export default function Gallery() {
 
 Rows layout fills the container space by arranging photos into rows that are
 similar in height, with the height of each row being as close to the
-`targetRowHeight` as possible. This layout uses an algorithm adapted from the
-Knuth and Plass line-breaking algorithm. To calculate the optimal layout, it
-uses Dijkstra's algorithm to find the shortest path in a graph where each photo
-to break on represents a node, and each row represents an edge. The cost of each
-edge is calculated as a squared deviation from the `targetRowHeight`. This
-algorithm produces rows that are similar in height and photos that are not
-stretched or abnormally shrunk (as happens in a naive implementation). It solves
-the issue of panoramas shrinking rows, stragglers, or stretched images in the
-last row.
+`targetRowHeight` as possible. This layout is inspired by the Knuth and Plass
+line-breaking algorithm and uses dynamic programming to find optimal row breaks
+in a DAG (directed acyclic graph) where photo indices are nodes and each
+possible row is an edge connecting its first and last photo. The cost of each
+edge is a weighted squared deviation from the `targetRowHeight`. This algorithm
+produces rows that are similar in height and photos that are not stretched or
+abnormally shrunk (as happens in a naive implementation). It solves the issue of
+panoramas shrinking rows, stragglers, or stretched images in the last row.
 
 ### Columns Layout
 
 Columns layout fills the container space by arranging photos into a predefined
-number of columns, determined by the `columns` parameter. This layout uses an
-algorithm very similar to the one described above, with the only difference
-being that instead of Dijkstra's algorithm, it uses a dynamic programming
-algorithm to find the shortest path of length N in a directed weighted graph.
+number of columns, determined by the `columns` parameter. This layout uses a
+dynamic programming algorithm to find the optimal partition of photos into the
+specified number of groups (columns) that produces the most balanced layout.
+Column widths are then adjusted proportionally based on their content's aspect
+ratios so that all columns render at equal height.
 
 ### Masonry Layout
 

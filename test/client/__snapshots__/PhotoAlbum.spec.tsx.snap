@@ -1624,24 +1624,125 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
   >
     <div
       class="react-photo-album--track"
-      style="--react-photo-album--track-size: 3;"
+      style="--react-photo-album--track-size: 4;"
     >
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 381.583; --react-photo-album--photo-height: 282.654;"
+        style="--react-photo-album--photo-width: 263.561; --react-photo-album--photo-height: 195.23;"
       >
         <img
           alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
-          sizes="38vw"
+          sizes="26vw"
           src="image01.jpg"
         />
       </div>
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 188.436; --react-photo-album--photo-height: 282.654;"
+        style="--react-photo-album--photo-width: 130.154; --react-photo-album--photo-height: 195.23;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="13vw"
+          src="image02.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 292.846; --react-photo-album--photo-height: 195.23;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image03.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 292.44; --react-photo-album--photo-height: 195.23;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="29vw"
+          src="image04.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 156.947; --react-photo-album--photo-height: 235.421;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="16vw"
+          src="image05.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 418.871; --react-photo-album--photo-height: 235.421;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image06.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 418.182; --react-photo-album--photo-height: 235.421;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="41vw"
+          src="image07.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 403.276; --react-photo-album--photo-height: 268.85;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="40vw"
+          src="image08.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 187.449; --react-photo-album--photo-height: 268.85;"
       >
         <img
           alt=""
@@ -1649,118 +1750,12 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
           decoding="async"
           loading="lazy"
           sizes="19vw"
-          src="image02.jpg"
-        />
-      </div>
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 423.981; --react-photo-album--photo-height: 282.654;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="42vw"
-          src="image03.jpg"
-        />
-      </div>
-    </div>
-    <div
-      class="react-photo-album--track"
-      style="--react-photo-album--track-size: 3;"
-    >
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 377.535; --react-photo-album--photo-height: 252.039;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="37vw"
-          src="image04.jpg"
-        />
-      </div>
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 168.026; --react-photo-album--photo-height: 252.039;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="17vw"
-          src="image05.jpg"
-        />
-      </div>
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 448.439; --react-photo-album--photo-height: 252.039;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="44vw"
-          src="image06.jpg"
-        />
-      </div>
-    </div>
-    <div
-      class="react-photo-album--track"
-      style="--react-photo-album--track-size: 3;"
-    >
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 444.354; --react-photo-album--photo-height: 250.155;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="44vw"
-          src="image07.jpg"
-        />
-      </div>
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 375.232; --react-photo-album--photo-height: 250.155;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="37vw"
-          src="image08.jpg"
-        />
-      </div>
-      <div
-        class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 174.414; --react-photo-album--photo-height: 250.155;"
-      >
-        <img
-          alt=""
-          class="react-photo-album--image"
-          decoding="async"
-          loading="lazy"
-          sizes="18vw"
           src="image09.jpg"
         />
       </div>
-    </div>
-    <div
-      class="react-photo-album--track"
-      style="--react-photo-album--track-size: 3;"
-    >
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 400.498; --react-photo-album--photo-height: 266.999;"
+        style="--react-photo-album--photo-width: 403.276; --react-photo-album--photo-height: 268.85;"
       >
         <img
           alt=""
@@ -1771,6 +1766,11 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
           src="image10.jpg"
         />
       </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 3;"
+    >
       <div
         class="react-photo-album--photo"
         style="--react-photo-album--photo-width: 415.503; --react-photo-album--photo-height: 266.999;"
@@ -1797,73 +1797,73 @@ exports[`PhotoAlbum > supports rows layout 1`] = `
           src="image12.jpg"
         />
       </div>
-    </div>
-    <div
-      class="react-photo-album--track"
-      style="--react-photo-album--track-size: 5;"
-    >
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 294.102; --react-photo-album--photo-height: 196.068;"
+        style="--react-photo-album--photo-width: 400.498; --react-photo-album--photo-height: 266.999;"
       >
         <img
           alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
-          sizes="29vw"
+          sizes="40vw"
           src="image13.jpg"
         />
       </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 4;"
+    >
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 147.051; --react-photo-album--photo-height: 196.068;"
+        style="--react-photo-album--photo-width: 214.902; --react-photo-album--photo-height: 286.537;"
       >
         <img
           alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
-          sizes="15vw"
+          sizes="21vw"
           src="image14.jpg"
         />
       </div>
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
+        style="--react-photo-album--photo-width: 191.024; --react-photo-album--photo-height: 286.537;"
       >
         <img
           alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
-          sizes="13vw"
+          sizes="19vw"
           src="image15.jpg"
         />
       </div>
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 261.424; --react-photo-album--photo-height: 196.068;"
+        style="--react-photo-album--photo-width: 382.049; --react-photo-album--photo-height: 286.537;"
       >
         <img
           alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
-          sizes="26vw"
+          sizes="38vw"
           src="image16.jpg"
         />
       </div>
       <div
         class="react-photo-album--photo"
-        style="--react-photo-album--photo-width: 130.712; --react-photo-album--photo-height: 196.068;"
+        style="--react-photo-album--photo-width: 191.024; --react-photo-album--photo-height: 286.537;"
       >
         <img
           alt=""
           class="react-photo-album--image"
           decoding="async"
           loading="lazy"
-          sizes="13vw"
+          sizes="19vw"
           src="image17.jpg"
         />
       </div>
