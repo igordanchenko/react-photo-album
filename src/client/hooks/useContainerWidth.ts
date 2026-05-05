@@ -58,6 +58,7 @@ export default function useContainerWidth(
   const observerRef = useRef<ResizeObserver>(undefined);
 
   const containerRef = useCallback(
+    // eslint-disable-next-line react-hooks/immutability -- false-positive lint
     (node: HTMLElement | null) => {
       observerRef.current?.disconnect();
       observerRef.current = undefined;
