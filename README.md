@@ -1,4 +1,18 @@
-# React Photo Album
+<p align="center">
+  <img alt="" src=".github/assets/logo.webp" width="180" height="180" />
+</p>
+
+<h1 align="center">
+  React Photo Album
+</h1>
+
+<div align="center">
+
+[![NPM Version](https://img.shields.io/npm/v/react-photo-album.svg?color=blue)](https://www.npmjs.com/package/react-photo-album)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album.svg?color=blue)](https://bundlephobia.com/package/react-photo-album)
+[![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
+
+</div>
 
 React Photo Album is a responsive photo gallery component for React. React Photo
 Album supports rows, columns, and masonry layouts. Inspired by
@@ -6,10 +20,6 @@ Album supports rows, columns, and masonry layouts. Inspired by
 re-engineered from the ground up.
 
 ## Overview
-
-[![NPM Version](https://img.shields.io/npm/v/react-photo-album.svg?color=blue)](https://www.npmjs.com/package/react-photo-album)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album.svg?color=blue)](https://bundlephobia.com/package/react-photo-album)
-[![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
 - **Built for React:** works with React 18+
 - **SSR friendly:** produces server-side rendered markup that looks
