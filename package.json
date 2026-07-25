@@ -2,6 +2,10 @@
   "name": "react-photo-album",
   "version": "0.0.0-semantic-release",
   "description": "Responsive photo gallery component for React",
+  "repository": "github:igordanchenko/react-photo-album",
+  "homepage": "https://react-photo-album.com",
+  "bugs": "https://github.com/igordanchenko/react-photo-album/issues",
+  "funding": "https://github.com/sponsors/igordanchenko",
   "author": "Igor Danchenko",
   "license": "MIT",
   "type": "module",
@@ -51,13 +55,6 @@
   "sideEffects": [
     "*.css"
   ],
-  "homepage": "https://react-photo-album.com",
-  "funding": "https://github.com/sponsors/igordanchenko",
-  "bugs": "https://github.com/igordanchenko/react-photo-album/issues",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/igordanchenko/react-photo-album.git"
-  },
   "engines": {
     "node": ">=18"
   },
