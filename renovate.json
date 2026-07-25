@@ -5,6 +5,7 @@
   "packageRules": [
     {
       "matchFileNames": ["examples/**"],
+      "additionalBranchPrefix": "examples-",
       "rangeStrategy": "replace",
       "semanticCommitType": "chore",
       "automerge": false
