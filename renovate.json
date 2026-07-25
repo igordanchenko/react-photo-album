@@ -1,4 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>igordanchenko/renovate:lib"]
+  "extends": ["github>igordanchenko/renovate:lib"],
+  "ignorePresets": [":ignoreModulesAndTests"],
+  "packageRules": [
+    {
+      "matchFileNames": ["examples/**"],
+      "groupName": "examples",
+      "rangeStrategy": "replace",
+      "semanticCommitType": "chore",
+      "automerge": false
+    }
+  ]
 }
