@@ -9,6 +9,11 @@
       "rangeStrategy": "replace",
       "semanticCommitType": "chore",
       "automerge": false
+    },
+    {
+      "matchFileNames": ["examples/**"],
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "enabled": false
     }
   ]
 }
