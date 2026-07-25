@@ -21,3 +21,6 @@ coverage/
 
 # WebStorm
 .idea
+
+# Example lock files
+examples/*/package-lock.json
