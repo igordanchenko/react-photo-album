@@ -39,6 +39,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Size
+        run: npm run size
+
       - name: Audit signatures
         run: npm audit signatures
 

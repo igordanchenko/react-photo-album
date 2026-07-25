@@ -1,0 +1,38 @@
+[
+  {
+    "path": "dist/index.js",
+    "limit": "4 kB",
+    "ignore": ["react", "react-dom", "react/jsx-runtime"]
+  },
+  {
+    "path": "dist/ssr/index.js",
+    "limit": "1.5 kB",
+    "ignore": ["react", "react-dom", "react/jsx-runtime"]
+  },
+  {
+    "path": "dist/scroll/index.js",
+    "limit": "2 kB",
+    "ignore": ["react", "react-dom", "react/jsx-runtime"]
+  },
+  {
+    "path": "dist/server/index.js",
+    "limit": "4 kB",
+    "ignore": ["react", "react-dom", "react/jsx-runtime"]
+  },
+  {
+    "path": "dist/styles/styles.css",
+    "limit": "1 kB"
+  },
+  {
+    "path": "dist/styles/rows.css",
+    "limit": "0.5 kB"
+  },
+  {
+    "path": "dist/styles/columns.css",
+    "limit": "0.5 kB"
+  },
+  {
+    "path": "dist/styles/masonry.css",
+    "limit": "0.5 kB"
+  }
+]
