@@ -21,6 +21,6 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "typescript": "^6"
+    "typescript": "^7.0.0"
   }
 }
