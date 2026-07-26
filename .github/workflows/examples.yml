@@ -1,0 +1,82 @@
+name: Examples
+
+on:
+  push:
+    branches: [main, next]
+    paths:
+      - examples/**
+      - .github/workflows/examples.yml
+  pull_request:
+    paths:
+      - examples/**
+      - .github/workflows/examples.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  discover:
+    name: Discover examples
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    outputs:
+      examples: ${{ steps.discover.outputs.examples }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Discover examples
+        id: discover
+        run: echo "examples=$(ls -d examples/*/ | xargs -n1 basename | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
+
+  build:
+    name: ${{ matrix.example }}
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        example: ${{ fromJSON(needs.discover.outputs.examples) }}
+
+    defaults:
+      run:
+        working-directory: examples/${{ matrix.example }}
+
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          package-manager-cache: false
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+  examples:
+    name: Examples
+    if: always()
+    needs: [discover, build]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify matrix succeeded
+        if: needs.discover.result != 'success' || needs.build.result != 'success'
+        run: exit 1
