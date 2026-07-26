@@ -1,4 +1,4 @@
-import { cloneElement, ReactElement, RefAttributes } from "react";
+import { cloneElement, type ReactElement, type RefAttributes } from "react";
 import { useSortable } from "@dnd-kit/sortable";
 
 type SortableProps = {

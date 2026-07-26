@@ -1,6 +1,6 @@
 import type React from "react";
 import { useState } from "react";
-import { LayoutType } from "react-photo-album";
+import type { LayoutType } from "react-photo-album";
 
 import { ColumnsExample, MasonryExample, RowsExample } from "./components";
 import "./App.css";

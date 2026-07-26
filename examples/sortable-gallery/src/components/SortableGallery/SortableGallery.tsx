@@ -1,12 +1,12 @@
-import { ComponentProps, ComponentType, JSX, useRef, useState } from "react";
-import { ColumnsPhotoAlbumProps, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "react-photo-album";
+import { type ComponentProps, type ComponentType, type JSX, useRef, useState } from "react";
+import type { ColumnsPhotoAlbumProps, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "react-photo-album";
 
 import {
   closestCenter,
   DndContext,
-  DragEndEvent,
+  type DragEndEvent,
   DragOverlay,
-  DragStartEvent,
+  type DragStartEvent,
   KeyboardSensor,
   MouseSensor,
   TouchSensor,

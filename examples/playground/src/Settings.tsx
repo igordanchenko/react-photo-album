@@ -1,5 +1,5 @@
 import * as React from "react";
-import { LayoutType, Photo } from "react-photo-album";
+import type { LayoutType, Photo } from "react-photo-album";
 
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
