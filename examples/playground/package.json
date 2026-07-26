@@ -12,11 +12,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/cache": "^11",
     "@emotion/react": "^11",
-    "@emotion/server": "^11",
     "@emotion/styled": "^11",
-    "@mui/material": "^7",
+    "@mui/material": "^9",
     "react": "^19",
     "react-dom": "^19",
     "react-photo-album": "^3"
