@@ -9,7 +9,7 @@
 <div align="center">
 
 [![NPM Version](https://img.shields.io/npm/v/react-photo-album.svg?color=blue)](https://www.npmjs.com/package/react-photo-album)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/react-photo-album.svg?color=blue)](https://bundlephobia.com/package/react-photo-album)
+[![Bundle Size](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.org%2Freact-photo-album%2Flatest&query=%24.bundleSize&label=bundle%20size&color=blue&cacheSeconds=3600)](https://github.com/igordanchenko/react-photo-album/blob/main/.size-limit.json)
 [![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
 </div>
