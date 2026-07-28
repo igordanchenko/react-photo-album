@@ -1,1 +1,1 @@
-npx --no -- commitlint-pre-push
+commitlint-pre-push
