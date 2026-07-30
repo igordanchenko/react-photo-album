@@ -107,6 +107,9 @@ function computeColumnsModel<TPhoto extends Photo>(
 
   const path = findOptimalPartition(costFn, columns, 0, photos.length);
 
+  // impossible layout — the photos cannot be partitioned into the requested number of columns
+  if (!path) return undefined;
+
   for (let i = 0; i < path.length - 1; i += 1) {
     const column = photos.slice(path[i], path[i + 1]);
     columnsGaps[i] = spacing * (column.length - 1) + 2 * padding * column.length;
@@ -125,19 +128,14 @@ export default function computeColumnsLayout<TPhoto extends Photo>(
 ): LayoutModel<TPhoto> | undefined {
   const targetColumnWidth = (containerWidth - spacing * (columns - 1) - 2 * padding * columns) / columns;
 
-  const { tracks, variables } = computeColumnsModel(
-    photos,
-    spacing,
-    padding,
-    containerWidth,
-    targetColumnWidth,
-    columns,
-  );
+  const model = computeColumnsModel(photos, spacing, padding, containerWidth, targetColumnWidth, columns);
 
-  if (tracks.some((track) => track.photos.some(({ width, height }) => width <= 0 || height <= 0))) {
+  if (!model || model.tracks.some((track) => track.photos.some(({ width, height }) => width <= 0 || height <= 0))) {
     // encountered impossible layout - try to find a solution recursively with fewer columns or bail out
     return columns > 1 ? computeColumnsLayout(photos, spacing, padding, containerWidth, columns - 1) : undefined;
   }
+
+  const { tracks, variables } = model;
 
   return { tracks, spacing, padding, containerWidth, variables: { columns, ...variables } };
 }

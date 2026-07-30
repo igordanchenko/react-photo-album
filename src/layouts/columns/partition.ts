@@ -56,6 +56,10 @@ function computePartition<T>(costFn: CostFunction<T>, partitions: number, start:
 }
 
 function reconstructPartition<T>(dp: DP<T>, partitions: number, end: T) {
+  // the cost function caps how many items a group can hold, so when the container is too narrow
+  // there may be no way to reach the end in exactly `partitions` groups
+  if (!dp.get(end)?.[partitions]) return undefined;
+
   const splitPoints = [end];
   for (let item = end, k = partitions; k > 0; k -= 1) {
     [item] = dp.get(item)![k];
@@ -65,6 +69,7 @@ function reconstructPartition<T>(dp: DP<T>, partitions: number, end: T) {
 }
 
 // Find the optimal partition of items into N groups in a weighted directed graph using dynamic programming.
+// Returns undefined when no partition into exactly N groups exists.
 export default function findOptimalPartition<T>(costFn: CostFunction<T>, partitions: number, start: T, end: T) {
   return reconstructPartition(computePartition(costFn, partitions, start, end), partitions, end);
 }
