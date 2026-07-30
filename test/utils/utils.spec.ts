@@ -105,6 +105,19 @@ describe("srcSetAndSizes", () => {
     expect(sizes).toBe("50vw");
   });
 
+  it("absorbs floating-point noise in the vw approximation", () => {
+    // a photo spanning the full container can land an ulp above containerWidth
+    expect(srcSetAndSizes(photo, undefined, 800 * (1 + Number.EPSILON), 800, 1, 0, 0).sizes).toBe("100vw");
+    // 0.0004vw over — below the rounding granule, absorbed
+    expect(srcSetAndSizes(photo, undefined, 800 * 1.000004, 800, 1, 0, 0).sizes).toBe("100vw");
+  });
+
+  it("rounds up a genuine overshoot beyond the rounding granule", () => {
+    // 0.0005vw over — the smallest overshoot that survives rounding to 3 decimals
+    expect(srcSetAndSizes(photo, undefined, 800 * 1.000005, 800, 1, 0, 0).sizes).toBe("101vw");
+    expect(srcSetAndSizes(photo, undefined, 800 * 1.0001, 800, 1, 0, 0).sizes).toBe("101vw");
+  });
+
   it("builds srcSet from photo.srcSet, appending original when absent", () => {
     const photoWithSrcSet = {
       ...photo,

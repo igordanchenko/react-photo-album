@@ -40,7 +40,12 @@ export default function srcSetAndSizes(
       .join(", ");
   } else {
     // produce rough approximation by default
-    sizes = `${Math.ceil((photoWidth / containerWidth) * 100)}vw`;
+    // round before ceil so that floating-point noise in photoWidth doesn't bump the estimate:
+    // a photo spanning the full container can land an ulp above containerWidth and must still
+    // yield 100vw, not 101vw; 3 decimals sits well above that noise and well below the 1vw ceil
+    // granularity (worst-case understatement is half a granule, 0.0005vw), and matches the
+    // width/height precision exposed by PhotoComponent
+    sizes = `${Math.ceil(round((photoWidth / containerWidth) * 100, 3))}vw`;
   }
 
   return { srcSet, sizes };
