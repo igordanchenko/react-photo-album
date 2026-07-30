@@ -35,7 +35,10 @@ function SSR(
   if (!Array.isArray(breakpoints) || breakpoints.length === 0 || !isValidElement(children)) return null;
 
   if (containerWidth !== undefined && hydratedBreakpoint === undefined) {
-    setHydratedBreakpoint(containerWidth);
+    // `containerWidth` normally resolves to one of the rendered breakpoints, but it can also
+    // resolve to a narrower synthetic fallback when the container is narrower than half the
+    // smallest breakpoint, so pick the smallest rendered breakpoint in that case
+    setHydratedBreakpoint(breakpoints.filter((breakpoint) => breakpoint <= containerWidth).pop() ?? breakpoints[0]);
   }
 
   return (

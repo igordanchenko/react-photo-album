@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
 import { RowsPhotoAlbum } from "../../src";
 import SSR from "../../src/ssr";
@@ -7,6 +7,10 @@ import photos from "../photos";
 
 describe("SSR", () => {
   const breakpoints = [300, 600, 900];
+
+  afterEach(() => {
+    window.resizeTo(1024, 768);
+  });
 
   it("works as expected", () => {
     const { getTracks, rerender } = render(
@@ -45,5 +49,19 @@ describe("SSR", () => {
 
     expect(container.querySelector(".container-class")).not.toBeNull();
     expect(container.querySelector(".breakpoint-900")).not.toBeNull();
+  });
+
+  it("renders photos when the container is narrower than half the smallest breakpoint", () => {
+    // narrower than min(300, 600, 900) / 2 = 150
+    window.resizeTo(100, 600);
+
+    const { getPhotos, getTracks } = render(
+      <SSR breakpoints={breakpoints}>
+        <RowsPhotoAlbum photos={photos} />
+      </SSR>,
+    );
+
+    expect(getTracks().length).toBeGreaterThan(0);
+    expect(getPhotos().length).toBe(photos.length);
   });
 });
