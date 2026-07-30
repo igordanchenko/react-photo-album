@@ -125,6 +125,20 @@ describe("PhotoAlbum", () => {
     expect(getPhotos().length).toBe(photos.length);
   });
 
+  it("keys custom render.photo output", () => {
+    const consoleError = vi.spyOn(console, "error").mockImplementation(() => {});
+    try {
+      const { getAllByTestId } = render(
+        <PhotoAlbum layout="rows" photos={photos} render={{ photo: () => <span data-testid="photo" /> }} />,
+      );
+
+      expect(getAllByTestId("photo").length).toBe(photos.length);
+      expect(consoleError).not.toHaveBeenCalled();
+    } finally {
+      consoleError.mockRestore();
+    }
+  });
+
   it("supports ARIA labels", () => {
     const { getAllByLabelText } = render(
       <PhotoAlbum layout="rows" photos={photos.map((photo) => ({ ...photo, label: "Button" }))} onClick={() => {}} />,

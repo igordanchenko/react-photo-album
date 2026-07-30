@@ -1,5 +1,5 @@
 import type React from "react";
-import { forwardRef } from "react";
+import { Fragment, forwardRef } from "react";
 
 import Component from "./Component";
 import PhotoComponent from "./PhotoComponent";
@@ -74,7 +74,8 @@ function StaticPhotoAlbum<TPhoto extends Photo>(
 
                 if (renderPhoto) {
                   const rendered = renderPhoto({ onClick }, context);
-                  if (rendered) return rendered;
+                  // keyed Fragment relieves consumers of having to key their custom-rendered photos
+                  if (rendered) return <Fragment key={key ?? index}>{rendered}</Fragment>;
                 }
 
                 const ariaLabel = <T extends object | undefined>(props: T) => {
