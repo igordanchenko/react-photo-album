@@ -188,6 +188,32 @@ describe("PhotoAlbum", () => {
     expect(callbackRef).toHaveBeenCalled();
   });
 
+  it("does not churn the ResizeObserver when the forwarded ref is unstable", () => {
+    const observe = vi.spyOn(ResizeObserver.prototype, "observe");
+    const disconnect = vi.spyOn(ResizeObserver.prototype, "disconnect");
+    try {
+      const refA = vi.fn();
+      const refB = vi.fn();
+
+      const { rerender } = render(<PhotoAlbum ref={refA} layout="rows" photos={photos} />);
+      expect(refA).toHaveBeenCalledTimes(1);
+      expect(observe).toHaveBeenCalledTimes(1);
+
+      // a new inline function ref on every render must not disconnect / re-observe
+      rerender(<PhotoAlbum ref={refB} layout="rows" photos={photos} />);
+      expect(observe).toHaveBeenCalledTimes(1);
+      expect(disconnect).not.toHaveBeenCalled();
+
+      // since `containerRef` is stable, React does not re-run it when the forwarded ref
+      // changes — the latest one receives the detach notification, but never the container
+      rerender(<PhotoAlbum ref={refB} layout="rows" photos={[]} key="remount" />);
+      expect(refB).toHaveBeenCalledWith(null);
+    } finally {
+      observe.mockRestore();
+      disconnect.mockRestore();
+    }
+  });
+
   it("falls back to alt='' when photo.alt is undefined", () => {
     const { container } = render(<PhotoAlbum layout="rows" photos={photos} />);
     const images = container.querySelectorAll("img");

@@ -1,6 +1,7 @@
 import { useCallback, useReducer, useRef } from "react";
 
 import useArray from "./useArray";
+import useEventCallback from "./useEventCallback";
 import type { ForwardedRef } from "../../types";
 
 // Maximum expected scrollbar width in pixels, used to distinguish
@@ -59,8 +60,19 @@ export default function useContainerWidth(
   const breakpoints = useArray(breakpointsArray);
   const observerRef = useRef<ResizeObserver>(undefined);
 
+  // Keep the latest forwarded ref without invalidating `containerRef` — a consumer
+  // passing an inline function ref would otherwise churn the ResizeObserver
+  // (disconnect / re-observe plus a dispatch(undefined) round-trip) on every render.
+  const setForwardedRef = useEventCallback((node: HTMLElement | null) => {
+    if (typeof ref === "function") {
+      ref(node);
+    } else if (ref) {
+      // eslint-disable-next-line react-hooks/immutability -- false-positive lint
+      ref.current = node;
+    }
+  });
+
   const containerRef = useCallback(
-    // eslint-disable-next-line react-hooks/immutability -- false-positive lint
     (node: HTMLElement | null) => {
       observerRef.current?.disconnect();
       observerRef.current = undefined;
@@ -74,14 +86,9 @@ export default function useContainerWidth(
         observerRef.current.observe(node);
       }
 
-      if (typeof ref === "function") {
-        ref(node);
-      } else if (ref) {
-        // eslint-disable-next-line react-hooks/immutability -- false-positive lint
-        ref.current = node;
-      }
+      setForwardedRef(node);
     },
-    [ref, breakpoints],
+    [setForwardedRef, breakpoints],
   );
 
   return { containerRef, containerWidth };

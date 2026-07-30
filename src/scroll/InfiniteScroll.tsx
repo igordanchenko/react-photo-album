@@ -2,8 +2,8 @@ import type React from "react";
 import { Children, cloneElement, isValidElement, useCallback, useRef, useState } from "react";
 
 import Offscreen from "./Offscreen";
-import useEventCallback from "./useEventCallback";
 import useIntersectionObserver from "./useIntersectionObserver";
+import { useEventCallback } from "../client/hooks";
 import type { ClickHandlerProps, CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
 
 enum Status {
