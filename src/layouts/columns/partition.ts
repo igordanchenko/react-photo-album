@@ -1,68 +1,61 @@
-export type CostFunction<T> = (splitPoint: T) => [next: T, cost: number][];
+export type CostFunction = (splitPoint: number) => [next: number, cost: number][];
 
-type DP<T> = Map<T, [splitPoint: T, cost: number][]>;
+type DP = [splitPoint: number, cost: number][][];
 
 // empirically determined threshold for deterministic tiebreaking
 const TIEBREAKER_EPSILON = 1.0001;
 
-function computePartition<T>(costFn: CostFunction<T>, partitions: number, start: T, end: T) {
+function computePartition(costFn: CostFunction, partitions: number, items: number) {
   // dp matrix: item x partition index x { splitPoint: previous split point, cost: accumulated cost }
-  // i.e. dp.get(X)[k] represents the previous split point and accumulated cost of the best way
-  // to partition items from `start` to X into k groups
-  const dp: DP<T> = new Map();
+  // i.e. dp[X][k] represents the previous split point and accumulated cost of the best way
+  // to partition items 0..X into k groups
+  const dp: DP = Array.from({ length: items + 1 }, () => []);
 
-  // set of split points that need to be visited
-  const queue = new Set<T>();
-  queue.add(start);
+  // split points that need to be visited, indexed by split point
+  let queue = new Array<boolean>(items + 1).fill(false);
+  queue[0] = true;
 
   for (let partition = 0; partition < partitions; partition += 1) {
-    // make a copy of the current queue
-    const currentQueue = [...queue.keys()];
+    // swap in an empty queue for the next iteration
+    const currentQueue = queue;
+    queue = new Array<boolean>(items + 1).fill(false);
 
-    // clear the queue for the next iteration
-    queue.clear();
+    for (let splitPoint = 0; splitPoint <= items; splitPoint += 1) {
+      if (!currentQueue[splitPoint]) continue;
 
-    currentQueue.forEach((splitPoint) => {
-      const accumulatedCost = partition > 0 ? dp.get(splitPoint)![partition][1] : 0;
+      const accumulatedCost = partition > 0 ? dp[splitPoint][partition][1] : 0;
 
       costFn(splitPoint).forEach(([next, cost]) => {
-        let entry = dp.get(next);
-        if (!entry) {
-          entry = [];
-          dp.set(next, entry);
-        }
-
         // introducing deterministic tiebreaker to guard against edge cases where cost difference can be
         // as low as 1e-12, which leads to visual flickering during subsequent re-renders as layout continues to
         // shift back and forth
         //
-        // since the cost function returns a contiguous ascending run of split points, each level visits
-        // them in ascending order, so the first candidate wins, and a later one replaces it only when it
-        // is meaningfully better (beyond TIEBREAKER_EPSILON)
+        // since split points are visited in ascending order, the first candidate wins, and a later one
+        // replaces it only when it is meaningfully better (beyond TIEBREAKER_EPSILON)
         const newCost = accumulatedCost + cost;
-        const existing = entry[partition + 1];
+        const existing = dp[next][partition + 1];
         if (!existing || (existing[1] > newCost && existing[1] / newCost > TIEBREAKER_EPSILON)) {
-          entry[partition + 1] = [splitPoint, newCost];
+          dp[next][partition + 1] = [splitPoint, newCost];
         }
 
-        if (partition < partitions - 1 && next !== end) {
-          queue.add(next);
+        if (partition < partitions - 1 && next !== items) {
+          queue[next] = true;
         }
       });
-    });
+    }
   }
 
   return dp;
 }
 
-function reconstructPartition<T>(dp: DP<T>, partitions: number, end: T) {
+function reconstructPartition(dp: DP, partitions: number, items: number) {
   // the cost function caps how many items a group can hold, so when the container is too narrow
   // there may be no way to reach the end in exactly `partitions` groups
-  if (!dp.get(end)?.[partitions]) return undefined;
+  if (!dp[items][partitions]) return undefined;
 
-  const splitPoints = [end];
-  for (let item = end, k = partitions; k > 0; k -= 1) {
-    [item] = dp.get(item)![k];
+  const splitPoints = [items];
+  for (let item = items, k = partitions; k > 0; k -= 1) {
+    [item] = dp[item][k];
     splitPoints.push(item);
   }
   return splitPoints.reverse();
@@ -70,6 +63,6 @@ function reconstructPartition<T>(dp: DP<T>, partitions: number, end: T) {
 
 // Find the optimal partition of items into N groups in a weighted directed graph using dynamic programming.
 // Returns undefined when no partition into exactly N groups exists.
-export default function findOptimalPartition<T>(costFn: CostFunction<T>, partitions: number, start: T, end: T) {
-  return reconstructPartition(computePartition(costFn, partitions, start, end), partitions, end);
+export default function findOptimalPartition(costFn: CostFunction, partitions: number, items: number) {
+  return reconstructPartition(computePartition(costFn, partitions, items), partitions, items);
 }

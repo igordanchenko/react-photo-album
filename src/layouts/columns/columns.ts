@@ -105,7 +105,7 @@ function computeColumnsModel<TPhoto extends Photo>(
 
   const costFn = makePartitionCostFn(photos, spacing, padding, targetColumnWidth, targetColumnHeight);
 
-  const path = findOptimalPartition(costFn, columns, 0, photos.length);
+  const path = findOptimalPartition(costFn, columns, photos.length);
 
   // impossible layout — the photos cannot be partitioned into the requested number of columns
   if (!path) return undefined;
