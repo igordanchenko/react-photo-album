@@ -193,4 +193,18 @@ describe("PhotoAlbum", () => {
     const images = container.querySelectorAll("img");
     images.forEach((img) => expect(img).toHaveAttribute("alt", ""));
   });
+
+  it("ignores non-positive breakpoints", () => {
+    window.resizeTo(1024, 768);
+
+    // all breakpoints are non-positive — falls back to the actual container width
+    const { getContainerWidth, rerender } = render(
+      <PhotoAlbum layout="rows" photos={photos} breakpoints={[0, -600]} />,
+    );
+    expect(getContainerWidth()).toBe(1024);
+
+    // non-positive breakpoints are ignored, positive ones still apply
+    rerender(<PhotoAlbum layout="rows" photos={photos} breakpoints={[0, 600]} />);
+    expect(getContainerWidth()).toBe(600);
+  });
 });

@@ -40,10 +40,12 @@ function containerWidthReducer(state: State, newContainerWidth: number | undefin
 
 function resolveContainerWidth(el: HTMLElement | null, breakpoints: readonly number[] | undefined) {
   let width = el?.clientWidth;
-  if (width !== undefined && breakpoints && breakpoints.length > 0) {
-    const sorted = [...breakpoints.filter((x) => x > 0)].sort((a, b) => b - a);
-    sorted.push(Math.floor(sorted[sorted.length - 1] / 2));
-    width = sorted.find((breakpoint, index) => breakpoint <= width! || index === sorted.length - 1);
+  if (width !== undefined && breakpoints) {
+    const sorted = breakpoints.filter((x) => x > 0).sort((a, b) => b - a);
+    if (sorted.length > 0) {
+      sorted.push(Math.floor(sorted[sorted.length - 1] / 2));
+      width = sorted.find((breakpoint, index) => breakpoint <= width! || index === sorted.length - 1);
+    }
   }
   return width;
 }
