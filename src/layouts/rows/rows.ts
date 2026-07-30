@@ -91,10 +91,11 @@ export default function computeRowsLayout<TPhoto extends Photo>(
       // deterministic tiebreaker to guard against edge cases where cost difference can be
       // as low as 1e-12, which leads to visual flickering during subsequent re-renders as
       // layout continues to shift back and forth
-      if (
-        dp[j] === Infinity ||
-        (dp[j] > newCost && (dp[j] / newCost > TIEBREAKER_EPSILON || (prev[j] !== -1 && prev[j] < i)))
-      ) {
+      //
+      // since `i` iterates strictly downward, the first improving candidate (the row with
+      // the fewest photos ending at j) wins, and a longer row only replaces it when it is
+      // meaningfully better (beyond TIEBREAKER_EPSILON)
+      if (dp[j] === Infinity || (dp[j] > newCost && dp[j] / newCost > TIEBREAKER_EPSILON)) {
         dp[j] = newCost;
         prev[j] = i;
       }
