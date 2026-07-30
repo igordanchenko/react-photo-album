@@ -35,12 +35,13 @@ function computePartition<T>(costFn: CostFunction<T>, partitions: number, start:
         // introducing deterministic tiebreaker to guard against edge cases where cost difference can be
         // as low as 1e-12, which leads to visual flickering during subsequent re-renders as layout continues to
         // shift back and forth
+        //
+        // since the cost function returns a contiguous ascending run of split points, each level visits
+        // them in ascending order, so the first candidate wins, and a later one replaces it only when it
+        // is meaningfully better (beyond TIEBREAKER_EPSILON)
         const newCost = accumulatedCost + cost;
         const existing = entry[partition + 1];
-        if (
-          !existing ||
-          (existing[1] > newCost && (existing[1] / newCost > TIEBREAKER_EPSILON || splitPoint < existing[0]))
-        ) {
+        if (!existing || (existing[1] > newCost && existing[1] / newCost > TIEBREAKER_EPSILON)) {
           entry[partition + 1] = [splitPoint, newCost];
         }
 
