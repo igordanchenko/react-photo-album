@@ -25,10 +25,28 @@ function getCommonHeight(photos: readonly Photo[], containerWidth: number, spaci
   );
 }
 
+// get the height of a row containing photos[i..j) in O(1) using precomputed prefix sums
+// of photo aspect ratios (ratioSums[j] - ratioSums[i] is the total ratio of photos[i..j))
+//
+// the subtraction carries ~1e-13 round-off relative to direct summation, which is immaterial
+// when comparing candidate rows, so the final layout uses getCommonHeight instead to keep the
+// emitted geometry (and the `sizes` estimate derived from it) free of the round-off
+function getEstimatedHeight(
+  ratioSums: readonly number[],
+  i: number,
+  j: number,
+  containerWidth: number,
+  spacing: number,
+  padding: number,
+) {
+  const rowLength = j - i;
+  return (containerWidth - (rowLength - 1) * spacing - 2 * padding * rowLength) / (ratioSums[j] - ratioSums[i]);
+}
+
 // calculate the cost of a row containing photos[i..j)
 // returns undefined if the row is impossible (negative height)
 function cost(
-  photos: readonly Photo[],
+  ratioSums: readonly number[],
   i: number,
   j: number,
   width: number,
@@ -36,9 +54,8 @@ function cost(
   padding: number,
   targetRowHeight: number,
 ) {
-  const row = photos.slice(i, j);
-  const commonHeight = getCommonHeight(row, width, spacing, padding);
-  return commonHeight > 0 ? (commonHeight - targetRowHeight) ** 2 * row.length : undefined;
+  const commonHeight = getEstimatedHeight(ratioSums, i, j, width, spacing, padding);
+  return commonHeight > 0 ? (commonHeight - targetRowHeight) ** 2 * (j - i) : undefined;
 }
 
 // compute optimal row breaks using dynamic programming on the DAG of possible row configurations
@@ -67,6 +84,14 @@ export default function computeRowsLayout<TPhoto extends Photo>(
 
   const n = photos.length;
 
+  // prefix sums of photo aspect ratios, making each candidate row cost O(1)
+  // and the whole DP pass O(n·k) instead of O(n·k²) (k = max photos per row)
+  const ratioSums = new Array(n + 1);
+  ratioSums[0] = 0;
+  for (let i = 0; i < n; i += 1) {
+    ratioSums[i + 1] = ratioSums[i] + ratio(photos[i]);
+  }
+
   // dp[j] = minimum cost to lay out photos 0..j-1 into rows
   const dp = new Array(n + 1).fill(Infinity);
   // prev[j] = the previous break point in the optimal layout ending at j
@@ -81,7 +106,7 @@ export default function computeRowsLayout<TPhoto extends Photo>(
       // skip unreachable break points (no valid layout reaches i)
       if (dp[i] === Infinity) continue;
 
-      const c = cost(photos, i, j, containerWidth, spacing, padding, targetRowHeight);
+      const c = cost(ratioSums, i, j, containerWidth, spacing, padding, targetRowHeight);
 
       // impossible row (negative height) — longer rows will also be impossible
       if (c === undefined) break;
@@ -116,17 +141,12 @@ export default function computeRowsLayout<TPhoto extends Photo>(
   const tracks = [];
 
   for (let i = 1; i < path.length; i += 1) {
-    const row = photos.slice(path[i - 1], path[i]).map((photo, j) => ({ photo, index: path[i - 1] + j }));
-    const height = getCommonHeight(
-      row.map(({ photo }) => photo),
-      containerWidth,
-      spacing,
-      padding,
-    );
+    const row = photos.slice(path[i - 1], path[i]);
+    const height = getCommonHeight(row, containerWidth, spacing, padding);
     tracks.push({
-      photos: row.map(({ photo, index }) => ({
+      photos: row.map((photo, j) => ({
         photo,
-        index,
+        index: path[i - 1] + j,
         width: height * ratio(photo),
         height,
       })),
