@@ -12,9 +12,9 @@ function findMaxPhotosPerRow(
   targetRowHeight: number,
   minPhotos?: number,
 ) {
-  return (
-    round(containerWidth / targetRowHeight / Math.min(...photos.map((photo) => ratio(photo)))) + (minPhotos || 0) + 2
-  );
+  // reduce instead of Math.min(...spread) — spreading a large array overflows the call stack
+  const minRatio = photos.reduce((min, photo) => Math.min(min, ratio(photo)), Infinity);
+  return round(containerWidth / targetRowHeight / minRatio) + (minPhotos || 0) + 2;
 }
 
 // get the height for a set of photos in a potential row
