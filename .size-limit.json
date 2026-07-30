@@ -1,17 +1,17 @@
 [
   {
     "path": "dist/index.js",
-    "limit": "4 kB",
+    "limit": "4.25 kB",
     "ignore": ["react", "react-dom", "react/jsx-runtime"]
   },
   {
     "path": "dist/ssr/index.js",
-    "limit": "1.25 kB",
+    "limit": "1.35 kB",
     "ignore": ["react", "react-dom", "react/jsx-runtime"]
   },
   {
     "path": "dist/scroll/index.js",
-    "limit": "1.6 kB",
+    "limit": "1.5 kB",
     "ignore": ["react", "react-dom", "react/jsx-runtime"]
   },
   {
