@@ -1,23 +1,19 @@
-<p align="center">
-  <img alt="" src=".github/assets/logo.webp" width="180" height="180" />
-</p>
-
-<h1 align="center">
-  React Photo Album
-</h1>
-
 <div align="center">
+
+<img alt="" src=".github/assets/logo.webp" width="180" height="180" />
+
+# React Photo Album
 
 [![NPM Version](https://img.shields.io/npm/v/react-photo-album.svg?color=blue)](https://www.npmjs.com/package/react-photo-album)
 [![Bundle Size](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fregistry.npmjs.org%2Freact-photo-album%2Flatest&query=%24.bundleSize&label=bundle%20size&color=blue&cacheSeconds=3600)](https://github.com/igordanchenko/react-photo-album/blob/main/.size-limit.json)
 [![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
-</div>
-
-React Photo Album is a responsive photo gallery component for React. React Photo
-Album supports rows, columns, and masonry layouts. Inspired by
+React Photo Album is a responsive photo gallery component with rows, columns,
+and masonry layouts. <br/> Inspired by
 [react-photo-gallery](https://github.com/neptunian/react-photo-gallery),
 re-engineered from the ground up.
+
+</div>
 
 ## Overview
 
