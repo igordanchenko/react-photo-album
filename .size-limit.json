@@ -21,18 +21,22 @@
   },
   {
     "path": "dist/styles/styles.css",
-    "limit": "0.45 kB"
+    "limit": "0.45 kB",
+    "rolldown": false
   },
   {
     "path": "dist/styles/rows.css",
-    "limit": "0.3 kB"
+    "limit": "0.3 kB",
+    "rolldown": false
   },
   {
     "path": "dist/styles/columns.css",
-    "limit": "0.3 kB"
+    "limit": "0.3 kB",
+    "rolldown": false
   },
   {
     "path": "dist/styles/masonry.css",
-    "limit": "0.3 kB"
+    "limit": "0.3 kB",
+    "rolldown": false
   }
 ]
