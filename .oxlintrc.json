@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["oxc", "unicorn", "typescript", "react", "jsx-a11y", "vitest"],
+  "categories": {
+    "correctness": "error"
+  },
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "no-console": "error",
+    "react/rules-of-hooks": "error",
+    "jsx-a11y/prefer-tag-over-role": "off",
+    "unicorn/no-new-array": "off",
+    "vitest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": ["expect", "renderAndMatchSnapshot"]
+      }
+    ]
+  },
+  "ignorePatterns": ["examples/**"]
+}

@@ -1640,3 +1640,126 @@ exports[`RowsPhotoAlbum > supports default responsive targetRowHeight prop 4`] =
   </div>
 </DocumentFragment>
 `;
+
+exports[`RowsPhotoAlbum > supports deterministic tiebreaker 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="Photo album"
+    class="react-photo-album react-photo-album--rows"
+    role="group"
+    style="--react-photo-album--spacing: 10; --react-photo-album--padding: 5; --react-photo-album--container-width: 340;"
+  >
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 155; --react-photo-album--photo-height: 114.815;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="46vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 155; --react-photo-album--photo-height: 114.815;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="46vw"
+          src="image01.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 155; --react-photo-album--photo-height: 114.815;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="46vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 155; --react-photo-album--photo-height: 114.815;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="46vw"
+          src="image01.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 2;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 155; --react-photo-album--photo-height: 114.815;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="46vw"
+          src="image01.jpg"
+        />
+      </div>
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 155; --react-photo-album--photo-height: 114.815;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="46vw"
+          src="image01.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="react-photo-album--track"
+      style="--react-photo-album--track-size: 1;"
+    >
+      <div
+        class="react-photo-album--photo"
+        style="--react-photo-album--photo-width: 330; --react-photo-album--photo-height: 244.444;"
+      >
+        <img
+          alt=""
+          class="react-photo-album--image"
+          decoding="async"
+          loading="lazy"
+          sizes="98vw"
+          src="image01.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

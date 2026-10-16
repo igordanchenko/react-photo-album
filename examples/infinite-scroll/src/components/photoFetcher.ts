@@ -10,13 +10,11 @@ export default function photoFetcher({ batchSize = 10, maxBatches = 100, fetchDe
         return;
       }
 
-      const batch = [
-        ...photos.map((photo) => ({
-          ...photo,
-          // generate unique keys since we are reusing the same photos
-          key: `${index}-${photo.src}`,
-        })),
-      ];
+      const batch = photos.map((photo) => ({
+        ...photo,
+        // generate unique keys since we are reusing the same photos
+        key: `${index}-${photo.src}`,
+      }));
 
       // shuffle
       for (let i = batch.length - 1; i > 0; i -= 1) {

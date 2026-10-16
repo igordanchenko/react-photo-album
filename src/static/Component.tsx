@@ -60,7 +60,7 @@ function Component<
   const props = { style, className, children, ...rest };
 
   if (render) {
-    // eslint-disable-next-line react-hooks/refs -- false-positive lint
+    // oxlint-disable-next-line react/refs -- false-positive lint
     const rendered = render({ ref, ...props } as unknown as TRenderProps, context as TContext);
     if (rendered) return rendered;
   }

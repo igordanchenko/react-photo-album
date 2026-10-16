@@ -9,8 +9,8 @@ describe("useIntersectionObserver", () => {
     const { result } = renderHook(() => useIntersectionObserver("100px"));
     const { observe, unobserve } = result.current;
 
-    const callback1 = vi.fn();
-    const callback2 = vi.fn();
+    const callback1 = vi.fn<(entry: IntersectionObserverEntry) => void>();
+    const callback2 = vi.fn<(entry: IntersectionObserverEntry) => void>();
 
     const target = document.createElement("div");
 
@@ -30,7 +30,7 @@ describe("useIntersectionObserver", () => {
   });
 
   it("supports custom scroll container", async () => {
-    const callback = vi.fn();
+    const callback = vi.fn<(entry: IntersectionObserverEntry) => void>();
 
     const target = document.createElement("div");
     const scrollContainer1 = document.createElement("div");

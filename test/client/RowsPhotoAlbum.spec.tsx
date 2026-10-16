@@ -57,7 +57,7 @@ describe("RowsPhotoAlbum", () => {
 
   it("supports deterministic tiebreaker", () => {
     window.resizeTo(340, 600);
-    render(
+    renderAndMatchSnapshot(
       <RowsPhotoAlbum
         photos={Array.from({ length: 7 }, (_, index) => ({ key: `${index}`, ...photos[0] }))}
         spacing={10}

@@ -1,8 +1,10 @@
 {
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "printWidth": 120,
+  "sortPackageJson": false,
   "overrides": [
     {
-      "files": "*.md",
+      "files": ["*.md"],
       "options": {
         "printWidth": 80,
         "proseWrap": "always"

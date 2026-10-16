@@ -5,7 +5,10 @@
   margin-block-end: 16px;
 }
 
-main > p, .loading, .finished, .error {
+main > p,
+.loading,
+.finished,
+.error {
   text-align: center;
 }
 

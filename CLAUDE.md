@@ -16,8 +16,10 @@ infinite scroll, and ships with full TypeScript types.
 - **Watch mode**: `npm start` (clean + parallel watch builds)
 - **Test**: `npm test` (vitest run, 100% coverage threshold required)
 - **Test with UI**: `npm run test:ui`
-- **Lint**: `npm run lint` (eslint flat config)
-- **Full CI**: `npm run ci` (build + test + lint)
+- **Lint**: `npm run lint` (oxlint, type-aware: `correctness` category + a few
+  opt-ins in `.oxlintrc.json`)
+- **Format**: `npm run format` (oxfmt, writes in place)
+- **Full CI**: `npm run ci` (build + test + lint + size)
 
 ## Architecture
 
@@ -70,6 +72,6 @@ compilation → PostCSS (autoprefixer + cssnano).
 
 - `no-console: error` — no console statements
 - Unused variables must be prefixed with `_`
-- Prettier: 120 char width (80 for markdown)
+- oxfmt: 120 char width (80 + prose wrap for markdown)
 - Conventional commits enforced via commitlint
 - Types are centralized in `src/types.ts`

@@ -67,7 +67,7 @@ export default function useContainerWidth(
     if (typeof ref === "function") {
       ref(node);
     } else if (ref) {
-      // eslint-disable-next-line react-hooks/immutability -- false-positive lint
+      // oxlint-disable-next-line react/immutability -- false-positive lint
       ref.current = node;
     }
   });

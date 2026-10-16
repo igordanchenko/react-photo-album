@@ -68,7 +68,6 @@ export interface ColumnsPhotoAlbumProps<TPhoto extends Photo = Photo> extends Co
 }
 
 /** Masonry photo album props */
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface MasonryPhotoAlbumProps<TPhoto extends Photo = Photo> extends ColumnsPhotoAlbumProps<TPhoto> {}
 
 /** Photo album sizes settings */

@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import PhotoAlbum from "../../src";
+import PhotoAlbum, { type ClickHandler } from "../../src";
 import { render, renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";
 
@@ -83,7 +83,7 @@ describe("PhotoAlbum", () => {
   });
 
   it("supports onClick callback", () => {
-    const onClick = vi.fn();
+    const onClick = vi.fn<ClickHandler>();
 
     const { getAllByRole } = render(<PhotoAlbum layout="rows" photos={photos} onClick={onClick} />);
     getAllByRole("button").forEach((el) => el.click());
@@ -183,7 +183,7 @@ describe("PhotoAlbum", () => {
   });
 
   it("forwards callback ref", () => {
-    const callbackRef = vi.fn();
+    const callbackRef = vi.fn<(node: HTMLElement | null) => void>();
     render(<PhotoAlbum ref={callbackRef} layout="rows" photos={photos} />);
     expect(callbackRef).toHaveBeenCalled();
   });
@@ -192,8 +192,8 @@ describe("PhotoAlbum", () => {
     const observe = vi.spyOn(ResizeObserver.prototype, "observe");
     const disconnect = vi.spyOn(ResizeObserver.prototype, "disconnect");
     try {
-      const refA = vi.fn();
-      const refB = vi.fn();
+      const refA = vi.fn<(node: HTMLElement | null) => void>();
+      const refB = vi.fn<(node: HTMLElement | null) => void>();
 
       const { rerender } = render(<PhotoAlbum ref={refA} layout="rows" photos={photos} />);
       expect(refA).toHaveBeenCalledTimes(1);

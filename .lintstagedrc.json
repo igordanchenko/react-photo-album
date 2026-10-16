@@ -1,4 +1,4 @@
 {
-  "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}": ["eslint --fix", "prettier --write"],
-  "!*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}": "prettier --write --ignore-unknown"
+  "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}": ["oxlint --fix --no-error-on-unmatched-pattern", "oxfmt"],
+  "!*.{js,cjs,mjs,ts,cts,mts,jsx,tsx}": "oxfmt --no-error-on-unmatched-pattern"
 }

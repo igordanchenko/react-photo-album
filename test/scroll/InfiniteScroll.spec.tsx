@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-import { MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
+import { type ClickHandler, MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
 import InfiniteScroll from "../../src/scroll";
 import { act, render, triggerIntersection } from "../test-utils";
 import photos from "../photos";
@@ -79,7 +79,7 @@ describe("InfiniteScroll", () => {
   });
 
   it("supports the onClick callback", async () => {
-    const onClick = vi.fn();
+    const onClick = vi.fn<ClickHandler>();
 
     const { getAllByRole } = render(
       <InfiniteScroll singleton fetch={fetcher} photos={photos} onClick={onClick}>
@@ -95,7 +95,7 @@ describe("InfiniteScroll", () => {
   });
 
   it("supports scroll container", async () => {
-    const scrollContainer = vi.fn();
+    const scrollContainer = vi.fn<() => HTMLElement | null>();
 
     render(
       <InfiniteScroll singleton fetch={fetcher} photos={photos} scrollContainer={scrollContainer}>

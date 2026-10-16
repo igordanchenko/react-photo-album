@@ -90,7 +90,6 @@ export default function SortableGallery<TPhoto extends Photo, TGalleryType exten
     Component: T,
     index: number,
     photo: TPhoto,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     props: ComponentProps<any>,
   ) => (
     <Sortable key={index} id={(photo as SortablePhoto<TPhoto>).id}>
@@ -111,6 +110,7 @@ export default function SortableGallery<TPhoto extends Photo, TGalleryType exten
             ref={ref}
             photos={photos}
             render={{
+              // TODO: resolve responsive `render` (function form) instead of spreading it, which drops all overrides
               ...render,
               link: (props, { index, photo }) => renderSortable("a", index, photo, props),
               wrapper: (props, { index, photo }) => renderSortable("div", index, photo, props),

@@ -107,7 +107,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
 
       setPhotos((prev) => [...prev, batch]);
       updateStatus(Status.IDLE);
-    } catch (_) {
+    } catch {
       updateStatus(Status.ERROR);
     }
     // `photos.length` dependency is essential: it changes `handleFetch` identity after each
@@ -122,7 +122,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
       if (node) {
         observe(node, ({ isIntersecting }) => {
           if (isIntersecting) {
-            handleFetch();
+            void handleFetch();
           }
         });
       }
@@ -148,6 +148,8 @@ export default function InfiniteScroll<TPhoto extends Photo>({
             photos: photosArray,
             onClick: handleClick?.(0),
             render: {
+              // TODO: resolve responsive `render` (function form) instead of spreading it, which drops all overrides
+              // oxlint-disable-next-line typescript/no-misused-spread
               ...children.props.render,
               track: ({ children: trackChildren, ...rest }: RenderTrackProps) => (
                 <div {...rest}>
