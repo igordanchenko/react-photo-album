@@ -24,3 +24,6 @@ coverage/
 
 # Example lock files
 examples/*/package-lock.json
+
+# macOS
+.DS_Store
