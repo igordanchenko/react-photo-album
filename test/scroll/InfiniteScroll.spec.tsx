@@ -78,6 +78,19 @@ describe("InfiniteScroll", () => {
     window.__TEST__.isIntersecting = true;
   });
 
+  it.each([
+    { name: "object", render: { extras: () => <span>extras</span> } },
+    { name: "function", render: () => ({ extras: () => <span>extras</span> }) },
+  ])("preserves $name render overrides in singleton mode", ({ render: albumRender }) => {
+    const { getAllByText } = render(
+      <InfiniteScroll singleton fetch={fetcher} photos={photos}>
+        <RowsPhotoAlbum photos={[]} render={albumRender} />
+      </InfiniteScroll>,
+    );
+
+    expect(getAllByText("extras").length).toBe(photos.length);
+  });
+
   it("supports the onClick callback", async () => {
     const onClick = vi.fn<ClickHandler>();
 

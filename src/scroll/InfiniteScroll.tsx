@@ -2,7 +2,7 @@ import type React from "react";
 import { Children, cloneElement, isValidElement, useCallback, useRef, useState } from "react";
 
 import { useEventCallback } from "../client/hooks";
-import type { ClickHandlerProps, CommonPhotoAlbumProps, Photo, RenderTrackProps } from "../types";
+import type { ClickHandlerProps, CommonPhotoAlbumProps, Photo, Render, RenderTrackProps } from "../types";
 import Offscreen from "./Offscreen";
 import useIntersectionObserver from "./useIntersectionObserver";
 
@@ -41,6 +41,16 @@ export type InfiniteScrollProps<TPhoto extends Photo = Photo> = {
   /** Photo album component. Must be the only child. */
   children: React.ReactElement<Pick<CommonPhotoAlbumProps<TPhoto>, "photos" | "render" | "onClick">>;
 };
+
+// keeps the responsive (function) form intact, so the child album still resolves it against its container width
+function overrideRender<TPhoto extends Photo>(
+  render: CommonPhotoAlbumProps<TPhoto>["render"],
+  overrides: Render<TPhoto>,
+): CommonPhotoAlbumProps<TPhoto>["render"] {
+  return typeof render === "function"
+    ? (containerWidth) => ({ ...render(containerWidth), ...overrides })
+    : { ...render, ...overrides };
+}
 
 /** InfiniteScroll component. */
 export default function InfiniteScroll<TPhoto extends Photo>({
@@ -147,10 +157,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
         ? cloneElement(children, {
             photos: photosArray,
             onClick: handleClick?.(0),
-            render: {
-              // TODO: resolve responsive `render` (function form) instead of spreading it, which drops all overrides
-              // oxlint-disable-next-line typescript/no-misused-spread
-              ...children.props.render,
+            render: overrideRender(children.props.render, {
               track: ({ children: trackChildren, ...rest }: RenderTrackProps) => (
                 <div {...rest}>
                   {Children.map(
@@ -164,7 +171,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
                   )}
                 </div>
               ),
-            },
+            }),
           })
         : photos.map((batch, index) => {
             const offset = batchOffset;

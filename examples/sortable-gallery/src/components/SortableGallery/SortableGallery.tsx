@@ -12,7 +12,13 @@ import {
 } from "@dnd-kit/core";
 import { SortableContext, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import { type ComponentProps, type ComponentType, type JSX, useRef, useState } from "react";
-import type { ColumnsPhotoAlbumProps, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "react-photo-album";
+import type {
+  ColumnsPhotoAlbumProps,
+  MasonryPhotoAlbumProps,
+  Photo,
+  Render,
+  RowsPhotoAlbumProps,
+} from "react-photo-album";
 
 import Overlay from "./Overlay";
 import Sortable from "./Sortable";
@@ -96,6 +102,12 @@ export default function SortableGallery<TPhoto extends Photo, TGalleryType exten
     </Sortable>
   );
 
+  const sortableRender: Render<TPhoto> = {
+    link: (props, { index, photo }) => renderSortable("a", index, photo, props),
+    wrapper: (props, { index, photo }) => renderSortable("div", index, photo, props),
+    button: (props, { index, photo }) => renderSortable("button", index, photo, props),
+  };
+
   return (
     <DndContext
       sensors={sensors}
@@ -108,13 +120,11 @@ export default function SortableGallery<TPhoto extends Photo, TGalleryType exten
           <Gallery
             ref={ref}
             photos={photos}
-            render={{
-              // TODO: resolve responsive `render` (function form) instead of spreading it, which drops all overrides
-              ...render,
-              link: (props, { index, photo }) => renderSortable("a", index, photo, props),
-              wrapper: (props, { index, photo }) => renderSortable("div", index, photo, props),
-              button: (props, { index, photo }) => renderSortable("button", index, photo, props),
-            }}
+            render={
+              typeof render === "function"
+                ? (containerWidth) => ({ ...render(containerWidth), ...sortableRender })
+                : { ...render, ...sortableRender }
+            }
             {...rest}
           />
         </div>
