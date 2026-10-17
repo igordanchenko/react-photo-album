@@ -6,7 +6,7 @@
 "use client";
 
 import Image from "next/image";
-import { RenderImageContext, RenderImageProps, RowsPhotoAlbum } from "react-photo-album";
+import { type RenderImageContext, type RenderImageProps, RowsPhotoAlbum } from "react-photo-album";
 
 import "react-photo-album/rows.css";
 
