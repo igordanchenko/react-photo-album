@@ -1,12 +1,11 @@
-import { clsx } from "../utils";
-import StaticPhotoAlbum from "../static";
-import computeRowsLayout from "../layouts/rows";
-import computeColumnsLayout from "../layouts/columns";
-import computeMasonryLayout from "../layouts/masonry";
-import resolveRowsProps from "../client/rows/resolveRowsProps";
 import resolveColumnsProps from "../client/columns/resolveColumnsProps";
 import resolveMasonryProps from "../client/masonry/resolveMasonryProps";
+import resolveRowsProps from "../client/rows/resolveRowsProps";
+import computeColumnsLayout from "../layouts/columns";
+import computeMasonryLayout from "../layouts/masonry";
+import computeRowsLayout from "../layouts/rows";
 import { StyledBreakpoints, useBreakpoints } from "../ssr/breakpoints";
+import StaticPhotoAlbum from "../static";
 import type {
   ColumnsPhotoAlbumProps,
   LayoutType,
@@ -15,6 +14,7 @@ import type {
   Photo,
   RowsPhotoAlbumProps,
 } from "../types";
+import { clsx } from "../utils";
 
 type RowsServerPhotoAlbumProps<TPhoto extends Photo> = NonOptional<
   Omit<RowsPhotoAlbumProps<TPhoto>, "defaultContainerWidth" | "onClick" | "skeleton">,

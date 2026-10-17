@@ -1,6 +1,3 @@
-import { type ComponentProps, type ComponentType, type JSX, useRef, useState } from "react";
-import type { ColumnsPhotoAlbumProps, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "react-photo-album";
-
 import {
   closestCenter,
   DndContext,
@@ -14,9 +11,11 @@ import {
   useSensors,
 } from "@dnd-kit/core";
 import { SortableContext, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
+import { type ComponentProps, type ComponentType, type JSX, useRef, useState } from "react";
+import type { ColumnsPhotoAlbumProps, MasonryPhotoAlbumProps, Photo, RowsPhotoAlbumProps } from "react-photo-album";
 
-import Sortable from "./Sortable";
 import Overlay from "./Overlay";
+import Sortable from "./Sortable";
 
 import classes from "./SortableGallery.module.css";
 

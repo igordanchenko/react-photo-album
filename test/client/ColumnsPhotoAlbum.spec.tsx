@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
 import { ColumnsPhotoAlbum } from "../../src";
-import { render, renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";
+import { render, renderAndMatchSnapshot } from "../test-utils";
 
 describe("ColumnsPhotoAlbum", () => {
   it("renders without crashing", () => {

@@ -4,6 +4,7 @@ Here is a basic example using rows layout.
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/rows.css";
 
 import photos from "./photos";

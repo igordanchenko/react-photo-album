@@ -1,10 +1,10 @@
 import { forwardRef, useMemo } from "react";
 
-import { useContainerWidth } from "../hooks";
-import StaticPhotoAlbum from "../../static";
-import resolveColumnsProps from "./resolveColumnsProps";
 import computeColumnsLayout from "../../layouts/columns";
+import StaticPhotoAlbum from "../../static";
 import type { ColumnsPhotoAlbumProps, ElementRef, ForwardedRef, JSXElement, Photo } from "../../types";
+import { useContainerWidth } from "../hooks";
+import resolveColumnsProps from "./resolveColumnsProps";
 
 function ColumnsPhotoAlbum<TPhoto extends Photo>(
   { photos, breakpoints, defaultContainerWidth, ...rest }: ColumnsPhotoAlbumProps<TPhoto>,

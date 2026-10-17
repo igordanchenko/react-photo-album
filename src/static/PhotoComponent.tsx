@@ -1,8 +1,6 @@
 import type React from "react";
 import { forwardRef } from "react";
 
-import Component from "./Component";
-import { round } from "../utils";
 import type {
   ComponentsProps,
   ElementRef,
@@ -13,6 +11,8 @@ import type {
   RenderPhotoContext,
   RenderPhotoProps,
 } from "../types";
+import { round } from "../utils";
+import Component from "./Component";
 
 type Unwrap<T> = T extends (args: any) => unknown ? never : T;
 

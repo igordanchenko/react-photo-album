@@ -70,6 +70,7 @@ npm install react-photo-album
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/rows.css";
 
 const photos = [
@@ -126,6 +127,7 @@ describes the width of the photo album in various viewports.
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/rows.css";
 
 const photos = [

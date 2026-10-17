@@ -1,6 +1,6 @@
-import findOptimalPartition from "./partition";
-import { ratio } from "../../utils";
 import type { LayoutModel, Photo } from "../../types";
+import { ratio } from "../../utils";
+import findOptimalPartition from "./partition";
 
 // return cost function that computes possible split points and their costs for a given partition start
 function makePartitionCostFn(

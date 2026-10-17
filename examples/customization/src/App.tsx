@@ -1,12 +1,9 @@
 import { useState } from "react";
-
-// yet-another-react-lightbox
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
-
-// react-photo-album
 import { type Photo, RowsPhotoAlbum } from "react-photo-album";
+import Lightbox from "yet-another-react-lightbox";
+
 import "react-photo-album/rows.css";
+import "yet-another-react-lightbox/styles.css";
 
 import { SelectIcon, StyledLink } from "./components";
 import allPhotos from "./photos";

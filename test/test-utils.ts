@@ -1,6 +1,6 @@
+import { render as originalRender, act, fireEvent, type RenderOptions } from "@testing-library/react";
 import type React from "react";
 import { expect } from "vitest";
-import { render as originalRender, act, fireEvent, type RenderOptions } from "@testing-library/react";
 
 export * from "@testing-library/react";
 

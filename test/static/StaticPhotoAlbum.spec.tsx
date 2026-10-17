@@ -1,8 +1,8 @@
 import { describe, it } from "vitest";
 
 import { computeColumnsLayout, computeMasonryLayout, computeRowsLayout, StaticPhotoAlbum } from "../../src";
-import { renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";
+import { renderAndMatchSnapshot } from "../test-utils";
 
 describe("StaticPhotoAlbum", () => {
   it("supports rows layout", () => {

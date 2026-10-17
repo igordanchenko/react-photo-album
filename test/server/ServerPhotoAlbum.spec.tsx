@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 
 import type { LayoutType } from "../../src";
 import ServerPhotoAlbum from "../../src/server";
-import { render } from "../test-utils";
 import photos from "../photos";
+import { render } from "../test-utils";
 
 describe("ServerPhotoAlbum", () => {
   const breakpoints = [300, 600, 900];

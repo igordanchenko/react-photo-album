@@ -1,9 +1,9 @@
 /// <reference types="vite/client" />
 /// <reference types="vitest/config" />
 
-import { defineConfig } from "vite";
-import cleanup from "rollup-plugin-cleanup";
 import type { Plugin } from "rollup";
+import cleanup from "rollup-plugin-cleanup";
+import { defineConfig } from "vite";
 
 function addClientDirective(): Plugin {
   return {

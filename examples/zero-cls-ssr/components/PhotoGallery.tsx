@@ -7,6 +7,7 @@
 
 import { RowsPhotoAlbum } from "react-photo-album";
 import SSR from "react-photo-album/ssr";
+
 import "react-photo-album/rows.css";
 
 import photos from "@/components/photos";

@@ -4,6 +4,7 @@ Here is a basic example using masonry layout.
 
 ```tsx
 import { MasonryPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/masonry.css";
 
 import photos from "./photos";

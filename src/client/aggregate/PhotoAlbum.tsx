@@ -1,8 +1,5 @@
 import { forwardRef } from "react";
 
-import RowsPhotoAlbum from "../rows";
-import ColumnsPhotoAlbum from "../columns";
-import MasonryPhotoAlbum from "../masonry";
 import type {
   ColumnsPhotoAlbumProps,
   ElementRef,
@@ -13,6 +10,9 @@ import type {
   Photo,
   RowsPhotoAlbumProps,
 } from "../../types";
+import ColumnsPhotoAlbum from "../columns";
+import MasonryPhotoAlbum from "../masonry";
+import RowsPhotoAlbum from "../rows";
 
 type PhotoAlbumProps<TPhoto extends Photo> =
   | ({ layout: Extract<LayoutType, "rows"> } & RowsPhotoAlbumProps<TPhoto>)

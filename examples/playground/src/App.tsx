@@ -1,5 +1,6 @@
 import Box from "@mui/material/Box";
 import PhotoAlbum from "react-photo-album";
+
 import "react-photo-album/styles.css";
 
 import Settings, { useSettings } from "./Settings";

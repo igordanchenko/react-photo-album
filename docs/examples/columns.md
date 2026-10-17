@@ -4,6 +4,7 @@ Here is a basic example using columns layout.
 
 ```tsx
 import { ColumnsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/columns.css";
 
 import photos from "./photos";

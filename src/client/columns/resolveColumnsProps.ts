@@ -1,5 +1,5 @@
-import { resolveCommonProps, resolveResponsiveParameter } from "../../utils";
 import type { ColumnsPhotoAlbumProps, ComponentsProps, Photo, Render, ResolvedNumber } from "../../types";
+import { resolveCommonProps, resolveResponsiveParameter } from "../../utils";
 
 type ResolvedColumnsProps<TPhoto extends Photo, TWidth extends number | undefined = number | undefined> = Omit<
   ColumnsPhotoAlbumProps<TPhoto>,

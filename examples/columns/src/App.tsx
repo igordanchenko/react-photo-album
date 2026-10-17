@@ -1,4 +1,5 @@
 import { ColumnsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/columns.css";
 
 import photos from "./photos";

@@ -1,5 +1,5 @@
-import { ratio, round } from "../../utils";
 import type { LayoutModel, Photo } from "../../types";
+import { ratio, round } from "../../utils";
 
 // empirically determined threshold for deterministic tiebreaking
 const TIEBREAKER_EPSILON = 1.005;

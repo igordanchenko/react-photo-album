@@ -1,13 +1,12 @@
-import * as React from "react";
-import type { LayoutType, Photo } from "react-photo-album";
-
+import FormControl from "@mui/material/FormControl";
 import Grid from "@mui/material/Grid";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
 import Paper from "@mui/material/Paper";
 import Slider from "@mui/material/Slider";
-import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
-import InputLabel from "@mui/material/InputLabel";
-import FormControl from "@mui/material/FormControl";
+import * as React from "react";
+import type { LayoutType, Photo } from "react-photo-album";
 
 import photos from "./photos";
 

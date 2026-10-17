@@ -17,6 +17,7 @@ stylesheet.
 
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/rows.css";
 ```
 
@@ -24,6 +25,7 @@ import "react-photo-album/rows.css";
 
 ```tsx
 import { ColumnsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/columns.css";
 ```
 
@@ -31,6 +33,7 @@ import "react-photo-album/columns.css";
 
 ```tsx
 import { MasonryPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/masonry.css";
 ```
 
@@ -41,6 +44,7 @@ component, which bundles all three layouts.
 
 ```tsx
 import PhotoAlbum from "react-photo-album";
+
 import "react-photo-album/styles.css";
 ```
 
@@ -809,6 +813,7 @@ optimization is silently disabled and photos always render at full fidelity.
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
 import InfiniteScroll from "react-photo-album/scroll";
+
 import "react-photo-album/rows.css";
 
 // ...
@@ -831,6 +836,7 @@ export default function Gallery() {
 ```tsx
 import { MasonryPhotoAlbum } from "react-photo-album";
 import InfiniteScroll from "react-photo-album/scroll";
+
 import "react-photo-album/masonry.css";
 
 // ...
@@ -926,6 +932,7 @@ live demo in the [Zero CLS SSR](/examples/zero-cls-ssr) example.
 ```tsx
 import { RowsPhotoAlbum } from "react-photo-album";
 import SSR from "react-photo-album/ssr";
+
 import "react-photo-album/rows.css";
 
 import photos from "./photos";
@@ -1028,6 +1035,7 @@ props corresponding to the selected layout type except the
 
 ```tsx
 import ServerPhotoAlbum from "react-photo-album/server";
+
 import "react-photo-album/rows.css";
 
 // ...
@@ -1050,6 +1058,7 @@ Here is an example of custom styling using
 
 ```tsx
 import ServerPhotoAlbum from "react-photo-album/server";
+
 import "react-photo-album/rows.css";
 
 // ...

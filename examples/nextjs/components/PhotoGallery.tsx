@@ -7,6 +7,7 @@
 
 import Image from "next/image";
 import { RenderImageContext, RenderImageProps, RowsPhotoAlbum } from "react-photo-album";
+
 import "react-photo-album/rows.css";
 
 import photos from "@/components/photos";

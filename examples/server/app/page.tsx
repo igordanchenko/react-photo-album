@@ -1,4 +1,5 @@
 import ServerPhotoAlbum from "react-photo-album/server";
+
 import "react-photo-album/rows.css";
 
 import photos from "@/app/photos";

@@ -1,8 +1,8 @@
 import { useCallback, useReducer, useRef } from "react";
 
+import type { ForwardedRef } from "../../types";
 import useArray from "./useArray";
 import useEventCallback from "./useEventCallback";
-import type { ForwardedRef } from "../../types";
 
 // Maximum expected scrollbar width in pixels, used to distinguish
 // scrollbar-induced resize oscillation from legitimate container resizes.

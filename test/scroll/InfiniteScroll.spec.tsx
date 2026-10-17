@@ -2,8 +2,8 @@ import { describe, expect, it, vi } from "vitest";
 
 import { type ClickHandler, MasonryPhotoAlbum, RowsPhotoAlbum } from "../../src";
 import InfiniteScroll from "../../src/scroll";
-import { act, render, triggerIntersection } from "../test-utils";
 import photos from "../photos";
+import { act, render, triggerIntersection } from "../test-utils";
 
 function fetcher(index: number) {
   return Promise.resolve(index === 0 ? photos : null);

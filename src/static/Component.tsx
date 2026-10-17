@@ -1,8 +1,8 @@
 import type React from "react";
 import { forwardRef } from "react";
 
-import { clsx, cssClass, cssVar, round } from "../utils";
 import type { LayoutVariables, RenderFunction } from "../types";
+import { clsx, cssClass, cssVar, round } from "../utils";
 
 type BaseProps<TComponent extends React.ElementType> = Pick<
   React.ComponentProps<TComponent>,

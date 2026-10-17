@@ -1,10 +1,10 @@
 import type React from "react";
 import { cloneElement, forwardRef, isValidElement, useState } from "react";
 
-import { clsx } from "../utils";
 import { useContainerWidth } from "../client/hooks";
-import { StyledBreakpoints, useBreakpoints } from "./breakpoints";
 import type { CommonPhotoAlbumProps } from "../types";
+import { clsx } from "../utils";
+import { StyledBreakpoints, useBreakpoints } from "./breakpoints";
 
 /** SSR component props. */
 export type SSRProps = {

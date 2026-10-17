@@ -2,8 +2,8 @@ import { afterEach, describe, expect, it } from "vitest";
 
 import { RowsPhotoAlbum } from "../../src";
 import SSR from "../../src/ssr";
-import { render } from "../test-utils";
 import photos from "../photos";
+import { render } from "../test-utils";
 
 describe("SSR", () => {
   const breakpoints = [300, 600, 900];

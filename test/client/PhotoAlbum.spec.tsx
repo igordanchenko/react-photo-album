@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 
 import PhotoAlbum, { type ClickHandler } from "../../src";
-import { render, renderAndMatchSnapshot } from "../test-utils";
 import photos from "../photos";
+import { render, renderAndMatchSnapshot } from "../test-utils";
 
 describe("PhotoAlbum", () => {
   it("supports rows layout", () => {
