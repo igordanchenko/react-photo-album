@@ -9,7 +9,7 @@
 [![License MIT](https://img.shields.io/npm/l/react-photo-album.svg?color=blue)](https://github.com/igordanchenko/react-photo-album/blob/main/LICENSE)
 
 React Photo Album is a responsive photo gallery component with rows, columns,
-and masonry layouts. <br/> Inspired by
+and masonry layouts. Inspired by
 [react-photo-gallery](https://github.com/neptunian/react-photo-gallery),
 re-engineered from the ground up.
 
