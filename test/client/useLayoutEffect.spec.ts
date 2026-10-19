@@ -10,11 +10,11 @@ describe("useLayoutEffect", () => {
   });
 
   it("imports React.useEffect on the server", async () => {
-    const globalWindow = global.window;
-    global.window = undefined as unknown as typeof global.window;
+    const globalWindow = globalThis.window;
+    globalThis.window = undefined as unknown as typeof globalThis.window;
 
     expect((await import("../../src/client/hooks/useLayoutEffect")).default).toBe(useEffect);
 
-    global.window = globalWindow;
+    globalThis.window = globalWindow;
   });
 });
