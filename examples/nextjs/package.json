@@ -17,7 +17,7 @@
     "react-photo-album": "^3"
   },
   "devDependencies": {
-    "@types/node": "^24",
+    "@types/node": "^26.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^6"
