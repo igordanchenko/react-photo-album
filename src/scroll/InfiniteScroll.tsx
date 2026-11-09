@@ -175,6 +175,7 @@ export default function InfiniteScroll<TPhoto extends Photo>({
           })
         : photos.map((batch, index) => {
             const offset = batchOffset;
+            // oxlint-disable-next-line react/immutability -- false positive: Array.map runs synchronously during render
             batchOffset += batch.length;
 
             return (
